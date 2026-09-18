@@ -1,0 +1,194 @@
+/** app.css — Estilos de la interfaz. Depende de tokens.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
+
+.display { font-family: var(--font-display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1, h2, h3 { margin: 0; }
+
+.shell { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
+/* --- Cabecera ------------------------------------------------------------ */
+
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 22px 0 18px; border-bottom: 1px solid var(--border); margin-bottom: 24px;
+}
+.wordmark { display: flex; align-items: baseline; gap: 10px; }
+.wordmark .display { font-size: 1.35rem; letter-spacing: -0.01em; }
+.badge {
+  font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--accent-ink); background: var(--accent-soft);
+  padding: 3px 8px; border-radius: 999px; white-space: nowrap;
+}
+
+/* --- Texto --------------------------------------------------------------- */
+
+.h-lg { font-size: 1.7rem; margin-bottom: 12px; }
+.lead { color: var(--ink-soft); max-width: 58ch; margin: 0 0 14px; }
+.lead strong { color: var(--ink); }
+.fine { font-size: 0.82rem; color: var(--ink-soft); max-width: 62ch; margin: 0; }
+.error { color: var(--danger); font-weight: 600; font-size: 0.9rem; margin: 12px 0 0; }
+
+.section-label {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--ink-soft); margin: 28px 0 12px;
+}
+
+/* --- Avisos -------------------------------------------------------------- */
+
+.note {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 11px 14px; font-size: 0.87rem;
+  color: var(--ink-soft); margin: 10px 0;
+}
+.note-warn { background: var(--warn-bg); color: var(--warn-ink); border-color: transparent; }
+.note-stop { background: var(--stop-bg); color: var(--stop-ink); border-color: transparent; }
+#warnings:empty { display: none; }
+
+/* --- Botones y formularios ----------------------------------------------- */
+
+.btn-primary {
+  background: var(--accent); color: var(--bg); border: none; border-radius: 9px;
+  padding: 11px 20px; font: inherit; font-weight: 700; font-size: 0.92rem; cursor: pointer;
+}
+.btn-primary:hover:not(:disabled) { opacity: 0.9; }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-ghost {
+  border: 1px solid var(--border); background: var(--surface); color: var(--ink-soft);
+  border-radius: 8px; padding: 7px 13px; font: inherit; font-size: 0.84rem;
+  font-weight: 600; cursor: pointer;
+}
+.btn-ghost:hover { color: var(--ink); border-color: var(--ink-soft); }
+
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+
+.field { margin: 18px 0; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 520px) { .field-row { grid-template-columns: 1fr; } }
+
+.field label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
+.field .help { font-size: 0.8rem; color: var(--ink-soft); margin: 6px 0 0; }
+
+input[type="date"], input[type="number"], select {
+  font: inherit; font-size: 0.98rem; padding: 10px 11px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--ink);
+  width: 100%; max-width: 280px;
+}
+
+.consent-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px; margin: 22px 0 18px;
+}
+.check { display: flex; gap: 11px; align-items: flex-start; font-size: 0.93rem; cursor: pointer; }
+.check input { margin-top: 3px; flex: none; width: 18px; height: 18px; accent-color: var(--accent); }
+.consent-box .btn-primary { margin-top: 18px; }
+
+/* --- Hero ---------------------------------------------------------------- */
+
+.hero {
+  border-radius: var(--radius-lg); padding: 24px; margin-bottom: 8px;
+  border: 1px solid var(--border);
+  background: var(--neutral-bg);
+}
+.hero[data-phase="menstruacion"] { background: var(--menstruacion-bg); border-color: var(--menstruacion-fg); }
+.hero[data-phase="folicular"]    { background: var(--folicular-bg);    border-color: var(--folicular-fg); }
+.hero[data-phase="ovulatoria"]   { background: var(--ovulatoria-bg);   border-color: var(--ovulatoria-fg); }
+.hero[data-phase="lutea"]        { background: var(--lutea-bg);        border-color: var(--lutea-fg); }
+
+.hero-top {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; margin-bottom: 12px; flex-wrap: wrap;
+}
+.eyebrow {
+  font-size: 0.71rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; opacity: 0.9;
+}
+.eyebrow[data-tone="bad"] { color: var(--danger); opacity: 1; }
+.phase-pill {
+  font-size: 0.71rem; font-weight: 700; letter-spacing: 0.03em;
+  padding: 4px 10px; border-radius: 999px;
+  background: var(--surface); color: var(--ink-soft);
+}
+.hero-title { font-size: 1.55rem; margin-bottom: 8px; }
+.hero-note { font-size: 0.9rem; color: var(--ink); opacity: 0.85; max-width: 52ch; margin: 0; }
+.hero-back { margin-top: 14px; }
+
+/* --- Tarjetas de variables ----------------------------------------------- */
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+
+.vcard {
+  background: var(--surface); border: 1px solid var(--border);
+  border-left: 3px solid var(--neutral-fg);
+  border-radius: 10px; padding: 15px 17px;
+}
+.vcard[data-phase="menstruacion"] { border-left-color: var(--menstruacion-fg); }
+.vcard[data-phase="folicular"]    { border-left-color: var(--folicular-fg); }
+.vcard[data-phase="ovulatoria"]   { border-left-color: var(--ovulatoria-fg); }
+.vcard[data-phase="lutea"]        { border-left-color: var(--lutea-fg); }
+
+.vcard h3 {
+  font-size: 0.76rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--ink-soft); margin-bottom: 7px;
+}
+.vcard p { margin: 0; font-size: 0.93rem; }
+
+/* La tarjeta "Qué no asumir" se destaca: es la que más valor aporta. */
+.vcard-flag { background: var(--surface-2); grid-column: 1 / -1; }
+.vcard-flag h3 { color: var(--accent-ink); }
+
+/* --- Explorador de fases -------------------------------------------------- */
+
+.strip { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.strip-btn {
+  flex: 1 1 0; min-width: 104px; display: flex; flex-direction: column;
+  align-items: flex-start; gap: 3px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px;
+  cursor: pointer; font: inherit; color: var(--ink); text-align: left;
+}
+.strip-name { font-weight: 700; font-size: 0.85rem; }
+.strip-range { font-size: 0.72rem; color: var(--ink-soft); }
+.strip-btn[data-phase="menstruacion"] .strip-name { color: var(--menstruacion-fg); }
+.strip-btn[data-phase="folicular"]    .strip-name { color: var(--folicular-fg); }
+.strip-btn[data-phase="ovulatoria"]   .strip-name { color: var(--ovulatoria-fg); }
+.strip-btn[data-phase="lutea"]        .strip-name { color: var(--lutea-fg); }
+.strip-btn[aria-pressed="true"] { border-color: currentColor; box-shadow: 0 0 0 1px var(--ink-soft) inset; }
+
+.settings-row { margin-top: 26px; }
+
+/* --- Pie ------------------------------------------------------------------ */
+
+footer {
+  margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; gap: 16px;
+  flex-wrap: wrap; align-items: flex-start;
+}
+.danger-zone { display: flex; align-items: center; gap: 8px; flex: none; }
+.link-danger {
+  background: none; border: none; color: var(--danger); font: inherit;
+  font-size: 0.8rem; font-weight: 700; text-decoration: underline;
+  cursor: pointer; padding: 0;
+}
+.confirm-row { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.confirm-text { font-size: 0.8rem; color: var(--ink-soft); }
+
+[hidden] { display: none !important; }

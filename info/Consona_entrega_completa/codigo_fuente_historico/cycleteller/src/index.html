@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cycleteller</title>
+<meta name="description" content="Entender el ciclo menstrual para acompañar mejor a tu pareja.">
+
+<!--
+  IMPORTANTE — NO añadir aquí Google Fonts ni ningún recurso externo.
+
+  Cargar fuentes desde fonts.googleapis.com transmite la IP del visitante a
+  Google. El LG München I (sentencia de 20/01/2022, 3 O 17493/20) condenó a un
+  operador web por exactamente eso, razonando que no hay interés legítimo cuando
+  la misma funcionalidad se consigue alojando las fuentes en el propio dominio.
+
+  Este proyecto tiene además el requisito de que los datos no salgan de Europa.
+  Si se quiere una tipografía de marca: descargar los .woff2, meterlos en
+  src/assets/fonts/ y declararlos con @font-face local. Nunca por CDN.
+  Lo mismo vale para JS, CSS, iconos, mapas y píxeles de analítica.
+-->
+<link rel="stylesheet" href="./css/tokens.css">
+<link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+
+<div class="shell">
+
+  <header class="top">
+    <div class="wordmark">
+      <span class="display">Cycleteller</span>
+      <span class="badge">Prototipo</span>
+    </div>
+    <button class="btn-ghost" id="theme-toggle" type="button" aria-label="Cambiar tema">Tema</button>
+  </header>
+
+  <div class="note note-warn" id="top-banner" hidden></div>
+
+  <!-- Región para lectores de pantalla: anuncia los cambios de fase. -->
+  <div id="live-region" class="visually-hidden" aria-live="polite" role="status"></div>
+
+
+  <!-- ===================================================================
+       VISTA 1 — Puerta de consentimiento
+       =================================================================== -->
+  <section id="view-consent" hidden>
+    <h1 class="display h-lg">Antes de empezar</h1>
+    <p class="lead">
+      Esta app te va a pedir la fecha de la última regla de tu pareja. Eso es un
+      dato de salud, y es <strong>suyo, no tuyo</strong>.
+    </p>
+    <p class="lead">
+      No hace falta que ella se registre ni que use la app. Pero sí hace falta
+      que sepa que la estás usando. Si no se lo has dicho todavía, ciérrala y
+      díselo primero: es una conversación de dos minutos y es el punto entero
+      de esta herramienta.
+    </p>
+
+    <div class="consent-box">
+      <label class="check">
+        <input type="checkbox" id="consent-check">
+        <span>
+          Confirmo que mi pareja sabe que uso esta app y está de acuerdo con que
+          introduzca estos datos.
+        </span>
+      </label>
+      <button class="btn-primary" id="consent-continue" type="button" disabled>Continuar</button>
+    </div>
+
+    <p class="fine">
+      Todo lo que introduzcas se guarda solo en este navegador, en tu dispositivo.
+      No se envía a ningún servidor. Puedes borrarlo entero en cualquier momento
+      desde el pie de página.
+    </p>
+  </section>
+
+
+  <!-- ===================================================================
+       VISTA 2 — Onboarding
+       =================================================================== -->
+  <section id="view-onboarding" hidden>
+    <h1 class="display h-lg">Dos o tres datos</h1>
+    <p class="lead">
+      Con esto se puede estimar en qué punto del ciclo está. Estimar, no saber:
+      la app te dirá siempre cuánto margen de error tiene.
+    </p>
+
+    <div class="field">
+      <label for="input-contraception">¿Qué método anticonceptivo usa?</label>
+      <select id="input-contraception"></select>
+      <p class="help">
+        Esto no es curiosidad. Los métodos hormonales suprimen la ovulación, y en
+        ese caso no hay fases del ciclo que calcular.
+      </p>
+      <div class="note" id="contraception-note" hidden></div>
+    </div>
+
+    <div class="field">
+      <label for="input-date">Primer día de su última regla</label>
+      <input type="date" id="input-date">
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="input-length">Duración habitual del ciclo</label>
+        <input type="number" id="input-length" step="1" inputmode="numeric">
+        <p class="help">
+          En días, de 21 a 35. La media real son 29 días: solo el 13% de los
+          ciclos dura exactamente 28.
+        </p>
+      </div>
+      <div class="field">
+        <label for="input-period-days">Días de sangrado</label>
+        <input type="number" id="input-period-days" step="1" inputmode="numeric">
+        <p class="help">Lo normal va de 2 a 8 días.</p>
+      </div>
+    </div>
+
+    <p class="error" id="onboarding-error" hidden></p>
+    <button class="btn-primary" id="onboarding-save" type="button">Guardar</button>
+  </section>
+
+
+  <!-- ===================================================================
+       VISTA 3 — Pantalla principal
+       =================================================================== -->
+  <section id="view-main" hidden>
+
+    <div id="warnings"></div>
+
+    <section class="hero" id="hero" data-phase="neutral">
+      <div class="hero-top">
+        <span class="eyebrow" id="hero-eyebrow"></span>
+        <span class="phase-pill" id="hero-pill"><span id="hero-pill-text"></span></span>
+      </div>
+      <h1 class="display hero-title" id="hero-title"></h1>
+      <p class="hero-note" id="hero-note"></p>
+      <button class="btn-ghost hero-back" id="hero-back" type="button" hidden>← Volver a hoy</button>
+    </section>
+
+    <h2 class="section-label" id="cards-label">En esta fase</h2>
+    <div class="grid" id="variable-grid"></div>
+
+    <div id="phase-strip-wrap">
+      <h2 class="section-label">Explorar las cuatro fases</h2>
+      <div class="strip" id="phase-strip"></div>
+    </div>
+
+    <div class="settings-row">
+      <button class="btn-ghost" id="settings-edit" type="button">Editar los datos</button>
+    </div>
+
+  </section>
+
+
+  <footer>
+    <p class="fine">
+      Los datos se guardan solo en este navegador. No salen de tu dispositivo.
+      Esta app es material educativo: no sirve como método anticonceptivo, no
+      sirve para buscar un embarazo y no sustituye a un profesional sanitario.
+    </p>
+    <span class="danger-zone" id="danger-zone"></span>
+  </footer>
+
+</div>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
