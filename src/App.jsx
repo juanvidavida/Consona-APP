@@ -26,7 +26,7 @@ function App() {
   return (
     <main className="app-shell">
       <header className="hero">
-        <div className="eyebrow">Consona</div>
+        <div className="eyebrow">Consonaapp</div>
         <h1>Comprender el ciclo sin perder el respeto.</h1>
         <p className="lead">
           Una web app pensada para móvil y escritorio, con experiencia local, clara y centrada en
