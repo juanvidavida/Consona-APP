@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Project local info folders
+info/
+**/info/
+
+# Node / frontend common ignores
+node_modules/
+.env
+.env.local
+.env.*.local
