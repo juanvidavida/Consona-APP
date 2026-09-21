@@ -1,8 +1,10 @@
 # Síntesis de investigación JUA-10: taxonomía educativa de Consona
 
 **Autor:** Manus AI
-**Estado:** síntesis de los resultados estructurados proporcionados
+**Estado:** investigación consolidada; auditorías bibliográficas incorporadas mediante el documento de cierre enlazado
 **Alcance:** taxonomía, lenguaje educativo y límites de producto; **no constituye una guía de diagnóstico ni un motor de decisión clínica**.
+
+> **Actualización de auditoría (21 de septiembre de 2026):** Las verificaciones de versiones, sustituciones y evidencia más reciente se documentan en [JUA-10 — cierre de auditorías bibliográficas](./JUA-10-cierre-auditorias.md). Las limitaciones que siguen abiertas se conservan explícitamente en ese documento y no habilitan lógica de producto.
 
 ## Conclusión operativa
 
