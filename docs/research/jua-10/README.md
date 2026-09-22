@@ -16,11 +16,12 @@ Este directorio reúne los materiales de trabajo que sustentan la taxonomía edu
 | Grupo | Archivos | Uso |
 |---|---|---|
 | Propuesta de estructura | `00-propuesta-taxonomia-v2.md` | Versión vigente de la estructura inicial y las franjas editoriales. |
+| Archivo histórico | `archive/00-propuesta-taxonomia-v1-sustituida.md` | Propuesta inicial; se conserva por trazabilidad y fue sustituida por la V2. |
 | Investigación temática | `01-cycle-phases.md` a `13-cycle-variability.md` | Hallazgos estructurados por fase, franja de edad, experiencias de salud y variabilidad. |
 | Auditorías de fuentes | `audit-01-nice-menopause.md` a `audit-07-rcog-pms.md` | Verificación detallada de versiones, sustituciones y límites de las fuentes. |
 
 ## Control de versiones y alcance
 
-La propuesta inicial V1 no se incluye porque fue sustituida por `00-propuesta-taxonomia-v2.md`. El historial de Git y los documentos canónicos anteriores conservan la trazabilidad de las decisiones posteriores.
+La propuesta inicial V1 se conserva en `archive/` exclusivamente por trazabilidad. La fuente vigente es `00-propuesta-taxonomia-v2.md`; ninguna decisión nueva debe tomar V1 como referencia operativa.
 
 Los informes de apoyo no son especificaciones de interfaz ni reglas de producto. Ante una diferencia entre un informe de apoyo y el cierre de auditorías, prevalece `JUA-10-cierre-auditorias.md`. Ningún contenido clínico se convierte en una clasificación, predicción, puntuación de riesgo, triaje, recomendación terapéutica, dosis o instrucción individual.
