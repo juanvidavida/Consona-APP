@@ -65,14 +65,36 @@ function App() {
             <span className="updated-label">Actualizado hoy</span>
           </div>
 
-          <div className="phase-summary">
-            <div>
+          <div className="phase-layout">
+            <div className="phase-copy">
               <p className="cycle-day">Ciclo · día 18</p>
               <h2 id="phase-title">Fase lútea</h2>
+              <p className="phase-caption">
+                La fase destacada forma parte de una secuencia estimada de fechas; no describe cómo se siente una persona.
+              </p>
             </div>
-            <div className="phase-orbit" aria-hidden="true">
-              <span className="orbit-core">18</span>
-            </div>
+
+            <figure className="cycle-figure" aria-labelledby="cycle-figure-title" aria-describedby="cycle-figure-description">
+              <p id="cycle-figure-title" className="cycle-figure-title">Rueda del ciclo</p>
+              <div className="cycle-display">
+                <div className="cycle-wheel" aria-hidden="true" />
+                <div className="cycle-center">
+                  <span>Fase actual</span>
+                  <strong>Fase lútea</strong>
+                  <small>Día 18</small>
+                </div>
+                <ul className="cycle-labels" aria-label="Fases representadas en la rueda">
+                  <li className="cycle-label label-menstruation">Menstruación</li>
+                  <li className="cycle-label label-follicular">Fase folicular</li>
+                  <li className="cycle-label label-ovulation">Ventana ovulatoria<br /><span>estimada</span></li>
+                  <li className="cycle-label label-luteal is-current"><span>Fase lútea</span><em>Actual</em></li>
+                </ul>
+                <span className="next-cycle" aria-hidden="true">↻ Siguiente ciclo</span>
+              </div>
+              <figcaption id="cycle-figure-description">
+                Las fases aparecen en orden temporal. La intensidad marca la fase mostrada en este ejemplo ficticio; no confirma procesos biológicos individuales.
+              </figcaption>
+            </figure>
           </div>
 
           <div className="estimate-details">
