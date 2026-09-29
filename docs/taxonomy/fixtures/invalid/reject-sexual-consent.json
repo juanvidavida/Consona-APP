@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "category_id": "emotional_irritability_perceived",
+  "source": "self_report",
+  "consent_scope": "variables.emotional_cognitive.irritability_perceived.self_report",
+  "intensity": "moderate",
+  "sexual_consent": true
+}

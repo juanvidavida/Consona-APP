@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "category_id": "cognitive_concentration_perceived",
+  "source": "self_report",
+  "consent_scope": "variables.emotional_cognitive.concentration_perceived.self_report",
+  "intensity": "not_applicable"
+}

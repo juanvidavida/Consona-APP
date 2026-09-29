@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "category_id": "physical_sleep_perceived",
+  "source": "self_report",
+  "consent_scope": "variables.physical.sleep_perceived.self_report",
+  "intensity": "mild",
+  "account_id": "synthetic-account-identifier"
+}

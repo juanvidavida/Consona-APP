@@ -25,3 +25,9 @@ Este directorio reúne los materiales de trabajo que sustentan la taxonomía edu
 La propuesta inicial V1 se conserva en `archive/` exclusivamente por trazabilidad. La fuente vigente es `00-propuesta-taxonomia-v2.md`; ninguna decisión nueva debe tomar V1 como referencia operativa.
 
 Los informes de apoyo no son especificaciones de interfaz ni reglas de producto. Ante una diferencia entre un informe de apoyo y el cierre de auditorías, prevalece `JUA-10-cierre-auditorias.md`. Ningún contenido clínico se convierte en una clasificación, predicción, puntuación de riesgo, triaje, recomendación terapéutica, dosis o instrucción individual.
+
+## Candidato de contrato P1
+
+El directorio [`../../taxonomy/`](../../taxonomy/) contiene el candidato revisable de **contrato taxonómico local v1.0.0** para P1 de ADR-002. Incluye el contrato explicativo, su esquema técnico cerrado, la lista de campos prohibidos, fixtures sintéticos y una lista de decisiones pendientes de aprobación humana.
+
+Este candidato convierte los límites de esta investigación en controles verificables, pero no reemplaza el dossier bibliográfico ni constituye aprobación de producto. No habilita formularios, almacenamiento, datos de ciclo, observaciones de pareja, inferencias, sincronización, analítica, telemetría ni piloto. El vocabulario de fuente v1 contempla `self_report` y reserva `partner_observation`; solo `self_report` tiene alcance candidato y fixtures válidos. Cualquier futura observación de pareja exige una versión posterior y el cumplimiento de P2, P5, P6, P8 y ADR-001.

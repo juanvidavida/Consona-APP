@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "category_id": "physical_appetite_perceived",
+  "source": "self_report",
+  "consent_scope": "variables.physical.appetite_perceived.self_report",
+  "intensity": "very_intense"
+}
