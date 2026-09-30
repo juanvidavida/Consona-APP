@@ -26,9 +26,9 @@ function validateFixture(value) {
   const allowedProperties = new Set(Object.keys(schema.properties))
   const requiredProperties = schema.required
   const categoryIds = new Set(schema.$defs.category_id.enum)
-  const allowedSources = new Set(schema.$defs.source.enum)
   const consentScopes = new Set(schema.$defs.consent_scope.enum)
   const intensities = new Set(schema.$defs.intensity.enum)
+  const allowedSource = schema.$defs.source.const
 
   if (value === null || Array.isArray(value) || typeof value !== 'object') {
     return ['must be a JSON object']
@@ -51,15 +51,11 @@ function validateFixture(value) {
   }
 
   if (!categoryIds.has(value.category_id)) {
-    errors.push(`unknown category_id: ${value.category_id}`)
+    errors.push(`unknown or non-v1 category_id: ${value.category_id}`)
   }
 
-  if (!allowedSources.has(value.source)) {
-    errors.push(`unknown source: ${value.source}`)
-  }
-
-  if (value.source === 'partner_observation') {
-    errors.push('partner_observation is reserved and has no valid consent scope in v1')
+  if (value.source !== allowedSource) {
+    errors.push(`source must equal ${allowedSource}`)
   }
 
   if (!consentScopes.has(value.consent_scope)) {
@@ -124,5 +120,5 @@ const failures = outcomes.filter((outcome) => !outcome.ok)
 if (failures.length > 0) {
   process.exitCode = 1
 } else {
-  console.log(`Validated ${outcomes.length} synthetic taxonomy fixtures without network, storage, or personal data.`)
+  console.log(`Validated ${outcomes.length} synthetic minimal-taxonomy fixtures without network, storage, or personal data.`)
 }

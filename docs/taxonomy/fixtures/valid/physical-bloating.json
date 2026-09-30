@@ -3,6 +3,5 @@
   "category_id": "physical_bloating",
   "source": "self_report",
   "consent_scope": "variables.physical.bloating.self_report",
-  "intensity": "mild",
-  "account_id": "synthetic-account-identifier"
+  "intensity": "moderate"
 }

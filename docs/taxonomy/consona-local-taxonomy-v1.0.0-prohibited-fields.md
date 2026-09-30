@@ -19,9 +19,10 @@
 
 ## 2. Fuentes prohibidas
 
-El vocabulario de fuente v1 se limita a `self_report` y `partner_observation`. Solo `self_report` tiene un alcance candidato de consentimiento y fixtures válidos. `partner_observation` queda reservado y bloqueado hasta P2, P5, P6, P8 y ADR-001. Las siguientes fuentes o equivalentes deben rechazarse:
+La única fuente válida en la v1 mínima es `self_report`. `partner_observation` queda fuera del esquema y debe rechazarse junto con las siguientes fuentes o equivalentes:
 
 ```text
+partner_observation
 inferred_from_phase
 inferred_from_behavior
 inferred_from_calendar
@@ -33,7 +34,7 @@ third_party_report
 algorithmic_guess
 ```
 
-`partner_observation` no queda aprobado ni habilitado en v1. Solo podría evaluarse en una versión posterior si P2, P5, P6, P8 y ADR-001 están satisfechos, con consentimiento directo y revocable por categoría y fuente. Aun entonces, debe describirse como “lo que observé”, mantener procedencia separada y no sobrescribir un autoinforme.
+La observación de pareja no queda aprobada ni habilitada en v1. Solo podría evaluarse en una versión posterior si P2, P5, P6, P8 y ADR-001 están satisfechos, con consentimiento directo y revocable por categoría y fuente. Aun entonces, debe describirse como “lo que observé”, mantener procedencia separada y no sobrescribir un autoinforme.
 
 ## 3. Conceptos prohibidos como salidas
 

@@ -1,6 +1,6 @@
 {
   "$id": "urn:consona:taxonomy:1.0.0",
-  "title": "Consona local taxonomy v1.0.0 candidate fixture schema",
+  "title": "Consona local taxonomy v1.0.0 minimal candidate fixture schema",
   "description": "Candidate-only schema for synthetic P1 conformance fixtures. It is not a storage, capture, consent, inference, synchronization, or production schema.",
   "type": "object",
   "additionalProperties": false,
@@ -30,10 +30,6 @@
   },
   "allOf": [
     {
-      "if": { "properties": { "source": { "const": "partner_observation" } } },
-      "then": false
-    },
-    {
       "if": { "properties": { "category_id": { "const": "physical_pain_or_cramps" } } },
       "then": { "properties": { "consent_scope": { "const": "variables.physical.pain_or_cramps.self_report" } } }
     },
@@ -44,38 +40,6 @@
     {
       "if": { "properties": { "category_id": { "const": "physical_fatigue" } } },
       "then": { "properties": { "consent_scope": { "const": "variables.physical.fatigue.self_report" } } }
-    },
-    {
-      "if": { "properties": { "category_id": { "const": "physical_sleep_perceived" } } },
-      "then": { "properties": { "consent_scope": { "const": "variables.physical.sleep_perceived.self_report" } } }
-    },
-    {
-      "if": { "properties": { "category_id": { "const": "physical_appetite_perceived" } } },
-      "then": { "properties": { "consent_scope": { "const": "variables.physical.appetite_perceived.self_report" } } }
-    },
-    {
-      "if": { "properties": { "category_id": { "const": "physical_craving_perceived" } } },
-      "then": { "properties": { "consent_scope": { "const": "variables.physical.craving_perceived.self_report" } } }
-    },
-    {
-      "if": { "properties": { "category_id": { "const": "emotional_irritability_perceived" } } },
-      "then": { "properties": { "consent_scope": { "const": "variables.emotional_cognitive.irritability_perceived.self_report" } } }
-    },
-    {
-      "if": { "properties": { "category_id": { "const": "emotional_sadness_perceived" } } },
-      "then": { "properties": { "consent_scope": { "const": "variables.emotional_cognitive.sadness_perceived.self_report" } } }
-    },
-    {
-      "if": { "properties": { "category_id": { "const": "emotional_anxiety_perceived" } } },
-      "then": { "properties": { "consent_scope": { "const": "variables.emotional_cognitive.anxiety_perceived.self_report" } } }
-    },
-    {
-      "if": { "properties": { "category_id": { "const": "cognitive_concentration_perceived" } } },
-      "then": { "properties": { "consent_scope": { "const": "variables.emotional_cognitive.concentration_perceived.self_report" } } }
-    },
-    {
-      "if": { "properties": { "category_id": { "const": "cognitive_energy_perceived" } } },
-      "then": { "properties": { "consent_scope": { "const": "variables.emotional_cognitive.energy_perceived.self_report" } } }
     }
   ],
   "$defs": {
@@ -84,57 +48,32 @@
       "enum": [
         "physical_pain_or_cramps",
         "physical_bloating",
-        "physical_fatigue",
-        "physical_sleep_perceived",
-        "physical_appetite_perceived",
-        "physical_craving_perceived",
-        "emotional_irritability_perceived",
-        "emotional_sadness_perceived",
-        "emotional_anxiety_perceived",
-        "cognitive_concentration_perceived",
-        "cognitive_energy_perceived"
+        "physical_fatigue"
       ]
     },
     "source": {
       "type": "string",
-      "enum": [
-        "self_report",
-        "partner_observation"
-      ]
+      "const": "self_report"
     },
     "consent_scope": {
       "type": "string",
       "enum": [
         "variables.physical.pain_or_cramps.self_report",
         "variables.physical.bloating.self_report",
-        "variables.physical.fatigue.self_report",
-        "variables.physical.sleep_perceived.self_report",
-        "variables.physical.appetite_perceived.self_report",
-        "variables.physical.craving_perceived.self_report",
-        "variables.emotional_cognitive.irritability_perceived.self_report",
-        "variables.emotional_cognitive.sadness_perceived.self_report",
-        "variables.emotional_cognitive.anxiety_perceived.self_report",
-        "variables.emotional_cognitive.concentration_perceived.self_report",
-        "variables.emotional_cognitive.energy_perceived.self_report"
+        "variables.physical.fatigue.self_report"
       ]
     },
     "intensity": {
       "type": "string",
       "enum": [
-        "not_present",
         "mild",
         "moderate",
-        "intense",
-        "not_applicable"
+        "intense"
       ]
     }
   },
   "x-consona-status": "candidate_review_only",
-  "x-consona-allowed-source-vocabulary": [
-    "self_report",
-    "partner_observation"
-  ],
-  "x-consona-current-consent-scope-version-1": "self_report only; partner_observation remains reserved and has no consent scope or valid fixture in v1",
+  "x-consona-allowed-source-version-1": "self_report only",
   "x-consona-prohibited-property-names": [
     "free_text",
     "note",
@@ -172,7 +111,7 @@
     "cycle dates",
     "phase calculation",
     "consent implementation",
-    "partner observation capture",
+    "partner observation",
     "inference generation",
     "network transport",
     "accounts",

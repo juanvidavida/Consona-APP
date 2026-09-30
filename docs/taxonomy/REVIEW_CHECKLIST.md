@@ -40,7 +40,7 @@ Usar exactamente uno de estos estados por control y por categoría:
 | Fecha de inicio | `2026-09-30` |
 | Fecha de cierre | `Pendiente` |
 | Versión de contrato revisada | `1.0.0` |
-| Commit / PR revisado | `PR #2 / commit 6ec0bb0` |
+| Commit / PR revisado | `PR #2 / v1 mínima pendiente de revisión` |
 | Revisión de producto | Juan Vidaechea, founder y 2026-09-30 |
 | Revisión de privacidad / seguridad | Juan Vidaechea, founder y 2026-09-30 |
 | Revisión de contenido / clínica | Juan Vidaechea, founder y 2026-09-30 |
@@ -71,7 +71,7 @@ Usar exactamente uno de estos estados por control y por categoría:
 
 | ID | Verificación | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
 |---|---|---|---|---|---|---|---|
-| PR-01 | Educación general, estimación local futura, autoinforme, observación de pareja, asociación local futura y conceptos prohibidos permanecen separados. | Tabla de planos del contrato; revisión de términos. | [E1 §1], [N3 §2, §5] | `Pendiente` |  |  |  |
+| PR-01 | Educación general, estimación local futura, autoinforme, observación futura de pareja, asociación local futura y conceptos prohibidos permanecen separados. La v1 mínima solo admite `self_report`; la observación de pareja queda fuera de su esquema. | Tabla de planos del contrato; revisión de términos. | [E1 §1], [N3 §2, §5] | `Pendiente` |  |  |  |
 | PR-02 | La educación general se formula como información poblacional; no describe a una persona concreta. | Contrato §1; contenido y panel “Hoy”. | [N1 §6], [N4 §1–3], [E1 §1] | `Pendiente` |  |  |  |
 | PR-03 | Una fase estimada no se presenta como ovulación confirmada, fertilidad, salud, síntoma, estado emocional, conducta, permiso o explicación causal. | Contrato §1; revisión de glosario y términos vetados. | [N1 §3–4, §6], [N4 §1, §5–6], [E1 §1, §6] | `Pendiente` |  |  |  |
 | PR-04 | La home conserva las tarjetas **Qué pasa en su cuerpo**, **Qué puedes preguntarle**, **Qué te toca a ti** y **Qué no asumir** como orientación, no como variables ni salidas personalizadas. | Especificación UX y revisión de referencias del contrato. | [N1 §6], [N3 §5], [N4 §3, §6–7] | `Pendiente` |  |  |  |
@@ -81,44 +81,39 @@ Usar exactamente uno de estos estados por control y por categoría:
 
 | ID | Verificación | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
 |---|---|---|---|---|---|---|---|
-| PR-06 | Los únicos valores permitidos son `not_present`, `mild`, `moderate`, `intense` y `not_applicable`. | Contrato §3; enum del esquema; fixture inválido de intensidad. | [E1 §3], [E2], [E4] | `Pendiente` |  |  |  |
+| PR-06 | Los únicos valores permitidos son `mild`, `moderate` e `intense`. | Contrato §3; enum del esquema; fixture inválido de intensidad. | [E1 §3], [E2], [E4] | `Pendiente` |  |  |  |
 | PR-07 | La escala se entiende como autodescripción y no como severidad clínica, riesgo, triaje, diagnóstico ni indicación terapéutica. | Definiciones y no-definiciones de cada valor. | [N3 §6], [E1 §3], [E7 §1, §11] | `Pendiente` |  |  |  |
-| PR-08 | `not_recorded` y valores abiertos como `other` no se admiten; la falta de entrada sigue siendo dato ausente. | Contrato §3; esquema con enumeración cerrada. | [E1 §2–3], [E2] | `Pendiente` |  |  |  |
+| PR-08 | `not_present`, `not_applicable`, `not_recorded` y valores abiertos como `other` no se admiten; la falta de entrada sigue siendo dato ausente. | Contrato §2–3; esquema con enumeración cerrada. | [E1 §2–3], [E2] | `Pendiente` |  |  |  |
 
 ---
 
 ## 4. Revisión por categorías candidatas
 
-> Decidir una categoría como **Aprobada para contrato documental** no autoriza a capturarla. Todas continúan en estado `research_pending`, sujetas a P2, P5, P6, P8 y ADR-001 según corresponda.
+> Decidir una categoría como **Aprobada para contrato documental** no autoriza a capturarla. Las tres categorías de la v1 mínima continúan en estado `research_pending`, sujetas a P2, P5, P6, P8 y ADR-001 según corresponda.
 
-### 4.1 Categorías de experiencias físicas
+### 4.1 Categorías de la v1 mínima
 
 | ID semántico | Etiqueta revisada | Qué debe confirmar el revisor | Evidencia y límite clínico | Estado editable | Responsable | Fecha | Comentario / modificación solicitada |
 |---|---|---|---|---|---|---|---|
 | `physical_pain_or_cramps` | Dolor o calambres | La definición describe una experiencia autorreferida y no identifica dismenorrea, endometriosis, infección ni causa. | Contrato §4.1; dossier de dolor; no permite triaje ni tratamiento. [E1 §4.1], [E7 §1, §3] | `Pendiente` |  |  |  |
 | `physical_bloating` | Hinchazón percibida | No confirma retención de líquido, edema, gas, peso ni enfermedad; no se atribuye a una fase individual. | Contrato §4.1 y síntesis JUA-10. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
 | `physical_fatigue` | Cansancio percibido | No se transforma en anemia, trastorno del sueño, SPM ni explicación hormonal. | Contrato §4.1 y síntesis JUA-10. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
-| `physical_sleep_perceived` | Sueño percibido | No diagnostica insomnio ni causa hormonal; reconoce heterogeneidad y prohíbe pronóstico individual. | Contrato §4.1; informe de sueño y apetito. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
-| `physical_appetite_perceived` | Apetito percibido | No representa calorías, peso, ingesta nutricional ni conducta alimentaria. | Contrato §4.1; informe de sueño y apetito. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
-| `physical_craving_perceived` | Antojo percibido | No clasifica alimentos, cantidades, nutrientes ni conducta alimentaria; no atribuye una necesidad biológica. | Contrato §4.1; informe de sueño y apetito. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
 
-### 4.2 Categorías de experiencias emocionales y cognitivas
+### 4.2 Experiencias que permanecen solo como educación general
 
-| ID semántico | Etiqueta revisada | Qué debe confirmar el revisor | Evidencia y límite clínico | Estado editable | Responsable | Fecha | Comentario / modificación solicitada |
-|---|---|---|---|---|---|---|---|
-| `emotional_irritability_perceived` | Irritabilidad percibida | Es experiencia autoexpresada, no rasgo, conducta, diagnóstico ni explicación de acciones. | Contrato §4.2; la fase no la predice. [N3 §3, §5–6], [E1 §4.2], [E7 §1] | `Pendiente` |  |  |  |
-| `emotional_sadness_perceived` | Tristeza percibida | No diagnostica depresión, SPM o TDPM; no crea un estado de riesgo ni recomendación individual. | Contrato §4.2; límites clínicos ADR-002. [N3 §1, §6], [E1 §4.2], [E7 §1] | `Pendiente` |  |  |  |
-| `emotional_anxiety_perceived` | Ansiedad percibida | No diagnostica un trastorno ni causa hormonal; no se usa para riesgo, triaje o predicción. | Contrato §4.2; límites clínicos ADR-002. [N3 §6], [E1 §4.2], [E7 §1] | `Pendiente` |  |  |  |
-| `cognitive_concentration_perceived` | Concentración percibida | No mide rendimiento, capacidad, memoria ni estado cognitivo clínico. | Contrato §4.2; evidencia no permite asumir cambio por fase. [E1 §4.2], [E7 §1] | `Pendiente` |  |  |  |
-| `cognitive_energy_perceived` | Energía percibida | No equivale a rendimiento, motivación, capacidad física o diagnóstico; no asume secuencia universal por fase. | Contrato §4.2; síntesis y auditoría. [E1 §4.2], [E7 §1] | `Pendiente` |  |  |  |
+| Experiencias | Regla editorial | Evidencia y límite clínico | Estado editable | Responsable | Fecha | Comentario / modificación solicitada |
+|---|---|---|---|---|---|---|
+| Sueño, apetito y antojos | Pueden aparecer solo como contenido educativo poblacional, nunca como categoría, permiso, registro o inferencia v1. | Informe de sueño y apetito; sin pronóstico individual. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
+| Irritabilidad, tristeza y ansiedad | Pueden aparecer solo como contenido educativo poblacional, nunca como categoría, permiso, registro o inferencia v1. | ADR-002 y límites clínicos; no son rasgos ni diagnósticos. [N3 §1, §3, §6], [E7 §1] | `Pendiente` |  |  |  |
+| Concentración y energía | Pueden aparecer solo como contenido educativo poblacional, nunca como categoría, permiso, registro o inferencia v1. | La evidencia no permite asumir secuencia universal por fase. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
 
 ### 4.3 Decisión consolidada de categorías
 
 | Grupo | Estado editable | Decisión / exclusiones / cambios requeridos | Responsable | Fecha |
 |---|---|---|---|---|
-| Experiencias físicas | `Pendiente` |  |  |  |
-| Experiencias emocionales y cognitivas | `Pendiente` |  |  |  |
-| Categorías excluidas expresamente de v1 | `Pendiente` |  |  |  |
+| V1 mínima de experiencias físicas | `Pendiente` | Solo dolor/calambres, hinchazón percibida y cansancio percibido; solo `self_report`; intensidad `mild`/`moderate`/`intense`. |  |  |
+| Experiencias solo educativas | `Pendiente` | Sueño, apetito, antojos, experiencias emocionales y cognitivas no se recogen ni infieren en v1. |  |  |
+| Fuentes excluidas expresamente de v1 | `Pendiente` | La observación de pareja queda fuera del esquema v1; toda fuente distinta de `self_report` se rechaza. |  |  |
 
 ---
 
@@ -129,8 +124,8 @@ Usar exactamente uno de estos estados por control y por categoría:
 | ID | Verificación | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
 |---|---|---|---|---|---|---|---|
 | PC-01 | La unidad futura de permiso queda definida como **categoría × fuente × permiso**; no existe consentimiento global. | Matriz candidata del contrato y ADR-002. | [N2 §3, §5], [N3 §4], [E1 §5] | `Pendiente` |  |  |  |
-| PC-02 | `self_report` es la única fuente que dispone de alcance candidato de consentimiento y fixture válido en v1. | Contrato §2, §4 y §5; fixtures válidos. | [E1 §2, §4–5], [E5] | `Pendiente` |  |  |  |
-| PC-03 | `partner_observation` solo es vocabulario reservado: no tiene permiso, alcance, formulario, persistencia ni fixture válido en v1. | Contrato §1–2, §5; fixture negativo. | [N2 §5, §7], [N3 §3–4, §7], [E1 §1–2, §5], [E4] | `Pendiente` |  |  |  |
+| PC-02 | `self_report` es la única fuente válida, con alcance candidato de consentimiento y fixtures válidos en la v1 mínima. | Contrato §2, §4 y §5; fixtures válidos. | [E1 §2, §4–5], [E5] | `Pendiente` |  |  |  |
+| PC-03 | `partner_observation` está fuera del esquema v1: no tiene permiso, alcance, formulario, persistencia ni fixture válido y debe rechazarse. | Contrato §1–2, §5; fixture negativo. | [N2 §5, §7], [N3 §3–4, §7], [E1 §1–2, §5], [E4] | `Pendiente` |  |  |  |
 | PC-04 | Una futura observación se definiría como “lo que observé”, se mantendría separada y nunca sobrescribiría ni corregiría un autoinforme. | ADR-002 y contrato; no se implementa en v1. | [N3 §3–5], [E1 §5] | `Pendiente` |  |  |  |
 | PC-05 | El consentimiento futuro debe ser directo, comprensible, granular, revisable y revocable por la persona afectada. | ADR-001; ADR-002; dependencia JUA-6/P2. | [N2 §3, §5], [N3 §4, §7], [E1 §7] | `Pendiente` |  |  |  |
 | PC-06 | No se interpreta un recordatorio de pareja como consentimiento directo. | ADR-001. | [N2 §3] | `Pendiente` |  |  |  |
@@ -159,7 +154,7 @@ Usar exactamente uno de estos estados por control y por categoría:
 | PB-04 | El contrato rechaza deseo, actividad, consentimiento sexual, límites, disponibilidad, libido e interés sexual. | Inventario y fixture de intimidad. | [N1 §4], [N2 §6–7], [N3 §6], [E3]–[E4] | `Pendiente` |  |  |  |
 | PB-05 | El contrato rechaza diagnósticos, tratamientos, medicación, dosis, puntuaciones clínicas, riesgo, SPM/TDPM y etiquetas de condiciones. | Inventario, auditoría y límites clínicos. | [N3 §1, §6], [E1 §6], [E3], [E7 §1, §11] | `Pendiente` |  |  |  |
 | PB-06 | El contrato rechaza inferencias de conducta, estado de ánimo, causa, necesidad, fertilidad, ovulación confirmada, “días seguros” o permiso para actuar. | Contrato e inventario de salidas prohibidas. | [N1 §4, §6], [N3 §2, §5–6], [N4 §1, §5–6], [E1 §1, §6], [E3] | `Pendiente` |  |  |  |
-| PB-07 | Solo se admiten las fuentes `self_report` y `partner_observation` como vocabulario; se rechazan fuentes derivadas de fase, conducta, mensajes, perfiles o cálculo automático. | Esquema y fixture de fuente derivada. | [N3 §3–5], [E2], [E3]–[E4] | `Pendiente` |  |  |  |
+| PB-07 | Solo se admite la fuente `self_report`; se rechazan observación de pareja y fuentes derivadas de fase, conducta, mensajes, perfiles o cálculo automático. | Esquema y fixtures de fuentes no permitidas. | [N3 §3–5], [E2], [E3]–[E4] | `Pendiente` |  |  |  |
 
 ### 6.2 Lenguaje de interfaz y contenido que no puede aprobarse
 
@@ -215,7 +210,7 @@ Usar exactamente uno de estos estados por control y por categoría:
 | Rechazo de categoría desconocida | `npm run validate:taxonomy` | `reject-unknown-category.json` se rechaza. | `Pendiente` |  |  |  |
 | Rechazo de intensidad abierta | `npm run validate:taxonomy` | `reject-invalid-intensity.json` se rechaza. | `Pendiente` |  |  |  |
 | Rechazo de fuente derivada | `npm run validate:taxonomy` | `reject-inferred-source.json` se rechaza. | `Pendiente` |  |  |  |
-| Bloqueo de observación reservada | `npm run validate:taxonomy` | `reject-reserved-partner-observation.json` se rechaza. | `Pendiente` |  |  |  |
+| Rechazo de observación de pareja | `npm run validate:taxonomy` | `reject-partner-observation.json` se rechaza. | `Pendiente` |  |  |  |
 | Rechazo de alcance incongruente | `npm run validate:taxonomy` | `reject-mismatched-consent-scope.json` se rechaza. | `Pendiente` |  |  |  |
 | Calidad de código | `npm run lint && npm run build && git diff --check` | Los tres comandos finalizan correctamente y no se introducen dependencias nuevas. | `Pendiente` |  |  |  |
 | Inspección de alcance | Revisar diff y script. | No se añaden almacenamiento, red, analítica, telemetría, sincronización, cuentas ni logs sensibles. | `Pendiente` |  |  |  |
@@ -237,7 +232,7 @@ Usar exactamente uno de estos estados por control y por categoría:
 
 | ID de cambio | Control afectado | Descripción precisa | Motivo | Archivo(s) que deben cambiar | Responsable | Fecha objetivo | Estado |
 |---|---|---|---|---|---|---|---|
-| `P1-CHG-001` |  |  |  |  |  |  | `Pendiente` |
+| `P1-CHG-001` | Categorías, fuente e intensidad v1 | Simplificar la v1 a tres categorías físicas, solo `self_report` y tres intensidades; relegar las demás experiencias a educación general. | Minimización de datos y claridad de revisión. | Contrato, esquema, fixtures, validador, changelog, dossier y checklist. | Juan Vidaechea | 2026-09-30 | `Pendiente de revisión` |
 | `P1-CHG-002` |  |  |  |  |  |  | `Pendiente` |
 | `P1-CHG-003` |  |  |  |  |  |  | `Pendiente` |
 

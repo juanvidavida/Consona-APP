@@ -3,5 +3,5 @@
   "category_id": "physical_fatigue",
   "source": "self_report",
   "consent_scope": "variables.physical.fatigue.self_report",
-  "intensity": "not_present"
+  "intensity": "intense"
 }
