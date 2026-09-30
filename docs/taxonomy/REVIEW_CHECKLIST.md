@@ -103,17 +103,17 @@ Usar exactamente uno de estos estados por control y por categoría:
 
 | Experiencias | Regla editorial | Evidencia y límite clínico | Estado editable | Responsable | Fecha | Comentario / modificación solicitada |
 |---|---|---|---|---|---|---|
-| Sueño, apetito y antojos | Pueden aparecer solo como contenido educativo poblacional, nunca como categoría, permiso, registro o inferencia v1. | Informe de sueño y apetito; sin pronóstico individual. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
-| Irritabilidad, tristeza y ansiedad | Pueden aparecer solo como contenido educativo poblacional, nunca como categoría, permiso, registro o inferencia v1. | ADR-002 y límites clínicos; no son rasgos ni diagnósticos. [N3 §1, §3, §6], [E7 §1] | `Pendiente` |  |  |  |
-| Concentración y energía | Pueden aparecer solo como contenido educativo poblacional, nunca como categoría, permiso, registro o inferencia v1. | La evidencia no permite asumir secuencia universal por fase. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
+| Sueño, apetito y antojos | Pueden aparecer solo como contenido educativo poblacional, nunca como categoría, permiso, registro o inferencia v1. | Informe de sueño y apetito; sin pronóstico individual. [E1 §4.1], [E7 §1] | `Aprobado para contrato documental` | Juan Vidaechea | 2026-09-30 | Se aprueba su exclusión de la v1 mínima. El contenido educativo puede explicar variabilidad poblacional con lenguaje cualificado, pero no describir, registrar ni inferir la experiencia de una persona concreta. |
+| Irritabilidad, tristeza y ansiedad | Pueden aparecer solo como contenido educativo poblacional, nunca como categoría, permiso, registro o inferencia v1. | ADR-002 y límites clínicos; no son rasgos ni diagnósticos. [N3 §1, §3, §6], [E7 §1] | `Aprobado para contrato documental` | Juan Vidaechea | 2026-09-30 | Se aprueba su exclusión de la v1 mínima. Consona no las convierte en rasgos, diagnósticos, estados de riesgo, explicaciones de conducta ni salidas personalizadas. |
+| Concentración y energía | Pueden aparecer solo como contenido educativo poblacional, nunca como categoría, permiso, registro o inferencia v1. | La evidencia no permite asumir secuencia universal por fase. [E1 §4.1], [E7 §1] | `Aprobado para contrato documental` | Juan Vidaechea | 2026-09-30 | Se aprueba su exclusión de la v1 mínima. Consona no mide rendimiento o capacidad, ni presupone una secuencia universal por fase. |
 
 ### 4.3 Decisión consolidada de categorías
 
 | Grupo | Estado editable | Decisión / exclusiones / cambios requeridos | Responsable | Fecha |
 |---|---|---|---|---|
-| V1 mínima de experiencias físicas | `Pendiente` | Solo dolor/calambres, hinchazón percibida y cansancio percibido; solo `self_report`; intensidad `mild`/`moderate`/`intense`. |  |  |
-| Experiencias solo educativas | `Pendiente` | Sueño, apetito, antojos, experiencias emocionales y cognitivas no se recogen ni infieren en v1. |  |  |
-| Fuentes excluidas expresamente de v1 | `Pendiente` | La observación de pareja queda fuera del esquema v1; toda fuente distinta de `self_report` se rechaza. |  |  |
+| V1 mínima de experiencias físicas | `Aprobado para contrato documental` | Solo dolor/calambres, hinchazón percibida y cansancio percibido; solo `self_report`; intensidad `mild`/`moderate`/`intense`. | Juan Vidaechea | 2026-09-30 |
+| Experiencias solo educativas | `Aprobado para contrato documental` | Sueño, apetito, antojos, experiencias emocionales y cognitivas no se recogen ni infieren en v1. | Juan Vidaechea | 2026-09-30 |
+| Fuentes excluidas expresamente de v1 | `Aprobado para contrato documental` | La observación de pareja queda fuera del esquema v1; toda fuente distinta de `self_report` se rechaza. | Juan Vidaechea | 2026-09-30 |
 
 ---
 
@@ -232,7 +232,7 @@ Usar exactamente uno de estos estados por control y por categoría:
 
 | ID de cambio | Control afectado | Descripción precisa | Motivo | Archivo(s) que deben cambiar | Responsable | Fecha objetivo | Estado |
 |---|---|---|---|---|---|---|---|
-| `P1-CHG-001` | Categorías, fuente e intensidad v1 | Simplificar la v1 a tres categorías físicas, solo `self_report` y tres intensidades; relegar las demás experiencias a educación general. | Minimización de datos y claridad de revisión. | Contrato, esquema, fixtures, validador, changelog, dossier y checklist. | Juan Vidaechea | 2026-09-30 | `Pendiente de revisión` |
+| `P1-CHG-001` | Categorías, fuente e intensidad v1 | Simplificar la v1 a tres categorías físicas, solo `self_report` y tres intensidades; relegar las demás experiencias a educación general. | Minimización de datos y claridad de revisión. | Contrato, esquema, fixtures, validador, changelog, dossier y checklist. | Juan Vidaechea | 2026-09-30 | `Resuelto; aprobado para contrato documental` |
 | `P1-CHG-002` |  |  |  |  |  |  | `Pendiente` |
 | `P1-CHG-003` |  |  |  |  |  |  | `Pendiente` |
 
