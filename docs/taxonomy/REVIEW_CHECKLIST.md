@@ -36,16 +36,16 @@ Usar exactamente uno de estos estados por control y por categoría:
 
 | Campo editable | Valor |
 |---|---|
-| Identificador de revisión | `P1-REV-____` |
-| Fecha de inicio | `AAAA-MM-DD` |
-| Fecha de cierre | `AAAA-MM-DD` o `Pendiente` |
+| Identificador de revisión | `P1-REV-001` |
+| Fecha de inicio | `2026-09-30` |
+| Fecha de cierre | `Pendiente` |
 | Versión de contrato revisada | `1.0.0` |
-| Commit / PR revisado | `PR #2 / commit __________` |
-| Revisión de producto | Nombre, rol y fecha |
-| Revisión de privacidad / seguridad | Nombre, rol y fecha |
-| Revisión de contenido / clínica | Nombre, rol y fecha |
-| Revisión de ingeniería | Nombre, rol y fecha |
-| Resultado global | `Pendiente` |
+| Commit / PR revisado | `PR #2 / commit 6ec0bb0` |
+| Revisión de producto | Juan Vidaechea, founder y 2026-09-30 |
+| Revisión de privacidad / seguridad | Juan Vidaechea, founder y 2026-09-30 |
+| Revisión de contenido / clínica | Juan Vidaechea, founder y 2026-09-30 |
+| Revisión de ingeniería | Juan Vidaechea, founder y 2026-09-30 |
+| Resultado global | `En revisión` |
 | Enlace a decisión en Linear | [JUA-10](https://linear.app/juan-vidaechea/issue/JUA-10/p1-adr-002-aprobar-contrato-de-taxonomia-local-cerrada-y-verificar) |
 
 ---
