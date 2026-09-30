@@ -1,50 +1,313 @@
-# Consona — Lista de revisión humana para el contrato P1
+# Consona — Cuaderno editable de revisión humana para P1 de ADR-002
 
-**Versión revisada:** candidato `1.0.0`
-**Regla:** ninguna casilla se considera aprobada por existir documentación o validación sintética. La aprobación requiere una decisión explícita y trazable de las personas responsables.
+**Contrato sometido a revisión:** [`consona-local-taxonomy-v1.0.0.md`](./consona-local-taxonomy-v1.0.0.md)
+**Esquema sometido a revisión:** [`consona-local-taxonomy-v1.0.0.schema.json`](./consona-local-taxonomy-v1.0.0.schema.json)
+**Revisión de esta plantilla:** 2026-09-30
+**Estado del contrato:** **Candidato; no aprobado.**
+**Estado de P1 / JUA-10:** **En progreso. No cerrar mediante esta plantilla sin decisión explícita y evidencia completa.**
 
-## Producto
+> **Regla de uso.** Este documento es una plantilla de decisión humana. Marcar una casilla exige que la persona responsable haya revisado la evidencia indicada y haya dejado una decisión, fecha y comentario. La existencia del contrato, del esquema o de fixtures sintéticos **no** aprueba P1, no habilita registros, almacenamiento local, observación de pareja, inferencias, sincronización ni piloto.
 
-- [ ] Confirmar que las once categorías candidatas son necesarias, exhaustivas para el alcance propuesto y no introducen seguimiento no autorizado.
-- [ ] Confirmar que la home y “Cómo funciona” siguen usando solo educación general y no convierten categorías en afirmaciones sobre la otra persona.
-- [ ] Confirmar que no se incluyen fertilidad, anticoncepción, diagnóstico, predicción de conducta, deseo, consentimiento sexual, límites ni disponibilidad.
-- [ ] Confirmar que la escala `not_present` / `mild` / `moderate` / `intense` / `not_applicable` es clara y no clínica.
-- [ ] Confirmar que la ausencia de una entrada se interpreta como dato ausente, no como ausencia de síntoma.
+---
 
-## Privacidad, consentimiento y seguridad
+## 1. Cómo completar esta revisión
 
-- [ ] Confirmar que cada unidad de la matriz es exactamente `categoría × fuente × permiso` y puede servir a P2 sin consentimiento global.
-- [ ] Confirmar que `self_report` es la única fuente con alcance candidato y fixtures válidos en v1, y que `partner_observation` queda reservado, no se activa y no se interpreta como autorización futura.
-- [ ] Confirmar el alcance de borrado: registro, permiso, caché, claves, cálculos e inferencias derivadas para P5.
-- [ ] Confirmar que el esquema no admite propiedades adicionales, texto libre, cuentas, contacto, red, perfiles ni identificadores.
-- [ ] Confirmar que la lista de campos prohibidos cubre intimidad, sexualidad, consentimiento, límites, disponibilidad y vigilancia.
-- [ ] Confirmar que no se habilita ningún servicio remoto fuera de la excepción limitada de ADR-001, que esta tarea no implementa.
-- [ ] Confirmar que P6/EIPD y el modelo de amenazas tratan cualquier posible observación de pareja antes de evaluar una versión posterior.
+### 1.1 Convención de estados editables
 
-## Contenido y evidencia
+Usar exactamente uno de estos estados por control y por categoría:
 
-- [ ] Confirmar que cada categoría candidata conserva definición, no-definición, evidencia y límite clínico adecuados.
-- [ ] Confirmar que las fuentes auditadas de JUA-10 siguen vigentes y que sus límites editoriales se reflejan en cada categoría.
-- [ ] Confirmar que SPM, TDPM, dismenorrea, endometriosis, anemia, menopausia y otras condiciones solo aparecen en educación general, nunca como entradas o salidas.
-- [ ] Confirmar que dolor, apetito, sueño, energía, concentración y experiencias emocionales no se presentan como efectos universales de una fase.
+| Estado | Uso | Efecto |
+|---|---|---|
+| `Pendiente` | No se ha revisado la evidencia requerida. | No permite aprobar el control. |
+| `Aprobado para contrato documental` | La decisión acepta el vocabulario y límite documental propuesto. | No habilita captura, persistencia ni piloto. |
+| `Cambios solicitados` | El revisor ha identificado una modificación necesaria. | Requiere cambio versionado, nueva validación y nueva revisión. |
+| `No aprobado` | La propuesta no es aceptable en su forma actual. | Bloquea P1 hasta una alternativa revisada. |
+| `No aplicable` | El control no aplica con justificación explícita. | Requiere motivo y validación por producto y privacidad. |
 
-## Ingeniería y aseguramiento
+### 1.2 Reglas de decisión
 
-- [ ] Ejecutar `npm run validate:taxonomy` y registrar el resultado sobre fixtures sintéticos.
-- [ ] Confirmar que JSON y Markdown tienen formato válido y que `git diff --check` no detecta errores de espacios.
-- [ ] Ejecutar `npm run lint` y `npm run build` sin introducir dependencias nuevas.
-- [ ] Inspeccionar cambios para confirmar que no se añadieron `localStorage`, IndexedDB, backend, autenticación, red, analítica, telemetría, copia de seguridad ni logs sensibles.
-- [ ] Confirmar que la publicación en GitHub deja el PR #2 abierto y que JUA-10 continúa **En progreso** hasta la aprobación explícita.
+1. **No hay aprobación implícita.** Una casilla sin estado, responsable, fecha y evidencia sigue pendiente.
+2. **La aprobación debe ser conjunta.** Producto, privacidad/seguridad y contenido/revisión clínica deben pronunciarse sobre los controles de su ámbito. Ingeniería confirma la verificabilidad, no sustituye las decisiones de producto, privacidad o contenido.
+3. **La aprobación es documental y limitada.** Aun con todas las decisiones positivas, P1 no autoriza por sí sola P2, registros locales, datos de ciclo, inferencias, emparejamiento, red ni piloto.
+4. **Toda modificación requiere trazabilidad.** Si cambia una categoría, fuente, intensidad, campo, prohibición o límite clínico, actualizar contrato, esquema, fixtures, pruebas, `CHANGELOG.md` y esta revisión antes de volver a decidir.
+5. **Prevalencia de controles.** Ante conflicto entre documentos, prevalecen la minimización de datos, la autonomía de la persona afectada, la prevención de coerción y la incertidumbre explícita de los documentos normativos [N1]–[N4].
 
-## Decisión de revisión
+### 1.3 Datos de la sesión de revisión
 
-| Rol responsable | Decisión | Fecha | Evidencia o comentario |
+| Campo editable | Valor |
+|---|---|
+| Identificador de revisión | `P1-REV-____` |
+| Fecha de inicio | `AAAA-MM-DD` |
+| Fecha de cierre | `AAAA-MM-DD` o `Pendiente` |
+| Versión de contrato revisada | `1.0.0` |
+| Commit / PR revisado | `PR #2 / commit __________` |
+| Revisión de producto | Nombre, rol y fecha |
+| Revisión de privacidad / seguridad | Nombre, rol y fecha |
+| Revisión de contenido / clínica | Nombre, rol y fecha |
+| Revisión de ingeniería | Nombre, rol y fecha |
+| Resultado global | `Pendiente` |
+| Enlace a decisión en Linear | [JUA-10](https://linear.app/juan-vidaechea/issue/JUA-10/p1-adr-002-aprobar-contrato-de-taxonomia-local-cerrada-y-verificar) |
+
+---
+
+## 2. Puertas de decisión y límites no negociables
+
+> Todas las puertas de esta sección deben tener una decisión explícita antes de afirmar que el contrato documental P1 está aprobado.
+
+| ID | Control que debe revisarse | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
+|---|---|---|---|---|---|---|---|
+| G-01 | El resultado se limita a una **taxonomía cerrada documental**; no implementa una función de producto. | Contrato §1, §2 y §9; esquema; revisión de alcance del PR. | [N2 §5], [N3 §7–8], [E1 §1–2, §9] | `Pendiente` |  |  |  |
+| G-02 | No se recoge, introduce, conserva ni prueba con información personal o de ciclo real. | Inspección de fixtures y script; declaración de datos sintéticos. | [N1 §3–5], [N2 §2, §5], [E1 §8], [E4]–[E6] | `Pendiente` |  |  |  |
+| G-03 | No se habilitan formularios, `localStorage`, IndexedDB, backend, autenticación, emparejamiento, sincronización, copias de seguridad, red, analítica, telemetría o logs sensibles. | Revisión de diff; resultado de pruebas; inspección de dependencias y script. | [N1 §3–5], [N2 §2, §5], [N3 §8], [E1 §8], [E6] | `Pendiente` |  |  |  |
+| G-04 | Los datos de ciclo, variables consentidas e inferencias futuras siguen siendo exclusivamente locales; la excepción remota de ADR-001 no se amplía. | Revisión normativa y de cambios. | [N1 §3–5], [N2 §2–5], [E1 §7] | `Pendiente` |  |  |  |
+| G-05 | No se registra, infiere, representa ni sugiere deseo sexual, actividad sexual, consentimiento sexual, límites o disponibilidad. | Contrato §6; inventario prohibido; fixtures negativos. | [N1 §4], [N2 §6], [N3 §6], [E1 §6], [E3], [E4] | `Pendiente` |  |  |  |
+| G-06 | P1 se mantiene abierto hasta la decisión explícita y no se interpreta como autorización de piloto. | Estado de JUA-10 y decisión final de este documento. | [N1 §8–9], [N2 §5], [N3 §7–8], [E1 §9] | `Pendiente` |  |  |  |
+
+---
+
+## 3. Revisión de producto: alcance y lenguaje
+
+### 3.1 Separación de planos semánticos
+
+| ID | Verificación | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
+|---|---|---|---|---|---|---|---|
+| PR-01 | Educación general, estimación local futura, autoinforme, observación de pareja, asociación local futura y conceptos prohibidos permanecen separados. | Tabla de planos del contrato; revisión de términos. | [E1 §1], [N3 §2, §5] | `Pendiente` |  |  |  |
+| PR-02 | La educación general se formula como información poblacional; no describe a una persona concreta. | Contrato §1; contenido y panel “Hoy”. | [N1 §6], [N4 §1–3], [E1 §1] | `Pendiente` |  |  |  |
+| PR-03 | Una fase estimada no se presenta como ovulación confirmada, fertilidad, salud, síntoma, estado emocional, conducta, permiso o explicación causal. | Contrato §1; revisión de glosario y términos vetados. | [N1 §3–4, §6], [N4 §1, §5–6], [E1 §1, §6] | `Pendiente` |  |  |  |
+| PR-04 | La home conserva las tarjetas **Qué pasa en su cuerpo**, **Qué puedes preguntarle**, **Qué te toca a ti** y **Qué no asumir** como orientación, no como variables ni salidas personalizadas. | Especificación UX y revisión de referencias del contrato. | [N1 §6], [N3 §5], [N4 §3, §6–7] | `Pendiente` |  |  |  |
+| PR-05 | El contrato no permite que la ausencia de registro se lea como ausencia de experiencia o de síntoma. | Contrato §2 y §3; esquema y fixtures. | [N3 §5], [E1 §2–3] | `Pendiente` |  |  |  |
+
+### 3.2 Escala de intensidad candidata
+
+| ID | Verificación | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
+|---|---|---|---|---|---|---|---|
+| PR-06 | Los únicos valores permitidos son `not_present`, `mild`, `moderate`, `intense` y `not_applicable`. | Contrato §3; enum del esquema; fixture inválido de intensidad. | [E1 §3], [E2], [E4] | `Pendiente` |  |  |  |
+| PR-07 | La escala se entiende como autodescripción y no como severidad clínica, riesgo, triaje, diagnóstico ni indicación terapéutica. | Definiciones y no-definiciones de cada valor. | [N3 §6], [E1 §3], [E7 §1, §11] | `Pendiente` |  |  |  |
+| PR-08 | `not_recorded` y valores abiertos como `other` no se admiten; la falta de entrada sigue siendo dato ausente. | Contrato §3; esquema con enumeración cerrada. | [E1 §2–3], [E2] | `Pendiente` |  |  |  |
+
+---
+
+## 4. Revisión por categorías candidatas
+
+> Decidir una categoría como **Aprobada para contrato documental** no autoriza a capturarla. Todas continúan en estado `research_pending`, sujetas a P2, P5, P6, P8 y ADR-001 según corresponda.
+
+### 4.1 Categorías de experiencias físicas
+
+| ID semántico | Etiqueta revisada | Qué debe confirmar el revisor | Evidencia y límite clínico | Estado editable | Responsable | Fecha | Comentario / modificación solicitada |
+|---|---|---|---|---|---|---|---|
+| `physical_pain_or_cramps` | Dolor o calambres | La definición describe una experiencia autorreferida y no identifica dismenorrea, endometriosis, infección ni causa. | Contrato §4.1; dossier de dolor; no permite triaje ni tratamiento. [E1 §4.1], [E7 §1, §3] | `Pendiente` |  |  |  |
+| `physical_bloating` | Hinchazón percibida | No confirma retención de líquido, edema, gas, peso ni enfermedad; no se atribuye a una fase individual. | Contrato §4.1 y síntesis JUA-10. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
+| `physical_fatigue` | Cansancio percibido | No se transforma en anemia, trastorno del sueño, SPM ni explicación hormonal. | Contrato §4.1 y síntesis JUA-10. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
+| `physical_sleep_perceived` | Sueño percibido | No diagnostica insomnio ni causa hormonal; reconoce heterogeneidad y prohíbe pronóstico individual. | Contrato §4.1; informe de sueño y apetito. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
+| `physical_appetite_perceived` | Apetito percibido | No representa calorías, peso, ingesta nutricional ni conducta alimentaria. | Contrato §4.1; informe de sueño y apetito. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
+| `physical_craving_perceived` | Antojo percibido | No clasifica alimentos, cantidades, nutrientes ni conducta alimentaria; no atribuye una necesidad biológica. | Contrato §4.1; informe de sueño y apetito. [E1 §4.1], [E7 §1] | `Pendiente` |  |  |  |
+
+### 4.2 Categorías de experiencias emocionales y cognitivas
+
+| ID semántico | Etiqueta revisada | Qué debe confirmar el revisor | Evidencia y límite clínico | Estado editable | Responsable | Fecha | Comentario / modificación solicitada |
+|---|---|---|---|---|---|---|---|
+| `emotional_irritability_perceived` | Irritabilidad percibida | Es experiencia autoexpresada, no rasgo, conducta, diagnóstico ni explicación de acciones. | Contrato §4.2; la fase no la predice. [N3 §3, §5–6], [E1 §4.2], [E7 §1] | `Pendiente` |  |  |  |
+| `emotional_sadness_perceived` | Tristeza percibida | No diagnostica depresión, SPM o TDPM; no crea un estado de riesgo ni recomendación individual. | Contrato §4.2; límites clínicos ADR-002. [N3 §1, §6], [E1 §4.2], [E7 §1] | `Pendiente` |  |  |  |
+| `emotional_anxiety_perceived` | Ansiedad percibida | No diagnostica un trastorno ni causa hormonal; no se usa para riesgo, triaje o predicción. | Contrato §4.2; límites clínicos ADR-002. [N3 §6], [E1 §4.2], [E7 §1] | `Pendiente` |  |  |  |
+| `cognitive_concentration_perceived` | Concentración percibida | No mide rendimiento, capacidad, memoria ni estado cognitivo clínico. | Contrato §4.2; evidencia no permite asumir cambio por fase. [E1 §4.2], [E7 §1] | `Pendiente` |  |  |  |
+| `cognitive_energy_perceived` | Energía percibida | No equivale a rendimiento, motivación, capacidad física o diagnóstico; no asume secuencia universal por fase. | Contrato §4.2; síntesis y auditoría. [E1 §4.2], [E7 §1] | `Pendiente` |  |  |  |
+
+### 4.3 Decisión consolidada de categorías
+
+| Grupo | Estado editable | Decisión / exclusiones / cambios requeridos | Responsable | Fecha |
+|---|---|---|---|---|
+| Experiencias físicas | `Pendiente` |  |  |  |
+| Experiencias emocionales y cognitivas | `Pendiente` |  |  |  |
+| Categorías excluidas expresamente de v1 | `Pendiente` |  |  |  |
+
+---
+
+## 5. Privacidad, consentimiento y protección frente a coerción
+
+### 5.1 Fuente, procedencia y consentimiento
+
+| ID | Verificación | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
+|---|---|---|---|---|---|---|---|
+| PC-01 | La unidad futura de permiso queda definida como **categoría × fuente × permiso**; no existe consentimiento global. | Matriz candidata del contrato y ADR-002. | [N2 §3, §5], [N3 §4], [E1 §5] | `Pendiente` |  |  |  |
+| PC-02 | `self_report` es la única fuente que dispone de alcance candidato de consentimiento y fixture válido en v1. | Contrato §2, §4 y §5; fixtures válidos. | [E1 §2, §4–5], [E5] | `Pendiente` |  |  |  |
+| PC-03 | `partner_observation` solo es vocabulario reservado: no tiene permiso, alcance, formulario, persistencia ni fixture válido en v1. | Contrato §1–2, §5; fixture negativo. | [N2 §5, §7], [N3 §3–4, §7], [E1 §1–2, §5], [E4] | `Pendiente` |  |  |  |
+| PC-04 | Una futura observación se definiría como “lo que observé”, se mantendría separada y nunca sobrescribiría ni corregiría un autoinforme. | ADR-002 y contrato; no se implementa en v1. | [N3 §3–5], [E1 §5] | `Pendiente` |  |  |  |
+| PC-05 | El consentimiento futuro debe ser directo, comprensible, granular, revisable y revocable por la persona afectada. | ADR-001; ADR-002; dependencia JUA-6/P2. | [N2 §3, §5], [N3 §4, §7], [E1 §7] | `Pendiente` |  |  |  |
+| PC-06 | No se interpreta un recordatorio de pareja como consentimiento directo. | ADR-001. | [N2 §3] | `Pendiente` |  |  |  |
+
+### 5.2 Borrado, datos mínimos y ausencia de salida remota
+
+| ID | Verificación | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
+|---|---|---|---|---|---|---|---|
+| PC-07 | La política candidata de retirada cubre registro, permiso, caché, claves, cálculos y salidas derivadas. | Contrato §4, §7; ADR-001/ADR-002. | [N2 §3, §5], [N3 §4–5, §7], [E1 §4, §7] | `Pendiente` |  |  |  |
+| PC-08 | Se reconoce que P5 debe demostrar borrado real; este contrato no sustituye pruebas de borrado o revocación. | Vínculos del contrato; backlog. | [N1 §4, §8], [N2 §5], [N3 §7–9], [E1 §7] | `Pendiente` |  |  |  |
+| PC-09 | El esquema no permite fecha, identidad, cuenta, dispositivo, ubicación, contacto, URL, contenido libre ni derivado clínico. | Contrato §2; esquema y fixtures negativos. | [N1 §3–5], [N2 §2, §5], [E1 §2, §6], [E2], [E3]–[E4] | `Pendiente` |  |  |  |
+| PC-10 | Se mantienen prohibidos red, cuentas de ciclo, sincronización, backup, analítica, telemetría, píxeles, informes remotos de errores y logs sensibles. | Documentos normativos, contrato y revisión de código añadido. | [N1 §3–5], [N2 §2, §5], [N3 §8], [E1 §7–8] | `Pendiente` |  |  |  |
+| PC-11 | Se reconoce que P6 requiere EIPD, modelo de amenazas y evaluación específica de violencia tecnológica antes de estudiar observación de pareja. | ADR-001/ADR-002; bloqueo JUA-13. | [N1 §8], [N2 §5, §7], [N3 §7], [E1 §7] | `Pendiente` |  |  |  |
+
+---
+
+## 6. Campos, fuentes, salidas y expresiones que deben rechazarse
+
+### 6.1 Inventario de prohibiciones
+
+| ID | Revisión requerida | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
+|---|---|---|---|---|---|---|---|
+| PB-01 | El contrato rechaza texto libre y equivalentes: `free_text`, `note`, `comment`, `message`, `description`, `other`, contexto narrativo o diario. | Inventario y fixture de rechazo. | [E1 §3, §6], [E2], [E3], [E4] | `Pendiente` |  |  |  |
+| PB-02 | El contrato rechaza nombre, correo, teléfono, cuenta, contacto, ubicación, dispositivo, identificadores publicitarios y fingerprint. | Inventario y fixture de rechazo. | [N2 §2, §5], [E2], [E3], [E4] | `Pendiente` |  |  |  |
+| PB-03 | El contrato rechaza archivos, capturas, audio, vídeo, conversaciones, mensajes y contenido extraído. | Inventario prohibido. | [N1 §4–5], [E3] | `Pendiente` |  |  |  |
+| PB-04 | El contrato rechaza deseo, actividad, consentimiento sexual, límites, disponibilidad, libido e interés sexual. | Inventario y fixture de intimidad. | [N1 §4], [N2 §6–7], [N3 §6], [E3]–[E4] | `Pendiente` |  |  |  |
+| PB-05 | El contrato rechaza diagnósticos, tratamientos, medicación, dosis, puntuaciones clínicas, riesgo, SPM/TDPM y etiquetas de condiciones. | Inventario, auditoría y límites clínicos. | [N3 §1, §6], [E1 §6], [E3], [E7 §1, §11] | `Pendiente` |  |  |  |
+| PB-06 | El contrato rechaza inferencias de conducta, estado de ánimo, causa, necesidad, fertilidad, ovulación confirmada, “días seguros” o permiso para actuar. | Contrato e inventario de salidas prohibidas. | [N1 §4, §6], [N3 §2, §5–6], [N4 §1, §5–6], [E1 §1, §6], [E3] | `Pendiente` |  |  |  |
+| PB-07 | Solo se admiten las fuentes `self_report` y `partner_observation` como vocabulario; se rechazan fuentes derivadas de fase, conducta, mensajes, perfiles o cálculo automático. | Esquema y fixture de fuente derivada. | [N3 §3–5], [E2], [E3]–[E4] | `Pendiente` |  |  |  |
+
+### 6.2 Lenguaje de interfaz y contenido que no puede aprobarse
+
+| Expresión o patrón no admisible | Motivo | Alternativa segura para educación general |
+|---|---|---|
+| “Está así por la regla.” | Atribuye estado o conducta a una fase. | “Las experiencias pueden variar. Si te parece, pregúntale cómo está.” |
+| “Estará irritable / cansada / triste.” | Predicción determinista de una persona. | “Una fase no permite saber cómo se siente una persona concreta.” |
+| “Tiene SPM / TDPM.” | Diagnóstico o clasificación no permitida. | “SPM y TDPM son términos clínicos; Consona no los asigna.” |
+| “Hoy no querrá intimidad.” | Infiere deseo, consentimiento o disponibilidad. | “El deseo y el consentimiento se preguntan directamente y son actuales.” |
+| “La fase explica el dolor / el ánimo.” | Presenta causalidad individual no demostrada. | “Un síntoma aislado o una fase estimada no identifican una causa.” |
+| “Ovulación confirmada / día seguro.” | Falsa certeza clínica o anticonceptiva. | “La aplicación muestra una estimación con límites; no es anticonceptiva.” |
+
+**Decisión de lenguaje:** `Pendiente`
+**Responsable / fecha / comentario:**
+
+---
+
+## 7. Contenido, evidencia y límites clínicos
+
+| ID | Verificación | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
+|---|---|---|---|---|---|---|---|
+| CE-01 | Cada categoría candidata conserva definición positiva, no-definición, uso delimitado y límite clínico. | Tablas del contrato §4. | [E1 §4], [E7 §1, §11] | `Pendiente` |  |  |  |
+| CE-02 | Las fuentes bibliográficas auditadas de JUA-10 se aplican de manera coherente y no se transforman en recomendaciones individuales. | Cierre de auditorías, síntesis e informes de apoyo. | [E7 §1, §3–4, §7, §11] | `Pendiente` |  |  |  |
+| CE-03 | Dolor, sueño, apetito, antojos, energía, concentración y experiencias emocionales no se presentan como efectos universales de una fase. | Contrato y ADR-002. | [N1 §6], [N3 §1, §5–6], [E1 §4], [E7 §1] | `Pendiente` |  |  |  |
+| CE-04 | Las referencias a SPM, TDPM, dismenorrea, endometriosis, anemia o menopausia permanecen educativas; nunca son entradas, salidas o reglas de decisión. | Contrato, inventario y cierre de auditorías. | [N3 §1, §6], [E1 §4, §6], [E3], [E7 §1, §11] | `Pendiente` |  |  |  |
+| CE-05 | El contenido conserva una vía no invasiva a atención profesional cuando corresponda, sin triaje, diagnóstico, alertas automatizadas ni comunicación remota. | ADR-002 y cierre de auditorías. | [N3 §2, §6], [E7 §1, §11] | `Pendiente` |  |  |  |
+| CE-06 | La trazabilidad de fuentes se mantiene al cambiar una definición, categoría o redacción clínica. | `CHANGELOG.md`, contrato, dossier y PR. | [E1 §9], [E7] | `Pendiente` |  |  |  |
+
+---
+
+## 8. Coherencia con la experiencia “Hoy” y accesibilidad
+
+| ID | Verificación | Evidencia mínima | Referencias | Estado editable | Responsable | Fecha | Comentario / cambio requerido |
+|---|---|---|---|---|---|---|---|
+| UX-01 | La taxonomía no autoriza mostrar variables, autoinformes, observaciones o asociaciones personalizadas en la home. | Contrato §1 y §7; especificación del panel. | [N3 §5], [N4 §3, §6–7], [E1 §1, §7] | `Pendiente` |  |  |  |
+| UX-02 | Los estados de datos insuficientes, datos antiguos, anticoncepción incompatible, consentimiento no vigente, patrón insuficiente y resultado inválido no muestran una fase como vigente. | Especificación UX y alcance de contrato. | [N4 §5, §7–8], [E1 §1, §7] | `Pendiente` |  |  |  |
+| UX-03 | “Cómo funciona” y onboarding explican estimación, rango, actualización, caducidad, límites y no uso anticonceptivo sin convertirlos en datos de la otra persona. | Especificación UX. | [N4 §1, §4, §7–8] | `Pendiente` |  |  |  |
+| UX-04 | La redacción podrá tener equivalentes no deterministas en español internacional, catalán e inglés, con teclado y lector de pantalla. | Criterios de contenido y UX; plan de localización posterior. | [N1 §4], [N4 §4, §7] | `Pendiente` |  |  |  |
+
+---
+
+## 9. Ingeniería y verificación de contrato
+
+### 9.1 Resultado editable de pruebas
+
+| Control técnico | Comando o inspección | Resultado esperado | Resultado editable | Ejecutado por | Fecha | Enlace a evidencia / comentario |
+|---|---|---|---|---|---|---|
+| JSON válido | Validar todos los `*.json` del directorio `docs/taxonomy/`. | Esquema y fixtures sintácticamente válidos. | `Pendiente` |  |  |  |
+| Fixtures válidos | `npm run validate:taxonomy` | Los fixtures de `fixtures/valid/` se aceptan. | `Pendiente` |  |  |  |
+| Rechazo de texto libre | `npm run validate:taxonomy` | `reject-free-text.json` se rechaza. | `Pendiente` |  |  |  |
+| Rechazo de identidad | `npm run validate:taxonomy` | `reject-account-identifier.json` se rechaza. | `Pendiente` |  |  |  |
+| Rechazo de intimidad | `npm run validate:taxonomy` | `reject-sexual-consent.json` se rechaza. | `Pendiente` |  |  |  |
+| Rechazo de categoría desconocida | `npm run validate:taxonomy` | `reject-unknown-category.json` se rechaza. | `Pendiente` |  |  |  |
+| Rechazo de intensidad abierta | `npm run validate:taxonomy` | `reject-invalid-intensity.json` se rechaza. | `Pendiente` |  |  |  |
+| Rechazo de fuente derivada | `npm run validate:taxonomy` | `reject-inferred-source.json` se rechaza. | `Pendiente` |  |  |  |
+| Bloqueo de observación reservada | `npm run validate:taxonomy` | `reject-reserved-partner-observation.json` se rechaza. | `Pendiente` |  |  |  |
+| Rechazo de alcance incongruente | `npm run validate:taxonomy` | `reject-mismatched-consent-scope.json` se rechaza. | `Pendiente` |  |  |  |
+| Calidad de código | `npm run lint && npm run build && git diff --check` | Los tres comandos finalizan correctamente y no se introducen dependencias nuevas. | `Pendiente` |  |  |  |
+| Inspección de alcance | Revisar diff y script. | No se añaden almacenamiento, red, analítica, telemetría, sincronización, cuentas ni logs sensibles. | `Pendiente` |  |  |  |
+
+### 9.2 Límites de la verificación actual
+
+- [ ] Confirmar que las pruebas usan exclusivamente fixtures sintéticos y no acceden a datos de personas ni de ciclo.
+- [ ] Confirmar que la validación de esquema es una prueba de contrato, **no** una evidencia de interfaz, almacenamiento, consentimiento, borrado o algoritmo de producto.
+- [ ] Confirmar que una implementación posterior deberá reutilizar y ampliar estas pruebas en P2, P5, P8, CON-037, CON-038 y CON-039 antes de procesar datos reales.
+
+**Estado de verificación técnica:** `Pendiente`
+**Responsable / fecha / comentario:**
+
+---
+
+## 10. Registro de cambios solicitados
+
+> Añadir una fila por cambio. No marcar un control como aprobado mientras su cambio asociado siga abierto.
+
+| ID de cambio | Control afectado | Descripción precisa | Motivo | Archivo(s) que deben cambiar | Responsable | Fecha objetivo | Estado |
+|---|---|---|---|---|---|---|---|
+| `P1-CHG-001` |  |  |  |  |  |  | `Pendiente` |
+| `P1-CHG-002` |  |  |  |  |  |  | `Pendiente` |
+| `P1-CHG-003` |  |  |  |  |  |  | `Pendiente` |
+
+---
+
+## 11. Decisión final de revisión
+
+### 11.1 Resumen por rol
+
+| Rol responsable | Decisión editable | Fecha | Evidencia revisada | Comentario, condición o veto |
+|---|---|---|---|---|
+| Producto | `Pendiente` |  |  |  |
+| Privacidad / seguridad | `Pendiente` |  |  |  |
+| Contenido / revisión clínica | `Pendiente` |  |  |  |
+| Ingeniería | `Pendiente` |  |  |  |
+
+### 11.2 Resolución de P1
+
+Seleccionar una sola opción cuando los roles hayan completado su revisión:
+
+- [ ] **Aprobar para contrato documental.** El vocabulario v1.0.0 puede utilizarse como fuente de definición para el diseño posterior, sujeto a sus prohibiciones y dependencias. P1 sigue sin habilitar captura, persistencia, inferencias, observación de pareja, sincronización o piloto.
+- [ ] **Solicitar cambios.** Registrar todos los cambios en la sección 10 y repetir las verificaciones afectadas antes de una nueva decisión.
+- [ ] **No aprobar.** Mantener modelo educativo sin datos y documentar la alternativa o bloqueo.
+- [ ] **Posponer.** Conservar el contrato como candidato y definir la evidencia faltante.
+
+**Resolución elegida:** `Pendiente`
+**Justificación completa:**
+
+**Decisión registrada en JUA-10 / PR #2:** `Pendiente`
+**¿P1 puede cerrarse?:** `No; pendiente de decisión explícita y de completar los criterios aplicables.`
+
+---
+
+## 12. Referencias y trazabilidad
+
+### 12.1 Documentos normativos del proyecto
+
+| ID | Documento | Secciones relevantes para esta revisión | Uso en esta plantilla |
 |---|---|---|---|
-| Producto | Pendiente | — | — |
-| Privacidad / seguridad | Pendiente | — | — |
-| Contenido / revisión clínica | Pendiente | — | — |
-| Ingeniería | Pendiente | — | — |
+| [N1] | `CONSONA_LINEA_BASE_Y_BACKLOG.md` | §2–6, §8–10. | Jerarquía de decisión, límites de producto, backlog y condiciones para desarrollo. |
+| [N2] | `CONSONA_ADR-001_CONTROL_LOCAL_Y_CONSENTIMIENTO.md` | §2–7. | Control local, consentimiento directo, minimización, revocación, borrado, conectividad, seguridad y EIPD. |
+| [N3] | `CONSONA_ADR-002_APRENDIZAJE_LOCAL_Y_VARIABILIDAD_PREMENSTRUAL.md` | §2–9. | Categorías cerradas, fuentes, consentimiento granular, límites clínicos, P1–P8 y bloqueo de piloto. |
+| [N4] | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` | §1–8. | Separación entre panel “Hoy”, contenido educativo, estimación y aprendizaje condicionado. |
 
-## References
+### 12.2 Artefactos del contrato en el repositorio
 
-[1]: ../research/JUA-10-investigacion-taxonomia.md "Síntesis de investigación JUA-10: taxonomía educativa de Consona"
+| ID | Artefacto | Enlace | Uso en esta plantilla |
+|---|---|---|---|
+| [E1] | Contrato taxonómico v1.0.0 | [`consona-local-taxonomy-v1.0.0.md`](./consona-local-taxonomy-v1.0.0.md) | Fuente funcional y semántica del candidato. |
+| [E2] | Esquema técnico | [`consona-local-taxonomy-v1.0.0.schema.json`](./consona-local-taxonomy-v1.0.0.schema.json) | Enumeraciones, campos permitidos y rechazo de propiedades adicionales. |
+| [E3] | Inventario de campos prohibidos | [`consona-local-taxonomy-v1.0.0-prohibited-fields.md`](./consona-local-taxonomy-v1.0.0-prohibited-fields.md) | Prohibiciones de datos, fuentes y salidas. |
+| [E4] | Fixtures inválidos | [`fixtures/invalid/`](./fixtures/invalid/) | Evidencia sintética de rechazo de campos y valores no permitidos. |
+| [E5] | Fixtures válidos | [`fixtures/valid/`](./fixtures/valid/) | Ejemplos sintéticos de forma estructural permitida. |
+| [E6] | Validador local | [`validate-taxonomy-fixtures.mjs`](../../scripts/validate-taxonomy-fixtures.mjs) | Ejecución local de pruebas de contrato. |
+| [E7] | Dossier y cierre de auditorías JUA-10 | [`docs/research/jua-10/`](../research/jua-10/) y [`JUA-10-cierre-auditorias.md`](../research/JUA-10-cierre-auditorias.md) | Trazabilidad bibliográfica, redacción cualificada y límites editoriales. |
+| [E8] | Historial de cambios | [`CHANGELOG.md`](./CHANGELOG.md) | Evolución versionada del contrato. |
+
+### 12.3 Lectura mínima antes de emitir una aprobación
+
+- [ ] [N1] Línea base y backlog vigente.
+- [ ] [N2] ADR-001, incluidas condiciones C1–C10.
+- [ ] [N3] ADR-002, incluidas condiciones P1–P8.
+- [ ] [N4] Especificación del panel “Hoy”.
+- [ ] [E1] Contrato completo, [E2] esquema y [E3] inventario de prohibiciones.
+- [ ] [E4]–[E6] fixtures y validador local.
+- [ ] [E7] dossier y cierre de auditorías bibliográficas.
+- [ ] [E8] historial de cambios.
+
+---
+
+## 13. Nota de cierre obligatoria
+
+> Un contrato taxonómico aprobado solo fija el vocabulario y sus límites. No convierte el prototipo en una aplicación de seguimiento, no demuestra consentimiento, borrado, seguridad, ausencia de salida remota ni control de coerción, y no habilita un piloto. Esas condiciones permanecen acumulativamente bloqueadas por ADR-001, ADR-002 y las incidencias correspondientes de Linear.
