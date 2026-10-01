@@ -28,18 +28,19 @@ La prioridad de este protocolo es conservar el control de la persona afectada au
 | **Dispositivo de control** | Dispositivo desde el que la persona afectada ejerce una decisión directa. | Una cuenta de ciclo, un identificador personal o un repositorio de datos de ciclo. |
 | **Dispositivo receptor** | El único dispositivo que podría conservar localmente datos de ciclo, variables o derivados dentro de un alcance autorizado. | Un destino que puede sincronizar o exportar esos datos. |
 | **Servicio mínimo** | Futuro mecanismo excepcional de coordinación de consentimiento y revocación, definido por CON-008. | Un backend de salud, calendario compartido, analítica, mensajería o base de datos de ciclo. |
-| **Alcance (`scope`)** | Unidad versionada sobre la que se decide un permiso. Para variables futuras: categoría × fuente; una finalidad adicional requiere una decisión explícita. | Un permiso global para “todo el ciclo”, una autorización de pareja o una forma de deducir sexualidad. |
+| **Alcance local (`scope`)** | Unidad versionada que la persona afectada acepta, revisa o retira en sus dispositivos. Para variables futuras: categoría × fuente; una finalidad adicional requiere una decisión explícita. | Un campo, etiqueta o estado que viaje al servicio mínimo. |
+| **Referencia de coordinación opaca** | Valor técnico efímero o rotable, sin semántica clínica, que CON-008 podrá usar para dirigir una señal genérica. La correspondencia con un alcance local solo existe en los dispositivos de control y receptor. | Una codificación de categoría, fuente, síntoma, fase o finalidad; un identificador de persona o una cuenta. |
 | **Retirada** | Decisión de invalidar uno o varios alcances y solicitar el bloqueo y borrado local aplicable. | Una promesa de borrado instantáneo en un receptor que no puede recibirla. |
 
 ### 2.1. Alcances admisibles y prohibidos
 
-El protocolo no añade categorías. Si más adelante se habilitan variables, solo puede usar una lista de alcances **versionada y cerrada** conforme al contrato taxonómico y a ADR-002. Cada alcance se acepta, revisa y retira individualmente.
+El protocolo no añade categorías. Si más adelante se habilitan variables, solo puede usar una lista de alcances **locales, versionada y cerrada** conforme al contrato taxonómico y a ADR-002. Cada alcance se acepta, revisa y retira individualmente. El servicio mínimo nunca recibe el literal del alcance; cuando la coordinación sea imprescindible, usa una referencia opaca cuya semántica queda únicamente en los dispositivos locales.
 
 - Ninguna interfaz puede agrupar categorías bajo un permiso global.
 - Una fuente no autorizada no muestra formulario, no escribe almacenamiento y no se utiliza en cálculos.
 - La observación de pareja está fuera de la v1 mínima; este protocolo no la habilita.
 - Nunca existe un alcance para deseo sexual, actividad sexual, consentimiento sexual, límites, disponibilidad, notas libres, nombres, contactos, ubicación o conducta.
-- Una futura estimación de fase, si se autoriza tras ADR-001 C9, debe tener un alcance propio; no puede reutilizar silenciosamente el permiso de una variable.
+- Una futura estimación de fase, si se autoriza tras ADR-001 C9, debe tener un alcance local propio; no puede reutilizar silenciosamente el permiso de una variable ni revelarlo al servicio.
 
 ## 3. Invariantes que toda implementación debe respetar
 
@@ -48,7 +49,7 @@ El protocolo no añade categorías. Si más adelante se habilitan variables, sol
 3. **Granularidad real.** Aceptar un alcance no activa otros; retirar uno no autoriza ni borra más de lo necesario, pero sí invalida todos sus derivados.
 4. **Bloquear antes de borrar.** Tras recibir una retirada, el receptor bloquea primero cualquier lectura, escritura, estimación o inferencia afectada; después ejecuta el borrado y la invalidación.
 5. **Sin reutilización.** Datos recogidos antes de una retirada no pueden producir cálculos, sugerencias o resultados posteriores a ella.
-6. **Separación local/remota.** Fechas, fases, síntomas, categorías, intensidad, cálculos, inferencias, texto y pantallas no atraviesan el servicio mínimo.
+6. **Separación local/remota.** Fechas, fases, síntomas, categorías, fuentes, alcances locales, intensidad, cálculos, inferencias, texto y pantallas no atraviesan el servicio mínimo. La referencia de coordinación opaca no codifica ni revela esos elementos.
 7. **Sin vigilancia periódica.** No se hacen comprobaciones recurrentes del estado de consentimiento con fines de seguimiento. Cualquier estrategia de caducidad o limitación por offline requiere decisión posterior de EIPD y no se presupone aquí.
 8. **Mensajes verificables.** La interfaz diferencia “solicitud emitida”, “entrega aún no confirmable” y “borrado local ejecutado”; no representa esos estados como equivalentes.
 9. **Idempotencia.** Una retirada repetida, retrasada o reintentada no puede reactivar un alcance ni restaurar datos borrados.
@@ -56,7 +57,7 @@ El protocolo no añade categorías. Si más adelante se habilitan variables, sol
 
 ## 4. Modelo de estados de referencia
 
-El modelo es por **alcance**. Una persona puede rechazar o retirar un alcance sin que ello determine el estado de otro. La representación de estados debe mantenerse fuera de los datos de ciclo y usar únicamente referencias técnicas permitidas que CON-008 defina.
+El modelo es por **alcance local**. Una persona puede rechazar o retirar un alcance sin que ello determine el estado de otro. La representación local de estados debe mantenerse fuera de los datos de ciclo. Si la coordinación requiere dirigir una señal, solo usa referencias técnicas opacas permitidas por CON-008, nunca el nombre o la semántica del alcance.
 
 ### 4.1. Estado en el dispositivo de control
 
@@ -65,7 +66,7 @@ El modelo es por **alcance**. Una persona puede rechazar o retirar un alcance si
 | `sin_decision` | Primera visualización o alcance aún no presentado. | No se habilita ningún dato. |
 | `explicacion_presentada` | La persona afectada abre la explicación completa. | Puede aceptar o rechazar directamente; no hay aceptación preseleccionada. |
 | `rechazado` | Rechazo explícito. | El alcance permanece bloqueado; no se solicita una aceptación de la pareja como sustituto. |
-| `autorizado` | Aceptación directa de un alcance concreto. | Se crea únicamente la señal técnica autorizada por CON-008; nunca se adjuntan datos de ciclo. |
+| `autorizado` | Aceptación directa de un alcance local concreto. | Se crea únicamente la señal técnica autorizada por CON-008 con una referencia opaca; nunca se adjuntan datos de ciclo ni el nombre del alcance. |
 | `retirada_solicitada` | Retirada directa. | Se emite una solicitud genérica de revocación; el control informa del límite de conectividad. |
 | `retirado` | El servicio registra o reintenta la solicitud conforme al contrato futuro. | No se presenta como confirmación del borrado remoto. Un consentimiento posterior debe empezar de nuevo. |
 
@@ -87,9 +88,9 @@ El diagrama editable está en [`con-007-estados.mmd`](./con-007-estados.mmd). El
 
 ## 5. Protocolo de retirada y borrado local
 
-1. La persona afectada selecciona uno o varios alcances concretos y confirma la retirada en el dispositivo de control.
+1. La persona afectada selecciona uno o varios alcances locales concretos y confirma la retirada en el dispositivo de control.
 2. El dispositivo de control explica que la retirada bloquea el uso futuro y que el receptor borrará al recibirla; si está offline, no se puede prometer un borrado inmediato ni confirmarlo como realizado.
-3. El servicio mínimo, solo si CON-008 lo define y valida, tramita una señal genérica de retirada sin fechas, fases, variables, nombres ni contenido derivado.
+3. El servicio mínimo, solo si CON-008 lo define y valida, tramita una señal genérica de retirada asociada como máximo a una referencia opaca. No recibe fechas, fases, variables, categorías, fuentes, alcance local, nombres ni contenido derivado.
 4. Al recibir esa señal, el receptor ejecuta una operación atómica en este orden:
    1. marca el alcance como bloqueado en memoria antes de cualquier interacción posterior;
    2. cancela operaciones pendientes y niega nuevas lecturas/escrituras/cálculos;
@@ -132,7 +133,7 @@ Un dato ausente tras borrado sigue siendo **ausente**; no se transforma en “si
 | Dependencia | Relación con CON-007 |
 |---|---|
 | JUA-10 / P1 | Aporta el vocabulario versionado; no habilita datos reales por sí mismo. El estado documental de aprobación debe mantenerse consistente con su cierre en Linear antes de usarlo como insumo operativo. |
-| CON-008 / JUA-21 | Define los únicos metadatos, identificadores, retención, rotación, endpoint y evidencia técnica que el protocolo puede usar. |
+| CON-008 / JUA-21 | Define los únicos metadatos, referencias opacas, identificadores, retención, rotación, endpoint y evidencia técnica que el protocolo puede usar; debe rechazar cualquier `scope` semántico o categoría. |
 | CON-010 / JUA-22 | Revisa el protocolo consolidado, la transparencia y el límite offline antes de cualquier aprobación de arquitectura o piloto. |
 | CON-013 y CON-015 | Determinan si el riesgo de coerción, emparejamiento o dispositivo comprometido permite continuar y qué medidas adicionales son necesarias. |
 | JUA-18 / P5 | Implementa y demuestra el bloqueo/borrado descrito aquí sobre flujos reales; queda bloqueada por CON-007. |
