@@ -1,0 +1,41 @@
+stateDiagram-v2
+    direction LR
+
+    state "Dispositivo de control\n(sin datos de ciclo)" as Control {
+        [*] --> SinDecision
+        SinDecision --> ExplicacionPresentada: abrir alcance
+        ExplicacionPresentada --> Rechazado: rechazo directo
+        ExplicacionPresentada --> Autorizado: aceptacion directa\npor alcance
+        Rechazado --> ExplicacionPresentada: revisar de nuevo
+        Autorizado --> RetiradaSolicitada: retirada directa
+        RetiradaSolicitada --> Retirado: solicitud generica emitida
+        Retirado --> ExplicacionPresentada: consentimiento nuevo
+    }
+
+    state "Dispositivo receptor\n(datos solo locales)" as Receptor {
+        [*] --> BloqueadoSinAutorizacion
+        BloqueadoSinAutorizacion --> AutorizadoActivo: autorizacion directa\nverificable
+        AutorizadoActivo --> BloqueoPorRetirada: retirada recibida
+        BloqueoPorRetirada --> BorradoLocalCompletado: bloquear, invalidar\ny borrar
+        BorradoLocalCompletado --> RequiereNuevaDecision: sin restaurar datos
+        RequiereNuevaDecision --> BloqueadoSinAutorizacion
+    }
+
+    note right of RetiradaSolicitada
+      Si el receptor esta offline,
+      no se afirma borrado remoto inmediato.
+      CON-008 define solo metadatos
+      tecnicos permitidos.
+    end note
+
+    note right of BloqueoPorRetirada
+      Ninguna lectura, escritura,
+      estimacion o inferencia del alcance
+      puede ejecutarse antes del borrado.
+    end note
+
+    note right of BorradoLocalCompletado
+      Elimina registros, permisos,
+      calculos, derivados, cache y claves
+      aplicables. No reactiva datos previos.
+    end note
