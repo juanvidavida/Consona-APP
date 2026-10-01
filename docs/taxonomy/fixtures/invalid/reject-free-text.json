@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "category_id": "physical_bloating",
+  "source": "self_report",
+  "consent_scope": "variables.physical.bloating.self_report",
+  "intensity": "moderate",
+  "note": "Synthetic fixture only: free text must be rejected."
+}

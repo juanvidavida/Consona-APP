@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "category_id": "physical_fatigue",
+  "source": "partner_observation",
+  "consent_scope": "variables.physical.fatigue.self_report",
+  "intensity": "mild"
+}

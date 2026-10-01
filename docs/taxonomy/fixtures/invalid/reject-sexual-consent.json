@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "category_id": "physical_pain_or_cramps",
+  "source": "self_report",
+  "consent_scope": "variables.physical.pain_or_cramps.self_report",
+  "intensity": "moderate",
+  "sexual_consent": true
+}
