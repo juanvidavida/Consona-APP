@@ -24,7 +24,7 @@ La excepción remota **nunca** permite almacenar, sincronizar, inferir o registr
 | JUA-13 | Backlog en el corte consultado. | Puerta transversal C1–C10 de ADR-001 y P6 de ADR-002; no se cierra por terminar documentos individuales. |
 | JUA-17 / P8 y JUA-18 / P5 | Backlog en el corte consultado. | Falta evidencia sobre flujos reales: ausencia de exfiltración, y borrado/revocación locales tras recarga, reinicio y conectividad interrumpida. |
 
-**Normalización pendiente del grafo vivo:** en el corte de Linear, JUA-17 todavía aparece bloqueada por JUA-21 y JUA-18 por JUA-20, aunque ambas incidencias documentales ya están `Done`. Antes de usar el grafo para abrir tareas sucesoras, se debe revisar en Linear qué dependencias funcionales continúan vigentes —en particular JUA-13, arquitectura local-first, CON-015 y futuros flujos locales— y retirar enlaces documentales ya satisfechos. Esta nota evita interpretar el cierre de CON-007/008 como una habilitación funcional.
+**Grafo normalizado el 2 de octubre de 2026:** se retiró el bloqueo formal `JUA-21 → JUA-17` y el bloqueo formal `JUA-20 → JUA-18`, porque CON-008 y CON-007 ya están `Done`. Ambas incidencias continúan en `Backlog` y sus dependencias funcionales siguen descritas en Linear: JUA-13, arquitectura local-first, CON-015, futuros flujos locales y la evidencia técnica aplicable. El retiro de un enlace documental satisfecho no habilita funcionalidad ni piloto.
 
 ## 3. Puertas críticas y criterio de salida
 
