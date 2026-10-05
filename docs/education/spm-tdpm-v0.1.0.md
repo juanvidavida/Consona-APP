@@ -7,7 +7,18 @@
 
 > Este documento fija el texto exacto que se mostrará. Cualquier cambio de redacción, orden o mensaje de derivación exige una nueva versión y, una vez iniciada JUA-16, una nueva revisión clínica de lo modificado.
 
-## 1. Reglas de la pantalla
+## 1. Ubicación
+
+La pantalla es una subpantalla de **«Cómo funciona»**. No es la pantalla de inicio ni forma parte del panel de hoy.
+
+| ID | Regla de acceso |
+|---|---|
+| U-01 | Se abre desde un enlace dentro de «Cómo funciona», en el punto donde se explica que los patrones no diagnostican SPM ni TDPM (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §4.2). La implementación de ese enlace corresponde a JUA-7. |
+| U-02 | El enlace es siempre visible y tiene el mismo texto para todas las personas. No aparece, cambia ni se destaca según la fase estimada, la fecha o cualquier dato local. |
+| U-03 | La home no enlaza directamente a esta pantalla ni muestra avisos que remitan a ella. |
+| U-04 | Desde la pantalla se puede volver a «Cómo funciona» con un control visible y accesible para lector de pantalla. |
+
+## 2. Reglas de la pantalla
 
 | ID | Regla |
 |---|---|
@@ -19,9 +30,9 @@
 | R-06 | La pantalla no muestra estados personales («sin patrón», «patrón posible» u otros). Ver la decisión abierta D-01. |
 | R-07 | No se añaden iconos, colores ni ilustraciones que asocien una fase o un síntoma con riesgo, gravedad, sexualidad o disponibilidad. |
 
-## 2. Texto de la pantalla
+## 3. Texto de la pantalla
 
-Cada bloque lleva un identificador estable para la revisión y la trazabilidad (sección 4). Los identificadores no se muestran en la interfaz.
+Cada bloque lleva un identificador estable para la revisión y la trazabilidad (sección 5). Los identificadores no se muestran en la interfaz.
 
 ### SPM-00 · Título
 
@@ -37,7 +48,7 @@ En los días previos a la menstruación, algunas personas notan cambios en el cu
 
 No todas las personas experimentan los mismos cambios.
 
-### DER-02 · Ayuda urgente (ver sección 3)
+### DER-02 · Ayuda urgente (ver sección 4)
 
 ### SPM-03 · Tres ideas distintas
 
@@ -74,15 +85,15 @@ Si alguien cercano vive estos cambios, esa persona es quien puede decir cómo es
 
 Pregunta, escucha y respeta su respuesta, también si prefiere no hablar de ello.
 
-### DER-03 · Si te preocupa alguien cercano (ver sección 3)
+### DER-03 · Si te preocupa alguien cercano (ver sección 4)
 
-### DER-01 · Cuándo hablar con un profesional (ver sección 3)
+### DER-01 · Cuándo hablar con un profesional (ver sección 4)
 
 ### SPM-08 · Fuentes
 
 Esta información se basa en NICE (Reino Unido, revisión de 2024), el Colegio Americano de Obstetras y Ginecólogos (ACOG, 2023 y 2025), el NHS (2024) y un metaanálisis publicado en 2024. Las referencias completas están disponibles en «Fuentes».
 
-## 3. Mensajes de derivación
+## 4. Mensajes de derivación
 
 Los mensajes son estáticos y se muestran siempre, a todas las personas, en la posición indicada. No se activan por fechas, fase, registros ni palabras introducidas, porque la pantalla no recoge ninguna.
 
@@ -107,7 +118,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 
 > Si crees que alguien cercano está en peligro inmediato, llama al 112. Si te ha hablado de pensamientos de suicidio, el 024 también atiende a familiares y personas allegadas.
 
-## 4. Trazabilidad
+## 5. Trazabilidad
 
 | Bloque | Afirmación | Fuente | Base auditada en JUA-10 |
 |---|---|---|---|
@@ -125,7 +136,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 | DER-02 | Ayuda urgente ante ideación suicida, autolesión o peligro. | [7] [10] | `12-health-emotional-cognitive` EC-08 y mensaje de urgencia. Recursos de España: ver D-03. |
 | DER-03 | Ayuda urgente para terceros. | [10] | Recursos de España: ver D-03. |
 
-## 5. Exclusiones comprobadas
+## 6. Exclusiones comprobadas
 
 Lista para comprobar en cada versión. La v0.1.0 no contiene:
 
@@ -138,7 +149,7 @@ Lista para comprobar en cada versión. La v0.1.0 no contiene:
 - [x] Texto libre, formularios o cualquier captura de datos, incluida la de crisis.
 - [x] Referencia al folleto RCOG 2018 ni a Green-top 48 como fuentes vigentes.
 
-## 6. Decisiones abiertas antes de enviar a JUA-16
+## 7. Decisiones abiertas antes de enviar a JUA-16
 
 | ID | Decisión | Propuesta |
 |---|---|---|
@@ -147,13 +158,14 @@ Lista para comprobar en cada versión. La v0.1.0 no contiene:
 | D-03 | Los recursos 112 y 024 son de España y no figuraban en la bibliografía de JUA-10. | Verificar en fuentes oficiales (Ministerio de Sanidad para el 024) antes de enviar a JUA-16, y decidir cómo se mostrarán en otros países e idiomas (CON-025). |
 | D-04 | «Peligro» puede incluir violencia de pareja, riesgo relevante para Consona (ADR-001, P6). | Decidir si DER-02 incluye el 016 (atención a víctimas de violencia de género, España) o si se aborda en el trabajo de P6. |
 
-## 7. Historial
+## 8. Historial
 
 ### [0.1.0] — Borrador inicial
 
 - Primera redacción completa de la pantalla, nota fija y tres mensajes de derivación.
 - Trazabilidad a las fuentes auditadas en JUA-10 y a ADR-002.
 - Cuatro decisiones abiertas para producto antes de la revisión clínica.
+- Se fija la ubicación como subpantalla de «Cómo funciona» (sección 1). No cambia el texto mostrado.
 
 ## Referencias
 
