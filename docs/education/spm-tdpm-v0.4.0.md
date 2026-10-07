@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «Variabilidad premenstrual: SPM y TDPM» v0.3.0
+# Consona — Pantalla educativa «Variabilidad premenstrual: SPM y TDPM» v0.4.0
 
 **Estado:** Borrador para revisión de producto. **No enviado a revisión clínica.**
 **Incidencia:** JUA-19 (CON-027). Su versión aprobada será el artefacto que revise JUA-16 (ADR-002 P7).
@@ -142,7 +142,11 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 
 > **Si hace falta ayuda ahora**
 > Si tu pareja te habla de pensamientos de hacerse daño o de suicidio, o alguien no está a salvo, busca ayuda urgente. No esperes a otro momento del ciclo.
-> **En España:** 112 (emergencias) · 024 (línea de atención a la conducta suicida, gratuita, 24 horas; también atiende a familiares y personas allegadas).
+> **En España:**
+> - **112** · emergencias.
+> - **024** · atención a la conducta suicida; gratuita, 24 horas; también atiende a familiares y personas allegadas.
+> - **016** · violencia contra las mujeres; gratuito, confidencial, 24 horas; también por WhatsApp en el 600 000 016.
+>
 > Estos números también son para ti si eres tú quien lo está pasando mal.
 
 ## 6. Trazabilidad
@@ -160,11 +164,11 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 | SPM-06 | Prevalencia confirmada frente a provisional. | [6] | ADR-002 §1. **Fuente no auditada en JUA-10** (ver D-02). |
 | SPM-07 | Conversación directa, autonomía y responsabilidad propia. | — | Requisito de producto de JUA-19; ADR-002 §5 («¿Quieres preguntarle cómo está?»); tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» del panel. |
 | DER-01 | Consulta ante preocupación, repetición, intensidad o afectación diaria; la decisión es de la pareja. | [5] [7] | `12-health-emotional-cognitive` EC-07, EC-08; `audit-07` §4.4. |
-| DER-02 | Ayuda urgente ante ideación suicida, autolesión o peligro, para la pareja, para terceros y para quien lee. | [7] [10] [11] [12] [13] | `12-health-emotional-cognitive` EC-08 y mensaje de urgencia. 112 y 024 verificados en fuentes oficiales el 07-10-2026 (D-03). |
+| DER-02 | Ayuda urgente ante ideación suicida, autolesión, violencia o peligro, para la pareja, para terceros y para quien lee. | [7] [10] [11] [12] [13] [14] [15] | `12-health-emotional-cognitive` EC-08 y mensaje de urgencia. 112, 024 y 016 verificados en fuentes oficiales el 07-10-2026 (D-03, D-04). |
 
 ## 7. Exclusiones comprobadas
 
-Lista para comprobar en cada versión. La v0.3.0 no contiene:
+Lista para comprobar en cada versión. La v0.4.0 no contiene:
 
 - [x] Diagnóstico, clasificación, «posible SPM/TDPM», puntuaciones, umbrales, semáforos ni probabilidades individuales.
 - [x] Listas de criterios clínicos o de diagnósticos diferenciales presentadas como autoevaluación o como guía para evaluar a la pareja.
@@ -176,17 +180,23 @@ Lista para comprobar en cada versión. La v0.3.0 no contiene:
 - [x] Texto libre, formularios o cualquier captura de datos, incluida la de crisis.
 - [x] Referencia al folleto RCOG 2018 ni a Green-top 48 como fuentes vigentes.
 
-## 8. Decisiones abiertas antes de enviar a JUA-16
+## 8. Decisiones antes de enviar a JUA-16
 
 | ID | Decisión | Propuesta |
 |---|---|---|
-| D-01 | ADR-002 §2 dice que la pantalla «comenzará en el estado “No hay un patrón personal identificado”». JUA-19 exige que la pantalla sea independiente de registros e inferencias. | Omitir el estado en esta versión. Incorporarlo solo cuando P3–P5 permitan una vista de asociaciones, como versión nueva con revisión clínica propia. |
-| D-02 | La cifra del metaanálisis de 2024 (SPM-06) procede de ADR-002 y no pasó por las auditorías de JUA-10. `audit-07` pide retirar del microcopy cifras sin fuente contemporánea y contexto. | Mantenerla, porque ilustra el límite de las prevalencias que pide JUA-19, y pedir a la persona revisora clínica que confirme la redacción. Alternativa: eliminar las cifras y dejar solo la primera y la última frase. |
+| D-01 | ADR-002 §2 dice que la pantalla «comenzará en el estado “No hay un patrón personal identificado”». JUA-19 exige que la pantalla sea independiente de registros e inferencias. | **Resuelta (07-10-2026):** se omite el estado. Se incorporará solo cuando P3–P5 permitan una vista de asociaciones, como versión nueva con revisión clínica propia. |
+| D-02 | La cifra del metaanálisis de 2024 (SPM-06) procede de ADR-002 y no pasó por las auditorías de JUA-10. `audit-07` pide retirar del microcopy cifras sin fuente contemporánea y contexto. | **Trasladada a la revisión clínica:** se mantiene y se pregunta expresamente a la persona revisora (pregunta P-01 del formulario de JUA-16). Alternativa: eliminar las cifras y dejar solo la primera y la última frase. |
 | D-03 | Los recursos 112 y 024, y que el 024 atiende a familiares y personas allegadas, no figuraban en la bibliografía de JUA-10. | **Verificado el 07-10-2026.** 024: Ministerio de Sanidad, para personas con conducta o ideación suicida y para familiares o allegados; gratuito, confidencial, 24 horas, 365 días; chat y lengua de signos; remite al 112 ante emergencia vital inminente [10] [11]. La Resolución de 4 de junio de 2026 mantiene el número y la gratuidad y añade que la llamada no aparece en la factura [12]. 112: número de emergencias gratuito en España y en la UE [13]. El texto de DER-02 es exacto. **Pendiente:** recursos para otros países e idiomas (CON-025). |
-| D-04 | «Peligro» puede incluir violencia de pareja, riesgo relevante para Consona (ADR-001, P6). | Decidir si DER-02 incluye el 016 (atención a víctimas de violencia de género, España) o si se aborda en el trabajo de P6. |
+| D-04 | «Peligro» puede incluir violencia de pareja, riesgo relevante para Consona (ADR-001, P6). | **Resuelta (07-10-2026):** DER-02 incluye el 016 (Ministerio de Igualdad): todas las formas de violencia contra las mujeres; gratuito, confidencial, 24 horas; también por WhatsApp (600 000 016), chat y correo; deriva al 112 en emergencias [14] [15]. El análisis específico de control coercitivo sigue en P6 (JUA-13). |
 | D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | **Resuelta.** Las cuatro tarjetas de la fase lútea se fijan en [`home-cards-luteal-v0.1.0.md`](./home-cards-luteal-v0.1.0.md) y se incluyen expresamente en el paquete y en el alcance de JUA-16. |
 
 ## 9. Historial
+
+### [0.4.0] — Recurso de violencia y cierre de decisiones
+
+- DER-02 añade el 016 (violencia contra las mujeres) y presenta los tres números en lista (D-04).
+- D-01 resuelta: se omite el estado de patrón personal.
+- D-02 se traslada como pregunta expresa a la revisión clínica.
 
 ### [0.3.0] — Coherencia con la pantalla de inicio
 
@@ -238,3 +248,7 @@ Lista para comprobar en cada versión. La v0.3.0 no contiene:
 [12]: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-13201 "BOE-A-2026-13201, Resolución de 4 de junio de 2026 que modifica la atribución del número 024 (consultado 07-10-2026)"
 
 [13]: https://digital-strategy.ec.europa.eu/en/policies/112 "112 — the EU's emergency phone number — Comisión Europea (consultado 07-10-2026)"
+
+[14]: https://violenciagenero.igualdad.gob.es/informacion-3/recursos/telefono016/ "Teléfono 016, 016 online y WhatsApp — Ministerio de Igualdad (consultado 07-10-2026)"
+
+[15]: https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/igualdad/paginas/2026/telefono-016-que-es.aspx "Teléfono 016: ¿qué es y cómo funciona? — La Moncloa (2026)"

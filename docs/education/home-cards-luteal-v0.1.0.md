@@ -1,9 +1,9 @@
 # Consona — Tarjetas de la home en fase lútea v0.1.0
 
 **Estado:** Borrador para revisión de producto. **No enviado a revisión clínica.**
-**Origen:** decisión D-05 de [`spm-tdpm-v0.3.0.md`](./spm-tdpm-v0.3.0.md). Este conjunto se incluye **expresamente** en el paquete y en el alcance de revisión de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
+**Origen:** decisión D-05 de [`spm-tdpm-v0.4.0.md`](./spm-tdpm-v0.4.0.md). Este conjunto se incluye **expresamente** en el paquete y en el alcance de revisión de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
 **Parte de:** el texto provisional de [`src/App.jsx`](../../src/App.jsx) (JUA-5), que no es definitivo.
-**Público y tono:** los de la sección 1 de `spm-tdpm-v0.3.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
+**Público y tono:** los de la sección 1 de `spm-tdpm-v0.4.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación.
 
 > Este documento fija el texto exacto de las cuatro tarjetas cuando la home muestra la fase lútea estimada. Cualquier cambio exige una nueva versión y su revisión contra las reglas C-01 a C-04 de la pantalla SPM/TDPM.
