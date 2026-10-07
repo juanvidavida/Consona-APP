@@ -160,7 +160,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 | SPM-06 | Prevalencia confirmada frente a provisional. | [6] | ADR-002 §1. **Fuente no auditada en JUA-10** (ver D-02). |
 | SPM-07 | Conversación directa, autonomía y responsabilidad propia. | — | Requisito de producto de JUA-19; ADR-002 §5 («¿Quieres preguntarle cómo está?»); tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» del panel. |
 | DER-01 | Consulta ante preocupación, repetición, intensidad o afectación diaria; la decisión es de la pareja. | [5] [7] | `12-health-emotional-cognitive` EC-07, EC-08; `audit-07` §4.4. |
-| DER-02 | Ayuda urgente ante ideación suicida, autolesión o peligro, para la pareja, para terceros y para quien lee. | [7] [10] | `12-health-emotional-cognitive` EC-08 y mensaje de urgencia. Recursos de España: ver D-03. |
+| DER-02 | Ayuda urgente ante ideación suicida, autolesión o peligro, para la pareja, para terceros y para quien lee. | [7] [10] [11] [12] [13] | `12-health-emotional-cognitive` EC-08 y mensaje de urgencia. 112 y 024 verificados en fuentes oficiales el 07-10-2026 (D-03). |
 
 ## 7. Exclusiones comprobadas
 
@@ -182,7 +182,7 @@ Lista para comprobar en cada versión. La v0.3.0 no contiene:
 |---|---|---|
 | D-01 | ADR-002 §2 dice que la pantalla «comenzará en el estado “No hay un patrón personal identificado”». JUA-19 exige que la pantalla sea independiente de registros e inferencias. | Omitir el estado en esta versión. Incorporarlo solo cuando P3–P5 permitan una vista de asociaciones, como versión nueva con revisión clínica propia. |
 | D-02 | La cifra del metaanálisis de 2024 (SPM-06) procede de ADR-002 y no pasó por las auditorías de JUA-10. `audit-07` pide retirar del microcopy cifras sin fuente contemporánea y contexto. | Mantenerla, porque ilustra el límite de las prevalencias que pide JUA-19, y pedir a la persona revisora clínica que confirme la redacción. Alternativa: eliminar las cifras y dejar solo la primera y la última frase. |
-| D-03 | Los recursos 112 y 024, y que el 024 atiende a familiares y personas allegadas, no figuraban en la bibliografía de JUA-10. | Verificar en fuentes oficiales (Ministerio de Sanidad para el 024) antes de enviar a JUA-16, y decidir cómo se mostrarán en otros países e idiomas (CON-025). |
+| D-03 | Los recursos 112 y 024, y que el 024 atiende a familiares y personas allegadas, no figuraban en la bibliografía de JUA-10. | **Verificado el 07-10-2026.** 024: Ministerio de Sanidad, para personas con conducta o ideación suicida y para familiares o allegados; gratuito, confidencial, 24 horas, 365 días; chat y lengua de signos; remite al 112 ante emergencia vital inminente [10] [11]. La Resolución de 4 de junio de 2026 mantiene el número y la gratuidad y añade que la llamada no aparece en la factura [12]. 112: número de emergencias gratuito en España y en la UE [13]. El texto de DER-02 es exacto. **Pendiente:** recursos para otros países e idiomas (CON-025). |
 | D-04 | «Peligro» puede incluir violencia de pareja, riesgo relevante para Consona (ADR-001, P6). | Decidir si DER-02 incluye el 016 (atención a víctimas de violencia de género, España) o si se aborda en el trabajo de P6. |
 | D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | Incluir esas tarjetas en el paquete de JUA-16 como anexo, o crear una incidencia de revisión propia. |
 
@@ -192,6 +192,7 @@ Lista para comprobar en cada versión. La v0.3.0 no contiene:
 
 - SPM-04 pasa a «Lo que el día del ciclo puede y no puede decirte»: explica cómo leer el día del ciclo, la fase y la información general que muestra la home, y que la cercanía de la menstruación no equivale a SPM.
 - Se añaden las reglas de coherencia C-01 a C-04 con la home y la decisión abierta D-05.
+- D-03 resuelta: 112 y 024 verificados en fuentes oficiales; el texto de DER-02 no cambia.
 
 ### [0.2.0] — Reorientación a quien acompaña
 
@@ -229,4 +230,10 @@ Lista para comprobar en cada versión. La v0.3.0 no contiene:
 
 [9]: https://www.sciencedirect.com/science/article/pii/S1550857912001349 "Mood and the Menstrual Cycle: A Review of Prospective Data Studies (2012)"
 
-[10]: https://www.sanidad.gob.es/linea024/ "Línea 024 de atención a la conducta suicida — Ministerio de Sanidad (pendiente de verificación, D-03)"
+[10]: https://www.sanidad.gob.es/linea024/home.htm "024. Línea de atención a la conducta suicida — Ministerio de Sanidad (consultado 07-10-2026)"
+
+[11]: https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/sanidad14/paginas/2024/100524-linea-024.aspx "La Línea 024 para la atención a la conducta suicida ha recibido más de 260.000 llamadas en dos años — La Moncloa (10-05-2024)"
+
+[12]: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-13201 "BOE-A-2026-13201, Resolución de 4 de junio de 2026 que modifica la atribución del número 024 (consultado 07-10-2026)"
+
+[13]: https://digital-strategy.ec.europa.eu/en/policies/112 "112 — the EU's emergency phone number — Comisión Europea (consultado 07-10-2026)"
