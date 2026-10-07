@@ -79,13 +79,13 @@ La v0.1.0 no contiene:
 - [x] Deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad.
 - [x] Consejos para gestionar, calmar o evitar a tu pareja.
 
-## 6. Decisiones abiertas
+## 6. Decisiones
 
 | ID | Decisión | Propuesta |
 |---|---|---|
-| D-01 | La frase «Hacia el final de esta fase, algunas personas notan cambios físicos o de ánimo, y otras no» da información asociada a la fase, pero puede llevar a leer la home como un aviso. | Mantenerla, porque está formulada como información general y va seguida del límite, y pedir a la persona revisora que la valore expresamente. Alternativa: quitarla y dejar la variabilidad solo en la pantalla SPM/TDPM. |
-| D-02 | La mención de la progesterona es fisiología general, pero las auditorías de JUA-10 desaconsejan explicar síntomas por hormonas, y la frase no se auditó como afirmación propia. | Mantenerla, porque describe qué ocurre en el útero y no explica estados, e incluirla en el alcance de la revisión clínica. Alternativa: «el cuerpo prepara el revestimiento del útero», sin nombrar hormonas. |
-| D-03 | JUA-5 está cerrada y no hay una incidencia para el contenido de las tarjetas de la home. | Abrir una incidencia en Linear para las tarjetas de todas las fases, relacionada con JUA-16. Este documento cubre solo la fase lútea. |
+| D-01 | La frase «Hacia el final de esta fase, algunas personas notan cambios físicos o de ánimo, y otras no» da información asociada a la fase, pero puede llevar a leer la home como un aviso. | **Resuelta (07-10-2026):** se mantiene y se pide a la persona revisora que la valore expresamente en JUA-16. |
+| D-02 | La mención de la progesterona es fisiología general, pero las auditorías de JUA-10 desaconsejan explicar síntomas por hormonas, y la frase no se auditó como afirmación propia. | **Resuelta (07-10-2026):** se mantiene y se incluye en el alcance de la revisión clínica de JUA-16. Alternativa si la revisión lo pide: «el cuerpo prepara el revestimiento del útero», sin nombrar hormonas. |
+| D-03 | JUA-5 está cerrada y no hay una incidencia para el contenido de las tarjetas de la home. | **Resuelta (07-10-2026):** se abre JUA-23 para las tarjetas de todas las fases, relacionada con JUA-16, JUA-19 y JUA-5. Este documento cubre solo la fase lútea. |
 
 ## 7. Historial
 
@@ -93,7 +93,7 @@ La v0.1.0 no contiene:
 
 - Primera versión fijada de las cuatro tarjetas de la fase lútea, a partir del prototipo de JUA-5.
 - Reglas H-01 a H-05, alineadas con C-01 a C-04 de la pantalla SPM/TDPM.
-- Tres decisiones abiertas antes de la revisión clínica.
+- Tres decisiones, resueltas el 07-10-2026 sin cambios en el texto mostrado.
 
 ## Referencias
 
