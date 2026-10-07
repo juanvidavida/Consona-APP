@@ -184,7 +184,7 @@ Lista para comprobar en cada versión. La v0.3.0 no contiene:
 | D-02 | La cifra del metaanálisis de 2024 (SPM-06) procede de ADR-002 y no pasó por las auditorías de JUA-10. `audit-07` pide retirar del microcopy cifras sin fuente contemporánea y contexto. | Mantenerla, porque ilustra el límite de las prevalencias que pide JUA-19, y pedir a la persona revisora clínica que confirme la redacción. Alternativa: eliminar las cifras y dejar solo la primera y la última frase. |
 | D-03 | Los recursos 112 y 024, y que el 024 atiende a familiares y personas allegadas, no figuraban en la bibliografía de JUA-10. | **Verificado el 07-10-2026.** 024: Ministerio de Sanidad, para personas con conducta o ideación suicida y para familiares o allegados; gratuito, confidencial, 24 horas, 365 días; chat y lengua de signos; remite al 112 ante emergencia vital inminente [10] [11]. La Resolución de 4 de junio de 2026 mantiene el número y la gratuidad y añade que la llamada no aparece en la factura [12]. 112: número de emergencias gratuito en España y en la UE [13]. El texto de DER-02 es exacto. **Pendiente:** recursos para otros países e idiomas (CON-025). |
 | D-04 | «Peligro» puede incluir violencia de pareja, riesgo relevante para Consona (ADR-001, P6). | Decidir si DER-02 incluye el 016 (atención a víctimas de violencia de género, España) o si se aborda en el trabajo de P6. |
-| D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | Incluir esas tarjetas en el paquete de JUA-16 como anexo, o crear una incidencia de revisión propia. |
+| D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | **Resuelta.** Las cuatro tarjetas de la fase lútea se fijan en [`home-cards-luteal-v0.1.0.md`](./home-cards-luteal-v0.1.0.md) y se incluyen expresamente en el paquete y en el alcance de JUA-16. |
 
 ## 9. Historial
 
@@ -193,6 +193,7 @@ Lista para comprobar en cada versión. La v0.3.0 no contiene:
 - SPM-04 pasa a «Lo que el día del ciclo puede y no puede decirte»: explica cómo leer el día del ciclo, la fase y la información general que muestra la home, y que la cercanía de la menstruación no equivale a SPM.
 - Se añaden las reglas de coherencia C-01 a C-04 con la home y la decisión abierta D-05.
 - D-03 resuelta: 112 y 024 verificados en fuentes oficiales; el texto de DER-02 no cambia.
+- D-05 resuelta: tarjetas de la fase lútea en documento propio, incluidas en JUA-16.
 
 ### [0.2.0] — Reorientación a quien acompaña
 
