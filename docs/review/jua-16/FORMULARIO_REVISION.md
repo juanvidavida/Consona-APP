@@ -2,7 +2,7 @@
 
 Artefactos revisados (ver [README](./README.md), sección 3):
 
-- Pantalla «Variabilidad premenstrual: SPM y TDPM» v0.3.0 — SHA-256 `82c3faf985851aa45e386273783186e088ac4b2ac9efc0cf39563bf9b86a6665`
+- Pantalla «Variabilidad premenstrual: SPM y TDPM» v0.4.0 — SHA-256 `82c3faf985851aa45e386273783186e088ac4b2ac9efc0cf39563bf9b86a6665`
 - Tarjetas de la pantalla de inicio en fase lútea v0.1.0 — SHA-256 `f0a9f78db27cd6bf7bd52bb7e9b6c8134d6dc3f5e87c80154dfa4b8e90c6842b`
 
 Decisiones posibles por bloque: **A** = Aprobado · **AC** = Aprobado con cambios · **NA** = No aprobado.
