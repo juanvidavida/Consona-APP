@@ -2,8 +2,8 @@
 
 Artefactos revisados (ver [README](./README.md), sección 3):
 
-- Pantalla «Variabilidad premenstrual: SPM y TDPM» v0.3.0 — SHA-256 `14e952fcb05fd6bf3dd3a2ec1b2ea0a6baca694db5ea8fe40c5afccf76c58ad6`
-- Tarjetas de la pantalla de inicio en fase lútea v0.1.0 — SHA-256 `24f6dc0d5066d30155db22c0b511daaabc58987967e317b971e71854e3615386`
+- Pantalla «Variabilidad premenstrual: SPM y TDPM» v0.3.0 — SHA-256 `82c3faf985851aa45e386273783186e088ac4b2ac9efc0cf39563bf9b86a6665`
+- Tarjetas de la pantalla de inicio en fase lútea v0.1.0 — SHA-256 `f0a9f78db27cd6bf7bd52bb7e9b6c8134d6dc3f5e87c80154dfa4b8e90c6842b`
 
 Decisiones posibles por bloque: **A** = Aprobado · **AC** = Aprobado con cambios · **NA** = No aprobado.
 
@@ -25,7 +25,7 @@ Decisiones posibles por bloque: **A** = Aprobado · **AC** = Aprobado con cambio
 Marcar lo revisado. Lo no marcado queda fuera de la aprobación.
 
 - [ ] Pantalla SPM/TDPM: texto visible (SPM-00 a SPM-08).
-- [ ] Pantalla SPM/TDPM: mensajes de derivación (DER-01 y DER-02), incluidos los recursos 112 y 024.
+- [ ] Pantalla SPM/TDPM: mensajes de derivación (DER-01 y DER-02), incluidos los recursos 112, 024 y 016.
 - [ ] Pantalla SPM/TDPM: reglas de presentación (visibilidad del mensaje urgente, ausencia de captura de datos).
 - [ ] Tarjetas de fase lútea: texto de las cuatro tarjetas (QPC, QPP, QTT, QNA).
 
@@ -33,14 +33,14 @@ Observaciones sobre el alcance:
 
 ## 3. Revisión por bloque
 
-### 3.1 Pantalla SPM/TDPM v0.3.0
+### 3.1 Pantalla SPM/TDPM v0.4.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
 | SPM-00 | Título | | |
 | SPM-01 | Nota fija de límite educativo | | |
 | SPM-02 | Introducción y variabilidad | | |
-| DER-02 | Ayuda urgente (112, 024) | | |
+| DER-02 | Ayuda urgente (112, 024, 016) | | |
 | SPM-03 | Variabilidad, SPM y TDPM | | |
 | SPM-04 | Lo que el día del ciclo puede y no puede decirte | | |
 | SPM-05 | Antes de atribuirlo al ciclo | | |

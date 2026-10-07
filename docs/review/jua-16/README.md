@@ -1,6 +1,6 @@
 # Consona — Paquete de revisión clínica JUA-16 (ADR-002 P7)
 
-**Estado del paquete:** preparado, **pendiente de envío**. Antes de enviarlo deben cerrarse las decisiones de producto de la sección 6.
+**Estado del paquete:** **listo para enviar.** Las decisiones de producto previas están cerradas (sección 6).
 **Fecha de preparación:** 7 de octubre de 2026.
 **Responsable del producto:** Juan Vidaechea.
 
@@ -28,20 +28,20 @@ Se revisa **exactamente** la versión identificada aquí. Cualquier cambio poste
 
 | Artefacto | Versión | Archivo | SHA-256 |
 |---|---|---|---|
-| Pantalla «Variabilidad premenstrual: SPM y TDPM» y mensajes de derivación DER-01 y DER-02 | 0.3.0 | [`docs/education/spm-tdpm-v0.3.0.md`](../../education/spm-tdpm-v0.3.0.md) | `14e952fcb05fd6bf3dd3a2ec1b2ea0a6baca694db5ea8fe40c5afccf76c58ad6` |
-| Tarjetas de la pantalla de inicio en fase lútea (anexo) | 0.1.0 | [`docs/education/home-cards-luteal-v0.1.0.md`](../../education/home-cards-luteal-v0.1.0.md) | `24f6dc0d5066d30155db22c0b511daaabc58987967e317b971e71854e3615386` |
+| Pantalla «Variabilidad premenstrual: SPM y TDPM» y mensajes de derivación DER-01 y DER-02 | 0.4.0 | [`docs/education/spm-tdpm-v0.4.0.md`](../../education/spm-tdpm-v0.4.0.md) | `82c3faf985851aa45e386273783186e088ac4b2ac9efc0cf39563bf9b86a6665` |
+| Tarjetas de la pantalla de inicio en fase lútea (anexo) | 0.1.0 | [`docs/education/home-cards-luteal-v0.1.0.md`](../../education/home-cards-luteal-v0.1.0.md) | `f0a9f78db27cd6bf7bd52bb7e9b6c8134d6dc3f5e87c80154dfa4b8e90c6842b` |
 
 Comprobación de integridad:
 
 ```sh
-shasum -a 256 docs/education/spm-tdpm-v0.3.0.md docs/education/home-cards-luteal-v0.1.0.md
+shasum -a 256 docs/education/spm-tdpm-v0.4.0.md docs/education/home-cards-luteal-v0.1.0.md
 ```
 
-Si alguna decisión de la sección 6 cambia el texto, se crea una versión nueva y se actualizan esta tabla y los hashes antes del envío.
+Cualquier cambio en estos archivos, incluidos sus metadatos, altera el hash: se crea una versión nueva si cambia el texto mostrado y se actualizan esta tabla y el formulario antes del envío.
 
 ### Qué leer en cada artefacto
 
-- **Pantalla SPM/TDPM:** el texto que se muestra está en la sección 4 (bloques SPM-00 a SPM-08) y en la sección 5 (DER-01 y DER-02). Las secciones 1 a 3 explican público, ubicación y reglas; la 6, las fuentes de cada bloque.
+- **Pantalla SPM/TDPM:** el texto que se muestra está en la sección 4 (bloques SPM-00 a SPM-08) y en la sección 5 (DER-01 y DER-02, con los recursos 112, 024 y 016). Las secciones 1 a 3 explican público, ubicación y reglas; la 6, las fuentes de cada bloque.
 - **Tarjetas de fase lútea:** el texto está en la sección 2. Se incluyen porque son lo que la pareja lee en la pantalla de inicio durante los días previos a la menstruación y deben ser coherentes con la pantalla SPM/TDPM. **No quedan cubiertas implícitamente** por revisar la pantalla: el formulario las evalúa por separado.
 
 ## 4. Qué queda fuera de esta revisión
@@ -57,12 +57,12 @@ Rellenar el [formulario de revisión](./FORMULARIO_REVISION.md). Cada bloque se 
 
 Después de la revisión, el equipo de producto registra en el mismo formulario qué cambios aplicó y cuáles justificó no aplicar. Si hay cambios en el texto, se genera una versión nueva y se pide confirmación de lo modificado.
 
-## 6. Decisiones de producto pendientes antes del envío
+## 6. Decisiones de producto cerradas antes del envío
 
 | Origen | Decisión | Efecto en el paquete |
 |---|---|---|
-| SPM/TDPM D-01 | Omitir el estado «No hay un patrón personal identificado» mientras la pantalla no use registros. | Ninguno en el texto si se confirma la propuesta. |
-| SPM/TDPM D-04 | Incluir o no el 016 (atención a víctimas de violencia de género) en DER-02. | Si se incluye, cambia el texto: nueva versión y nuevos hashes. |
+| SPM/TDPM D-01 | Se omite el estado «No hay un patrón personal identificado» mientras la pantalla no use registros. | Ninguno en el texto. |
+| SPM/TDPM D-04 | DER-02 incluye el 016 (violencia contra las mujeres), verificado en fuentes oficiales. | Versión 0.4.0 de la pantalla; hashes actualizados. |
 
 Las siguientes cuestiones **no** son pendientes de producto, sino preguntas expresas a la persona revisora (formulario, sección 4):
 
