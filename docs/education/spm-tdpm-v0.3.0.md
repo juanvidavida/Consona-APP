@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «Variabilidad premenstrual: SPM y TDPM» v0.2.0
+# Consona — Pantalla educativa «Variabilidad premenstrual: SPM y TDPM» v0.3.0
 
 **Estado:** Borrador para revisión de producto. **No enviado a revisión clínica.**
 **Incidencia:** JUA-19 (CON-027). Su versión aprobada será el artefacto que revise JUA-16 (ADR-002 P7).
@@ -30,6 +30,17 @@ La pantalla es una subpantalla de **«Cómo funciona»**. No es la pantalla de i
 | U-02 | El enlace es siempre visible y tiene el mismo texto para todas las personas. No aparece, cambia ni se destaca según la fase estimada, la fecha o cualquier dato local. |
 | U-03 | La home no enlaza directamente a esta pantalla ni muestra avisos que remitan a ella. |
 | U-04 | Desde la pantalla se puede volver a «Cómo funciona» con un control visible y accesible para lector de pantalla. |
+
+### Coherencia con la pantalla de inicio
+
+La home muestra el día del ciclo, la fase estimada y cuatro tarjetas de orientación, entre ellas «Qué pasa en su cuerpo», con información general asociada a la fase (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §2–3). Esta pantalla explica cómo leer esa información (SPM-04), así que ambas deben mantenerse coherentes.
+
+| ID | Regla de coherencia |
+|---|---|
+| C-01 | En los días premenstruales estimados, las tarjetas de la home no nombran SPM ni TDPM y no presentan cambios emocionales o físicos como algo que la pareja vaya a tener o esté teniendo. |
+| C-02 | Si una tarjeta de la home menciona variabilidad premenstrual, usa el mismo marco que SPM-02 y SPM-04: «algunas personas», «puede», información general, no predicción. |
+| C-03 | La home no cambia su texto, color ni tarjetas para dirigir a esta pantalla en función de la fase (U-02, U-03). El camino es siempre «Cómo funciona». |
+| C-04 | Cualquier cambio en las tarjetas de la home asociadas a la fase lútea o a los días premenstruales se revisa contra esta pantalla antes de publicarse. Ver D-05. |
 
 ## 3. Reglas de la pantalla
 
@@ -76,11 +87,13 @@ Es un término clínico para una forma menos frecuente y más intensa, en la que
 
 En inglés se usan las siglas PMS y PMDD. Consona no asigna estos términos a nadie, no muestra criterios clínicos y no convierte ningún dato en una clasificación.
 
-### SPM-04 · Lo que una fecha no puede decirte
+### SPM-04 · Lo que el día del ciclo puede y no puede decirte
 
-La fase que muestra Consona es una estimación a partir de fechas. No te dice qué siente tu pareja, qué le pasa ni qué necesita. Tampoco confirma síntomas, su causa ni un diagnóstico.
+En la pantalla de inicio ves el día del ciclo y la fase, estimados a partir de fechas confirmadas, junto con información general sobre lo que puede ocurrir en el cuerpo durante esa fase.
 
-La investigación no permite predecir el ánimo, la concentración o el comportamiento de alguien a partir de su fase.
+Esa información sirve para entender mejor el ciclo y tener contexto para conversar. Describe lo que se sabe en general, no lo que le está pasando a tu pareja: no te dice qué siente, qué le pasa ni qué necesita, y no confirma síntomas, su causa ni un diagnóstico.
+
+Que se acerque la menstruación tampoco significa SPM. La investigación no permite predecir el ánimo, la concentración o el comportamiento de alguien a partir de su fase.
 
 ### SPM-05 · Antes de atribuirlo al ciclo
 
@@ -142,7 +155,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 | SPM-03 · SPM | Patrón cíclico, mejora con la menstruación e impacto en la vida diaria. | [1] [2] [5] | `audit-07` §3; ADR-002 §1. |
 | SPM-03 · TDPM | Forma menos frecuente e intensa, predominio emocional, registro diario de al menos dos ciclos. | [3] [4] [6] | ADR-002 §1; `12-health-emotional-cognitive` EC-06. |
 | SPM-03 · cierre | Consona no asigna términos clínicos. | — | `audit-07` §4.5. |
-| SPM-04 | La fase estimada no informa del estado de la pareja; no predice ánimo, cognición ni conducta. | [8] [9] | `12-health-emotional-cognitive` EC-01, EC-02, EC-05; ADR-002 §1. |
+| SPM-04 | La información de la home por día y fase es general; no informa del estado de la pareja ni predice ánimo, cognición o conducta; la cercanía de la menstruación no equivale a SPM. | [8] [9] | `12-health-emotional-cognitive` EC-01, EC-02, EC-05; `audit-07` §4.1; `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §2–3. |
 | SPM-05 | Solapamiento con otras causas; sesgo de atribución al ciclo. | [2] [5] [9] | `12-health-emotional-cognitive` EC-02, EC-07 y regla editorial central; «sesgo de atribución» como tema educativo en `CONSONA_DEFINICION_DE_APP.md`. |
 | SPM-06 | Prevalencia confirmada frente a provisional. | [6] | ADR-002 §1. **Fuente no auditada en JUA-10** (ver D-02). |
 | SPM-07 | Conversación directa, autonomía y responsabilidad propia. | — | Requisito de producto de JUA-19; ADR-002 §5 («¿Quieres preguntarle cómo está?»); tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» del panel. |
@@ -151,7 +164,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 
 ## 7. Exclusiones comprobadas
 
-Lista para comprobar en cada versión. La v0.2.0 no contiene:
+Lista para comprobar en cada versión. La v0.3.0 no contiene:
 
 - [x] Diagnóstico, clasificación, «posible SPM/TDPM», puntuaciones, umbrales, semáforos ni probabilidades individuales.
 - [x] Listas de criterios clínicos o de diagnósticos diferenciales presentadas como autoevaluación o como guía para evaluar a la pareja.
@@ -171,8 +184,14 @@ Lista para comprobar en cada versión. La v0.2.0 no contiene:
 | D-02 | La cifra del metaanálisis de 2024 (SPM-06) procede de ADR-002 y no pasó por las auditorías de JUA-10. `audit-07` pide retirar del microcopy cifras sin fuente contemporánea y contexto. | Mantenerla, porque ilustra el límite de las prevalencias que pide JUA-19, y pedir a la persona revisora clínica que confirme la redacción. Alternativa: eliminar las cifras y dejar solo la primera y la última frase. |
 | D-03 | Los recursos 112 y 024, y que el 024 atiende a familiares y personas allegadas, no figuraban en la bibliografía de JUA-10. | Verificar en fuentes oficiales (Ministerio de Sanidad para el 024) antes de enviar a JUA-16, y decidir cómo se mostrarán en otros países e idiomas (CON-025). |
 | D-04 | «Peligro» puede incluir violencia de pareja, riesgo relevante para Consona (ADR-001, P6). | Decidir si DER-02 incluye el 016 (atención a víctimas de violencia de género, España) o si se aborda en el trabajo de P6. |
+| D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | Incluir esas tarjetas en el paquete de JUA-16 como anexo, o crear una incidencia de revisión propia. |
 
 ## 9. Historial
+
+### [0.3.0] — Coherencia con la pantalla de inicio
+
+- SPM-04 pasa a «Lo que el día del ciclo puede y no puede decirte»: explica cómo leer el día del ciclo, la fase y la información general que muestra la home, y que la cercanía de la menstruación no equivale a SPM.
+- Se añaden las reglas de coherencia C-01 a C-04 con la home y la decisión abierta D-05.
 
 ### [0.2.0] — Reorientación a quien acompaña
 
