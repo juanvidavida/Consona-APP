@@ -29,7 +29,7 @@ El diseño usa **transparencia progresiva**. La información imprescindible para
 |---|---|---|
 | Encabezado | `Hoy` y fecha local. | No mostrar nombre, fotografía, cuenta ni identificador de la persona afectada. |
 | Estado del ciclo | `Fase lútea` y `Ciclo · día 18`. | El nombre de fase es directo y breve. «Día 18» es el resultado del cálculo local desde un inicio de sangrado confirmado, no una afirmación sobre síntomas. |
-| Indicación temporal *(nuevo)* | Solo cuando corresponde: `Primeros días del ciclo` o `Días previos a la menstruación · estimación`. | Línea secundaria bajo el estado del ciclo. Reglas completas en 3.2. |
+| Indicación temporal *(nuevo)* | Solo cuando corresponde: `Días previos a la menstruación · estimación`. | Línea secundaria bajo el estado del ciclo. Reglas completas en 3.2. |
 | Rueda del ciclo *(nuevo)* | Rueda con la secuencia de fases, la fase estimada destacada y, en el centro, la fase y el día de ciclo. | Visualización estática de la secuencia, no un historial. Reglas completas en 3.1. |
 | Ventana y actualización | Una ventana compacta, por ejemplo `15–24 sept.`, y `Actualizado hoy`. | La ventana comunica variación sin repetir una advertencia extensa. Un control etiquetado `Cómo se calcula` abre la explicación completa. |
 | Qué pasa en su cuerpo | Tarjeta con una explicación corporal general, breve y revisada, relacionada con la fase. | Describe conocimiento general, no afirma que esté ocurriendo en la persona concreta. |
@@ -52,8 +52,8 @@ La rueda se incorporó en el prototipo de JUA-5 (`src/App.jsx`). Esta sección l
 | RU-02 | Los cuatro rótulos son una simplificación editorial, no cuatro fases clínicas consecutivas. La menstruación se solapa con el inicio de la fase folicular y la ovulación es un evento, no una fase ([01-cycle-phases.md](../research/jua-10/01-cycle-phases.md)). «Cómo funciona» explica esta simplificación. |
 | RU-03 | El rótulo de la ovulación es siempre «Ventana ovulatoria estimada». Nunca «ovulación», «día de ovulación», «días fértiles» ni equivalentes. |
 | RU-04 | En el centro de la rueda aparecen la fase estimada para hoy y el día de ciclo, con el mismo texto que el bloque «Estado del ciclo». |
-| RU-05 | El tamaño de cada segmento es **proporcional a la duración estimada de cada fase**, tal como la calcula el motor auditado (CON-032) para el ciclo en curso. El motor parte del valor central de los ciclos confirmados: la media móvil de 3 a 6 ciclos de la [definición de app](../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_DEFINICION_DE_APP.md) §6, o la mediana si CON-032 la adopta, porque es más robusta ante un ciclo atípico. A partir de ese valor deriva los límites de fase: sangrado según los registros confirmados, ventana ovulatoria y fase lútea contadas hacia atrás desde el siguiente inicio previsto. Nunca se usan duraciones fijas iguales para todas las personas. |
-| RU-05b | Si todavía no hay ciclos confirmados suficientes para un valor individual, pero el estado no es excepcional (sección 5), los segmentos usan la duración mediana de referencia de cada fase, con fuente auditada en JUA-10 o en CON-032. La descripción accesible y «Cómo funciona» indican que se trata de una referencia general, no de la duración en esta persona. |
+| RU-05 | El tamaño de cada segmento es **proporcional a la duración estimada de cada fase**, tal como la calcula el motor auditado (CON-032) para el ciclo en curso. El motor parte del valor central de los ciclos confirmados: la media móvil de 3 a 6 ciclos de la [definición de app](../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_DEFINICION_DE_APP.md) §6, o la mediana si CON-032 la adopta, porque es más robusta ante un ciclo atípico. A partir de ese valor deriva los límites de fase: ventana ovulatoria y fase lútea contadas hacia atrás desde el siguiente inicio previsto, y fase folicular desde el día 4 hasta la ventana ovulatoria. La única duración fija es la de la menstruación, días 1 a 3 (ME-01), que es una referencia para el rótulo y no una duración del sangrado. |
+| RU-05b | Si todavía no hay ciclos confirmados suficientes para un valor individual, pero el estado no es excepcional (sección 5), los segmentos de la fase folicular, la ventana ovulatoria y la fase lútea usan la duración mediana de referencia de cada fase, con fuente auditada (JUA-27). La menstruación sigue ocupando los días 1 a 3. La descripción accesible y «Cómo funciona» indican que se trata de una referencia general, no de la duración en esta persona. |
 | RU-05c | Las proporciones se recalculan solo cuando cambia la estimación del motor, por ejemplo al confirmarse un nuevo inicio de sangrado. No cambian de un día a otro dentro del mismo ciclo. |
 | RU-06 | La ventana estimada de la fase actual se dibuja como un arco sobre la rueda, no como un punto. Si la ventana cruza el límite entre dos segmentos, el arco abarca ambos. La rueda nunca sugiere más precisión que la ventana textual. |
 | RU-07 | Si se aprueba la indicación de los días previos a la menstruación (3.2), la rueda puede marcarla como un tramo dentro de la fase lútea con el mismo estilo de estimación que RU-06. No es un quinto segmento. |
@@ -93,49 +93,51 @@ La rueda sigue la sección 5. Ningún estado puede mostrar una rueda que parezca
 
 La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloqueada por CON-013, CON-015 y CON-035. La rueda muestra solo la secuencia de fases y la estimación de hoy. No muestra historial, ciclos anteriores, registros, variables, comparaciones ni patrones.
 
-### 3.2. Indicaciones temporales dentro de una fase
+### 3.2. Menstruación e indicación de los días previos
 
-**Decisión del 19 de octubre de 2026.** Consona no traza subfases salvo en dos casos: los primeros días del ciclo, que pueden tener su propio conjunto de tarjetas, y los días previos a la menstruación, que se indican pero no cambian las tarjetas.
+**Decisión del 19 de octubre de 2026.** Consona no traza subfases. La menstruación se muestra en los días 1 a 3 del ciclo. Los días previos a la menstruación se indican como estimación, sin cambiar las tarjetas.
 
-**Por qué solo estas dos.** Una app que solo conoce fechas de inicio de sangrado identifica con fiabilidad la menstruación y el inicio de la fase folicular; las fases intermedias y la lútea se clasifican mal a menudo ([01-cycle-phases.md](../research/jua-10/01-cycle-phases.md), referencia [6]). Dividir esas fases en tramos de pocos días daría una precisión que el cálculo no tiene, porque el margen de error puede ser mayor que el tramo. Los primeros días se cuentan hacia delante desde un dato confirmado. Los días previos a la menstruación se cuentan hacia atrás desde una fecha prevista, y por eso llevan siempre su calificador.
+**Por qué.** Una app que solo conoce fechas de inicio de sangrado identifica con fiabilidad la menstruación y el inicio de la fase folicular; las fases intermedias y la lútea se clasifican mal a menudo ([01-cycle-phases.md](../research/jua-10/01-cycle-phases.md), referencia [6]). Dividir las fases en tramos de pocos días daría una precisión que el cálculo no tiene. La menstruación se cuenta hacia delante desde un dato confirmado. Los días previos se cuentan hacia atrás desde una fecha prevista, y por eso llevan siempre su calificador.
 
-#### Primeros días del ciclo
+#### Menstruación: días 1 a 3
 
 | ID | Regla |
 |---|---|
-| IT-01 | Se muestra `Primeros días del ciclo` cuando hoy está dentro de los primeros días contados desde un **inicio de sangrado confirmado** del ciclo en curso. |
-| IT-02 | Si el inicio del ciclo en curso solo está previsto y no confirmado, la indicación no se muestra. |
-| IT-03 | Esta subfase puede tener su propio conjunto de cuatro tarjetas. El número de días y el texto se fijan en JUA-23, con fuentes auditadas y revisión clínica. |
-| IT-04 | La indicación no afirma que haya sangrado, dolor ni ningún síntoma hoy. |
+| ME-01 | El panel y la rueda muestran `Menstruación` en los días 1 a 3 contados desde un **inicio de sangrado confirmado**; el día del inicio es el día 1. Desde el día 4 la fase mostrada es `Fase folicular`. |
+| ME-02 | Los 3 días son el intervalo en que, con alta confianza, casi todas las personas siguen sangrando (NHS, Najmabadi et al. 2020, Bull et al. 2019, Allen et al. 2016 y Schmalenberger et al. 2021; ver JUA-27). Es una referencia para el rótulo, no la duración del sangrado, que a menudo dura de 4 a 6 días o más. |
+| ME-03 | Mostrar `Fase folicular` desde el día 4 no contradice que el sangrado continúe: la fase folicular empieza con la menstruación ([01-cycle-phases.md](../research/jua-10/01-cycle-phases.md)). |
+| ME-04 | `Menstruación` solo se muestra como fase actual si el inicio del ciclo en curso está **confirmado**. Una fecha prevista no basta. Si la fecha prevista pasa sin confirmación, el panel no afirma `Menstruación`; el comportamiento concreto se fija en CON-032 dentro de los estados de la sección 5. |
+| ME-05 | Las tarjetas de la menstruación (JUA-23) se muestran en los días 1 a 3 y pueden referirse al sangrado. Desde el día 4 se muestran las de la fase folicular, que no dan por hecho que el sangrado haya terminado ni que continúe. |
+| ME-06 | «Cómo funciona» explica que los 3 días son una referencia y que el sangrado puede durar más. |
 
 #### Días previos a la menstruación
 
 | ID | Regla |
 |---|---|
-| IT-05 | Se muestra `Días previos a la menstruación · estimación` cuando hoy está dentro del tramo estimado que precede a la siguiente menstruación prevista. |
-| IT-06 | La indicación lleva siempre el calificador de estimación y una explicación breve accesible desde ella, por ejemplo: «Calculado a partir de la duración de ciclos anteriores confirmados. La siguiente menstruación puede adelantarse o retrasarse». Es una estimación probabilística, no un dato. |
-| IT-07 | Solo se muestra si el motor auditado (CON-032) calcula una ventana para el siguiente inicio de sangrado con datos suficientes y vigentes. No se muestra en ningún estado excepcional de la sección 5 ni con anticoncepción que impida estimar fase. |
-| IT-08 | Es una etiqueta temporal, no clínica: no usa «premenstrual» como término clínico, no nombra SPM ni TDPM y no presenta cambios físicos o emocionales como algo que la pareja vaya a tener o esté teniendo ([audit-07](../research/jua-10/audit-07-rcog-pms.md) §4; C-01; SPM-04). |
-| IT-09 | **No cambia las tarjetas.** Las cuatro tarjetas siguen siendo las de la fase lútea durante toda la fase (H-01 de `home-cards-luteal-v0.1.0.md`). |
-| IT-10 | No cambia el color, el tono ni la intensidad del panel o de la rueda; no usa iconos de aviso, cuentas atrás («faltan 3 días»), notificaciones ni recordatorios (RU-09, RU-10, sección 7). |
-| IT-11 | No enlaza directamente a la pantalla SPM/TDPM ni remite a ella. El camino sigue siendo «Cómo funciona» (U-03, C-03). |
-| IT-12 | «Cómo funciona» explica cómo se calcula este tramo y por qué es menos preciso que la fase. |
-| IT-13 | La duración del tramo es una referencia editorial que se fija en JUA-23 con fuente auditada. No se presenta como un criterio diagnóstico del tipo «X días antes de la regla = SPM», que audit-07 prohíbe. |
-| IT-14 | Antes de publicarse, la indicación se incluye expresamente en una revisión clínica (JUA-16 o una posterior), igual que las tarjetas de la fase lútea (C-04). |
+| IT-01 | Se muestra `Días previos a la menstruación · estimación` cuando hoy está dentro del tramo estimado que precede a la siguiente menstruación prevista. |
+| IT-02 | La indicación lleva siempre el calificador de estimación y una explicación breve accesible desde ella, por ejemplo: «Calculado a partir de la duración de ciclos anteriores confirmados. La siguiente menstruación puede adelantarse o retrasarse». Es una estimación probabilística, no un dato. |
+| IT-03 | Solo se muestra si el motor auditado (CON-032) calcula una ventana para el siguiente inicio de sangrado con datos suficientes y vigentes. No se muestra en ningún estado excepcional de la sección 5 ni con anticoncepción que impida estimar fase. |
+| IT-04 | Es una etiqueta temporal, no clínica: no usa «premenstrual» como término clínico, no nombra SPM ni TDPM y no presenta cambios físicos o emocionales como algo que la pareja vaya a tener o esté teniendo ([audit-07](../research/jua-10/audit-07-rcog-pms.md) §4; C-01; SPM-04). |
+| IT-05 | **No cambia las tarjetas.** Las cuatro tarjetas siguen siendo las de la fase lútea durante toda la fase (H-01 de `home-cards-luteal-v0.1.0.md`). |
+| IT-06 | No cambia el color, el tono ni la intensidad del panel o de la rueda; no usa iconos de aviso, cuentas atrás («faltan 3 días»), notificaciones ni recordatorios (RU-09, RU-10, sección 7). |
+| IT-07 | No enlaza directamente a la pantalla SPM/TDPM ni remite a ella. El camino sigue siendo «Cómo funciona» (U-03, C-03). |
+| IT-08 | «Cómo funciona» explica cómo se calcula este tramo y por qué es menos preciso que la fase. |
+| IT-09 | La duración del tramo es una referencia editorial que se fija en JUA-23 con fuente auditada. No se presenta como un criterio diagnóstico del tipo «X días antes de la regla = SPM», que audit-07 prohíbe. |
+| IT-10 | Antes de publicarse, la indicación se incluye expresamente en una revisión clínica (JUA-16 o una posterior), igual que las tarjetas de la fase lútea (C-04). |
 
 #### Coherencia con las salvaguardas existentes
 
 | Salvaguarda | Cómo se cumple |
 |---|---|
-| H-01: las tarjetas de la fase lútea no cambian con el día ni con la cercanía de la menstruación. | La indicación no cambia las tarjetas (IT-09). H-01 sigue vigente. |
-| H-02 y C-01: en los días premenstruales estimados no se nombran SPM ni TDPM ni se anuncian cambios. | IT-08. |
-| H-03 y C-02: la variabilidad premenstrual se expresa con «algunas personas» y «puede». | La indicación no habla de variabilidad. Su explicación (IT-06) solo trata de fechas. |
-| H-04, C-03, U-02 y U-03: la home no cambia de color ni de tono por la fase y no enlaza a SPM/TDPM. | IT-10 e IT-11. |
-| C-04: los cambios de la home en los días premenstruales se revisan contra la pantalla SPM/TDPM. | IT-14. |
-| SPM-04: la cercanía de la menstruación no equivale a SPM. | IT-08 e IT-13. |
+| H-01: las tarjetas de la fase lútea no cambian con el día ni con la cercanía de la menstruación. | La indicación no cambia las tarjetas (IT-05). H-01 sigue vigente. |
+| H-02 y C-01: en los días premenstruales estimados no se nombran SPM ni TDPM ni se anuncian cambios. | IT-04. |
+| H-03 y C-02: la variabilidad premenstrual se expresa con «algunas personas» y «puede». | La indicación no habla de variabilidad. Su explicación (IT-02) solo trata de fechas. |
+| H-04, C-03, U-02 y U-03: la home no cambia de color ni de tono por la fase y no enlaza a SPM/TDPM. | IT-06 e IT-07. |
+| C-04: los cambios de la home en los días premenstruales se revisan contra la pantalla SPM/TDPM. | IT-10. |
+| SPM-04: la cercanía de la menstruación no equivale a SPM. | IT-04 e IT-09. |
 | Sección 1: el panel no repite descargos. | La excepción está justificada en la sección 1 y se limita a esta indicación. |
-| Sección 7: no hay notificaciones, semáforos ni llamadas a la acción. | IT-10. |
-| [01-cycle-phases.md](../research/jua-10/01-cycle-phases.md): no se presentan las fases como verificadas por el calendario. | IT-02, IT-06 e IT-07. |
+| Sección 7: no hay notificaciones, semáforos ni llamadas a la acción. | IT-06. |
+| [01-cycle-phases.md](../research/jua-10/01-cycle-phases.md): no se presentan las fases como verificadas por el calendario. | ME-02 a ME-04, IT-02 e IT-03. |
 
 ## 4. Información obligatoria antes y fuera del panel
 
@@ -147,7 +149,7 @@ La persona usuaria debe confirmar que ha leído esa explicación sin presentarla
 
 ### 4.2. «Cómo funciona»
 
-Esta sección, disponible desde el panel y desde la navegación principal, explica el cálculo con más detalle. Debe cubrir la fecha de actualización, el uso de rangos, la caducidad de los datos, la anticoncepción, las razones por las que el resultado puede cambiar y los límites de la personalización local. También debe explicar que la rueda es una simplificación editorial (RU-02) y cómo se estima el tramo de los días previos a la menstruación (IT-12). Debe incluir el recordatorio de que los patrones no diagnostican SPM o TDPM y que no se infieren consentimiento sexual, deseo sexual, límites ni disponibilidad.
+Esta sección, disponible desde el panel y desde la navegación principal, explica el cálculo con más detalle. Debe cubrir la fecha de actualización, el uso de rangos, la caducidad de los datos, la anticoncepción, las razones por las que el resultado puede cambiar y los límites de la personalización local. También debe explicar que la rueda es una simplificación editorial (RU-02), que los 3 días de la menstruación son una referencia (ME-06) y cómo se estima el tramo de los días previos a la menstruación (IT-08). Debe incluir el recordatorio de que los patrones no diagnostican SPM o TDPM y que no se infieren consentimiento sexual, deseo sexual, límites ni disponibilidad.
 
 La sección no puede quedar escondida en la política de privacidad ni requerir conexión. Debe ser accesible con teclado, lector de pantalla y lenguaje equivalente en español, catalán e inglés. Su recorrido se completa en JUA-7.
 
@@ -166,7 +168,7 @@ La limpieza del panel aplica al estado normal. Cuando el resultado no es apto pa
 
 ## 6. Separación entre aprendizaje y presentación
 
-El motor de ciclo sigue aprendiendo exclusivamente con fechas pasadas confirmadas para ajustar la duración individual, el rango y la incertidumbre de la fase. Este aprendizaje tiene un efecto útil en el panel: una estimación de ciclo más individualizada, que también puede ajustar las proporciones de la rueda (RU-05) y la ventana de la siguiente menstruación (IT-07). No se presenta como una medición de estados interiores.
+El motor de ciclo sigue aprendiendo exclusivamente con fechas pasadas confirmadas para ajustar la duración individual, el rango y la incertidumbre de la fase. Este aprendizaje tiene un efecto útil en el panel: una estimación de ciclo más individualizada, que también puede ajustar las proporciones de la rueda (RU-05) y la ventana de la siguiente menstruación (IT-03). No se presenta como una medición de estados interiores.
 
 ADR-002 mantiene una línea separada y condicionada de aprendizaje local sobre variables consentidas. Sus posibles resultados no aparecen en la home de quien consulta la aplicación. Si en una fase futura se crea una vista específica para esos datos, deberá respetar el consentimiento granular, la separación entre autoinforme y observación, la fuente, la muestra, la incertidumbre, el borrado y la evaluación de violencia tecnológica definidos en el ADR. Esa vista requerirá una decisión y especificación propias.
 
@@ -179,7 +181,7 @@ La home no usa resultados de patrones para modificar el color de la fase o de la
 | Comprensión antes de uso | Prueba de usabilidad en la que las personas entienden, antes de abrir «Hoy», que la fase se calcula desde datos pasados, usa un rango y no es anticonceptiva. |
 | Panel legible | El estado normal ofrece fase, día de ciclo, rueda, ventana, actualización y una vía a `Cómo funciona` sin un bloque de descargo repetitivo. |
 | Rueda sin significado añadido *(nuevo)* | La prueba confirma que las personas leen la rueda como una secuencia de fases estimada, no como un indicador de estado, riesgo o disponibilidad, y que su descripción accesible equivale a la información visual (RU-08 a RU-15). |
-| Indicación de días previos comprendida como estimación *(nuevo)* | La prueba confirma que las personas entienden la indicación como una estimación por fechas, no como un aviso sobre su pareja ni como SPM, y que las tarjetas no cambian (IT-05 a IT-14). |
+| Indicación de días previos comprendida como estimación *(nuevo)* | La prueba confirma que las personas entienden la indicación como una estimación por fechas, no como un aviso sobre su pareja ni como SPM, y que las tarjetas no cambian (IT-01 a IT-10). |
 | Transparencia accesible | La explicación completa está disponible desde el panel, es compatible con teclado y lector de pantalla y existe en ES/CA/EN. |
 | Estados excepcionales seguros | Datos antiguos, insuficientes, anticoncepción incompatible, retirada de consentimiento y resultado inválido no muestran una fase, una rueda ni una indicación temporal como si fueran vigentes. |
 | Separación entre motor y home | La prueba confirma que el motor puede ajustar el rango individual con fechas confirmadas, pero que la home no muestra síntomas, observaciones ni inferencias personales. |
@@ -188,7 +190,7 @@ La home no usa resultados de patrones para modificar el color de la fase o de la
 
 ## 8. Implicación para desarrollo
 
-El nombre directo de la fase en el panel no cambia el motor de estimación. El motor sigue obligado a usar UTC, datos pasados confirmados, rango individual, incertidumbre, caducidad y tratamiento específico de anticoncepción. Además, debe exponer lo que necesitan la rueda y la indicación temporal: los límites estimados de cada fase con su incertidumbre y si proceden de un valor individual o de la referencia (RU-05 y RU-05b), si el inicio del ciclo en curso está confirmado (IT-02) y la ventana del siguiente inicio de sangrado (IT-07). La interfaz debe distinguir entre el resultado computado que puede resumirse visualmente y las condiciones que deben explicarse antes de usarlo o cuando dejan de cumplirse. La especificación de las cuatro tarjetas de contenido debe mantenerse separada de los datos de aprendizaje.
+El nombre directo de la fase en el panel no cambia el motor de estimación. El motor sigue obligado a usar UTC, datos pasados confirmados, rango individual, incertidumbre, caducidad y tratamiento específico de anticoncepción. Además, debe exponer lo que necesitan la rueda y la indicación temporal: los límites estimados de cada fase con su incertidumbre y si proceden de un valor individual o de la referencia (RU-05 y RU-05b), si el inicio del ciclo en curso está confirmado (ME-04) y la ventana del siguiente inicio de sangrado (IT-03). La interfaz debe distinguir entre el resultado computado que puede resumirse visualmente y las condiciones que deben explicarse antes de usarlo o cuando dejan de cumplirse. La especificación de las cuatro tarjetas de contenido debe mantenerse separada de los datos de aprendizaje.
 
 No se implementará esta pantalla con datos reales hasta completar las condiciones de ADR-001 y ADR-002. Mientras tanto, puede diseñarse y probarse con datos ficticios locales que no representen a una persona real.
 
@@ -200,7 +202,8 @@ El prototipo de JUA-5 (`src/App.jsx`, `src/App.css`) usa datos ficticios. Frente
 |---|---|
 | Los segmentos de la rueda tienen proporciones fijas (de 62°, 116°, 42° y 140°), que no salen de ninguna estimación y sugieren duraciones universales. | RU-05 a RU-05c |
 | La ventana estimada no se dibuja como arco sobre la rueda. | RU-06 |
-| No hay indicación temporal. | 3.2 |
+| No hay indicación de los días previos a la menstruación. | 3.2 |
+| La menstruación no se limita a los días 1 a 3. | ME-01 |
 | No hay vista de estados excepcionales: la rueda se muestra siempre. | 3.1, sección 5 |
 | La descripción accesible no incluye el día ni la ventana. | RU-12 |
 
@@ -212,7 +215,7 @@ Estas diferencias se registran como tareas de implementación y se recogen en el
 
 - Se traslada la especificación a `docs/product/` con versión en el nombre del archivo. La v1.0 se conserva sin cambios en `info/`.
 - Se añade la rueda del ciclo (3.1): qué muestra, qué no puede significar, estados excepcionales, accesibilidad y diferencia con CON-036. Origen: criterio de aceptación de JUA-5.
-- Se añaden las indicaciones temporales (3.2): primeros días del ciclo y días previos a la menstruación, con su tabla de coherencia con las salvaguardas.
+- Se añade la sección 3.2: sin subfases; menstruación en los días 1 a 3 desde un inicio confirmado; indicación de los días previos a la menstruación como estimación, con su tabla de coherencia con las salvaguardas.
 - Filas nuevas en las secciones 3 y 7. Ajustes en las secciones 1, 2, 4.2, 5, 6 y 8 para incluir la rueda y la indicación temporal. Se añade la tabla de diferencias del prototipo.
 
 ### [1.0] — 17 de septiembre de 2026
