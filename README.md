@@ -16,6 +16,7 @@ Para estados vivos, asignaciones y dependencias operativas, consultar [Linear �
 |---|---|---|
 | Gobernanza | [Índice de planificación](./docs/governance/README.md) | Explica fuentes de autoridad, documentos mantenidos y cortes históricos. |
 | Ruta crítica | [Ruta mantenida del modelo E](./docs/governance/ruta-critica-modelo-e.md) | Define puertas de viabilidad, arquitectura, implementación, verificación y piloto. |
+| Producto | [Panel principal «Hoy» v1.1.0](./docs/product/panel-principal-v1.1.0.md) | Especifica la home: fase, día, rueda del ciclo, indicaciones temporales, tarjetas de orientación y estados excepcionales. |
 | Seguridad | [Índice de seguridad](./docs/security/README.md) | Reúne el protocolo de CON-007 y el contrato técnico de CON-008. |
 | Taxonomía | [Contrato taxonómico local v1](./docs/taxonomy/consona-local-taxonomy-v1.0.0.md) | Define categorías locales cerradas, prohibiciones y validación sintética. |
 
