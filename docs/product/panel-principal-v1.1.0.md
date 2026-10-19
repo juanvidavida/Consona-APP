@@ -52,7 +52,9 @@ La rueda se incorporó en el prototipo de JUA-5 (`src/App.jsx`). Esta sección l
 | RU-02 | Los cuatro rótulos son una simplificación editorial, no cuatro fases clínicas consecutivas. La menstruación se solapa con el inicio de la fase folicular y la ovulación es un evento, no una fase ([01-cycle-phases.md](../research/jua-10/01-cycle-phases.md)). «Cómo funciona» explica esta simplificación. |
 | RU-03 | El rótulo de la ovulación es siempre «Ventana ovulatoria estimada». Nunca «ovulación», «día de ovulación», «días fértiles» ni equivalentes. |
 | RU-04 | En el centro de la rueda aparecen la fase estimada para hoy y el día de ciclo, con el mismo texto que el bloque «Estado del ciclo». |
-| RU-05 | El tamaño de cada segmento no representa duraciones universales. Si los segmentos son proporcionales, sus proporciones salen del rango individual que calcula el motor auditado (CON-032). Si el motor aún no aporta ese rango, los segmentos tienen el mismo tamaño y la descripción accesible dice que no representan duraciones. |
+| RU-05 | El tamaño de cada segmento es **proporcional a la duración estimada de cada fase**, tal como la calcula el motor auditado (CON-032) para el ciclo en curso. El motor parte del valor central de los ciclos confirmados: la media móvil de 3 a 6 ciclos de la [definición de app](../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_DEFINICION_DE_APP.md) §6, o la mediana si CON-032 la adopta, porque es más robusta ante un ciclo atípico. A partir de ese valor deriva los límites de fase: sangrado según los registros confirmados, ventana ovulatoria y fase lútea contadas hacia atrás desde el siguiente inicio previsto. Nunca se usan duraciones fijas iguales para todas las personas. |
+| RU-05b | Si todavía no hay ciclos confirmados suficientes para un valor individual, pero el estado no es excepcional (sección 5), los segmentos usan la duración mediana de referencia de cada fase, con fuente auditada en JUA-10 o en CON-032. La descripción accesible y «Cómo funciona» indican que se trata de una referencia general, no de la duración en esta persona. |
+| RU-05c | Las proporciones se recalculan solo cuando cambia la estimación del motor, por ejemplo al confirmarse un nuevo inicio de sangrado. No cambian de un día a otro dentro del mismo ciclo. |
 | RU-06 | La ventana estimada de la fase actual se dibuja como un arco sobre la rueda, no como un punto. Si la ventana cruza el límite entre dos segmentos, el arco abarca ambos. La rueda nunca sugiere más precisión que la ventana textual. |
 | RU-07 | Si se aprueba la indicación de los días previos a la menstruación (3.2), la rueda puede marcarla como un tramo dentro de la fase lútea con el mismo estilo de estimación que RU-06. No es un quinto segmento. |
 
@@ -186,7 +188,7 @@ La home no usa resultados de patrones para modificar el color de la fase o de la
 
 ## 8. Implicación para desarrollo
 
-El nombre directo de la fase en el panel no cambia el motor de estimación. El motor sigue obligado a usar UTC, datos pasados confirmados, rango individual, incertidumbre, caducidad y tratamiento específico de anticoncepción. Además, debe exponer lo que necesitan la rueda y la indicación temporal: los límites estimados de cada fase con su incertidumbre, si el inicio del ciclo en curso está confirmado (IT-02) y la ventana del siguiente inicio de sangrado (IT-07). La interfaz debe distinguir entre el resultado computado que puede resumirse visualmente y las condiciones que deben explicarse antes de usarlo o cuando dejan de cumplirse. La especificación de las cuatro tarjetas de contenido debe mantenerse separada de los datos de aprendizaje.
+El nombre directo de la fase en el panel no cambia el motor de estimación. El motor sigue obligado a usar UTC, datos pasados confirmados, rango individual, incertidumbre, caducidad y tratamiento específico de anticoncepción. Además, debe exponer lo que necesitan la rueda y la indicación temporal: los límites estimados de cada fase con su incertidumbre y si proceden de un valor individual o de la referencia (RU-05 y RU-05b), si el inicio del ciclo en curso está confirmado (IT-02) y la ventana del siguiente inicio de sangrado (IT-07). La interfaz debe distinguir entre el resultado computado que puede resumirse visualmente y las condiciones que deben explicarse antes de usarlo o cuando dejan de cumplirse. La especificación de las cuatro tarjetas de contenido debe mantenerse separada de los datos de aprendizaje.
 
 No se implementará esta pantalla con datos reales hasta completar las condiciones de ADR-001 y ADR-002. Mientras tanto, puede diseñarse y probarse con datos ficticios locales que no representen a una persona real.
 
@@ -196,7 +198,7 @@ El prototipo de JUA-5 (`src/App.jsx`, `src/App.css`) usa datos ficticios. Frente
 
 | Diferencia | Regla |
 |---|---|
-| Los segmentos de la rueda tienen proporciones fijas (de 62°, 116°, 42° y 140°), que sugieren duraciones universales. | RU-05 |
+| Los segmentos de la rueda tienen proporciones fijas (de 62°, 116°, 42° y 140°), que no salen de ninguna estimación y sugieren duraciones universales. | RU-05 a RU-05c |
 | La ventana estimada no se dibuja como arco sobre la rueda. | RU-06 |
 | No hay indicación temporal. | 3.2 |
 | No hay vista de estados excepcionales: la rueda se muestra siempre. | 3.1, sección 5 |
