@@ -155,7 +155,7 @@ La sección no puede quedar escondida en la política de privacidad ni requerir 
 
 ### 4.3. Datos que aporta la persona afectada *(nuevo)*
 
-La duración del ciclo y la del sangrado se ajustan a lo que indique la persona afectada, es decir, la pareja que cede sus datos. Estos datos forman parte del alcance que esa persona acepta en el consentimiento inicial (CON-033).
+La duración del ciclo y la del sangrado se ajustan a lo que indique la persona afectada, es decir, la pareja que cede sus datos. Estos datos forman parte del alcance que esa persona acepta en el consentimiento inicial (CON-033, JUA-28).
 
 | ID | Regla |
 |---|---|
