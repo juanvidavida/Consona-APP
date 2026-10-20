@@ -3,8 +3,8 @@
 | Campo | Valor |
 |---|---|
 | Issue | JUA-26 |
-| Versión | v0.3 · 20 oct 2026 (wireframes visuales en v0.2) |
-| Estado | Primera versión validada (P-1, propuesta 1 de navegación, aprobada). Pendiente de alinear con la especificación del panel v1.1.0 (sección 6). |
+| Versión | v0.4 · 20 oct 2026 |
+| Estado | P-1 (propuesta 1, navegación) y P-2 (propuesta 2, rueda, datos semilla y receptor) aprobadas. Quedan diferencias pendientes con la especificación del panel v1.1.0 y con JUA-28 (sección 6). |
 | Diagrama | [`mapa-de-pantallas.mmd`](./mapa-de-pantallas.mmd) |
 | Wireframes visuales | [`mapa-de-pantallas.html`](./mapa-de-pantallas.html) |
 | Fuentes | `CONSONA_DEFINICION_DE_APP.md` §5 · `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` v1.0 (sustituida por [`panel-principal-v1.1.0.md`](./panel-principal-v1.1.0.md), PR #10) · `CON-007` · `src/App.jsx` · `content.v2.js` |
@@ -47,6 +47,9 @@ Diagrama completo: [`mapa-de-pantallas.mmd`](./mapa-de-pantallas.mmd).
 ### P-1 (propuesta 1) · Navegación principal — VALIDADA (v1)
 Barra inferior en móvil con tres pestañas: **Hoy** (1.1/1.2) · **Comprender** (2.1, 2.2, 2.3) · **Datos** (C.1). Sin contadores, insignias ni notificaciones. Cumple Panel §4.2. Se revisará cuando se desbloqueen X.1–X.3.
 
+### P-2 (propuesta 2) · Rueda, datos semilla y receptor — VALIDADA (v1)
+Cubre D-11 a D-16. Afecta a 1.1 (rueda y pregunta de ejemplo), X.1 (duraciones) y X.2 (llegada de datos y frecuencia del consentimiento). Validada el 20 oct 2026. Las tareas D-11 a D-16 pasan a sus issues de destino. Cuatro puntos de P-2 quedan pendientes de decisión (sección 6, D-17 a D-20).
+
 ## 3. Wireframes (móvil primero)
 
 Representación visual en [`mapa-de-pantallas.html`](./mapa-de-pantallas.html). Tipografía de la app: sistema (`-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto…`) para interfaz y datos; serif (`"New York", "Noto Serif", Georgia`) para títulos.
@@ -67,7 +70,17 @@ Progreso 3/3 · casillas sin marcar: «Tengo 18 años o más», «He leído cóm
 Dispositivo de control de la persona afectada · qué se guardaría, dónde, para qué, qué no puede concluir, cómo retirarlo, límite sin conexión · alcances uno a uno (Sí/No, sin preselección) · «Rechazar» y «Aceptar» con igual peso · nunca en el dispositivo de quien consulta.
 
 ### 1.1 · Hoy — CONSTRUIDA (prototipo)
-Fecha · bloque principal: día de ciclo, «Actualizado», fase, rueda en grises (intensidad = fase, nunca estado emocional), ventana y «Cómo se calcula →» · cuatro tarjetas: Qué pasa en su cuerpo · Qué puedes preguntarle · Qué te toca a ti · Qué no asumir · barra P-1. Sin nombre ni foto de la persona afectada.
+Fecha · bloque principal: día de ciclo, «Actualizado», fase, rueda, próxima menstruación y «Cómo se calcula →» · cuatro tarjetas: Qué pasa en su cuerpo · Qué puedes preguntarle · Qué te toca a ti · Qué no asumir · barra P-1. Sin nombre ni foto de la persona afectada.
+
+**Rueda (JUA-25) · P-2 validada**
+- Segmentos proporcionales a la duración de cada fase; marcador del día actual (D-11).
+- La ventana de la próxima menstruación se dibuja como arco exterior (D-11).
+- Descripción accesible: «Día 18 de 28. Fase lútea. Próxima menstruación estimada entre el 30 oct y el 5 nov.» (D-11).
+- Menstruación según la duración declarada; sin dato, días 1 a 3 (D-12).
+- Tramo final etiquetado «Días previos a la menstruación · estimación», en gris, sin color de alerta (D-13).
+- Grises: la intensidad distingue fases, nunca estados emocionales.
+
+**Pregunta de ejemplo (JUA-23) · P-2 validada:** «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?» (D-14).
 
 ### 1.2 · Estados excepcionales — ESPECIFICADA (Panel §5)
 Sustituyen el bloque de fase; nunca muestran una fase no vigente.
@@ -97,10 +110,10 @@ Estado («Sin autorización activa») · alcances en este dispositivo, uno a uno
 Tres mensajes distintos: A · solicitud emitida · B · entrega no confirmable · C · borrado local ejecutado. Prohibido: «Los datos se han eliminado de todos los dispositivos».
 
 ### X.1 · Datos semilla — BLOQUEADA (ADR-001 C9)
-Pregunta de método hormonal primero (No / Sí, cuál / Prefiero no decir) · último inicio de sangrado (solo fechas pasadas, sin texto libre) · fechas anteriores (3–6 máx.) · no se muestran como historial navegable.
+Pregunta de método hormonal primero (No / Sí, cuál / Prefiero no decir) · último inicio de sangrado (solo fechas pasadas, sin texto libre) · *(P-2 validada)* duraciones habituales de ciclo y sangrado, opcionales, con «No lo sé» → sangrado días 1–3 (D-15 · JUA-28) · fechas anteriores (3–6 máx.) · no se muestran como historial navegable.
 
 ### X.2 · Dispositivo receptor — BLOQUEADA (CON-008)
-Estructura orientativa: mecanismo de vinculación pendiente · solo referencia opaca (nunca fechas, fases, nombres ni contenido) · estado de vinculación.
+*(P-2 validada)* Flujo orientativo: dispositivo de control (calcula localmente) → canal y vinculación (pendiente JUA-28 · CON-008) → dispositivo de quien consulta (qué recibe: pendiente; candidatos fase, día, ventana, actualizado). Frecuencia del consentimiento como opciones abiertas: una vez por alcance · renovación periódica · en cada envío (D-16 · JUA-28). Nunca fechas, nombres ni contenido libre.
 
 ### X.3 · Aprendizaje local — BLOQUEADA (ADR-002)
 Sin wireframe. Requiere decisión y especificación propias. Nunca en Hoy.
@@ -138,19 +151,23 @@ Todas las pantallas cumplen: sin nombres · sin historial · sin rachas · sin n
 | D-08 | C.1 | CON-007 §2.1, §6 | Sin alcances ni estados de retirada | Lista por alcance y mensajes C.2 (deshabilitados) | JUA-20 |
 | D-09 | 2.3 | Definición §5 | Contenido educativo sin issue | Crear issue con temas y estructura | JUA-31 |
 | D-10 | Global | Definición §8 | Sin selector ES/CA/EN | Selector en landing y onboarding | JUA-8 |
+| D-11 | 1.1 | JUA-25 | Rueda sin segmentos proporcionales, ventana como arco ni descripción accesible | P-2 validada; implementar | JUA-30 |
+| D-12 | 1.1 | JUA-25 | Menstruación sin duración declarada | Duración declarada o días 1–3; P-2 validada | JUA-30 |
+| D-13 | 1.1 | JUA-25 | Falta «Días previos a la menstruación · estimación» | P-2 validada; implementar | JUA-30 |
+| D-14 | 1.1 | JUA-23 | Pregunta de ejemplo no versionada | Usar «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?» | JUA-23 |
+| D-15 | X.1 | JUA-28 | Datos semilla sin duraciones | Campos opcionales de ciclo y sangrado; P-2 validada | JUA-28 |
+| D-16 | X.2 | JUA-28 | Sin flujo de llegada de datos ni frecuencia de consentimiento | P-2 validada; implementar; decide JUA-28 | JUA-28 |
 
-## 6. Alineación pendiente con la especificación del panel v1.1.0
+## 6. Diferencias pendientes de decisión (P-2)
 
-Los wireframes v0.2 se hicieron sobre la especificación v1.0. La v1.1.0 ([`panel-principal-v1.1.0.md`](./panel-principal-v1.1.0.md), PR #10) y las decisiones de JUA-28 y JUA-29 introducen cambios que aún no están dibujados. Hasta que se actualicen, prevalece la especificación.
+Estos puntos de P-2 chocan con decisiones ya tomadas o con la especificación vigente. Hasta que se resuelvan, prevalecen la especificación del panel v1.1.0 ([`panel-principal-v1.1.0.md`](./panel-principal-v1.1.0.md)), ADR-001 y CON-008.
 
-| ID | Pantalla | Referencia | Diferencia | Tarea | Destino |
+| ID | Pantalla | Qué muestra P-2 | Con qué choca | Qué hay que decidir o corregir | Destino |
 |---|---|---|---|---|---|
-| D-11 | 1.1 | v1.1 §3.1, RU-05 a RU-07 y RU-12 | La rueda tiene cuatro segmentos sin proporción definida. | Segmentos proporcionales a la duración estimada de cada fase (declarada, calculada o de referencia), ventana dibujada como arco y descripción accesible con día y ventana. | JUA-30 |
-| D-12 | 1.1 | v1.1 §3.2, ME-01 a ME-06 | No refleja cuándo se muestra «Menstruación». | Menstruación durante la duración del sangrado declarada o, si no la hay, días 1 a 3; después, fase folicular. | JUA-30 |
-| D-13 | 1.1 | v1.1 §3.2, IT-01 a IT-10 | Falta la indicación de los días previos a la menstruación. | Añadir la variante «Días previos a la menstruación · estimación» en fase lútea, sin cambiar las tarjetas, el color ni el tono. | JUA-30 |
-| D-14 | 1.1 | `home-cards-luteal-v0.1.0.md` (QPP), C-01, H-02 | La pregunta de ejemplo «¿Hay algo estos días que te esté pesando más de lo normal?» presupone un cambio en la fase lútea. | Usar el texto versionado: «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?». | JUA-23 |
-| D-15 | X.1 | v1.1 §4.3, DA-01 a DA-03 | Los datos semilla solo piden fechas. | Añadir la duración habitual del ciclo y la del sangrado, opcionales y cada una con su propio alcance. | JUA-28 |
-| D-16 | 0.2 · X.1 | v1.1 §4.3, DA-05 y DA-08; JUA-28; JUA-29 | No indica cómo llegan los datos al dispositivo de quien consulta ni la frecuencia del consentimiento. | Reflejar el traspaso directo entre dispositivos en estudio, el alta a distancia pendiente de JUA-29 y el consentimiento inicial sin renovación periódica. | JUA-28 |
+| D-17 | X.2 | La frecuencia del consentimiento como opciones abiertas: una vez por alcance, renovación periódica o en cada envío. | DA-08 (decidido el 19 oct 2026): consentimiento inicial sin renovación periódica; revisión, cambio o retirada cuando ella quiera. | Corregir el wireframe: una sola opción, la decidida. | JUA-28 |
+| D-18 | X.2 | El dispositivo de control calcula localmente y el de quien consulta recibe fase, día, ventana y actualización. | CON-008, requisito 9: el dispositivo de control no pide, no muestra ni guarda datos de ciclo ni derivados. ADR-001 §2: los derivados tampoco pueden pasar por un servidor. | Tratarlo como una opción más de la revisión arquitectónica de JUA-28, no como diseño validado. Si solo viajan derivados, el traspaso tendría que ser directo entre dispositivos o depender de la excepción de JUA-29. | JUA-28 |
+| D-19 | 1.1 | «Próxima menstruación 30 oct – 5 nov» en el bloque principal, en lugar de la ventana de la fase actual; arco exterior con esa ventana. | Panel v1.1.0 §3 (bloque «Ventana y actualización») y RU-06: la ventana que se dibuja es la de la fase actual. IT-06 prohíbe cuentas atrás. Una fecha prevista de la próxima regla en la home de quien consulta es una predicción que la especificación no contempla. | Decidir si la home muestra la próxima menstruación prevista. Si se aprueba, añadirlo a la especificación con sus reglas; si no, volver a la ventana de la fase. | JUA-30 |
+| D-20 | X.1 | Duraciones habituales con valores ya seleccionados: «Ciclo 28 días» y «Sangrado 5 días». | CON-007: ninguna opción preseleccionada. `13-cycle-variability.md`: no hay un ciclo «normal» de 28 días. | Campos vacíos por defecto; «No lo sé» como opción explícita. | JUA-28 |
 
 ## Historial
 
@@ -158,4 +175,5 @@ Los wireframes v0.2 se hicieron sobre la especificación v1.0. La v1.1.0 ([`pane
 |---|---|---|
 | v0.1 | 20 oct 2026 | Borrador: inventario, navegación, wireframes, reglas, diferencias. |
 | v0.2 | 20 oct 2026 | P-1 validada como primera versión. Paso a `docs/product/`. |
-| v0.3 | 20 oct 2026 | Consolidación en el repositorio (JUA-26): sección 6 con las diferencias respecto a la especificación del panel v1.1.0, D-06 reasignada a JUA-23 y retirada del `preconnect` a Google Fonts en el HTML. Los wireframes visuales siguen en v0.2. Destinos de las tareas actualizados: JUA-30 (prototipo de Hoy), JUA-28 (onboarding), JUA-31 (contenido educativo) y JUA-8 (idioma). |
+| v0.3 | 20 oct 2026 | Consolidación en el repositorio (JUA-26, PR #11): diferencias con la especificación del panel v1.1.0, destinos de las tareas en JUA-30, JUA-28, JUA-23, JUA-31 y JUA-8, y retirada del `preconnect` a Google Fonts. |
+| v0.4 | 20 oct 2026 | P-2 validada: rueda proporcional, menstruación, tramo «Días previos», pregunta versionada, duraciones en datos semilla, flujo de X.2. Consolidación: destinos actualizados y sección 6 con D-17 a D-20 pendientes de decisión. |
