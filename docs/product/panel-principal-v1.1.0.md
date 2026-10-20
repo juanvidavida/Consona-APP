@@ -153,6 +153,8 @@ Esta sección, disponible desde el panel y desde la navegación principal, expli
 
 La sección no puede quedar escondida en la política de privacidad ni requerir conexión. Debe ser accesible con teclado, lector de pantalla y lenguaje equivalente en español, catalán e inglés. Su recorrido se completa en JUA-7.
 
+La navegación principal (P-1: Hoy · Comprender · Datos) y los wireframes de «Hoy», de sus estados excepcionales y de «Cómo funciona» están en el [mapa de pantallas](./mapa-de-pantallas.md) (JUA-26).
+
 ### 4.3. Datos que aporta la persona afectada *(nuevo)*
 
 La duración del ciclo y la del sangrado se ajustan a lo que indique la persona afectada, es decir, la pareja que cede sus datos. Estos datos forman parte del alcance que esa persona acepta en el consentimiento inicial (CON-033, JUA-28).
