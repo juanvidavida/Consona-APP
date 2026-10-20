@@ -128,16 +128,16 @@ Todas las pantallas cumplen: sin nombres · sin historial · sin rachas · sin n
 
 | ID | Pantalla | Referencia | Diferencia | Tarea | Destino |
 |---|---|---|---|---|---|
-| D-01 | 1.1 | Panel §1, §3 | Descargos repetidos en estado normal | Dejar solo ventana + «Actualizado» + «Cómo se calcula» | JUA-25 |
+| D-01 | 1.1 | Panel §1, §3 | Descargos repetidos en estado normal | Dejar solo ventana + «Actualizado» + «Cómo se calcula» | JUA-30 |
 | D-02 | 2.1 | Panel §4.2 · JUA-7 | «Cómo funciona» es una sección ancla | Pantalla propia accesible desde Hoy y navegación | JUA-7 |
-| D-03 | Global | Panel §4.2 · P-1 | No hay navegación principal | Implementar barra Hoy · Comprender · Datos | Nuevo |
-| D-04 | 0.1 | Panel §4.1 | La app abre directamente en Hoy | Onboarding 0.1a–c con 18+ y lectura | Nuevo |
-| D-05 | 1.2 | Panel §5 | Ningún estado excepcional | Implementar 1.2a–f con datos ficticios | Nuevo |
+| D-03 | Global | Panel §4.2 · P-1 | No hay navegación principal | Implementar barra Hoy · Comprender · Datos | JUA-30 |
+| D-04 | 0.1 | Panel §4.1 | La app abre directamente en Hoy | Onboarding 0.1a–c con 18+ y lectura | JUA-28 |
+| D-05 | 1.2 | Panel §5 | Ningún estado excepcional | Implementar 1.2a–f con datos ficticios | JUA-30 |
 | D-06 | 1.1 | Panel §3 · content.v2 | Tarjetas fijas en fase lútea | Tarjetas por fase y set `sinFases` | JUA-23 |
-| D-07 | 1.1 | Panel §3 | «Margen 10 días» no especificado; fecha dinámica vs. ventana fija | Decidir en JUA-25 | JUA-25 |
+| D-07 | 1.1 | Panel §3 | «Margen 10 días» no especificado; fecha dinámica vs. ventana fija | Decidir en JUA-25 | JUA-30 |
 | D-08 | C.1 | CON-007 §2.1, §6 | Sin alcances ni estados de retirada | Lista por alcance y mensajes C.2 (deshabilitados) | JUA-20 |
-| D-09 | 2.3 | Definición §5 | Contenido educativo sin issue | Crear issue con temas y estructura | Nuevo |
-| D-10 | Global | Definición §8 | Sin selector ES/CA/EN | Selector en landing y onboarding | Nuevo |
+| D-09 | 2.3 | Definición §5 | Contenido educativo sin issue | Crear issue con temas y estructura | JUA-31 |
+| D-10 | Global | Definición §8 | Sin selector ES/CA/EN | Selector en landing y onboarding | JUA-8 |
 
 ## 6. Alineación pendiente con la especificación del panel v1.1.0
 
@@ -145,9 +145,9 @@ Los wireframes v0.2 se hicieron sobre la especificación v1.0. La v1.1.0 ([`pane
 
 | ID | Pantalla | Referencia | Diferencia | Tarea | Destino |
 |---|---|---|---|---|---|
-| D-11 | 1.1 | v1.1 §3.1, RU-05 a RU-07 y RU-12 | La rueda tiene cuatro segmentos sin proporción definida. | Segmentos proporcionales a la duración estimada de cada fase (declarada, calculada o de referencia), ventana dibujada como arco y descripción accesible con día y ventana. | JUA-25 |
-| D-12 | 1.1 | v1.1 §3.2, ME-01 a ME-06 | No refleja cuándo se muestra «Menstruación». | Menstruación durante la duración del sangrado declarada o, si no la hay, días 1 a 3; después, fase folicular. | JUA-25 |
-| D-13 | 1.1 | v1.1 §3.2, IT-01 a IT-10 | Falta la indicación de los días previos a la menstruación. | Añadir la variante «Días previos a la menstruación · estimación» en fase lútea, sin cambiar las tarjetas, el color ni el tono. | JUA-25 |
+| D-11 | 1.1 | v1.1 §3.1, RU-05 a RU-07 y RU-12 | La rueda tiene cuatro segmentos sin proporción definida. | Segmentos proporcionales a la duración estimada de cada fase (declarada, calculada o de referencia), ventana dibujada como arco y descripción accesible con día y ventana. | JUA-30 |
+| D-12 | 1.1 | v1.1 §3.2, ME-01 a ME-06 | No refleja cuándo se muestra «Menstruación». | Menstruación durante la duración del sangrado declarada o, si no la hay, días 1 a 3; después, fase folicular. | JUA-30 |
+| D-13 | 1.1 | v1.1 §3.2, IT-01 a IT-10 | Falta la indicación de los días previos a la menstruación. | Añadir la variante «Días previos a la menstruación · estimación» en fase lútea, sin cambiar las tarjetas, el color ni el tono. | JUA-30 |
 | D-14 | 1.1 | `home-cards-luteal-v0.1.0.md` (QPP), C-01, H-02 | La pregunta de ejemplo «¿Hay algo estos días que te esté pesando más de lo normal?» presupone un cambio en la fase lútea. | Usar el texto versionado: «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?». | JUA-23 |
 | D-15 | X.1 | v1.1 §4.3, DA-01 a DA-03 | Los datos semilla solo piden fechas. | Añadir la duración habitual del ciclo y la del sangrado, opcionales y cada una con su propio alcance. | JUA-28 |
 | D-16 | 0.2 · X.1 | v1.1 §4.3, DA-05 y DA-08; JUA-28; JUA-29 | No indica cómo llegan los datos al dispositivo de quien consulta ni la frecuencia del consentimiento. | Reflejar el traspaso directo entre dispositivos en estudio, el alta a distancia pendiente de JUA-29 y el consentimiento inicial sin renovación periódica. | JUA-28 |
@@ -158,4 +158,4 @@ Los wireframes v0.2 se hicieron sobre la especificación v1.0. La v1.1.0 ([`pane
 |---|---|---|
 | v0.1 | 20 oct 2026 | Borrador: inventario, navegación, wireframes, reglas, diferencias. |
 | v0.2 | 20 oct 2026 | P-1 validada como primera versión. Paso a `docs/product/`. |
-| v0.3 | 20 oct 2026 | Consolidación en el repositorio (JUA-26): sección 6 con las diferencias respecto a la especificación del panel v1.1.0, D-06 reasignada a JUA-23 y retirada del `preconnect` a Google Fonts en el HTML. Los wireframes visuales siguen en v0.2. |
+| v0.3 | 20 oct 2026 | Consolidación en el repositorio (JUA-26): sección 6 con las diferencias respecto a la especificación del panel v1.1.0, D-06 reasignada a JUA-23 y retirada del `preconnect` a Google Fonts en el HTML. Los wireframes visuales siguen en v0.2. Destinos de las tareas actualizados: JUA-30 (prototipo de Hoy), JUA-28 (onboarding), JUA-31 (contenido educativo) y JUA-8 (idioma). |
