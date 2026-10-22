@@ -148,7 +148,7 @@ Todas las pantallas cumplen: sin nombres · sin historial · sin rachas · sin n
 | D-05 | 1.2 | Panel §5 | Ningún estado excepcional | Implementar 1.2a–f con datos ficticios | JUA-30 |
 | D-06 | 1.1 | Panel §3 · content.v2 | Tarjetas fijas en fase lútea | Tarjetas por fase y set `sinFases` | JUA-23 |
 | D-07 | 1.1 | Panel §3 | «Margen 10 días» no especificado; fecha dinámica vs. ventana fija | Decidir en JUA-25 | JUA-30 |
-| D-08 | C.1 | CON-007 §2.1, §6 | Sin alcances ni estados de retirada | Lista por alcance y mensajes C.2 (deshabilitados) | JUA-20 |
+| D-08 | C.1 | CON-007 §2.1, §6 | Sin alcances ni estados de retirada | Lista por alcance y mensajes C.2 (deshabilitados) | JUA-30 |
 | D-09 | 2.3 | Definición §5 | Contenido educativo sin issue | Crear issue con temas y estructura | JUA-31 |
 | D-10 | Global | Definición §8 | Sin selector ES/CA/EN | Selector en landing y onboarding | JUA-8 |
 | D-11 | 1.1 | JUA-25 | Rueda sin segmentos proporcionales, ventana como arco ni descripción accesible | P-2 validada; implementar | JUA-30 |
