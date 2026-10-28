@@ -68,6 +68,30 @@ entre 9 y 11 días, sea cual sea la duración del ciclo. Hay un test que lo comp
 - Human Reproduction 2024: la fase lútea no es fija de 13-14 días; mediana 10,9.
   https://academic.oup.com/humrep/article/39/11/2565/7775370
 
+### Enmienda JUA-27 (28-10-2026) · PROPUESTA
+
+La auditoría de JUA-27 mantiene el anclaje desde la siguiente regla, pero corrige
+cómo se pinta la ventana. El rango `[duración − 16, duración − 10]` es una
+**banda de incertidumbre** razonable: contiene la ovulación en el 78-94 % de los
+ciclos. Pero no debe pintarse entera como fase, porque deja la lútea en 10 días
+en todos los ciclos. Eso es el umbral de deficiencia lútea de ASRM 2026, y en
+unos 4 de cada 5 ciclos la lútea real es más larga.
+
+- **Lútea pintada:** 12 días, la mediana con marcador de ovulación (Najmabadi
+  2020: 12; Bull 2019: 12,4 ± 2,4; Soumpasis 2020: 12,77 ± 1,86).
+- **Ventana ovulatoria pintada:** `[duración − 14, duración − 12]`, una lútea de
+  12 a 14 días (el intervalo típico de ASRM 2026).
+- **Banda de incertidumbre:** `[duración − 16, duración − 10]`, expuesta aparte en
+  `uncertaintyBands()`. No es una fase.
+- El «efecto secundario positivo» de arriba era un error: una lútea de 9 a 11
+  días no es fisiológica en el sentido que se suponía.
+- La cifra de Human Reproduction 2024 estaba mal leída: 10,9 (8,3-12,5) es la
+  mediana de los promedios de 53 mujeres, medida con temperatura basal. Por
+  ciclo, la mediana es 11 y el rango va de 3 a 16.
+
+Detalle, fuentes y cálculos: `docs/research/JUA-27-duraciones-referencia.md` en
+la raíz del repositorio de Consona.
+
 ---
 
 ## ADR-003 — Aritmética de fechas en UTC · ACEPTADA
