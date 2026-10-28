@@ -2,7 +2,7 @@
 
 **Versión:** 1.0.0
 **Fecha de verificación de fuentes:** 28-10-2026
-**Estado:** propuesta para revisión. Las cifras están auditadas; las decisiones de producto de la sección 0 son del 28-10-2026. Los cambios a la especificación del panel (sección 8) están pendientes de aprobación.
+**Estado:** propuesta para revisión. Las cifras están auditadas; las decisiones de producto de la sección 0 son del 28-10-2026. Los cambios a la especificación del panel (sección 8) están aplicados en la v1.1.1.
 **Issue:** [JUA-27](https://linear.app/juan-vidaechea/issue/JUA-27). Insumo de JUA-25 (RU-05, RU-05b), JUA-23 (IT-01 a IT-03, ME-01) y CON-032.
 **Material de apoyo:** [`jua-27/`](jua-27/README.md), con cinco auditorías detalladas por eje de evidencia.
 
@@ -14,7 +14,7 @@
 
 1. **Fase lútea de referencia: 12 días.** Es la mediana con marcador de ovulación (Najmabadi 2020: mediana 12, RIC 10–13; Bull 2019: 12,4 ± 2,4; Soumpasis 2020: 12,77 ± 1,86) y el extremo inferior del intervalo típico de ASRM 2026 (12–14). *Decisión de producto del 28-10-2026.*
 2. **Regla de la ventana ovulatoria: ajustada.** El rango de 10 a 16 días antes de la siguiente regla se mantiene como **banda de incertidumbre**, pero deja de pintarse como fase. La ventana pintada pasa a ser `[L−14, L−12]`, un segmento estrecho y de bordes difusos. La lútea pintada pasa de 10 a 12 días (sección 3). *Decisión de producto del 28-10-2026: se mantiene RU-01, con sus cuatro rótulos.*
-3. **Duración del sangrado por defecto: 5 días.** Es la mediana de BioCycle y coincide con el valor por defecto del motor. «Días 1 a 3» queda como referencia editorial de los **primeros días, de más flujo**, no como duración de la menstruación (sección 6). *Decisión de producto del 28-10-2026; obliga a cambiar ME-01 y RU-05b (sección 8).*
+3. **Duración del sangrado por defecto: 5 días.** Es la mediana de BioCycle y coincide con el valor por defecto del motor. «Días 1 a 3» queda como referencia editorial de los **primeros días, de más flujo**, no como duración de la menstruación (sección 6). *Decisión de producto del 28-10-2026; cambia ME-01 y RU-05b (sección 8).*
 4. **Días previos a la menstruación: 7 días**, del −7 al −1 respecto del inicio previsto. Es una convención de calendario (Schmalenberger 2021; C-PASS 2017), nunca un criterio diagnóstico (sección 5).
 5. **Rueda de referencia (RU-05b)** para un ciclo de 29 días: menstruación 5, folicular 9, ventana 3 y lútea 12. Es coherente con las medianas de Najmabadi: ciclo 29 = folicular 17 + lútea 12 (sección 4).
 6. **Se corrigen tres afirmaciones del motor histórico.** La cifra de Henry 2024 estaba mal leída, la prueba de una lútea de 9 a 11 días era errónea y la regla se atribuía al NHS como «regla correcta». El parche está en el motor histórico, con sus pruebas (sección 7).
@@ -164,9 +164,9 @@ Si la persona no ha declarado duraciones y no hay ciclos confirmados suficientes
 
 ---
 
-## 8. Cambios propuestos a la especificación del panel v1.1.0
+## 8. Cambios a la especificación del panel
 
-Pendientes de aprobación y de versionado de la especificación (v1.1.1 o v1.2.0). **No se han aplicado.**
+**Aplicados** en la especificación del panel v1.1.1 (rama de JUA-25, 28-10-2026) y en el mapa de pantallas v0.4.1 (rama de JUA-26, D-12).
 
 | Requisito | Texto actual (resumen) | Cambio propuesto |
 |---|---|---|
