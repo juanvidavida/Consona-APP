@@ -3,7 +3,7 @@
 | Campo | Valor |
 |---|---|
 | Issue | JUA-26 |
-| Versión | v0.4 · 20 oct 2026 |
+| Versión | v0.4.1 · 28 oct 2026 |
 | Estado | P-1 (propuesta 1, navegación) y P-2 (propuesta 2, rueda, datos semilla y receptor) aprobadas. Quedan diferencias pendientes con la especificación del panel v1.1.0 y con JUA-28 (sección 6). |
 | Diagrama | [`mapa-de-pantallas.mmd`](./mapa-de-pantallas.mmd) |
 | Wireframes visuales | [`mapa-de-pantallas.html`](./mapa-de-pantallas.html) |
@@ -76,7 +76,7 @@ Fecha · bloque principal: día de ciclo, «Actualizado», fase, rueda, próxima
 - Segmentos proporcionales a la duración de cada fase; marcador del día actual (D-11).
 - La ventana de la próxima menstruación se dibuja como arco exterior (D-11).
 - Descripción accesible: «Día 18 de 28. Fase lútea. Próxima menstruación estimada entre el 30 oct y el 5 nov.» (D-11).
-- Menstruación según la duración declarada; sin dato, días 1 a 3 (D-12).
+- Menstruación según la duración declarada; sin dato, días 1 a 5 (D-12).
 - Tramo final etiquetado «Días previos a la menstruación · estimación», en gris, sin color de alerta (D-13).
 - Grises: la intensidad distingue fases, nunca estados emocionales.
 
@@ -110,7 +110,7 @@ Estado («Sin autorización activa») · alcances en este dispositivo, uno a uno
 Tres mensajes distintos: A · solicitud emitida · B · entrega no confirmable · C · borrado local ejecutado. Prohibido: «Los datos se han eliminado de todos los dispositivos».
 
 ### X.1 · Datos semilla — BLOQUEADA (ADR-001 C9)
-Pregunta de método hormonal primero (No / Sí, cuál / Prefiero no decir) · último inicio de sangrado (solo fechas pasadas, sin texto libre) · *(P-2 validada)* duraciones habituales de ciclo y sangrado, opcionales, con «No lo sé» → sangrado días 1–3 (D-15 · JUA-28) · fechas anteriores (3–6 máx.) · no se muestran como historial navegable.
+Pregunta de método hormonal primero (No / Sí, cuál / Prefiero no decir) · último inicio de sangrado (solo fechas pasadas, sin texto libre) · *(P-2 validada)* duraciones habituales de ciclo y sangrado, opcionales, con «No lo sé» → sangrado días 1–5 (D-15 · JUA-28) · fechas anteriores (3–6 máx.) · no se muestran como historial navegable.
 
 ### X.2 · Dispositivo receptor — BLOQUEADA (CON-008)
 *(P-2 validada)* Flujo orientativo: dispositivo de control (calcula localmente) → canal y vinculación (pendiente JUA-28 · CON-008) → dispositivo de quien consulta (qué recibe: pendiente; candidatos fase, día, ventana, actualizado). Frecuencia del consentimiento como opciones abiertas: una vez por alcance · renovación periódica · en cada envío (D-16 · JUA-28). Nunca fechas, nombres ni contenido libre.
@@ -152,7 +152,7 @@ Todas las pantallas cumplen: sin nombres · sin historial · sin rachas · sin n
 | D-09 | 2.3 | Definición §5 | Contenido educativo sin issue | Crear issue con temas y estructura | JUA-31 |
 | D-10 | Global | Definición §8 | Sin selector ES/CA/EN | Selector en landing y onboarding | JUA-8 |
 | D-11 | 1.1 | JUA-25 | Rueda sin segmentos proporcionales, ventana como arco ni descripción accesible | P-2 validada; implementar | JUA-30 |
-| D-12 | 1.1 | JUA-25 | Menstruación sin duración declarada | Duración declarada o días 1–3; P-2 validada | JUA-30 |
+| D-12 | 1.1 | JUA-25 | Menstruación sin duración declarada | Duración declarada o días 1–5 (antes 1–3; cambio de JUA-27, 28-10-2026); P-2 validada | JUA-30 |
 | D-13 | 1.1 | JUA-25 | Falta «Días previos a la menstruación · estimación» | P-2 validada; implementar | JUA-30 |
 | D-14 | 1.1 | JUA-23 | Pregunta de ejemplo no versionada | Usar «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?» | JUA-23 |
 | D-15 | X.1 | JUA-28 | Datos semilla sin duraciones | Campos opcionales de ciclo y sangrado; P-2 validada | JUA-28 |
@@ -177,3 +177,4 @@ Estos puntos de P-2 chocan con decisiones ya tomadas o con la especificación vi
 | v0.2 | 20 oct 2026 | P-1 validada como primera versión. Paso a `docs/product/`. |
 | v0.3 | 20 oct 2026 | Consolidación en el repositorio (JUA-26, PR #11): diferencias con la especificación del panel v1.1.0, destinos de las tareas en JUA-30, JUA-28, JUA-23, JUA-31 y JUA-8, y retirada del `preconnect` a Google Fonts. |
 | v0.4 | 20 oct 2026 | P-2 validada: rueda proporcional, menstruación, tramo «Días previos», pregunta versionada, duraciones en datos semilla, flujo de X.2. Consolidación: destinos actualizados y sección 6 con D-17 a D-20 pendientes de decisión. |
+| v0.4.1 | 28 oct 2026 | Menstruación sin duración declarada: días 1–5 en lugar de 1–3, según la especificación del panel v1.1.1 y JUA-27 (D-12). |
