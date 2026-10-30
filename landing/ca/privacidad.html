@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consona — Política de privacitat</title>
+  <meta name="description" content="Consona: educació sobre el cicle menstrual per a parelles. Properament.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; form-action 'self';">
+  <link rel="canonical" href="https://consonaapp.com/ca/privacidad.html">
+  <link rel="alternate" hreflang="es" href="https://consonaapp.com/privacidad.html">
+  <link rel="alternate" hreflang="ca" href="https://consonaapp.com/ca/privacidad.html">
+  <link rel="alternate" hreflang="en" href="https://consonaapp.com/en/privacidad.html">
+  <link rel="alternate" hreflang="x-default" href="https://consonaapp.com/privacidad.html">
+  <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    /* Inter (SIL Open Font License 1.1, ver /fonts/LICENSE.txt), servida desde el propio sitio. */
+    @font-face {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("/fonts/inter-latin-wght-normal.woff2") format("woff2");
+    }
+    :root {
+      --fondo: #faf7f4;
+      --texto: #2b2622;
+      --suave: #6b625b;
+      --linea: #e4ddd6;
+      --acento: #8a5a44;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fondo: #1f1b19;
+        --texto: #f1ebe6;
+        --suave: #b8aca3;
+        --linea: #3a3330;
+        --acento: #d9a287;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-feature-settings: "cv11", "ss01";
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-align: center;
+    }
+    main {
+      max-width: 32rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    /* Selector de idioma: cada idioma es una página propia, sin JavaScript ni cookies. */
+    .idiomas {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 0 0 4rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: var(--suave);
+    }
+    .idiomas a {
+      color: var(--suave);
+      text-decoration: none;
+      padding: 0.15rem 0.25rem;
+      border-radius: 0.25rem;
+    }
+    .idiomas a:hover { color: var(--texto); }
+    .idiomas a[aria-current="page"] {
+      color: var(--texto);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--acento);
+      text-underline-offset: 0.35em;
+    }
+    .idiomas a:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+    .etiqueta {
+      color: var(--acento);
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      /* Compensa el espacio que letter-spacing añade tras la última letra. */
+      padding-left: 0.18em;
+      margin: 0 auto 1rem;
+    }
+    h1 {
+      font-size: clamp(2.25rem, 7vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0 0 1.25rem;
+    }
+    .h1-corto { font-size: clamp(1.9rem, 6vw, 2.4rem); }
+    p {
+      margin: 0 auto 0.75rem;
+      max-width: 26rem;
+      font-weight: 400;
+    }
+    .suave { color: var(--suave); font-size: 0.9rem; }
+    .suave a, .nota a, .casilla a, .pie a { color: inherit; }
+    .nota { color: var(--suave); font-size: 0.8rem; }
+    /* Formularios: los procesan suscribir.php y baja.php en el mismo servidor, sin terceros. */
+    .aviso {
+      max-width: 26rem;
+      margin: 1.75rem auto 0.75rem;
+      text-align: left;
+    }
+    .campo {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+    .correo {
+      display: block;
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid var(--linea);
+      border-radius: 0.6rem;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+    }
+    .correo:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+    .casilla {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      margin-top: 0.85rem;
+      font-size: 0.85rem;
+      color: var(--suave);
+    }
+    .casilla input {
+      flex: none;
+      width: 1.05rem;
+      height: 1.05rem;
+      margin: 0.2rem 0 0;
+      accent-color: var(--acento);
+    }
+    /* Campo trampa contra el spam: invisible para las personas, los robots suelen rellenarlo. */
+    .trampa {
+      position: absolute;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .accion {
+      display: block;
+      margin: 1.25rem auto 0;
+      padding: 0.7rem 1.4rem;
+      border: 0;
+      border-radius: 999px;
+      background: var(--acento);
+      color: var(--fondo);
+      font: inherit;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .accion:hover { opacity: 0.9; }
+    .accion:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
+    .pie {
+      margin-top: 3rem;
+      color: var(--suave);
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+    }
+    /* Política de privacidad: texto largo, alineado a la izquierda. */
+    .legal { max-width: 38rem; text-align: left; }
+    .legal p, .legal li { max-width: none; margin: 0 0 0.75rem; }
+    .legal h2 { font-size: 1rem; font-weight: 600; margin: 2rem 0 0.4rem; }
+    .legal h1 { font-size: clamp(1.75rem, 5vw, 2.25rem); letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .legal .etiqueta { padding-left: 0; margin-left: 0; }
+    .legal ul { padding-left: 1.25rem; margin: 0 0 0.75rem; }
+    .legal a { color: var(--acento); }
+  </style>
+</head>
+<body>
+  <main class="legal">
+    <nav class="idiomas" aria-label="Idioma"><a href="/privacidad.html" lang="es" hreflang="es" title="Castellano">ES</a><span aria-hidden="true">·</span><a href="/ca/privacidad.html" lang="ca" hreflang="ca" title="Català" aria-current="page">CA</a><span aria-hidden="true">·</span><a href="/en/privacidad.html" lang="en" hreflang="en" title="English">EN</a></nav>
+
+    <section>
+      <p class="etiqueta">Privacitat</p>
+      <h1>Política de privacitat</h1>
+      <p class="suave">Darrera actualització: 30 d’octubre de 2026</p>
+
+      <p>Aquesta política cobreix el web consonaapp.com, els seus formularis d’avís i de baixa, i el correu hola@consonaapp.com. Quan existeixi l’app, les seves dades es quedaran al teu dispositiu i tindrà la seva pròpia política.</p>
+
+      <h2>Responsable</h2>
+      <p>Juan Vidaechea. Contacte: <a href="mailto:hola@consonaapp.com">hola@consonaapp.com</a>.</p>
+
+      <h2>Quines dades tractem</h2>
+      <p>Si t’apuntes al formulari: la teva adreça de correu, l’idioma de la pàgina i la data i l’hora en què t’hi vas apuntar. No et demanem el nom. Si ens escrius, també el teu correu i el contingut del missatge.</p>
+      <p>Per evitar abusos, els formularis desen una empremta xifrada de l’adreça IP des de la qual s’envien i l’esborren en 24 hores. La portada llegeix l’idioma configurat al teu navegador per mostrar-te el web en castellà, català o anglès, i no el desa. Aquest web no fa servir galetes, analítica ni recursos de tercers.</p>
+
+      <h2>Per a què</h2>
+      <p>Per enviar-te un únic avís quan obri el pilot de Consona i per respondre al que ens preguntis. No enviarem publicitat ni cedirem el teu correu a ningú.</p>
+
+      <h2>Base jurídica</h2>
+      <p>El teu consentiment (article 6.1.a del RGPD), que dones en marcar la casella del formulari. El pots retirar en qualsevol moment amb el <a href="/ca/baja.html">formulari de baixa</a> o escrivint a hola@consonaapp.com.</p>
+
+      <h2>Edat</h2>
+      <p>El pilot és només per a persones de 18 anys o més, i el formulari et demana que ho confirmis. Si ets menor d’edat, no t’hi apuntis; si ho fas, esborrarem les teves dades.</p>
+
+      <h2>Si algú t’ha apuntat sense el teu permís</h2>
+      <p>El formulari no comprova que el correu sigui de qui l’escriu. Si creus que algú ha apuntat la teva adreça, esborra-la amb el <a href="/ca/baja.html">formulari de baixa</a> o escriu-nos.</p>
+
+      <h2>Quant de temps</h2>
+      <p>Conservem el teu correu fins que t’enviem l’avís d’obertura del pilot o fins que et donis de baixa, el que passi abans. Després l’eliminem.</p>
+
+      <h2>Qui més hi intervé</h2>
+      <p>Dos proveïdors tracten dades per compte del responsable, només per prestar el seu servei:</p>
+      <ul>
+        <li><strong>IONOS SE</strong>: aquest web i les dades del formulari són en un servidor d’un centre de dades d’IONOS a la Unió Europea.</li>
+        <li><strong>Namecheap, Inc.</strong>, amb el seu servei Private Email, gestiona la bústia hola@consonaapp.com, des de la qual enviem l’avís i responem.</li>
+      </ul>
+      <p>Namecheap pot tractar les dades als Estats Units. Aquesta transferència s’empara en les clàusules contractuals tipus de la Comissió Europea, incloses en el seu acord de tractament de dades. Ens pots demanar més informació a hola@consonaapp.com.</p>
+
+      <h2>Els teus drets</h2>
+      <p>Pots demanar l’accés, la rectificació, la supressió, la limitació, l’oposició i la portabilitat de les teves dades escrivint a hola@consonaapp.com. Si creus que no les hem tractat bé, pots reclamar davant l’Agència Espanyola de Protecció de Dades (<a href="https://www.aepd.es">aepd.es</a>).</p>
+    </section>
+
+    <p class="pie">consonaapp.com · <a href="mailto:hola@consonaapp.com">hola@consonaapp.com</a></p>
+  </main>
+</body>
+</html>
