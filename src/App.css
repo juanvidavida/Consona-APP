@@ -139,7 +139,6 @@
   margin: 10px 0 0;
   color: #64748b;
   font-size: 1rem;
-  text-transform: capitalize;
 }
 
 .text-link {
@@ -184,13 +183,11 @@
 
 .phase-topline,
 .phase-summary,
-.estimate-details,
-.phase-context {
+.estimate-details {
   position: relative;
   z-index: 1;
 }
 
-.phase-eyebrow,
 .updated-label,
 .phase-panel .detail-label {
   color: rgba(255, 255, 255, 0.74);
@@ -226,14 +223,6 @@
   line-height: 1;
 }
 
-.phase-caption {
-  max-width: 440px;
-  margin: 16px 0 0;
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 0.96rem;
-  line-height: 1.6;
-}
-
 .cycle-figure {
   width: min(100%, 330px);
   margin: 0;
@@ -261,13 +250,8 @@
   position: absolute;
   inset: 34px;
   border-radius: 50%;
-  background: conic-gradient(
-    from -58deg,
-    rgba(196, 181, 253, 0.36) 0deg 62deg,
-    rgba(129, 140, 248, 0.37) 62deg 178deg,
-    rgba(251, 191, 36, 0.42) 178deg 220deg,
-    #ede9fe 220deg 360deg
-  );
+  /* Los segmentos se generan desde los límites de fase calculados (RU-05). */
+  background: var(--wheel-segments);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.2),
     0 10px 26px rgba(30, 27, 75, 0.2);
@@ -327,7 +311,9 @@
 
 .cycle-label {
   position: absolute;
+  width: 92px;
   color: rgba(255, 255, 255, 0.68);
+  transform: translate(-50%, -50%);
   font-size: 0.69rem;
   font-weight: 750;
   line-height: 1.18;
@@ -338,38 +324,15 @@
   font-weight: 650;
 }
 
-.label-menstruation {
-  top: 34px;
-  left: 50%;
-  width: 100px;
-  transform: translateX(-50%);
-}
-
-.label-follicular {
-  top: 46%;
-  left: -1px;
-  width: 91px;
-  transform: translateY(-50%);
-}
-
-.label-ovulation {
-  top: 48%;
-  right: -6px;
-  width: 102px;
-  transform: translateY(-50%);
-}
-
-.label-luteal {
-  right: 50%;
-  bottom: 28px;
+/* La fase actual se marca con texto («Actual») y contraste, igual en todas (RU-13). */
+.cycle-label.is-current {
   display: grid;
+  justify-items: center;
   gap: 5px;
-  width: 105px;
   color: #ffffff;
-  transform: translateX(50%);
 }
 
-.label-luteal span {
+.cycle-label.is-current span {
   display: inline-flex;
   justify-content: center;
   padding: 5px 8px;
@@ -379,7 +342,7 @@
   box-shadow: 0 4px 12px rgba(30, 27, 75, 0.16);
 }
 
-.label-luteal em {
+.cycle-label.is-current em {
   color: #ddd6fe;
   font-size: 0.59rem;
   font-style: normal;
@@ -390,8 +353,10 @@
 
 .next-cycle {
   position: absolute;
-  right: 7px;
-  bottom: 8px;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
   color: rgba(255, 255, 255, 0.54);
   font-size: 0.58rem;
   font-weight: 750;
@@ -427,11 +392,37 @@
   background: rgba(255, 255, 255, 0.27);
 }
 
-.phase-context {
-  max-width: 610px;
-  margin: 20px 0 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.96rem;
+.estimate-details .calc-link {
+  margin-left: auto;
+  align-self: center;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.estimate-details .calc-link:hover,
+.estimate-details .calc-link:focus-visible {
+  color: #ddd6fe;
+}
+
+/* Texto solo para lector de pantalla (RU-12). */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pending-cards {
+  padding: 22px 24px;
+  border: 1px dashed #c7d2fe;
+  border-radius: 18px;
+  color: #475569;
   line-height: 1.6;
 }
 
@@ -918,6 +909,11 @@
   .detail-divider {
     width: 100%;
     height: 1px;
+  }
+
+  .estimate-details .calc-link {
+    margin-left: 0;
+    align-self: flex-start;
   }
 
   .orientation-section,

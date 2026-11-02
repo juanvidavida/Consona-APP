@@ -1,7 +1,71 @@
 import { useState } from 'react'
 import './App.css'
+import { PHASES, estimateToday } from './cycle/phase.js'
 
-const orientationCards = [
+// Datos ficticios. En la app real, las fechas de inicio de sangrado las
+// introduce la persona afectada y las duraciones son opcionales (DA-01).
+// Mientras ADR-001 y ADR-002 no lo permitan, no se guardan datos reales.
+const exampleData = {
+  bleedingStarts: ['2026-09-01'],
+  today: '2026-09-18',
+  declaredCycleLength: null,
+  declaredBleedingDays: null
+}
+
+// Solo en el prototipo: ?hoy=AAAA-MM-DD cambia la fecha ficticia para revisar
+// otras fases. No se guarda ni se envía.
+function readExampleToday() {
+  const value = new URLSearchParams(window.location.search).get('hoy')
+  return value && /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : exampleData.today
+}
+
+function formatLongDate(isoDate) {
+  return new Intl.DateTimeFormat('es-ES', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC'
+  }).format(new Date(`${isoDate}T00:00:00Z`))
+}
+
+// Geometría de la rueda: segmentos proporcionales a los días de cada fase,
+// en sentido horario desde arriba (RU-01, RU-05). La paleta es la misma en
+// todas las fases; la fase actual solo se aclara (RU-08, RU-09).
+const segmentColors = {
+  menstruation: 'rgba(196, 181, 253, 0.36)',
+  follicular: 'rgba(129, 140, 248, 0.37)',
+  ovulatory: 'rgba(251, 191, 36, 0.42)',
+  luteal: 'rgba(165, 180, 252, 0.3)'
+}
+const currentSegmentColor = '#ede9fe'
+const LABEL_RADIUS_PERCENT = 30
+
+function getWheelGeometry(boundaries, cycleLength, currentId) {
+  const stops = []
+  const labels = []
+
+  for (const { id } of PHASES) {
+    const { start, end } = boundaries[id]
+    if (start > end) continue
+    const from = ((start - 1) / cycleLength) * 360
+    const to = (end / cycleLength) * 360
+    const color = id === currentId ? currentSegmentColor : segmentColors[id]
+    stops.push(`${color} ${from.toFixed(2)}deg ${to.toFixed(2)}deg`)
+
+    const middle = ((from + to) / 2) * (Math.PI / 180)
+    labels.push({
+      id,
+      left: `${(50 + LABEL_RADIUS_PERCENT * Math.sin(middle)).toFixed(2)}%`,
+      top: `${(50 - LABEL_RADIUS_PERCENT * Math.cos(middle)).toFixed(2)}%`
+    })
+  }
+
+  return { gradient: `conic-gradient(${stops.join(', ')})`, labels }
+}
+
+// Tarjetas aprobadas por fase (JUA-23). De momento solo existe la fase lútea.
+const orientationCardsByPhase = {
+  luteal: [
   {
     eyebrow: 'Conocimiento general',
     title: 'Qué pasa en su cuerpo',
@@ -22,7 +86,8 @@ const orientationCards = [
     title: 'Qué no asumir',
     text: 'Una fase estimada no explica cómo se siente alguien, qué necesita o cómo quiere que actúes. La conversación directa sigue siendo lo importante.'
   }
-]
+  ]
+}
 
 const consentPrinciples = [
   {
@@ -42,7 +107,11 @@ const consentPrinciples = [
   }
 ]
 
-function TodayView({ today }) {
+function TodayView({ today, estimate }) {
+  const { phase, cycleDay, cycleLength } = estimate
+  const wheel = getWheelGeometry(phase.boundaries, cycleLength, phase.id)
+  const wheelDescription = `Rueda del ciclo. ${phase.label} estimada, día ${cycleDay}. Ventana estimada del 15 al 24 de septiembre.`
+
   return (
     <div id="contenido-principal" className="today-content" tabIndex="-1">
       <header className="today-heading">
@@ -56,38 +125,43 @@ function TodayView({ today }) {
 
       <section className="phase-panel" aria-labelledby="phase-title">
         <div className="phase-topline">
-          <p className="eyebrow phase-eyebrow">Estimación por fechas confirmadas</p>
           <span className="updated-label">Actualizado hoy</span>
         </div>
 
         <div className="phase-layout">
           <div className="phase-copy">
-            <p className="cycle-day">Ciclo · día 18</p>
-            <h2 id="phase-title">Fase lútea</h2>
-            <p className="phase-caption">
-              La fase destacada forma parte de una secuencia estimada de fechas; no describe cómo se siente una persona.
-            </p>
+            <p className="cycle-day">Ciclo · día {cycleDay}</p>
+            <h2 id="phase-title">{phase.label}</h2>
           </div>
 
           <figure className="cycle-figure" aria-labelledby="cycle-figure-title" aria-describedby="cycle-figure-description">
             <p id="cycle-figure-title" className="cycle-figure-title">Rueda del ciclo</p>
             <div className="cycle-display">
-              <div className="cycle-wheel" aria-hidden="true" />
+              <div className="cycle-wheel" aria-hidden="true" style={{ '--wheel-segments': wheel.gradient }} />
               <div className="cycle-center">
                 <span>Fase actual</span>
-                <strong>Fase lútea</strong>
-                <small>Día 18</small>
+                <strong>{phase.label}</strong>
+                <small>Día {cycleDay}</small>
               </div>
               <ul className="cycle-labels" aria-label="Fases representadas en la rueda">
-                <li className="cycle-label label-menstruation">Menstruación</li>
-                <li className="cycle-label label-follicular">Fase folicular</li>
-                <li className="cycle-label label-ovulation">Ventana ovulatoria<br /><span>estimada</span></li>
-                <li className="cycle-label label-luteal is-current"><span>Fase lútea</span><em>Actual</em></li>
+                {wheel.labels.map(({ id, left, top }) => {
+                  const { label } = PHASES.find((item) => item.id === id)
+                  const isCurrent = id === phase.id
+                  const text = id === 'ovulatory' && !isCurrent
+                    ? <>Ventana ovulatoria<br /><span>estimada</span></>
+                    : isCurrent ? <span>{label}</span> : label
+                  return (
+                    <li key={id} className={`cycle-label${isCurrent ? ' is-current' : ''}`} style={{ left, top }}>
+                      {text}
+                      {isCurrent && <em>Actual</em>}
+                    </li>
+                  )
+                })}
               </ul>
               <span className="next-cycle" aria-hidden="true">↻ Siguiente ciclo</span>
             </div>
-            <figcaption id="cycle-figure-description">
-              Las fases aparecen en orden temporal. La intensidad marca la fase mostrada en este ejemplo ficticio; no confirma procesos biológicos individuales.
+            <figcaption id="cycle-figure-description" className="visually-hidden">
+              {wheelDescription}
             </figcaption>
           </figure>
         </div>
@@ -102,11 +176,8 @@ function TodayView({ today }) {
             <p className="detail-label">Margen mostrado</p>
             <p className="detail-value">10 días</p>
           </div>
+          <a className="calc-link" href="#como-funciona">Cómo se calcula</a>
         </div>
-
-        <p className="phase-context">
-          La ventana muestra el margen de la estimación. Puede cambiar cuando se confirme una nueva fecha.
-        </p>
       </section>
 
       <section className="orientation-section" aria-labelledby="orientation-title">
@@ -115,15 +186,21 @@ function TodayView({ today }) {
           <h2 id="orientation-title">Un contexto para conversar, no para suponer.</h2>
         </div>
 
-        <div className="orientation-grid">
-          {orientationCards.map(({ eyebrow, title, text }) => (
-            <article key={title} className="orientation-card">
-              <p className="card-eyebrow">{eyebrow}</p>
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </article>
-          ))}
-        </div>
+        {orientationCardsByPhase[phase.id] ? (
+          <div className="orientation-grid">
+            {orientationCardsByPhase[phase.id].map(({ eyebrow, title, text }) => (
+              <article key={title} className="orientation-card">
+                <p className="card-eyebrow">{eyebrow}</p>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p className="pending-cards">
+            Las tarjetas de esta fase están pendientes de redacción y revisión (JUA-23). El prototipo no muestra textos sin aprobar.
+          </p>
+        )}
       </section>
 
       <section id="como-funciona" className="how-it-works" aria-labelledby="how-title">
@@ -134,6 +211,9 @@ function TodayView({ today }) {
         <div className="how-copy">
           <p>
             Cuando esté disponible con las garantías necesarias, Consona mostrará una estimación local a partir de fechas pasadas confirmadas y un rango que refleje la variación. No diagnostica, no confirma la ovulación y no se utiliza como anticonceptivo.
+          </p>
+          <p>
+            La menstruación se muestra durante los días de sangrado que indique la persona afectada. Si no los indica, se usan los días 1 a 5 como referencia general. El sangrado puede durar más o menos.
           </p>
           <p>
             Este prototipo no implementa seguimiento, almacenamiento, aprendizaje ni datos personales. Solo presenta el diseño de una vista posible con información ficticia.
@@ -250,11 +330,9 @@ function DataControlView({ showRevocationDetail, onToggleRevocationDetail }) {
 function App() {
   const [activeView, setActiveView] = useState('today')
   const [showRevocationDetail, setShowRevocationDetail] = useState(false)
-  const today = new Intl.DateTimeFormat('es-ES', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  }).format(new Date())
+  const [exampleToday] = useState(readExampleToday)
+  const estimate = estimateToday({ ...exampleData, today: exampleToday })
+  const today = formatLongDate(exampleToday)
 
   const isControlView = activeView === 'control'
 
@@ -302,7 +380,18 @@ function App() {
           onToggleRevocationDetail={() => setShowRevocationDetail((current) => !current)}
         />
       ) : (
-        <TodayView today={today} />
+        estimate.status === 'ok' ? (
+          <TodayView today={today} estimate={estimate} />
+        ) : (
+          // Provisional hasta construir los estados 1.2a–f (D-05).
+          <div id="contenido-principal" className="today-content" tabIndex="-1">
+            <h1>Hoy</h1>
+            <p className="today-date">{today}</p>
+            <p className="pending-cards">
+              No se puede mostrar una fase con los datos de este ejemplo. Los estados excepcionales están pendientes (D-05).
+            </p>
+          </div>
+        )
       )}
 
       <footer className="app-footer">
