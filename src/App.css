@@ -328,22 +328,25 @@
 .cycle-label.is-current {
   display: grid;
   justify-items: center;
-  gap: 5px;
-  color: #ffffff;
+  gap: 4px;
 }
 
+/* Fondos opacos: el rótulo queda legible sobre cualquier segmento (RU-13). */
 .cycle-label.is-current span {
   display: inline-flex;
   justify-content: center;
-  padding: 5px 8px;
-  border: 1px solid rgba(255, 255, 255, 0.58);
+  padding: 5px 9px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  box-shadow: 0 4px 12px rgba(30, 27, 75, 0.16);
+  color: #312e81;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(30, 27, 75, 0.22);
 }
 
 .cycle-label.is-current em {
-  color: #ddd6fe;
+  padding: 2px 7px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: #312e81;
   font-size: 0.59rem;
   font-style: normal;
   font-weight: 800;
