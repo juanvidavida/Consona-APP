@@ -58,6 +58,8 @@ if (!isset($_GET['idioma'])) {
   <link rel="alternate" hreflang="ca" href="https://consonaapp.com/ca/">
   <link rel="alternate" hreflang="en" href="https://consonaapp.com/en/">
   <link rel="alternate" hreflang="x-default" href="https://consonaapp.com/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <style>
     /* Inter (SIL Open Font License 1.1, ver /fonts/LICENSE.txt), servida desde el propio sitio. */
@@ -74,6 +76,8 @@ if (!isset($_GET['idioma'])) {
       --suave: #6b625b;
       --linea: #e4ddd6;
       --acento: #8a5a44;
+      --logo-c: #a84a2a;
+      --logo-o: #d08b3e;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -82,6 +86,8 @@ if (!isset($_GET['idioma'])) {
         --suave: #b8aca3;
         --linea: #3a3330;
         --acento: #d9a287;
+        --logo-c: #e8a97c;
+        --logo-o: #f4dcc2;
       }
     }
     * { box-sizing: border-box; }
@@ -126,6 +132,15 @@ if (!isset($_GET['idioma'])) {
       text-underline-offset: 0.35em;
     }
     .idiomas a:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+    /* Símbolo de Consona: C y O entrelazadas (docs/marca). Decorativo: el nombre va en el texto. */
+    .simbolo {
+      display: block;
+      width: 4.5rem;
+      height: 4.5rem;
+      margin: 0 auto 1.5rem;
+    }
+    .simbolo .c { stroke: var(--logo-c); }
+    .simbolo .o { stroke: var(--logo-o); }
     .etiqueta {
       color: var(--acento);
       font-weight: 500;
@@ -232,6 +247,11 @@ if (!isset($_GET['idioma'])) {
   <main>
     <nav class="idiomas" aria-label="Idioma"><a href="/?idioma=es" lang="es" hreflang="es" title="Castellano" aria-current="page">ES</a><span aria-hidden="true">·</span><a href="/ca/" lang="ca" hreflang="ca" title="Català">CA</a><span aria-hidden="true">·</span><a href="/en/" lang="en" hreflang="en" title="English">EN</a></nav>
 
+    <svg class="simbolo" viewBox="8 8 104 104" aria-hidden="true" focusable="false">
+      <circle class="o" cx="76" cy="60" r="28.5" fill="none" stroke-width="10"/>
+      <path class="c" d="M66.71 81.21 A30 30 0 1 1 66.71 38.79" fill="none" stroke-width="10" stroke-linecap="round"/>
+      <path class="o" d="M70.07 87.88 A28.5 28.5 0 0 1 55.5 79.8" fill="none" stroke-width="10"/>
+    </svg>
     <section>
       <p class="etiqueta">Próximamente</p>
       <h1>Consona</h1>

@@ -47,15 +47,12 @@
   letter-spacing: -0.03em;
 }
 
+/* Símbolo de Consona: C y O entrelazadas (docs/marca). */
 .brand-mark {
-  display: inline-grid;
-  width: 32px;
-  height: 32px;
-  place-items: center;
-  border-radius: 11px;
-  color: #ffffff;
-  background: linear-gradient(145deg, #4f46e5, #7c3aed);
-  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex: none;
 }
 
 .demo-badge,
