@@ -13,7 +13,8 @@ Escribe en landing/:
     gracias.html, baja.html, baja-hecha.html, error.html, privacidad.html
     ca/…, en/…             las mismas páginas en catalán e inglés
 
-No toca suscribir.php, baja.php ni fonts/, que se mantienen a mano.
+No toca suscribir.php, baja.php, fonts/, favicon.svg ni apple-touch-icon.png,
+que se mantienen a mano (el logo de origen está en docs/marca/).
 Solo usa la biblioteca estándar de Python.
 """
 
@@ -274,6 +275,8 @@ ESTILO = """    /* Inter (SIL Open Font License 1.1, ver /fonts/LICENSE.txt), se
       --suave: #6b625b;
       --linea: #e4ddd6;
       --acento: #8a5a44;
+      --logo-c: #a84a2a;
+      --logo-o: #d08b3e;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -282,6 +285,8 @@ ESTILO = """    /* Inter (SIL Open Font License 1.1, ver /fonts/LICENSE.txt), se
         --suave: #b8aca3;
         --linea: #3a3330;
         --acento: #d9a287;
+        --logo-c: #e8a97c;
+        --logo-o: #f4dcc2;
       }
     }
     * { box-sizing: border-box; }
@@ -326,6 +331,15 @@ ESTILO = """    /* Inter (SIL Open Font License 1.1, ver /fonts/LICENSE.txt), se
       text-underline-offset: 0.35em;
     }
     .idiomas a:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+    /* Símbolo de Consona: C y O entrelazadas (docs/marca). Decorativo: el nombre va en el texto. */
+    .simbolo {
+      display: block;
+      width: 4.5rem;
+      height: 4.5rem;
+      margin: 0 auto 1.5rem;
+    }
+    .simbolo .c { stroke: var(--logo-c); }
+    .simbolo .o { stroke: var(--logo-o); }
     .etiqueta {
       color: var(--acento);
       font-weight: 500;
@@ -463,6 +477,8 @@ def documento(l, pagina, titulo, contenido, indexar=True, clase_main=""):
   <meta http-equiv="Content-Security-Policy" content="{CSP}">
   <link rel="canonical" href="{DOMINIO}{ruta(l, pagina)}">
 {alternativas(pagina)}
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <style>
 {ESTILO}  </style>
@@ -471,6 +487,7 @@ def documento(l, pagina, titulo, contenido, indexar=True, clase_main=""):
   <main{main_cls}>
 {selector(l, pagina)}
 
+{SIMBOLO}
     <section>
 {contenido}    </section>
 
@@ -479,6 +496,14 @@ def documento(l, pagina, titulo, contenido, indexar=True, clase_main=""):
 </body>
 </html>
 """
+
+# --- Símbolo -----------------------------------------------------------------
+
+SIMBOLO = """    <svg class="simbolo" viewBox="8 8 104 104" aria-hidden="true" focusable="false">
+      <circle class="o" cx="76" cy="60" r="28.5" fill="none" stroke-width="10"/>
+      <path class="c" d="M66.71 81.21 A30 30 0 1 1 66.71 38.79" fill="none" stroke-width="10" stroke-linecap="round"/>
+      <path class="o" d="M70.07 87.88 A28.5 28.5 0 0 1 55.5 79.8" fill="none" stroke-width="10"/>
+    </svg>"""
 
 # --- Páginas -----------------------------------------------------------------
 
