@@ -64,7 +64,7 @@ Los identificadores no se muestran en la interfaz.
 
 ### MEN-02 · Qué es
 
-El útero tiene un revestimiento interno que, en cada ciclo, se prepara por si hubiera un embarazo. Si no lo hay, bajan las hormonas que lo mantenían y se desprende su capa más superficial: eso es la menstruación. La capa más profunda se queda y regenera el revestimiento en pocos días.
+El útero tiene un revestimiento interno que, en cada ciclo, se prepara por si hubiera un embarazo. Si no lo hay, bajan las hormonas que lo mantenían y se desprende su capa más superficial: eso es la menstruación. La capa más profunda se queda y regenera el revestimiento en pocos días, sin dejar cicatriz.
 
 Es un proceso que el cuerpo repite ciclo tras ciclo. Su primer día marca el inicio de un nuevo ciclo, y por eso Consona cuenta los días a partir de él.
 
@@ -138,7 +138,7 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 | MEN-02 | Fisiología, desencadenante, reparación y día 1 del ciclo | ME-A01 a ME-A04 |
 | MEN-03 | Duración típica y flujo de los primeros días; uso del dato declarado | ME-A05, ME-A06; M-02 de JUA-23 |
 | MEN-04 | Prevalencia, mecanismo, momento del dolor, otras molestias, cuándo consultar y normalización | ME-A09, ME-A10, ME-A12, ME-A16, ME-A19 |
-| MEN-05 | Sin cambios cognitivos; variación pequeña del ánimo; estereotipo | ME-A13, ME-A15, ME-A17 |
+| MEN-05 | Sin cambios cognitivos; variación pequeña del ánimo; estereotipo y su efecto | ME-A13, ME-A15, ME-A17 (S-13, S-21) |
 | MEN-06 | Ocultación del motivo; marco legal español | ME-A11 (S-11); ME-A20 |
 | MEN-07 | Papel de la pareja | ME-A18, ME-A19; SG-06 |
 | DER-01 | Criterios de consulta | Cierre de JUA-10 (auditoría 06); `jua-10/13` |
@@ -161,3 +161,4 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques MEN-00 a MEN-08, DER-01 y DER-02.
 - Cinco decisiones abiertas.
+- 05-11-2026: fisiología y estigma reforzados con Critchley et al. 2020 y Johnston-Robledo y Chrisler, verificados en texto completo. Se añade «sin dejar cicatriz» en MEN-02.

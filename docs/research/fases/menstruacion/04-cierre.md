@@ -8,11 +8,11 @@
 
 La base de investigación de la menstruación es **suficiente para el contenido educativo** de Consona: tarjetas de la home y pantalla de «Comprender».
 
-- **Fisiología:** sólida. Una revisión de referencia verificada en texto completo (S-01) y otra solo por el resumen (S-02).
+- **Fisiología:** sólida. Dos revisiones de referencia verificadas en texto completo (S-01 y S-02).
 - **Duración y flujo:** moderada, reutilizada de JUA-27.
 - **Dolor menstrual:** moderada en prevalencia e impacto, con dos estudios españoles verificados. Lo clínico (tratamiento, endometriosis, cuándo consultar) ya está cerrado en JUA-10.
 - **Ánimo y capacidades:** alta para desmentir cambios cognitivos; limitada para el ánimo.
-- **Plano social:** moderada para describir experiencias (estigma, normalización, papel de la pareja), con un estudio catalán verificado. Sin cifras españolas fiables.
+- **Plano social:** moderada para describir experiencias (estigma, normalización, papel de la pareja), con un estudio catalán y la revisión teórica de referencia sobre el estigma, ambos verificados. Sin cifras españolas fiables.
 
 El cierre **no autoriza** funciones clínicas, cifras aplicadas a una persona ni contenido sobre tratamiento. Se mantienen las reglas del cierre de JUA-10 y las comunes H-01 a H-08 de las tarjetas.
 
@@ -21,7 +21,7 @@ El cierre **no autoriza** funciones clínicas, cifras aplicadas a una persona ni
 Formulaciones aptas para Consona. Las tarjetas y la pantalla educativa deben salir de aquí o ser equivalentes.
 
 **Qué es**
-> «La menstruación es el sangrado con el que el útero desprende la capa interna de su revestimiento cuando no hay embarazo. La capa más profunda se queda y lo regenera en pocos días.» (ME-A01 a ME-A03)
+> «La menstruación es el sangrado con el que el útero desprende la capa interna de su revestimiento cuando no hay embarazo. La capa más profunda se queda y lo regenera en pocos días, sin dejar cicatriz.» (ME-A01 a ME-A03)
 
 > «Ocurre porque, si no hay embarazo, bajan las hormonas que mantenían ese revestimiento.» (ME-A02)
 
@@ -68,7 +68,7 @@ Formulaciones aptas para Consona. Las tarjetas y la pantalla educativa deben sal
 
 | ID | Pendiente | Responsable | Bloquea |
 |---|---|---|---|
-| P-01 | Conseguir el texto completo de las fuentes críticas (sección 4 de la auditoría): Critchley 2020, Armour 2019, Peranovic 2017, Johnston-Robledo y Chrisler 2020, Nnoaham 2011 y Haynes 1977. | Producto | No. Las afirmaciones ya están limitadas al resumen. |
+| P-01 | Conseguir el texto completo de las fuentes críticas que faltan (sección 4 de la auditoría): Armour 2019, Peranovic 2017, Nnoaham 2011 y Haynes 1977. Critchley 2020 y Johnston-Robledo y Chrisler se consiguieron el 05-11-2026. | Producto | No. Las afirmaciones ya están limitadas al resumen. |
 | P-02 | Buscar un estudio español primario y reciente sobre el retraso diagnóstico de la endometriosis. | Investigación | No. La cifra no se usa en la interfaz. |
 | P-03 | Comprobar si el estudio de Barcelona sobre pobreza menstrual (S-14) ha publicado resultados. | Investigación | No. |
 | P-04 | Revisión clínica de la pantalla educativa y de las tarjetas de la menstruación (JUA-16). | Persona revisora | Sí, la publicación. |

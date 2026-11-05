@@ -25,7 +25,7 @@ Consona habla a la pareja que acompaña, que en el público objetivo es mayorita
 | ID | C1 | C2 | C3 | C4 | C5 | Observaciones | Efecto en el uso |
 |---|---|---|---|---|---|---|---|
 | S-01 Jain 2022 | Sí | Sí | Sí | Parcial | Sí | Usa solo «mujeres». Declara vínculos con Bayer. | Solo fisiología descriptiva. |
-| S-02 Critchley 2020 | Sí | Sí | Sí | — | — | Solo el resumen. | Solo lo que dice el resumen. |
+| S-02 Critchley 2020 | Sí | Sí | Sí | Parcial | Sí, **con conflicto** | Usa solo «mujeres». Reconoce que la menstruación sigue siendo tabú y que eso ha frenado la investigación. Dos autores declaran vínculos con Bayer y otras farmacéuticas que fabrican tratamientos para el sangrado. | Solo fisiología descriptiva; las secciones de tratamiento no se usan. |
 | S-04 Bull 2019 | Sí | Sí | Sí | Parcial | Sí | Usuarias de una app anticonceptiva; autoría de la empresa. | Una de varias fuentes de duración, nunca la única. |
 | S-05 Najmabadi 2020 | Sí | Sí | Sí | Sí | — | Muestra mayoritariamente blanca no hispana, declarada. | Duración, con su límite poblacional. |
 | S-07 Guimarães 2020 | Parcial | Sí | Sí | — | Sí | Revisión clínica. Habla de «patología» al referirse a la dismenorrea primaria. | Solo el mecanismo; el marco clínico no se traslada a la app. |
@@ -40,13 +40,14 @@ Consona habla a la pareja que acompaña, que en el público objetivo es mayorita
 | S-17 Pierson 2021 | Sí | **Riesgo** | Sí | Parcial | Sí, **con conflicto** | Advierte expresamente contra leer los datos como «volatilidad» femenina. La difusión mediática («el ciclo manda sobre el ánimo») sí cayó en C2. Coautoría de Clue. | Solo la amplitud pequeña y las advertencias. |
 | S-18 Samulowitz 2018 | Sí | Sí | Sí | Sí | Sí | Estudia el propio sesgo de género. | Marco del sesgo en la atención al dolor. |
 | S-19 Schick 2022 | Sí | Sí | Sí | Parcial | Sí | Solo parejas heterosexuales. Usa «enfermedad de mujeres». | Interdependencia en la pareja, sin generalizar. |
+| S-21 Johnston-Robledo y Chrisler 2013/2020 | Sí | Sí | Sí | Parcial | — | Perspectiva feminista explícita; estudia el propio estigma. Declara que casi todos los estudios revisados son estadounidenses. | Marco del estigma y del estereotipo de la mujer «descontrolada». |
 | S-20 Peranovic 2017 | Sí | Sí | Sí | Parcial | — | 48 hombres australianos. | Cómo aprenden los hombres sobre la menstruación. |
 | S-22 Gresle 2023 | Parcial | Sí | Sí | — | — | Editorial que denuncia la desigualdad de género en salud. Usa «enfermedad exclusivamente femenina». | Contexto español sobre el retraso diagnóstico. |
 | S-24 Ponzo 2022 | Sí | Sí | Sí | Parcial | Sí, **con conflicto** | La empresa evalúa su propia app y concluye que reduce el impacto en la productividad. | **Excluida del contenido.** |
 
 ## 3. Patrones de sesgo detectados
 
-1. **Financiación por la industria.** Cuatro fuentes están ligadas a empresas: apps de seguimiento (S-04, S-17, S-24) o farmacéuticas (S-12, y en parte S-01). Ninguna afirmación del contenido depende **solo** de una de ellas.
+1. **Financiación por la industria.** Cinco fuentes están ligadas a empresas: apps de seguimiento (S-04, S-17, S-24) o farmacéuticas (S-12, y en parte S-01 y S-02, ambas del mismo grupo de Edimburgo). Ninguna afirmación del contenido depende **solo** de una de ellas.
 2. **Poblaciones estrechas.** Abundan las estudiantes de enfermería, las usuarias de apps y las muestras blancas o de renta alta. Las cifras se presentan siempre como datos de grupo, nunca como algo esperable en tu pareja.
 3. **Lenguaje.** Casi todas las fuentes hablan solo de «mujeres». Holst 2022 es la excepción: habla de «mujeres y personas que menstrúan» y pide políticas que incluyan a las personas trans y no binarias, aunque su propia muestra apenas las incluyó. Consona habla de «tu pareja» y, en lo general, de «personas».
 4. **Marco patologizante.** Algunas fuentes clínicas presentan la menstruación sobre todo como fuente de problemas. El contenido de Consona parte de la fisiología normal y presenta el dolor que limita la vida como motivo de consulta, sin convertir la menstruación en enfermedad.
