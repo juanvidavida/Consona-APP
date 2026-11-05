@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Configuración local de Claude Code (no se versiona)
+.claude/
+
+# Logos de trabajo: se guardan solo en local / Drive
+LOGOS/
