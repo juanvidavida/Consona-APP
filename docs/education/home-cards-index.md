@@ -1,0 +1,68 @@
+# Consona — Tarjetas de orientación de la home: índice
+
+**Issue:** JUA-23.
+**Estado:** Borrador para revisión de producto. Las tres fases nuevas **se incluyen en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendientes de envío.
+**Público y tono:** la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo. Se habla de «tu pareja».
+**No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación. `src/App.jsx` solo se actualiza con versiones aprobadas.
+
+> La home muestra cuatro tarjetas de orientación para la fase estimada del día: «Qué pasa en su cuerpo» (QPC), «Qué puedes preguntarle» (QPP), «Qué te toca a ti» (QTT) y «Qué no asumir» (QNA). Este índice reúne las reglas comunes y enlaza el documento versionado de cada fase.
+
+## 1. Documentos por fase
+
+| Fase | Documento | Estado |
+|---|---|---|
+| Menstruación | [`home-cards-menstruation-v0.1.0.md`](./home-cards-menstruation-v0.1.0.md) | Borrador |
+| Fase folicular | [`home-cards-follicular-v0.1.0.md`](./home-cards-follicular-v0.1.0.md) | Borrador |
+| Ventana ovulatoria estimada | [`home-cards-ovulatory-v0.1.0.md`](./home-cards-ovulatory-v0.1.0.md) | Borrador |
+| Fase lútea | `home-cards-luteal-v0.1.0.md` (rama de JUA-19, PR #9) | Borrador, en el paquete de revisión clínica de JUA-16 |
+
+El documento de la fase lútea **no se modifica** en JUA-23.
+
+Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.1.0.md`](./home-cards-review-pack-v0.1.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase.
+
+## 2. Qué conjunto se muestra cada día
+
+Un único conjunto de tarjetas por fase, sin subfases (especificación del panel, §3.2, decisión del 19-10-2026). Las duraciones vienen de JUA-27 (`docs/research/JUA-27-duraciones-referencia.md`, rama de JUA-27, PR #12).
+
+| Fase en la rueda | Cuándo | Fuente |
+|---|---|---|
+| Menstruación | Desde un inicio de sangrado confirmado, durante la duración que declare la persona afectada o, si no la declara, los días 1 a 5. | ME-01, DA-06; JUA-27 §6 |
+| Fase folicular | Después de la menstruación, hasta la ventana ovulatoria estimada. Sus tarjetas no dan por hecho que el sangrado haya terminado ni que continúe. | ME-05 |
+| Ventana ovulatoria estimada | El segmento de la rueda, de L−14 a L−12 respecto del inicio previsto de la siguiente menstruación (L). | RU-05; JUA-27 §3.3 |
+| Fase lútea | El resto, hasta el día antes de la siguiente menstruación. | RU-05b; JUA-27 §2 |
+| Días previos a la menstruación | De −7 a −1. **No cambian las tarjetas**: siguen las de la fase lútea. | IT-01, IT-09; JUA-27 §5 |
+
+Los límites exactos entre segmentos los fija la especificación del panel y el motor (CON-032), no este documento. Las tarjetas siguen la fase rotulada en la rueda ese día. Los estados excepcionales (anticoncepción hormonal, embarazo, lactancia y otros) se rigen por la sección 5 de la especificación y quedan fuera de JUA-23.
+
+## 3. Reglas comunes
+
+Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambian el texto del documento de la fase lútea.
+
+| ID | Regla |
+|---|---|
+| H-01 | Las cuatro tarjetas son las mismas durante toda la fase. No cambian según el día del ciclo, la cercanía de la menstruación ni ningún dato local. Única excepción: la duración de la menstruación en su QPC (M-02). |
+| H-02 | Las tarjetas no nombran diagnósticos (SPM, TDPM, dismenorrea, endometriosis, anemia u otros) y no presentan cambios físicos o emocionales como algo que tu pareja vaya a tener o esté teniendo (C-01). |
+| H-03 | Cualquier mención de variabilidad usa «algunas personas», «puede» e información general (C-02). |
+| H-04 | Las tarjetas no enlazan directamente a la pantalla SPM/TDPM ni cambian de color o de tono según la fase (C-03, U-03). |
+| H-05 | Ninguna tarjeta menciona ni sugiere deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad. |
+| H-06 | Sin fertilidad, «días seguros», probabilidad de embarazo, ovulación confirmada ni cifras en días. Única excepción: la duración de la menstruación, declarada por la persona afectada o de 5 días por defecto (M-02). |
+| H-07 | QPP, QTT y QNA hablan de lo que haces tú, no de lo que debe hacer tu pareja. Sin consejos para gestionar, calmar o evitar a tu pareja, ni recomendaciones de salud (medicamentos, calor, ejercicio). |
+| H-08 | Ninguna tarjeta atribuye a la fase energía, ánimo, rendimiento, capacidad ni conducta (`01-cycle-phases`, `08-health-energy`, `12-health-emotional-cognitive` EC-01, EC-02). |
+
+## 4. Criterios de aceptación de JUA-23
+
+1. Un documento versionado por fase nueva, con el texto exacto y el antetítulo de las cuatro tarjetas.
+2. Este índice, con las reglas comunes y el criterio de qué conjunto se muestra.
+3. Cada afirmación corporal en la tabla de trazabilidad, con fuente auditada en JUA-10 o JUA-27. Lo que no tenga auditoría propia se marca y pasa a decisión abierta.
+4. Exclusiones comprobadas en cada documento.
+5. Tono de Consona: segunda persona, la pareja que acompaña, sin paternalismo.
+6. Cada fase nueva incluida **expresamente** en la revisión clínica de JUA-16, con lo que debe valorar la persona revisora.
+7. `src/App.jsx` sin cambios.
+8. El documento de la fase lútea sin cambios.
+
+## 5. Historial
+
+### [0.1.0] — 05-11-2026
+
+- Índice inicial: documentos por fase, criterio de selección y reglas comunes H-01 a H-08.
+- Decisiones del 05-11-2026: excepción de la duración de la menstruación en H-01 y H-06; las tres fases nuevas entran en JUA-16.
