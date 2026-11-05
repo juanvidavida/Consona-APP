@@ -25,6 +25,8 @@ La misma idea ha tenido consecuencias en la investigación. Las mujeres se han e
 | FS-12 Rael 2021 (IronFEMME) | Sí | Sí | Sí | Parcial | Sí | Fase verificada en tres pasos. Muestra pequeña de deportistas. | Fuente española sobre el esfuerzo percibido. |
 | FS-14 Taylor 2024 (FENDURA) | Sí | Sí | Sí | Parcial | — | Fase verificada en sangre; deportistas. | Confirma FS-12. |
 | FS-15 Elliott-Sale 2021 | Sí | Sí | Sí | Sí | Sí | Guía para dejar de excluir a las mujeres. | Marco metodológico. |
+| FS-18 Romans 2013 | Sí | Sí | Sí | Sí | — | Diseñado contra el sesgo: muestra aleatoria y objetivo del estudio oculto, para no inducir respuestas. Señala que la creencia en el ánimo premenstrual está moldeada por expectativas de género. | Fuente principal para población general. |
+| FS-19, FS-20 Kiesner 2016 y 2022 | Sí | Sí | Sí | Parcial | — | Desplazan la atención del «patrón típico» a las diferencias individuales. Solo universitarias. | Diferencias individuales. |
 | FS-17 Pierson 2021 | Sí | Sí | Sí | Parcial | Sí, **con conflicto** | Advierte contra leer los datos como «volatilidad» femenina. | Solo la falta de un patrón de ánimo propio de la fase. |
 
 ## 3. Patrones de sesgo detectados

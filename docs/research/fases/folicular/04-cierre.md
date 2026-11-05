@@ -11,7 +11,7 @@ La base de investigación de la fase folicular es **suficiente para el contenido
 - **Fisiología:** sólida para la secuencia general (folículos, estrógenos, revestimiento del útero, pico de LH), con dos revisiones y un capítulo clínico verificados. Los estrógenos, que en JUA-23 estaban sin auditar, quedan respaldados como fisiología del útero (FO-A03, FO-A04).
 - **Duración y variabilidad:** moderada, con cohortes grandes y coherentes.
 - **Desmentido del estereotipo de «más energía»:** moderada, con dos estudios con la fase verificada en sangre (uno español) y dos revisiones recientes.
-- **Ánimo:** limitada, por inconsistente. Basta para decir que no hay un patrón predecible, no para afirmar ninguno.
+- **Ánimo y bienestar en población general:** moderada para afirmar que la fase pesa poco frente a la salud, el estrés y el apoyo social, y que las diferencias entre personas son lo más importante (FS-18 a FS-20). No basta para afirmar ningún patrón propio de la fase.
 
 El cierre **no autoriza** pautas de entrenamiento, dieta o planificación, ni afirmaciones sobre el deseo (H-05), la fertilidad o la fecha de ovulación.
 
@@ -33,6 +33,10 @@ El cierre **no autoriza** pautas de entrenamiento, dieta o planificación, ni af
 > «Las revisiones recientes no respaldan organizar el ejercicio, la dieta o la agenda según la fase.» (FO-A10)
 
 > «No hay evidencia de que en esta fase el ánimo mejore de forma predecible.» (FO-A12)
+
+> «En el día a día, cómo se siente alguien depende mucho más de su salud, del estrés y del apoyo que tiene que de la fase del ciclo.» (FO-A12, FS-18)
+
+> «No hay un patrón que valga para todas: algunas personas notan cambios en un momento del ciclo, otras en otro y muchas en ninguno.» (FO-A14)
 
 **Contexto**
 > «Durante mucho tiempo se dejó a las mujeres fuera de muchos estudios con el argumento de que el ciclo complicaba los resultados. Eso dejó huecos que se han llenado con mitos.» (FO-A13)

@@ -54,7 +54,7 @@ Incluso en deportistas, con la fase comprobada en análisis de sangre, no se han
 
 ### FOL-05 · Lo que la fase no dice
 
-No hay evidencia de que en esta fase el ánimo mejore de forma predecible. Los estudios ni siquiera coinciden en si el ánimo tiene picos a lo largo del ciclo ni en cuándo serían.
+No hay evidencia de que en esta fase el ánimo mejore de forma predecible. En estudios con mujeres que registraron cada día cómo se sentían, el ánimo dependía mucho más de su salud, del estrés y del apoyo que tenían que de la fase del ciclo. Y no hay un patrón que valga para todas: algunas personas notan cambios en un momento del ciclo, otras en otro y muchas en ninguno.
 
 Un estereotipo que suena positivo funciona igual que uno negativo: da por hecho cómo está alguien y qué puede hacer. Durante mucho tiempo, además, se dejó a las mujeres fuera de muchos estudios con el argumento de que el ciclo complicaba los resultados, y esos huecos se han llenado con mitos.
 
@@ -93,7 +93,7 @@ Fuente: orientación pública de ACOG sobre sangrado uterino anormal (`jua-10/13
 | FOL-02 | Inicio con la menstruación; folículos; estrógenos; revestimiento; ovulación | FO-A01 a FO-A05 |
 | FOL-03 | Variabilidad, edad y calendario no fijo | FO-A06, FO-A07; SGF-03, SGF-04 |
 | FOL-04 | Rendimiento, esfuerzo percibido, planificación y cognición | FO-A08 a FO-A11 (FS-09 a FS-12, FS-14, FS-16) |
-| FOL-05 | Ánimo; estereotipo positivo; exclusión de la investigación | FO-A12, FO-A13; SGF-01, SGF-05 |
+| FOL-05 | Ánimo; peso de la salud, el estrés y el apoyo; diferencias individuales; estereotipo positivo; exclusión de la investigación | FO-A12 a FO-A14 (FS-18 a FS-20); SGF-01, SGF-05 |
 | FOL-06 | Papel de la pareja | SGF-02; regla T-02 |
 | DER-01 | Criterios de consulta | `jua-10/13` (ACOG) |
 
@@ -113,3 +113,4 @@ Fuente: orientación pública de ACOG sobre sangrado uterino anormal (`jua-10/13
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques FOL-00 a FOL-07 y DER-01.
 - Cuatro decisiones abiertas.
+- 05-11-2026: FOL-05 incorpora estudios de registro diario en población general (Romans 2013; Kiesner 2016 y 2022).
