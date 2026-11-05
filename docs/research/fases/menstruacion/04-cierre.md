@@ -68,8 +68,8 @@ Formulaciones aptas para Consona. Las tarjetas y la pantalla educativa deben sal
 
 | ID | Pendiente | Responsable | Bloquea |
 |---|---|---|---|
-| P-01 | Conseguir el texto completo de las fuentes críticas que faltan (sección 4 de la auditoría): Armour 2019, Peranovic 2017, Nnoaham 2011 y Haynes 1977. Critchley 2020 y Johnston-Robledo y Chrisler se consiguieron el 05-11-2026. | Producto | No. Las afirmaciones ya están limitadas al resumen. |
-| P-02 | Buscar un estudio español primario y reciente sobre el retraso diagnóstico de la endometriosis. | Investigación | No. La cifra no se usa en la interfaz. |
+| P-01 | Conseguir el texto completo de las fuentes críticas que faltan (sección 4 de la auditoría): Armour 2019, Peranovic 2017 y Haynes 1977. Critchley 2020, Johnston-Robledo y Chrisler y Nnoaham 2011 se consiguieron el 05-11-2026. | Producto | No. Las afirmaciones ya están limitadas al resumen. |
+| P-02 | Buscar un estudio español primario y reciente sobre el retraso diagnóstico de la endometriosis. La cifra española que circula (8,3 años, S-22) es una lectura errónea de S-25. | Investigación | No. La cifra no se usa en la interfaz. |
 | P-03 | Comprobar si el estudio de Barcelona sobre pobreza menstrual (S-14) ha publicado resultados. | Investigación | No. |
 | P-04 | Revisión clínica de la pantalla educativa y de las tarjetas de la menstruación (JUA-16). | Persona revisora | Sí, la publicación. |
 | P-05 | Validar con usuarios del piloto el tono de los bloques sobre estigma y sobre el papel de la pareja. | Producto | No. |
