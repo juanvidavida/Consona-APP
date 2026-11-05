@@ -9,7 +9,7 @@
 | Fase | Investigación | Pantalla educativa | Tarjetas de la home | Estado |
 |---|---|---|---|---|
 | Menstruación | [`menstruacion/`](./menstruacion/) | `docs/education/menstruacion-v0.1.0.md` | JUA-23 | Borrador, pendiente de revisión |
-| Fase folicular | `folicular/` | — | JUA-23 | Pendiente |
+| Fase folicular | [`folicular/`](./folicular/) | `docs/education/folicular-v0.1.0.md` | JUA-23 | Borrador, pendiente de revisión |
 | Ventana ovulatoria estimada | `ovulatoria/` | — | JUA-23 | Pendiente |
 | Fase lútea | No se mueve. Está en `../jua-10/01-cycle-phases.md`, `../jua-10/audit-02-asrm-lpd.md` y `../jua-10/audit-07-rcog-pms.md`; duraciones en JUA-27 (PR #12) | Pantalla SPM/TDPM, `spm-tdpm-v0.4.0.md` (JUA-19, PR #9) | `home-cards-luteal-v0.1.0.md` (JUA-19, PR #9) | En el paquete de revisión clínica de JUA-16 |
 
