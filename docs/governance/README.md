@@ -27,6 +27,11 @@ Este directorio preserva decisiones y cortes de planificación sin convertir doc
 3. **Los documentos históricos llevan fecha y advertencia visible.** No se convierten en instrucciones de trabajo actuales.
 4. **La evidencia técnica se enlaza, no se reescribe.** Por ejemplo, CON-007 y CON-008 permanecen en `docs/security/`.
 5. **No se declara habilitación por documentación.** La integración de un documento en `main` no habilita datos reales, persistencia, sincronización, despliegue ni piloto.
+6. **Contenido educativo: fusionado no es aprobado** (decisión del 06-11-2026). Las pantallas educativas y las tarjetas de la home (`docs/education/`) pueden integrarse en `main` como borradores versionados antes de la revisión clínica (JUA-16), para que la persona revisora tenga una referencia única y estable. Mientras no tengan revisión clínica aprobada:
+   - ningún texto de esas piezas entra en el código de la app (`src/`) ni se muestra a usuarios;
+   - su cabecera conserva el estado «Borrador» y «pendiente de revisión clínica»;
+   - los cambios que pida la revisión entran como versión nueva del documento, no como edición silenciosa;
+   - las incidencias de Linear que las producen no se cierran como Done: quedan bloqueadas por JUA-16 hasta que la revisión de su contenido esté hecha.
 
 ## Archivo histórico disponible
 
