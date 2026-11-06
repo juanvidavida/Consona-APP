@@ -7,8 +7,8 @@
  */
 
 import {
-  estimate, phaseBoundaries, phaseForDay, toDayNumber, daysBetween,
-  CYCLE_LENGTH, PERIOD_DAYS
+  estimate, phaseBoundaries, phaseForDay, uncertaintyBands, toDayNumber, daysBetween,
+  CYCLE_LENGTH, PERIOD_DAYS, LUTEAL_DAYS
 } from '../src/js/cycle.js';
 
 let passed = 0, failed = 0;
@@ -46,9 +46,10 @@ test('daysBetween cuenta bien y no falla en el cambio de hora', () => {
 test('ciclo de 28 días: la ovulación cae hacia la mitad', () => {
   const b = phaseBoundaries(28, 5);
   eq(b.menstruacion, { start: 1, end: 5, isEmpty: false, days: 5 });
-  eq(b.ovulatoria.start, 12);
-  eq(b.ovulatoria.end, 18);
-  eq(b.lutea.start, 19);
+  eq(b.folicular, { start: 6, end: 13, isEmpty: false, days: 8 });
+  eq(b.ovulatoria.start, 14);
+  eq(b.ovulatoria.end, 16);
+  eq(b.lutea.start, 17);
   eq(b.lutea.end, 28);
 });
 
@@ -56,27 +57,76 @@ test('ciclo de 35 días: la ovulación se DESPLAZA (v1 fallaba aquí)', () => {
   const b = phaseBoundaries(35, 5);
   // v1 decía que los días 14-16 eran ovulatorios. Son foliculares.
   eq(phaseForDay(15, 35, 5), 'folicular', 'el día 15 de un ciclo de 35 es folicular');
-  eq(b.ovulatoria.start, 19);
-  eq(b.ovulatoria.end, 25);
+  eq(b.ovulatoria.start, 21);
+  eq(b.ovulatoria.end, 23);
   // Y la lútea nunca debe durar 19 días, como pasaba en v1.
-  eq(b.lutea.days, 10);
+  eq(b.lutea.days, 12);
 });
 
 test('ciclo de 21 días: las fases se comprimen sin romperse', () => {
   const b = phaseBoundaries(21, 5);
-  eq(b.ovulatoria.start, 6);
-  eq(b.ovulatoria.end, 11);
-  eq(b.lutea.start, 12);
+  eq(b.folicular, { start: 6, end: 6, isEmpty: false, days: 1 });
+  eq(b.ovulatoria.start, 7);
+  eq(b.ovulatoria.end, 9);
+  eq(b.lutea.start, 10);
   eq(b.lutea.end, 21);
-  ok(b.folicular.isEmpty, 'en un ciclo de 21 días la folicular queda vacía');
 });
 
-test('la fase lútea dura siempre entre 9 y 11 días, nunca 19', () => {
+test('ciclo de 21 días con 8 de sangrado: la ventana se recorta y la folicular desaparece', () => {
+  const b = phaseBoundaries(21, 8);
+  ok(b.folicular.isEmpty, 'no queda sitio para la folicular');
+  eq(b.ovulatoria, { start: 9, end: 9, isEmpty: false, days: 1 });
+  eq(b.lutea.days, 12);
+});
+
+test('la fase lútea pintada mide siempre 12 días (mediana de referencia, JUA-27)', () => {
   for (let L = CYCLE_LENGTH.min; L <= CYCLE_LENGTH.max; L++) {
-    const b = phaseBoundaries(L, 5);
-    ok(b.lutea.days >= 9 && b.lutea.days <= 11,
-       `ciclo de ${L} días → lútea de ${b.lutea.days} días, fuera del rango fisiológico`);
+    for (let P = PERIOD_DAYS.min; P <= PERIOD_DAYS.max; P++) {
+      const b = phaseBoundaries(L, P);
+      eq(b.lutea.days, LUTEAL_DAYS.central, `ciclo ${L}, sangrado ${P}:`);
+    }
   }
+});
+
+test('la lútea pintada no cae en el umbral de deficiencia lútea (≤10 días)', () => {
+  const b = phaseBoundaries(28, 5);
+  ok(b.lutea.days > 10, `lútea de ${b.lutea.days} días`);
+});
+
+// --- Bandas de incertidumbre ------------------------------------------------
+
+test('la banda ovulatoria cubre una lútea de 10 a 16 días', () => {
+  const u = uncertaintyBands(28, 5);
+  eq(u.ovulationBand, { start: 12, end: 18, isEmpty: false, days: 7 });
+});
+
+test('la banda ovulatoria contiene la ventana pintada', () => {
+  for (let L = CYCLE_LENGTH.min; L <= CYCLE_LENGTH.max; L++) {
+    for (let P = PERIOD_DAYS.min; P <= PERIOD_DAYS.max; P++) {
+      const b = phaseBoundaries(L, P);
+      const u = uncertaintyBands(L, P);
+      ok(u.ovulationBand.start <= b.ovulatoria.start && b.ovulatoria.end <= u.ovulationBand.end,
+         `ciclo ${L}, sangrado ${P}: ventana fuera de la banda`);
+    }
+  }
+});
+
+test('la banda ovulatoria no invade el sangrado', () => {
+  const u = uncertaintyBands(21, 8);
+  eq(u.ovulationBand.start, 9);
+  eq(u.ovulationBand.end, 11);
+});
+
+test('los días previos a la menstruación son los 7 últimos del ciclo', () => {
+  eq(uncertaintyBands(28, 5).premenstrual, { start: 22, end: 28, isEmpty: false, days: 7 });
+  eq(uncertaintyBands(35, 5).premenstrual.start, 29);
+});
+
+test('estimate expone las bandas junto a las fases', () => {
+  const r = estimate({ lastPeriodDate: '2026-09-01', cycleLength: 28, today: '2026-09-23' });
+  eq(r.bands.premenstrual.start, 22);
+  eq(r.dayOfCycle, 23);
+  eq(r.phase, 'lutea');
 });
 
 test('todos los días del ciclo tienen exactamente una fase', () => {
