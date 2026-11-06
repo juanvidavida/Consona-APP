@@ -1,0 +1,56 @@
+# Ventana ovulatoria estimada — cierre
+
+**Issue:** JUA-36.
+**Fecha:** 06-11-2026.
+**Documentos cerrados:** [`01-informe.md`](./01-informe.md), [`02-auditoria-fuentes.md`](./02-auditoria-fuentes.md) y [`03-sesgo-genero.md`](./03-sesgo-genero.md).
+
+## 1. Dictamen
+
+La base de investigación es **suficiente para el contenido educativo** de Consona, con un matiz importante: en esta fase, el contenido debe dedicarse sobre todo a **lo que la ventana no es**.
+
+- **Fisiología de la ovulación:** sólida (OV-A01, OV-A02).
+- **Variabilidad e imposibilidad de predecir la ovulación por calendario:** moderada, con fuentes independientes y de la industria coherentes entre sí.
+- **Ciclos sin ovulación:** moderada, con un estudio poblacional grande.
+- **Límite anticonceptivo:** consenso clínico (JUA-10) y revisión sistemática; reforzado por un estudio español sobre el uso real de las apps.
+- **Estereotipo sexual:** documentado solo para justificar su exclusión.
+
+El cierre **no autoriza** información de fertilidad, fechas de ovulación, señales corporales ni contenido sexual.
+
+## 2. Redacción segura que puede usarse
+
+**Qué es**
+> «La ovulación es el momento en que un ovario libera un óvulo. No es una fase de varios días, sino un hecho puntual.» (OV-A01)
+
+> «Cuando los estrógenos llegan a un nivel alto, provocan la subida de otra hormona que, en un día o dos, desencadena la ovulación.» (OV-A02)
+
+**Variabilidad y cálculo**
+> «El momento de la ovulación cambia mucho de una persona a otra y de un ciclo a otro. La idea de que ocurre el día 14 es un mito.» (OV-A03)
+
+> «La ventana que ves en Consona se calcula hacia atrás desde la fecha prevista de la siguiente regla. Es un momento aproximado: en bastantes ciclos, la ovulación ocurre antes o después. Ningún calendario puede saber cuándo ha ovulado alguien.» (OV-A04, OV-A05)
+
+> «Que la regla llegue con regularidad no confirma que haya habido ovulación: un ciclo sin ovulación de vez en cuando es frecuente.» (OV-A06)
+
+**Límite**
+> «No sirve para buscar ni para evitar un embarazo. Para eso hace falta un método fiable y consejo profesional.» (OV-A07, OV-A08)
+
+**Lo que no dice**
+> «Que la app marque esta ventana no dice nada de cómo se siente tu pareja, de lo que quiere ni de cómo está vuestra relación.» (OV-A11; texto de JUA-23)
+
+## 3. Redacción que no puede usarse
+
+| No usar | Motivo |
+|---|---|
+| «Está ovulando», «día de ovulación», «hoy ovula» | Certeza que no existe (O-01). |
+| «Días fértiles», «días seguros», «más probabilidades de embarazo» | Información de fertilidad (O-01, O-03). |
+| «Fíjate en si nota una molestia en un lado» | Señales corporales (O-05). |
+| «Más deseo», «más atractiva», «más receptiva», ni siquiera para negarlo | Contenido sexual (H-05, O-04). |
+| «Si no ovula, algo va mal» | Presenta la anovulación como un problema (SGO-04). |
+
+## 4. Pendientes
+
+| ID | Pendiente | Bloquea |
+|---|---|---|
+| P-01 | Texto completo de Johnson 2018, Peragallo Urrutia 2018 y Wilcox 2000. | No. |
+| P-02 | Conseguir la encuesta de anticoncepción de la Sociedad Española de Contracepción (2022 o 2024) para el dato español de uso de métodos naturales. | No. |
+| P-03 | Decidir el nombre visible de la fase (D-01 de la pantalla). | Sí, la pantalla. |
+| P-04 | Revisión clínica de la pantalla y de las tarjetas (JUA-16). | Sí, la publicación. |
