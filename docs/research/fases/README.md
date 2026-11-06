@@ -10,12 +10,12 @@
 |---|---|---|---|---|
 | Menstruación | [`menstruacion/`](./menstruacion/) | `docs/education/menstruacion-v0.1.0.md` | JUA-23 | Borrador, pendiente de revisión |
 | Fase folicular | [`folicular/`](./folicular/) | `docs/education/folicular-v0.1.0.md` | JUA-23 | Borrador, pendiente de revisión |
-| Ventana ovulatoria estimada | [`ovulatoria/`](./ovulatoria/) | `docs/education/ovulatoria-v0.1.0.md` (nombre visible pendiente) | JUA-23 | Borrador, pendiente de revisión |
-| Fase lútea | No se mueve. Está en `../jua-10/01-cycle-phases.md`, `../jua-10/audit-02-asrm-lpd.md` y `../jua-10/audit-07-rcog-pms.md`; duraciones en JUA-27 (PR #12) | Pantalla SPM/TDPM, `spm-tdpm-v0.4.0.md` (JUA-19, PR #9) | `home-cards-luteal-v0.1.0.md` (JUA-19, PR #9) | En el paquete de revisión clínica de JUA-16 |
+| Ventana ovulatoria estimada | [`ovulatoria/`](./ovulatoria/) | `docs/education/ovulatoria-v0.1.0.md` | JUA-23 | Borrador, pendiente de revisión |
+| Fase lútea | [`lutea/`](./lutea/). Reúne lo auditado en `../jua-10/01-cycle-phases.md`, `../jua-10/audit-02-asrm-lpd.md`, `../jua-10/audit-07-rcog-pms.md` y JUA-27 (PR #12), con fuentes verificadas en las otras fases | `docs/education/lutea-v0.1.0.md`; los cambios premenstruales se desarrollan en `spm-tdpm-v0.4.0.md` (JUA-19, PR #9) | `home-cards-luteal-v0.1.0.md` (JUA-19, PR #9) | Borrador, pendiente de revisión |
 
 ## Estructura de cada fase
 
-Mismo procedimiento que la fase lútea en JUA-10 y JUA-19:
+Mismo procedimiento en las cuatro fases:
 
 | Archivo | Contenido |
 |---|---|
