@@ -30,6 +30,11 @@ El cierre **no autoriza** información de fertilidad, fechas de ovulación, señ
 
 > «Que la regla llegue con regularidad no confirma que haya habido ovulación: un ciclo sin ovulación de vez en cuando es frecuente.» (OV-A06)
 
+**Ovulación y embarazo**
+> «Un embarazo solo es posible en unos pocos días de cada ciclo: los cinco anteriores a la ovulación y el propio día de la ovulación. Los espermatozoides pueden seguir siendo capaces de fecundar durante varios días, mientras que el óvulo solo puede ser fecundado durante poco tiempo.» (OV-A12, OV-A13)
+
+> «Como el momento de la ovulación no se puede saber por calendario, esos días tampoco.» (OV-A04, OV-A12)
+
 **Límite**
 > «No sirve para buscar ni para evitar un embarazo. Para eso hace falta un método fiable y consejo profesional.» (OV-A07, OV-A08)
 
@@ -52,5 +57,6 @@ El cierre **no autoriza** información de fertilidad, fechas de ovulación, señ
 |---|---|---|
 | P-01 | Texto completo de Johnson 2018, Peragallo Urrutia 2018 y Wilcox 2000. | No. |
 | P-02 | Conseguir la encuesta de anticoncepción de la Sociedad Española de Contracepción (2022 o 2024) para el dato español de uso de métodos naturales. | No. |
-| P-03 | Decidir el nombre visible de la fase (D-01 de la pantalla). | Sí, la pantalla. |
+| P-03 | ~~Decidir el nombre visible de la fase~~. Resuelto el 06-11-2026: «Ventana ovulatoria estimada» en la rueda, sin «fértil». | — |
+| P-05 | Artículo amplio de anticoncepción en «Comprender» (JUA-31), decidido el 06-11-2026. | No. |
 | P-04 | Revisión clínica de la pantalla y de las tarjetas (JUA-16). | Sí, la publicación. |

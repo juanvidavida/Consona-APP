@@ -1,6 +1,6 @@
 # Consona — Pantalla educativa «La ventana ovulatoria» v0.1.0
 
-**Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío. **Nombre visible pendiente de decisión** (D-01).
+**Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío. Nombre visible decidido el 06-11-2026 (D-01).
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
 **Base de investigación:** [`docs/research/fases/ovulatoria/`](../research/fases/ovulatoria/). Toda afirmación sale de la redacción segura de su cierre (`04-cierre.md`).
 **Idioma:** español (España).
@@ -24,7 +24,7 @@ La rueda dibuja la ventana con bordes difusos (JUA-27 §3.4) y las tarjetas de l
 
 ### OVU-00 · Título
 
-**La ventana ovulatoria** *(provisional; ver D-01)*
+**La ventana ovulatoria**
 
 ### OVU-01 · Nota fija
 
@@ -46,7 +46,13 @@ Es un momento aproximado. El día de la ovulación cambia mucho de una persona a
 
 Que la regla llegue con regularidad no confirma que haya habido ovulación. En un estudio con población general, al menos uno de cada cuatro ciclos de duración normal no mostraba signos de ovulación. Un ciclo sin ovulación de vez en cuando es frecuente, y la app no puede saber si ha ocurrido.
 
-### OVU-05 · No sirve para buscar ni para evitar un embarazo
+### OVU-05 · Ovulación y embarazo
+
+Un embarazo solo es posible en unos pocos días de cada ciclo: los cinco anteriores a la ovulación y el propio día de la ovulación. Es lo que a veces se llama «ventana fértil». Dura eso porque los espermatozoides pueden seguir siendo capaces de fecundar durante varios días, mientras que el óvulo solo puede ser fecundado durante poco tiempo después de liberarse.
+
+Pero como el momento de la ovulación no se puede saber por calendario, esos días tampoco. Por eso la ventana que ves en Consona no es una ventana fértil ni sirve para calcularla.
+
+### OVU-05b · No sirve para buscar ni para evitar un embarazo
 
 Ninguna ventana de calendario, tampoco la de Consona, sirve para saber cuándo es posible un embarazo. Hay quien usa los «días fértiles» de su app para decidir cuándo tomar precauciones, y es un riesgo: el calendario no puede saber cuándo ha habido ovulación.
 
@@ -93,7 +99,8 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | OVU-02 | Definición y mecanismo | OV-A01, OV-A02 |
 | OVU-03 | Ventana calculada, aproximada; variabilidad; mito del día 14 | OV-A03 a OV-A05; SGO-03 |
 | OVU-04 | Ciclos sin ovulación | OV-A06 (OS-07); SGO-04 |
-| OVU-05 | Límite anticonceptivo; uso real de las apps | OV-A07, OV-A08 (OS-08, OS-09); SGO-02 |
+| OVU-05 | Ventana fértil de seis días; supervivencia de espermatozoides y óvulo; imposibilidad de calcularla por calendario | OV-A12, OV-A13 (OS-14, OS-15); OV-A04 |
+| OVU-05b | Límite anticonceptivo; uso real de las apps | OV-A07, OV-A08 (OS-08, OS-09); SGO-02 |
 | OVU-06 | Ánimo, capacidades y estado de la pareja | OV-A11; O-04, SGO-01 |
 | OVU-07 | Papel de la pareja | Regla T-02 |
 | DER-01 | Derivación | `jua-10/01`; OS-08 |
@@ -102,11 +109,12 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 
 | ID | Decisión | Propuesta |
 |---|---|---|
-| D-01 | Nombre visible de la fase. «Ovulación» a secas es impreciso (es un hecho puntual, no se detecta y sugiere certeza). | Mantener «Ventana ovulatoria estimada» en la rueda y «La ventana ovulatoria» como título de la pantalla. Alternativa: «Ovulación aproximada». Decide producto. |
+| D-01 | Nombre visible de la fase. «Ovulación» a secas es impreciso (es un hecho puntual, no se detecta y sugiere certeza). Se valoró «Ventana ovulatoria y fértil estimada». | **Resuelta (06-11-2026):** la rueda mantiene «Ventana ovulatoria estimada», sin «fértil»; el título de la pantalla es «La ventana ovulatoria»; la relación entre ovulación y embarazo se explica en el texto (OVU-05). |
 | D-02 | OVU-04 daba una proporción («entre una cuarta parte y un tercio»). Procede de un estudio con edad media de 42 años y una sola medición. | **Resuelta (06-11-2026):** «al menos uno de cada cuatro ciclos», el límite inferior del estudio. Se pide igualmente valoración en la revisión clínica. |
-| D-03 | OVU-05 menciona que hay quien usa las apps para decidir cuándo tomar precauciones. | Mantenerlo: es el motivo del aviso y está documentado en España (OS-09). |
+| D-03 | OVU-05b menciona que hay quien usa las apps para decidir cuándo tomar precauciones. | **Resuelta (06-11-2026):** se mantiene; es el motivo del aviso y está documentado en España (OS-09). |
 | D-04 | OVU-07 menciona la conversación sobre anticoncepción. Podía parecer que rozaba el ámbito sexual (H-05). | **Resuelta (06-11-2026):** la salud reproductiva es contenido válido de Consona y debe estar presente. H-05 excluye el deseo, la actividad sexual, el consentimiento sexual, los límites y la disponibilidad, no la anticoncepción ni la búsqueda de embarazo. Presencia garantizada en OVU-05, OVU-07 y DER-01 (R-09). |
 | D-05 | La pantalla no menciona el dolor de ovulación, que algunas personas notan. | No mencionarlo (O-05). |
+| D-06 | OVU-05 explica la ventana fértil y la supervivencia de los gametos sin cifras de horas ni de probabilidad. | Mantener sin cifras: dar horas o probabilidades invitaría a hacer cálculos. Pedir valoración en la revisión clínica. |
 
 ## 6. Historial
 
@@ -115,3 +123,4 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques OVU-00 a OVU-08 y DER-01.
 - Cinco decisiones abiertas; el nombre visible está pendiente.
+- 06-11-2026: D-01 a D-04 resueltas. Nuevo bloque OVU-05 «Ovulación y embarazo»; el aviso anticonceptivo pasa a OVU-05b. Nueva decisión D-06.

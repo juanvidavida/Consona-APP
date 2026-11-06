@@ -22,6 +22,13 @@
 | OS-12 | Kiesner et al. 2022 (= FS-20 de la fase folicular) | Prospectivo diario | 2022 | [V] | — | 12–13 % con empeoramiento del ánimo a mitad de ciclo. |
 | OS-13 | Jang et al. 2025 (= S-15 de la menstruación) | Metaanálisis | 2025 | [V] | — | Sin cambios cognitivos robustos; dos resultados espaciales no se sostienen con métodos robustos. |
 
+### Añadidas el 06-11-2026
+
+| ID | Fuente | Tipo | Fecha | Verificación | Financiación / conflictos | Vigencia y uso permitido |
+|---|---|---|---|---|---|---|
+| OS-14 | Practice Committee of the American Society for Reproductive Medicine; Practice Committee of the Society for Reproductive Endocrinology and Infertility. Optimizing natural fertility: a committee opinion. *Fertil Steril* 2022;117(1):53–63 | Opinión de comité | 01-2022 (en línea 2021) | [V] (PDF de asrm.org) | Sociedad científica. | **Vigente.** Ventana fértil de seis días que termina el día de la ovulación; máximas probabilidades en los dos días previos; las apps no añaden utilidad clínica para predecir la ventana. Ojo: al describir el método del calendario repite la lútea de 14 días y la ovulación el día 14, lo que no se usa. Incluye un resumen en español. |
+| OS-15 | Wilcox AJ, Weinberg CR, Baird DD. Timing of sexual intercourse in relation to ovulation: effects on the probability of conception, survival of the pregnancy, and sex of the baby. *N Engl J Med* 1995;333(23):1517–21. DOI 10.1056/NEJM199512073332301 · PMID 7477165 | Cohorte prospectiva | 12-1995 | [V-abs] | Académica (NIEHS). | **Clásico, base de la definición actual** (la cita OS-14). Embarazos solo con relaciones en los seis días que terminan el día de la ovulación; algunos con espermatozoides de tres o más días. |
+
 ## 2. Fuentes descartadas o pendientes
 
 | Fuente | Motivo |
@@ -37,3 +44,4 @@
 | Media | Johnson et al. 2018, *Curr Med Res Opin*. DOI 10.1080/03007995.2018.1475348 | Precisión de las apps (OV-A04). |
 | Media | Peragallo Urrutia et al. 2018, *Obstet Gynecol*. DOI 10.1097/AOG.0000000000002784 | Límite anticonceptivo (OV-A07). |
 | Baja | Wilcox et al. 2000, *BMJ*. DOI 10.1136/bmj.321.7271.1259 | Variabilidad clásica independiente (OV-A03). |
+| Media | Wilcox et al. 1995, *N Engl J Med*. DOI 10.1056/NEJM199512073332301 | Base de la ventana fértil y de la supervivencia de los gametos (OV-A12, OV-A13). |

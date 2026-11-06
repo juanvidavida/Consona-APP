@@ -46,6 +46,13 @@ En lo social, la ovulación arrastra un estereotipo sexual: la idea de que trae 
 | OV-A10 | El estudio longitudinal más grande hasta la fecha no encontró evidencia convincente de que las preferencias de atracción cambien con las hormonas del ciclo. El campo es controvertido y los estudios previos eran pequeños. | OS-11 [V] | 584 mujeres blancas heterosexuales, hormonas en saliva. | **Moderada** contra el estereotipo; muestra no diversa. | 2018 | No se usa en la interfaz (H-05). Solo justifica la exclusión. | Consona no trata el deseo ni la atracción. |
 | OV-A11 | No hay evidencia de un ánimo o unas capacidades mejores en este momento. Una minoría (12–13 %) empeora a mitad de ciclo, y la mayoría no tiene un patrón propio de esta fase. Las capacidades cognitivas no cambian de forma robusta. | OS-12 [V]; OS-13 [V] | Universitarias italianas (OS-12); metaanálisis de 102 artículos (OS-13). | **Moderada.** | 2022, 2025 | «Que la app marque esta ventana no dice nada de cómo se siente tu pareja.» | — |
 
+### Añadidas el 06-11-2026 (bloque «Ovulación y embarazo»)
+
+| ID | Afirmación | Fuente | Población de referencia | Nivel y motivo | Fecha | Formulación apta para Consona | Límite |
+|---|---|---|---|---|---|---|---|
+| OV-A12 | La «ventana fértil» es el intervalo de seis días que termina el día de la ovulación. En la cohorte de referencia solo hubo embarazos cuando hubo relaciones en ese intervalo, y las probabilidades más altas se dieron en los dos días anteriores a la ovulación. | OS-14 [V]; OS-15 [V-abs] | Opinión de comité de ASRM y SREI; 221 mujeres sanas que buscaban embarazo, 625 ciclos con ovulación estimada por metabolitos en orina (clásico). | **Consenso clínico** (OS-14), basado en una cohorte clásica sin equivalente reciente. | 1995, 2022 | «Un embarazo solo es posible en unos pocos días de cada ciclo: los cinco anteriores a la ovulación y el propio día de la ovulación.» | Sin probabilidades ni días del ciclo en la interfaz. |
+| OV-A13 | La ventana dura eso porque los espermatozoides pueden seguir siendo capaces de fecundar durante varios días, mientras que el óvulo solo puede ser fecundado durante poco tiempo: no hubo embarazos por relaciones posteriores al día de la ovulación, y algunos se debieron a espermatozoides de tres o más días. | OS-15 [V-abs]; OS-14 [V] | Íd. | **Moderada.** Se deduce de la cohorte; no se han verificado en texto completo cifras exactas de horas o días de supervivencia. | 1995, 2022 | «Los espermatozoides pueden seguir siendo capaces de fecundar durante varios días, mientras que el óvulo solo puede ser fecundado durante poco tiempo.» | **Sin horas ni días exactos.** |
+
 ## 4. Qué puede afirmar la interfaz y qué debe evitar
 
 ### Puede afirmar
@@ -55,6 +62,7 @@ En lo social, la ovulación arrastra un estereotipo sexual: la idea de que trae 
 - Que la ventana de Consona es un cálculo aproximado que no detecta nada (OV-A04, OV-A05).
 - Que no todos los ciclos tienen ovulación (OV-A06).
 - Que la ventana **no sirve para buscar ni para evitar un embarazo**, y que para eso hace falta un método fiable y consejo profesional (OV-A07, OV-A08).
+- Cómo se relacionan la ovulación y el embarazo, en términos generales y sin fechas (OV-A12, OV-A13). Decisión de producto del 06-11-2026: la salud reproductiva es contenido válido (D-04 de la pantalla).
 - Que la ventana no dice nada de cómo se siente tu pareja (OV-A11).
 
 ### Debe evitar
