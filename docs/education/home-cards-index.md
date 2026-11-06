@@ -11,14 +11,14 @@
 
 | Fase | Documento | Estado |
 |---|---|---|
-| Menstruación | [`home-cards-menstruation-v0.1.0.md`](./home-cards-menstruation-v0.1.0.md) | Borrador |
-| Fase folicular | [`home-cards-follicular-v0.1.0.md`](./home-cards-follicular-v0.1.0.md) | Borrador |
-| Ventana ovulatoria estimada | [`home-cards-ovulatory-v0.1.0.md`](./home-cards-ovulatory-v0.1.0.md) | Borrador |
+| Menstruación | [`home-cards-menstruation-v0.2.0.md`](./home-cards-menstruation-v0.2.0.md) | Borrador |
+| Fase folicular | [`home-cards-follicular-v0.2.0.md`](./home-cards-follicular-v0.2.0.md) | Borrador |
+| Ventana ovulatoria estimada | [`home-cards-ovulatory-v0.2.0.md`](./home-cards-ovulatory-v0.2.0.md) | Borrador |
 | Fase lútea | `home-cards-luteal-v0.1.0.md` (rama de JUA-19, PR #9) | Borrador, en el paquete de revisión clínica de JUA-16 |
 
 El documento de la fase lútea **no se modifica** en JUA-23.
 
-Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.1.0.md`](./home-cards-review-pack-v0.1.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase.
+Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.2.0.md`](./home-cards-review-pack-v0.2.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase.
 
 ## 2. Qué conjunto se muestra cada día
 
@@ -65,4 +65,5 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 ### [0.1.0] — 05-11-2026
 
 - Índice inicial: documentos por fase, criterio de selección y reglas comunes H-01 a H-08.
+- 06-11-2026: tarjetas de las tres fases nuevas en versión 0.2.0, con trazabilidad a la investigación de JUA-36.
 - Decisiones del 05-11-2026: excepción de la duración de la menstruación en H-01 y H-06; las tres fases nuevas entran en JUA-16.

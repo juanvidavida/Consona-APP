@@ -1,18 +1,18 @@
-# Consona — Tarjetas de orientación de la home: paquete de revisión v0.1.0
+# Consona — Tarjetas de orientación de la home: paquete de revisión v0.2.0
 
 **Issue:** JUA-23.
 **Para qué sirve:** revisar a la vez las cuatro fases. Es una copia generada de los documentos de cada fase, que son la fuente de verdad: los cambios se hacen allí y este paquete se vuelve a generar.
 **Estado:** Borrador para revisión de producto. Las tres fases nuevas **no se han enviado a revisión clínica**.
-**Generado:** 05-11-2026.
+**Generado:** 06-11-2026.
 
 ## Contenido
 
 | Parte | Fase | Origen | Estado |
 |---|---|---|---|
 | 1 | Cómo se eligen las tarjetas y reglas comunes | `home-cards-index.md` | Borrador |
-| 2 | Menstruación | `home-cards-menstruation-v0.1.0.md` | Borrador nuevo (JUA-23) |
-| 3 | Fase folicular | `home-cards-follicular-v0.1.0.md` | Borrador nuevo (JUA-23) |
-| 4 | Ventana ovulatoria estimada | `home-cards-ovulatory-v0.1.0.md` | Borrador nuevo (JUA-23) |
+| 2 | Menstruación | `home-cards-menstruation-v0.2.0.md` | Versión 0.2.0, con trazabilidad a la investigación de JUA-36 |
+| 3 | Fase folicular | `home-cards-follicular-v0.2.0.md` | Versión 0.2.0, con trazabilidad a la investigación de JUA-36 |
+| 4 | Ventana ovulatoria estimada | `home-cards-ovulatory-v0.2.0.md` | Versión 0.2.0, con trazabilidad a la investigación de JUA-36 |
 | 5 | Fase lútea | `home-cards-luteal-v0.1.0.md (rama de JUA-19, PR #9)` | Copia sin cambios; ya está en el paquete de revisión clínica de JUA-16 |
 
 **Cómo revisar:** lee primero la sección 2 de cada fase, que es el texto que verá la persona usuaria. Después, las reglas propias, la trazabilidad y las decisiones abiertas. Las referencias numeradas [1], [2]… remiten a la lista del final de **cada** fase, no a una lista común.
@@ -55,7 +55,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 
 # Parte 2 · Menstruación
 
-*Origen: `home-cards-menstruation-v0.1.0.md`. Borrador nuevo (JUA-23).*
+*Origen: `home-cards-menstruation-v0.2.0.md`. Versión 0.2.0, con trazabilidad a la investigación de JUA-36.*
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -120,17 +120,17 @@ El prototipo no tiene texto propio de la menstruación: muestra en todas las fas
 | QPC | Texto nuevo sobre la menstruación, con la duración declarada o la de por defecto. | El texto del prototipo describe la fase lútea; D-03. |
 | QPP | La pregunta abierta genérica pasa a una que ofrece ayuda o normalidad por igual. | Evitar que la pregunta suene a «sé que te pasa algo» en la fase con más estereotipos asociados. |
 | QTT | La logística general se concreta en tareas de casa, sin esperar a que te lo pidan. | Acción propia concreta, sin depender de lo que tu pareja sienta. Sin mencionar la compra (D-02). |
-| QNA | Se sustituye «Una fase estimada no explica…» por estereotipos propios de la menstruación, incluido el contrario: que el silencio signifique que todo va bien. | Los estereotipos de la menstruación son distintos de los premenstruales. |
+| QNA | Se sustituye «Una fase estimada no explica…» por estereotipos propios de la menstruación, incluido el contrario: que el silencio signifique que todo va bien. | Los estereotipos de la menstruación son distintos de los premenstruales. **JUA-36:** ME-A13, ME-A15, ME-A17 (estereotipo de la mujer «descontrolada»; Romans 2013 y Kiesner 2016 y 2022 en población general, ver fase folicular FO-A12 y FO-A14). |
 
 ### 4. Trazabilidad
 
 | Tarjeta | Afirmación | Fuente | Base auditada |
 |---|---|---|---|
-| QPC · definición | La menstruación es el sangrado con el que se desprende el revestimiento del útero; su primer día inicia el ciclo. | [1] [2] | `01-cycle-phases` (definición de menstruación; afirmación auditada de consenso clínico). |
-| QPC · duración | Duración declarada por la persona afectada o, por defecto, unos 5 días, que cambia de una persona a otra. | [3] [4] | Declarada: DA-06 y formulario de JUA-28. Por defecto: ME-01; JUA-27 §2 y §6, mediana de 5 días, de 4 a 6 según la fuente. Rama de JUA-27, PR #12, **pendiente de fusionar**. |
-| QPC · primeros días | En los primeros días, el flujo suele ser mayor. | [9] | JUA-27 §2 y §6: ≈90 % de la pérdida en los días 1 a 3 (Haynes 1977, verificado solo por el resumen [V-abs]). Rama de JUA-27, PR #12. |
-| QPC · dolor | La menstruación puede tener asociados dolor o calambres en algunas personas. | [5] [6] | `09-health-pain`, conclusión operativa y definición de dismenorrea; diversidad de experiencias según la OMS. |
-| QPC · límite | Saber que hay sangrado no indica cómo lo vive la persona. | [7] | `01-cycle-phases` (distinguir dato, cálculo e inferencia); `12-health-emotional-cognitive` EC-02. |
+| QPC · definición | La menstruación es el sangrado con el que se desprende el revestimiento del útero; su primer día inicia el ciclo. | [1] [2] | `01-cycle-phases` (definición de menstruación; afirmación auditada de consenso clínico). **JUA-36:** ME-A01 a ME-A04 (Critchley 2020 y Jain 2022, en texto completo). |
+| QPC · duración | Duración declarada por la persona afectada o, por defecto, unos 5 días, que cambia de una persona a otra. | [3] [4] | Declarada: DA-06 y formulario de JUA-28. Por defecto: ME-01; JUA-27 §2 y §6, mediana de 5 días, de 4 a 6 según la fuente. Rama de JUA-27, PR #12, **pendiente de fusionar**. **JUA-36:** ME-A05. |
+| QPC · primeros días | En los primeros días, el flujo suele ser mayor. | [9] | JUA-27 §2 y §6: ≈90 % de la pérdida en los días 1 a 3 (Haynes 1977, verificado solo por el resumen [V-abs]). Rama de JUA-27, PR #12. **JUA-36:** ME-A06. |
+| QPC · dolor | La menstruación puede tener asociados dolor o calambres en algunas personas. | [5] [6] | `09-health-pain`, conclusión operativa y definición de dismenorrea; diversidad de experiencias según la OMS. **JUA-36:** ME-A09, ME-A10 (dos estudios españoles, Ciudad Real y Andalucía). |
+| QPC · límite | Saber que hay sangrado no indica cómo lo vive la persona. | [7] | `01-cycle-phases` (distinguir dato, cálculo e inferencia); `12-health-emotional-cognitive` EC-02. **JUA-36:** ME-A15, ME-A18. |
 | QPP | Pregunta abierta en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
 | QTT | Acción propia sobre tareas de casa y planes. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3. |
 | QNA | La fase no explica ánimo, dolor ni necesidades. | [7] [8] | `08-health-energy` (conclusión operativa); `12-health-emotional-cognitive` EC-02. |
@@ -172,6 +172,11 @@ La v0.1.0 no contiene:
 - Reglas propias M-01 a M-05, sobre las comunes H-01 a H-08.
 - Cinco decisiones, todas resueltas o aceptadas el 05-11-2026: frase del dolor, sin referencias a la compra, duración declarada o por defecto, ampliación de JUA-16 y cita de JUA-27.
 
+#### [0.2.0] — 06-11-2026
+
+- Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
+- Pantalla educativa asociada: `menstruacion-v0.1.0.md` (rama de JUA-36).
+
 ### Referencias
 
 1. Office on Women's Health — Your menstrual cycle. <https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle>
@@ -188,7 +193,7 @@ La v0.1.0 no contiene:
 
 # Parte 3 · Fase folicular
 
-*Origen: `home-cards-follicular-v0.1.0.md`. Borrador nuevo (JUA-23).*
+*Origen: `home-cards-follicular-v0.2.0.md`. Versión 0.2.0, con trazabilidad a la investigación de JUA-36.*
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -245,17 +250,17 @@ El prototipo no tiene texto propio de la fase folicular: muestra en todas las fa
 | QPC | Texto nuevo sobre la fase folicular, con los estrógenos como conocimiento básico. | El texto del prototipo describe la fase lútea; D-02. |
 | QPP | La pregunta genérica pasa a una sobre planes. | Variar la conversación entre fases sin referirse al ciclo. |
 | QTT | La logística general se concreta en compartir planes y dar el primer paso. | Acción propia concreta. |
-| QNA | Se sustituye «Una fase estimada no explica…» por el estereotipo de esta fase: más energía y mejor ánimo. | Es la idea más extendida sobre la fase folicular y la evidencia no la sostiene. |
+| QNA | Se sustituye «Una fase estimada no explica…» por el estereotipo de esta fase: más energía y mejor ánimo. | Es la idea más extendida sobre la fase folicular y la evidencia no la sostiene. **JUA-36:** FO-A08 a FO-A12 y FO-A14: sin cambios de rendimiento ni de esfuerzo percibido con la fase verificada en sangre (IronFEMME, Madrid; FENDURA), sin cambios cognitivos, y en población general la fase pesa poco frente a la salud, el estrés y el apoyo. |
 
 ### 4. Trazabilidad
 
 | Tarjeta | Afirmación | Fuente | Base auditada |
 |---|---|---|---|
-| QPC · definición | La fase folicular empieza con la menstruación y dura hasta la ovulación. | [1] [2] | `01-cycle-phases` (afirmación auditada, moderada; definición `follicular_educational`). |
-| QPC · folículos | En ella maduran folículos hasta que normalmente uno libera un óvulo. | [1] [3] | `01-cycle-phases` (definición de fase folicular: «desarrollo de folículos hasta la ovulación»; definición de ovulación de ACOG). |
-| QPC · hormonas | Los folículos producen hormonas, entre ellas los estrógenos, que vuelven a engrosar el revestimiento del útero. | [1] | Fisiología general de [1]. **No auditada como afirmación propia**: se incluye en la revisión clínica de JUA-16, como la progesterona en la fase lútea. |
-| QPC · variación | Es la parte del ciclo cuya duración más cambia, incluso en la misma persona. | [2] [4] [5] | `01-cycle-phases` («su duración contribuye en gran medida a la variación»); JUA-27 §2: mediana de 17 días, RIC 15–20, «la fase que más varía». Rama de JUA-27, PR #12, **pendiente de fusionar**. |
-| QPC · límite | Una fecha calculada no indica el punto del ciclo ni cómo está la persona. | [6] | `01-cycle-phases` (método de calendario); `12-health-emotional-cognitive` EC-05. |
+| QPC · definición | La fase folicular empieza con la menstruación y dura hasta la ovulación. | [1] [2] | `01-cycle-phases` (afirmación auditada, moderada; definición `follicular_educational`). **JUA-36:** FO-A01. |
+| QPC · folículos | En ella maduran folículos hasta que normalmente uno libera un óvulo. | [1] [3] | `01-cycle-phases` (definición de fase folicular: «desarrollo de folículos hasta la ovulación»; definición de ovulación de ACOG). **JUA-36:** FO-A02 (Reed y Carr 2018). |
+| QPC · hormonas | Los folículos producen hormonas, entre ellas los estrógenos, que vuelven a engrosar el revestimiento del útero. | [1] | **Auditada en JUA-36:** FO-A03 y FO-A04 (Reed y Carr 2018; Critchley 2020; Jain 2022, en texto completo). Se mantiene en la revisión clínica de JUA-16. |
+| QPC · variación | Es la parte del ciclo cuya duración más cambia, incluso en la misma persona. | [2] [4] [5] | `01-cycle-phases` («su duración contribuye en gran medida a la variación»); JUA-27 §2: mediana de 17 días, RIC 15–20, «la fase que más varía». Rama de JUA-27, PR #12, **pendiente de fusionar**. **JUA-36:** FO-A06, FO-A07. |
+| QPC · límite | Una fecha calculada no indica el punto del ciclo ni cómo está la persona. | [6] | `01-cycle-phases` (método de calendario); `12-health-emotional-cognitive` EC-05. **JUA-36:** FO-A07; SGF-04. |
 | QPP | Pregunta abierta sobre planes en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
 | QTT | Acción propia sobre planes y organización. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3. |
 | QNA | No hay evidencia de más energía o mejor ánimo por fase. | [2] [7] | `08-health-energy` (conclusión operativa: ninguna afirmación de «energía alta» por fase alcanza evidencia alta); `12-health-emotional-cognitive` EC-01, EC-02. |
@@ -295,6 +300,12 @@ La v0.1.0 no contiene:
 - Reglas propias F-01 a F-04, sobre las comunes H-01 a H-08.
 - Cuatro decisiones, todas resueltas o aceptadas el 05-11-2026: «óvulo», estrógenos, estereotipos nombrados y cita de JUA-27.
 
+#### [0.2.0] — 06-11-2026
+
+- Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
+- La afirmación sobre los estrógenos deja de estar «no auditada» (D-02).
+- Pantalla educativa asociada: `folicular-v0.1.0.md` (rama de JUA-36).
+
 ### Referencias
 
 1. Office on Women's Health — Your menstrual cycle. <https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle>
@@ -309,7 +320,7 @@ La v0.1.0 no contiene:
 
 # Parte 4 · Ventana ovulatoria estimada
 
-*Origen: `home-cards-ovulatory-v0.1.0.md`. Borrador nuevo (JUA-23).*
+*Origen: `home-cards-ovulatory-v0.2.0.md`. Versión 0.2.0, con trazabilidad a la investigación de JUA-36.*
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -326,7 +337,7 @@ La v0.1.0 no contiene:
 |---|---|
 | O-01 | Siempre «ventana ovulatoria estimada». Nunca «día de ovulación», «estás ovulando», «días fértiles», «periodo fértil» ni «días seguros» (RU-03; JUA-27 §3.4). |
 | O-02 | Se explica que la ventana es un cálculo por fechas: no detecta ni confirma la ovulación, ni que ocurra en todos los ciclos. |
-| O-03 | Se dice expresamente que la ventana no sirve para buscar ni para evitar un embarazo. No se da ninguna otra información sobre fertilidad. |
+| O-03 | Se dice expresamente que la ventana no sirve para buscar ni para evitar un embarazo. Las tarjetas no dan más información de fertilidad; la relación entre ovulación y embarazo se explica en la pantalla educativa (OVU-05). La salud reproductiva es contenido válido (decisión del 06-11-2026). |
 | O-04 | H-05 se aplica sin excepción, también en QNA: no se nombra el deseo ni el atractivo, ni siquiera para desmentirlo. |
 | O-05 | No se mencionan señales corporales de la ovulación (moco cervical, dolor ovulatorio, temperatura), porque invitarían a observar el cuerpo de tu pareja. |
 | O-06 | Sin cifras en días. |
@@ -368,16 +379,16 @@ El prototipo no tiene texto propio de la ventana ovulatoria: muestra en todas la
 | QPC | Texto nuevo: la ovulación como hecho puntual y la ventana como cálculo, con su límite para el embarazo. | El texto del prototipo describe la fase lútea; O-01 a O-03. |
 | QPP | La pregunta genérica pasa a una oferta de ayuda abierta. | Variar la conversación entre fases sin referirse al ciclo. |
 | QTT | La logística general se concreta en compromisos, tareas y decisiones pendientes. | Acción propia concreta; mostrar que nada cambia por la fecha. |
-| QNA | Se sustituye «Una fase estimada no explica…» por «no es una señal para actuar», sin nombrar el deseo. | O-04: el estereotipo de esta fase es sexual y H-05 impide nombrarlo. |
+| QNA | Se sustituye «Una fase estimada no explica…» por «no es una señal para actuar», sin nombrar el deseo. | O-04: el estereotipo de esta fase es sexual y H-05 impide nombrarlo. **JUA-36:** OV-A10, OV-A11; SGO-01. |
 
 ### 4. Trazabilidad
 
 | Tarjeta | Afirmación | Fuente | Base auditada |
 |---|---|---|---|
-| QPC · definición | La ovulación es la liberación de un óvulo por un ovario; es un evento, no una fase de duración fija. | [1] [2] | `01-cycle-phases` (afirmación auditada de consenso clínico; definición de ovulación y nota de taxonomía). |
-| QPC · variación | Su momento cambia de un ciclo a otro. | [3] [4] | `01-cycle-phases` (variación dentro de la misma persona, Najmabadi); JUA-27 §3.2. Rama de JUA-27, PR #12, **pendiente de fusionar**. |
-| QPC · cálculo | La ventana se calcula hacia atrás desde la fecha prevista de la siguiente regla. | [5] | JUA-27 §3.3 y §3.4 (ventana `[L−14, L−12]`). Rama de JUA-27, PR #12. |
-| QPC · límite | No detecta ni confirma la ovulación; no sirve para buscar ni evitar un embarazo. | [1] [6] | `01-cycle-phases` (límites 2 y 3: «no detecta ni confirma»; «nunca sustituye […] método anticonceptivo»). |
+| QPC · definición | La ovulación es la liberación de un óvulo por un ovario; es un evento, no una fase de duración fija. | [1] [2] | `01-cycle-phases` (afirmación auditada de consenso clínico; definición de ovulación y nota de taxonomía). **JUA-36:** OV-A01, OV-A02. |
+| QPC · variación | Su momento cambia de un ciclo a otro. | [3] [4] | `01-cycle-phases` (variación dentro de la misma persona, Najmabadi); JUA-27 §3.2. Rama de JUA-27, PR #12, **pendiente de fusionar**. **JUA-36:** OV-A03 (el día 14 es un mito). |
+| QPC · cálculo | La ventana se calcula hacia atrás desde la fecha prevista de la siguiente regla. | [5] | JUA-27 §3.3 y §3.4 (ventana `[L−14, L−12]`). Rama de JUA-27, PR #12. **JUA-36:** OV-A04, OV-A05. |
+| QPC · límite | No detecta ni confirma la ovulación; no sirve para buscar ni evitar un embarazo. | [1] [6] | `01-cycle-phases` (límites 2 y 3: «no detecta ni confirma»; «nunca sustituye […] método anticonceptivo»). **JUA-36:** OV-A06, OV-A07, OV-A08 (uso real de las apps en España, Universidad de Granada) y OV-A12. |
 | QPP | Pregunta abierta en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
 | QTT | Acción propia sobre compromisos, tareas y decisiones. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3. |
 | QNA | Una fase no explica estados, deseos ni conducta. | [6] [7] | `01-cycle-phases` (límite 4 y afirmación sobre atribución causal); `12-health-emotional-cognitive` EC-02. |
@@ -417,6 +428,13 @@ La v0.1.0 no contiene:
 - Primera versión de las cuatro tarjetas de la ventana ovulatoria estimada.
 - Reglas propias O-01 a O-06, sobre las comunes H-01 a H-08.
 - Cinco decisiones, todas aceptadas el 05-11-2026.
+
+#### [0.2.0] — 06-11-2026
+
+- Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
+- O-03 precisa que la explicación de la ventana fértil está en la pantalla educativa y que la salud reproductiva es contenido válido.
+- La rueda mantiene «Ventana ovulatoria estimada», sin «fértil» (decisión del 06-11-2026).
+- Pantalla educativa asociada: `ovulatoria-v0.1.0.md` (rama de JUA-36).
 
 ### Referencias
 
