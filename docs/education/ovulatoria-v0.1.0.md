@@ -12,7 +12,7 @@
 
 Iguales que en la pantalla de la menstruación (`menstruacion-v0.1.0.md`, secciones 1 a 3), con dos añadidos:
 
-- **Reglas de la fase:** O-01 a O-06 de las tarjetas de JUA-23, y reglas de sesgo SGO-01 a SGO-05 de `03-sesgo-genero.md`.
+- **Reglas de la fase:** O-01 a O-06 de las tarjetas de JUA-23, y reglas de sesgo SGO-01 a SGO-05 de `03-sesgo-genero.md`. **Excepción a O-05 en esta pantalla:** OVU-02 menciona el dolor de ovulación (D-05), sin cifras, sin decir si es probable y sin presentarlo como forma de saber si ha habido ovulación. Las tarjetas de la home siguen sin mencionarlo.
 - **R-08:** ningún icono, color ni ilustración asociado a la fertilidad, el embarazo, el atractivo o la sexualidad.
 - **R-09:** la pantalla incluye siempre información de salud reproductiva: que la ventana no sirve como método anticonceptivo ni para buscar embarazo, y a dónde acudir para informarse (OVU-05, OVU-07, DER-01). Decisión de producto del 06-11-2026 (D-04).
 
@@ -35,6 +35,8 @@ La rueda dibuja la ventana con bordes difusos (JUA-27 §3.4) y las tarjetas de l
 La ovulación es el momento en que un ovario libera un óvulo. No es una fase de varios días, sino un hecho puntual.
 
 Ocurre al final de la fase folicular: cuando los estrógenos llegan a un nivel alto, provocan la subida de otra hormona que, en un día o dos, desencadena la ovulación. Después empieza la fase lútea.
+
+Algunas personas notan una molestia leve en un lado del bajo vientre hacia la mitad del ciclo. No sirve para saber si ha habido ovulación, y si el dolor es fuerte o no se pasa, merece consultarse.
 
 ### OVU-03 · Qué es la ventana que ves en Consona
 
@@ -96,7 +98,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | Bloque | Afirmaciones | Base |
 |---|---|---|
 | OVU-01 | Límites de la app | O-02, O-03; SGO-02 |
-| OVU-02 | Definición y mecanismo | OV-A01, OV-A02 |
+| OVU-02 | Definición y mecanismo; dolor de ovulación sin cifras, sin valor para detectar la ovulación y con cuándo consultar | OV-A01, OV-A02; OV-A17 (OS-20, OS-21, OS-24, OS-25) |
 | OVU-03 | Ventana calculada, aproximada; variabilidad; mito del día 14 | OV-A03 a OV-A05; SGO-03 |
 | OVU-04 | Ciclos sin ovulación | OV-A06 (OS-07); SGO-04 |
 | OVU-05 | Ventana fértil de seis días; supervivencia de espermatozoides y óvulo; imposibilidad de calcularla por calendario | OV-A12, OV-A13 (OS-14, OS-15); OV-A04 |
@@ -105,7 +107,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | OVU-07 | Papel de la pareja | Regla T-02 |
 | DER-01 | Derivación | `jua-10/01`; OS-08; OS-16 |
 
-## 5. Decisiones abiertas
+## 5. Decisiones
 
 | ID | Decisión | Propuesta |
 |---|---|---|
@@ -113,7 +115,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | D-02 | OVU-04 daba una proporción («entre una cuarta parte y un tercio»). Procede de un estudio con edad media de 42 años y una sola medición. | **Resuelta (06-11-2026):** «al menos uno de cada cuatro ciclos», el límite inferior del estudio. Se pide igualmente valoración en la revisión clínica. |
 | D-03 | OVU-05b menciona que hay quien usa las apps para decidir cuándo tomar precauciones. | **Resuelta (06-11-2026):** se mantiene; es el motivo del aviso y está documentado en España (OS-09). |
 | D-04 | OVU-07 menciona la conversación sobre anticoncepción. Podía parecer que rozaba el ámbito sexual (H-05). | **Resuelta (06-11-2026):** la salud reproductiva es contenido válido de Consona y debe estar presente. H-05 excluye el deseo, la actividad sexual, el consentimiento sexual, los límites y la disponibilidad, no la anticoncepción ni la búsqueda de embarazo. Presencia garantizada en OVU-05, OVU-07 y DER-01 (R-09). |
-| D-05 | La pantalla no menciona el dolor de ovulación, que algunas personas notan. | **En investigación (06-11-2026), no se resuelve todavía.** Los dos estudios clásicos con ecografía, ya verificados, indican que en cada ciclo lo nota una minoría (23–35 %), que suele ser leve y corto y que aparece antes de la ovulación. No hay dato de población general sobre cuántas personas lo notan alguna vez (OV-A17). Opciones: (a) no mencionarlo (O-05); (b) mencionarlo sin cifra, sin usarlo para deducir la ovulación y con cuándo consultar. Pendiente de P-06 del cierre. |
+| D-05 | La pantalla no mencionaba el dolor de ovulación, que algunas personas notan. | **Resuelta (06-11-2026):** se menciona en OVU-02, sin cifras y sin decir si es probable o no: «Algunas personas notan una molestia leve en un lado del bajo vientre hacia la mitad del ciclo. No sirve para saber si ha habido ovulación, y si el dolor es fuerte o no se pasa, merece consultarse.» Base: OV-A17 (los estudios clásicos con ecografía describen un dolor leve, corto y previo a la ovulación; el NHS, cuándo consultar; la cohorte de endometriosis, por qué el dolor fuerte merece consulta). |
 | D-06 | OVU-05 explica la ventana fértil y la supervivencia de los gametos sin cifras de horas ni de probabilidad. | **Resuelta (06-11-2026):** se mantiene sin cifras de horas ni de probabilidad. Se pide igualmente valoración en la revisión clínica. |
 
 ## 6. Historial
@@ -123,7 +125,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques OVU-00 a OVU-08 y DER-01.
 - Cinco decisiones abiertas; el nombre visible está pendiente.
-- 06-11-2026: D-06 resuelta. D-05 (dolor de ovulación) sigue abierta.
+- 06-11-2026: D-05 y D-06 resueltas. OVU-02 menciona el dolor de ovulación.
 - 06-11-2026: DER-01 nombra la medicina de familia y la matrona (encuesta de la SEC de 2024). OVU-08 añade las fuentes de la ventana fértil, que faltaban, y la encuesta.
 - 06-11-2026: OVU-05b añade que hay muy pocos días sin posibilidad de embarazo (Wilcox 2000, verificado en texto completo).
 - 06-11-2026: D-01 a D-04 resueltas. Nuevo bloque OVU-05 «Ovulación y embarazo»; el aviso anticonceptivo pasa a OVU-05b. Nueva decisión D-06.

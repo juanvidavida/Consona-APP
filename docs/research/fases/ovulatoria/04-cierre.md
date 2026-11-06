@@ -35,6 +35,9 @@ El cierre **no autoriza** información de fertilidad, fechas de ovulación, señ
 
 > «Como el momento de la ovulación no se puede saber por calendario, esos días tampoco. Hay muy pocos días del ciclo en los que un embarazo sea imposible, incluso el día en que se espera la regla.» (OV-A04, OV-A12, OV-A14)
 
+**Dolor de ovulación**
+> «Algunas personas notan una molestia leve en un lado del bajo vientre hacia la mitad del ciclo. No sirve para saber si ha habido ovulación, y si el dolor es fuerte o no se pasa, merece consultarse.» (OV-A17; D-05 de la pantalla)
+
 **Límite**
 > «No sirve para buscar ni para evitar un embarazo. Para eso hace falta un método fiable y consejo profesional.» (OV-A07, OV-A08)
 
@@ -59,5 +62,5 @@ El cierre **no autoriza** información de fertilidad, fechas de ovulación, señ
 | P-02 | ~~Conseguir la encuesta de anticoncepción de la SEC~~. Incorporada el 06-11-2026 (OS-16, OV-A15 y OV-A16). | — |
 | P-03 | ~~Decidir el nombre visible de la fase~~. Resuelto el 06-11-2026: «Ventana ovulatoria estimada» en la rueda, sin «fértil». | — |
 | P-05 | Artículo amplio de anticoncepción en «Comprender» (JUA-31), decidido el 06-11-2026. | No. |
-| P-06 | Dolor de ovulación (D-05 de la pantalla): los clásicos OS-24 y OS-25 se verificaron el 06-11-2026 (minoría en cada ciclo). Sigue faltando un estudio de población general; si no existe, decidir sin cifra. | La decisión D-05. |
+| P-06 | Dolor de ovulación: decidido el 06-11-2026 mencionarlo sin cifra (D-05). Si aparece un estudio de población general, revisar la redacción. | No. |
 | P-04 | Revisión clínica de la pantalla y de las tarjetas (JUA-16). | Sí, la publicación. |
