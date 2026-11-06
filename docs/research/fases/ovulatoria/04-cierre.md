@@ -59,4 +59,5 @@ El cierre **no autoriza** información de fertilidad, fechas de ovulación, señ
 | P-02 | ~~Conseguir la encuesta de anticoncepción de la SEC~~. Incorporada el 06-11-2026 (OS-16, OV-A15 y OV-A16). | — |
 | P-03 | ~~Decidir el nombre visible de la fase~~. Resuelto el 06-11-2026: «Ventana ovulatoria estimada» en la rueda, sin «fértil». | — |
 | P-05 | Artículo amplio de anticoncepción en «Comprender» (JUA-31), decidido el 06-11-2026. | No. |
+| P-06 | Dolor de ovulación (D-05 de la pantalla): conseguir los clásicos OS-24 y OS-25 y buscar un estudio de población general; si no existe, decidir sin cifra. | La decisión D-05. |
 | P-04 | Revisión clínica de la pantalla y de las tarjetas (JUA-16). | Sí, la publicación. |
