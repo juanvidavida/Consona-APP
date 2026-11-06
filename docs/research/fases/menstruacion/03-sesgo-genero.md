@@ -29,7 +29,7 @@ Consona habla a la pareja que acompaña, que en el público objetivo es mayorita
 | S-04 Bull 2019 | Sí | Sí | Sí | Parcial | Sí | Usuarias de una app anticonceptiva; autoría de la empresa. | Una de varias fuentes de duración, nunca la única. |
 | S-05 Najmabadi 2020 | Sí | Sí | Sí | Sí | — | Muestra mayoritariamente blanca no hispana, declarada. | Duración, con su límite poblacional. |
 | S-07 Guimarães 2020 | Parcial | Sí | Sí | — | Sí | Revisión clínica. Habla de «patología» al referirse a la dismenorrea primaria. | Solo el mecanismo; el marco clínico no se traslada a la app. |
-| S-08 Armour 2019 | Sí | Sí | Sí | Sí | Sí | Analiza diferencias por renta del país. | Prevalencia, como dato de grupo. |
+| S-08 Armour 2019 | Sí | Sí | Sí | Sí | Sí | Analiza diferencias por renta del país y señala la normalización del dolor como sesgo de medida. Solo artículos en inglés. | Prevalencia, como dato de grupo. |
 | S-09 Fernández-Martínez 2018 | Parcial | Sí | Sí | Parcial | Sí | Asocia la dismenorrea a «estilo de vida» (bebidas de cola, carne) en un estudio transversal, lo que puede leerse como culpabilizador. Una sola facultad. | Solo la prevalencia. Los factores asociados **no se usan**. |
 | S-10 Abreu-Sánchez 2020 | Sí | Sí | Sí | Parcial | Sí | Estudiantes de enfermería con dolor. | Impacto, como dato de grupo. |
 | S-11 Schoep 2019 | Sí | Sí | Sí | Sí | Sí | Sesgo de selección declarado. | Impacto y ocultación. |

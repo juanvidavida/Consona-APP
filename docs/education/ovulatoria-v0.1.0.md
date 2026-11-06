@@ -54,7 +54,7 @@ Pero como el momento de la ovulación no se puede saber por calendario, esos dí
 
 ### OVU-05b · No sirve para buscar ni para evitar un embarazo
 
-Ninguna ventana de calendario, tampoco la de Consona, sirve para saber cuándo es posible un embarazo. Hay quien usa los «días fértiles» de su app para decidir cuándo tomar precauciones, y es un riesgo: el calendario no puede saber cuándo ha habido ovulación.
+Ninguna ventana de calendario, tampoco la de Consona, sirve para saber cuándo es posible un embarazo. Como la ovulación puede adelantarse o retrasarse mucho, hay muy pocos días del ciclo en los que un embarazo sea imposible, incluso el día en que se espera la regla. Hay quien usa los «días fértiles» de su app para decidir cuándo tomar precauciones, y es un riesgo: el calendario no puede saber cuándo ha habido ovulación.
 
 Para evitar un embarazo hace falta un método fiable. Para buscarlo, también ayuda el consejo profesional (ver DER-01).
 
@@ -100,7 +100,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | OVU-03 | Ventana calculada, aproximada; variabilidad; mito del día 14 | OV-A03 a OV-A05; SGO-03 |
 | OVU-04 | Ciclos sin ovulación | OV-A06 (OS-07); SGO-04 |
 | OVU-05 | Ventana fértil de seis días; supervivencia de espermatozoides y óvulo; imposibilidad de calcularla por calendario | OV-A12, OV-A13 (OS-14, OS-15); OV-A04 |
-| OVU-05b | Límite anticonceptivo; uso real de las apps | OV-A07, OV-A08 (OS-08, OS-09); SGO-02 |
+| OVU-05b | Límite anticonceptivo; pocos días sin posibilidad de embarazo; uso real de las apps | OV-A07, OV-A08, OV-A14 (OS-06, OS-08, OS-09); SGO-02 |
 | OVU-06 | Ánimo, capacidades y estado de la pareja | OV-A11; O-04, SGO-01 |
 | OVU-07 | Papel de la pareja | Regla T-02 |
 | DER-01 | Derivación | `jua-10/01`; OS-08 |
@@ -123,4 +123,5 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques OVU-00 a OVU-08 y DER-01.
 - Cinco decisiones abiertas; el nombre visible está pendiente.
+- 06-11-2026: OVU-05b añade que hay muy pocos días sin posibilidad de embarazo (Wilcox 2000, verificado en texto completo).
 - 06-11-2026: D-01 a D-04 resueltas. Nuevo bloque OVU-05 «Ovulación y embarazo»; el aviso anticonceptivo pasa a OVU-05b. Nueva decisión D-06.

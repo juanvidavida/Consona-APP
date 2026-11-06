@@ -17,9 +17,9 @@ En esta fase coinciden los tres riesgos más graves para Consona:
 | ID | C1 | C2 | C3 | C4 | C5 | Observaciones | Efecto en el uso |
 |---|---|---|---|---|---|---|---|
 | OS-01 Reed y Carr 2018 | Sí | Sí | Sí | — | — | Repite el día 14 como norma. | Solo el mecanismo. |
-| OS-04 Johnson 2018 | Sí | Sí | Sí | Parcial | Sí, **con conflicto** | La empresa que vende tests de ovulación concluye que las apps no predicen la ovulación: el resultado favorece a su producto. | Solo como dato coherente con fuentes independientes. |
+| OS-04 Johnson 2018 | Sí | Sí | Sí | Parcial | Sí, **con conflicto** | La empresa que vende tests de ovulación concluye que las apps no predicen la ovulación: el resultado favorece a su producto. Financiado por la empresa, con autores empleados o asesores, y aprobado por el comité ético de la propia empresa. | Solo como dato coherente con fuentes independientes. |
 | OS-05 Soumpasis 2020 | Sí | Sí | Sí | No | Sí, **con conflicto** | Misma empresa; usuarias que compraron su test; sin datos demográficos. | Íd. |
-| OS-06 Wilcox 2000 | Sí | Sí | Sí | Parcial | Sí | Independiente, pero antiguo. Mujeres que buscaban embarazo. | Variabilidad, sin cifras de fertilidad. |
+| OS-06 Wilcox 2000 | Sí | Sí | Sí | Parcial | Sí | Independiente, pero antiguo. Mujeres que buscaban embarazo, mayoritariamente blancas y universitarias (declarado). | Variabilidad y límite anticonceptivo, sin cifras de fertilidad. |
 | OS-07 Prior 2015 | Sí | Sí | Sí | Sí | Sí | Cuestiona la idea de que una regla regular garantice la ovulación. Muestra poblacional, aunque de edad media alta. | Anovulación como fenómeno frecuente e intermitente. |
 | OS-09 Levy y Romo-Avilés 2019 | Sí | Sí | Sí | Sí | Sí | Perspectiva de estudios de las mujeres y de género. | Fuente española sobre el uso real de las apps. |
 | OS-11 Jones 2018 | Sí | Parcial | Sí | **No** | Sí | Estudia una hipótesis que vincula el ciclo con la atracción (C2), aunque para refutarla. Muestra solo de mujeres blancas heterosexuales. | Solo para justificar que el estereotipo no tiene base sólida. |
