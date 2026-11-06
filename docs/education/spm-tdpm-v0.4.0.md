@@ -26,7 +26,7 @@ La pantalla es una subpantalla de **«Cómo funciona»**. No es la pantalla de i
 
 | ID | Regla de acceso |
 |---|---|
-| U-01 | Se abre desde un enlace dentro de «Cómo funciona», en el punto donde se explica que los patrones no diagnostican SPM ni TDPM (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §4.2). La implementación de ese enlace corresponde a JUA-7. |
+| U-01 | Se abre desde dos enlaces estáticos. (1) Dentro de «Cómo funciona», en el punto donde se explica que los patrones no diagnostican SPM ni TDPM (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §4.2); su implementación corresponde a JUA-7. (2) Desde el bloque LUT-05 de la pantalla «La fase lútea» de «Comprender» (`lutea-v0.1.0.md`, JUA-36). Ninguno de los dos depende de la fase, la fecha ni ningún dato (U-02). |
 | U-02 | El enlace es siempre visible y tiene el mismo texto para todas las personas. No aparece, cambia ni se destaca según la fase estimada, la fecha o cualquier dato local. |
 | U-03 | La home no enlaza directamente a esta pantalla ni muestra avisos que remitan a ella. |
 | U-04 | Desde la pantalla se puede volver a «Cómo funciona» con un control visible y accesible para lector de pantalla. |
@@ -39,7 +39,7 @@ La home muestra el día del ciclo, la fase estimada y cuatro tarjetas de orienta
 |---|---|
 | C-01 | En los días premenstruales estimados, las tarjetas de la home no nombran SPM ni TDPM y no presentan cambios emocionales o físicos como algo que la pareja vaya a tener o esté teniendo. |
 | C-02 | Si una tarjeta de la home menciona variabilidad premenstrual, usa el mismo marco que SPM-02 y SPM-04: «algunas personas», «puede», información general, no predicción. |
-| C-03 | La home no cambia su texto, color ni tarjetas para dirigir a esta pantalla en función de la fase (U-02, U-03). El camino es siempre «Cómo funciona». |
+| C-03 | La home no cambia su texto, color ni tarjetas para dirigir a esta pantalla en función de la fase (U-02, U-03). Los únicos caminos son los dos enlaces estáticos de U-01. |
 | C-04 | Cualquier cambio en las tarjetas de la home asociadas a la fase lútea o a los días premenstruales se revisa contra esta pantalla antes de publicarse. Ver D-05. |
 
 ## 3. Reglas de la pantalla
@@ -191,6 +191,11 @@ Lista para comprobar en cada versión. La v0.4.0 no contiene:
 | D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | **Resuelta.** Las cuatro tarjetas de la fase lútea se fijan en [`home-cards-luteal-v0.1.0.md`](./home-cards-luteal-v0.1.0.md) y se incluyen expresamente en el paquete y en el alcance de JUA-16. |
 
 ## 9. Historial
+
+### [0.4.0] — Enmienda del 06-11-2026
+
+- U-01 admite un segundo acceso estático desde la pantalla «La fase lútea» de «Comprender» (decisión D-04 de `lutea-v0.1.0.md`, JUA-36). C-03 se ajusta en consecuencia.
+- **El texto que se muestra no cambia**, por eso la pantalla conserva la versión.
 
 ### [0.4.0] — Recurso de violencia y cierre de decisiones
 

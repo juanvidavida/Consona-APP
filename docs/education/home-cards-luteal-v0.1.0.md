@@ -15,7 +15,7 @@
 | H-01 | Las cuatro tarjetas son las mismas durante toda la fase lútea estimada. No cambian según el día del ciclo, la cercanía de la menstruación ni ningún dato local. |
 | H-02 | Las tarjetas no nombran SPM ni TDPM y no presentan cambios físicos o emocionales como algo que tu pareja vaya a tener o esté teniendo (C-01). |
 | H-03 | Cualquier mención de variabilidad premenstrual usa «algunas personas», «puede» e información general (C-02). |
-| H-04 | Las tarjetas no enlazan directamente a la pantalla SPM/TDPM ni cambian de color o de tono según la fase (C-03, U-03). El acceso sigue siendo «Cómo funciona». |
+| H-04 | Las tarjetas no enlazan directamente a la pantalla SPM/TDPM ni cambian de color o de tono según la fase (C-03, U-03). El acceso a esa pantalla es por los enlaces estáticos de su regla U-01: «Cómo funciona» y la pantalla «La fase lútea» de «Comprender». |
 | H-05 | Ninguna tarjeta menciona ni sugiere deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad. |
 
 ## 2. Texto de las tarjetas
@@ -88,6 +88,10 @@ La v0.1.0 no contiene:
 | D-03 | JUA-5 está cerrada y no hay una incidencia para el contenido de las tarjetas de la home. | **Resuelta (07-10-2026):** se abre JUA-23 para las tarjetas de todas las fases, relacionada con JUA-16, JUA-19 y JUA-5. Este documento cubre solo la fase lútea. |
 
 ## 7. Historial
+
+### [0.1.0] — Enmienda del 06-11-2026
+
+- H-04 recoge el segundo acceso a la pantalla SPM/TDPM desde «La fase lútea» (JUA-36). El texto de las tarjetas no cambia.
 
 ### [0.1.0] — Borrador inicial
 
