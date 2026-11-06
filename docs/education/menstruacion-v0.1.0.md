@@ -34,7 +34,7 @@ Y las reglas de sesgo SG-01 a SG-07 de `03-sesgo-genero.md`.
 
 ### Coherencia con las tarjetas de la home
 
-Las tarjetas de la menstruación (`home-cards-menstruation-v0.1.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra antes de publicarse.
+Las tarjetas de la menstruación (`home-cards-menstruation-v0.2.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra antes de publicarse.
 
 ## 3. Reglas de la pantalla
 
@@ -76,7 +76,7 @@ Si tu pareja ha indicado cuánto le suele durar, Consona usa ese dato. Si no, us
 
 ### MEN-04 · El dolor
 
-El dolor menstrual es muy frecuente: en estudios con mujeres jóvenes lo refieren unas siete de cada diez, también en España. Se debe sobre todo a unas sustancias, las prostaglandinas, que hacen que el útero se contraiga con fuerza, y suele ser mayor los primeros días. Algunas personas notan además cansancio u otras molestias; otras no notan nada.
+El dolor menstrual es muy frecuente: en España, más de siete de cada diez mujeres de 15 a 49 años dicen tener dolor con la regla, y casi la mitad necesita medicación para aliviarlo. Se debe sobre todo a unas sustancias, las prostaglandinas, que hacen que el útero se contraiga con fuerza, y suele ser mayor los primeros días. Algunas personas notan además cansancio u otras molestias; otras no notan nada.
 
 Que sea frecuente no significa que haya que aguantarlo. Un dolor que impide hacer vida normal, que cambia o que va a más merece consultarse, porque puede tener causas que se pueden tratar. Durante mucho tiempo este dolor se ha tratado como algo normal, también en las consultas, y eso ha retrasado diagnósticos durante años.
 
@@ -88,7 +88,7 @@ El ánimo puede variar a lo largo del ciclo, pero en promedio varía poco, y en 
 
 ### MEN-06 · Lo que no se suele contar
 
-Mucha gente sigue con su día a día con dolor y no dice por qué. En un estudio con más de 30.000 mujeres en los Países Bajos, solo una de cada cinco de las que faltaron al trabajo o a clase por la regla dijo el motivo real.
+Mucha gente sigue con su día a día con dolor y no dice por qué. En España, una de cada cuatro mujeres ha sentido alguna vez que necesitaba faltar al trabajo, a clase o a otra actividad por el dolor o el sangrado de la regla, pero solo una de cada siete lo ha hecho. La mitad cree que faltar por ese motivo puede traerle consecuencias en el trabajo.
 
 En España, la ley reconoce desde 2023 la salud menstrual como parte de la salud sexual y reproductiva y prevé una baja cuando la menstruación es incapacitante por una enfermedad diagnosticada.
 
@@ -106,7 +106,7 @@ Hay cosas que dependen de ti: ocuparte de tu parte en casa sin esperar a que te 
 
 ### MEN-08 · Fuentes
 
-Esta información se basa en revisiones científicas sobre la fisiología del endometrio (2020 y 2022), metaanálisis sobre el dolor menstrual (2019) y sobre el ciclo y las capacidades cognitivas (2025), estudios españoles con estudiantes universitarias (2018 y 2020), un estudio cualitativo realizado en Barcelona (2022), guías del Colegio Americano de Obstetras y Ginecólogos (ACOG) y de la Sociedad de Obstetras y Ginecólogos de Canadá (SOGC), y la Ley Orgánica 1/2023. Las referencias completas están disponibles en «Fuentes».
+Esta información se basa en revisiones científicas sobre la fisiología del endometrio (2020 y 2022), metaanálisis sobre el dolor menstrual (2019) y sobre el ciclo y las capacidades cognitivas (2025), la Encuesta de Anticoncepción en España de la Sociedad Española de Contracepción (2024), estudios españoles con estudiantes universitarias (2018 y 2020), un estudio cualitativo realizado en Barcelona (2022), guías del Colegio Americano de Obstetras y Ginecólogos (ACOG) y de la Sociedad de Obstetras y Ginecólogos de Canadá (SOGC), y la Ley Orgánica 1/2023. Las referencias completas están disponibles en «Fuentes».
 
 ## 5. Mensajes de derivación
 
@@ -137,9 +137,9 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 |---|---|---|
 | MEN-02 | Fisiología, desencadenante, reparación y día 1 del ciclo | ME-A01 a ME-A04 |
 | MEN-03 | Duración típica y flujo de los primeros días; uso del dato declarado | ME-A05, ME-A06; M-02 de JUA-23 |
-| MEN-04 | Prevalencia, mecanismo, momento del dolor, otras molestias, cuándo consultar y normalización | ME-A09, ME-A10, ME-A12, ME-A16, ME-A19 |
+| MEN-04 | Prevalencia y necesidad de medicación en España, mecanismo, momento del dolor, otras molestias, cuándo consultar y normalización | ME-A09, ME-A10 (S-26), ME-A12, ME-A16, ME-A19 |
 | MEN-05 | Sin cambios cognitivos; variación pequeña del ánimo; estereotipo y su efecto | ME-A13, ME-A15, ME-A17 (S-13, S-21) |
-| MEN-06 | Ocultación del motivo; marco legal español | ME-A11 (S-11); ME-A20 |
+| MEN-06 | Seguir con dolor sin decirlo; necesidad de faltar frente a faltar de hecho y temor a consecuencias laborales en España; marco legal español | ME-A11 (S-11, S-26); ME-A20 |
 | MEN-07 | Papel de la pareja | ME-A18, ME-A19; SG-06 |
 | DER-01 | Criterios de consulta | Cierre de JUA-10 (auditoría 06); `jua-10/13` |
 | DER-02 | Criterio de urgencia | `jua-10/13` (ACOG) |
@@ -148,8 +148,8 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 
 | ID | Decisión | Propuesta |
 |---|---|---|
-| D-01 | MEN-04 da una cifra de prevalencia («siete de cada diez»). Puede leerse como «lo normal es que le duela». | Mantenerla: transmite que es frecuente y no raro, y la frase siguiente evita normalizarlo. Pedir valoración en la revisión clínica. |
-| D-02 | MEN-06 cita un estudio de los Países Bajos. No hay un dato español equivalente verificado. | Mantenerlo y sustituirlo si aparece un dato español. |
+| D-01 | MEN-04 da una cifra de prevalencia («más de siete de cada diez»), ahora de población general española (S-26) y no solo de mujeres jóvenes. Puede leerse como «lo normal es que le duela». | Mantenerla: transmite que es frecuente y no raro, y la frase siguiente evita normalizarlo. Pedir valoración en la revisión clínica. |
+| D-02 | MEN-06 citaba un estudio de los Países Bajos porque no había un dato español equivalente. | **Aplicada la propuesta (06-11-2026):** se sustituye por los datos españoles de la encuesta de la SEC de 2024 (S-26). Pendiente de confirmación de producto. |
 | D-03 | MEN-04 alude a los diagnósticos retrasados sin nombrar la endometriosis. | No nombrarla en la pantalla para no sugerir un diagnóstico. Valorar en la revisión clínica si nombrarla ayuda a reconocer el problema. |
 | D-04 | MEN-07 pide «no hacer bromas sobre la regla». Es una instrucción directa, y T-01 evita el tono de sermón. | Mantenerla como acción propia concreta; validar el tono con usuarios del piloto (P-05 del cierre). |
 | D-05 | DER-02 habla de «compresas o tampones». Hay otros productos (copa, ropa interior absorbente) con los que el criterio de ACOG no se puede aplicar igual. | Mantener el criterio de ACOG tal cual y pedir a la revisión clínica una formulación válida para todos los productos. |
@@ -161,5 +161,6 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques MEN-00 a MEN-08, DER-01 y DER-02.
 - Cinco decisiones abiertas.
+- 06-11-2026: MEN-04 y MEN-06 pasan a datos de población general española (encuesta de la SEC de 2024); el dato de los Países Bajos sale de la pantalla (D-02).
 - 06-11-2026: MEN-05 incorpora los estudios de registro diario en población general (Romans 2013; Kiesner 2016 y 2022).
 - 05-11-2026: fisiología y estigma reforzados con Critchley et al. 2020 y Johnston-Robledo y Chrisler, verificados en texto completo. Se añade «sin dejar cicatriz» en MEN-02.

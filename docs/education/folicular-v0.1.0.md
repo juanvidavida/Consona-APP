@@ -22,7 +22,7 @@ Se añaden las reglas de sesgo SGF-01 a SGF-05 de `03-sesgo-genero.md`.
 
 ### Coherencia con las tarjetas de la home
 
-Las tarjetas de la fase folicular (`home-cards-follicular-v0.1.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra.
+Las tarjetas de la fase folicular (`home-cards-follicular-v0.2.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra.
 
 ## 2. Texto de la pantalla
 

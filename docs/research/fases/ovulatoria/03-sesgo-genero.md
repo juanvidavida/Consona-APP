@@ -22,6 +22,7 @@ En esta fase coinciden los tres riesgos más graves para Consona:
 | OS-06 Wilcox 2000 | Sí | Sí | Sí | Parcial | Sí | Independiente, pero antiguo. Mujeres que buscaban embarazo, mayoritariamente blancas y universitarias (declarado). | Variabilidad y límite anticonceptivo, sin cifras de fertilidad. |
 | OS-07 Prior 2015 | Sí | Sí | Sí | Sí | Sí | Cuestiona la idea de que una regla regular garantice la ovulación. Muestra poblacional, aunque de edad media alta. | Anovulación como fenómeno frecuente e intermitente. |
 | OS-09 Levy y Romo-Avilés 2019 | Sí | Sí | Sí | Sí | Sí | Perspectiva de estudios de las mujeres y de género. | Fuente española sobre el uso real de las apps. |
+| OS-16 SEC 2024 | Sí | Sí | Sí | Parcial | **No** | Describe edad, nacionalidad, estudios, ingresos y situación de pareja. No contempla a personas que menstrúan y no son mujeres; algunas preguntas dan por hecha una pareja masculina. Financiación no declarada. No revisada por pares. | Dato español de uso de métodos, como dato de grupo. |
 | OS-11 Jones 2018 | Sí | Parcial | Sí | **No** | Sí | Estudia una hipótesis que vincula el ciclo con la atracción (C2), aunque para refutarla. Muestra solo de mujeres blancas heterosexuales. | Solo para justificar que el estereotipo no tiene base sólida. |
 
 ## 3. Patrones de sesgo detectados

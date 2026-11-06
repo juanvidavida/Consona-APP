@@ -18,7 +18,7 @@ Iguales que en la pantalla de la menstruación (`menstruacion-v0.1.0.md`, seccio
 
 ### Coherencia con la rueda y con las tarjetas de la home
 
-La rueda dibuja la ventana con bordes difusos (JUA-27 §3.4) y las tarjetas de la ventana ovulatoria (`home-cards-ovulatory-v0.1.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las tres piezas se revisa contra las otras.
+La rueda dibuja la ventana con bordes difusos (JUA-27 §3.4) y las tarjetas de la ventana ovulatoria (`home-cards-ovulatory-v0.2.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las tres piezas se revisa contra las otras.
 
 ## 2. Texto de la pantalla
 
@@ -78,7 +78,7 @@ Si en algún momento habláis de anticoncepción o de buscar un embarazo, es una
 
 ### OVU-08 · Fuentes
 
-Esta información se basa en la fisiología del ciclo (2018), estudios sobre el momento de la ovulación con miles de ciclos (2000 a 2020), un estudio con población general noruega (2015), una revisión sistemática sobre métodos basados en el conocimiento de la fertilidad (2018) y un estudio de la Universidad de Granada sobre el uso de apps menstruales (2019). Las referencias completas están disponibles en «Fuentes».
+Esta información se basa en la fisiología del ciclo (2018), una opinión de comité de la Sociedad Americana de Medicina Reproductiva sobre la ventana fértil (2022), estudios sobre el momento de la ovulación y la fecundación con miles de ciclos (1995 a 2020), un estudio con población general noruega (2015), una revisión sistemática sobre métodos basados en el conocimiento de la fertilidad (2018) un estudio de la Universidad de Granada sobre el uso de apps menstruales (2019) y la Encuesta de Anticoncepción en España de la Sociedad Española de Contracepción (2024). Las referencias completas están disponibles en «Fuentes».
 
 ## 3. Mensaje de derivación
 
@@ -87,9 +87,9 @@ Esta información se basa en la fisiología del ciclo (2018), estudios sobre el 
 **Posición:** después de OVU-07.
 
 > **Anticoncepción y búsqueda de embarazo**
-> Si queréis evitar un embarazo o buscarlo, un profesional sanitario puede orientaros sobre métodos fiables y sobre cómo funciona el ciclo de cada persona. El centro de salud o un centro de atención a la salud sexual y reproductiva son buenos puntos de partida.
+> Si queréis evitar un embarazo o buscarlo, un profesional sanitario puede orientaros sobre métodos fiables y sobre cómo funciona el ciclo de cada persona. El centro de salud (medicina de familia o matrona) o un centro de atención a la salud sexual y reproductiva son buenos puntos de partida.
 
-Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método anticonceptivo»); OS-08; OS-09.
+Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método anticonceptivo»); OS-08; OS-09; OS-16 (en España, la mayoría elige su método con un profesional: ginecología, medicina de familia, matrona o centro de planificación).
 
 ## 4. Trazabilidad
 
@@ -103,7 +103,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | OVU-05b | Límite anticonceptivo; pocos días sin posibilidad de embarazo; uso real de las apps | OV-A07, OV-A08, OV-A14 (OS-06, OS-08, OS-09); SGO-02 |
 | OVU-06 | Ánimo, capacidades y estado de la pareja | OV-A11; O-04, SGO-01 |
 | OVU-07 | Papel de la pareja | Regla T-02 |
-| DER-01 | Derivación | `jua-10/01`; OS-08 |
+| DER-01 | Derivación | `jua-10/01`; OS-08; OS-16 |
 
 ## 5. Decisiones abiertas
 
@@ -123,5 +123,6 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques OVU-00 a OVU-08 y DER-01.
 - Cinco decisiones abiertas; el nombre visible está pendiente.
+- 06-11-2026: DER-01 nombra la medicina de familia y la matrona (encuesta de la SEC de 2024). OVU-08 añade las fuentes de la ventana fértil, que faltaban, y la encuesta.
 - 06-11-2026: OVU-05b añade que hay muy pocos días sin posibilidad de embarazo (Wilcox 2000, verificado en texto completo).
 - 06-11-2026: D-01 a D-04 resueltas. Nuevo bloque OVU-05 «Ovulación y embarazo»; el aviso anticonceptivo pasa a OVU-05b. Nueva decisión D-06.

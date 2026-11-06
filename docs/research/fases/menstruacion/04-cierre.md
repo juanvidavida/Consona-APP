@@ -33,7 +33,7 @@ Formulaciones aptas para Consona. Las tarjetas y la pantalla educativa deben sal
 **Dolor**
 > «Puede tener asociados dolor o calambres en algunas personas.» (ME-A10; texto aprobado en JUA-23)
 
-> «El dolor menstrual es muy frecuente: en estudios con mujeres jóvenes lo refieren unas siete de cada diez. Se debe sobre todo a unas sustancias, las prostaglandinas, que hacen que el útero se contraiga con fuerza, y suele ser mayor los primeros días.» (ME-A09, ME-A10)
+> «El dolor menstrual es muy frecuente: en España, más de siete de cada diez mujeres de 15 a 49 años dicen tener dolor con la regla, y casi la mitad necesita medicación para aliviarlo. Se debe sobre todo a unas sustancias, las prostaglandinas, que hacen que el útero se contraiga con fuerza, y suele ser mayor los primeros días.» (ME-A09, ME-A10)
 
 > «Que sea frecuente no significa que haya que aguantarlo. Un dolor que impide hacer vida normal, que cambia o que va a más merece consultarse, porque puede tener causas que se pueden tratar.» (ME-A12)
 
@@ -50,6 +50,8 @@ Formulaciones aptas para Consona. Las tarjetas y la pantalla educativa deben sal
 > «Si a tu pareja le preocupa su dolor, tomárselo en serio también es acompañar.» (ME-A19)
 
 **Contexto español**
+> «En España, una de cada cuatro mujeres ha sentido alguna vez que necesitaba faltar al trabajo, a clase o a otra actividad por el dolor o el sangrado de la regla, pero solo una de cada siete lo ha hecho. La mitad cree que faltar por ese motivo puede traerle consecuencias en el trabajo.» (ME-A11)
+
 > «En España, la ley reconoce la salud menstrual como parte de la salud sexual y reproductiva y prevé una baja cuando la menstruación es incapacitante por una enfermedad diagnosticada.» (ME-A20)
 
 ## 3. Redacción que no puede usarse
@@ -69,7 +71,7 @@ Formulaciones aptas para Consona. Las tarjetas y la pantalla educativa deben sal
 | ID | Pendiente | Responsable | Bloquea |
 |---|---|---|---|
 | P-01 | Conseguir el texto completo de las fuentes críticas que faltan (sección 4 de la auditoría): Peranovic 2017 y Haynes 1977. Critchley 2020, Johnston-Robledo y Chrisler y Nnoaham 2011 se consiguieron el 05-11-2026; Armour 2019, el 06-11-2026. | Producto | No. Las afirmaciones ya están limitadas al resumen. |
-| P-02 | Buscar un estudio español primario y reciente sobre el retraso diagnóstico de la endometriosis. La cifra española que circula (8,3 años, S-22) es una lectura errónea de S-25. | Investigación | No. La cifra no se usa en la interfaz. |
+| P-02 | Buscar un estudio español primario, reciente y revisado por pares sobre el retraso diagnóstico de la endometriosis. La cifra española que circula (8,3 años, S-22) es una lectura errónea de S-25. La encuesta de la SEC de 2024 (S-26) aporta un dato español autoinformado: el 64,1 % tardó más de 5 años. | Investigación | No. La cifra no se usa en la interfaz. |
 | P-03 | Comprobar si el estudio de Barcelona sobre pobreza menstrual (S-14) ha publicado resultados. | Investigación | No. |
 | P-04 | Revisión clínica de la pantalla educativa y de las tarjetas de la menstruación (JUA-16). | Persona revisora | Sí, la publicación. |
 | P-05 | Validar con usuarios del piloto el tono de los bloques sobre estigma y sobre el papel de la pareja. | Producto | No. |

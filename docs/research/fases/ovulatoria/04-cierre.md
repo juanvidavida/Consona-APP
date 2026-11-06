@@ -56,7 +56,7 @@ El cierre **no autoriza** información de fertilidad, fechas de ovulación, señ
 | ID | Pendiente | Bloquea |
 |---|---|---|
 | P-01 | Texto completo de Peragallo Urrutia 2018 y Wilcox 1995. Johnson 2018 y Wilcox 2000 se consiguieron el 06-11-2026. | No. |
-| P-02 | Conseguir la encuesta de anticoncepción de la Sociedad Española de Contracepción (2022 o 2024) para el dato español de uso de métodos naturales. | No. |
+| P-02 | ~~Conseguir la encuesta de anticoncepción de la SEC~~. Incorporada el 06-11-2026 (OS-16, OV-A15 y OV-A16). | — |
 | P-03 | ~~Decidir el nombre visible de la fase~~. Resuelto el 06-11-2026: «Ventana ovulatoria estimada» en la rueda, sin «fértil». | — |
 | P-05 | Artículo amplio de anticoncepción en «Comprender» (JUA-31), decidido el 06-11-2026. | No. |
 | P-04 | Revisión clínica de la pantalla y de las tarjetas (JUA-16). | Sí, la publicación. |
