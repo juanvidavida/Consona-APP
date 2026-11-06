@@ -28,7 +28,7 @@ El cierre **no autoriza** información de fertilidad, fechas de ovulación, señ
 
 > «La ventana que ves en Consona se calcula hacia atrás desde la fecha prevista de la siguiente regla. Es un momento aproximado: en bastantes ciclos, la ovulación ocurre antes o después. Ningún calendario puede saber cuándo ha ovulado alguien.» (OV-A04, OV-A05)
 
-> «Que la regla llegue con regularidad no confirma que haya habido ovulación: un ciclo sin ovulación de vez en cuando es frecuente.» (OV-A06)
+> «Que la regla llegue con regularidad no confirma que haya habido ovulación: en un estudio con población general, al menos uno de cada cuatro ciclos de duración normal no mostraba signos de ovulación.» (OV-A06; D-02 de la pantalla)
 
 **Ovulación y embarazo**
 > «Un embarazo solo es posible en unos pocos días de cada ciclo: los cinco anteriores a la ovulación y el propio día de la ovulación. Los espermatozoides pueden seguir siendo capaces de fecundar durante varios días, mientras que el óvulo solo puede ser fecundado durante poco tiempo.» (OV-A12, OV-A13)

@@ -84,7 +84,7 @@ Que sea frecuente no significa que haya que aguantarlo. Un dolor que impide hace
 
 La investigación no muestra que la menstruación cambie la capacidad de concentrarse, razonar o rendir.
 
-El ánimo puede variar a lo largo del ciclo, pero en promedio varía poco, y una media no dice cómo está tu pareja hoy. El estereotipo de que con la regla alguien está irritable o fuera de control no se sostiene, y hace daño: lleva a no tomarse en serio lo que esa persona dice o siente.
+El ánimo puede variar a lo largo del ciclo, pero en promedio varía poco, y en el día a día depende mucho más de la salud, del estrés y del apoyo que de la fase. Una media no dice cómo está tu pareja hoy. El estereotipo de que con la regla alguien está irritable o fuera de control no se sostiene, y hace daño: lleva a no tomarse en serio lo que esa persona dice o siente.
 
 ### MEN-06 · Lo que no se suele contar
 
@@ -161,4 +161,5 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques MEN-00 a MEN-08, DER-01 y DER-02.
 - Cinco decisiones abiertas.
+- 06-11-2026: MEN-05 incorpora los estudios de registro diario en población general (Romans 2013; Kiesner 2016 y 2022).
 - 05-11-2026: fisiología y estigma reforzados con Critchley et al. 2020 y Johnston-Robledo y Chrisler, verificados en texto completo. Se añade «sin dejar cicatriz» en MEN-02.
