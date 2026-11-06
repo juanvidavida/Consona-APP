@@ -114,7 +114,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | D-03 | OVU-05b menciona que hay quien usa las apps para decidir cuándo tomar precauciones. | **Resuelta (06-11-2026):** se mantiene; es el motivo del aviso y está documentado en España (OS-09). |
 | D-04 | OVU-07 menciona la conversación sobre anticoncepción. Podía parecer que rozaba el ámbito sexual (H-05). | **Resuelta (06-11-2026):** la salud reproductiva es contenido válido de Consona y debe estar presente. H-05 excluye el deseo, la actividad sexual, el consentimiento sexual, los límites y la disponibilidad, no la anticoncepción ni la búsqueda de embarazo. Presencia garantizada en OVU-05, OVU-07 y DER-01 (R-09). |
 | D-05 | La pantalla no menciona el dolor de ovulación, que algunas personas notan. | No mencionarlo (O-05). |
-| D-06 | OVU-05 explica la ventana fértil y la supervivencia de los gametos sin cifras de horas ni de probabilidad. | Mantener sin cifras: dar horas o probabilidades invitaría a hacer cálculos. Pedir valoración en la revisión clínica. |
+| D-06 | OVU-05 explica la ventana fértil y la supervivencia de los gametos sin cifras de horas ni de probabilidad. | **Resuelta (06-11-2026):** se mantiene sin cifras de horas ni de probabilidad. Se pide igualmente valoración en la revisión clínica. |
 
 ## 6. Historial
 
@@ -123,6 +123,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques OVU-00 a OVU-08 y DER-01.
 - Cinco decisiones abiertas; el nombre visible está pendiente.
+- 06-11-2026: D-06 resuelta. D-05 (dolor de ovulación) sigue abierta.
 - 06-11-2026: DER-01 nombra la medicina de familia y la matrona (encuesta de la SEC de 2024). OVU-08 añade las fuentes de la ventana fértil, que faltaban, y la encuesta.
 - 06-11-2026: OVU-05b añade que hay muy pocos días sin posibilidad de embarazo (Wilcox 2000, verificado en texto completo).
 - 06-11-2026: D-01 a D-04 resueltas. Nuevo bloque OVU-05 «Ovulación y embarazo»; el aviso anticonceptivo pasa a OVU-05b. Nueva decisión D-06.

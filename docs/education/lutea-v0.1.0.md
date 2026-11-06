@@ -19,7 +19,7 @@ Iguales que en la pantalla de la menstruación (`menstruacion-v0.1.0.md`, seccio
 
 Esta pantalla se revisa siempre contra estas tres piezas:
 
-- **La pantalla SPM/TDPM** (`spm-tdpm-v0.4.0.md`, JUA-19, PR #9). Esta pantalla explica la fase entera. La pantalla SPM/TDPM desarrolla los cambios premenstruales y los términos clínicos. LUT-05 resume y remite a ella sin repetir sus cifras. DER-01 y DER-02 reproducen sin cambios sus mensajes de derivación.
+- **La pantalla SPM/TDPM** (`spm-tdpm-v0.4.0.md`, JUA-19, PR #9). Esta pantalla explica la fase entera. La pantalla SPM/TDPM desarrolla los cambios premenstruales y los términos clínicos. LUT-05 resume y enlaza a ella sin repetir sus cifras. El enlace es estático y no cambia según la fase ni ningún dato (U-02). DER-01 y DER-02 reproducen sin cambios sus mensajes de derivación.
 - **Las tarjetas de la fase lútea** (`home-cards-luteal-v0.1.0.md`, JUA-19), que resumen esta pantalla.
 - **La rueda** (JUA-27), que dibuja la fase lútea con 12 días.
 
@@ -59,7 +59,7 @@ Además, en algunos ciclos no hay ovulación, y entonces tampoco hay fase lútea
 
 Hacia el final de esta fase, algunas personas notan cambios en el cuerpo o en el ánimo: por ejemplo, dolor, hinchazón o cansancio; irritabilidad, tristeza o tensión; o cambios en el sueño o el apetito. Otras no notan ninguno, y en una misma persona puede cambiar de un ciclo a otro.
 
-Cuando los cambios se repiten ciclo tras ciclo y afectan de forma importante al día a día, se habla de síndrome premenstrual (SPM) o, en su forma más intensa y menos frecuente, de trastorno disfórico premenstrual (TDPM). Son términos clínicos que solo puede valorar un profesional. Los explicamos en «Variabilidad premenstrual: SPM y TDPM», dentro de «Cómo funciona».
+Cuando los cambios se repiten ciclo tras ciclo y afectan de forma importante al día a día, se habla de síndrome premenstrual (SPM) o, en su forma más intensa y menos frecuente, de trastorno disfórico premenstrual (TDPM). Son términos clínicos que solo puede valorar un profesional. Los explicamos en [«Variabilidad premenstrual: SPM y TDPM»](./spm-tdpm-v0.4.0.md).
 
 ### LUT-06 · Lo que la fase lútea no dice
 
@@ -145,10 +145,10 @@ La v0.1.0 no contiene:
 
 | ID | Decisión | Propuesta |
 |---|---|---|
-| D-01 | DER-02 (ayuda urgente) se repite aquí, además de en la pantalla SPM/TDPM. | Mantenerlo: el bloque LUT-05 habla del ánimo antes de la regla, y el mensaje debe estar donde se lee. |
-| D-02 | LUT-05 da ejemplos de cambios premenstruales. Pueden leerse como una lista para vigilar a la pareja. | Mantener los mismos ejemplos que SPM-03, por coherencia, rodeados de «algunas personas» y «otras no». Pedir valoración en la revisión clínica. |
-| D-03 | LUT-04 dice que en algunos ciclos no hay fase lútea aunque la rueda la dibuje. Puede restar confianza en la rueda. | Mantenerlo: es el criterio de producto de explicar la fase como dato probable, no exacto (JUA-27). |
-| D-04 | LUT-05 nombra la pantalla SPM/TDPM sin enlace. La regla U-01 de esa pantalla limita su acceso a «Cómo funciona». | Añadir un enlace estático desde aquí y ampliar U-01 de la pantalla SPM/TDPM en JUA-19. Mientras tanto, se nombra sin enlace. |
+| D-01 | DER-02 (ayuda urgente) se repite aquí, además de en la pantalla SPM/TDPM. | **Resuelta (06-11-2026):** se mantiene DER-02. |
+| D-02 | LUT-05 da ejemplos de cambios premenstruales. Pueden leerse como una lista para vigilar a la pareja. | **Resuelta (06-11-2026):** se mantienen los ejemplos de SPM-03. Se pide valoración en la revisión clínica. |
+| D-03 | LUT-04 dice que en algunos ciclos no hay fase lútea aunque la rueda la dibuje. Puede restar confianza en la rueda. | **Resuelta (06-11-2026):** se mantiene, como dato probable y no exacto. |
+| D-04 | LUT-05 nombra la pantalla SPM/TDPM sin enlace. La regla U-01 de esa pantalla limita su acceso a «Cómo funciona». | **Resuelta (06-11-2026):** LUT-05 enlaza la pantalla SPM/TDPM con un enlace estático, igual para todas las personas (U-02). La regla U-01 de la pantalla SPM/TDPM se amplía en JUA-19 (PR #9). |
 | D-05 | LUT-06 nombra el estereotipo de la mujer «premenstrual». | Mantenerlo, con el mismo criterio que en las otras fases (D-03 de JUA-23): nombrarlo hace el texto reconocible, aunque lo repita. |
 
 ## 7. Historial
@@ -158,3 +158,4 @@ La v0.1.0 no contiene:
 - Primera versión, a partir del cierre de la investigación de la fase lútea de JUA-36.
 - Bloques LUT-00 a LUT-08, DER-01 y DER-02.
 - Cinco decisiones abiertas.
+- 06-11-2026: D-01 a D-04 resueltas; LUT-05 enlaza la pantalla SPM/TDPM. D-05 sigue abierta.

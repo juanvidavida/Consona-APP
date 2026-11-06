@@ -97,19 +97,20 @@ Fuente: orientación pública de ACOG sobre sangrado uterino anormal (`jua-10/13
 | FOL-06 | Papel de la pareja | SGF-02; regla T-02 |
 | DER-01 | Criterios de consulta | `jua-10/13` (ACOG) |
 
-## 5. Decisiones abiertas
+## 5. Decisiones
 
 | ID | Decisión | Propuesta |
 |---|---|---|
-| D-01 | La pantalla no lleva un mensaje de ayuda urgente. | No incluirlo: el de la menstruación cubre el sangrado abundante. Pedir confirmación en la revisión clínica. |
-| D-02 | FOL-04 menciona que uno de los estudios es español. | Mantenerlo: da cercanía y es una fuente verificada. |
-| D-03 | FOL-05 menciona la exclusión de las mujeres de la investigación. Puede leerse como ajeno a la pareja. | Mantenerlo en una frase: explica por qué circulan los mitos. Validar el tono en el piloto. |
-| D-04 | DER-01 da criterios en términos generales y no las cifras de ACOG. | Mantenerlo así para no convertir la pantalla en un test. |
+| D-01 | La pantalla no lleva un mensaje de ayuda urgente. | **Resuelta (06-11-2026):** no se incluye mensaje de ayuda urgente. Se pide confirmación en la revisión clínica. |
+| D-02 | FOL-04 menciona que uno de los estudios es español. | **Resuelta (06-11-2026):** se mantiene la mención al estudio español. |
+| D-03 | FOL-05 menciona la exclusión de las mujeres de la investigación. Puede leerse como ajeno a la pareja. | **Resuelta (06-11-2026):** se mantiene en una frase; tono a validar en el piloto. |
+| D-04 | DER-01 da criterios en términos generales y no las cifras de ACOG. | **Resuelta (06-11-2026):** los criterios se mantienen en términos generales. |
 
 ## 6. Historial
 
 ### [0.1.0] — 05-11-2026
 
+- 06-11-2026: decisiones D-01 a D-04 resueltas, todas con la propuesta.
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques FOL-00 a FOL-07 y DER-01.
 - Cuatro decisiones abiertas.

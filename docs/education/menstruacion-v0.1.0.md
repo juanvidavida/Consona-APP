@@ -127,9 +127,9 @@ Fuentes: ACOG CPG No. 11 y FAQ de dolor menstrual (cierre de JUA-10); FAQ de ACO
 **Posición:** después de MEN-01, en la primera vista.
 
 > **Si hay un sangrado muy abundante con mareo**
-> Si el sangrado empapa una o más compresas o tampones cada hora durante más de dos horas seguidas y además hay mareo, sensación de desmayo, falta de aire o dolor en el pecho, llama al **112**.
+> Si el sangrado empapa cada hora una o más compresas, tampones o prendas de ropa interior absorbente, o llena la copa en una hora, durante más de dos horas seguidas, y además hay mareo, sensación de desmayo, falta de aire o dolor en el pecho, llama al **112**.
 
-Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso clínico).
+Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso clínico), formulado para compresas y tampones. La copa y la ropa interior absorbente son una adaptación editorial (D-05), apoyada en el NHS, *Heavy periods* (revisado el 19-09-2024), que incluye la copa en su definición de sangrado abundante. Pendiente de validación clínica.
 
 ## 6. Trazabilidad
 
@@ -148,11 +148,11 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 
 | ID | Decisión | Propuesta |
 |---|---|---|
-| D-01 | MEN-04 da una cifra de prevalencia («más de siete de cada diez»), ahora de población general española (S-26) y no solo de mujeres jóvenes. Puede leerse como «lo normal es que le duela». | Mantenerla: transmite que es frecuente y no raro, y la frase siguiente evita normalizarlo. Pedir valoración en la revisión clínica. |
-| D-02 | MEN-06 citaba un estudio de los Países Bajos porque no había un dato español equivalente. | **Aplicada la propuesta (06-11-2026):** se sustituye por los datos españoles de la encuesta de la SEC de 2024 (S-26). Pendiente de confirmación de producto. |
-| D-03 | MEN-04 alude a los diagnósticos retrasados sin nombrar la endometriosis. | No nombrarla en la pantalla para no sugerir un diagnóstico. Valorar en la revisión clínica si nombrarla ayuda a reconocer el problema. |
+| D-01 | MEN-04 da una cifra de prevalencia («más de siete de cada diez»), ahora de población general española (S-26) y no solo de mujeres jóvenes. Puede leerse como «lo normal es que le duela». | **Resuelta (06-11-2026):** se mantiene la cifra. Se pide igualmente valoración en la revisión clínica. |
+| D-02 | MEN-06 citaba un estudio de los Países Bajos porque no había un dato español equivalente. | **Resuelta (06-11-2026):** confirmada la sustitución por los datos españoles de la encuesta de la SEC de 2024 (S-26). |
+| D-03 | MEN-04 alude a los diagnósticos retrasados sin nombrar la endometriosis. | **Resuelta (06-11-2026):** no se nombra la endometriosis. La revisión clínica puede valorar si nombrarla ayuda a reconocer el problema. |
 | D-04 | MEN-07 pide «no hacer bromas sobre la regla». Es una instrucción directa, y T-01 evita el tono de sermón. | Mantenerla como acción propia concreta; validar el tono con usuarios del piloto (P-05 del cierre). |
-| D-05 | DER-02 habla de «compresas o tampones». Hay otros productos (copa, ropa interior absorbente) con los que el criterio de ACOG no se puede aplicar igual. | Mantener el criterio de ACOG tal cual y pedir a la revisión clínica una formulación válida para todos los productos. |
+| D-05 | DER-02 habla de «compresas o tampones». Hay otros productos (copa, ropa interior absorbente) con los que el criterio de ACOG no se puede aplicar igual. | **Resuelta (06-11-2026):** DER-02 incluye la copa y la ropa interior absorbente. La equivalencia es una adaptación editorial del criterio de ACOG, que solo habla de compresas y tampones; se apoya en que el NHS incluye la copa en su definición de sangrado abundante (revisado el 19-09-2024). La revisión clínica debe validarla. |
 
 ## 8. Historial
 
@@ -161,6 +161,7 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 - Primera versión, a partir del cierre de la investigación de JUA-36.
 - Bloques MEN-00 a MEN-08, DER-01 y DER-02.
 - Cinco decisiones abiertas.
+- 06-11-2026: decisiones D-01, D-02, D-03 y D-05 resueltas. DER-02 incluye la copa y la ropa interior absorbente. D-04 sigue abierta.
 - 06-11-2026: MEN-04 y MEN-06 pasan a datos de población general española (encuesta de la SEC de 2024); el dato de los Países Bajos sale de la pantalla (D-02).
 - 06-11-2026: MEN-05 incorpora los estudios de registro diario en población general (Romans 2013; Kiesner 2016 y 2022).
 - 05-11-2026: fisiología y estigma reforzados con Critchley et al. 2020 y Johnston-Robledo y Chrisler, verificados en texto completo. Se añade «sin dejar cicatriz» en MEN-02.
