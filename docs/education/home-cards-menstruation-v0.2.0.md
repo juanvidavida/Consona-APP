@@ -80,7 +80,7 @@ El prototipo no tiene texto propio de la menstruación: muestra en todas las fas
 
 ## 5. Exclusiones comprobadas
 
-La v0.1.0 no contiene:
+La v0.2.0 no contiene:
 
 - [x] Diagnósticos: dismenorrea, endometriosis, sangrado abundante, anemia, SPM ni TDPM.
 - [x] Dolor, cansancio o ánimo presentados como esperables en tu pareja.

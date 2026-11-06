@@ -137,7 +137,7 @@ El prototipo no tiene texto propio de la menstruación: muestra en todas las fas
 
 ### 5. Exclusiones comprobadas
 
-La v0.1.0 no contiene:
+La v0.2.0 no contiene:
 
 - [x] Diagnósticos: dismenorrea, endometriosis, sangrado abundante, anemia, SPM ni TDPM.
 - [x] Dolor, cansancio o ánimo presentados como esperables en tu pareja.
@@ -267,7 +267,7 @@ El prototipo no tiene texto propio de la fase folicular: muestra en todas las fa
 
 ### 5. Exclusiones comprobadas
 
-La v0.1.0 no contiene:
+La v0.2.0 no contiene:
 
 - [x] Afirmaciones de que el sangrado haya terminado o continúe.
 - [x] Duraciones fijas («del día 1 al 14», «dos semanas»).
@@ -395,7 +395,7 @@ El prototipo no tiene texto propio de la ventana ovulatoria: muestra en todas la
 
 ### 5. Exclusiones comprobadas
 
-La v0.1.0 no contiene:
+La v0.2.0 no contiene:
 
 - [x] «Día de ovulación», «estás ovulando», «días fértiles», «periodo fértil» ni «días seguros».
 - [x] Probabilidad de embarazo ni uso de la ventana para buscarlo o evitarlo (solo el aviso de que no sirve para eso).

@@ -72,7 +72,7 @@ El prototipo no tiene texto propio de la fase folicular: muestra en todas las fa
 
 ## 5. Exclusiones comprobadas
 
-La v0.1.0 no contiene:
+La v0.2.0 no contiene:
 
 - [x] Afirmaciones de que el sangrado haya terminado o continúe.
 - [x] Duraciones fijas («del día 1 al 14», «dos semanas»).

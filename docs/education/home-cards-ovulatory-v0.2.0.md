@@ -73,7 +73,7 @@ El prototipo no tiene texto propio de la ventana ovulatoria: muestra en todas la
 
 ## 5. Exclusiones comprobadas
 
-La v0.1.0 no contiene:
+La v0.2.0 no contiene:
 
 - [x] «Día de ovulación», «estás ovulando», «días fértiles», «periodo fértil» ni «días seguros».
 - [x] Probabilidad de embarazo ni uso de la ventana para buscarlo o evitarlo (solo el aviso de que no sirve para eso).
