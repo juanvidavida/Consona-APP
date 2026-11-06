@@ -46,6 +46,7 @@ Consona habla a la pareja que acompaña, que en el público objetivo es mayorita
 | S-25 Nnoaham 2011 | Sí | Sí | Sí | Sí | Sí, **con conflicto** | Población de 10 países y de distintas etnias, descrita con detalle. Financiación de Bayer Schering y autores consultores. Señala el estigma como causa del retraso. | Solo el retraso diagnóstico y su origen en atención primaria, como dato de grupo. |
 | S-24 Ponzo 2022 | Sí | Sí | Sí | Parcial | Sí, **con conflicto** | La empresa evalúa su propia app y concluye que reduce el impacto en la productividad. | **Excluida del contenido.** |
 | S-26 SEC 2024 | Sí | Sí | Sí | Parcial | **No** | Describe edad, nacionalidad, estudios, ingresos y situación de pareja. No contempla a personas que menstrúan y no son mujeres, y algunas preguntas dan por hecha una pareja masculina («su pareja tiene la vasectomía»). Financiación no declarada. Literatura gris, no revisada por pares. | Datos descriptivos españoles, solo como dato de grupo. |
+| S-27 Sánchez-López 2025 (INGENIO) | Sí | Sí | Sí | Parcial | Sí | Perspectiva de género explícita, con reflexividad del equipo. Declara que usa «mujeres» para mujeres cis porque los datos cualitativos son suyos, aunque la encuesta incluyó a personas trans. Muestra voluntaria con predominio universitario. | Normalización del dolor en la consulta y barreras de acceso en España, como dato de grupo. |
 
 ## 3. Patrones de sesgo detectados
 

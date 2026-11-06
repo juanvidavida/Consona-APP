@@ -137,7 +137,7 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 |---|---|---|
 | MEN-02 | Fisiología, desencadenante, reparación y día 1 del ciclo | ME-A01 a ME-A04 |
 | MEN-03 | Duración típica y flujo de los primeros días; uso del dato declarado | ME-A05, ME-A06; M-02 de JUA-23 |
-| MEN-04 | Prevalencia y necesidad de medicación en España, mecanismo, momento del dolor, otras molestias, cuándo consultar y normalización | ME-A09, ME-A10 (S-26), ME-A12, ME-A16, ME-A19 |
+| MEN-04 | Prevalencia y necesidad de medicación en España, mecanismo, momento del dolor, otras molestias, cuándo consultar y normalización, también en las consultas españolas | ME-A09, ME-A10 (S-26), ME-A12, ME-A16, ME-A19 (S-27) |
 | MEN-05 | Sin cambios cognitivos; variación pequeña del ánimo; estereotipo y su efecto | ME-A13, ME-A15, ME-A17 (S-13, S-21) |
 | MEN-06 | Seguir con dolor sin decirlo; necesidad de faltar frente a faltar de hecho y temor a consecuencias laborales en España; marco legal español | ME-A11 (S-11, S-26); ME-A20 |
 | MEN-07 | Papel de la pareja | ME-A18, ME-A19; SG-06 |
