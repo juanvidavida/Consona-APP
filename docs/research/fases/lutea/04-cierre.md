@@ -41,6 +41,8 @@ El cierre **no autoriza** umbrales de duración, diagnósticos, predicciones de 
 
 > «La imagen de la mujer "premenstrual" irritable o fuera de control es un estereotipo, y hace daño.» (LU-A12)
 
+> «Se repite en bromas, anuncios y conversaciones, y por eso parece cierto. Pero cuando se ha estudiado el ánimo día a día sin que las participantes supieran que el estudio trataba del ciclo, ese patrón apenas aparece.» (LU-A10, LU-A12; LS-13)
+
 **Acompañar**
 > «Que en la rueda aparezca esta fase no te dice cómo está tu pareja. Si notas tensión, pregunta en lugar de atribuirlo al ciclo.» (LU-A13)
 

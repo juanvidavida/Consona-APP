@@ -67,7 +67,7 @@ La investigación no muestra que en esta fase cambie la capacidad de concentrars
 
 En promedio, el ánimo varía poco a lo largo del ciclo, muchas personas no notan ningún cambio ligado a él, y en el día a día pesan mucho más la salud, el estrés y el apoyo.
 
-La imagen de la mujer «premenstrual» irritable, irracional o fuera de control es un estereotipo, y hace daño: lleva a quitar valor a lo que una persona dice o siente, y también a no tomarse en serio un malestar real.
+La imagen de la mujer «premenstrual» irritable, irracional o fuera de control es un estereotipo. Se repite en bromas, anuncios y conversaciones, y por eso parece cierto. Pero cuando se ha estudiado el ánimo día a día sin que las participantes supieran que el estudio trataba del ciclo, ese patrón apenas aparece. Y hace daño: lleva a quitar valor a lo que una persona dice o siente, y también a no tomarse en serio un malestar real.
 
 ### LUT-07 · Acompañar en consonancia
 
@@ -141,7 +141,7 @@ La v0.1.0 no contiene:
 - [x] Deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad.
 - [x] Formularios, registros o cualquier captura de datos.
 
-## 6. Decisiones abiertas
+## 6. Decisiones
 
 | ID | Decisión | Propuesta |
 |---|---|---|
@@ -149,7 +149,7 @@ La v0.1.0 no contiene:
 | D-02 | LUT-05 da ejemplos de cambios premenstruales. Pueden leerse como una lista para vigilar a la pareja. | **Resuelta (06-11-2026):** se mantienen los ejemplos de SPM-03. Se pide valoración en la revisión clínica. |
 | D-03 | LUT-04 dice que en algunos ciclos no hay fase lútea aunque la rueda la dibuje. Puede restar confianza en la rueda. | **Resuelta (06-11-2026):** se mantiene, como dato probable y no exacto. |
 | D-04 | LUT-05 nombra la pantalla SPM/TDPM sin enlace. La regla U-01 de esa pantalla limita su acceso a «Cómo funciona». | **Resuelta (06-11-2026):** LUT-05 enlaza la pantalla SPM/TDPM con un enlace estático, igual para todas las personas (U-02). La regla U-01 de la pantalla SPM/TDPM se amplía en JUA-19 (PR #9). |
-| D-05 | LUT-06 nombra el estereotipo de la mujer «premenstrual». | Mantenerlo, con el mismo criterio que en las otras fases (D-03 de JUA-23): nombrarlo hace el texto reconocible, aunque lo repita. |
+| D-05 | LUT-06 nombra el estereotipo de la mujer «premenstrual». | **Resuelta (06-11-2026):** se mantiene y se explica por qué parece cierto: se repite en bromas, anuncios y conversaciones, y en el estudio diario con el objetivo oculto el patrón apenas aparece (LU-A10, LU-A12; LS-13). |
 
 ## 7. Historial
 
@@ -158,4 +158,4 @@ La v0.1.0 no contiene:
 - Primera versión, a partir del cierre de la investigación de la fase lútea de JUA-36.
 - Bloques LUT-00 a LUT-08, DER-01 y DER-02.
 - Cinco decisiones abiertas.
-- 06-11-2026: D-01 a D-04 resueltas; LUT-05 enlaza la pantalla SPM/TDPM. D-05 sigue abierta.
+- 06-11-2026: D-01 a D-05 resueltas; LUT-05 enlaza la pantalla SPM/TDPM y LUT-06 explica por qué el estereotipo parece cierto.
