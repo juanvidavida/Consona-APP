@@ -14,6 +14,7 @@ Iguales que en la pantalla de la menstruación (`menstruacion-v0.1.0.md`, seccio
 
 - **Reglas de la fase:** O-01 a O-06 de las tarjetas de JUA-23, y reglas de sesgo SGO-01 a SGO-05 de `03-sesgo-genero.md`.
 - **R-08:** ningún icono, color ni ilustración asociado a la fertilidad, el embarazo, el atractivo o la sexualidad.
+- **R-09:** la pantalla incluye siempre información de salud reproductiva: que la ventana no sirve como método anticonceptivo ni para buscar embarazo, y a dónde acudir para informarse (OVU-05, OVU-07, DER-01). Decisión de producto del 06-11-2026 (D-04).
 
 ### Coherencia con la rueda y con las tarjetas de la home
 
@@ -43,7 +44,7 @@ Es un momento aproximado. El día de la ovulación cambia mucho de una persona a
 
 ### OVU-04 · No todos los ciclos tienen ovulación
 
-Que la regla llegue con regularidad no confirma que haya habido ovulación. En un estudio con población general, entre una cuarta parte y un tercio de los ciclos de duración normal no mostraban signos de ovulación. Un ciclo sin ovulación de vez en cuando es frecuente, y la app no puede saber si ha ocurrido.
+Que la regla llegue con regularidad no confirma que haya habido ovulación. En un estudio con población general, al menos uno de cada cuatro ciclos de duración normal no mostraba signos de ovulación. Un ciclo sin ovulación de vez en cuando es frecuente, y la app no puede saber si ha ocurrido.
 
 ### OVU-05 · No sirve para buscar ni para evitar un embarazo
 
@@ -102,9 +103,9 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | ID | Decisión | Propuesta |
 |---|---|---|
 | D-01 | Nombre visible de la fase. «Ovulación» a secas es impreciso (es un hecho puntual, no se detecta y sugiere certeza). | Mantener «Ventana ovulatoria estimada» en la rueda y «La ventana ovulatoria» como título de la pantalla. Alternativa: «Ovulación aproximada». Decide producto. |
-| D-02 | OVU-04 da una proporción («entre una cuarta parte y un tercio»). Procede de un estudio con edad media de 42 años y una sola medición. | Mantenerla, porque desmonta la idea de que toda regla regular implica ovulación. Pedir valoración en la revisión clínica. |
+| D-02 | OVU-04 daba una proporción («entre una cuarta parte y un tercio»). Procede de un estudio con edad media de 42 años y una sola medición. | **Resuelta (06-11-2026):** «al menos uno de cada cuatro ciclos», el límite inferior del estudio. Se pide igualmente valoración en la revisión clínica. |
 | D-03 | OVU-05 menciona que hay quien usa las apps para decidir cuándo tomar precauciones. | Mantenerlo: es el motivo del aviso y está documentado en España (OS-09). |
-| D-04 | OVU-07 menciona la conversación sobre anticoncepción. Roza el ámbito sexual (H-05). | Mantenerlo: no habla de deseo ni de disponibilidad, sino de salud reproductiva y de decisiones compartidas. Validar en la revisión clínica. |
+| D-04 | OVU-07 menciona la conversación sobre anticoncepción. Podía parecer que rozaba el ámbito sexual (H-05). | **Resuelta (06-11-2026):** la salud reproductiva es contenido válido de Consona y debe estar presente. H-05 excluye el deseo, la actividad sexual, el consentimiento sexual, los límites y la disponibilidad, no la anticoncepción ni la búsqueda de embarazo. Presencia garantizada en OVU-05, OVU-07 y DER-01 (R-09). |
 | D-05 | La pantalla no menciona el dolor de ovulación, que algunas personas notan. | No mencionarlo (O-05). |
 
 ## 6. Historial
