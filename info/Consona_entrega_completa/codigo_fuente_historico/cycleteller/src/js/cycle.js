@@ -15,42 +15,78 @@
  * más estable. Por eso la ovulación hay que anclarla contando hacia atrás desde
  * la SIGUIENTE regla, no hacia delante desde la anterior.
  *
- *   Regla correcta (NHS): la ovulación ocurre 10-16 días ANTES de la siguiente regla.
- *   → ventana ovulatoria = [duración − 16, duración − 10]
+ * ---------------------------------------------------------------------------
+ * REGLA VIGENTE (JUA-27, 28-10-2026)
+ * ---------------------------------------------------------------------------
+ * La regla anterior pintaba como ventana ovulatoria todo el rango [L−16, L−10]
+ * y la lútea desde L−9: una lútea de 10 días en cualquier ciclo, justo el
+ * umbral de deficiencia lútea de ASRM 2026 (≤10 días) y más corta que la real
+ * en unos 4 de cada 5 ciclos. Ahora se separan el valor central y la incertidumbre:
  *
- * Ejemplo del error que se corrige, en un ciclo de 35 días:
- *   v1 decía "ovulación días 14-16".  Lo correcto es días 19-25.
- *   Es decir, v1 mostraba la fase equivocada durante más de una semana.
+ *   Lútea pintada       = 12 días: [L−11, L]
+ *   Ventana ovulatoria  = [L−14, L−12]: lútea de 12 a 14 días, el intervalo
+ *                         típico de ASRM. Segmento corto, de bordes difusos.
+ *   Banda de incertidumbre = [L−16, L−10]: lútea de 10 a 16 días. No es una
+ *                         fase: la interfaz la usa para explicar que la
+ *                         ovulación puede caer en cualquier punto de ella.
  *
- * Fuentes:
- *  - NHS, "Periods and fertility in the menstrual cycle"
- *    https://www.nhs.uk/conditions/periods/fertility-in-the-menstrual-cycle/
- *  - Bull et al. 2019, npj Digital Medicine (612.613 ciclos reales):
- *    fase folicular media 16,9 días (DE 5,3) → la ovulación media cae hacia el
- *    día 17, no el 14. Solo el 13% de los ciclos dura exactamente 28 días.
+ * Ejemplo en un ciclo de 28 días con 5 de sangrado:
+ *   antes 5 / 6 / 7 / 10 días; ahora 5 / 8 / 3 / 12.
+ *
+ * Fuentes (detalle, cálculos y límites en docs/research/JUA-27-duraciones-referencia.md):
+ *  - Najmabadi et al. 2020 (moco cervical, 3.324 ciclos): lútea mediana 12 (RIC 10-13).
+ *    https://pmc.ncbi.nlm.nih.gov/articles/PMC8495765/
+ *  - Bull et al. 2019 (612.613 ciclos ovulatorios): lútea 12,4 ± 2,4; folicular
+ *    16,9 ± 5,3. Solo el 13% de los ciclos dura exactamente 28 días.
  *    https://www.nature.com/articles/s41746-019-0152-7
- *  - Human Reproduction 2024: la fase lútea NO es fija de 13-14 días;
- *    mediana 10,9 días (rango 8,3-12,5).
- *    https://academic.oup.com/humrep/article/39/11/2565/7775370
+ *  - Soumpasis et al. 2020 (LH urinaria, 75.981 ciclos): lútea 12,77 ± 1,86.
+ *  - ASRM/SREI 2026: lútea típica de 12-14 días, rango 11-17.
+ *  - NHS: "around 10 to 16 days before the next period". Divulgativa, sin
+ *    bibliografía: solo encuadra la banda, no fija parámetros.
+ *  - Henry et al. 2024 NO dice que la lútea típica dure 10,9 días (8,3-12,5):
+ *    eso es la mediana de los promedios de 53 mujeres, medida con temperatura
+ *    basal. Por ciclo, mediana 11 (rango 3-16).
  */
 
 // --- Constantes del modelo -------------------------------------------------
 
-/** Ventana ovulatoria, en días antes de la siguiente regla. */
-export const OVULATION_BEFORE_NEXT_PERIOD = { earliest: 16, latest: 10 };
+/**
+ * Fase lútea de referencia: días desde la ovulación estimada hasta el final del
+ * ciclo (convención de Bull 2019 y Najmabadi 2020).
+ *   central: lo que pinta la rueda. Mediana con marcador de ovulación.
+ *   typical: intervalo típico de ASRM 2026; define la ventana ovulatoria pintada.
+ *   band:    rango habitual; contiene la ovulación en ~78-94% de los ciclos.
+ * Con fechas de regla solo no se puede personalizar: no dicen cuándo se ovuló.
+ */
+export const LUTEAL_DAYS = { central: 12, typical: [12, 14], band: [10, 16] };
+
+/**
+ * Tramo "Días previos a la menstruación": días −7 a −1 respecto del inicio
+ * previsto. Convención de calendario (Schmalenberger 2021 §5.2.2; C-PASS 2017),
+ * nunca criterio diagnóstico.
+ */
+export const PREMENSTRUAL_DAYS = 7;
 
 /** Rango de duración de ciclo que la app acepta como "dentro de lo normal". */
 export const CYCLE_LENGTH = { min: 21, max: 35, default: 29 };
-//                                                 ^^^ media real (Bull et al.),
-//                                                 no el mítico 28.
+//                                                 ^^^ mediana 29 (Najmabadi 2020,
+//                                                 Clue 2020); media 29,3 (Bull).
+//                                                 No el mítico 28.
 
-/** Rango de duración del sangrado. Normal: 2-8 días. */
+/**
+ * Rango de duración del sangrado. FIGO 2018: normal hasta 8 días.
+ * Por defecto 5: mediana de BioCycle (Dasharathy 2012), entre la media de 4,0
+ * de Bull (sin manchado) y la mediana de 6 de Najmabadi (con días leves).
+ */
 export const PERIOD_DAYS = { min: 2, max: 8, default: 5 };
 
 /**
  * Desviación típica de la variación de duración entre ciclos de una misma
  * persona: 2,6 días (Bull et al. 2019). Se usa para calcular cuánta
  * incertidumbre acumula la estimación conforme pasan los ciclos.
+ * Ojo: es la media de las DE individuales en ciclos ovulatorios, y probablemente
+ * se queda corta. El Apple Women's Health Study da 3,8-5,3 días entre los 18 y
+ * los 44 años. Revisarlo al portar el motor (CON-032).
  */
 const INTRA_WOMAN_SD_DAYS = 2.6;
 
@@ -112,9 +148,10 @@ export function phaseBoundaries(cycleLength, periodDays = PERIOD_DAYS.default) {
   const L = clamp(Math.round(cycleLength), CYCLE_LENGTH.min, CYCLE_LENGTH.max);
   const P = clamp(Math.round(periodDays), PERIOD_DAYS.min, Math.min(PERIOD_DAYS.max, L - 1));
 
-  // La ventana ovulatoria se ancla desde el final del ciclo.
-  let ovStart = L - OVULATION_BEFORE_NEXT_PERIOD.earliest;
-  let ovEnd   = L - OVULATION_BEFORE_NEXT_PERIOD.latest;
+  // La ventana ovulatoria se ancla desde el final del ciclo. Termina el día de
+  // ovulación estimado, así que la lútea pintada mide LUTEAL_DAYS.central.
+  let ovStart = L - LUTEAL_DAYS.typical[1];
+  let ovEnd   = L - LUTEAL_DAYS.central;
 
   // No puede empezar antes de que acabe el sangrado.
   ovStart = Math.max(ovStart, P + 1);
@@ -131,6 +168,30 @@ export function phaseBoundaries(cycleLength, periodDays = PERIOD_DAYS.default) {
 
   const out = {};
   for (const [id, [start, end]] of Object.entries(bounds)) {
+    out[id] = { start, end, isEmpty: start > end, days: Math.max(0, end - start + 1) };
+  }
+  return out;
+}
+
+/**
+ * Tramos que no son fases y que la interfaz usa para mostrar la incertidumbre.
+ * Mismo formato que phaseBoundaries(), pero pueden solaparse con las fases.
+ *
+ *   ovulationBand: donde podría caer la ovulación (lútea de 10 a 16 días),
+ *                  recortada para no invadir el sangrado.
+ *   premenstrual:  días −7 a −1 antes del inicio previsto de la siguiente regla.
+ */
+export function uncertaintyBands(cycleLength, periodDays = PERIOD_DAYS.default) {
+  const L = clamp(Math.round(cycleLength), CYCLE_LENGTH.min, CYCLE_LENGTH.max);
+  const P = clamp(Math.round(periodDays), PERIOD_DAYS.min, Math.min(PERIOD_DAYS.max, L - 1));
+
+  const bands = {
+    ovulationBand: [Math.max(L - LUTEAL_DAYS.band[1], P + 1), L - LUTEAL_DAYS.band[0]],
+    premenstrual:  [L - PREMENSTRUAL_DAYS + 1, L]
+  };
+
+  const out = {};
+  for (const [id, [start, end]] of Object.entries(bands)) {
     out[id] = { start, end, isEmpty: start > end, days: Math.max(0, end - start + 1) };
   }
   return out;
@@ -295,6 +356,8 @@ export function estimate(input) {
     cyclesElapsed,
     elapsedDays: elapsed,
     boundaries: bounds,
+    /** Banda ovulatoria y días previos a la menstruación. No son fases. */
+    bands: uncertaintyBands(L, P),
     /** Otras fases plausibles hoy si se tiene en cuenta el margen de error. */
     alternativePhases: plausiblePhases(dayOfCycle, marginDays, L, P).filter(p => p !== phase),
     warnings

@@ -1,0 +1,19 @@
+%% Consona · Mapa de navegación · v0.2 (JUA-26)
+%% Líneas discontinuas y nodos /…/ = pantallas bloqueadas (ADR-001 / ADR-002). No se dan por habilitadas.
+flowchart LR
+  E[E · Landing · JUA-24] --> O1a[0.1a Qué es y qué no es]
+  O1a --> O1b[0.1b Cómo calcula] --> O1c[0.1c 18+ y lectura confirmada]
+  O1c --> H[1.1 Hoy]
+  O2[/0.2 Consentimiento directo · BLOQUEADA/] -.otro dispositivo.-> H
+  H <-->|validez del cálculo| EX[1.2 Estados excepcionales ×6]
+  EX -.-> X1[/X.1 Datos semilla · BLOQUEADA/]
+  H -->|Cómo se calcula| CF[2.1 Cómo funciona]
+  NAV((Navegación principal P-1<br/>Hoy · Comprender · Datos)) --> H
+  NAV --> COMP[Comprender]
+  NAV --> C1[C.1 Control de datos]
+  COMP --> CF
+  COMP --> ED[2.3 Contenido educativo]
+  CF --> SP[2.2 SPM y TDPM]
+  C1 -.-> C2[/C.2 Estados de retirada · BLOQUEADA/]
+  C1 -.-> X2[/X.2 Dispositivo receptor · BLOQUEADA/]
+  X3[/X.3 Aprendizaje local · BLOQUEADA/] -. nunca en Hoy .- H
