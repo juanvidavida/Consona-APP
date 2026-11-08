@@ -50,7 +50,7 @@ Que la regla llegue con regularidad no confirma que haya habido ovulación. En u
 
 ### OVU-05 · Ovulación y embarazo
 
-Un embarazo solo es posible en unos pocos días de cada ciclo: los cinco anteriores a la ovulación y el propio día de la ovulación. Es lo que a veces se llama «ventana fértil». Dura eso porque los espermatozoides pueden seguir siendo capaces de fecundar durante varios días, mientras que el óvulo solo puede ser fecundado durante poco tiempo después de liberarse.
+Un embarazo solo es posible en unos pocos días de cada ciclo: los cinco anteriores a la ovulación y el propio día de la ovulación. Es lo que a veces se llama «ventana fértil». Dura eso porque los espermatozoides pueden seguir siendo capaces de fecundar durante varios días; después de la ovulación, en cambio, la posibilidad de embarazo baja muy deprisa.
 
 Pero como el momento de la ovulación no se puede saber por calendario, esos días tampoco. Por eso la ventana que ves en Consona no es una ventana fértil ni sirve para calcularla.
 
@@ -101,7 +101,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | OVU-02 | Definición y mecanismo; dolor de ovulación sin cifras, sin valor para detectar la ovulación y con cuándo consultar | OV-A01, OV-A02; OV-A17 (OS-20, OS-21, OS-24, OS-25) |
 | OVU-03 | Ventana calculada, aproximada; variabilidad; mito del día 14 | OV-A03 a OV-A05; SGO-03 |
 | OVU-04 | Ciclos sin ovulación | OV-A06 (OS-07); SGO-04 |
-| OVU-05 | Ventana fértil de seis días; supervivencia de espermatozoides y óvulo; imposibilidad de calcularla por calendario | OV-A12, OV-A13 (OS-14, OS-15); OV-A04 |
+| OVU-05 | Ventana fértil de seis días; supervivencia de los espermatozoides y caída tras la ovulación; imposibilidad de calcularla por calendario | OV-A12, OV-A13 (OS-14, OS-15); OV-A04 |
 | OVU-05b | Límite anticonceptivo; pocos días sin posibilidad de embarazo; uso real de las apps | OV-A07, OV-A08, OV-A14 (OS-06, OS-08, OS-09); SGO-02 |
 | OVU-06 | Ánimo, capacidades y estado de la pareja | OV-A11; O-04, SGO-01 |
 | OVU-07 | Papel de la pareja | Regla T-02 |
@@ -129,3 +129,4 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 - 06-11-2026: DER-01 nombra la medicina de familia y la matrona (encuesta de la SEC de 2024). OVU-08 añade las fuentes de la ventana fértil, que faltaban, y la encuesta.
 - 06-11-2026: OVU-05b añade que hay muy pocos días sin posibilidad de embarazo (Wilcox 2000, verificado en texto completo).
 - 06-11-2026: D-01 a D-04 resueltas. Nuevo bloque OVU-05 «Ovulación y embarazo»; el aviso anticonceptivo pasa a OVU-05b. Nueva decisión D-06.
+- 08-11-2026: OVU-05 deja de afirmar que el óvulo solo puede fecundarse durante poco tiempo. Wilcox 1995, verificado en texto completo, lo plantea como una de dos hipótesis; la pantalla dice solo lo observado: la posibilidad de embarazo baja muy deprisa tras la ovulación.

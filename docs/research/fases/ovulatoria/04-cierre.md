@@ -31,7 +31,7 @@ El cierre **no autoriza** información de fertilidad, fechas de ovulación, señ
 > «Que la regla llegue con regularidad no confirma que haya habido ovulación: en un estudio con población general, al menos uno de cada cuatro ciclos de duración normal no mostraba signos de ovulación.» (OV-A06; D-02 de la pantalla)
 
 **Ovulación y embarazo**
-> «Un embarazo solo es posible en unos pocos días de cada ciclo: los cinco anteriores a la ovulación y el propio día de la ovulación. Los espermatozoides pueden seguir siendo capaces de fecundar durante varios días, mientras que el óvulo solo puede ser fecundado durante poco tiempo.» (OV-A12, OV-A13)
+> «Un embarazo solo es posible en unos pocos días de cada ciclo: los cinco anteriores a la ovulación y el propio día de la ovulación. Los espermatozoides pueden seguir siendo capaces de fecundar durante varios días; después de la ovulación, en cambio, la posibilidad de embarazo baja muy deprisa.» (OV-A12, OV-A13)
 
 > «Como el momento de la ovulación no se puede saber por calendario, esos días tampoco. Hay muy pocos días del ciclo en los que un embarazo sea imposible, incluso el día en que se espera la regla.» (OV-A04, OV-A12, OV-A14)
 
@@ -58,7 +58,7 @@ El cierre **no autoriza** información de fertilidad, fechas de ovulación, señ
 
 | ID | Pendiente | Bloquea |
 |---|---|---|
-| P-01 | Texto completo de Peragallo Urrutia 2018 y Wilcox 1995. Johnson 2018 y Wilcox 2000 se consiguieron el 06-11-2026. | No. |
+| P-01 | Texto completo de Peragallo Urrutia 2018: el PDF aportado el 08-11-2026 era otro artículo del mismo equipo (Redmond 2022, OS-26). Johnson 2018 y Wilcox 2000 se consiguieron el 06-11-2026; Wilcox 1995, el 08-11-2026. | No. |
 | P-02 | ~~Conseguir la encuesta de anticoncepción de la SEC~~. Incorporada el 06-11-2026 (OS-16, OV-A15 y OV-A16). | — |
 | P-03 | ~~Decidir el nombre visible de la fase~~. Resuelto el 06-11-2026: «Ventana ovulatoria estimada» en la rueda, sin «fértil». | — |
 | P-05 | Artículo amplio de anticoncepción en «Comprender» (JUA-31), decidido el 06-11-2026. | No. |
