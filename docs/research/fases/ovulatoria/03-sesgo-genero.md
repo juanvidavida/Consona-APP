@@ -20,8 +20,10 @@ En esta fase coinciden los tres riesgos más graves para Consona:
 | OS-04 Johnson 2018 | Sí | Sí | Sí | Parcial | Sí, **con conflicto** | La empresa que vende tests de ovulación concluye que las apps no predicen la ovulación: el resultado favorece a su producto. Financiado por la empresa, con autores empleados o asesores, y aprobado por el comité ético de la propia empresa. | Solo como dato coherente con fuentes independientes. |
 | OS-05 Soumpasis 2020 | Sí | Sí | Sí | No | Sí, **con conflicto** | Misma empresa; usuarias que compraron su test; sin datos demográficos. | Íd. |
 | OS-06 Wilcox 2000 | Sí | Sí | Sí | Parcial | Sí | Independiente, pero antiguo. Mujeres que buscaban embarazo, mayoritariamente blancas y universitarias (declarado). | Variabilidad y límite anticonceptivo, sin cifras de fertilidad. |
+| OS-15 Wilcox 1995 | Sí | Sí | Sí | Parcial | Parcial | Misma cohorte que OS-06: 96 % blancas, 71 % universitarias (declarado). Sin declaración de conflictos; investigación de un organismo público. | Ventana fértil y caída tras la ovulación, sin cifras en la interfaz. |
 | OS-07 Prior 2015 | Sí | Sí | Sí | Sí | Sí | Cuestiona la idea de que una regla regular garantice la ovulación. Muestra poblacional, aunque de edad media alta. | Anovulación como fenómeno frecuente e intermitente. |
 | OS-09 Levy y Romo-Avilés 2019 | Sí | Sí | Sí | Sí | Sí | Perspectiva de estudios de las mujeres y de género. | Fuente española sobre el uso real de las apps. |
+| OS-08 Peragallo Urrutia 2018 | Sí | Sí | Sí | Parcial | Sí, **con conflicto** | Parte del sueldo de la primera autora lo paga una entidad que promueve estos métodos, pero la conclusión (evidencia escasa y de calidad baja o moderada) no la favorece. Estudios de contextos muy distintos, muchos en países de renta baja o media. | Límite anticonceptivo. |
 | OS-16 SEC 2024 | Sí | Sí | Sí | Parcial | **No** | Describe edad, nacionalidad, estudios, ingresos y situación de pareja. No contempla a personas que menstrúan y no son mujeres; algunas preguntas dan por hecha una pareja masculina. Financiación no declarada. No revisada por pares. | Dato español de uso de métodos, como dato de grupo. |
 | OS-11 Jones 2018 | Sí | Parcial | Sí | **No** | Sí | Estudia una hipótesis que vincula el ciclo con la atracción (C2), aunque para refutarla. Muestra solo de mujeres blancas heterosexuales. | Solo para justificar que el estereotipo no tiene base sólida. |
 
@@ -30,7 +32,7 @@ En esta fase coinciden los tres riesgos más graves para Consona:
 1. **La industria produce los datos.** Las dos mayores fuentes sobre el momento de la ovulación son de la empresa que vende los tests (OS-04, OS-05). Su conclusión, que el calendario falla, coincide con su interés comercial. Se usa porque coincide con fuentes independientes (OS-06, OS-07, JUA-27), nunca en solitario.
 2. **La narrativa de la «mujer fértil».** La idea de que la ovulación cambia el deseo y la atracción se apoyó en estudios pequeños y no se ha confirmado en el más grande (OS-11). Además, la investigación se centra casi siempre en mujeres heterosexuales y en su atracción hacia hombres: es heteronormativa.
 3. **El día 14 como norma.** Persiste incluso en fuentes clínicas (OS-01) y hace que la mayoría de los ciclos parezcan «irregulares».
-4. **Certeza vendida por las apps.** Las apps muestran fechas exactas de ovulación que no pueden conocer, y hay quien las usa para decidir sobre la anticoncepción (OS-04, OS-09).
+4. **Certeza vendida por las apps.** Las apps muestran fechas exactas de ovulación que no pueden conocer, y hay quien las usa para decidir sobre la anticoncepción (OS-04, OS-09). Muchas de las que se anuncian para evitar embarazos no tienen ningún estudio de eficacia (OS-08).
 5. **La anovulación invisible.** Se da por hecho que toda regla regular viene tras una ovulación (OS-07).
 
 ## 4. Consecuencias editoriales

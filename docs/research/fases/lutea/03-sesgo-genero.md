@@ -34,6 +34,7 @@ Por eso esta pantalla tiene que explicar la fisiología sin dar argumentos al es
 | LS-17 Rael 2021 | Sí | Sí | Sí | Parcial | Sí | Fase verificada; muestra pequeña de deportistas. | Rendimiento, con su límite. |
 | LS-18 Johnston-Robledo y Chrisler | Sí | Sí | Sí | Parcial | — | Estudia el propio estigma; estudios mayoritariamente estadounidenses. | Marco del estereotipo. |
 | LS-19 Holst 2022 | Sí | Sí | Sí | Sí | Sí | Perspectiva feminista crítica; muestra mayoritariamente universitaria. | Papel de la pareja. |
+| LS-20 Taylor 2024 (FENDURA) | Sí | Sí | Sí | Parcial | — | Fase verificada en sangre; muestra pequeña de deportistas. Financiación no visible en el resumen. | Rendimiento fisiológico, con su límite. |
 
 ## 3. Patrones de sesgo detectados
 
