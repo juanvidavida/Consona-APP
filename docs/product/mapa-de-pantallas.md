@@ -23,7 +23,7 @@
 | 1.1 | 1 · Uso diario | Hoy: fase, día, ventana, actualización, rueda y 4 tarjetas | JUA-5 · JUA-25 · JUA-23 | CONSTRUIDA (datos ficticios) | Ver D-01, D-06, D-07. |
 | 1.2a–f | 1 · Uso diario | Estados excepcionales de Hoy | Panel §5 | ESPECIFICADA | Sin fases por anticoncepción = contenido propio, no error. |
 | 2.1 | 2 · Comprender | Cómo funciona | JUA-7 · Panel §4.2 | ESPECIFICADA | Hoy es una sección ancla dentro de Hoy (D-02). |
-| 2.2 | 2 · Comprender | SPM y TDPM (subpantalla de 2.1) | JUA-19 · JUA-16 · `docs/education/spm-tdpm-v0.4.0.md` | ESPECIFICADA | Texto en revisión clínica; archivo no está en `main`. |
+| 2.2 | 2 · Comprender | SPM y TDPM (subpantalla de 2.1) | JUA-19 · JUA-16 · `docs/education/spm-tdpm-v0.5.0.md` | ESPECIFICADA | Texto v0.5.0, pendiente de enviar a revisión clínica (JUA-16). |
 | 2.3 | 2 · Comprender | Contenido educativo | Definición §5 | ESPECIFICADA | Sin issue propio (D-09). |
 | C.1 | Control | Control de datos: revisar, retirar, borrar | JUA-20 · JUA-18 · `src/App.jsx` | CONSTRUIDA (parcial) | Solo vista informativa sin autorización. |
 | C.2 | Control | Estados de retirada | CON-007 §3.8, §6 | BLOQUEADA | **Nueva** respecto al inventario de JUA-26. |

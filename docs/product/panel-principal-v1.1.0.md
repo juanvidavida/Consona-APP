@@ -118,7 +118,7 @@ La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloquead
 | IT-02 | La indicación lleva siempre el calificador de estimación y una explicación breve accesible desde ella, por ejemplo: «Calculado a partir de la duración de ciclos anteriores confirmados. La siguiente menstruación puede adelantarse o retrasarse». Es una estimación probabilística, no un dato. |
 | IT-03 | Solo se muestra si el motor auditado (CON-032) calcula una ventana para el siguiente inicio de sangrado con datos suficientes y vigentes. No se muestra en ningún estado excepcional de la sección 5 ni con anticoncepción que impida estimar fase. |
 | IT-04 | Es una etiqueta temporal, no clínica: no usa «premenstrual» como término clínico, no nombra SPM ni TDPM y no presenta cambios físicos o emocionales como algo que la pareja vaya a tener o esté teniendo ([audit-07](../research/jua-10/audit-07-rcog-pms.md) §4; C-01; SPM-04). |
-| IT-05 | **No cambia las tarjetas.** Las cuatro tarjetas siguen siendo las de la fase lútea durante toda la fase (H-01 de `home-cards-luteal-v0.1.0.md`). |
+| IT-05 | **No cambia las tarjetas.** Las cuatro tarjetas siguen siendo las de la fase lútea durante toda la fase (H-01 del índice de tarjetas, que aplica `home-cards-luteal-v0.2.0.md`). |
 | IT-06 | No cambia el color, el tono ni la intensidad del panel o de la rueda; no usa iconos de aviso, cuentas atrás («faltan 3 días»), notificaciones ni recordatorios (RU-09, RU-10, sección 7). |
 | IT-07 | No enlaza directamente a la pantalla SPM/TDPM ni remite a ella. El camino sigue siendo «Cómo funciona» (U-03, C-03). |
 | IT-08 | «Cómo funciona» explica cómo se calcula este tramo y por qué es menos preciso que la fase. |
@@ -257,4 +257,4 @@ Estas diferencias se registran como tareas de implementación y se recogen en el
 - [Fases del ciclo (JUA-10)](../research/jua-10/01-cycle-phases.md).
 - [Duraciones de referencia por fase (JUA-27)](../research/JUA-27-duraciones-referencia.md). Se integra con la PR de JUA-27.
 - [Auditoría 07: SPM, RCOG](../research/jua-10/audit-07-rcog-pms.md), §4.
-- Pantalla SPM/TDPM v0.4.0 y tarjetas de la fase lútea v0.1.0: `docs/education/spm-tdpm-v0.4.0.md` y `docs/education/home-cards-luteal-v0.1.0.md`, en revisión en la rama de JUA-19 y en el paquete de JUA-16. Reglas citadas: U-02, U-03, C-01 a C-04, SPM-04 y H-01 a H-04.
+- Pantalla SPM/TDPM v0.5.0 y tarjetas de la fase lútea v0.2.0: `docs/education/spm-tdpm-v0.5.0.md` y `docs/education/home-cards-luteal-v0.2.0.md`, en el paquete de JUA-16. Reglas citadas: U-02, U-03, C-01 a C-04, SPM-04 y H-01 a H-04 (desde la v0.2.0 de las tarjetas, H-01 a H-04 del índice de tarjetas).

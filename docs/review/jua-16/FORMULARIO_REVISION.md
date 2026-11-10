@@ -1,11 +1,22 @@
 # Formulario de revisión clínica — JUA-16 (ADR-002 P7)
 
-Artefactos revisados (ver [README](./README.md), sección 3):
+Artefactos revisados (ver [README](./README.md), sección 3, que da el SHA-256 de cada uno):
 
-- Pantalla «Variabilidad premenstrual: SPM y TDPM» v0.4.0 — SHA-256 `82c3faf985851aa45e386273783186e088ac4b2ac9efc0cf39563bf9b86a6665`
-- Tarjetas de la pantalla de inicio en fase lútea v0.1.0 — SHA-256 `f0a9f78db27cd6bf7bd52bb7e9b6c8134d6dc3f5e87c80154dfa4b8e90c6842b`
+| # | Artefacto | Versión |
+|---|---|---|
+| A1 | Pantalla «Variabilidad premenstrual: SPM y TDPM» | 0.5.0 |
+| A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.2.0 |
+| A3 | Tarjetas de la pantalla de inicio en la menstruación | 0.2.0 |
+| A4 | Tarjetas de la pantalla de inicio en la fase folicular | 0.2.0 |
+| A5 | Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada | 0.2.0 |
+| A6 | Pantalla «La menstruación» | 0.1.0 |
+| A7 | Pantalla «La fase folicular» | 0.1.0 |
+| A8 | Pantalla «La ventana ovulatoria» | 0.1.0 |
+| A9 | Pantalla «La fase lútea» | 0.1.0 |
 
 Decisiones posibles por bloque: **A** = Aprobado · **AC** = Aprobado con cambios · **NA** = No aprobado.
+
+> **Datos personales.** El repositorio de Consona es público. Este formulario, una vez relleno con los datos de la sección 1, **no se sube al repositorio**: el original se guarda fuera de él (README, sección 7).
 
 ## 1. Persona revisora
 
@@ -18,22 +29,29 @@ Decisiones posibles por bloque: **A** = Aprobado · **AC** = Aprobado con cambio
 | Experiencia relevante (salud menstrual, salud mental perinatal o reproductiva, atención primaria…) | |
 | Fecha de la revisión | |
 | Relación con Consona o conflictos de interés | |
-| Consentimiento para conservar estos datos en el registro del proyecto (sí / no; si no, dónde se guarda el original) | |
+| Consentimiento para publicar estos datos en el repositorio público del proyecto (sí / no; por defecto, no) | |
 
 ## 2. Alcance aceptado
 
 Marcar lo revisado. Lo no marcado queda fuera de la aprobación.
 
-- [ ] Pantalla SPM/TDPM: texto visible (SPM-00 a SPM-08).
-- [ ] Pantalla SPM/TDPM: mensajes de derivación (DER-01 y DER-02), incluidos los recursos 112, 024 y 016.
-- [ ] Pantalla SPM/TDPM: reglas de presentación (visibilidad del mensaje urgente, ausencia de captura de datos).
-- [ ] Tarjetas de fase lútea: texto de las cuatro tarjetas (QPC, QPP, QTT, QNA).
+- [ ] A1 · Pantalla SPM/TDPM: texto visible (SPM-00 a SPM-08).
+- [ ] A1 · Pantalla SPM/TDPM: mensajes de derivación (DER-01 y DER-02), incluidos los recursos 112, 024 y 016.
+- [ ] A1 · Pantalla SPM/TDPM: reglas de presentación (visibilidad del mensaje urgente, ausencia de captura de datos).
+- [ ] A2 · Tarjetas de fase lútea: texto de las cuatro tarjetas.
+- [ ] A3 · Tarjetas de la menstruación: texto de las cuatro tarjetas.
+- [ ] A4 · Tarjetas de la fase folicular: texto de las cuatro tarjetas.
+- [ ] A5 · Tarjetas de la ventana ovulatoria estimada: texto de las cuatro tarjetas.
+- [ ] A6 · Pantalla «La menstruación»: texto y mensajes de derivación.
+- [ ] A7 · Pantalla «La fase folicular»: texto y mensaje de derivación.
+- [ ] A8 · Pantalla «La ventana ovulatoria»: texto y mensaje de derivación.
+- [ ] A9 · Pantalla «La fase lútea»: texto y mensajes de derivación.
 
 Observaciones sobre el alcance:
 
 ## 3. Revisión por bloque
 
-### 3.1 Pantalla SPM/TDPM v0.4.0
+### 3.1 A1 · Pantalla SPM/TDPM v0.5.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -43,32 +61,104 @@ Observaciones sobre el alcance:
 | DER-02 | Ayuda urgente (112, 024, 016) | | |
 | SPM-03 | Variabilidad, SPM y TDPM | | |
 | SPM-04 | Lo que el día del ciclo puede y no puede decirte | | |
-| SPM-05 | Antes de atribuirlo al ciclo | | |
+| SPM-05 | Antes de atribuirlo al ciclo (incluye el estereotipo «premenstrual») | | |
 | SPM-06 | Sobre las cifras | | |
 | SPM-07 | Acompañar en consonancia | | |
 | DER-01 | Cuándo puede ayudar un profesional | | |
 | SPM-08 | Fuentes | | |
 
-### 3.2 Tarjetas de fase lútea v0.1.0
+### 3.2 Tarjetas de la pantalla de inicio (A2 a A5)
 
-| Tarjeta | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
+| Fase | QPC · Qué pasa en su cuerpo | QPP · Qué puedes preguntarle | QTT · Qué te toca a ti | QNA · Qué no asumir | Comentario o cambio propuesto |
+|---|---|---|---|---|---|
+| A2 · Fase lútea v0.2.0 | | | | | |
+| A3 · Menstruación v0.2.0 | | | | | |
+| A4 · Fase folicular v0.2.0 | | | | | |
+| A5 · Ventana ovulatoria estimada v0.2.0 | | | | | |
+
+### 3.3 A6 · Pantalla «La menstruación» v0.1.0
+
+| Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
-| QPC | Qué pasa en su cuerpo | | |
-| QPP | Qué puedes preguntarle | | |
-| QTT | Qué te toca a ti | | |
-| QNA | Qué no asumir | | |
+| MEN-00, MEN-01 | Título y nota fija | | |
+| DER-02 | Ayuda urgente | | |
+| MEN-02 | Qué es | | |
+| MEN-03 | Cuánto dura | | |
+| MEN-04 | El dolor | | |
+| MEN-05 | Lo que la menstruación no dice | | |
+| MEN-06 | Lo que no se suele contar | | |
+| MEN-07 | Acompañar en consonancia | | |
+| DER-01 | Cuándo puede ayudar un profesional | | |
+| MEN-08 | Fuentes | | |
+
+### 3.4 A7 · Pantalla «La fase folicular» v0.1.0
+
+| Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
+|---|---|---|---|
+| FOL-00, FOL-01 | Título y nota fija | | |
+| FOL-02 | Qué es | | |
+| FOL-03 | Cuánto dura | | |
+| FOL-04 | El mito de la «fase de energía» | | |
+| FOL-05 | Lo que la fase no dice | | |
+| FOL-06 | Acompañar en consonancia | | |
+| DER-01 | Cuándo puede ayudar un profesional | | |
+| FOL-07 | Fuentes | | |
+
+### 3.5 A8 · Pantalla «La ventana ovulatoria» v0.1.0
+
+| Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
+|---|---|---|---|
+| OVU-00, OVU-01 | Título y nota fija | | |
+| OVU-02 | Qué es la ovulación | | |
+| OVU-03 | Qué es la ventana que ves en Consona | | |
+| OVU-04 | No todos los ciclos tienen ovulación | | |
+| OVU-05 | Ovulación y embarazo | | |
+| OVU-05b | No sirve para buscar ni para evitar un embarazo | | |
+| OVU-06 | Lo que la ventana no dice | | |
+| OVU-07 | Acompañar en consonancia | | |
+| DER-01 | Cuándo puede ayudar un profesional | | |
+| OVU-08 | Fuentes | | |
+
+### 3.6 A9 · Pantalla «La fase lútea» v0.1.0
+
+| Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
+|---|---|---|---|
+| LUT-00, LUT-01 | Título y nota fija | | |
+| DER-02 | Ayuda urgente | | |
+| LUT-02 | Qué es | | |
+| LUT-03 | Cuánto dura | | |
+| LUT-04 | Lo que ves en Consona | | |
+| LUT-05 | Antes de la regla | | |
+| LUT-06 | Lo que la fase lútea no dice (incluye el estereotipo «premenstrual») | | |
+| LUT-07 | Acompañar en consonancia | | |
+| DER-01 | Cuándo puede ayudar un profesional | | |
+| LUT-08 | Fuentes | | |
 
 ## 4. Preguntas expresas
 
+### 4.1 Pantalla SPM/TDPM y tarjetas de la fase lútea
+
 | ID | Pregunta | Respuesta |
 |---|---|---|
-| P-01 | **SPM-06.** ¿Es adecuado citar la prevalencia de TDPM (3,2 % confirmado frente a 7,7 % provisional, metaanálisis de 2024) para ilustrar el límite de las cifras poblacionales, o es preferible omitir las cifras? | |
+| P-01 | **SPM-06.** El texto cita la prevalencia de TDPM en población general con diagnóstico confirmado: 1,6 % (Reilly et al. 2024; con todas las muestras, 3,2 % confirmado y 7,7 % provisional, con heterogeneidad muy alta). ¿Es adecuado citar esta cifra para ilustrar el límite de las cifras poblacionales, o es preferible omitirla? | |
 | P-02 | **SPM-03.** ¿La diferencia entre variabilidad premenstrual, SPM y TDPM es correcta y suficientemente prudente para personas sin formación sanitaria? | |
 | P-03 | **DER-01 y DER-02.** ¿Cubren de forma suficiente síntomas intensos, deterioro de las actividades diarias, riesgo inmediato de autolesión y peligro? ¿Falta algún recurso u orientación? | |
 | P-04 | **DER-02.** El mensaje urgente se dirige sobre todo a la pareja, pero debe servir también a la persona que menstrúa y a quien lee si lo está pasando mal. ¿Funciona para las tres situaciones? | |
-| P-05 | **QPC.** ¿La frase «Hacia el final de esta fase, algunas personas notan cambios físicos o de ánimo, y otras no» aporta información útil sin que la pantalla de inicio se lea como un aviso o una predicción? | |
-| P-06 | **QPC.** ¿Es adecuada la mención de la progesterona y del revestimiento del útero, o es preferible no nombrar hormonas («el cuerpo prepara el revestimiento del útero»)? | |
-| P-07 | **General.** ¿Hay alguna formulación que pueda llevar a la pareja a interpretar, anticipar o explicar el estado de la persona que menstrúa a partir de la fase? | |
+| P-05 | **A2 · QPC.** ¿La frase «Hacia el final de esta fase, algunas personas notan cambios físicos o de ánimo, y otras no» aporta información útil sin que la pantalla de inicio se lea como un aviso o una predicción? | |
+| P-06 | **A2 · QPC.** ¿Es adecuada la mención de la progesterona y del revestimiento del útero, o es preferible no nombrar hormonas («el cuerpo prepara el revestimiento del útero»)? | |
+| P-07 | **Estereotipo.** SPM-05, LUT-06 y la tarjeta QNA de la fase lútea nombran el estereotipo de la mujer «premenstrual» irritable o fuera de control para desmentirlo. ¿Se lee como desmentido, también en la pantalla de inicio durante los días previos a la regla, o puede reforzarlo? | |
+| P-08 | **SPM-05 y LUT-07.** El texto dice que tu pareja «es quien mejor puede contar» lo que le pasa. Un estudio de Barcelona (Holst 2022) recoge que algunas mujeres consideran a su pareja más fiable que ellas mismas para saber si tienen cambios emocionales con el ciclo. ¿Es adecuado el planteamiento, o conviene matizarlo? | |
+| P-09 | **General.** ¿Hay alguna formulación que pueda llevar a la pareja a interpretar, anticipar o explicar el estado de la persona que menstrúa a partir de la fase? | |
+
+### 4.2 Preguntas propias de los demás artefactos
+
+| ID | Artefacto | Pregunta | Respuesta |
+|---|---|---|---|
+| P-10 | A3 a A5 | Las preguntas de la sección 7 («Qué debe valorar la persona revisora») de cada documento de tarjetas. | |
+| P-11 | A6 · MEN-04 | ¿Es adecuada la cifra de dolor menstrual («más de siete de cada diez»), o puede leerse como «lo normal es que le duela»? ¿Ayudaría nombrar la endometriosis al hablar de diagnósticos retrasados? (D-01, D-03) | |
+| P-12 | A7 | ¿Es correcto que la pantalla de la fase folicular no lleve un mensaje de ayuda urgente? (D-01) | |
+| P-13 | A8 · OVU-04 y OVU-05 | ¿Es adecuado «al menos uno de cada cuatro ciclos» sin ovulación, y explicar la ventana fértil sin cifras de horas ni de probabilidad? (D-02, D-06) | |
+| P-14 | A9 · LUT-05 | ¿Los ejemplos de cambios premenstruales pueden leerse como una lista para vigilar a la pareja? (D-02) | |
 
 ## 5. Criterios de JUA-16
 
@@ -83,7 +173,7 @@ Observaciones sobre el alcance:
 
 Marcar una opción:
 
-- [ ] **Apruebo** los artefactos de la sección 2, en las versiones y con los hashes indicados, para su publicación como contenido educativo.
+- [ ] **Apruebo** los artefactos marcados en la sección 2, en las versiones y con los hashes indicados en el README, para su publicación como contenido educativo.
 - [ ] **Apruebo con cambios:** la aprobación es efectiva cuando se apliquen los cambios marcados como AC y se confirme la versión resultante.
 - [ ] **No apruebo.** Motivo:
 
@@ -100,12 +190,19 @@ Esta aprobación se refiere solo a contenido educativo estático. No autoriza re
 
 *A rellenar por el equipo de producto después de la revisión.*
 
-| Bloque | Cambio solicitado | Aplicado / justificado sin aplicar | Versión resultante | Justificación |
-|---|---|---|---|---|
-| | | | | |
+| Artefacto | Bloque | Cambio solicitado | Aplicado / justificado sin aplicar | Versión resultante | Justificación |
+|---|---|---|---|---|---|
+| | | | | | |
 
-| Campo | Respuesta |
+| Artefacto | Versión final y SHA-256 |
 |---|---|
-| Versión final de la pantalla SPM/TDPM y SHA-256 | |
-| Versión final de las tarjetas de fase lútea y SHA-256 | |
-| Confirmación de la persona revisora sobre la versión final (fecha) | |
+| A1 | |
+| A2 | |
+| A3 | |
+| A4 | |
+| A5 | |
+| A6 | |
+| A7 | |
+| A8 | |
+| A9 | |
+| Confirmación de la persona revisora sobre las versiones finales (fecha) | |

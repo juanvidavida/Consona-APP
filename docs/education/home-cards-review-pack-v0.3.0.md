@@ -1,19 +1,19 @@
-# Consona — Tarjetas de orientación de la home: paquete de revisión v0.2.0
+# Consona — Tarjetas de orientación de la home: paquete de revisión v0.3.0
 
-**Issue:** JUA-23.
+**Issues:** JUA-23 y JUA-19.
 **Para qué sirve:** revisar a la vez las cuatro fases. Es una copia generada de los documentos de cada fase, que son la fuente de verdad: los cambios se hacen allí y este paquete se vuelve a generar.
-**Estado:** Borrador para revisión de producto. Las tres fases nuevas **no se han enviado a revisión clínica**.
-**Generado:** 06-11-2026.
+**Estado:** Borrador para revisión de producto. Las cuatro fases están **incluidas en el paquete de revisión clínica de JUA-16**, pendiente de envío.
+**Generado:** 10-11-2026.
 
 ## Contenido
 
 | Parte | Fase | Origen | Estado |
 |---|---|---|---|
 | 1 | Cómo se eligen las tarjetas y reglas comunes | `home-cards-index.md` | Borrador |
-| 2 | Menstruación | `home-cards-menstruation-v0.2.0.md` | Versión 0.2.0, con trazabilidad a la investigación de JUA-36 |
-| 3 | Fase folicular | `home-cards-follicular-v0.2.0.md` | Versión 0.2.0, con trazabilidad a la investigación de JUA-36 |
-| 4 | Ventana ovulatoria estimada | `home-cards-ovulatory-v0.2.0.md` | Versión 0.2.0, con trazabilidad a la investigación de JUA-36 |
-| 5 | Fase lútea | `home-cards-luteal-v0.1.0.md (rama de JUA-19, PR #9)` | Copia sin cambios; ya está en el paquete de revisión clínica de JUA-16 |
+| 2 | Menstruación | `home-cards-menstruation-v0.2.0.md` | Versión 0.2.0 (enmienda del 10-11-2026), con trazabilidad a la investigación de JUA-36 |
+| 3 | Fase folicular | `home-cards-follicular-v0.2.0.md` | Versión 0.2.0 (enmienda del 10-11-2026), con trazabilidad a la investigación de JUA-36 |
+| 4 | Ventana ovulatoria estimada | `home-cards-ovulatory-v0.2.0.md` | Versión 0.2.0 (enmienda del 10-11-2026), con trazabilidad a la investigación de JUA-36 |
+| 5 | Fase lútea | `home-cards-luteal-v0.2.0.md` | Versión 0.2.0, con trazabilidad a la investigación de JUA-36 y texto nuevo |
 
 **Cómo revisar:** lee primero la sección 2 de cada fase, que es el texto que verá la persona usuaria. Después, las reglas propias, la trazabilidad y las decisiones abiertas. Las referencias numeradas [1], [2]… remiten a la lista del final de **cada** fase, no a una lista común.
 
@@ -23,7 +23,7 @@
 
 ### 2. Qué conjunto se muestra cada día
 
-Un único conjunto de tarjetas por fase, sin subfases (especificación del panel, §3.2, decisión del 19-10-2026). Las duraciones vienen de JUA-27 (`docs/research/JUA-27-duraciones-referencia.md`, rama de JUA-27, PR #12).
+Un único conjunto de tarjetas por fase, sin subfases (especificación del panel, §3.2, decisión del 19-10-2026). Las duraciones vienen de JUA-27 (`docs/research/JUA-27-duraciones-referencia.md`, en `main` desde el PR #12).
 
 | Fase en la rueda | Cuándo | Fuente |
 |---|---|---|
@@ -50,12 +50,11 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 | H-07 | QPP, QTT y QNA hablan de lo que haces tú, no de lo que debe hacer tu pareja. Sin consejos para gestionar, calmar o evitar a tu pareja, ni recomendaciones de salud (medicamentos, calor, ejercicio). |
 | H-08 | Ninguna tarjeta atribuye a la fase energía, ánimo, rendimiento, capacidad ni conducta (`01-cycle-phases`, `08-health-energy`, `12-health-emotional-cognitive` EC-01, EC-02). |
 
-
 ---
 
 # Parte 2 · Menstruación
 
-*Origen: `home-cards-menstruation-v0.2.0.md`. Versión 0.2.0, con trazabilidad a la investigación de JUA-36.*
+*Origen: `home-cards-menstruation-v0.2.0.md`. Versión 0.2.0 (enmienda del 10-11-2026), con trazabilidad a la investigación de JUA-36.*
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -127,8 +126,8 @@ El prototipo no tiene texto propio de la menstruación: muestra en todas las fas
 | Tarjeta | Afirmación | Fuente | Base auditada |
 |---|---|---|---|
 | QPC · definición | La menstruación es el sangrado con el que se desprende el revestimiento del útero; su primer día inicia el ciclo. | [1] [2] | `01-cycle-phases` (definición de menstruación; afirmación auditada de consenso clínico). **JUA-36:** ME-A01 a ME-A04 (Critchley 2020 y Jain 2022, en texto completo). |
-| QPC · duración | Duración declarada por la persona afectada o, por defecto, unos 5 días, que cambia de una persona a otra. | [3] [4] | Declarada: DA-06 y formulario de JUA-28. Por defecto: ME-01; JUA-27 §2 y §6, mediana de 5 días, de 4 a 6 según la fuente. Rama de JUA-27, PR #12, **pendiente de fusionar**. **JUA-36:** ME-A05. |
-| QPC · primeros días | En los primeros días, el flujo suele ser mayor. | [9] | JUA-27 §2 y §6: ≈90 % de la pérdida en los días 1 a 3 (Haynes 1977, verificado solo por el resumen [V-abs]). Rama de JUA-27, PR #12. **JUA-36:** ME-A06. |
+| QPC · duración | Duración declarada por la persona afectada o, por defecto, unos 5 días, que cambia de una persona a otra. | [3] [4] | Declarada: DA-06 y formulario de JUA-28. Por defecto: ME-01; JUA-27 §2 y §6, mediana de 5 días, de 4 a 6 según la fuente. En `main` desde el PR #12. **JUA-36:** ME-A05. |
+| QPC · primeros días | En los primeros días, el flujo suele ser mayor. | [9] | JUA-27 §2 y §6: ≈90 % de la pérdida en los días 1 a 3 (Haynes 1977, verificado en texto completo el 08-11-2026 [V]: el 92 % procede de 11 mujeres con regla abundante, por eso evidencia limitada). En `main` desde el PR #12. **JUA-36:** ME-A06. |
 | QPC · dolor | La menstruación puede tener asociados dolor o calambres en algunas personas. | [5] [6] | `09-health-pain`, conclusión operativa y definición de dismenorrea; diversidad de experiencias según la OMS. **JUA-36:** ME-A09, ME-A10 (dos estudios españoles, Ciudad Real y Andalucía). |
 | QPC · límite | Saber que hay sangrado no indica cómo lo vive la persona. | [7] | `01-cycle-phases` (distinguir dato, cálculo e inferencia); `12-health-emotional-cognitive` EC-02. **JUA-36:** ME-A15, ME-A18. |
 | QPP | Pregunta abierta en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
@@ -155,7 +154,7 @@ La v0.2.0 no contiene:
 | D-02 | QTT mencionaba la compra común, que podía leerse como una alusión velada a productos menstruales. | **Resuelta (05-11-2026):** se evitan las referencias a la compra (M-05). QTT habla solo de tareas de casa y planes. |
 | D-03 | La duración por defecto es de 5 días, pero H-06 impedía dar cifras. | **Resuelta (05-11-2026):** QPC da la duración declarada por la persona afectada en el formulario de consentimiento inicial o, si no la declaró, 5 días (M-02). Excepción recogida en H-01 y H-06. Depende de que JUA-28 incluya la duración del sangrado en el formulario. |
 | D-04 | El paquete de revisión clínica de JUA-16 cubría la pantalla SPM/TDPM y la fase lútea. | **Resuelta (05-11-2026):** se amplía JUA-16 con las tres fases nuevas: menstruación, folicular y ventana ovulatoria estimada. |
-| D-05 | La trazabilidad de la duración cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. |
+| D-05 | La trazabilidad de la duración cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 
 ### 7. Qué debe valorar la persona revisora
 
@@ -177,6 +176,12 @@ La v0.2.0 no contiene:
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
 - Pantalla educativa asociada: `menstruacion-v0.1.0.md` (rama de JUA-36).
 
+#### [0.2.0] — Enmienda del 10-11-2026
+
+- Trazabilidad: JUA-27 (PR #12) ya está en `main`.
+- Haynes 1977 pasa a verificado en texto completo [V]; el dato sigue siendo de evidencia limitada.
+- **Sin cambios en el texto de las tarjetas**, por eso conservan la versión.
+
 ### Referencias
 
 1. Office on Women's Health — Your menstrual cycle. <https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle>
@@ -193,7 +198,7 @@ La v0.2.0 no contiene:
 
 # Parte 3 · Fase folicular
 
-*Origen: `home-cards-follicular-v0.2.0.md`. Versión 0.2.0, con trazabilidad a la investigación de JUA-36.*
+*Origen: `home-cards-follicular-v0.2.0.md`. Versión 0.2.0 (enmienda del 10-11-2026), con trazabilidad a la investigación de JUA-36.*
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -259,7 +264,7 @@ El prototipo no tiene texto propio de la fase folicular: muestra en todas las fa
 | QPC · definición | La fase folicular empieza con la menstruación y dura hasta la ovulación. | [1] [2] | `01-cycle-phases` (afirmación auditada, moderada; definición `follicular_educational`). **JUA-36:** FO-A01. |
 | QPC · folículos | En ella maduran folículos hasta que normalmente uno libera un óvulo. | [1] [3] | `01-cycle-phases` (definición de fase folicular: «desarrollo de folículos hasta la ovulación»; definición de ovulación de ACOG). **JUA-36:** FO-A02 (Reed y Carr 2018). |
 | QPC · hormonas | Los folículos producen hormonas, entre ellas los estrógenos, que vuelven a engrosar el revestimiento del útero. | [1] | **Auditada en JUA-36:** FO-A03 y FO-A04 (Reed y Carr 2018; Critchley 2020; Jain 2022, en texto completo). Se mantiene en la revisión clínica de JUA-16. |
-| QPC · variación | Es la parte del ciclo cuya duración más cambia, incluso en la misma persona. | [2] [4] [5] | `01-cycle-phases` («su duración contribuye en gran medida a la variación»); JUA-27 §2: mediana de 17 días, RIC 15–20, «la fase que más varía». Rama de JUA-27, PR #12, **pendiente de fusionar**. **JUA-36:** FO-A06, FO-A07. |
+| QPC · variación | Es la parte del ciclo cuya duración más cambia, incluso en la misma persona. | [2] [4] [5] | `01-cycle-phases` («su duración contribuye en gran medida a la variación»); JUA-27 §2: mediana de 17 días, RIC 15–20, «la fase que más varía». En `main` desde el PR #12. **JUA-36:** FO-A06, FO-A07. |
 | QPC · límite | Una fecha calculada no indica el punto del ciclo ni cómo está la persona. | [6] | `01-cycle-phases` (método de calendario); `12-health-emotional-cognitive` EC-05. **JUA-36:** FO-A07; SGF-04. |
 | QPP | Pregunta abierta sobre planes en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
 | QTT | Acción propia sobre planes y organización. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3. |
@@ -284,7 +289,7 @@ La v0.2.0 no contiene:
 | D-01 | La taxonomía de JUA-10 usa «ovocito»; el público entiende mejor «óvulo». | **Aceptada (05-11-2026):** «óvulo» en las tarjetas y «ovocito» en «Cómo funciona» si hace falta precisión. Validar en la revisión clínica. |
 | D-02 | Las auditorías de JUA-10 desaconsejan explicar estados por hormonas, pero nombrar las hormonas del ciclo es conocimiento básico. | **Resuelta (05-11-2026):** se nombran los estrógenos, solo como fisiología del útero, igual que la progesterona en la fase lútea. La afirmación entra en la revisión clínica de JUA-16. |
 | D-03 | QNA nombra el estereotipo («más energía, mejor ánimo») para desmentirlo. Nombrarlo también lo difunde. | **Resuelta (05-11-2026):** se nombran los estereotipos para que el texto sea accesible, aunque sea a costa de difundirlos. |
-| D-04 | La trazabilidad de la variación cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. |
+| D-04 | La trazabilidad de la variación cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 
 ### 7. Qué debe valorar la persona revisora
 
@@ -306,6 +311,11 @@ La v0.2.0 no contiene:
 - La afirmación sobre los estrógenos deja de estar «no auditada» (D-02).
 - Pantalla educativa asociada: `folicular-v0.1.0.md` (rama de JUA-36).
 
+#### [0.2.0] — Enmienda del 10-11-2026
+
+- Trazabilidad: JUA-27 (PR #12) ya está en `main`.
+- **Sin cambios en el texto de las tarjetas**, por eso conservan la versión.
+
 ### Referencias
 
 1. Office on Women's Health — Your menstrual cycle. <https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle>
@@ -320,7 +330,7 @@ La v0.2.0 no contiene:
 
 # Parte 4 · Ventana ovulatoria estimada
 
-*Origen: `home-cards-ovulatory-v0.2.0.md`. Versión 0.2.0, con trazabilidad a la investigación de JUA-36.*
+*Origen: `home-cards-ovulatory-v0.2.0.md`. Versión 0.2.0 (enmienda del 10-11-2026), con trazabilidad a la investigación de JUA-36.*
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -386,8 +396,8 @@ El prototipo no tiene texto propio de la ventana ovulatoria: muestra en todas la
 | Tarjeta | Afirmación | Fuente | Base auditada |
 |---|---|---|---|
 | QPC · definición | La ovulación es la liberación de un óvulo por un ovario; es un evento, no una fase de duración fija. | [1] [2] | `01-cycle-phases` (afirmación auditada de consenso clínico; definición de ovulación y nota de taxonomía). **JUA-36:** OV-A01, OV-A02. |
-| QPC · variación | Su momento cambia de un ciclo a otro. | [3] [4] | `01-cycle-phases` (variación dentro de la misma persona, Najmabadi); JUA-27 §3.2. Rama de JUA-27, PR #12, **pendiente de fusionar**. **JUA-36:** OV-A03 (el día 14 es un mito). |
-| QPC · cálculo | La ventana se calcula hacia atrás desde la fecha prevista de la siguiente regla. | [5] | JUA-27 §3.3 y §3.4 (ventana `[L−14, L−12]`). Rama de JUA-27, PR #12. **JUA-36:** OV-A04, OV-A05. |
+| QPC · variación | Su momento cambia de un ciclo a otro. | [3] [4] | `01-cycle-phases` (variación dentro de la misma persona, Najmabadi); JUA-27 §3.2. En `main` desde el PR #12. **JUA-36:** OV-A03 (el día 14 es un mito). |
+| QPC · cálculo | La ventana se calcula hacia atrás desde la fecha prevista de la siguiente regla. | [5] | JUA-27 §3.3 y §3.4 (ventana `[L−14, L−12]`). En `main` desde el PR #12. **JUA-36:** OV-A04, OV-A05. |
 | QPC · límite | No detecta ni confirma la ovulación; no sirve para buscar ni evitar un embarazo. | [1] [6] | `01-cycle-phases` (límites 2 y 3: «no detecta ni confirma»; «nunca sustituye […] método anticonceptivo»). **JUA-36:** OV-A06, OV-A07, OV-A08 (uso real de las apps en España, Universidad de Granada) y OV-A12. |
 | QPP | Pregunta abierta en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
 | QTT | Acción propia sobre compromisos, tareas y decisiones. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3. |
@@ -413,7 +423,7 @@ La v0.2.0 no contiene:
 | D-02 | QPC menciona el embarazo para decir que la ventana no sirve para ello. Es la única mención a la fertilidad en las tarjetas. | **Aceptada (05-11-2026):** se mantiene como límite de seguridad, no como información de fertilidad. Coherente con `01-cycle-phases`, límite 3. |
 | D-03 | «Cuándo es más probable» podía leerse como una precisión que la ventana no tiene: contiene la ovulación en ~37–58 % de los ciclos (JUA-27 §2). | **Aceptada (05-11-2026):** QPC dice «marca un momento aproximado». |
 | D-04 | Como en la fase folicular, «óvulo» en lugar de «ovocito». | **Aceptada (05-11-2026):** igual que D-01 de la fase folicular. |
-| D-05 | La trazabilidad del cálculo cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. |
+| D-05 | La trazabilidad del cálculo cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 
 ### 7. Qué debe valorar la persona revisora
 
@@ -436,6 +446,11 @@ La v0.2.0 no contiene:
 - La rueda mantiene «Ventana ovulatoria estimada», sin «fértil» (decisión del 06-11-2026).
 - Pantalla educativa asociada: `ovulatoria-v0.1.0.md` (rama de JUA-36).
 
+#### [0.2.0] — Enmienda del 10-11-2026
+
+- Trazabilidad: JUA-27 (PR #12) ya está en `main`.
+- **Sin cambios en el texto de las tarjetas**, por eso conservan la versión.
+
 ### Referencias
 
 1. ACOG — Fertility Awareness-Based Methods of Family Planning. <https://www.acog.org/womens-health/faqs/fertility-awareness-based-methods-of-family-planning>
@@ -450,25 +465,31 @@ La v0.2.0 no contiene:
 
 # Parte 5 · Fase lútea
 
-*Origen: `home-cards-luteal-v0.1.0.md (rama de JUA-19, PR #9)`. Copia sin cambios; ya está en el paquete de revisión clínica de JUA-16.*
+*Origen: `home-cards-luteal-v0.2.0.md`. Versión 0.2.0, con trazabilidad a la investigación de JUA-36 y texto nuevo.*
 
-**Estado:** Borrador para revisión de producto. **No enviado a revisión clínica.**
-**Origen:** decisión D-05 de [`spm-tdpm-v0.4.0.md`](./spm-tdpm-v0.4.0.md). Este conjunto se incluye **expresamente** en el paquete y en el alcance de revisión de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
+**Issues:** JUA-19 (origen) y JUA-23 (reglas comunes).
+**Estado:** Borrador para revisión de producto. **Incluido en el paquete de revisión clínica de JUA-16**, pendiente de envío.
+**Origen:** decisión D-05 de [`spm-tdpm-v0.5.0.md`](./spm-tdpm-v0.5.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
+**Reglas comunes:** H-01 a H-08 de [`home-cards-index.md`](./home-cards-index.md).
+**Base de investigación:** [`docs/research/fases/lutea/`](../research/fases/lutea/) (JUA-36).
+**Cuándo se muestra:** durante toda la fase lútea estimada, incluidos los días previos a la menstruación (sección 2 del índice).
 **Parte de:** el texto provisional de [`src/App.jsx`](../../src/App.jsx) (JUA-5), que no es definitivo.
-**Público y tono:** los de la sección 1 de `spm-tdpm-v0.4.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
+**Público y tono:** los de la sección 1 de `spm-tdpm-v0.5.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación.
 
-> Este documento fija el texto exacto de las cuatro tarjetas cuando la home muestra la fase lútea estimada. Cualquier cambio exige una nueva versión y su revisión contra las reglas C-01 a C-04 de la pantalla SPM/TDPM.
+> Este documento fija el texto exacto de las cuatro tarjetas cuando la home muestra la fase lútea estimada. Cualquier cambio exige una nueva versión y su revisión contra las reglas comunes del índice y las reglas C-01 a C-04 de la pantalla SPM/TDPM.
 
-### 1. Reglas
+### 1. Reglas propias de la fase
+
+Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituyen a las reglas H-01 a H-05 de la v0.1.0, que el índice generalizó. Además:
 
 | ID | Regla |
 |---|---|
-| H-01 | Las cuatro tarjetas son las mismas durante toda la fase lútea estimada. No cambian según el día del ciclo, la cercanía de la menstruación ni ningún dato local. |
-| H-02 | Las tarjetas no nombran SPM ni TDPM y no presentan cambios físicos o emocionales como algo que tu pareja vaya a tener o esté teniendo (C-01). |
-| H-03 | Cualquier mención de variabilidad premenstrual usa «algunas personas», «puede» e información general (C-02). |
-| H-04 | Las tarjetas no enlazan directamente a la pantalla SPM/TDPM ni cambian de color o de tono según la fase (C-03, U-03). El acceso sigue siendo «Cómo funciona». |
-| H-05 | Ninguna tarjeta menciona ni sugiere deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad. |
+| L-01 | Las tarjetas no cambian en los días previos a la menstruación ni nombran SPM o TDPM (H-01, H-02; C-01 de la pantalla SPM/TDPM). |
+| L-02 | Sin duración en días, aunque la rueda dibuje la fase con 12 (H-06). Sin «fase lútea corta», «deficiencia lútea» ni «progesterona baja» (SGL-05). |
+| L-03 | La progesterona solo aparece como fisiología del útero, nunca para explicar ánimo, energía ni conducta (H-08; SGL-02). |
+| L-04 | QNA nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.1.0.md` y SPM-05 de `spm-tdpm-v0.5.0.md`, repetida a propósito (D-04). |
+| L-05 | La fase no se presenta como «la fase mala», ni como una semana que exija un trato especial (SGL-04). |
 
 ### 2. Texto de las tarjetas
 
@@ -476,70 +497,99 @@ La v0.2.0 no contiene:
 
 **Antetítulo:** Conocimiento general
 
-> En general, la fase lútea va desde la ovulación hasta la siguiente menstruación. En ella, el cuerpo lúteo produce hormonas, entre ellas la progesterona, que preparan el revestimiento del útero; si no hay embarazo, ese revestimiento se desprende con la menstruación.
-> Hacia el final de esta fase, algunas personas notan cambios físicos o de ánimo, y otras no. Una fecha calculada no confirma que nada de esto esté ocurriendo así en tu pareja.
+> En general, la fase lútea va desde la ovulación hasta la siguiente menstruación. El folículo que liberó el óvulo se transforma en el cuerpo lúteo, que produce sobre todo progesterona: prepara el revestimiento del útero por si hubiera un embarazo. Si no lo hay, bajan las hormonas y empieza la menstruación. Es la parte del ciclo cuya duración menos cambia, aunque también varía.
+> Hacia el final de esta fase, algunas personas notan cambios físicos o de ánimo, y otras no. Una fecha calculada no confirma que haya habido ovulación ni te dice cómo se encuentra tu pareja.
 
 #### QPP · Qué puedes preguntarle
 
 **Antetítulo:** Conversación
 
 > «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?»
-> Una pregunta abierta deja espacio para escuchar sin dar nada por hecho.
+> Una pregunta abierta deja espacio para escuchar sin dar nada por hecho. Si prefiere no hablar, también es una respuesta.
 
 #### QTT · Qué te toca a ti
 
 **Antetítulo:** Acción propia
 
-> Organiza tus propias responsabilidades, comunica tus planes con claridad y deja margen para ajustar la logística si tu pareja lo pide.
+> Como cualquier otra semana: organiza tus propias responsabilidades, comunica tus planes con claridad y deja margen para ajustar la logística si tu pareja lo pide.
 
 #### QNA · Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
-> Que se acerque la menstruación no explica cómo se siente tu pareja, qué necesita ni cómo quiere que actúes. Atribuir una tensión al ciclo puede restar valor a lo que te está diciendo: preguntar funciona mejor que suponer.
+> La imagen de la mujer «premenstrual» irritable o fuera de control es un estereotipo, y hace daño. Que se acerque la menstruación no explica cómo se siente tu pareja, qué necesita ni cómo quiere que actúes. Atribuir una tensión al ciclo puede restar valor a lo que te está diciendo: preguntar funciona mejor que suponer.
 
-### 3. Cambios respecto al prototipo
+### 3. Cambios
+
+#### Respecto a la v0.1.0
 
 | Tarjeta | Cambio | Motivo |
 |---|---|---|
-| QPC | Se añade qué ocurre en la fase (cuerpo lúteo, progesterona, revestimiento del útero) y una frase sobre variabilidad al final de la fase. Se conserva el límite de la fecha calculada, ahora referido a «tu pareja». | Ofrecer información asociada a la fase, como la home pretende, sin que sea predictiva. Ver D-01 y D-02. |
-| QPP | Sin cambios. | El texto ya cumple T-03 y la especificación del panel. |
-| QTT | «la otra persona» pasa a «tu pareja»; «espacio» pasa a «margen». | Coherencia con el público definido y para no repetir «espacio» con QPP. |
-| QNA | Se sustituye «Una fase estimada no explica…» por una formulación centrada en la cercanía de la menstruación y en el sesgo de atribución. | Es el momento en que más pesa el estereotipo premenstrual; coherente con SPM-05. |
+| QPC | El cuerpo lúteo se presenta como el folículo que liberó el óvulo; la progesterona «prepara el revestimiento del útero por si hubiera un embarazo»; se añade que es la parte del ciclo cuya duración menos cambia, aunque también varía. El límite final dice que una fecha calculada no confirma que haya habido ovulación. | Redacción segura del cierre de la fase lútea (LU-A02, LU-A03, LU-A05, LU-A07). Mismo esquema que la QPC de la fase folicular («la parte del ciclo cuya duración más cambia»). |
+| QPP | Se añade «Si prefiere no hablar, también es una respuesta». | Coherencia con SPM-07: respetar la respuesta, también si prefiere no hablar. |
+| QTT | Se antepone «Como cualquier otra semana». | Evita presentar la fase como una semana que exige un trato especial (SGL-04, L-05). |
+| QNA | Se nombra y se desmiente el estereotipo de la mujer «premenstrual». | Decisión de producto del 10-11-2026 (D-04): explicarlo en varias piezas refuerza su importancia (SGL-01; LU-A12). |
+| Reglas | H-01 a H-05 propias pasan a las comunes H-01 a H-08 del índice, más L-01 a L-05. | El índice de JUA-23 generalizó las reglas de esta fase. |
+
+#### Respecto al prototipo (v0.1.0)
+
+| Tarjeta | Cambio | Motivo |
+|---|---|---|
+| QPC | Se añadió qué ocurre en la fase y una frase sobre variabilidad al final de la fase. | Ofrecer información asociada a la fase sin que sea predictiva. Ver D-01 y D-02. |
+| QPP | Sin cambios. | Ya cumplía T-03 y la especificación del panel. |
+| QTT | «la otra persona» pasó a «tu pareja»; «espacio», a «margen». | Coherencia con el público definido. |
+| QNA | «Una fase estimada no explica…» pasó a una formulación centrada en la cercanía de la menstruación y en el sesgo de atribución. | Es el momento en que más pesa el estereotipo premenstrual; coherente con SPM-05. |
 
 ### 4. Trazabilidad
 
-| Tarjeta | Afirmación | Fuente | Base auditada en JUA-10 |
+| Tarjeta | Afirmación | Fuente | Base auditada |
 |---|---|---|---|
-| QPC · definición | La fase lútea sigue a la ovulación y termina antes de la siguiente menstruación; el cuerpo lúteo se forma a partir del folículo. | [1] [2] [3] | `01-cycle-phases` (definición educativa de fase lútea, `luteal_educational`). |
-| QPC · hormonas | El cuerpo lúteo produce progesterona, que prepara el revestimiento del útero; sin embarazo, se desprende con la menstruación. | [1] | Fisiología general de [1], citada en `01-cycle-phases`. **No auditada como afirmación propia** (ver D-02). |
-| QPC · variabilidad | Algunas personas notan cambios antes de la menstruación y otras no. | [4] [5] | `audit-07` §4.2; `12-health-emotional-cognitive` EC-02; SPM-02. |
-| QPC · límite | Una fecha calculada no confirma la fase ni lo que ocurre en una persona. | [3] [6] | `01-cycle-phases` (método de calendario); `12-health-emotional-cognitive` EC-05. |
-| QPP | Pregunta abierta en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
-| QTT | Acción propia sobre tareas, planes y logística. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3. |
-| QNA | La fase no explica estados ni necesidades; sesgo de atribución. | [5] [7] | `12-health-emotional-cognitive` EC-02, EC-07; SPM-04 y SPM-05. |
+| QPC · definición | La fase lútea va de la ovulación a la siguiente menstruación; el cuerpo lúteo se forma a partir del folículo que liberó el óvulo. | [1] [2] [8] [9] | `01-cycle-phases` (`luteal_educational`). **JUA-36:** LU-A01, LU-A02 (LS-01, LS-02 [V]). |
+| QPC · hormonas | El cuerpo lúteo produce sobre todo progesterona, que prepara el revestimiento del útero por si hubiera un embarazo; sin embarazo, bajan las hormonas y empieza la menstruación. | [8] [9] | **JUA-36:** LU-A02, LU-A03 (LS-01, LS-02, LS-03 [V]), evidencia alta. Antes no estaba auditada como afirmación propia (D-02). |
+| QPC · duración | Es la parte del ciclo cuya duración menos cambia, aunque también varía. | [10] | **JUA-36:** LU-A05 (LS-04, LS-07 [V]): en el 58,8 % de las mujeres, la fase lútea varió más de 3 días entre ciclos. Sin cifra en días (H-06). |
+| QPC · variabilidad | Algunas personas notan cambios antes de la menstruación y otras no. | [4] [5] [7] | `audit-07` §4.2; `12-health-emotional-cognitive` EC-02; SPM-02. **JUA-36:** LU-A09 (LS-11), LU-A10 (LS-12 a LS-15). |
+| QPC · límite | Una fecha calculada no confirma que haya habido ovulación ni el estado de una persona. | [3] [6] [11] | `01-cycle-phases` (método de calendario); `12-health-emotional-cognitive` EC-05. **JUA-36:** LU-A06, LU-A07 (LS-10 [V]: al menos uno de cada cuatro ciclos de duración normal sin signos de ovulación). |
+| QPP | Pregunta abierta; respetar que prefiera no hablar. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5; SPM-07. |
+| QTT | Acción propia sobre tareas, planes y logística, sin trato especial por la fase. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3. **JUA-36:** SGL-04. |
+| QNA · estereotipo | La imagen de la mujer «premenstrual» irritable o fuera de control es un estereotipo, y hace daño. | [12] [13] | **JUA-36:** LU-A12 (LS-13, LS-18 [V]); ME-A17 (S-20 [V]: también circula entre hombres); SGL-01. |
+| QNA · atribución | La fase no explica estados ni necesidades; sesgo de atribución. | [5] [7] [12] | `12-health-emotional-cognitive` EC-02, EC-07; SPM-04 y SPM-05. **JUA-36:** LU-A13 (LS-19 [V]). |
 
 ### 5. Exclusiones comprobadas
 
-La v0.1.0 no contiene:
+La v0.2.0 no contiene:
 
 - [x] SPM, TDPM ni ningún término diagnóstico.
 - [x] Síntomas presentados como esperables en tu pareja, ni listas de síntomas.
 - [x] Explicaciones hormonales de emociones, conductas o síntomas concretos.
 - [x] Fertilidad, «días seguros», probabilidad de embarazo ni confirmación de ovulación.
-- [x] Duraciones fijas («14 días») ni diagnósticos de fase lútea corta o deficiente.
+- [x] Duraciones en días ni diagnósticos de fase lútea corta o deficiente.
 - [x] Deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad.
 - [x] Consejos para gestionar, calmar o evitar a tu pareja.
+- [x] El estereotipo «premenstrual» presentado de otra forma que para desmentirlo.
 
 ### 6. Decisiones
 
 | ID | Decisión | Propuesta |
 |---|---|---|
 | D-01 | La frase «Hacia el final de esta fase, algunas personas notan cambios físicos o de ánimo, y otras no» da información asociada a la fase, pero puede llevar a leer la home como un aviso. | **Resuelta (07-10-2026):** se mantiene y se pide a la persona revisora que la valore expresamente en JUA-16. |
-| D-02 | La mención de la progesterona es fisiología general, pero las auditorías de JUA-10 desaconsejan explicar síntomas por hormonas, y la frase no se auditó como afirmación propia. | **Resuelta (07-10-2026):** se mantiene y se incluye en el alcance de la revisión clínica de JUA-16. Alternativa si la revisión lo pide: «el cuerpo prepara el revestimiento del útero», sin nombrar hormonas. |
-| D-03 | JUA-5 está cerrada y no hay una incidencia para el contenido de las tarjetas de la home. | **Resuelta (07-10-2026):** se abre JUA-23 para las tarjetas de todas las fases, relacionada con JUA-16, JUA-19 y JUA-5. Este documento cubre solo la fase lútea. |
+| D-02 | La mención de la progesterona es fisiología general, pero las auditorías de JUA-10 desaconsejan explicar síntomas por hormonas, y la frase no se auditó como afirmación propia. | **Resuelta (07-10-2026)** y **auditada el 10-11-2026** en JUA-36 (LU-A02, evidencia alta). Se mantiene la pregunta a la persona revisora. Alternativa si la revisión lo pide: «el cuerpo prepara el revestimiento del útero», sin nombrar hormonas. |
+| D-03 | JUA-5 está cerrada y no hay una incidencia para el contenido de las tarjetas de la home. | **Resuelta (07-10-2026):** se abre JUA-23 para las tarjetas de todas las fases, relacionada con JUA-16, JUA-19 y JUA-5. |
+| D-04 | ¿Nombrar el estereotipo «premenstrual» en la home, además de en las pantallas de la fase lútea y SPM/TDPM? | **Resuelta (10-11-2026):** sí. Explicarlo en más de un sitio refuerza su importancia. QNA lo nombra solo para desmentirlo. Se pregunta a la persona revisora si en la home se lee como desmentido y no como aviso. |
 
 ### 7. Historial
+
+#### [0.2.0] — Bibliografía de JUA-36 (10-11-2026)
+
+- QPC con la redacción segura de la fase lútea: cuerpo lúteo, progesterona, poca variación de la duración y límite sobre la ovulación.
+- QPP añade que no querer hablar también es una respuesta.
+- QTT: «Como cualquier otra semana».
+- QNA nombra y desmiente el estereotipo de la mujer «premenstrual» (D-04).
+- Reglas comunes del índice de JUA-23 y reglas propias L-01 a L-05.
+- Trazabilidad a la investigación de la fase lútea de JUA-36.
+
+#### [0.1.0] — Enmienda del 06-11-2026
+
+- H-04 recoge el segundo acceso a la pantalla SPM/TDPM desde «La fase lútea» (JUA-36). El texto de las tarjetas no cambia.
 
 #### [0.1.0] — Borrador inicial
 
@@ -550,9 +600,27 @@ La v0.1.0 no contiene:
 ### Referencias
 
 1. Office on Women's Health — Your menstrual cycle. <https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle>
+
 2. Schmalenberger et al. — How to study the menstrual cycle: Practical tools and recommendations. <https://pmc.ncbi.nlm.nih.gov/articles/PMC8363181/>
+
 3. Allen et al. — Determining Menstrual Phase in Human Biobehavioral Research: A Review with Recommendations. <https://pmc.ncbi.nlm.nih.gov/articles/PMC4821777/>
+
 4. Premenstrual Syndrome (PMS), FAQ057 — ACOG (revisado 11-2025). <https://www.acog.org/womens-health/faqs/premenstrual-syndrome>
+
 5. Mood and the Menstrual Cycle: A Review of Prospective Data Studies (2012). <https://www.sciencedirect.com/science/article/pii/S1550857912001349>
+
 6. Menstrual cycle effects on cognitive performance: A meta-analysis (2025). <https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318576>
+
 7. Premenstrual syndrome — NICE Clinical Knowledge Summaries (revisado 09-2024). <https://cks.nice.org.uk/topics/premenstrual-syndrome/>
+
+8. Reed BG, Carr BR. The normal menstrual cycle and the control of ovulation. Endotext (actualizado 05-08-2018). <https://www.ncbi.nlm.nih.gov/books/NBK279054/>
+
+9. Jain V, et al. Uterine bleeding: how understanding endometrial physiology underpins menstrual health. Nat Rev Endocrinol 2022. <https://pmc.ncbi.nlm.nih.gov/articles/PMC9098793/>
+
+10. Najmabadi S, et al. Menstrual bleeding, cycle length, and follicular and luteal phase lengths in women without known subfertility. Paediatr Perinat Epidemiol 2020. <https://pmc.ncbi.nlm.nih.gov/articles/PMC8495765/>
+
+11. Prior JC, et al. Ovulation prevalence in women with spontaneous normal-length menstrual cycles (HUNT3, Norway). PLoS One 2015. <https://pmc.ncbi.nlm.nih.gov/articles/PMC4546331/>
+
+12. Romans SE, et al. Mood and the menstrual cycle. Psychother Psychosom 2013;82(1):53–60. <https://doi.org/10.1159/000339370>
+
+13. Johnston-Robledo I, Chrisler JC. The menstrual mark: menstruation as social stigma. Palgrave Handbook of Critical Menstruation Studies, 2020. <https://doi.org/10.1007/978-981-15-0614-7_17>

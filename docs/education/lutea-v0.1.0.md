@@ -19,8 +19,8 @@ Iguales que en la pantalla de la menstruación (`menstruacion-v0.1.0.md`, seccio
 
 Esta pantalla se revisa siempre contra estas tres piezas:
 
-- **La pantalla SPM/TDPM** (`spm-tdpm-v0.4.0.md`, JUA-19, PR #9). Esta pantalla explica la fase entera. La pantalla SPM/TDPM desarrolla los cambios premenstruales y los términos clínicos. LUT-05 resume y enlaza a ella sin repetir sus cifras. El enlace es estático y no cambia según la fase ni ningún dato (U-02). DER-01 y DER-02 reproducen sin cambios sus mensajes de derivación.
-- **Las tarjetas de la fase lútea** (`home-cards-luteal-v0.1.0.md`, JUA-19), que resumen esta pantalla.
+- **La pantalla SPM/TDPM** (`spm-tdpm-v0.5.0.md`, JUA-19). Esta pantalla explica la fase entera. La pantalla SPM/TDPM desarrolla los cambios premenstruales y los términos clínicos. LUT-05 resume y enlaza a ella sin repetir sus cifras. El enlace es estático y no cambia según la fase ni ningún dato (U-02). DER-01 y DER-02 reproducen sin cambios sus mensajes de derivación.
+- **Las tarjetas de la fase lútea** (`home-cards-luteal-v0.2.0.md`, JUA-19), que resumen esta pantalla.
 - **La rueda** (JUA-27), que dibuja la fase lútea con 12 días.
 
 ## 2. Texto de la pantalla
@@ -59,7 +59,7 @@ Además, en algunos ciclos no hay ovulación, y entonces tampoco hay fase lútea
 
 Hacia el final de esta fase, algunas personas notan cambios en el cuerpo o en el ánimo: por ejemplo, dolor, hinchazón o cansancio; irritabilidad, tristeza o tensión; o cambios en el sueño o el apetito. Otras no notan ninguno, y en una misma persona puede cambiar de un ciclo a otro.
 
-Cuando los cambios se repiten ciclo tras ciclo y afectan de forma importante al día a día, se habla de síndrome premenstrual (SPM) o, en su forma más intensa y menos frecuente, de trastorno disfórico premenstrual (TDPM). Son términos clínicos que solo puede valorar un profesional. Los explicamos en [«Variabilidad premenstrual: SPM y TDPM»](./spm-tdpm-v0.4.0.md).
+Cuando los cambios se repiten ciclo tras ciclo y afectan de forma importante al día a día, se habla de síndrome premenstrual (SPM) o, en su forma más intensa y menos frecuente, de trastorno disfórico premenstrual (TDPM). Son términos clínicos que solo puede valorar un profesional. Los explicamos en [«Variabilidad premenstrual: SPM y TDPM»](./spm-tdpm-v0.5.0.md).
 
 ### LUT-06 · Lo que la fase lútea no dice
 
@@ -87,7 +87,7 @@ Esta información se basa en revisiones sobre la fisiología del ciclo y del end
 
 ## 3. Mensajes de derivación
 
-Estáticos y siempre visibles en la posición indicada. No se activan por fechas, fase ni registros. Reproducen sin cambios los de `spm-tdpm-v0.4.0.md`; si cambian allí, cambian aquí.
+Estáticos y siempre visibles en la posición indicada. No se activan por fechas, fase ni registros. Reproducen sin cambios los de `spm-tdpm-v0.5.0.md`; si cambian allí, cambian aquí.
 
 ### DER-01 · Cuándo puede ayudar un profesional
 
@@ -97,7 +97,7 @@ Estáticos y siempre visibles en la posición indicada. No se activan por fechas
 > Si los cambios preocupan a tu pareja, se repiten, son intensos o le dificultan el día a día —trabajo, estudios, relaciones o descanso—, un profesional sanitario puede valorarlos en contexto. El centro de salud es un buen punto de partida.
 > La decisión de consultar es suya. Lo que puedes hacer es ofrecerle tu apoyo o tu compañía, si los quiere.
 
-Fuente: DER-01 de `spm-tdpm-v0.4.0.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4.4).
+Fuente: DER-01 de `spm-tdpm-v0.5.0.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4.4).
 
 ### DER-02 · Ayuda urgente
 
@@ -112,7 +112,7 @@ Fuente: DER-01 de `spm-tdpm-v0.4.0.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4
 >
 > Estos números también son para ti si eres tú quien lo está pasando mal.
 
-Fuente: DER-02 de `spm-tdpm-v0.4.0.md`, verificado en fuentes oficiales el 07-10-2026 (D-03 y D-04 de JUA-19).
+Fuente: DER-02 de `spm-tdpm-v0.5.0.md`, verificado en fuentes oficiales el 07-10-2026 (D-03 y D-04 de JUA-19).
 
 ## 4. Trazabilidad
 
@@ -125,7 +125,7 @@ Fuente: DER-02 de `spm-tdpm-v0.4.0.md`, verificado en fuentes oficiales el 07-10
 | LUT-05 | Cambios premenstruales variables; SPM y TDPM como términos clínicos | LU-A09 (LS-11); SPM-03 |
 | LUT-06 | Sin cambios cognitivos; ánimo con poca variación media; estereotipo y su daño | LU-A10 a LU-A12 (LS-12 a LS-18); SGL-01, SGL-04 |
 | LUT-07 | Papel de la pareja; no atribuir al ciclo | LU-A13 (LS-19); SGL-02; T-02 |
-| DER-01, DER-02 | Derivación y ayuda urgente | LU-A14; `spm-tdpm-v0.4.0.md` |
+| DER-01, DER-02 | Derivación y ayuda urgente | LU-A14; `spm-tdpm-v0.5.0.md` |
 
 ## 5. Exclusiones comprobadas
 
@@ -152,6 +152,11 @@ La v0.1.0 no contiene:
 | D-05 | LUT-06 nombra el estereotipo de la mujer «premenstrual». | **Resuelta (06-11-2026):** se mantiene y se explica por qué parece cierto: se repite en bromas, anuncios y conversaciones, y en el estudio diario con el objetivo oculto el patrón apenas aparece (LU-A10, LU-A12; LS-13). |
 
 ## 7. Historial
+
+### [0.1.0] — Enmienda del 10-11-2026
+
+- Las referencias pasan a la pantalla SPM/TDPM v0.5.0 y a las tarjetas de la fase lútea v0.2.0. DER-01 y DER-02 no cambiaron en la v0.5.0. **El texto que se muestra no cambia**, por eso la pantalla conserva la versión.
+- El estereotipo de LUT-06 se explica ahora también en SPM-05 y en la tarjeta QNA (D-05; D-06 de la pantalla SPM/TDPM).
 
 ### [0.1.0] — 06-11-2026
 

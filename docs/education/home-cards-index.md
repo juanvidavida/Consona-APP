@@ -14,15 +14,15 @@
 | Menstruación | [`home-cards-menstruation-v0.2.0.md`](./home-cards-menstruation-v0.2.0.md) | Borrador |
 | Fase folicular | [`home-cards-follicular-v0.2.0.md`](./home-cards-follicular-v0.2.0.md) | Borrador |
 | Ventana ovulatoria estimada | [`home-cards-ovulatory-v0.2.0.md`](./home-cards-ovulatory-v0.2.0.md) | Borrador |
-| Fase lútea | `home-cards-luteal-v0.1.0.md` (rama de JUA-19, PR #9) | Borrador, en el paquete de revisión clínica de JUA-16 |
+| Fase lútea | [`home-cards-luteal-v0.2.0.md`](./home-cards-luteal-v0.2.0.md) | Borrador, en el paquete de revisión clínica de JUA-16 |
 
-El documento de la fase lútea **no se modifica** en JUA-23.
+El documento de la fase lútea **no se modificó** en JUA-23. Desde su v0.2.0 (JUA-19, 10-11-2026) aplica también las reglas comunes H-01 a H-08.
 
-Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.2.0.md`](./home-cards-review-pack-v0.2.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase.
+Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.3.0.md`](./home-cards-review-pack-v0.3.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase.
 
 ## 2. Qué conjunto se muestra cada día
 
-Un único conjunto de tarjetas por fase, sin subfases (especificación del panel, §3.2, decisión del 19-10-2026). Las duraciones vienen de JUA-27 (`docs/research/JUA-27-duraciones-referencia.md`, rama de JUA-27, PR #12).
+Un único conjunto de tarjetas por fase, sin subfases (especificación del panel, §3.2, decisión del 19-10-2026). Las duraciones vienen de JUA-27 (`docs/research/JUA-27-duraciones-referencia.md`, en `main` desde el PR #12).
 
 | Fase en la rueda | Cuándo | Fuente |
 |---|---|---|
@@ -67,3 +67,4 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 - Índice inicial: documentos por fase, criterio de selección y reglas comunes H-01 a H-08.
 - 06-11-2026: tarjetas de las tres fases nuevas en versión 0.2.0, con trazabilidad a la investigación de JUA-36.
 - Decisiones del 05-11-2026: excepción de la duración de la menstruación en H-01 y H-06; las tres fases nuevas entran en JUA-16.
+- 10-11-2026: la fase lútea pasa a `home-cards-luteal-v0.2.0.md`, que adopta las reglas comunes; paquete de revisión regenerado como v0.3.0.

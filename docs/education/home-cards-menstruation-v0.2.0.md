@@ -70,8 +70,8 @@ El prototipo no tiene texto propio de la menstruación: muestra en todas las fas
 | Tarjeta | Afirmación | Fuente | Base auditada |
 |---|---|---|---|
 | QPC · definición | La menstruación es el sangrado con el que se desprende el revestimiento del útero; su primer día inicia el ciclo. | [1] [2] | `01-cycle-phases` (definición de menstruación; afirmación auditada de consenso clínico). **JUA-36:** ME-A01 a ME-A04 (Critchley 2020 y Jain 2022, en texto completo). |
-| QPC · duración | Duración declarada por la persona afectada o, por defecto, unos 5 días, que cambia de una persona a otra. | [3] [4] | Declarada: DA-06 y formulario de JUA-28. Por defecto: ME-01; JUA-27 §2 y §6, mediana de 5 días, de 4 a 6 según la fuente. Rama de JUA-27, PR #12, **pendiente de fusionar**. **JUA-36:** ME-A05. |
-| QPC · primeros días | En los primeros días, el flujo suele ser mayor. | [9] | JUA-27 §2 y §6: ≈90 % de la pérdida en los días 1 a 3 (Haynes 1977, verificado solo por el resumen [V-abs]). Rama de JUA-27, PR #12. **JUA-36:** ME-A06. |
+| QPC · duración | Duración declarada por la persona afectada o, por defecto, unos 5 días, que cambia de una persona a otra. | [3] [4] | Declarada: DA-06 y formulario de JUA-28. Por defecto: ME-01; JUA-27 §2 y §6, mediana de 5 días, de 4 a 6 según la fuente. En `main` desde el PR #12. **JUA-36:** ME-A05. |
+| QPC · primeros días | En los primeros días, el flujo suele ser mayor. | [9] | JUA-27 §2 y §6: ≈90 % de la pérdida en los días 1 a 3 (Haynes 1977, verificado en texto completo el 08-11-2026 [V]: el 92 % procede de 11 mujeres con regla abundante, por eso evidencia limitada). En `main` desde el PR #12. **JUA-36:** ME-A06. |
 | QPC · dolor | La menstruación puede tener asociados dolor o calambres en algunas personas. | [5] [6] | `09-health-pain`, conclusión operativa y definición de dismenorrea; diversidad de experiencias según la OMS. **JUA-36:** ME-A09, ME-A10 (dos estudios españoles, Ciudad Real y Andalucía). |
 | QPC · límite | Saber que hay sangrado no indica cómo lo vive la persona. | [7] | `01-cycle-phases` (distinguir dato, cálculo e inferencia); `12-health-emotional-cognitive` EC-02. **JUA-36:** ME-A15, ME-A18. |
 | QPP | Pregunta abierta en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
@@ -98,7 +98,7 @@ La v0.2.0 no contiene:
 | D-02 | QTT mencionaba la compra común, que podía leerse como una alusión velada a productos menstruales. | **Resuelta (05-11-2026):** se evitan las referencias a la compra (M-05). QTT habla solo de tareas de casa y planes. |
 | D-03 | La duración por defecto es de 5 días, pero H-06 impedía dar cifras. | **Resuelta (05-11-2026):** QPC da la duración declarada por la persona afectada en el formulario de consentimiento inicial o, si no la declaró, 5 días (M-02). Excepción recogida en H-01 y H-06. Depende de que JUA-28 incluya la duración del sangrado en el formulario. |
 | D-04 | El paquete de revisión clínica de JUA-16 cubría la pantalla SPM/TDPM y la fase lútea. | **Resuelta (05-11-2026):** se amplía JUA-16 con las tres fases nuevas: menstruación, folicular y ventana ovulatoria estimada. |
-| D-05 | La trazabilidad de la duración cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. |
+| D-05 | La trazabilidad de la duración cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 
 ## 7. Qué debe valorar la persona revisora
 
@@ -119,6 +119,12 @@ La v0.2.0 no contiene:
 
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
 - Pantalla educativa asociada: `menstruacion-v0.1.0.md` (rama de JUA-36).
+
+### [0.2.0] — Enmienda del 10-11-2026
+
+- Trazabilidad: JUA-27 (PR #12) ya está en `main`.
+- Haynes 1977 pasa a verificado en texto completo [V]; el dato sigue siendo de evidencia limitada.
+- **Sin cambios en el texto de las tarjetas**, por eso conservan la versión.
 
 ## Referencias
 

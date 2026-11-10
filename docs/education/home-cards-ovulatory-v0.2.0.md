@@ -64,8 +64,8 @@ El prototipo no tiene texto propio de la ventana ovulatoria: muestra en todas la
 | Tarjeta | Afirmación | Fuente | Base auditada |
 |---|---|---|---|
 | QPC · definición | La ovulación es la liberación de un óvulo por un ovario; es un evento, no una fase de duración fija. | [1] [2] | `01-cycle-phases` (afirmación auditada de consenso clínico; definición de ovulación y nota de taxonomía). **JUA-36:** OV-A01, OV-A02. |
-| QPC · variación | Su momento cambia de un ciclo a otro. | [3] [4] | `01-cycle-phases` (variación dentro de la misma persona, Najmabadi); JUA-27 §3.2. Rama de JUA-27, PR #12, **pendiente de fusionar**. **JUA-36:** OV-A03 (el día 14 es un mito). |
-| QPC · cálculo | La ventana se calcula hacia atrás desde la fecha prevista de la siguiente regla. | [5] | JUA-27 §3.3 y §3.4 (ventana `[L−14, L−12]`). Rama de JUA-27, PR #12. **JUA-36:** OV-A04, OV-A05. |
+| QPC · variación | Su momento cambia de un ciclo a otro. | [3] [4] | `01-cycle-phases` (variación dentro de la misma persona, Najmabadi); JUA-27 §3.2. En `main` desde el PR #12. **JUA-36:** OV-A03 (el día 14 es un mito). |
+| QPC · cálculo | La ventana se calcula hacia atrás desde la fecha prevista de la siguiente regla. | [5] | JUA-27 §3.3 y §3.4 (ventana `[L−14, L−12]`). En `main` desde el PR #12. **JUA-36:** OV-A04, OV-A05. |
 | QPC · límite | No detecta ni confirma la ovulación; no sirve para buscar ni evitar un embarazo. | [1] [6] | `01-cycle-phases` (límites 2 y 3: «no detecta ni confirma»; «nunca sustituye […] método anticonceptivo»). **JUA-36:** OV-A06, OV-A07, OV-A08 (uso real de las apps en España, Universidad de Granada) y OV-A12. |
 | QPP | Pregunta abierta en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
 | QTT | Acción propia sobre compromisos, tareas y decisiones. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3. |
@@ -91,7 +91,7 @@ La v0.2.0 no contiene:
 | D-02 | QPC menciona el embarazo para decir que la ventana no sirve para ello. Es la única mención a la fertilidad en las tarjetas. | **Aceptada (05-11-2026):** se mantiene como límite de seguridad, no como información de fertilidad. Coherente con `01-cycle-phases`, límite 3. |
 | D-03 | «Cuándo es más probable» podía leerse como una precisión que la ventana no tiene: contiene la ovulación en ~37–58 % de los ciclos (JUA-27 §2). | **Aceptada (05-11-2026):** QPC dice «marca un momento aproximado». |
 | D-04 | Como en la fase folicular, «óvulo» en lugar de «ovocito». | **Aceptada (05-11-2026):** igual que D-01 de la fase folicular. |
-| D-05 | La trazabilidad del cálculo cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. |
+| D-05 | La trazabilidad del cálculo cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 
 ## 7. Qué debe valorar la persona revisora
 
@@ -113,6 +113,11 @@ La v0.2.0 no contiene:
 - O-03 precisa que la explicación de la ventana fértil está en la pantalla educativa y que la salud reproductiva es contenido válido.
 - La rueda mantiene «Ventana ovulatoria estimada», sin «fértil» (decisión del 06-11-2026).
 - Pantalla educativa asociada: `ovulatoria-v0.1.0.md` (rama de JUA-36).
+
+### [0.2.0] — Enmienda del 10-11-2026
+
+- Trazabilidad: JUA-27 (PR #12) ya está en `main`.
+- **Sin cambios en el texto de las tarjetas**, por eso conservan la versión.
 
 ## Referencias
 

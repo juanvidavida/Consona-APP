@@ -14,7 +14,7 @@
 
 **Para qué:** entender qué es la menstruación y qué no dice, para acompañar en consonancia sin interpretar, anticipar ni explicar a la otra persona.
 
-Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.4.0.md`, rama de JUA-19, PR #9):
+Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.5.0.md`):
 
 - **T-01:** educativo, no paternalista.
 - **T-02:** la pareja es la autoridad sobre su propia experiencia.
