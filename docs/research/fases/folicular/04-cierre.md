@@ -55,6 +55,6 @@ El cierre **no autoriza** pautas de entrenamiento, dieta o planificación, ni af
 
 | ID | Pendiente | Bloquea |
 |---|---|---|
-| P-01 | Texto completo de Taylor et al. 2024 (FENDURA). El 08-11-2026 solo llegó la ficha de EBSCO, sin el artículo, y el 10-11-2026, el resumen (incorporado a FS-14). Falta comprobar en el texto completo la financiación, los conflictos y la descripción de la muestra. | No. |
+| P-01 | Texto completo de Taylor et al. 2024 (FENDURA). El 08-11-2026 solo llegó la ficha de EBSCO, sin el artículo, y el 10-11-2026, el resumen (incorporado a FS-14). Falta comprobar en el texto completo la financiación, los conflictos, la descripción de la muestra y cómo se analizó la asociación de la testosterona con la potencia en 30 s (entre personas o dentro de cada persona). | No. |
 | P-02 | Buscar fuentes catalanas o en catalán sobre el ciclo y la actividad física o la salud. | No. |
 | P-03 | Revisión clínica de la pantalla y de las tarjetas de la fase folicular (JUA-16). | Sí, la publicación. |
