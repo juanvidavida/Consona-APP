@@ -37,6 +37,7 @@ Consona habla a la pareja que acompaña, que en el público objetivo es mayorita
 | S-13 Holst 2022 | Sí | Sí | Sí | Sí | Sí | Perspectiva feminista crítica explícita. Intentó incluir a personas trans, intersexuales y no binarias, pero reconoce que solo participaron unas pocas personas no binarias. Muestra con mayoría universitaria. | Fuente principal del plano social. |
 | S-15 Jang 2025 | Sí | Sí | Sí | Sí | Sí | Planteado expresamente para contrastar mitos sobre las capacidades de las mujeres. | Desmentido de los cambios cognitivos. |
 | S-16 McNulty 2020 | Sí | Sí | Sí | Sí | Sí | Concluye que no se pueden dar pautas generales y recomienda un enfoque individual. | Rendimiento, con su límite. |
+| S-28 Taylor 2024 (FENDURA) | Sí | Sí | Sí | Parcial | — | Fase verificada en sangre; muestra pequeña de deportistas. Financiación no visible en el resumen. | Coherente con S-16. |
 | S-17 Pierson 2021 | Sí | **Riesgo** | Sí | Parcial | Sí, **con conflicto** | Advierte expresamente contra leer los datos como «volatilidad» femenina. La difusión mediática («el ciclo manda sobre el ánimo») sí cayó en C2. Coautoría de Clue. | Solo la amplitud pequeña y las advertencias. |
 | S-18 Samulowitz 2018 | Sí | Sí | Sí | Sí | Sí | Estudia el propio sesgo de género. | Marco del sesgo en la atención al dolor. |
 | S-19 Schick 2022 | Sí | Sí | Sí | Parcial | Sí | Solo parejas heterosexuales. Usa «enfermedad de mujeres». | Interdependencia en la pareja, sin generalizar. |

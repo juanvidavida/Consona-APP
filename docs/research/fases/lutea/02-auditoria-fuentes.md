@@ -27,6 +27,7 @@
 | LS-17 | Rael B, et al. *Int J Environ Res Public Health* 2021 (IronFEMME) | FS-12 (folicular) | [V] | Sin conflictos declarados. | **Fuente española.** Con la fase verificada en tres pasos, el esfuerzo percibido y la sensación de estar a punto no cambian en la fase lútea. Deportistas de resistencia. |
 | LS-18 | Johnston-Robledo I, Chrisler JC. The menstrual mark: menstruation as social stigma. 2013/2020 | S-21 (menstruación) | [V] | — | El estereotipo cultural de la mujer «premenstrual» violenta, irracional, emocionalmente inestable o fuera de control, difundido por medios y objetos «humorísticos». |
 | LS-19 | Holst AS, et al. *Reprod Health* 2022 · PMC8857732 | S-13 (menstruación) | [V] | European Society of Contraception and Reproductive Health. | **Fuente catalana.** Algunas mujeres consideran a su pareja más fiable que ellas mismas para saber si tienen cambios emocionales con el ciclo. |
+| LS-20 | Taylor MY, et al. *Med Sci Sports Exerc* 2024 (FENDURA) | FS-14 (folicular) | [V-abs] | No revisada. | Con la fase verificada en sangre, las variables fisiológicas del rendimiento de resistencia no cambian en la fase lútea media frente a la folicular temprana y la ovulatoria, y los cambios del V̇O2pico entre la folicular temprana y la lútea media no se repiten entre personas ni entre ciclos. No midió el esfuerzo percibido. Deportistas de resistencia. |
 
 ## 2. Fuentes reutilizadas de JUA-10, JUA-19 y JUA-27
 
