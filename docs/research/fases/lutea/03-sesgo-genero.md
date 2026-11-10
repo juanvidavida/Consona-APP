@@ -35,12 +35,13 @@ Por eso esta pantalla tiene que explicar la fisiología sin dar argumentos al es
 | LS-18 Johnston-Robledo y Chrisler | Sí | Sí | Sí | Parcial | — | Estudia el propio estigma; estudios mayoritariamente estadounidenses. | Marco del estereotipo. |
 | LS-19 Holst 2022 | Sí | Sí | Sí | Sí | Sí | Perspectiva feminista crítica; muestra mayoritariamente universitaria. | Papel de la pareja. |
 | LS-20 Taylor 2024 (FENDURA) | Sí | Sí | Sí | Parcial | — | Fase verificada en sangre; muestra pequeña de deportistas. Financiación no visible en el resumen. | Rendimiento fisiológico, con su límite. |
+| LS-21 Reilly 2024 | Sí | Sí | Sí | Parcial | — | Separa el diagnóstico confirmado del provisional y muestra que este último infla las cifras: corrige la patologización. Muestras de varios continentes, con institutos y universidades. | Solo la cifra de población general con diagnóstico confirmado. |
 
 ## 3. Patrones de sesgo detectados
 
 1. **El estereotipo «premenstrual».** Convierte una variación pequeña y desigual en un rasgo de todas las mujeres y en una explicación de su conducta (LS-18). Es el uso más directo del ciclo para quitar valor a lo que alguien dice.
 2. **Sesgo de expectativa en los datos.** Quien ha aprendido a esperar malestar premenstrual tiende a declararlo más (LS-13). Los estudios retrospectivos y los que revelan su objetivo inflan el efecto, y eso alimenta el estereotipo.
-3. **Patologización.** Usar «SPM» como etiqueta cotidiana convierte la experiencia normal en síndrome. LS-13 cuestiona el propio término. El TDPM es real y grave en una minoría, y por eso no se trivializa ni se aplica a cualquiera.
+3. **Patologización.** Usar «SPM» como etiqueta cotidiana convierte la experiencia normal en síndrome. LS-13 cuestiona el propio término. El TDPM es real y grave en una minoría, y por eso no se trivializa ni se aplica a cualquiera. Las cifras altas de TDPM proceden sobre todo de diagnósticos provisionales; con registro diario y en población general, la cifra baja al 1,6 % (LS-21).
 4. **Ciclo de manual.** La lútea fija de 14 días (LS-01) es una norma idealizada que lleva a ver como anomalía lo habitual, y a buscar «fases cortas».
 5. **Industria.** Varias cifras de duración y de ánimo proceden de empresas de apps y de tests (LS-05, LS-06, LS-09, LS-12), interesadas en que el ciclo sea predecible y explique cosas.
 

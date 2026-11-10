@@ -28,6 +28,7 @@
 | LS-18 | Johnston-Robledo I, Chrisler JC. The menstrual mark: menstruation as social stigma. 2013/2020 | S-21 (menstruación) | [V] | — | El estereotipo cultural de la mujer «premenstrual» violenta, irracional, emocionalmente inestable o fuera de control, difundido por medios y objetos «humorísticos». |
 | LS-19 | Holst AS, et al. *Reprod Health* 2022 · PMC8857732 | S-13 (menstruación) | [V] | European Society of Contraception and Reproductive Health. | **Fuente catalana.** Algunas mujeres consideran a su pareja más fiable que ellas mismas para saber si tienen cambios emocionales con el ciclo. |
 | LS-20 | Taylor MY, et al. *Med Sci Sports Exerc* 2024 (FENDURA) | FS-14 (folicular) | [V-abs] | No revisada. | Con la fase verificada en sangre, las variables fisiológicas del rendimiento de resistencia no cambian en la fase lútea media frente a la folicular temprana y la ovulatoria, y los cambios del V̇O2pico entre la folicular temprana y la lútea media no se repiten entre personas ni entre ciclos. No midió el esfuerzo percibido. Deportistas de resistencia. |
+| LS-21 | Reilly TJ, Patel S, Unachukwu IC, Knox CL, Wilson CA, Craig MC, Schmalenberger KM, Eisenlohr-Moul TA, Cullen AE. The prevalence of premenstrual dysphoric disorder: systematic review and meta-analysis. *J Affect Disord* 2024;349:534–40. DOI 10.1016/j.jad.2024.01.066 · PMID 38199397 | Nueva (D-02 de JUA-19) | [V-abs] (resumen de PubMed, 10-11-2026; no está en PMC) | Declara no tener conflictos de interés. Protocolo registrado en PROSPERO (CRD42021249249). Financiación no visible en el resumen. | **Vigente.** 44 estudios con 48 muestras independientes y 50.659 participantes. Prevalencia puntual del TDPM: **3,2 %** (IC 95 %: 1,7–5,9) con diagnóstico confirmado y **7,7 %** (5,3–11,0) con diagnóstico provisional. Heterogeneidad muy alta en el conjunto (I² = 99 %), que dependía del continente, del tipo de muestra (comunidad, universidad, instituto), del riesgo de sesgo y del método diagnóstico. En **muestras de población general con diagnóstico confirmado: 1,6 %** (1,0–2,5), con heterogeneidad baja (I² = 26 %). Las autoras concluyen que los estudios con diagnóstico provisional dan cifras artificialmente altas. El diagnóstico confirmado exige un registro diario prospectivo durante dos ciclos. Límite declarado: pocos estudios aplican en comunidad los criterios DSM completos. Incluye muestras de instituto (menores de edad), que Consona no usa. **Uso:** solo SPM-06 (cifra de población general) y SPM-03 (registro de dos ciclos). |
 
 ## 2. Fuentes reutilizadas de JUA-10, JUA-19 y JUA-27
 
@@ -35,10 +36,10 @@
 |---|---|
 | Definición de la fase y límites del calendario | `jua-10/01-cycle-phases.md` (Schmalenberger 2021; Allen 2016) |
 | Deficiencia lútea | `jua-10/audit-02-asrm-lpd.md` |
-| SPM y TDPM | `jua-10/audit-07-rcog-pms.md`; `spm-tdpm-v0.4.0.md` (JUA-19, PR #9) |
+| SPM y TDPM | `jua-10/audit-07-rcog-pms.md`; `spm-tdpm-v0.5.0.md` (JUA-19) |
 | Ánimo, calendario y atribución (EC-01, EC-02, EC-05, EC-07) | `jua-10/12-health-emotional-cognitive.md` |
 | Duración de referencia de 12 días y regla de la rueda | JUA-27 (PR #12), §2 a §4 |
-| Recursos de ayuda urgente (112, 024, 016) | `spm-tdpm-v0.4.0.md`, D-03 y D-04 |
+| Recursos de ayuda urgente (112, 024, 016) | `spm-tdpm-v0.5.0.md`, D-03 y D-04 |
 
 ## 3. Fuentes descartadas o con uso restringido
 
@@ -46,9 +47,8 @@
 |---|---|
 | Duración lútea de 14 días de Endotext (LS-01) y de Lenton 1984 | Contradicha por estudios con marcadores de ovulación; Lenton excluye por construcción las fases cortas (JUA-27). |
 | Folleto RCOG 2018 y Green-top Guideline No. 48 | En revisión o en actualización (`audit-07`). |
-| Metaanálisis de prevalencia del TDPM de 2024 (PubMed 38199397) | Lo usa SPM-06 pero no está auditado en JUA-10 (D-02 de JUA-19). No se usa en esta pantalla. |
 | Divulgación sobre *cycle syncing* y sobre la fase lútea como «fase de introspección» o «fase de bajón» | Sin revisión por pares; reproduce el estereotipo. |
 
 ## 4. Fuentes críticas sin texto completo
 
-Ninguna. Todas las fuentes que sostienen afirmaciones de esta fase están verificadas en texto completo.
+Ninguna crítica. LS-20 (FENDURA) y LS-21 (Reilly 2024) solo se han verificado en el resumen; ninguna afirmación depende solo de ellas salvo la cifra de SPM-06, que reproduce el resumen sin interpretarlo.
