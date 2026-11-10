@@ -28,6 +28,7 @@ Después se suben al servidor las páginas que hayan cambiado.
 │   ├── ca/                    las mismas páginas en catalán (con index.html)
 │   ├── en/                    las mismas páginas en inglés (con index.html)
 │   ├── suscribir.php  baja.php
+│   ├── favicon.svg  apple-touch-icon.png   logo (origen en docs/marca/)
 │   └── fonts/
 └── consona-privado/           ← lib.php y config.php (privado)
 ```
@@ -64,6 +65,10 @@ Para pasar de la primera versión (una página con los tres idiomas y baja con t
    ```
 
    Hay que hacerlo justo después del paso 2: el `suscribir.php` nuevo ya no rellena esa columna y las altas fallarían mientras exista.
+
+## Actualización del 04-11-2026 (logo)
+
+En `httpdocs/`, subir `favicon.svg` y `apple-touch-icon.png`, que son nuevos, y sustituir las páginas generadas de la raíz, `ca/` y `en/`. No cambian `suscribir.php`, `baja.php`, `fonts/` ni la carpeta privada.
 
 ## Pruebas después de desplegar
 

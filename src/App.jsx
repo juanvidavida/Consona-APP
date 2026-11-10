@@ -273,7 +273,11 @@ function App() {
 
       <header className="app-header" aria-label="Encabezado de Consona">
         <div className="brand-lockup">
-          <span className="brand-mark" aria-hidden="true">C</span>
+          <svg className="brand-mark" viewBox="8 8 104 104" aria-hidden="true" focusable="false">
+            <circle cx="76" cy="60" r="28.5" fill="none" stroke="#d08b3e" strokeWidth="11" />
+            <path d="M66.71 81.21 A30 30 0 1 1 66.71 38.79" fill="none" stroke="#a84a2a" strokeWidth="11" strokeLinecap="round" />
+            <path d="M70.07 87.88 A28.5 28.5 0 0 1 55.5 79.8" fill="none" stroke="#d08b3e" strokeWidth="11" />
+          </svg>
           <span className="brand-name">Consona</span>
         </div>
         <div className="header-actions">
