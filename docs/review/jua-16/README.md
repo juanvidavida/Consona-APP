@@ -28,20 +28,20 @@ Se revisa **exactamente** la versión identificada aquí. Cualquier cambio poste
 
 | # | Artefacto | Versión | Archivo | SHA-256 |
 |---|---|---|---|---|
-| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) y mensajes de derivación DER-01 y DER-02 | 0.6.0 | [`spm-tdpm-v0.6.0.md`](../../education/spm-tdpm-v0.6.0.md) | `45fa5503058d70975d2314e5f867202160a0e25b06b22e3585633bef4d8b70a0` |
-| A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.3.0 | [`home-cards-luteal-v0.3.0.md`](../../education/home-cards-luteal-v0.3.0.md) | `b0648065e68a87ce314f5ac6edc9850610a55ea02743f1f002e0c70f6714fa14` |
+| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) y mensajes de derivación DER-01 y DER-02 | 0.7.0 | [`spm-tdpm-v0.7.0.md`](../../education/spm-tdpm-v0.7.0.md) | `1e2b33b28dbd15825f492d7e779ee3f69742ffea186ae1aa0f1df409f17a5e98` |
+| A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.3.0 | [`home-cards-luteal-v0.3.0.md`](../../education/home-cards-luteal-v0.3.0.md) | `0b6ff69025ebb6c47e1b369c527b688e7627266de1c48422d30d24839dd9733c` |
 | A3 | Tarjetas de la pantalla de inicio en la menstruación | 0.3.0 | [`home-cards-menstruation-v0.3.0.md`](../../education/home-cards-menstruation-v0.3.0.md) | `b50ed79e0db8190f878b12c4b2e96f031e6f5daf4ee37fb944f7274e65006325` |
 | A4 | Tarjetas de la pantalla de inicio en la fase folicular | 0.3.0 | [`home-cards-follicular-v0.3.0.md`](../../education/home-cards-follicular-v0.3.0.md) | `66466297e635650095d5fa948bac6780f8f522071f778d36e7b32689f6930fd7` |
 | A5 | Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada | 0.3.0 | [`home-cards-ovulatory-v0.3.0.md`](../../education/home-cards-ovulatory-v0.3.0.md) | `af846f080772b2bc80d0a49c86ac7bd7c1040fc762479dbcfdd3f94a44f4bb32` |
-| A6 | Pantalla «La menstruación» de «Comprender» | 0.2.0 | [`menstruacion-v0.2.0.md`](../../education/menstruacion-v0.2.0.md) | `3d06c04d0eb4ddd4c1df5e12dbd6533458ba00bea9bba906cf096aff7606522e` |
+| A6 | Pantalla «La menstruación» de «Comprender» | 0.2.0 | [`menstruacion-v0.2.0.md`](../../education/menstruacion-v0.2.0.md) | `400d18a4f583628ea9932ff1fb8f13bd08fac57d1e3b0c8c5f1ba382e4c5c601` |
 | A7 | Pantalla «La fase folicular» de «Comprender» | 0.2.0 | [`folicular-v0.2.0.md`](../../education/folicular-v0.2.0.md) | `4919e84173568d614c6449fd4ffaaa9662a68dc41b915d69dbb5806d08ee1953` |
 | A8 | Pantalla «La ventana ovulatoria» de «Comprender» | 0.2.0 | [`ovulatoria-v0.2.0.md`](../../education/ovulatoria-v0.2.0.md) | `3b7dcf8240fc63f75b2b0bdfcd447a791ef9c2bcd842a6da0bf1f33791bb248b` |
-| A9 | Pantalla «La fase lútea» de «Comprender» | 0.2.0 | [`lutea-v0.2.0.md`](../../education/lutea-v0.2.0.md) | `0f2b36822f5b3a18950d18a815ef30a39f9c88b688d807b07185d232072a20af` |
+| A9 | Pantalla «La fase lútea» de «Comprender» | 0.3.0 | [`lutea-v0.3.0.md`](../../education/lutea-v0.3.0.md) | `443b6f8b83e675834067357fa0226ad909334e3ed279d03fc196fa97913a0476` |
 
 Comprobación de integridad, desde la raíz del repositorio:
 
 ```sh
-shasum -a 256 docs/education/spm-tdpm-v0.6.0.md docs/education/home-cards-{luteal,menstruation,follicular,ovulatory}-v0.3.0.md docs/education/{menstruacion,folicular,ovulatoria,lutea}-v0.2.0.md
+shasum -a 256 docs/education/spm-tdpm-v0.7.0.md docs/education/home-cards-{luteal,menstruation,follicular,ovulatory}-v0.3.0.md docs/education/{menstruacion,folicular,ovulatoria}-v0.2.0.md docs/education/lutea-v0.3.0.md
 ```
 
 Cualquier cambio en estos archivos, incluidos sus metadatos, altera el hash: se crea una versión nueva si cambia el texto mostrado y se actualizan esta tabla y el formulario antes del envío.
@@ -78,6 +78,7 @@ Después de la revisión, el equipo de producto registra en el mismo formulario 
 | Tarjetas, índice D-04 (05-11-2026) | Las tarjetas de la menstruación, la fase folicular y la ventana ovulatoria entran en esta revisión. | Artefactos A3 a A5. |
 | Pantallas de «Comprender» (JUA-36) | Las cuatro pantallas de fase entran en esta revisión. | Artefactos A6 a A9. |
 | Comentarios de producto del 11-11-2026 | «Mujeres» en lugar de «personas» en las afirmaciones generales; título «Antes de la regla» y términos completos en lugar de siglas; «evidencia científica»; la pareja puede ayudar escuchando y preguntando; duración aproximada de las fases folicular y lútea en las tarjetas; subpantalla «Fuentes» en el mapa de pantallas; tres tarjetas en la home, con «Cómo acompañar» en lugar de «Qué puedes preguntarle» y «Qué te toca a ti»; bloque «Lo que ves en Consona» en las cuatro pantallas de fase. | Pantalla v0.6.0, tarjetas v0.3.0, pantallas de «Comprender» v0.2.0 y especificación del panel v1.1.2. |
+| Consulta de producto del 11-11-2026 (SPM/TDPM D-10) | SPM-05 añade «son las hormonas» como frase que resta valor; SPM-07, preguntar si prefiere compañía, espacio o ayuda; el ensayo de Ussher y Perz 2017 se audita en JUA-36 (LS-22) y solo respalda que el apoyo de la pareja importa. | Pantalla v0.7.0 y «La fase lútea» v0.3.0 (LUT-07 con la misma redacción que SPM-07). |
 
 Las siguientes cuestiones **no** son pendientes de producto, sino preguntas expresas a la persona revisora (formulario, sección 4):
 

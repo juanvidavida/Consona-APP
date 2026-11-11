@@ -4,7 +4,7 @@ Artefactos revisados (ver [README](./README.md), sección 3, que da el SHA-256 d
 
 | # | Artefacto | Versión |
 |---|---|---|
-| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) | 0.6.0 |
+| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) | 0.7.0 |
 | A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.3.0 |
 | A3 | Tarjetas de la pantalla de inicio en la menstruación | 0.3.0 |
 | A4 | Tarjetas de la pantalla de inicio en la fase folicular | 0.3.0 |
@@ -12,7 +12,7 @@ Artefactos revisados (ver [README](./README.md), sección 3, que da el SHA-256 d
 | A6 | Pantalla «La menstruación» | 0.2.0 |
 | A7 | Pantalla «La fase folicular» | 0.2.0 |
 | A8 | Pantalla «La ventana ovulatoria» | 0.2.0 |
-| A9 | Pantalla «La fase lútea» | 0.2.0 |
+| A9 | Pantalla «La fase lútea» | 0.3.0 |
 
 Decisiones posibles por bloque: **A** = Aprobado · **AC** = Aprobado con cambios · **NA** = No aprobado.
 
@@ -51,7 +51,7 @@ Observaciones sobre el alcance:
 
 ## 3. Revisión por bloque
 
-### 3.1 A1 · Pantalla «Antes de la regla» v0.6.0
+### 3.1 A1 · Pantalla «Antes de la regla» v0.7.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -119,7 +119,7 @@ Observaciones sobre el alcance:
 | DER-01 | Cuándo puede ayudar un profesional | | |
 | OVU-08 | Fuentes | | |
 
-### 3.6 A9 · Pantalla «La fase lútea» v0.2.0
+### 3.6 A9 · Pantalla «La fase lútea» v0.3.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -153,6 +153,7 @@ Observaciones sobre el alcance:
 | P-16 | **General.** Las afirmaciones generales hablan de «mujeres» (antes, «personas»). ¿Es adecuado para el contenido clínico? | |
 | P-17 | **Tarjetas, «Cómo acompañar».** Cada fase combina una pregunta abierta con un gesto propio ligado al tema de la fase (por ejemplo, hablar de la regla con naturalidad), no al estado de ella. ¿Puede leerse el gesto como algo que la fase exige? | |
 | P-18 | **«Lo que ves en Consona».** Las cuatro pantallas de fase explican cómo dibuja la fase la rueda del ciclo y que los cambios de fase son una estimación. ¿Es clara la diferencia entre lo que pasa en el cuerpo y lo que calcula la app? | |
+| P-19 | **SPM-07, LUT-07 y LS-22.** SPM-07 y LUT-07 proponen preguntar si prefiere compañía, espacio o ayuda, y los textos se apoyan en un ensayo con mujeres con trastornos premenstruales confirmados (Ussher y Perz 2017) para decir que el apoyo de la pareja importa. ¿Es adecuado usar ese ensayo así, sin recomendar terapia? | |
 
 ### 4.2 Preguntas propias de los demás artefactos
 

@@ -36,6 +36,7 @@ Por eso esta pantalla tiene que explicar la fisiología sin dar argumentos al es
 | LS-19 Holst 2022 | Sí | Sí | Sí | Sí | Sí | Perspectiva feminista crítica; muestra mayoritariamente universitaria. | Papel de la pareja. |
 | LS-20 Taylor 2024 (FENDURA) | Sí | Sí | Sí | Parcial | — | Fase verificada en sangre; muestra pequeña de deportistas. Financiación no visible en el resumen. | Rendimiento fisiológico, con su límite. |
 | LS-21 Reilly 2024 | Sí | Sí | Sí | Parcial | — | Separa el diagnóstico confirmado del provisional y muestra que este último infla las cifras: corrige la patologización. Muestras de varios continentes, con institutos y universidades. | Solo la cifra de población general con diagnóstico confirmado. |
+| LS-22 Ussher y Perz 2017 | Sí | Sí | Sí | Parcial | Sí | Marco psicosocial: critica explicar el malestar por «hormonas desbocadas» y estudia el malestar premenstrual como algo que se vive en la relación. Solo parejas heterosexuales; no recoge la voz de las parejas. | Solo como evidencia de que el apoyo de la pareja importa; nunca para recomendar terapia. |
 
 ## 3. Patrones de sesgo detectados
 

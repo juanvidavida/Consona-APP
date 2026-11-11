@@ -66,3 +66,4 @@ El cierre **no autoriza** umbrales de duración, diagnósticos, predicciones de 
 | P-03 | ~~Pasar las tarjetas de la fase lútea (JUA-19) a una versión con trazabilidad a esta investigación.~~ **Cerrado el 10-11-2026:** `home-cards-luteal-v0.3.0.md`. | No. |
 | P-04 | Revisión clínica de la pantalla de la fase lútea (JUA-16). | Sí, la publicación. |
 | P-05 | Validar con usuarios del piloto el tono del bloque sobre el estereotipo. | No. |
+| P-06 | Conseguir y auditar los estudios que LS-22 cita sobre las respuestas de la pareja y el malestar premenstrual (referencias 7, 40 y 41 de Ussher y Perz 2017). | No. |

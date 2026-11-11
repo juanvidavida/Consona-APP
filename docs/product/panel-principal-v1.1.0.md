@@ -260,4 +260,4 @@ Estas diferencias se registran como tareas de implementación y se recogen en el
 - [Fases del ciclo (JUA-10)](../research/jua-10/01-cycle-phases.md).
 - [Duraciones de referencia por fase (JUA-27)](../research/JUA-27-duraciones-referencia.md). Se integra con la PR de JUA-27.
 - [Auditoría 07: SPM, RCOG](../research/jua-10/audit-07-rcog-pms.md), §4.
-- Pantalla SPM/TDPM v0.6.0 y tarjetas de la fase lútea v0.3.0: `docs/education/spm-tdpm-v0.6.0.md` y `docs/education/home-cards-luteal-v0.3.0.md`, en el paquete de JUA-16. Reglas citadas: U-02, U-03, C-01 a C-04, SPM-04 y H-01 a H-04 (desde la v0.2.0 de las tarjetas, H-01 a H-04 del índice de tarjetas).
+- Pantalla «Antes de la regla» v0.7.0 y tarjetas de la fase lútea v0.3.0: `docs/education/spm-tdpm-v0.7.0.md` y `docs/education/home-cards-luteal-v0.3.0.md`, en el paquete de JUA-16. Reglas citadas: U-02, U-03, C-01 a C-04, SPM-04 y H-01 a H-04 (desde la v0.2.0 de las tarjetas, H-01 a H-04 del índice de tarjetas).

@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «La fase lútea» v0.2.0
+# Consona — Pantalla educativa «La fase lútea» v0.3.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío.
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -19,7 +19,7 @@ Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, seccio
 
 Esta pantalla se revisa siempre contra estas tres piezas:
 
-- **La pantalla SPM/TDPM** (`spm-tdpm-v0.6.0.md`, JUA-19). Esta pantalla explica la fase entera. La pantalla SPM/TDPM desarrolla los cambios premenstruales y los términos clínicos. LUT-05 resume y enlaza a ella sin repetir sus cifras. El enlace es estático y no cambia según la fase ni ningún dato (U-02). DER-01 y DER-02 reproducen sin cambios sus mensajes de derivación.
+- **La pantalla SPM/TDPM** (`spm-tdpm-v0.7.0.md`, JUA-19). Esta pantalla explica la fase entera. La pantalla SPM/TDPM desarrolla los cambios premenstruales y los términos clínicos. LUT-05 resume y enlaza a ella sin repetir sus cifras. El enlace es estático y no cambia según la fase ni ningún dato (U-02). DER-01 y DER-02 reproducen sin cambios sus mensajes de derivación.
 - **Las tarjetas de la fase lútea** (`home-cards-luteal-v0.3.0.md`, JUA-19), que resumen esta pantalla.
 - **La rueda** (JUA-27), que dibuja la fase lútea con 12 días.
 
@@ -61,7 +61,7 @@ Los días en que la rueda pasa de una fase a otra los calcula Consona a partir d
 
 Hacia el final de esta fase, algunas mujeres notan cambios en el cuerpo o en el ánimo: por ejemplo, dolor, hinchazón o cansancio; irritabilidad, tristeza o tensión; o cambios en el sueño o el apetito. Otras no notan ninguno, y en una misma mujer puede cambiar de un ciclo a otro.
 
-Cuando los cambios se repiten ciclo tras ciclo y afectan de forma importante al día a día, se habla de síndrome premenstrual o, en su forma más intensa y menos frecuente, de trastorno disfórico premenstrual. Son términos clínicos que solo puede valorar un profesional. Los explicamos en [«Antes de la regla»](./spm-tdpm-v0.6.0.md).
+Cuando los cambios se repiten ciclo tras ciclo y afectan de forma importante al día a día, se habla de síndrome premenstrual o, en su forma más intensa y menos frecuente, de trastorno disfórico premenstrual. Son términos clínicos que solo puede valorar un profesional. Los explicamos en [«Antes de la regla»](./spm-tdpm-v0.7.0.md).
 
 ### LUT-06 · Lo que la fase lútea no dice
 
@@ -73,11 +73,11 @@ La imagen de la mujer «premenstrual» irritable, irracional o fuera de control 
 
 ### LUT-07 · Acompañar en consonancia
 
-Que en la rueda aparezca la fase lútea no te dice cómo está tu pareja. Si notas tensión o la notas distinta, pregúntale en lugar de atribuirlo al ciclo: lo que siente tiene sus razones, y tu pareja es quien mejor puede contarlas. Tú puedes ayudar escuchando, preguntando y, si ella quiere, pensando juntos qué le vendría bien.
+Que en la rueda aparezca la fase lútea no te dice cómo está tu pareja. Si notas tensión o la notas distinta, pregúntale en lugar de atribuirlo al ciclo: lo que siente tiene sus razones, y tu pareja es quien mejor puede contarlas. Tú puedes ayudar escuchando, preguntando y, si ella quiere, pensando juntos qué le vendría bien. Puedes preguntarle si en ese momento prefiere compañía, espacio o ayuda con algo concreto, sin forzar la conversación: también puede preferir no hablar.
 
 Algunas preguntas que dejan espacio:
 - «¿Cómo estás hoy?»
-- «¿Hay algo que te venga bien?»
+- «¿Te apetece compañía, prefieres estar a tu aire o te echo una mano con algo?»
 
 Y hay una parte que es tuya: cómo respondes, cómo os repartís las tareas y el descanso, y no hacer comentarios ni bromas sobre «estar premenstrual».
 
@@ -89,7 +89,7 @@ Esta información se basa en revisiones sobre la fisiología del ciclo y del end
 
 ## 3. Mensajes de derivación
 
-Estáticos y siempre visibles en la posición indicada. No se activan por fechas, fase ni registros. Reproducen sin cambios los de `spm-tdpm-v0.6.0.md`; si cambian allí, cambian aquí.
+Estáticos y siempre visibles en la posición indicada. No se activan por fechas, fase ni registros. Reproducen sin cambios los de `spm-tdpm-v0.7.0.md`; si cambian allí, cambian aquí.
 
 ### DER-01 · Cuándo puede ayudar un profesional
 
@@ -99,7 +99,7 @@ Estáticos y siempre visibles en la posición indicada. No se activan por fechas
 > Si los cambios preocupan a tu pareja, se repiten, son intensos o le dificultan el día a día —trabajo, estudios, relaciones o descanso—, un profesional sanitario puede valorarlos en contexto. El centro de salud es un buen punto de partida.
 > La decisión de consultar es suya. Lo que puedes hacer es ofrecerle tu apoyo o tu compañía, si los quiere.
 
-Fuente: DER-01 de `spm-tdpm-v0.6.0.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4.4).
+Fuente: DER-01 de `spm-tdpm-v0.7.0.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4.4).
 
 ### DER-02 · Ayuda urgente
 
@@ -114,7 +114,7 @@ Fuente: DER-01 de `spm-tdpm-v0.6.0.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4
 >
 > Estos números también son para ti si eres tú quien lo está pasando mal.
 
-Fuente: DER-02 de `spm-tdpm-v0.6.0.md`, verificado en fuentes oficiales el 07-10-2026 (D-03 y D-04 de JUA-19).
+Fuente: DER-02 de `spm-tdpm-v0.7.0.md`, verificado en fuentes oficiales el 07-10-2026 (D-03 y D-04 de JUA-19).
 
 ## 4. Trazabilidad
 
@@ -126,8 +126,8 @@ Fuente: DER-02 de `spm-tdpm-v0.6.0.md`, verificado en fuentes oficiales el 07-10
 | LUT-04 | Fase estimada por calendario; ciclos sin ovulación; límites entre fases calculados por el motor | LU-A06, LU-A07 (JUA-27; LS-10); motor de estimación CON-032 (ADR-001 C9) |
 | LUT-05 | Cambios premenstruales variables; SPM y TDPM como términos clínicos | LU-A09 (LS-11); SPM-03 |
 | LUT-06 | Sin cambios cognitivos; ánimo con poca variación media; estereotipo y su daño | LU-A10 a LU-A12 (LS-12 a LS-18); SGL-01, SGL-04 |
-| LUT-07 | Papel de la pareja; no atribuir al ciclo | LU-A13 (LS-19); SGL-02; T-02 |
-| DER-01, DER-02 | Derivación y ayuda urgente | LU-A14; `spm-tdpm-v0.6.0.md` |
+| LUT-07 | Papel de la pareja; no atribuir al ciclo; preguntar si prefiere compañía, espacio o ayuda | LU-A13 (LS-19); LU-A16 (LS-22): el apoyo de la pareja importa, sin recomendar terapia; SGL-02; T-02; igual que SPM-07 |
+| DER-01, DER-02 | Derivación y ayuda urgente | LU-A14; `spm-tdpm-v0.7.0.md` |
 
 ## 5. Exclusiones comprobadas
 
@@ -154,6 +154,11 @@ La v0.1.0 no contiene:
 | D-05 | LUT-06 nombra el estereotipo de la mujer «premenstrual». | **Resuelta (06-11-2026):** se mantiene y se explica por qué parece cierto: se repite en bromas, anuncios y conversaciones, y en el estudio diario con el objetivo oculto el patrón apenas aparece (LU-A10, LU-A12; LS-13). |
 
 ## 7. Historial
+
+### [0.3.0] — 11-11-2026
+
+- LUT-07: preguntar si prefiere compañía, espacio o ayuda con algo concreto, sin forzar la conversación; la pregunta «¿Hay algo que te venga bien?» pasa a «¿Te apetece compañía, prefieres estar a tu aire o te echo una mano con algo?». Misma redacción que SPM-07 de la pantalla «Antes de la regla» v0.7.0 (D-10).
+- DER-01 y DER-02 no cambian.
 
 ### [0.2.0] — 11-11-2026
 

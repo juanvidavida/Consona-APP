@@ -2,12 +2,12 @@
 
 **Issues:** JUA-19 (origen) y JUA-23 (reglas comunes).
 **Estado:** Borrador para revisión de producto. **Incluido en el paquete de revisión clínica de JUA-16**, pendiente de envío.
-**Origen:** decisión D-05 de [`spm-tdpm-v0.6.0.md`](./spm-tdpm-v0.6.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
+**Origen:** decisión D-05 de [`spm-tdpm-v0.7.0.md`](./spm-tdpm-v0.7.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
 **Reglas comunes:** H-01 a H-08 de [`home-cards-index.md`](./home-cards-index.md).
 **Base de investigación:** [`docs/research/fases/lutea/`](../research/fases/lutea/) (JUA-36).
 **Cuándo se muestra:** durante toda la fase lútea estimada, incluidos los días previos a la menstruación (sección 2 del índice).
 **Parte de:** el texto provisional de [`src/App.jsx`](../../src/App.jsx) (JUA-5), que no es definitivo.
-**Público y tono:** los de la sección 1 de `spm-tdpm-v0.6.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
+**Público y tono:** los de la sección 1 de `spm-tdpm-v0.7.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación.
 
 > Este documento fija el texto exacto de las tres tarjetas cuando la home muestra la fase lútea estimada. Cualquier cambio exige una nueva versión y su revisión contra las reglas comunes del índice y las reglas C-01 a C-04 de la pantalla SPM/TDPM.
@@ -21,7 +21,7 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 | L-01 | Las tarjetas no cambian en los días previos a la menstruación ni nombran SPM o TDPM (H-01, H-02; C-01 de la pantalla SPM/TDPM). |
 | L-02 | Duración aproximada: «unos 12 días», siempre con «suele» y «también varía», igual que LUT-03 y la rueda (excepción de H-06). Sin «fase lútea corta», «deficiencia lútea» ni «progesterona baja» (SGL-05). |
 | L-03 | La progesterona solo aparece como fisiología del útero, nunca para explicar ánimo, energía ni conducta (H-08; SGL-02). |
-| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.2.0.md` y SPM-05 de `spm-tdpm-v0.6.0.md`, repetida a propósito (D-04). |
+| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.3.0.md` y SPM-05 de `spm-tdpm-v0.7.0.md`, repetida a propósito (D-04). |
 | L-05 | La fase no se presenta como «la fase mala», ni como una semana que exija un trato especial (SGL-04). |
 
 ## 2. Texto de las tarjetas
