@@ -10,7 +10,7 @@
 
 ## 1. Público, tono, ubicación y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, secciones 1 a 3), con dos añadidos:
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.0.md`, secciones 1 a 3), con dos añadidos:
 
 - **Reglas de la fase:** O-01 a O-06 de las tarjetas de JUA-23, y reglas de sesgo SGO-01 a SGO-05 de `03-sesgo-genero.md`. **Excepción a O-05 en esta pantalla:** OVU-02 menciona el dolor de ovulación (D-05), sin cifras, sin decir si es probable y sin presentarlo como forma de saber si ha habido ovulación. Las tarjetas de la home siguen sin mencionarlo.
 - **R-08:** ningún icono, color ni ilustración asociado a la fertilidad, el embarazo, el atractivo o la sexualidad.
@@ -18,7 +18,7 @@ Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, seccio
 
 ### Coherencia con la rueda y con las tarjetas de la home
 
-La rueda dibuja la ventana con bordes difusos (JUA-27 §3.4) y las tarjetas de la ventana ovulatoria (`home-cards-ovulatory-v0.3.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las tres piezas se revisa contra las otras.
+La rueda dibuja la ventana con bordes difusos (JUA-27 §3.4) y las tarjetas de la ventana ovulatoria (`home-cards-ovulatory-v0.4.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las tres piezas se revisa contra las otras.
 
 ## 2. Texto de la pantalla
 

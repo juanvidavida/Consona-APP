@@ -5,20 +5,20 @@
 **Público y tono:** la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo. Se habla de «tu pareja».
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación. `src/App.jsx` solo se actualiza con versiones aprobadas.
 
-> La home muestra tres tarjetas de orientación para la fase estimada del día: «Qué pasa en su cuerpo», «Cómo acompañar» y «Qué no asumir». Este índice reúne las reglas comunes y enlaza el documento versionado de cada fase. Hasta el 11-11-2026 eran cuatro: «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti».
+> La home muestra tres tarjetas de orientación para la fase estimada del día: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar», en este orden: primero el conocimiento y al final la acción propia. Este índice reúne las reglas comunes y enlaza el documento versionado de cada fase. Hasta el 11-11-2026 eran cuatro: «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti».
 
 ## 1. Documentos por fase
 
 | Fase | Documento | Estado |
 |---|---|---|
-| Menstruación | [`home-cards-menstruation-v0.3.0.md`](./home-cards-menstruation-v0.3.0.md) | Borrador |
-| Fase folicular | [`home-cards-follicular-v0.3.0.md`](./home-cards-follicular-v0.3.0.md) | Borrador |
-| Ventana ovulatoria estimada | [`home-cards-ovulatory-v0.3.0.md`](./home-cards-ovulatory-v0.3.0.md) | Borrador |
-| Fase lútea | [`home-cards-luteal-v0.3.0.md`](./home-cards-luteal-v0.3.0.md) | Borrador, en el paquete de revisión clínica de JUA-16 |
+| Menstruación | [`home-cards-menstruation-v0.4.0.md`](./home-cards-menstruation-v0.4.0.md) | Borrador |
+| Fase folicular | [`home-cards-follicular-v0.4.0.md`](./home-cards-follicular-v0.4.0.md) | Borrador |
+| Ventana ovulatoria estimada | [`home-cards-ovulatory-v0.4.0.md`](./home-cards-ovulatory-v0.4.0.md) | Borrador |
+| Fase lútea | [`home-cards-luteal-v0.4.0.md`](./home-cards-luteal-v0.4.0.md) | Borrador, en el paquete de revisión clínica de JUA-16 |
 
 El documento de la fase lútea **no se modificó** en JUA-23. Desde su v0.2.0 (JUA-19, 10-11-2026) aplica también las reglas comunes H-01 a H-08.
 
-Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.4.0.md`](./home-cards-review-pack-v0.4.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase.
+Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.5.0.md`](./home-cards-review-pack-v0.5.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase.
 
 ## 2. Qué conjunto se muestra cada día
 
@@ -46,7 +46,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 | H-04 | Las tarjetas no enlazan directamente a la pantalla SPM/TDPM ni cambian de color o de tono según la fase (C-03, U-03). |
 | H-05 | Ninguna tarjeta menciona ni sugiere deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad. |
 | H-06 | Sin fertilidad, «días seguros», probabilidad de embarazo, ovulación confirmada ni cifras en días. Excepciones: la duración de la menstruación, declarada por la persona afectada o de 5 días por defecto (M-02); el intervalo de la fase folicular, «entre 15 y 20 días» contando los días de la regla (F-02); y la duración aproximada de la fase lútea, «unos 12 días» (L-02). Siempre con «suele» y con que la duración cambia. |
-| H-07 | «Cómo acompañar» y «Qué no asumir» hablan de lo que haces tú, no de lo que debe hacer tu pareja. Sin consejos para gestionar, calmar o evitar a tu pareja, ni recomendaciones de salud (medicamentos, calor, ejercicio). |
+| H-07 | «Qué no asumir» y «Cómo acompañar» hablan de lo que haces tú, no de lo que debe hacer tu pareja. Sin consejos para gestionar, calmar o evitar a tu pareja, ni recomendaciones de salud (medicamentos, calor, ejercicio). |
 | H-08 | Ninguna tarjeta atribuye a la fase energía, ánimo, rendimiento, capacidad ni conducta (`01-cycle-phases`, `08-health-energy`, `12-health-emotional-cognitive` EC-01, EC-02). |
 
 ## 4. Criterios de aceptación de JUA-23
@@ -67,6 +67,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 - Índice inicial: documentos por fase, criterio de selección y reglas comunes H-01 a H-08.
 - 06-11-2026: tarjetas de las tres fases nuevas en versión 0.2.0, con trazabilidad a la investigación de JUA-36.
 - Decisiones del 05-11-2026: excepción de la duración de la menstruación en H-01 y H-06; las tres fases nuevas entran en JUA-16.
+- 11-11-2026: orden «Qué pasa en su cuerpo», «Qué no asumir», «Cómo acompañar»; antetítulo «Comunicación y tu parte». Tarjetas en v0.4.0; paquete regenerado como v0.5.0.
 - 11-11-2026: tres tarjetas por fase; «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti». Sin acrónimos en los documentos.
 - 11-11-2026: H-06 admite el intervalo de la fase folicular y la duración aproximada de la fase lútea. Tarjetas de la menstruación, folicular y lútea en v0.3.0; paquete regenerado como v0.4.0.
-- 10-11-2026: la fase lútea pasa a `home-cards-luteal-v0.3.0.md`, que adopta las reglas comunes; paquete de revisión regenerado como v0.3.0.
+- 10-11-2026: la fase lútea pasa a `home-cards-luteal-v0.4.0.md`, que adopta las reglas comunes; paquete de revisión regenerado como v0.3.0.

@@ -1,7 +1,7 @@
 # Consona — Especificación UX del panel principal «Hoy» v1.1.0
 
-**Versión:** 1.1.2
-**Fecha:** 11 de noviembre de 2026 (v1.1.1: 28 de octubre; v1.1.0: 19 de octubre de 2026)
+**Versión:** 1.1.3
+**Fecha:** 11 de noviembre de 2026 (v1.1.2, el mismo día; v1.1.1: 28 de octubre; v1.1.0: 19 de octubre de 2026)
 **Estado:** Propuesta de producto (JUA-25). Pasa a ser la decisión de experiencia vigente al integrarse en `main`. No habilita el seguimiento ni relaja las condiciones de ADR-001 y ADR-002.
 **Sustituye a:** la v1.0 del 17 de septiembre de 2026, entregada en [`info/Consona_entrega_completa/archivos_compartidos/CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md`](../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md). Esa versión se conserva sin cambios como parte del paquete de entrega.
 
@@ -33,8 +33,8 @@ El diseño usa **transparencia progresiva**. La información imprescindible para
 | Rueda del ciclo *(nuevo)* | Rueda con la secuencia de fases, la fase estimada destacada y, en el centro, la fase y el día de ciclo. | Visualización estática de la secuencia, no un historial. Reglas completas en 3.1. |
 | Ventana y actualización | Una ventana compacta, por ejemplo `15–24 sept.`, y `Actualizado hoy`. | La ventana comunica variación sin repetir una advertencia extensa. Un control etiquetado `Cómo se calcula` abre la explicación completa. |
 | Qué pasa en su cuerpo | Tarjeta con una explicación corporal general, breve y revisada, relacionada con la fase. | Describe conocimiento general, no afirma que esté ocurriendo en la persona concreta. |
-| Cómo acompañar *(v1.1.2)* | Tarjeta con una pregunta literal, abierta y adecuada para hoy, y una acción concreta propia relacionada con tareas, logística, planes o escucha. Antetítulo «Conversación y acción propia». | Invita a preguntar en vez de suponer; no aconseja confirmar una hipótesis sobre un estado emocional. La acción no se presenta como una corrección o una gestión de la otra persona, y no depende del estado de ella. Fusiona las antiguas «Qué puedes preguntarle» y «Qué te toca a ti». |
 | Qué no asumir | Un antiestereotipo explícito sobre atribuir emociones o conducta al ciclo. | Previene que la fase active una interpretación automática antes de conversar. |
+| Cómo acompañar *(v1.1.2; orden y antetítulo en v1.1.3)* | Tarjeta con una pregunta literal, abierta y adecuada para hoy, y una acción concreta propia relacionada con tareas, logística, planes o escucha. Antetítulo «Comunicación y tu parte». Es la última tarjeta. | Invita a preguntar en vez de suponer; no aconseja confirmar una hipótesis sobre un estado emocional. La acción no se presenta como una corrección o una gestión de la otra persona, y no depende del estado de ella. Fusiona las antiguas «Qué puedes preguntarle» y «Qué te toca a ti». |
 | Acceso a detalle | Enlace o botón visible `Cómo funciona` y etiqueta accesible para lector de pantalla. | Debe abrir sin recopilar datos nuevos ni dirigir a recursos externos. |
 
 Las tres tarjetas anteriores son **contenido de orientación**, no variables que la aplicación mida ni conclusiones sobre la persona afectada. Su texto exacto por fase se fija en documentos versionados (JUA-23). El panel no muestra registros de síntomas, autoinformes, observaciones de la pareja ni inferencias personales, aunque el motor local siga aprendiendo de fechas confirmadas para mejorar el rango individual de fase. La información de aprendizaje de ADR-002, si llega a habilitarse después de sus condiciones, no cambia estas tres tarjetas, la rueda ni la indicación temporal, y no puede transformarlas en predicciones sobre el presente.
@@ -117,7 +117,7 @@ La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloquead
 | IT-02 | La indicación lleva siempre el calificador de estimación y una explicación breve accesible desde ella, por ejemplo: «Calculado a partir de la duración de ciclos anteriores confirmados. La siguiente menstruación puede adelantarse o retrasarse». Es una estimación probabilística, no un dato. |
 | IT-03 | Solo se muestra si el motor auditado (CON-032) calcula una ventana para el siguiente inicio de sangrado con datos suficientes y vigentes. No se muestra en ningún estado excepcional de la sección 5 ni con anticoncepción que impida estimar fase. |
 | IT-04 | Es una etiqueta temporal, no clínica: no usa «premenstrual» como término clínico, no nombra SPM ni TDPM y no presenta cambios físicos o emocionales como algo que la pareja vaya a tener o esté teniendo ([audit-07](../research/jua-10/audit-07-rcog-pms.md) §4; C-01; SPM-04). |
-| IT-05 | **No cambia las tarjetas.** Las tres tarjetas siguen siendo las de la fase lútea durante toda la fase (H-01 del índice de tarjetas, que aplica `home-cards-luteal-v0.3.0.md`). |
+| IT-05 | **No cambia las tarjetas.** Las tres tarjetas siguen siendo las de la fase lútea durante toda la fase (H-01 del índice de tarjetas, que aplica `home-cards-luteal-v0.4.0.md`). |
 | IT-06 | No cambia el color, el tono ni la intensidad del panel o de la rueda; no usa iconos de aviso, cuentas atrás («faltan 3 días»), notificaciones ni recordatorios (RU-09, RU-10, sección 7). |
 | IT-07 | No enlaza directamente a la pantalla SPM/TDPM ni remite a ella. El camino sigue siendo «Cómo funciona» (U-03, C-03). |
 | IT-08 | «Cómo funciona» explica cómo se calcula este tramo y por qué es menos preciso que la fase. |
@@ -228,6 +228,10 @@ Estas diferencias se registran como tareas de implementación y se recogen en el
 
 ## 9. Historial
 
+### [1.1.3] — 11 de noviembre de 2026
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar», para que el conocimiento vaya antes que la acción propia. Antetítulo de «Cómo acompañar»: «Comunicación y tu parte».
+
 ### [1.1.2] — 11 de noviembre de 2026
 
 - Tres tarjetas de orientación: «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti» (JUA-23, decisión de producto del 11-11-2026). El resto del panel no cambia.
@@ -260,4 +264,4 @@ Estas diferencias se registran como tareas de implementación y se recogen en el
 - [Fases del ciclo (JUA-10)](../research/jua-10/01-cycle-phases.md).
 - [Duraciones de referencia por fase (JUA-27)](../research/JUA-27-duraciones-referencia.md). Se integra con la PR de JUA-27.
 - [Auditoría 07: SPM, RCOG](../research/jua-10/audit-07-rcog-pms.md), §4.
-- Pantalla «Antes de la regla» v0.7.0 y tarjetas de la fase lútea v0.3.0: `docs/education/spm-tdpm-v0.7.0.md` y `docs/education/home-cards-luteal-v0.3.0.md`, en el paquete de JUA-16. Reglas citadas: U-02, U-03, C-01 a C-04, SPM-04 y H-01 a H-04 (desde la v0.2.0 de las tarjetas, H-01 a H-04 del índice de tarjetas).
+- Pantalla «Antes de la regla» v0.7.0 y tarjetas de la fase lútea v0.3.0: `docs/education/spm-tdpm-v0.8.0.md` y `docs/education/home-cards-luteal-v0.4.0.md`, en el paquete de JUA-16. Reglas citadas: U-02, U-03, C-01 a C-04, SPM-04 y H-01 a H-04 (desde la v0.2.0 de las tarjetas, H-01 a H-04 del índice de tarjetas).

@@ -3,7 +3,7 @@
 | Campo | Valor |
 |---|---|
 | Issue | JUA-26 |
-| Versión | v0.4.2 · 11 nov 2026 |
+| Versión | v0.4.3 · 11 nov 2026 |
 | Estado | P-1 (propuesta 1, navegación) y P-2 (propuesta 2, rueda, datos semilla y receptor) aprobadas. Quedan diferencias pendientes con la especificación del panel v1.1.0 y con JUA-28 (sección 6). |
 | Diagrama | [`mapa-de-pantallas.mmd`](./mapa-de-pantallas.mmd) |
 | Wireframes visuales | [`mapa-de-pantallas.html`](./mapa-de-pantallas.html) |
@@ -23,7 +23,7 @@
 | 1.1 | 1 · Uso diario | Hoy: fase, día, ventana, actualización, rueda y 4 tarjetas | JUA-5 · JUA-25 · JUA-23 | CONSTRUIDA (datos ficticios) | Ver D-01, D-06, D-07. |
 | 1.2a–f | 1 · Uso diario | Estados excepcionales de Hoy | Panel §5 | ESPECIFICADA | Sin fases por anticoncepción = contenido propio, no error. |
 | 2.1 | 2 · Comprender | Cómo funciona | JUA-7 · Panel §4.2 | ESPECIFICADA | Hoy es una sección ancla dentro de Hoy (D-02). |
-| 2.2 | 2 · Comprender | Antes de la regla: síndrome premenstrual y trastorno disfórico premenstrual (subpantalla de 2.1) | JUA-19 · JUA-16 · `docs/education/spm-tdpm-v0.7.0.md` | ESPECIFICADA | Texto v0.7.0, pendiente de enviar a revisión clínica (JUA-16). |
+| 2.2 | 2 · Comprender | Antes de la regla: síndrome premenstrual y trastorno disfórico premenstrual (subpantalla de 2.1) | JUA-19 · JUA-16 · `docs/education/spm-tdpm-v0.8.0.md` | ESPECIFICADA | Texto v0.7.0, pendiente de enviar a revisión clínica (JUA-16). |
 | 2.3 | 2 · Comprender | Contenido educativo | Definición §5 · JUA-31 | ESPECIFICADA | Pantallas de fase en `docs/education/` (JUA-36). |
 | 2.4 | 2 · Comprender | Fuentes | JUA-31 | PENDIENTE | Nueva el 11-11-2026 (D-21). |
 | C.1 | Control | Control de datos: revisar, retirar, borrar | JUA-20 · JUA-18 · `src/App.jsx` | CONSTRUIDA (parcial) | Solo vista informativa sin autorización. |
@@ -72,7 +72,7 @@ Progreso 3/3 · casillas sin marcar: «Tengo 18 años o más», «He leído cóm
 Dispositivo de control de la persona afectada · qué se guardaría, dónde, para qué, qué no puede concluir, cómo retirarlo, límite sin conexión · alcances uno a uno (Sí/No, sin preselección) · «Rechazar» y «Aceptar» con igual peso · nunca en el dispositivo de quien consulta.
 
 ### 1.1 · Hoy — CONSTRUIDA (prototipo)
-Fecha · bloque principal: día de ciclo, «Actualizado», fase, rueda, próxima menstruación y «Cómo se calcula →» · tres tarjetas: Qué pasa en su cuerpo · Cómo acompañar · Qué no asumir · barra P-1. Sin nombre ni foto de la persona afectada.
+Fecha · bloque principal: día de ciclo, «Actualizado», fase, rueda, próxima menstruación y «Cómo se calcula →» · tres tarjetas: Qué pasa en su cuerpo · Qué no asumir · Cómo acompañar · barra P-1. Sin nombre ni foto de la persona afectada.
 
 **Rueda (JUA-25) · P-2 validada**
 - Segmentos proporcionales a la duración de cada fase; marcador del día actual (D-11).
@@ -164,7 +164,7 @@ Todas las pantallas cumplen: sin nombres · sin historial · sin rachas · sin n
 | D-15 | X.1 | JUA-28 | Datos semilla sin duraciones | Campos opcionales de ciclo y sangrado; P-2 validada | JUA-28 |
 | D-16 | X.2 | JUA-28 | Sin flujo de llegada de datos ni frecuencia de consentimiento | P-2 validada; implementar; decide JUA-28 | JUA-28 |
 | D-21 | 2.4 | SPM-08 y bloques «Fuentes» | Las pantallas remiten a «Fuentes», pero no había pantalla | Subpantalla 2.4 con las referencias de cada pantalla | JUA-31 |
-| D-22 | 1.1 | Panel v1.1.2 §3 · JUA-23 | El prototipo muestra cuatro tarjetas | Tres tarjetas: «Qué pasa en su cuerpo», «Cómo acompañar» y «Qué no asumir», con los textos aprobados | JUA-30 |
+| D-22 | 1.1 | Panel v1.1.3 §3 · JUA-23 | El prototipo muestra cuatro tarjetas | Tres tarjetas, en este orden: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar», con los textos aprobados | JUA-30 |
 
 ## 6. Diferencias pendientes de decisión (P-2)
 
@@ -187,3 +187,4 @@ Estos puntos de P-2 chocan con decisiones ya tomadas o con la especificación vi
 | v0.4 | 20 oct 2026 | P-2 validada: rueda proporcional, menstruación, tramo «Días previos», pregunta versionada, duraciones en datos semilla, flujo de X.2. Consolidación: destinos actualizados y sección 6 con D-17 a D-20 pendientes de decisión. |
 | v0.4.1 | 28 oct 2026 | Menstruación sin duración declarada: días 1–5 en lugar de 1–3, según la especificación del panel v1.1.1 y JUA-27 (D-12). |
 | v0.4.2 | 11 nov 2026 | 2.2 pasa a «Antes de la regla» (JUA-19, pantalla v0.7.0). Nueva subpantalla 2.4 «Fuentes» (D-21, JUA-31). La home pasa a tres tarjetas: «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti» (D-22, especificación del panel v1.1.2). |
+| v0.4.3 | 11 nov 2026 | Orden de las tarjetas de la home: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar» (especificación del panel v1.1.3, D-22). |

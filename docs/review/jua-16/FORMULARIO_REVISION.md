@@ -4,15 +4,15 @@ Artefactos revisados (ver [README](./README.md), sección 3, que da el SHA-256 d
 
 | # | Artefacto | Versión |
 |---|---|---|
-| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) | 0.7.0 |
-| A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.3.0 |
-| A3 | Tarjetas de la pantalla de inicio en la menstruación | 0.3.0 |
-| A4 | Tarjetas de la pantalla de inicio en la fase folicular | 0.3.0 |
-| A5 | Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada | 0.3.0 |
-| A6 | Pantalla «La menstruación» | 0.2.0 |
+| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) | 0.8.0 |
+| A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.4.0 |
+| A3 | Tarjetas de la pantalla de inicio en la menstruación | 0.4.0 |
+| A4 | Tarjetas de la pantalla de inicio en la fase folicular | 0.4.0 |
+| A5 | Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada | 0.4.0 |
+| A6 | Pantalla «La menstruación» | 0.3.0 |
 | A7 | Pantalla «La fase folicular» | 0.2.0 |
 | A8 | Pantalla «La ventana ovulatoria» | 0.2.0 |
-| A9 | Pantalla «La fase lútea» | 0.3.0 |
+| A9 | Pantalla «La fase lútea» | 0.4.0 |
 
 Para ver dónde aparece cada bloque en la app, abre el [boceto navegable](./BOCETO.html): cada bloque lleva el mismo identificador que este formulario.
 
@@ -53,7 +53,7 @@ Observaciones sobre el alcance:
 
 ## 3. Revisión por bloque
 
-### 3.1 A1 · Pantalla «Antes de la regla» v0.7.0
+### 3.1 A1 · Pantalla «Antes de la regla» v0.8.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -71,14 +71,14 @@ Observaciones sobre el alcance:
 
 ### 3.2 Tarjetas de la pantalla de inicio (A2 a A5)
 
-| Fase | Qué pasa en su cuerpo | Cómo acompañar | Qué no asumir | Comentario o cambio propuesto |
+| Fase | Qué pasa en su cuerpo | Qué no asumir | Cómo acompañar | Comentario o cambio propuesto |
 |---|---|---|---|---|
-| A2 · Fase lútea v0.3.0 | | | | |
-| A3 · Menstruación v0.3.0 | | | | |
-| A4 · Fase folicular v0.3.0 | | | | |
-| A5 · Ventana ovulatoria estimada v0.3.0 | | | | |
+| A2 · Fase lútea v0.4.0 | | | | |
+| A3 · Menstruación v0.4.0 | | | | |
+| A4 · Fase folicular v0.4.0 | | | | |
+| A5 · Ventana ovulatoria estimada v0.4.0 | | | | |
 
-### 3.3 A6 · Pantalla «La menstruación» v0.2.0
+### 3.3 A6 · Pantalla «La menstruación» v0.3.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -121,7 +121,7 @@ Observaciones sobre el alcance:
 | DER-01 | Cuándo puede ayudar un profesional | | |
 | OVU-08 | Fuentes | | |
 
-### 3.6 A9 · Pantalla «La fase lútea» v0.3.0
+### 3.6 A9 · Pantalla «La fase lútea» v0.4.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|

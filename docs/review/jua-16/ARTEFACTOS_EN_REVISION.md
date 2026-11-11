@@ -9,7 +9,7 @@
 
 ## Índice
 
-- [A1 · Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) y mensajes de derivación DER-01 y DER-02](#a1) — v0.7.0
+- [A1 · Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) y mensajes de derivación DER-01 y DER-02](#a1) — v0.8.0
   - [1. Público y tono](#a1-1)
   - [2. Ubicación](#a1-2)
   - [3. Reglas de la pantalla](#a1-3)
@@ -20,7 +20,7 @@
   - [8. Decisiones antes de enviar a JUA-16](#a1-8)
   - [9. Historial](#a1-9)
   - [Referencias](#a1-10)
-- [A2 · Tarjetas de la pantalla de inicio en fase lútea](#a2) — v0.3.0
+- [A2 · Tarjetas de la pantalla de inicio en fase lútea](#a2) — v0.4.0
   - [1. Reglas propias de la fase](#a2-1)
   - [2. Texto de las tarjetas](#a2-2)
   - [3. Cambios](#a2-3)
@@ -29,7 +29,7 @@
   - [6. Decisiones](#a2-6)
   - [7. Historial](#a2-7)
   - [Referencias](#a2-8)
-- [A3 · Tarjetas de la pantalla de inicio en la menstruación](#a3) — v0.3.0
+- [A3 · Tarjetas de la pantalla de inicio en la menstruación](#a3) — v0.4.0
   - [1. Reglas propias de la fase](#a3-1)
   - [2. Texto de las tarjetas](#a3-2)
   - [3. Cambios respecto al prototipo](#a3-3)
@@ -39,7 +39,7 @@
   - [7. Qué debe valorar la persona revisora](#a3-7)
   - [8. Historial](#a3-8)
   - [Referencias](#a3-9)
-- [A4 · Tarjetas de la pantalla de inicio en la fase folicular](#a4) — v0.3.0
+- [A4 · Tarjetas de la pantalla de inicio en la fase folicular](#a4) — v0.4.0
   - [1. Reglas propias de la fase](#a4-1)
   - [2. Texto de las tarjetas](#a4-2)
   - [3. Cambios respecto al prototipo](#a4-3)
@@ -49,7 +49,7 @@
   - [7. Qué debe valorar la persona revisora](#a4-7)
   - [8. Historial](#a4-8)
   - [Referencias](#a4-9)
-- [A5 · Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada](#a5) — v0.3.0
+- [A5 · Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada](#a5) — v0.4.0
   - [1. Reglas propias de la fase](#a5-1)
   - [2. Texto de las tarjetas](#a5-2)
   - [3. Cambios respecto al prototipo](#a5-3)
@@ -59,7 +59,7 @@
   - [7. Qué debe valorar la persona revisora](#a5-7)
   - [8. Historial](#a5-8)
   - [Referencias](#a5-9)
-- [A6 · Pantalla «La menstruación» de «Comprender»](#a6) — v0.2.0
+- [A6 · Pantalla «La menstruación» de «Comprender»](#a6) — v0.3.0
   - [1. Público y tono](#a6-1)
   - [2. Ubicación](#a6-2)
   - [3. Reglas de la pantalla](#a6-3)
@@ -82,7 +82,7 @@
   - [4. Trazabilidad](#a8-4)
   - [5. Decisiones](#a8-5)
   - [6. Historial](#a8-6)
-- [A9 · Pantalla «La fase lútea» de «Comprender»](#a9) — v0.3.0
+- [A9 · Pantalla «La fase lútea» de «Comprender»](#a9) — v0.4.0
   - [1. Público, tono y reglas](#a9-1)
   - [2. Texto de la pantalla](#a9-2)
   - [3. Mensajes de derivación](#a9-3)
@@ -101,15 +101,15 @@
 
 | # | Archivo | Versión | SHA-256 |
 |---|---|---|---|
-| A1 | `docs/education/spm-tdpm-v0.7.0.md` | 0.7.0 | `1e2b33b28dbd15825f492d7e779ee3f69742ffea186ae1aa0f1df409f17a5e98` |
-| A2 | `docs/education/home-cards-luteal-v0.3.0.md` | 0.3.0 | `0b6ff69025ebb6c47e1b369c527b688e7627266de1c48422d30d24839dd9733c` |
-| A3 | `docs/education/home-cards-menstruation-v0.3.0.md` | 0.3.0 | `b50ed79e0db8190f878b12c4b2e96f031e6f5daf4ee37fb944f7274e65006325` |
-| A4 | `docs/education/home-cards-follicular-v0.3.0.md` | 0.3.0 | `66466297e635650095d5fa948bac6780f8f522071f778d36e7b32689f6930fd7` |
-| A5 | `docs/education/home-cards-ovulatory-v0.3.0.md` | 0.3.0 | `af846f080772b2bc80d0a49c86ac7bd7c1040fc762479dbcfdd3f94a44f4bb32` |
-| A6 | `docs/education/menstruacion-v0.2.0.md` | 0.2.0 | `400d18a4f583628ea9932ff1fb8f13bd08fac57d1e3b0c8c5f1ba382e4c5c601` |
-| A7 | `docs/education/folicular-v0.2.0.md` | 0.2.0 | `4919e84173568d614c6449fd4ffaaa9662a68dc41b915d69dbb5806d08ee1953` |
-| A8 | `docs/education/ovulatoria-v0.2.0.md` | 0.2.0 | `3b7dcf8240fc63f75b2b0bdfcd447a791ef9c2bcd842a6da0bf1f33791bb248b` |
-| A9 | `docs/education/lutea-v0.3.0.md` | 0.3.0 | `443b6f8b83e675834067357fa0226ad909334e3ed279d03fc196fa97913a0476` |
+| A1 | `docs/education/spm-tdpm-v0.8.0.md` | 0.8.0 | `4eea69e12501346a40cbc7e96d08b6c4de89f35c83e0077e75016415414bc999` |
+| A2 | `docs/education/home-cards-luteal-v0.4.0.md` | 0.4.0 | `b11f6c81cdde120e388c62284c0891744f4890bb023ceafffdd43b78c219f7cc` |
+| A3 | `docs/education/home-cards-menstruation-v0.4.0.md` | 0.4.0 | `83a2c93ac125119ec56369840a5614f09ccf17c0d9f936dd7ccfbd6c321efda9` |
+| A4 | `docs/education/home-cards-follicular-v0.4.0.md` | 0.4.0 | `4c70cc679aaba8969bfc4f3eb22b41669bbd47edc96868215a5bbfccec541469` |
+| A5 | `docs/education/home-cards-ovulatory-v0.4.0.md` | 0.4.0 | `72c95a0043cd3cf24d5373655bd7db0434ab73ec3d71af4f40c4c9daebcc081e` |
+| A6 | `docs/education/menstruacion-v0.3.0.md` | 0.3.0 | `082ad22c11357fdba1aaa6e63e15ca5a25ba732b2af18c2a78d4d9a84a2dfd9a` |
+| A7 | `docs/education/folicular-v0.2.0.md` | 0.2.0 | `a62a647d75efe2f6291d90b16e0933c46f288a568248d40d5373400464883664` |
+| A8 | `docs/education/ovulatoria-v0.2.0.md` | 0.2.0 | `54663d5eaaa62689455e9d50b6fd59e8ae46a55b54af5d75fff34ec7288f70db` |
+| A9 | `docs/education/lutea-v0.4.0.md` | 0.4.0 | `0f76a1c7d1fca55690ce02c3a11b183df3df4eef1768ad9a615cc989fe0ea274` |
 
 Comprobación, desde la raíz del repositorio:
 
@@ -123,9 +123,9 @@ shasum -a 256 docs/education/spm-tdpm-v0.5.0.md docs/education/home-cards-*-v0.2
 
 ## A1 · Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) y mensajes de derivación DER-01 y DER-02
 
-*Origen: `docs/education/spm-tdpm-v0.7.0.md` · versión 0.7.0 · SHA-256 `1e2b33b28dbd15825f492d7e779ee3f69742ffea186ae1aa0f1df409f17a5e98`*
+*Origen: `docs/education/spm-tdpm-v0.8.0.md` · versión 0.8.0 · SHA-256 `4eea69e12501346a40cbc7e96d08b6c4de89f35c83e0077e75016415414bc999`*
 
-**Título del documento de origen:** Consona — Pantalla educativa «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) v0.7.0
+**Título del documento de origen:** Consona — Pantalla educativa «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) v0.8.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el paquete de revisión clínica de JUA-16**, pendiente de envío.
 **Incidencia:** JUA-19 (CON-027). Su versión aprobada será el artefacto que revise JUA-16 (ADR-002 P7).
@@ -158,7 +158,7 @@ La pantalla es una subpantalla de **«Cómo funciona»**. No es la pantalla de i
 
 | ID | Regla de acceso |
 |---|---|
-| U-01 | Se abre desde dos enlaces estáticos. (1) Dentro de «Cómo funciona», en el punto donde se explica que los patrones no diagnostican SPM ni TDPM (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §4.2); su implementación corresponde a JUA-7. (2) Desde el bloque LUT-05 de la pantalla «La fase lútea» de «Comprender» (`lutea-v0.3.0.md`, JUA-36). Ninguno de los dos depende de la fase, la fecha ni ningún dato (U-02). |
+| U-01 | Se abre desde dos enlaces estáticos. (1) Dentro de «Cómo funciona», en el punto donde se explica que los patrones no diagnostican SPM ni TDPM (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §4.2); su implementación corresponde a JUA-7. (2) Desde el bloque LUT-05 de la pantalla «La fase lútea» de «Comprender» (`lutea-v0.4.0.md`, JUA-36). Ninguno de los dos depende de la fase, la fecha ni ningún dato (U-02). |
 | U-02 | El enlace es siempre visible y tiene el mismo texto para todas las personas. No aparece, cambia ni se destaca según la fase estimada, la fecha o cualquier dato local. |
 | U-03 | La home no enlaza directamente a esta pantalla ni muestra avisos que remitan a ella. |
 | U-04 | Desde la pantalla se puede volver a «Cómo funciona» con un control visible y accesible para lector de pantalla. |
@@ -256,7 +256,7 @@ Algunas preguntas que dejan espacio:
 - «¿Te apetece compañía, prefieres estar a tu aire o te echo una mano con algo?»
 - «¿Prefieres que lo hablemos en otro momento?»
 
-Lo que necesite puede cambiar de un ciclo a otro, o no tener nada que ver con el ciclo. Y también hay una parte que es tuya: cómo respondes, cómo os repartís las tareas y el descanso, cómo cuidas el ambiente que compartís.
+Lo que necesite puede cambiar de un ciclo a otro, o no tener nada que ver con el ciclo. Y también hay una parte que es tuya: cómo respondes, cómo os repartís lo que compartís, sean tareas, planes o tiempo, y cómo cuidas el ambiente cuando estáis juntos.
 
 #### DER-01 · Cuándo hablar con un profesional (ver sección 5)
 
@@ -304,7 +304,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 | SPM-03 · TDPM | Forma menos frecuente e intensa, predominio emocional, registro diario de al menos dos ciclos. | [3] [4] [6] | ADR-002 §1; `12-health-emotional-cognitive` EC-06. **JUA-36:** LS-21 (el diagnóstico confirmado exige un registro diario prospectivo de dos ciclos). |
 | SPM-03 · cierre | Consona no asigna términos clínicos. | — | `audit-07` §4.5. |
 | SPM-04 | La información de la home por día y fase es general; no informa del estado de la pareja ni predice ánimo, cognición o conducta; la cercanía de la menstruación no equivale a SPM; el ánimo varía poco en promedio y muchas personas no notan cambios ligados al ciclo. | [8] [9] [16] [17] [18] | `12-health-emotional-cognitive` EC-01, EC-02, EC-05; `audit-07` §4.1; `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §2–3. **JUA-36:** LU-A10 (LS-12 a LS-15) y LU-A11 (LS-16). |
-| SPM-05 · estereotipo | El estereotipo de la mujer «premenstrual», su difusión (también entre hombres), el estudio con objetivo oculto y su daño. | [16] [19] [20] [21] | **JUA-36:** LU-A12 (LS-13, LS-18); ME-A17 (S-20, S-21, S-13); SGL-01. Misma redacción que LUT-06 de `lutea-v0.3.0.md`. |
+| SPM-05 · estereotipo | El estereotipo de la mujer «premenstrual», su difusión (también entre hombres), el estudio con objetivo oculto y su daño. | [16] [19] [20] [21] | **JUA-36:** LU-A12 (LS-13, LS-18); ME-A17 (S-20, S-21, S-13); SGL-01. Misma redacción que LUT-06 de `lutea-v0.4.0.md`. |
 | SPM-05 · causas | Solapamiento con otras causas; peso de la salud, el estrés y el apoyo; sesgo de atribución al ciclo; la pareja puede ayudar escuchando y preguntando, sin interpretar. | [2] [5] [9] [16] [22] | `12-health-emotional-cognitive` EC-02, EC-07 y regla editorial central; «sesgo de atribución» como tema educativo en `CONSONA_DEFINICION_DE_APP.md`. **JUA-36:** LU-A10, LU-A13 (LS-13, LS-19); LU-A16 (LS-22 [V]) para el papel de la pareja. |
 | SPM-06 | Prevalencia de TDPM en población general con diagnóstico confirmado (1,6 %); cifras más altas con diagnóstico provisional. | [6] | **JUA-36:** LU-A15 (LS-21 [V-abs], resumen de PubMed). Ver D-02. |
 | SPM-07 | Conversación directa, autonomía y responsabilidad propia; preguntar si prefiere compañía, espacio o ayuda, sin forzar la conversación. | [22] | Requisito de producto de JUA-19; ADR-002 §5 («¿Quieres preguntarle cómo está?»); tarjeta «Cómo acompañar» del panel. **JUA-36:** LU-A16 (LS-22 [V]): la comprensión y el apoyo de la pareja importan en cómo se vive la relación. No se usa para recomendar terapia. |
@@ -315,7 +315,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 
 ### 7. Exclusiones comprobadas
 
-Lista para comprobar en cada versión. La v0.7.0 no contiene:
+Lista para comprobar en cada versión. La v0.8.0 no contiene:
 
 - [x] Diagnóstico, clasificación, «posible SPM/TDPM», puntuaciones, umbrales, semáforos ni probabilidades individuales.
 - [x] Listas de criterios clínicos o de diagnósticos diferenciales presentadas como autoevaluación o como guía para evaluar a la pareja.
@@ -341,16 +341,23 @@ Lista para comprobar en cada versión. La v0.7.0 no contiene:
 | D-02 | La cifra del metaanálisis de 2024 (SPM-06) procede de ADR-002 y no pasó por las auditorías de JUA-10. `audit-07` pide retirar del microcopy cifras sin fuente contemporánea y contexto. | **Resuelta (10-11-2026):** el metaanálisis (Reilly et al. 2024) se audita en JUA-36 como LS-21, a partir del resumen de PubMed. La cifra del 3,2 % mezclaba muestras de comunidad, universidad e instituto con una heterogeneidad muy alta (I² = 99 %). SPM-06 pasa a la cifra de población general con diagnóstico confirmado (1,6 %, I² = 26 %), que es la pertinente para el público de Consona. Se mantiene la pregunta P-01 a la persona revisora. Alternativa: eliminar las cifras y dejar solo la primera y la última frase. |
 | D-03 | Los recursos 112 y 024, y que el 024 atiende a familiares y personas allegadas, no figuraban en la bibliografía de JUA-10. | **Verificado el 07-10-2026.** 024: Ministerio de Sanidad, para personas con conducta o ideación suicida y para familiares o allegados; gratuito, confidencial, 24 horas, 365 días; chat y lengua de signos; remite al 112 ante emergencia vital inminente [10] [11]. La Resolución de 4 de junio de 2026 mantiene el número y la gratuidad y añade que la llamada no aparece en la factura [12]. 112: número de emergencias gratuito en España y en la UE [13]. El texto de DER-02 es exacto. Verificado de nuevo el 10-11-2026, sin cambios. **Pendiente:** recursos para otros países e idiomas (CON-025). |
 | D-04 | «Peligro» puede incluir violencia de pareja, riesgo relevante para Consona (ADR-001, P6). | **Resuelta (07-10-2026):** DER-02 incluye el 016 (Ministerio de Igualdad): todas las formas de violencia contra las mujeres; gratuito, confidencial, 24 horas; también por WhatsApp (600 000 016), chat y correo; deriva al 112 en emergencias [14] [15]. Verificado de nuevo el 10-11-2026, sin cambios. El análisis específico de control coercitivo sigue en P6 (JUA-13). |
-| D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | **Resuelta.** Las cuatro tarjetas de la fase lútea se fijan en `home-cards-luteal-v0.1.0.md` y se incluyen expresamente en el paquete y en el alcance de JUA-16. Desde el 10-11-2026, en [`home-cards-luteal-v0.3.0.md`](../../education/home-cards-luteal-v0.3.0.md). |
+| D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | **Resuelta.** Las cuatro tarjetas de la fase lútea se fijan en `home-cards-luteal-v0.1.0.md` y se incluyen expresamente en el paquete y en el alcance de JUA-16. Desde el 10-11-2026, en [`home-cards-luteal-v0.4.0.md`](../../education/home-cards-luteal-v0.4.0.md). |
 | D-06 | El estereotipo de la mujer «premenstrual» se explicaba en la pantalla de la fase lútea (LUT-06), pero no en esta. | **Resuelta (10-11-2026):** se nombra y se explica en varias piezas para reforzar su importancia: SPM-05 de esta pantalla, LUT-06 y LUT-07 de la fase lútea y «Qué no asumir» de las tarjetas de la fase lútea. Siempre para desmentirlo (SGL-01). El 11-11-2026 se quita de SPM-07 (D-08). |
 | D-07 | Las afirmaciones generales hablaban de «personas» (T-04). | **Resuelta (11-11-2026):** pasan a «mujeres» en todos los artefactos, porque las poblaciones de los estudios son mujeres y el público de Consona es la pareja de una mujer. «Todas las personas», en el sentido de quien usa la app, se mantiene. |
 | D-08 | Comentarios de producto del 11-11-2026 sobre el compendio de JUA-16. | **Resueltas:** título «Antes de la regla», con los términos completos debajo; siglas solo en SPM-03, donde se presentan; «evidencia científica» en lugar de «investigación»; SPM-05 añade que la pareja puede ayudar; SPM-07 sin la frase sobre bromas; SPM-08 empieza por el estudio de Barcelona. |
 | D-09 | SPM-08 remite a «Fuentes», pero el mapa de pantallas no tenía esa pantalla. | **Resuelta (11-11-2026):** se añade la subpantalla «Fuentes» de «Comprender» al mapa de pantallas y a JUA-31. |
 | D-10 | Una consulta de producto del 11-11-2026 a un servicio de asesoramiento médico propone preguntar si prefiere compañía, espacio o ayuda, y evitar «son las hormonas». Cita un ensayo sobre la pareja (Ussher y Perz 2017). | **Resuelta (11-11-2026):** SPM-05 añade «son las hormonas» como ejemplo de frase que resta valor; SPM-07 integra «compañía, espacio o ayuda, sin forzar la conversación»; el ensayo se audita en JUA-36 (LS-22) y solo respalda que el apoyo de la pareja importa. No se adoptan el registro de síntomas por la pareja, la planificación según la fase ni las recomendaciones de terapia de esa respuesta. |
+| D-11 | SPM-07 daba por hecho que la pareja vive junta («el ambiente que compartís», «las tareas y el descanso»). | **Resuelta (11-11-2026):** «lo que compartís, sean tareas, planes o tiempo» y «el ambiente cuando estáis juntos». Mismo criterio en MEN-07, LUT-07 y la tarjeta «Cómo acompañar» de la menstruación. |
 
 <a id="a1-9"></a>
 
 ### 9. Historial
+
+#### [0.8.0] — Parejas que no viven juntas (11-11-2026)
+
+- SPM-07: «cómo os repartís lo que compartís, sean tareas, planes o tiempo, y cómo cuidas el ambiente cuando estáis juntos» (D-11).
+- Referencias a la tarjeta «Cómo acompañar», que ahora va después de «Qué no asumir».
+- DER-01 y DER-02 no cambian.
 
 #### [0.7.0] — Consulta de producto (11-11-2026)
 
@@ -384,7 +391,7 @@ Lista para comprobar en cada versión. La v0.7.0 no contiene:
 
 #### [0.4.0] — Enmienda del 06-11-2026
 
-- U-01 admite un segundo acceso estático desde la pantalla «La fase lútea» de «Comprender» (decisión D-04 de `lutea-v0.3.0.md`, JUA-36). C-03 se ajusta en consecuencia.
+- U-01 admite un segundo acceso estático desde la pantalla «La fase lútea» de «Comprender» (decisión D-04 de `lutea-v0.4.0.md`, JUA-36). C-03 se ajusta en consecuencia.
 - **El texto que se muestra no cambia**, por eso la pantalla conserva la versión.
 
 #### [0.4.0] — Recurso de violencia y cierre de decisiones
@@ -471,18 +478,18 @@ Lista para comprobar en cada versión. La v0.7.0 no contiene:
 
 ## A2 · Tarjetas de la pantalla de inicio en fase lútea
 
-*Origen: `docs/education/home-cards-luteal-v0.3.0.md` · versión 0.3.0 · SHA-256 `0b6ff69025ebb6c47e1b369c527b688e7627266de1c48422d30d24839dd9733c`*
+*Origen: `docs/education/home-cards-luteal-v0.4.0.md` · versión 0.4.0 · SHA-256 `b11f6c81cdde120e388c62284c0891744f4890bb023ceafffdd43b78c219f7cc`*
 
-**Título del documento de origen:** Consona — Tarjetas de la home en fase lútea v0.3.0
+**Título del documento de origen:** Consona — Tarjetas de la home en fase lútea v0.4.0
 
 **Issues:** JUA-19 (origen) y JUA-23 (reglas comunes).
 **Estado:** Borrador para revisión de producto. **Incluido en el paquete de revisión clínica de JUA-16**, pendiente de envío.
-**Origen:** decisión D-05 de [`spm-tdpm-v0.7.0.md`](../../education/spm-tdpm-v0.7.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
+**Origen:** decisión D-05 de [`spm-tdpm-v0.8.0.md`](../../education/spm-tdpm-v0.8.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
 **Reglas comunes:** H-01 a H-08 de [`home-cards-index.md`](../../education/home-cards-index.md).
 **Base de investigación:** [`docs/research/fases/lutea/`](../../research/fases/lutea) (JUA-36).
 **Cuándo se muestra:** durante toda la fase lútea estimada, incluidos los días previos a la menstruación (sección 2 del índice).
 **Parte de:** el texto provisional de [`src/App.jsx`](../../../src/App.jsx) (JUA-5), que no es definitivo.
-**Público y tono:** los de la sección 1 de `spm-tdpm-v0.7.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
+**Público y tono:** los de la sección 1 de `spm-tdpm-v0.8.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación.
 
 > Este documento fija el texto exacto de las tres tarjetas cuando la home muestra la fase lútea estimada. Cualquier cambio exige una nueva versión y su revisión contra las reglas comunes del índice y las reglas C-01 a C-04 de la pantalla SPM/TDPM.
@@ -498,7 +505,7 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 | L-01 | Las tarjetas no cambian en los días previos a la menstruación ni nombran SPM o TDPM (H-01, H-02; C-01 de la pantalla SPM/TDPM). |
 | L-02 | Duración aproximada: «unos 12 días», siempre con «suele» y «también varía», igual que LUT-03 y la rueda (excepción de H-06). Sin «fase lútea corta», «deficiencia lútea» ni «progesterona baja» (SGL-05). |
 | L-03 | La progesterona solo aparece como fisiología del útero, nunca para explicar ánimo, energía ni conducta (H-08; SGL-02). |
-| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.3.0.md` y SPM-05 de `spm-tdpm-v0.7.0.md`, repetida a propósito (D-04). |
+| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.4.0.md` y SPM-05 de `spm-tdpm-v0.8.0.md`, repetida a propósito (D-04). |
 | L-05 | La fase no se presenta como «la fase mala», ni como una semana que exija un trato especial (SGL-04). |
 
 <a id="a2-2"></a>
@@ -512,19 +519,19 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 > En general, la fase lútea va desde la ovulación hasta la siguiente menstruación. El folículo que liberó el óvulo se transforma en el cuerpo lúteo, que produce sobre todo progesterona: prepara el revestimiento del útero por si hubiera un embarazo. Si no lo hay, bajan las hormonas y empieza la menstruación. Suele durar unos 12 días, y es la parte del ciclo cuya duración menos cambia, aunque también varía.
 > Hacia el final de esta fase, algunas mujeres notan cambios físicos o de ánimo, y otras no. Una fecha calculada no confirma que haya habido ovulación ni te dice cómo se encuentra tu pareja.
 
-#### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?»
-> Una pregunta abierta deja espacio para escuchar sin dar nada por hecho. Si prefiere no hablar, también es una respuesta.
-> Como cualquier otra semana: organiza tus propias responsabilidades, comunica tus planes con claridad y deja margen para ajustar la logística si tu pareja lo pide.
-
 #### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > La imagen de la mujer «premenstrual» irritable o fuera de control es un estereotipo, y hace daño. Que se acerque la menstruación no explica cómo se siente tu pareja, qué necesita ni cómo quiere que actúes. Atribuir una tensión al ciclo puede restar valor a lo que te está diciendo: preguntar funciona mejor que suponer.
+
+#### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?»
+> Una pregunta abierta deja espacio para escuchar sin dar nada por hecho. Si prefiere no hablar, también es una respuesta.
+> Como cualquier otra semana: organiza tus propias responsabilidades, comunica tus planes con claridad y deja margen para ajustar la logística si tu pareja lo pide.
 
 <a id="a2-3"></a>
 
@@ -569,7 +576,7 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 
 ### 5. Exclusiones comprobadas
 
-La v0.3.0 no contiene:
+La v0.4.0 no contiene:
 
 - [x] SPM, TDPM ni ningún término diagnóstico.
 - [x] Síntomas presentados como esperables en tu pareja, ni listas de síntomas.
@@ -591,10 +598,16 @@ La v0.3.0 no contiene:
 | D-03 | JUA-5 está cerrada y no hay una incidencia para el contenido de las tarjetas de la home. | **Resuelta (07-10-2026):** se abre JUA-23 para las tarjetas de todas las fases, relacionada con JUA-16, JUA-19 y JUA-5. |
 | D-04 | ¿Nombrar el estereotipo «premenstrual» en la home, además de en las pantallas de la fase lútea y SPM/TDPM? | **Resuelta (10-11-2026):** sí. Explicarlo en más de un sitio refuerza su importancia. «Qué no asumir» lo nombra solo para desmentirlo. Se pregunta a la persona revisora si en la home se lee como desmentido y no como aviso. |
 | D-05 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-06 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa». |
 
 <a id="a2-7"></a>
 
 ### 7. Historial
+
+#### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
 
 #### [0.3.0] — Tres tarjetas (11-11-2026)
 
@@ -662,9 +675,9 @@ La v0.3.0 no contiene:
 
 ## A3 · Tarjetas de la pantalla de inicio en la menstruación
 
-*Origen: `docs/education/home-cards-menstruation-v0.3.0.md` · versión 0.3.0 · SHA-256 `b50ed79e0db8190f878b12c4b2e96f031e6f5daf4ee37fb944f7274e65006325`*
+*Origen: `docs/education/home-cards-menstruation-v0.4.0.md` · versión 0.4.0 · SHA-256 `83a2c93ac125119ec56369840a5614f09ccf17c0d9f936dd7ccfbd6c321efda9`*
 
-**Título del documento de origen:** Consona — Tarjetas de la home en la menstruación v0.3.0
+**Título del documento de origen:** Consona — Tarjetas de la home en la menstruación v0.4.0
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -705,19 +718,19 @@ La v0.3.0 no contiene:
 | La persona afectada declaró la duración en el formulario de consentimiento inicial | «Según lo que indicó tu pareja, le suele durar unos N días» (con N = 1: «un día») |
 | No la declaró | «Suele durar unos 5 días, aunque cambia de una mujer a otra» |
 
-#### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Hay algo que te venga bien hoy, o prefieres que todo siga como siempre?»
-> Preguntar sin dar por hecho que algo va mal le deja decidir qué contarte.
-> Ocúpate de tu parte en casa sin esperar a que te lo pidan, y habla de la regla con la misma naturalidad que de cualquier otra cosa.
-
 #### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > Tener la regla no significa estar de mal humor, tener dolor ni necesitar cuidados especiales. Tampoco que todo vaya bien porque no diga nada. Lo que te cuente vale más que cualquier idea previa sobre la regla.
+
+#### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Hay algo que te venga bien hoy, o prefieres que todo siga como siempre?»
+> Preguntar sin dar por hecho que algo va mal le deja decidir qué contarte.
+> Haz tu parte en lo que compartís, sin esperar a que te lo pidan, y habla de la regla con la misma naturalidad que de cualquier otra cosa.
 
 <a id="a3-3"></a>
 
@@ -773,6 +786,7 @@ La v0.2.0 no contiene:
 | D-04 | El paquete de revisión clínica de JUA-16 cubría la pantalla SPM/TDPM y la fase lútea. | **Resuelta (05-11-2026):** se amplía JUA-16 con las tres fases nuevas: menstruación, folicular y ventana ovulatoria estimada. |
 | D-05 | La trazabilidad de la duración cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 | D-06 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-07 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa» en «Cómo acompañar». |
 
 <a id="a3-7"></a>
 
@@ -796,7 +810,7 @@ La v0.2.0 no contiene:
 #### [0.2.0] — 06-11-2026
 
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
-- Pantalla educativa asociada: `menstruacion-v0.2.0.md` (rama de JUA-36).
+- Pantalla educativa asociada: `menstruacion-v0.3.0.md` (rama de JUA-36).
 
 #### [0.2.0] — Enmienda del 10-11-2026
 
@@ -812,6 +826,12 @@ La v0.2.0 no contiene:
 
 - «Qué puedes preguntarle» y «Qué te toca a ti» se fusionan en «Cómo acompañar», con la pregunta de antes y el gesto de MEN-07: tu parte en casa y hablar de la regla con naturalidad.
 - Los documentos usan los títulos de las tarjetas en lugar de los acrónimos.
+
+#### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
+- «Haz tu parte en lo que compartís» en lugar de «Ocúpate de tu parte en casa», para que sirva también si no vivís juntos.
 
 <a id="a3-9"></a>
 
@@ -834,9 +854,9 @@ La v0.2.0 no contiene:
 
 ## A4 · Tarjetas de la pantalla de inicio en la fase folicular
 
-*Origen: `docs/education/home-cards-follicular-v0.3.0.md` · versión 0.3.0 · SHA-256 `66466297e635650095d5fa948bac6780f8f522071f778d36e7b32689f6930fd7`*
+*Origen: `docs/education/home-cards-follicular-v0.4.0.md` · versión 0.4.0 · SHA-256 `4c70cc679aaba8969bfc4f3eb22b41669bbd47edc96868215a5bbfccec541469`*
 
-**Título del documento de origen:** Consona — Tarjetas de la home en la fase folicular v0.3.0
+**Título del documento de origen:** Consona — Tarjetas de la home en la fase folicular v0.4.0
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -869,19 +889,19 @@ La v0.2.0 no contiene:
 > En general, la fase folicular empieza con la menstruación y llega hasta la ovulación. En ella maduran folículos en los ovarios hasta que normalmente uno libera un óvulo. Esos folículos producen hormonas, entre ellas los estrógenos, que vuelven a engrosar el revestimiento del útero. Contando los días de la regla, suele durar entre 15 y 20 días, pero es la parte del ciclo que más cambia: puede ser bastante más corta o más larga, incluso en la misma mujer.
 > Una fecha calculada no te dice en qué punto está su ciclo ni cómo se encuentra tu pareja.
 
-#### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Cómo te va esta semana? ¿Hay algo que te apetezca que hagamos o que prefieras dejar para otro momento?»
-> Preguntar por sus planes, y no por su ciclo, abre una conversación sin etiquetas.
-> Cuenta tus planes y da tú el primer paso en lo que os toque organizar juntos. No hace falta organizar nada en función de su ciclo.
-
 #### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > Esta parte del ciclo no significa que tu pareja tenga más energía, mejor ánimo o más ganas de hacer planes. Es una idea muy extendida que conviene revisar: la evidencia científica no la respalda, y cada mujer y cada ciclo son distintos.
+
+#### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Cómo te va esta semana? ¿Hay algo que te apetezca que hagamos o que prefieras dejar para otro momento?»
+> Preguntar por sus planes, y no por su ciclo, abre una conversación sin etiquetas.
+> Cuenta tus planes y da tú el primer paso en lo que os toque organizar juntos. No hace falta organizar nada en función de su ciclo.
 
 <a id="a4-3"></a>
 
@@ -936,6 +956,7 @@ La v0.2.0 no contiene:
 | D-03 | «Qué no asumir» nombra el estereotipo («más energía, mejor ánimo») para desmentirlo. Nombrarlo también lo difunde. | **Resuelta (05-11-2026):** se nombran los estereotipos para que el texto sea accesible, aunque sea a costa de difundirlos. |
 | D-04 | La trazabilidad de la variación cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 | D-05 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-06 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa». |
 
 <a id="a4-7"></a>
 
@@ -977,6 +998,11 @@ La v0.2.0 no contiene:
 - Los documentos usan los títulos de las tarjetas en lugar de los acrónimos.
 - «Qué no asumir»: «una idea muy extendida que conviene revisar».
 
+#### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
+
 <a id="a4-9"></a>
 
 ### Referencias
@@ -996,9 +1022,9 @@ La v0.2.0 no contiene:
 
 ## A5 · Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada
 
-*Origen: `docs/education/home-cards-ovulatory-v0.3.0.md` · versión 0.3.0 · SHA-256 `af846f080772b2bc80d0a49c86ac7bd7c1040fc762479dbcfdd3f94a44f4bb32`*
+*Origen: `docs/education/home-cards-ovulatory-v0.4.0.md` · versión 0.4.0 · SHA-256 `72c95a0043cd3cf24d5373655bd7db0434ab73ec3d71af4f40c4c9daebcc081e`*
 
-**Título del documento de origen:** Consona — Tarjetas de la home en la ventana ovulatoria estimada v0.3.0
+**Título del documento de origen:** Consona — Tarjetas de la home en la ventana ovulatoria estimada v0.4.0
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -1033,19 +1059,19 @@ La v0.2.0 no contiene:
 > La ovulación es el momento en que un ovario libera un óvulo. No es una fase de varios días, sino un hecho puntual cuyo momento cambia de un ciclo a otro. Esta ventana marca un momento aproximado, calculado hacia atrás desde la fecha prevista de la siguiente regla.
 > Es solo un cálculo: no detecta si la ovulación ha ocurrido ni cuándo, y no sirve para buscar ni para evitar un embarazo.
 
-#### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Cómo te encuentras hoy? ¿Hay algo en lo que te pueda echar una mano?»
-> Lo que te cuente dice mucho más que cualquier fecha del calendario.
-> Mantén tus compromisos y tu parte de las tareas como cualquier otro día. Si tenéis una decisión pendiente, sácala tú en la conversación en lugar de esperar.
-
 #### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > Que la app marque esta ventana no dice nada de cómo se siente tu pareja, de lo que quiere ni de cómo está vuestra relación. Es una fecha calculada, no algo que le esté pasando ni una señal para actuar.
+
+#### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Cómo te encuentras hoy? ¿Hay algo en lo que te pueda echar una mano?»
+> Lo que te cuente dice mucho más que cualquier fecha del calendario.
+> Mantén tus compromisos y tu parte de las tareas como cualquier otro día. Si tenéis una decisión pendiente, sácala tú en la conversación en lugar de esperar.
 
 <a id="a5-3"></a>
 
@@ -1078,7 +1104,7 @@ El prototipo no tiene texto propio de la ventana ovulatoria: muestra en todas la
 
 ### 5. Exclusiones comprobadas
 
-La v0.3.0 no contiene:
+La v0.4.0 no contiene:
 
 - [x] «Día de ovulación», «estás ovulando», «días fértiles», «periodo fértil» ni «días seguros».
 - [x] Probabilidad de embarazo ni uso de la ventana para buscarlo o evitarlo (solo el aviso de que no sirve para eso).
@@ -1100,6 +1126,7 @@ La v0.3.0 no contiene:
 | D-04 | Como en la fase folicular, «óvulo» en lugar de «ovocito». | **Aceptada (05-11-2026):** igual que D-01 de la fase folicular. |
 | D-05 | La trazabilidad del cálculo cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 | D-06 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-07 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa». |
 
 <a id="a5-7"></a>
 
@@ -1140,6 +1167,11 @@ La v0.3.0 no contiene:
 - «Qué puedes preguntarle» y «Qué te toca a ti» se fusionan en «Cómo acompañar», con la pregunta de antes y el gesto de la antigua «Qué te toca a ti», sin cambios. No se usa el gesto de OVU-07 sobre anticoncepción: en la home, durante la ventana, podría leerse como una señal de fertilidad (H-05, H-06).
 - Los documentos usan los títulos de las tarjetas en lugar de los acrónimos.
 
+#### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
+
 <a id="a5-9"></a>
 
 ### Referencias
@@ -1159,9 +1191,9 @@ La v0.3.0 no contiene:
 
 ## A6 · Pantalla «La menstruación» de «Comprender»
 
-*Origen: `docs/education/menstruacion-v0.2.0.md` · versión 0.2.0 · SHA-256 `400d18a4f583628ea9932ff1fb8f13bd08fac57d1e3b0c8c5f1ba382e4c5c601`*
+*Origen: `docs/education/menstruacion-v0.3.0.md` · versión 0.3.0 · SHA-256 `082ad22c11357fdba1aaa6e63e15ca5a25ba732b2af18c2a78d4d9a84a2dfd9a`*
 
-**Título del documento de origen:** Consona — Pantalla educativa «La menstruación» v0.2.0
+**Título del documento de origen:** Consona — Pantalla educativa «La menstruación» v0.3.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío.
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -1179,7 +1211,7 @@ La v0.3.0 no contiene:
 
 **Para qué:** entender qué es la menstruación y qué no dice, para acompañar en consonancia sin interpretar, anticipar ni explicar a la otra persona.
 
-Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.7.0.md`):
+Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.8.0.md`):
 
 - **T-01:** educativo, no paternalista.
 - **T-02:** la pareja es la autoridad sobre su propia experiencia.
@@ -1201,7 +1233,7 @@ Y las reglas de sesgo SG-01 a SG-07 de `03-sesgo-genero.md`.
 
 #### Coherencia con las tarjetas de la home
 
-Las tarjetas de la menstruación (`home-cards-menstruation-v0.3.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra antes de publicarse.
+Las tarjetas de la menstruación (`home-cards-menstruation-v0.4.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra antes de publicarse.
 
 <a id="a6-3"></a>
 
@@ -1275,7 +1307,7 @@ Algunas preguntas que dejan espacio:
 - «¿Hay algo que te venga bien hoy?»
 - «¿Prefieres que todo siga como siempre?»
 
-Hay cosas que dependen de ti: ocuparte de tu parte en casa sin esperar a que te lo pidan y ajustar los planes según lo que te diga. Hablar de la regla con la misma naturalidad que de cualquier otra cosa, sin bromas ni comentarios, también es hacer tu parte. Si a tu pareja le preocupa su dolor, tomárselo en serio también es acompañar.
+Hay cosas que dependen de ti: hacer tu parte en lo que compartís sin esperar a que te lo pidan y ajustar los planes según lo que te diga. Hablar de la regla con la misma naturalidad que de cualquier otra cosa, sin bromas ni comentarios, también es hacer tu parte. Si a tu pareja le preocupa su dolor, tomárselo en serio también es acompañar.
 
 #### DER-01 · Cuándo puede ayudar un profesional (ver sección 5)
 
@@ -1340,6 +1372,11 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 
 ### 8. Historial
 
+#### [0.3.0] — 11-11-2026
+
+- MEN-07: «hacer tu parte en lo que compartís» en lugar de «ocuparte de tu parte en casa», para que sirva también si no vivís juntos (D-11 de la pantalla «Antes de la regla»).
+- DER-01 y DER-02 no cambian.
+
 #### [0.2.0] — 11-11-2026
 
 - Nuevo bloque MEN-03b «Lo que ves en Consona»: cómo dibuja la rueda del ciclo la menstruación y quién calcula los cambios de fase (CON-032). El uso del dato declarado pasa de MEN-03 a este bloque.
@@ -1363,7 +1400,7 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 
 ## A7 · Pantalla «La fase folicular» de «Comprender»
 
-*Origen: `docs/education/folicular-v0.2.0.md` · versión 0.2.0 · SHA-256 `4919e84173568d614c6449fd4ffaaa9662a68dc41b915d69dbb5806d08ee1953`*
+*Origen: `docs/education/folicular-v0.2.0.md` · versión 0.2.0 · SHA-256 `a62a647d75efe2f6291d90b16e0933c46f288a568248d40d5373400464883664`*
 
 **Título del documento de origen:** Consona — Pantalla educativa «La fase folicular» v0.2.0
 
@@ -1379,7 +1416,7 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 
 ### 1. Público, tono, ubicación y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, secciones 1 a 3):
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.0.md`, secciones 1 a 3):
 
 - tono T-01 a T-04;
 - ubicación U-01 a U-04, como artículo de «Comprender» en «El cuerpo en cada fase»;
@@ -1391,7 +1428,7 @@ Se añaden las reglas de sesgo SGF-01 a SGF-05 de `03-sesgo-genero.md`.
 
 #### Coherencia con las tarjetas de la home
 
-Las tarjetas de la fase folicular (`home-cards-follicular-v0.3.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra.
+Las tarjetas de la fase folicular (`home-cards-follicular-v0.4.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra.
 
 <a id="a7-2"></a>
 
@@ -1515,7 +1552,7 @@ Fuente: orientación pública de ACOG sobre sangrado uterino anormal (`jua-10/13
 
 ## A8 · Pantalla «La ventana ovulatoria» de «Comprender»
 
-*Origen: `docs/education/ovulatoria-v0.2.0.md` · versión 0.2.0 · SHA-256 `3b7dcf8240fc63f75b2b0bdfcd447a791ef9c2bcd842a6da0bf1f33791bb248b`*
+*Origen: `docs/education/ovulatoria-v0.2.0.md` · versión 0.2.0 · SHA-256 `54663d5eaaa62689455e9d50b6fd59e8ae46a55b54af5d75fff34ec7288f70db`*
 
 **Título del documento de origen:** Consona — Pantalla educativa «La ventana ovulatoria» v0.2.0
 
@@ -1531,7 +1568,7 @@ Fuente: orientación pública de ACOG sobre sangrado uterino anormal (`jua-10/13
 
 ### 1. Público, tono, ubicación y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, secciones 1 a 3), con dos añadidos:
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.0.md`, secciones 1 a 3), con dos añadidos:
 
 - **Reglas de la fase:** O-01 a O-06 de las tarjetas de JUA-23, y reglas de sesgo SGO-01 a SGO-05 de `03-sesgo-genero.md`. **Excepción a O-05 en esta pantalla:** OVU-02 menciona el dolor de ovulación (D-05), sin cifras, sin decir si es probable y sin presentarlo como forma de saber si ha habido ovulación. Las tarjetas de la home siguen sin mencionarlo.
 - **R-08:** ningún icono, color ni ilustración asociado a la fertilidad, el embarazo, el atractivo o la sexualidad.
@@ -1539,7 +1576,7 @@ Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, seccio
 
 #### Coherencia con la rueda y con las tarjetas de la home
 
-La rueda dibuja la ventana con bordes difusos (JUA-27 §3.4) y las tarjetas de la ventana ovulatoria (`home-cards-ovulatory-v0.3.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las tres piezas se revisa contra las otras.
+La rueda dibuja la ventana con bordes difusos (JUA-27 §3.4) y las tarjetas de la ventana ovulatoria (`home-cards-ovulatory-v0.4.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las tres piezas se revisa contra las otras.
 
 <a id="a8-2"></a>
 
@@ -1677,9 +1714,9 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 
 ## A9 · Pantalla «La fase lútea» de «Comprender»
 
-*Origen: `docs/education/lutea-v0.3.0.md` · versión 0.3.0 · SHA-256 `443b6f8b83e675834067357fa0226ad909334e3ed279d03fc196fa97913a0476`*
+*Origen: `docs/education/lutea-v0.4.0.md` · versión 0.4.0 · SHA-256 `0f76a1c7d1fca55690ce02c3a11b183df3df4eef1768ad9a615cc989fe0ea274`*
 
-**Título del documento de origen:** Consona — Pantalla educativa «La fase lútea» v0.3.0
+**Título del documento de origen:** Consona — Pantalla educativa «La fase lútea» v0.4.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío.
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -1693,7 +1730,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 
 ### 1. Público, tono y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, secciones 1 a 3): reglas de tono T-01 a T-04, de ubicación U-01 a U-04 y de pantalla R-01 a R-07. Añade:
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.0.md`, secciones 1 a 3): reglas de tono T-01 a T-04, de ubicación U-01 a U-04 y de pantalla R-01 a R-07. Añade:
 
 - **Reglas de sesgo:** SGL-01 a SGL-05 de `../research/fases/lutea/03-sesgo-genero.md`.
 - **R-08:** ningún icono, color ni ilustración que presente la fase como «mala», que asocie la fase con enfado, tristeza o peligro, o que la relacione con la sexualidad o la disponibilidad.
@@ -1702,8 +1739,8 @@ Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, seccio
 
 Esta pantalla se revisa siempre contra estas tres piezas:
 
-- **La pantalla SPM/TDPM** (`spm-tdpm-v0.7.0.md`, JUA-19). Esta pantalla explica la fase entera. La pantalla SPM/TDPM desarrolla los cambios premenstruales y los términos clínicos. LUT-05 resume y enlaza a ella sin repetir sus cifras. El enlace es estático y no cambia según la fase ni ningún dato (U-02). DER-01 y DER-02 reproducen sin cambios sus mensajes de derivación.
-- **Las tarjetas de la fase lútea** (`home-cards-luteal-v0.3.0.md`, JUA-19), que resumen esta pantalla.
+- **La pantalla SPM/TDPM** (`spm-tdpm-v0.8.0.md`, JUA-19). Esta pantalla explica la fase entera. La pantalla SPM/TDPM desarrolla los cambios premenstruales y los términos clínicos. LUT-05 resume y enlaza a ella sin repetir sus cifras. El enlace es estático y no cambia según la fase ni ningún dato (U-02). DER-01 y DER-02 reproducen sin cambios sus mensajes de derivación.
+- **Las tarjetas de la fase lútea** (`home-cards-luteal-v0.4.0.md`, JUA-19), que resumen esta pantalla.
 - **La rueda** (JUA-27), que dibuja la fase lútea con 12 días.
 
 <a id="a9-2"></a>
@@ -1746,7 +1783,7 @@ Los días en que la rueda pasa de una fase a otra los calcula Consona a partir d
 
 Hacia el final de esta fase, algunas mujeres notan cambios en el cuerpo o en el ánimo: por ejemplo, dolor, hinchazón o cansancio; irritabilidad, tristeza o tensión; o cambios en el sueño o el apetito. Otras no notan ninguno, y en una misma mujer puede cambiar de un ciclo a otro.
 
-Cuando los cambios se repiten ciclo tras ciclo y afectan de forma importante al día a día, se habla de síndrome premenstrual o, en su forma más intensa y menos frecuente, de trastorno disfórico premenstrual. Son términos clínicos que solo puede valorar un profesional. Los explicamos en [«Antes de la regla»](../../education/spm-tdpm-v0.7.0.md).
+Cuando los cambios se repiten ciclo tras ciclo y afectan de forma importante al día a día, se habla de síndrome premenstrual o, en su forma más intensa y menos frecuente, de trastorno disfórico premenstrual. Son términos clínicos que solo puede valorar un profesional. Los explicamos en [«Antes de la regla»](../../education/spm-tdpm-v0.8.0.md).
 
 #### LUT-06 · Lo que la fase lútea no dice
 
@@ -1764,7 +1801,7 @@ Algunas preguntas que dejan espacio:
 - «¿Cómo estás hoy?»
 - «¿Te apetece compañía, prefieres estar a tu aire o te echo una mano con algo?»
 
-Y hay una parte que es tuya: cómo respondes, cómo os repartís las tareas y el descanso, y no hacer comentarios ni bromas sobre «estar premenstrual».
+Y hay una parte que es tuya: cómo respondes, cómo os repartís lo que compartís, sean tareas, planes o tiempo, y no hacer comentarios ni bromas sobre «estar premenstrual».
 
 #### DER-01 · Cuándo puede ayudar un profesional (ver sección 3)
 
@@ -1776,7 +1813,7 @@ Esta información se basa en revisiones sobre la fisiología del ciclo y del end
 
 ### 3. Mensajes de derivación
 
-Estáticos y siempre visibles en la posición indicada. No se activan por fechas, fase ni registros. Reproducen sin cambios los de `spm-tdpm-v0.7.0.md`; si cambian allí, cambian aquí.
+Estáticos y siempre visibles en la posición indicada. No se activan por fechas, fase ni registros. Reproducen sin cambios los de `spm-tdpm-v0.8.0.md`; si cambian allí, cambian aquí.
 
 #### DER-01 · Cuándo puede ayudar un profesional
 
@@ -1786,7 +1823,7 @@ Estáticos y siempre visibles en la posición indicada. No se activan por fechas
 > Si los cambios preocupan a tu pareja, se repiten, son intensos o le dificultan el día a día —trabajo, estudios, relaciones o descanso—, un profesional sanitario puede valorarlos en contexto. El centro de salud es un buen punto de partida.
 > La decisión de consultar es suya. Lo que puedes hacer es ofrecerle tu apoyo o tu compañía, si los quiere.
 
-Fuente: DER-01 de `spm-tdpm-v0.7.0.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4.4).
+Fuente: DER-01 de `spm-tdpm-v0.8.0.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4.4).
 
 #### DER-02 · Ayuda urgente
 
@@ -1801,7 +1838,7 @@ Fuente: DER-01 de `spm-tdpm-v0.7.0.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4
 >
 > Estos números también son para ti si eres tú quien lo está pasando mal.
 
-Fuente: DER-02 de `spm-tdpm-v0.7.0.md`, verificado en fuentes oficiales el 07-10-2026 (D-03 y D-04 de JUA-19).
+Fuente: DER-02 de `spm-tdpm-v0.8.0.md`, verificado en fuentes oficiales el 07-10-2026 (D-03 y D-04 de JUA-19).
 
 <a id="a9-4"></a>
 
@@ -1816,7 +1853,7 @@ Fuente: DER-02 de `spm-tdpm-v0.7.0.md`, verificado en fuentes oficiales el 07-10
 | LUT-05 | Cambios premenstruales variables; SPM y TDPM como términos clínicos | LU-A09 (LS-11); SPM-03 |
 | LUT-06 | Sin cambios cognitivos; ánimo con poca variación media; estereotipo y su daño | LU-A10 a LU-A12 (LS-12 a LS-18); SGL-01, SGL-04 |
 | LUT-07 | Papel de la pareja; no atribuir al ciclo; preguntar si prefiere compañía, espacio o ayuda | LU-A13 (LS-19); LU-A16 (LS-22): el apoyo de la pareja importa, sin recomendar terapia; SGL-02; T-02; igual que SPM-07 |
-| DER-01, DER-02 | Derivación y ayuda urgente | LU-A14; `spm-tdpm-v0.7.0.md` |
+| DER-01, DER-02 | Derivación y ayuda urgente | LU-A14; `spm-tdpm-v0.8.0.md` |
 
 <a id="a9-5"></a>
 
@@ -1849,6 +1886,11 @@ La v0.1.0 no contiene:
 <a id="a9-7"></a>
 
 ### 7. Historial
+
+#### [0.4.0] — 11-11-2026
+
+- LUT-07: «cómo os repartís lo que compartís, sean tareas, planes o tiempo», para que sirva también si no vivís juntos (D-11 de la pantalla «Antes de la regla»).
+- DER-01 y DER-02 no cambian.
 
 #### [0.3.0] — 11-11-2026
 
@@ -1892,7 +1934,7 @@ La v0.1.0 no contiene:
 **Público y tono:** la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo. Se habla de «tu pareja».
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación. `src/App.jsx` solo se actualiza con versiones aprobadas.
 
-> La home muestra tres tarjetas de orientación para la fase estimada del día: «Qué pasa en su cuerpo», «Cómo acompañar» y «Qué no asumir». Este índice reúne las reglas comunes y enlaza el documento versionado de cada fase. Hasta el 11-11-2026 eran cuatro: «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti».
+> La home muestra tres tarjetas de orientación para la fase estimada del día: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar», en este orden: primero el conocimiento y al final la acción propia. Este índice reúne las reglas comunes y enlaza el documento versionado de cada fase. Hasta el 11-11-2026 eran cuatro: «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti».
 
 <a id="anexo-1"></a>
 
@@ -1900,14 +1942,14 @@ La v0.1.0 no contiene:
 
 | Fase | Documento | Estado |
 |---|---|---|
-| Menstruación | [`home-cards-menstruation-v0.3.0.md`](../../education/home-cards-menstruation-v0.3.0.md) | Borrador |
-| Fase folicular | [`home-cards-follicular-v0.3.0.md`](../../education/home-cards-follicular-v0.3.0.md) | Borrador |
-| Ventana ovulatoria estimada | [`home-cards-ovulatory-v0.3.0.md`](../../education/home-cards-ovulatory-v0.3.0.md) | Borrador |
-| Fase lútea | [`home-cards-luteal-v0.3.0.md`](../../education/home-cards-luteal-v0.3.0.md) | Borrador, en el paquete de revisión clínica de JUA-16 |
+| Menstruación | [`home-cards-menstruation-v0.4.0.md`](../../education/home-cards-menstruation-v0.4.0.md) | Borrador |
+| Fase folicular | [`home-cards-follicular-v0.4.0.md`](../../education/home-cards-follicular-v0.4.0.md) | Borrador |
+| Ventana ovulatoria estimada | [`home-cards-ovulatory-v0.4.0.md`](../../education/home-cards-ovulatory-v0.4.0.md) | Borrador |
+| Fase lútea | [`home-cards-luteal-v0.4.0.md`](../../education/home-cards-luteal-v0.4.0.md) | Borrador, en el paquete de revisión clínica de JUA-16 |
 
 El documento de la fase lútea **no se modificó** en JUA-23. Desde su v0.2.0 (JUA-19, 10-11-2026) aplica también las reglas comunes H-01 a H-08.
 
-Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.4.0.md`](../../education/home-cards-review-pack-v0.4.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase.
+Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.5.0.md`](../../education/home-cards-review-pack-v0.5.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase.
 
 <a id="anexo-2"></a>
 
@@ -1939,7 +1981,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 | H-04 | Las tarjetas no enlazan directamente a la pantalla SPM/TDPM ni cambian de color o de tono según la fase (C-03, U-03). |
 | H-05 | Ninguna tarjeta menciona ni sugiere deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad. |
 | H-06 | Sin fertilidad, «días seguros», probabilidad de embarazo, ovulación confirmada ni cifras en días. Excepciones: la duración de la menstruación, declarada por la persona afectada o de 5 días por defecto (M-02); el intervalo de la fase folicular, «entre 15 y 20 días» contando los días de la regla (F-02); y la duración aproximada de la fase lútea, «unos 12 días» (L-02). Siempre con «suele» y con que la duración cambia. |
-| H-07 | «Cómo acompañar» y «Qué no asumir» hablan de lo que haces tú, no de lo que debe hacer tu pareja. Sin consejos para gestionar, calmar o evitar a tu pareja, ni recomendaciones de salud (medicamentos, calor, ejercicio). |
+| H-07 | «Qué no asumir» y «Cómo acompañar» hablan de lo que haces tú, no de lo que debe hacer tu pareja. Sin consejos para gestionar, calmar o evitar a tu pareja, ni recomendaciones de salud (medicamentos, calor, ejercicio). |
 | H-08 | Ninguna tarjeta atribuye a la fase energía, ánimo, rendimiento, capacidad ni conducta (`01-cycle-phases`, `08-health-energy`, `12-health-emotional-cognitive` EC-01, EC-02). |
 
 <a id="anexo-4"></a>
@@ -1964,6 +2006,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 - Índice inicial: documentos por fase, criterio de selección y reglas comunes H-01 a H-08.
 - 06-11-2026: tarjetas de las tres fases nuevas en versión 0.2.0, con trazabilidad a la investigación de JUA-36.
 - Decisiones del 05-11-2026: excepción de la duración de la menstruación en H-01 y H-06; las tres fases nuevas entran en JUA-16.
+- 11-11-2026: orden «Qué pasa en su cuerpo», «Qué no asumir», «Cómo acompañar»; antetítulo «Comunicación y tu parte». Tarjetas en v0.4.0; paquete regenerado como v0.5.0.
 - 11-11-2026: tres tarjetas por fase; «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti». Sin acrónimos en los documentos.
 - 11-11-2026: H-06 admite el intervalo de la fase folicular y la duración aproximada de la fase lútea. Tarjetas de la menstruación, folicular y lútea en v0.3.0; paquete regenerado como v0.4.0.
-- 10-11-2026: la fase lútea pasa a `home-cards-luteal-v0.3.0.md`, que adopta las reglas comunes; paquete de revisión regenerado como v0.3.0.
+- 10-11-2026: la fase lútea pasa a `home-cards-luteal-v0.4.0.md`, que adopta las reglas comunes; paquete de revisión regenerado como v0.3.0.

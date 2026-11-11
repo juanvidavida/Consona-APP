@@ -1,4 +1,4 @@
-# Consona — Tarjetas de la home en la fase folicular v0.3.0
+# Consona — Tarjetas de la home en la fase folicular v0.4.0
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -27,19 +27,19 @@
 > En general, la fase folicular empieza con la menstruación y llega hasta la ovulación. En ella maduran folículos en los ovarios hasta que normalmente uno libera un óvulo. Esos folículos producen hormonas, entre ellas los estrógenos, que vuelven a engrosar el revestimiento del útero. Contando los días de la regla, suele durar entre 15 y 20 días, pero es la parte del ciclo que más cambia: puede ser bastante más corta o más larga, incluso en la misma mujer.
 > Una fecha calculada no te dice en qué punto está su ciclo ni cómo se encuentra tu pareja.
 
-### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Cómo te va esta semana? ¿Hay algo que te apetezca que hagamos o que prefieras dejar para otro momento?»
-> Preguntar por sus planes, y no por su ciclo, abre una conversación sin etiquetas.
-> Cuenta tus planes y da tú el primer paso en lo que os toque organizar juntos. No hace falta organizar nada en función de su ciclo.
-
 ### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > Esta parte del ciclo no significa que tu pareja tenga más energía, mejor ánimo o más ganas de hacer planes. Es una idea muy extendida que conviene revisar: la evidencia científica no la respalda, y cada mujer y cada ciclo son distintos.
+
+### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Cómo te va esta semana? ¿Hay algo que te apetezca que hagamos o que prefieras dejar para otro momento?»
+> Preguntar por sus planes, y no por su ciclo, abre una conversación sin etiquetas.
+> Cuenta tus planes y da tú el primer paso en lo que os toque organizar juntos. No hace falta organizar nada en función de su ciclo.
 
 ## 3. Cambios respecto al prototipo
 
@@ -86,6 +86,7 @@ La v0.2.0 no contiene:
 | D-03 | «Qué no asumir» nombra el estereotipo («más energía, mejor ánimo») para desmentirlo. Nombrarlo también lo difunde. | **Resuelta (05-11-2026):** se nombran los estereotipos para que el texto sea accesible, aunque sea a costa de difundirlos. |
 | D-04 | La trazabilidad de la variación cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 | D-05 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-06 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa». |
 
 ## 7. Qué debe valorar la persona revisora
 
@@ -122,6 +123,11 @@ La v0.2.0 no contiene:
 - «Qué puedes preguntarle» y «Qué te toca a ti» se fusionan en «Cómo acompañar», con la pregunta de antes y el gesto de FOL-06: contar tus planes y dar el primer paso, sin organizar nada en función del ciclo.
 - Los documentos usan los títulos de las tarjetas en lugar de los acrónimos.
 - «Qué no asumir»: «una idea muy extendida que conviene revisar».
+
+### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
 
 ## Referencias
 

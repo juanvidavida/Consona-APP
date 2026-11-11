@@ -1,4 +1,4 @@
-# Consona — Tarjetas de orientación de la home: paquete de revisión v0.4.0
+# Consona — Tarjetas de orientación de la home: paquete de revisión v0.5.0
 
 **Issues:** JUA-23 y JUA-19.
 **Para qué sirve:** revisar a la vez las cuatro fases. Es una copia generada de los documentos de cada fase, que son la fuente de verdad: los cambios se hacen allí y este paquete se vuelve a generar.
@@ -10,10 +10,10 @@
 | Parte | Fase | Origen | Estado |
 |---|---|---|---|
 | 1 | Cómo se eligen las tarjetas y reglas comunes | `home-cards-index.md` | Borrador |
-| 2 | Menstruación | `home-cards-menstruation-v0.3.0.md` | Versión 0.3.0, con trazabilidad a la investigación de JUA-36 |
-| 3 | Fase folicular | `home-cards-follicular-v0.3.0.md` | Versión 0.3.0, con trazabilidad a la investigación de JUA-36 |
-| 4 | Ventana ovulatoria estimada | `home-cards-ovulatory-v0.3.0.md` | Versión 0.3.0, con trazabilidad a la investigación de JUA-36 |
-| 5 | Fase lútea | `home-cards-luteal-v0.3.0.md` | Versión 0.3.0, con trazabilidad a la investigación de JUA-36 |
+| 2 | Menstruación | `home-cards-menstruation-v0.4.0.md` | Versión 0.4.0, con trazabilidad a la investigación de JUA-36 |
+| 3 | Fase folicular | `home-cards-follicular-v0.4.0.md` | Versión 0.4.0, con trazabilidad a la investigación de JUA-36 |
+| 4 | Ventana ovulatoria estimada | `home-cards-ovulatory-v0.4.0.md` | Versión 0.4.0, con trazabilidad a la investigación de JUA-36 |
+| 5 | Fase lútea | `home-cards-luteal-v0.4.0.md` | Versión 0.4.0, con trazabilidad a la investigación de JUA-36 |
 
 **Cómo revisar:** lee primero la sección 2 de cada fase, que es el texto que verá la persona usuaria. Después, las reglas propias, la trazabilidad y las decisiones abiertas. Las referencias numeradas [1], [2]… remiten a la lista del final de **cada** fase, no a una lista común.
 
@@ -47,14 +47,14 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 | H-04 | Las tarjetas no enlazan directamente a la pantalla SPM/TDPM ni cambian de color o de tono según la fase (C-03, U-03). |
 | H-05 | Ninguna tarjeta menciona ni sugiere deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad. |
 | H-06 | Sin fertilidad, «días seguros», probabilidad de embarazo, ovulación confirmada ni cifras en días. Excepciones: la duración de la menstruación, declarada por la persona afectada o de 5 días por defecto (M-02); el intervalo de la fase folicular, «entre 15 y 20 días» contando los días de la regla (F-02); y la duración aproximada de la fase lútea, «unos 12 días» (L-02). Siempre con «suele» y con que la duración cambia. |
-| H-07 | «Cómo acompañar» y «Qué no asumir» hablan de lo que haces tú, no de lo que debe hacer tu pareja. Sin consejos para gestionar, calmar o evitar a tu pareja, ni recomendaciones de salud (medicamentos, calor, ejercicio). |
+| H-07 | «Qué no asumir» y «Cómo acompañar» hablan de lo que haces tú, no de lo que debe hacer tu pareja. Sin consejos para gestionar, calmar o evitar a tu pareja, ni recomendaciones de salud (medicamentos, calor, ejercicio). |
 | H-08 | Ninguna tarjeta atribuye a la fase energía, ánimo, rendimiento, capacidad ni conducta (`01-cycle-phases`, `08-health-energy`, `12-health-emotional-cognitive` EC-01, EC-02). |
 
 ---
 
 # Parte 2 · Menstruación
 
-*Origen: `home-cards-menstruation-v0.3.0.md`. Versión 0.3.0, con trazabilidad a la investigación de JUA-36.*
+*Origen: `home-cards-menstruation-v0.4.0.md`. Versión 0.4.0, con trazabilidad a la investigación de JUA-36.*
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -91,19 +91,19 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 | La persona afectada declaró la duración en el formulario de consentimiento inicial | «Según lo que indicó tu pareja, le suele durar unos N días» (con N = 1: «un día») |
 | No la declaró | «Suele durar unos 5 días, aunque cambia de una mujer a otra» |
 
-#### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Hay algo que te venga bien hoy, o prefieres que todo siga como siempre?»
-> Preguntar sin dar por hecho que algo va mal le deja decidir qué contarte.
-> Ocúpate de tu parte en casa sin esperar a que te lo pidan, y habla de la regla con la misma naturalidad que de cualquier otra cosa.
-
 #### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > Tener la regla no significa estar de mal humor, tener dolor ni necesitar cuidados especiales. Tampoco que todo vaya bien porque no diga nada. Lo que te cuente vale más que cualquier idea previa sobre la regla.
+
+#### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Hay algo que te venga bien hoy, o prefieres que todo siga como siempre?»
+> Preguntar sin dar por hecho que algo va mal le deja decidir qué contarte.
+> Haz tu parte en lo que compartís, sin esperar a que te lo pidan, y habla de la regla con la misma naturalidad que de cualquier otra cosa.
 
 ### 3. Cambios respecto al prototipo
 
@@ -151,6 +151,7 @@ La v0.2.0 no contiene:
 | D-04 | El paquete de revisión clínica de JUA-16 cubría la pantalla SPM/TDPM y la fase lútea. | **Resuelta (05-11-2026):** se amplía JUA-16 con las tres fases nuevas: menstruación, folicular y ventana ovulatoria estimada. |
 | D-05 | La trazabilidad de la duración cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 | D-06 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-07 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa» en «Cómo acompañar». |
 
 ### 7. Qué debe valorar la persona revisora
 
@@ -170,7 +171,7 @@ La v0.2.0 no contiene:
 #### [0.2.0] — 06-11-2026
 
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
-- Pantalla educativa asociada: `menstruacion-v0.2.0.md` (rama de JUA-36).
+- Pantalla educativa asociada: `menstruacion-v0.3.0.md` (rama de JUA-36).
 
 #### [0.2.0] — Enmienda del 10-11-2026
 
@@ -186,6 +187,12 @@ La v0.2.0 no contiene:
 
 - «Qué puedes preguntarle» y «Qué te toca a ti» se fusionan en «Cómo acompañar», con la pregunta de antes y el gesto de MEN-07: tu parte en casa y hablar de la regla con naturalidad.
 - Los documentos usan los títulos de las tarjetas en lugar de los acrónimos.
+
+#### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
+- «Haz tu parte en lo que compartís» en lugar de «Ocúpate de tu parte en casa», para que sirva también si no vivís juntos.
 
 ### Referencias
 
@@ -203,7 +210,7 @@ La v0.2.0 no contiene:
 
 # Parte 3 · Fase folicular
 
-*Origen: `home-cards-follicular-v0.3.0.md`. Versión 0.3.0, con trazabilidad a la investigación de JUA-36.*
+*Origen: `home-cards-follicular-v0.4.0.md`. Versión 0.4.0, con trazabilidad a la investigación de JUA-36.*
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -232,19 +239,19 @@ La v0.2.0 no contiene:
 > En general, la fase folicular empieza con la menstruación y llega hasta la ovulación. En ella maduran folículos en los ovarios hasta que normalmente uno libera un óvulo. Esos folículos producen hormonas, entre ellas los estrógenos, que vuelven a engrosar el revestimiento del útero. Contando los días de la regla, suele durar entre 15 y 20 días, pero es la parte del ciclo que más cambia: puede ser bastante más corta o más larga, incluso en la misma mujer.
 > Una fecha calculada no te dice en qué punto está su ciclo ni cómo se encuentra tu pareja.
 
-#### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Cómo te va esta semana? ¿Hay algo que te apetezca que hagamos o que prefieras dejar para otro momento?»
-> Preguntar por sus planes, y no por su ciclo, abre una conversación sin etiquetas.
-> Cuenta tus planes y da tú el primer paso en lo que os toque organizar juntos. No hace falta organizar nada en función de su ciclo.
-
 #### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > Esta parte del ciclo no significa que tu pareja tenga más energía, mejor ánimo o más ganas de hacer planes. Es una idea muy extendida que conviene revisar: la evidencia científica no la respalda, y cada mujer y cada ciclo son distintos.
+
+#### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Cómo te va esta semana? ¿Hay algo que te apetezca que hagamos o que prefieras dejar para otro momento?»
+> Preguntar por sus planes, y no por su ciclo, abre una conversación sin etiquetas.
+> Cuenta tus planes y da tú el primer paso en lo que os toque organizar juntos. No hace falta organizar nada en función de su ciclo.
 
 ### 3. Cambios respecto al prototipo
 
@@ -291,6 +298,7 @@ La v0.2.0 no contiene:
 | D-03 | «Qué no asumir» nombra el estereotipo («más energía, mejor ánimo») para desmentirlo. Nombrarlo también lo difunde. | **Resuelta (05-11-2026):** se nombran los estereotipos para que el texto sea accesible, aunque sea a costa de difundirlos. |
 | D-04 | La trazabilidad de la variación cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 | D-05 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-06 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa». |
 
 ### 7. Qué debe valorar la persona revisora
 
@@ -328,6 +336,11 @@ La v0.2.0 no contiene:
 - Los documentos usan los títulos de las tarjetas en lugar de los acrónimos.
 - «Qué no asumir»: «una idea muy extendida que conviene revisar».
 
+#### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
+
 ### Referencias
 
 1. Office on Women's Health — Your menstrual cycle. <https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle>
@@ -342,7 +355,7 @@ La v0.2.0 no contiene:
 
 # Parte 4 · Ventana ovulatoria estimada
 
-*Origen: `home-cards-ovulatory-v0.3.0.md`. Versión 0.3.0, con trazabilidad a la investigación de JUA-36.*
+*Origen: `home-cards-ovulatory-v0.4.0.md`. Versión 0.4.0, con trazabilidad a la investigación de JUA-36.*
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -373,19 +386,19 @@ La v0.2.0 no contiene:
 > La ovulación es el momento en que un ovario libera un óvulo. No es una fase de varios días, sino un hecho puntual cuyo momento cambia de un ciclo a otro. Esta ventana marca un momento aproximado, calculado hacia atrás desde la fecha prevista de la siguiente regla.
 > Es solo un cálculo: no detecta si la ovulación ha ocurrido ni cuándo, y no sirve para buscar ni para evitar un embarazo.
 
-#### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Cómo te encuentras hoy? ¿Hay algo en lo que te pueda echar una mano?»
-> Lo que te cuente dice mucho más que cualquier fecha del calendario.
-> Mantén tus compromisos y tu parte de las tareas como cualquier otro día. Si tenéis una decisión pendiente, sácala tú en la conversación en lugar de esperar.
-
 #### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > Que la app marque esta ventana no dice nada de cómo se siente tu pareja, de lo que quiere ni de cómo está vuestra relación. Es una fecha calculada, no algo que le esté pasando ni una señal para actuar.
+
+#### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Cómo te encuentras hoy? ¿Hay algo en lo que te pueda echar una mano?»
+> Lo que te cuente dice mucho más que cualquier fecha del calendario.
+> Mantén tus compromisos y tu parte de las tareas como cualquier otro día. Si tenéis una decisión pendiente, sácala tú en la conversación en lugar de esperar.
 
 ### 3. Cambios respecto al prototipo
 
@@ -412,7 +425,7 @@ El prototipo no tiene texto propio de la ventana ovulatoria: muestra en todas la
 
 ### 5. Exclusiones comprobadas
 
-La v0.3.0 no contiene:
+La v0.4.0 no contiene:
 
 - [x] «Día de ovulación», «estás ovulando», «días fértiles», «periodo fértil» ni «días seguros».
 - [x] Probabilidad de embarazo ni uso de la ventana para buscarlo o evitarlo (solo el aviso de que no sirve para eso).
@@ -432,6 +445,7 @@ La v0.3.0 no contiene:
 | D-04 | Como en la fase folicular, «óvulo» en lugar de «ovocito». | **Aceptada (05-11-2026):** igual que D-01 de la fase folicular. |
 | D-05 | La trazabilidad del cálculo cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 | D-06 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-07 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa». |
 
 ### 7. Qué debe valorar la persona revisora
 
@@ -468,6 +482,11 @@ La v0.3.0 no contiene:
 - «Qué puedes preguntarle» y «Qué te toca a ti» se fusionan en «Cómo acompañar», con la pregunta de antes y el gesto de la antigua «Qué te toca a ti», sin cambios. No se usa el gesto de OVU-07 sobre anticoncepción: en la home, durante la ventana, podría leerse como una señal de fertilidad (H-05, H-06).
 - Los documentos usan los títulos de las tarjetas en lugar de los acrónimos.
 
+#### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
+
 ### Referencias
 
 1. ACOG — Fertility Awareness-Based Methods of Family Planning. <https://www.acog.org/womens-health/faqs/fertility-awareness-based-methods-of-family-planning>
@@ -482,16 +501,16 @@ La v0.3.0 no contiene:
 
 # Parte 5 · Fase lútea
 
-*Origen: `home-cards-luteal-v0.3.0.md`. Versión 0.3.0, con trazabilidad a la investigación de JUA-36.*
+*Origen: `home-cards-luteal-v0.4.0.md`. Versión 0.4.0, con trazabilidad a la investigación de JUA-36.*
 
 **Issues:** JUA-19 (origen) y JUA-23 (reglas comunes).
 **Estado:** Borrador para revisión de producto. **Incluido en el paquete de revisión clínica de JUA-16**, pendiente de envío.
-**Origen:** decisión D-05 de [`spm-tdpm-v0.7.0.md`](./spm-tdpm-v0.7.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
+**Origen:** decisión D-05 de [`spm-tdpm-v0.8.0.md`](./spm-tdpm-v0.8.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
 **Reglas comunes:** H-01 a H-08 de [`home-cards-index.md`](./home-cards-index.md).
 **Base de investigación:** [`docs/research/fases/lutea/`](../research/fases/lutea/) (JUA-36).
 **Cuándo se muestra:** durante toda la fase lútea estimada, incluidos los días previos a la menstruación (sección 2 del índice).
 **Parte de:** el texto provisional de [`src/App.jsx`](../../src/App.jsx) (JUA-5), que no es definitivo.
-**Público y tono:** los de la sección 1 de `spm-tdpm-v0.7.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
+**Público y tono:** los de la sección 1 de `spm-tdpm-v0.8.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación.
 
 > Este documento fija el texto exacto de las tres tarjetas cuando la home muestra la fase lútea estimada. Cualquier cambio exige una nueva versión y su revisión contra las reglas comunes del índice y las reglas C-01 a C-04 de la pantalla SPM/TDPM.
@@ -505,7 +524,7 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 | L-01 | Las tarjetas no cambian en los días previos a la menstruación ni nombran SPM o TDPM (H-01, H-02; C-01 de la pantalla SPM/TDPM). |
 | L-02 | Duración aproximada: «unos 12 días», siempre con «suele» y «también varía», igual que LUT-03 y la rueda (excepción de H-06). Sin «fase lútea corta», «deficiencia lútea» ni «progesterona baja» (SGL-05). |
 | L-03 | La progesterona solo aparece como fisiología del útero, nunca para explicar ánimo, energía ni conducta (H-08; SGL-02). |
-| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.3.0.md` y SPM-05 de `spm-tdpm-v0.7.0.md`, repetida a propósito (D-04). |
+| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.4.0.md` y SPM-05 de `spm-tdpm-v0.8.0.md`, repetida a propósito (D-04). |
 | L-05 | La fase no se presenta como «la fase mala», ni como una semana que exija un trato especial (SGL-04). |
 
 ### 2. Texto de las tarjetas
@@ -517,19 +536,19 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 > En general, la fase lútea va desde la ovulación hasta la siguiente menstruación. El folículo que liberó el óvulo se transforma en el cuerpo lúteo, que produce sobre todo progesterona: prepara el revestimiento del útero por si hubiera un embarazo. Si no lo hay, bajan las hormonas y empieza la menstruación. Suele durar unos 12 días, y es la parte del ciclo cuya duración menos cambia, aunque también varía.
 > Hacia el final de esta fase, algunas mujeres notan cambios físicos o de ánimo, y otras no. Una fecha calculada no confirma que haya habido ovulación ni te dice cómo se encuentra tu pareja.
 
-#### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?»
-> Una pregunta abierta deja espacio para escuchar sin dar nada por hecho. Si prefiere no hablar, también es una respuesta.
-> Como cualquier otra semana: organiza tus propias responsabilidades, comunica tus planes con claridad y deja margen para ajustar la logística si tu pareja lo pide.
-
 #### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > La imagen de la mujer «premenstrual» irritable o fuera de control es un estereotipo, y hace daño. Que se acerque la menstruación no explica cómo se siente tu pareja, qué necesita ni cómo quiere que actúes. Atribuir una tensión al ciclo puede restar valor a lo que te está diciendo: preguntar funciona mejor que suponer.
+
+#### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?»
+> Una pregunta abierta deja espacio para escuchar sin dar nada por hecho. Si prefiere no hablar, también es una respuesta.
+> Como cualquier otra semana: organiza tus propias responsabilidades, comunica tus planes con claridad y deja margen para ajustar la logística si tu pareja lo pide.
 
 ### 3. Cambios
 
@@ -568,7 +587,7 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 
 ### 5. Exclusiones comprobadas
 
-La v0.3.0 no contiene:
+La v0.4.0 no contiene:
 
 - [x] SPM, TDPM ni ningún término diagnóstico.
 - [x] Síntomas presentados como esperables en tu pareja, ni listas de síntomas.
@@ -588,8 +607,14 @@ La v0.3.0 no contiene:
 | D-03 | JUA-5 está cerrada y no hay una incidencia para el contenido de las tarjetas de la home. | **Resuelta (07-10-2026):** se abre JUA-23 para las tarjetas de todas las fases, relacionada con JUA-16, JUA-19 y JUA-5. |
 | D-04 | ¿Nombrar el estereotipo «premenstrual» en la home, además de en las pantallas de la fase lútea y SPM/TDPM? | **Resuelta (10-11-2026):** sí. Explicarlo en más de un sitio refuerza su importancia. «Qué no asumir» lo nombra solo para desmentirlo. Se pregunta a la persona revisora si en la home se lee como desmentido y no como aviso. |
 | D-05 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-06 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa». |
 
 ### 7. Historial
+
+#### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
 
 #### [0.3.0] — Tres tarjetas (11-11-2026)
 

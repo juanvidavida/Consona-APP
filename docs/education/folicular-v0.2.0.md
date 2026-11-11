@@ -10,7 +10,7 @@
 
 ## 1. Público, tono, ubicación y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, secciones 1 a 3):
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.0.md`, secciones 1 a 3):
 
 - tono T-01 a T-04;
 - ubicación U-01 a U-04, como artículo de «Comprender» en «El cuerpo en cada fase»;
@@ -22,7 +22,7 @@ Se añaden las reglas de sesgo SGF-01 a SGF-05 de `03-sesgo-genero.md`.
 
 ### Coherencia con las tarjetas de la home
 
-Las tarjetas de la fase folicular (`home-cards-follicular-v0.3.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra.
+Las tarjetas de la fase folicular (`home-cards-follicular-v0.4.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra.
 
 ## 2. Texto de la pantalla
 

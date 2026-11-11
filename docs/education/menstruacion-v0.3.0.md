@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «La menstruación» v0.2.0
+# Consona — Pantalla educativa «La menstruación» v0.3.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío.
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -14,7 +14,7 @@
 
 **Para qué:** entender qué es la menstruación y qué no dice, para acompañar en consonancia sin interpretar, anticipar ni explicar a la otra persona.
 
-Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.7.0.md`):
+Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.8.0.md`):
 
 - **T-01:** educativo, no paternalista.
 - **T-02:** la pareja es la autoridad sobre su propia experiencia.
@@ -34,7 +34,7 @@ Y las reglas de sesgo SG-01 a SG-07 de `03-sesgo-genero.md`.
 
 ### Coherencia con las tarjetas de la home
 
-Las tarjetas de la menstruación (`home-cards-menstruation-v0.3.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra antes de publicarse.
+Las tarjetas de la menstruación (`home-cards-menstruation-v0.4.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra antes de publicarse.
 
 ## 3. Reglas de la pantalla
 
@@ -104,7 +104,7 @@ Algunas preguntas que dejan espacio:
 - «¿Hay algo que te venga bien hoy?»
 - «¿Prefieres que todo siga como siempre?»
 
-Hay cosas que dependen de ti: ocuparte de tu parte en casa sin esperar a que te lo pidan y ajustar los planes según lo que te diga. Hablar de la regla con la misma naturalidad que de cualquier otra cosa, sin bromas ni comentarios, también es hacer tu parte. Si a tu pareja le preocupa su dolor, tomárselo en serio también es acompañar.
+Hay cosas que dependen de ti: hacer tu parte en lo que compartís sin esperar a que te lo pidan y ajustar los planes según lo que te diga. Hablar de la regla con la misma naturalidad que de cualquier otra cosa, sin bromas ni comentarios, también es hacer tu parte. Si a tu pareja le preocupa su dolor, tomárselo en serio también es acompañar.
 
 ### DER-01 · Cuándo puede ayudar un profesional (ver sección 5)
 
@@ -160,6 +160,11 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 | D-05 | DER-02 habla de «compresas o tampones». Hay otros productos (copa, ropa interior absorbente) con los que el criterio de ACOG no se puede aplicar igual. | **Resuelta (06-11-2026):** DER-02 incluye la copa y la ropa interior absorbente. La equivalencia es una adaptación editorial del criterio de ACOG, que solo habla de compresas y tampones; se apoya en que el NHS incluye la copa en su definición de sangrado abundante (revisado el 19-09-2024). La revisión clínica debe validarla. |
 
 ## 8. Historial
+
+### [0.3.0] — 11-11-2026
+
+- MEN-07: «hacer tu parte en lo que compartís» en lugar de «ocuparte de tu parte en casa», para que sirva también si no vivís juntos (D-11 de la pantalla «Antes de la regla»).
+- DER-01 y DER-02 no cambian.
 
 ### [0.2.0] — 11-11-2026
 

@@ -1,4 +1,4 @@
-# Consona — Tarjetas de la home en la menstruación v0.3.0
+# Consona — Tarjetas de la home en la menstruación v0.4.0
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -35,19 +35,19 @@
 | La persona afectada declaró la duración en el formulario de consentimiento inicial | «Según lo que indicó tu pareja, le suele durar unos N días» (con N = 1: «un día») |
 | No la declaró | «Suele durar unos 5 días, aunque cambia de una mujer a otra» |
 
-### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Hay algo que te venga bien hoy, o prefieres que todo siga como siempre?»
-> Preguntar sin dar por hecho que algo va mal le deja decidir qué contarte.
-> Ocúpate de tu parte en casa sin esperar a que te lo pidan, y habla de la regla con la misma naturalidad que de cualquier otra cosa.
-
 ### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > Tener la regla no significa estar de mal humor, tener dolor ni necesitar cuidados especiales. Tampoco que todo vaya bien porque no diga nada. Lo que te cuente vale más que cualquier idea previa sobre la regla.
+
+### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Hay algo que te venga bien hoy, o prefieres que todo siga como siempre?»
+> Preguntar sin dar por hecho que algo va mal le deja decidir qué contarte.
+> Haz tu parte en lo que compartís, sin esperar a que te lo pidan, y habla de la regla con la misma naturalidad que de cualquier otra cosa.
 
 ## 3. Cambios respecto al prototipo
 
@@ -95,6 +95,7 @@ La v0.2.0 no contiene:
 | D-04 | El paquete de revisión clínica de JUA-16 cubría la pantalla SPM/TDPM y la fase lútea. | **Resuelta (05-11-2026):** se amplía JUA-16 con las tres fases nuevas: menstruación, folicular y ventana ovulatoria estimada. |
 | D-05 | La trazabilidad de la duración cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 | D-06 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-07 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa» en «Cómo acompañar». |
 
 ## 7. Qué debe valorar la persona revisora
 
@@ -114,7 +115,7 @@ La v0.2.0 no contiene:
 ### [0.2.0] — 06-11-2026
 
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
-- Pantalla educativa asociada: `menstruacion-v0.2.0.md` (rama de JUA-36).
+- Pantalla educativa asociada: `menstruacion-v0.3.0.md` (rama de JUA-36).
 
 ### [0.2.0] — Enmienda del 10-11-2026
 
@@ -130,6 +131,12 @@ La v0.2.0 no contiene:
 
 - «Qué puedes preguntarle» y «Qué te toca a ti» se fusionan en «Cómo acompañar», con la pregunta de antes y el gesto de MEN-07: tu parte en casa y hablar de la regla con naturalidad.
 - Los documentos usan los títulos de las tarjetas en lugar de los acrónimos.
+
+### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
+- «Haz tu parte en lo que compartís» en lugar de «Ocúpate de tu parte en casa», para que sirva también si no vivís juntos.
 
 ## Referencias
 

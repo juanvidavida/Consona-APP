@@ -1,4 +1,4 @@
-# Consona — Tarjetas de la home en la ventana ovulatoria estimada v0.3.0
+# Consona — Tarjetas de la home en la ventana ovulatoria estimada v0.4.0
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -29,19 +29,19 @@
 > La ovulación es el momento en que un ovario libera un óvulo. No es una fase de varios días, sino un hecho puntual cuyo momento cambia de un ciclo a otro. Esta ventana marca un momento aproximado, calculado hacia atrás desde la fecha prevista de la siguiente regla.
 > Es solo un cálculo: no detecta si la ovulación ha ocurrido ni cuándo, y no sirve para buscar ni para evitar un embarazo.
 
-### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Cómo te encuentras hoy? ¿Hay algo en lo que te pueda echar una mano?»
-> Lo que te cuente dice mucho más que cualquier fecha del calendario.
-> Mantén tus compromisos y tu parte de las tareas como cualquier otro día. Si tenéis una decisión pendiente, sácala tú en la conversación en lugar de esperar.
-
 ### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > Que la app marque esta ventana no dice nada de cómo se siente tu pareja, de lo que quiere ni de cómo está vuestra relación. Es una fecha calculada, no algo que le esté pasando ni una señal para actuar.
+
+### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Cómo te encuentras hoy? ¿Hay algo en lo que te pueda echar una mano?»
+> Lo que te cuente dice mucho más que cualquier fecha del calendario.
+> Mantén tus compromisos y tu parte de las tareas como cualquier otro día. Si tenéis una decisión pendiente, sácala tú en la conversación en lugar de esperar.
 
 ## 3. Cambios respecto al prototipo
 
@@ -68,7 +68,7 @@ El prototipo no tiene texto propio de la ventana ovulatoria: muestra en todas la
 
 ## 5. Exclusiones comprobadas
 
-La v0.3.0 no contiene:
+La v0.4.0 no contiene:
 
 - [x] «Día de ovulación», «estás ovulando», «días fértiles», «periodo fértil» ni «días seguros».
 - [x] Probabilidad de embarazo ni uso de la ventana para buscarlo o evitarlo (solo el aviso de que no sirve para eso).
@@ -88,6 +88,7 @@ La v0.3.0 no contiene:
 | D-04 | Como en la fase folicular, «óvulo» en lugar de «ovocito». | **Aceptada (05-11-2026):** igual que D-01 de la fase folicular. |
 | D-05 | La trazabilidad del cálculo cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
 | D-06 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-07 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa». |
 
 ## 7. Qué debe valorar la persona revisora
 
@@ -123,6 +124,11 @@ La v0.3.0 no contiene:
 
 - «Qué puedes preguntarle» y «Qué te toca a ti» se fusionan en «Cómo acompañar», con la pregunta de antes y el gesto de la antigua «Qué te toca a ti», sin cambios. No se usa el gesto de OVU-07 sobre anticoncepción: en la home, durante la ventana, podría leerse como una señal de fertilidad (H-05, H-06).
 - Los documentos usan los títulos de las tarjetas en lugar de los acrónimos.
+
+### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
 
 ## Referencias
 

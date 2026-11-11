@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) v0.7.0
+# Consona — Pantalla educativa «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) v0.8.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el paquete de revisión clínica de JUA-16**, pendiente de envío.
 **Incidencia:** JUA-19 (CON-027). Su versión aprobada será el artefacto que revise JUA-16 (ADR-002 P7).
@@ -27,7 +27,7 @@ La pantalla es una subpantalla de **«Cómo funciona»**. No es la pantalla de i
 
 | ID | Regla de acceso |
 |---|---|
-| U-01 | Se abre desde dos enlaces estáticos. (1) Dentro de «Cómo funciona», en el punto donde se explica que los patrones no diagnostican SPM ni TDPM (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §4.2); su implementación corresponde a JUA-7. (2) Desde el bloque LUT-05 de la pantalla «La fase lútea» de «Comprender» (`lutea-v0.3.0.md`, JUA-36). Ninguno de los dos depende de la fase, la fecha ni ningún dato (U-02). |
+| U-01 | Se abre desde dos enlaces estáticos. (1) Dentro de «Cómo funciona», en el punto donde se explica que los patrones no diagnostican SPM ni TDPM (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §4.2); su implementación corresponde a JUA-7. (2) Desde el bloque LUT-05 de la pantalla «La fase lútea» de «Comprender» (`lutea-v0.4.0.md`, JUA-36). Ninguno de los dos depende de la fase, la fecha ni ningún dato (U-02). |
 | U-02 | El enlace es siempre visible y tiene el mismo texto para todas las personas. No aparece, cambia ni se destaca según la fase estimada, la fecha o cualquier dato local. |
 | U-03 | La home no enlaza directamente a esta pantalla ni muestra avisos que remitan a ella. |
 | U-04 | Desde la pantalla se puede volver a «Cómo funciona» con un control visible y accesible para lector de pantalla. |
@@ -121,7 +121,7 @@ Algunas preguntas que dejan espacio:
 - «¿Te apetece compañía, prefieres estar a tu aire o te echo una mano con algo?»
 - «¿Prefieres que lo hablemos en otro momento?»
 
-Lo que necesite puede cambiar de un ciclo a otro, o no tener nada que ver con el ciclo. Y también hay una parte que es tuya: cómo respondes, cómo os repartís las tareas y el descanso, cómo cuidas el ambiente que compartís.
+Lo que necesite puede cambiar de un ciclo a otro, o no tener nada que ver con el ciclo. Y también hay una parte que es tuya: cómo respondes, cómo os repartís lo que compartís, sean tareas, planes o tiempo, y cómo cuidas el ambiente cuando estáis juntos.
 
 ### DER-01 · Cuándo hablar con un profesional (ver sección 5)
 
@@ -165,7 +165,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 | SPM-03 · TDPM | Forma menos frecuente e intensa, predominio emocional, registro diario de al menos dos ciclos. | [3] [4] [6] | ADR-002 §1; `12-health-emotional-cognitive` EC-06. **JUA-36:** LS-21 (el diagnóstico confirmado exige un registro diario prospectivo de dos ciclos). |
 | SPM-03 · cierre | Consona no asigna términos clínicos. | — | `audit-07` §4.5. |
 | SPM-04 | La información de la home por día y fase es general; no informa del estado de la pareja ni predice ánimo, cognición o conducta; la cercanía de la menstruación no equivale a SPM; el ánimo varía poco en promedio y muchas personas no notan cambios ligados al ciclo. | [8] [9] [16] [17] [18] | `12-health-emotional-cognitive` EC-01, EC-02, EC-05; `audit-07` §4.1; `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §2–3. **JUA-36:** LU-A10 (LS-12 a LS-15) y LU-A11 (LS-16). |
-| SPM-05 · estereotipo | El estereotipo de la mujer «premenstrual», su difusión (también entre hombres), el estudio con objetivo oculto y su daño. | [16] [19] [20] [21] | **JUA-36:** LU-A12 (LS-13, LS-18); ME-A17 (S-20, S-21, S-13); SGL-01. Misma redacción que LUT-06 de `lutea-v0.3.0.md`. |
+| SPM-05 · estereotipo | El estereotipo de la mujer «premenstrual», su difusión (también entre hombres), el estudio con objetivo oculto y su daño. | [16] [19] [20] [21] | **JUA-36:** LU-A12 (LS-13, LS-18); ME-A17 (S-20, S-21, S-13); SGL-01. Misma redacción que LUT-06 de `lutea-v0.4.0.md`. |
 | SPM-05 · causas | Solapamiento con otras causas; peso de la salud, el estrés y el apoyo; sesgo de atribución al ciclo; la pareja puede ayudar escuchando y preguntando, sin interpretar. | [2] [5] [9] [16] [22] | `12-health-emotional-cognitive` EC-02, EC-07 y regla editorial central; «sesgo de atribución» como tema educativo en `CONSONA_DEFINICION_DE_APP.md`. **JUA-36:** LU-A10, LU-A13 (LS-13, LS-19); LU-A16 (LS-22 [V]) para el papel de la pareja. |
 | SPM-06 | Prevalencia de TDPM en población general con diagnóstico confirmado (1,6 %); cifras más altas con diagnóstico provisional. | [6] | **JUA-36:** LU-A15 (LS-21 [V-abs], resumen de PubMed). Ver D-02. |
 | SPM-07 | Conversación directa, autonomía y responsabilidad propia; preguntar si prefiere compañía, espacio o ayuda, sin forzar la conversación. | [22] | Requisito de producto de JUA-19; ADR-002 §5 («¿Quieres preguntarle cómo está?»); tarjeta «Cómo acompañar» del panel. **JUA-36:** LU-A16 (LS-22 [V]): la comprensión y el apoyo de la pareja importan en cómo se vive la relación. No se usa para recomendar terapia. |
@@ -174,7 +174,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 
 ## 7. Exclusiones comprobadas
 
-Lista para comprobar en cada versión. La v0.7.0 no contiene:
+Lista para comprobar en cada versión. La v0.8.0 no contiene:
 
 - [x] Diagnóstico, clasificación, «posible SPM/TDPM», puntuaciones, umbrales, semáforos ni probabilidades individuales.
 - [x] Listas de criterios clínicos o de diagnósticos diferenciales presentadas como autoevaluación o como guía para evaluar a la pareja.
@@ -198,14 +198,21 @@ Lista para comprobar en cada versión. La v0.7.0 no contiene:
 | D-02 | La cifra del metaanálisis de 2024 (SPM-06) procede de ADR-002 y no pasó por las auditorías de JUA-10. `audit-07` pide retirar del microcopy cifras sin fuente contemporánea y contexto. | **Resuelta (10-11-2026):** el metaanálisis (Reilly et al. 2024) se audita en JUA-36 como LS-21, a partir del resumen de PubMed. La cifra del 3,2 % mezclaba muestras de comunidad, universidad e instituto con una heterogeneidad muy alta (I² = 99 %). SPM-06 pasa a la cifra de población general con diagnóstico confirmado (1,6 %, I² = 26 %), que es la pertinente para el público de Consona. Se mantiene la pregunta P-01 a la persona revisora. Alternativa: eliminar las cifras y dejar solo la primera y la última frase. |
 | D-03 | Los recursos 112 y 024, y que el 024 atiende a familiares y personas allegadas, no figuraban en la bibliografía de JUA-10. | **Verificado el 07-10-2026.** 024: Ministerio de Sanidad, para personas con conducta o ideación suicida y para familiares o allegados; gratuito, confidencial, 24 horas, 365 días; chat y lengua de signos; remite al 112 ante emergencia vital inminente [10] [11]. La Resolución de 4 de junio de 2026 mantiene el número y la gratuidad y añade que la llamada no aparece en la factura [12]. 112: número de emergencias gratuito en España y en la UE [13]. El texto de DER-02 es exacto. Verificado de nuevo el 10-11-2026, sin cambios. **Pendiente:** recursos para otros países e idiomas (CON-025). |
 | D-04 | «Peligro» puede incluir violencia de pareja, riesgo relevante para Consona (ADR-001, P6). | **Resuelta (07-10-2026):** DER-02 incluye el 016 (Ministerio de Igualdad): todas las formas de violencia contra las mujeres; gratuito, confidencial, 24 horas; también por WhatsApp (600 000 016), chat y correo; deriva al 112 en emergencias [14] [15]. Verificado de nuevo el 10-11-2026, sin cambios. El análisis específico de control coercitivo sigue en P6 (JUA-13). |
-| D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | **Resuelta.** Las cuatro tarjetas de la fase lútea se fijan en `home-cards-luteal-v0.1.0.md` y se incluyen expresamente en el paquete y en el alcance de JUA-16. Desde el 10-11-2026, en [`home-cards-luteal-v0.3.0.md`](./home-cards-luteal-v0.3.0.md). |
+| D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | **Resuelta.** Las cuatro tarjetas de la fase lútea se fijan en `home-cards-luteal-v0.1.0.md` y se incluyen expresamente en el paquete y en el alcance de JUA-16. Desde el 10-11-2026, en [`home-cards-luteal-v0.4.0.md`](./home-cards-luteal-v0.4.0.md). |
 | D-06 | El estereotipo de la mujer «premenstrual» se explicaba en la pantalla de la fase lútea (LUT-06), pero no en esta. | **Resuelta (10-11-2026):** se nombra y se explica en varias piezas para reforzar su importancia: SPM-05 de esta pantalla, LUT-06 y LUT-07 de la fase lútea y «Qué no asumir» de las tarjetas de la fase lútea. Siempre para desmentirlo (SGL-01). El 11-11-2026 se quita de SPM-07 (D-08). |
 | D-07 | Las afirmaciones generales hablaban de «personas» (T-04). | **Resuelta (11-11-2026):** pasan a «mujeres» en todos los artefactos, porque las poblaciones de los estudios son mujeres y el público de Consona es la pareja de una mujer. «Todas las personas», en el sentido de quien usa la app, se mantiene. |
 | D-08 | Comentarios de producto del 11-11-2026 sobre el compendio de JUA-16. | **Resueltas:** título «Antes de la regla», con los términos completos debajo; siglas solo en SPM-03, donde se presentan; «evidencia científica» en lugar de «investigación»; SPM-05 añade que la pareja puede ayudar; SPM-07 sin la frase sobre bromas; SPM-08 empieza por el estudio de Barcelona. |
 | D-09 | SPM-08 remite a «Fuentes», pero el mapa de pantallas no tenía esa pantalla. | **Resuelta (11-11-2026):** se añade la subpantalla «Fuentes» de «Comprender» al mapa de pantallas y a JUA-31. |
 | D-10 | Una consulta de producto del 11-11-2026 a un servicio de asesoramiento médico propone preguntar si prefiere compañía, espacio o ayuda, y evitar «son las hormonas». Cita un ensayo sobre la pareja (Ussher y Perz 2017). | **Resuelta (11-11-2026):** SPM-05 añade «son las hormonas» como ejemplo de frase que resta valor; SPM-07 integra «compañía, espacio o ayuda, sin forzar la conversación»; el ensayo se audita en JUA-36 (LS-22) y solo respalda que el apoyo de la pareja importa. No se adoptan el registro de síntomas por la pareja, la planificación según la fase ni las recomendaciones de terapia de esa respuesta. |
+| D-11 | SPM-07 daba por hecho que la pareja vive junta («el ambiente que compartís», «las tareas y el descanso»). | **Resuelta (11-11-2026):** «lo que compartís, sean tareas, planes o tiempo» y «el ambiente cuando estáis juntos». Mismo criterio en MEN-07, LUT-07 y la tarjeta «Cómo acompañar» de la menstruación. |
 
 ## 9. Historial
+
+### [0.8.0] — Parejas que no viven juntas (11-11-2026)
+
+- SPM-07: «cómo os repartís lo que compartís, sean tareas, planes o tiempo, y cómo cuidas el ambiente cuando estáis juntos» (D-11).
+- Referencias a la tarjeta «Cómo acompañar», que ahora va después de «Qué no asumir».
+- DER-01 y DER-02 no cambian.
 
 ### [0.7.0] — Consulta de producto (11-11-2026)
 
@@ -239,7 +246,7 @@ Lista para comprobar en cada versión. La v0.7.0 no contiene:
 
 ### [0.4.0] — Enmienda del 06-11-2026
 
-- U-01 admite un segundo acceso estático desde la pantalla «La fase lútea» de «Comprender» (decisión D-04 de `lutea-v0.3.0.md`, JUA-36). C-03 se ajusta en consecuencia.
+- U-01 admite un segundo acceso estático desde la pantalla «La fase lútea» de «Comprender» (decisión D-04 de `lutea-v0.4.0.md`, JUA-36). C-03 se ajusta en consecuencia.
 - **El texto que se muestra no cambia**, por eso la pantalla conserva la versión.
 
 ### [0.4.0] — Recurso de violencia y cierre de decisiones

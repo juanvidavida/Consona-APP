@@ -1,13 +1,13 @@
-# Consona — Tarjetas de la home en fase lútea v0.3.0
+# Consona — Tarjetas de la home en fase lútea v0.4.0
 
 **Issues:** JUA-19 (origen) y JUA-23 (reglas comunes).
 **Estado:** Borrador para revisión de producto. **Incluido en el paquete de revisión clínica de JUA-16**, pendiente de envío.
-**Origen:** decisión D-05 de [`spm-tdpm-v0.7.0.md`](./spm-tdpm-v0.7.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
+**Origen:** decisión D-05 de [`spm-tdpm-v0.8.0.md`](./spm-tdpm-v0.8.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
 **Reglas comunes:** H-01 a H-08 de [`home-cards-index.md`](./home-cards-index.md).
 **Base de investigación:** [`docs/research/fases/lutea/`](../research/fases/lutea/) (JUA-36).
 **Cuándo se muestra:** durante toda la fase lútea estimada, incluidos los días previos a la menstruación (sección 2 del índice).
 **Parte de:** el texto provisional de [`src/App.jsx`](../../src/App.jsx) (JUA-5), que no es definitivo.
-**Público y tono:** los de la sección 1 de `spm-tdpm-v0.7.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
+**Público y tono:** los de la sección 1 de `spm-tdpm-v0.8.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación.
 
 > Este documento fija el texto exacto de las tres tarjetas cuando la home muestra la fase lútea estimada. Cualquier cambio exige una nueva versión y su revisión contra las reglas comunes del índice y las reglas C-01 a C-04 de la pantalla SPM/TDPM.
@@ -21,7 +21,7 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 | L-01 | Las tarjetas no cambian en los días previos a la menstruación ni nombran SPM o TDPM (H-01, H-02; C-01 de la pantalla SPM/TDPM). |
 | L-02 | Duración aproximada: «unos 12 días», siempre con «suele» y «también varía», igual que LUT-03 y la rueda (excepción de H-06). Sin «fase lútea corta», «deficiencia lútea» ni «progesterona baja» (SGL-05). |
 | L-03 | La progesterona solo aparece como fisiología del útero, nunca para explicar ánimo, energía ni conducta (H-08; SGL-02). |
-| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.3.0.md` y SPM-05 de `spm-tdpm-v0.7.0.md`, repetida a propósito (D-04). |
+| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.4.0.md` y SPM-05 de `spm-tdpm-v0.8.0.md`, repetida a propósito (D-04). |
 | L-05 | La fase no se presenta como «la fase mala», ni como una semana que exija un trato especial (SGL-04). |
 
 ## 2. Texto de las tarjetas
@@ -33,19 +33,19 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 > En general, la fase lútea va desde la ovulación hasta la siguiente menstruación. El folículo que liberó el óvulo se transforma en el cuerpo lúteo, que produce sobre todo progesterona: prepara el revestimiento del útero por si hubiera un embarazo. Si no lo hay, bajan las hormonas y empieza la menstruación. Suele durar unos 12 días, y es la parte del ciclo cuya duración menos cambia, aunque también varía.
 > Hacia el final de esta fase, algunas mujeres notan cambios físicos o de ánimo, y otras no. Una fecha calculada no confirma que haya habido ovulación ni te dice cómo se encuentra tu pareja.
 
-### Cómo acompañar
-
-**Antetítulo:** Conversación y acción propia
-
-> «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?»
-> Una pregunta abierta deja espacio para escuchar sin dar nada por hecho. Si prefiere no hablar, también es una respuesta.
-> Como cualquier otra semana: organiza tus propias responsabilidades, comunica tus planes con claridad y deja margen para ajustar la logística si tu pareja lo pide.
-
 ### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
 > La imagen de la mujer «premenstrual» irritable o fuera de control es un estereotipo, y hace daño. Que se acerque la menstruación no explica cómo se siente tu pareja, qué necesita ni cómo quiere que actúes. Atribuir una tensión al ciclo puede restar valor a lo que te está diciendo: preguntar funciona mejor que suponer.
+
+### Cómo acompañar
+
+**Antetítulo:** Comunicación y tu parte
+
+> «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?»
+> Una pregunta abierta deja espacio para escuchar sin dar nada por hecho. Si prefiere no hablar, también es una respuesta.
+> Como cualquier otra semana: organiza tus propias responsabilidades, comunica tus planes con claridad y deja margen para ajustar la logística si tu pareja lo pide.
 
 ## 3. Cambios
 
@@ -84,7 +84,7 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 
 ## 5. Exclusiones comprobadas
 
-La v0.3.0 no contiene:
+La v0.4.0 no contiene:
 
 - [x] SPM, TDPM ni ningún término diagnóstico.
 - [x] Síntomas presentados como esperables en tu pareja, ni listas de síntomas.
@@ -104,8 +104,14 @@ La v0.3.0 no contiene:
 | D-03 | JUA-5 está cerrada y no hay una incidencia para el contenido de las tarjetas de la home. | **Resuelta (07-10-2026):** se abre JUA-23 para las tarjetas de todas las fases, relacionada con JUA-16, JUA-19 y JUA-5. |
 | D-04 | ¿Nombrar el estereotipo «premenstrual» en la home, además de en las pantallas de la fase lútea y SPM/TDPM? | **Resuelta (10-11-2026):** sí. Explicarlo en más de un sitio refuerza su importancia. «Qué no asumir» lo nombra solo para desmentirlo. Se pregunta a la persona revisora si en la home se lee como desmentido y no como aviso. |
 | D-05 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
+| D-06 | El orden de las tarjetas iba de la información a la acción y de vuelta a una advertencia; el antetítulo «Conversación y acción propia» se quedaba corto; el gesto de la menstruación daba por hecho que la pareja vive junta. | **Resuelta (11-11-2026):** orden «Qué pasa en su cuerpo» → «Qué no asumir» → «Cómo acompañar», de modo que el conocimiento va primero y la tarjeta termina en una acción propia; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa». |
 
 ## 7. Historial
+
+### [0.4.0] — Orden y antetítulo (11-11-2026)
+
+- Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
+- «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
 
 ### [0.3.0] — Tres tarjetas (11-11-2026)
 
