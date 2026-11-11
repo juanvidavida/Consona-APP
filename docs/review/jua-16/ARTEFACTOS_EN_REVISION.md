@@ -3,7 +3,7 @@
 **Para qué sirve:** reunir en un solo documento, para leerlo de principio a fin, los nueve artefactos del paquete de revisión clínica de JUA-16 y el índice de reglas de las tarjetas.
 **Qué es:** una copia generada. Los documentos de origen, en `docs/education/`, son la fuente de verdad, y su SHA-256 se comprobó al generar esta copia. Si hay diferencias, mandan los documentos de origen. Cualquier cambio se hace allí y este documento se vuelve a generar.
 **Generado:** 11-11-2026, desde la rama `juanvidaechea/jua-19-pantalla-spm-tdpm-v0-5-0` (PR #17).
-**Cómo responder:** con el [formulario de revisión](./FORMULARIO_REVISION.md). Explicación del paquete en el [README](./README.md).
+**Cómo responder:** con el [formulario de revisión](./FORMULARIO_REVISION.md). Explicación del paquete en el [README](./README.md). Para ver dónde va cada texto en la app, abre el [boceto navegable](./BOCETO.html).
 
 > **Cómo leer.** En cada artefacto, el texto que verá la persona usuaria está en la sección «Texto de la pantalla» o «Texto de las tarjetas», y en los mensajes de derivación. El resto (reglas, trazabilidad, exclusiones, decisiones e historial) explica de dónde sale cada frase. Las referencias numeradas [1], [2]… remiten a la lista del final de **cada** artefacto, no a una lista común. Los identificadores de bloque (SPM-03, LUT-04…) no se muestran en la app.
 

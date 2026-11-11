@@ -14,6 +14,8 @@ Artefactos revisados (ver [README](./README.md), sección 3, que da el SHA-256 d
 | A8 | Pantalla «La ventana ovulatoria» | 0.2.0 |
 | A9 | Pantalla «La fase lútea» | 0.3.0 |
 
+Para ver dónde aparece cada bloque en la app, abre el [boceto navegable](./BOCETO.html): cada bloque lleva el mismo identificador que este formulario.
+
 Decisiones posibles por bloque: **A** = Aprobado · **AC** = Aprobado con cambios · **NA** = No aprobado.
 
 > **Datos personales.** El repositorio de Consona es público. Este formulario, una vez relleno con los datos de la sección 1, **no se sube al repositorio**: el original se guarda fuera de él (README, sección 7).

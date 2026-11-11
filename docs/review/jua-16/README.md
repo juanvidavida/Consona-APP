@@ -46,6 +46,8 @@ shasum -a 256 docs/education/spm-tdpm-v0.7.0.md docs/education/home-cards-{lutea
 
 Cualquier cambio en estos archivos, incluidos sus metadatos, altera el hash: se crea una versión nueva si cambia el texto mostrado y se actualizan esta tabla y el formulario antes del envío.
 
+**Empieza por aquí:** [`BOCETO.html`](./BOCETO.html) es un boceto navegable de la app. Muestra cada pantalla en un marco de móvil, con los textos exactos de estos nueve artefactos en el orden y el lugar en que los leerá la persona usuaria. Cada bloque lleva su identificador (SPM-03, LUT-04…), y una guía junto a cada pantalla indica su artefacto, versión, SHA-256 y sección del formulario. Las fechas son ficticias y el diseño es provisional. Se abre en cualquier navegador.
+
 **Ayuda de lectura, no revisada por separado:** [`home-cards-review-pack-v0.4.0.md`](../../education/home-cards-review-pack-v0.4.0.md) reúne en un solo documento las tarjetas de las cuatro fases (A2 a A5) y sus reglas comunes. Si hay diferencias, mandan los documentos de cada fase.
 
 ### Qué leer en cada artefacto
