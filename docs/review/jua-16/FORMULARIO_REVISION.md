@@ -4,15 +4,15 @@ Artefactos revisados (ver [README](./README.md), sección 3, que da el SHA-256 d
 
 | # | Artefacto | Versión |
 |---|---|---|
-| A1 | Pantalla «Variabilidad premenstrual: SPM y TDPM» | 0.5.0 |
-| A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.2.0 |
-| A3 | Tarjetas de la pantalla de inicio en la menstruación | 0.2.0 |
-| A4 | Tarjetas de la pantalla de inicio en la fase folicular | 0.2.0 |
-| A5 | Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada | 0.2.0 |
-| A6 | Pantalla «La menstruación» | 0.1.0 |
-| A7 | Pantalla «La fase folicular» | 0.1.0 |
-| A8 | Pantalla «La ventana ovulatoria» | 0.1.0 |
-| A9 | Pantalla «La fase lútea» | 0.1.0 |
+| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) | 0.6.0 |
+| A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.3.0 |
+| A3 | Tarjetas de la pantalla de inicio en la menstruación | 0.3.0 |
+| A4 | Tarjetas de la pantalla de inicio en la fase folicular | 0.3.0 |
+| A5 | Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada | 0.3.0 |
+| A6 | Pantalla «La menstruación» | 0.2.0 |
+| A7 | Pantalla «La fase folicular» | 0.2.0 |
+| A8 | Pantalla «La ventana ovulatoria» | 0.2.0 |
+| A9 | Pantalla «La fase lútea» | 0.2.0 |
 
 Decisiones posibles por bloque: **A** = Aprobado · **AC** = Aprobado con cambios · **NA** = No aprobado.
 
@@ -35,13 +35,13 @@ Decisiones posibles por bloque: **A** = Aprobado · **AC** = Aprobado con cambio
 
 Marcar lo revisado. Lo no marcado queda fuera de la aprobación.
 
-- [ ] A1 · Pantalla SPM/TDPM: texto visible (SPM-00 a SPM-08).
-- [ ] A1 · Pantalla SPM/TDPM: mensajes de derivación (DER-01 y DER-02), incluidos los recursos 112, 024 y 016.
-- [ ] A1 · Pantalla SPM/TDPM: reglas de presentación (visibilidad del mensaje urgente, ausencia de captura de datos).
-- [ ] A2 · Tarjetas de fase lútea: texto de las cuatro tarjetas.
-- [ ] A3 · Tarjetas de la menstruación: texto de las cuatro tarjetas.
-- [ ] A4 · Tarjetas de la fase folicular: texto de las cuatro tarjetas.
-- [ ] A5 · Tarjetas de la ventana ovulatoria estimada: texto de las cuatro tarjetas.
+- [ ] A1 · Pantalla «Antes de la regla»: texto visible (SPM-00 a SPM-08).
+- [ ] A1 · Pantalla «Antes de la regla»: mensajes de derivación (DER-01 y DER-02), incluidos los recursos 112, 024 y 016.
+- [ ] A1 · Pantalla «Antes de la regla»: reglas de presentación (visibilidad del mensaje urgente, ausencia de captura de datos).
+- [ ] A2 · Tarjetas de fase lútea: texto de las tres tarjetas.
+- [ ] A3 · Tarjetas de la menstruación: texto de las tres tarjetas.
+- [ ] A4 · Tarjetas de la fase folicular: texto de las tres tarjetas.
+- [ ] A5 · Tarjetas de la ventana ovulatoria estimada: texto de las tres tarjetas.
 - [ ] A6 · Pantalla «La menstruación»: texto y mensajes de derivación.
 - [ ] A7 · Pantalla «La fase folicular»: texto y mensaje de derivación.
 - [ ] A8 · Pantalla «La ventana ovulatoria»: texto y mensaje de derivación.
@@ -51,7 +51,7 @@ Observaciones sobre el alcance:
 
 ## 3. Revisión por bloque
 
-### 3.1 A1 · Pantalla SPM/TDPM v0.5.0
+### 3.1 A1 · Pantalla «Antes de la regla» v0.6.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -69,14 +69,14 @@ Observaciones sobre el alcance:
 
 ### 3.2 Tarjetas de la pantalla de inicio (A2 a A5)
 
-| Fase | QPC · Qué pasa en su cuerpo | QPP · Qué puedes preguntarle | QTT · Qué te toca a ti | QNA · Qué no asumir | Comentario o cambio propuesto |
-|---|---|---|---|---|---|
-| A2 · Fase lútea v0.2.0 | | | | | |
-| A3 · Menstruación v0.2.0 | | | | | |
-| A4 · Fase folicular v0.2.0 | | | | | |
-| A5 · Ventana ovulatoria estimada v0.2.0 | | | | | |
+| Fase | Qué pasa en su cuerpo | Cómo acompañar | Qué no asumir | Comentario o cambio propuesto |
+|---|---|---|---|---|
+| A2 · Fase lútea v0.3.0 | | | | |
+| A3 · Menstruación v0.3.0 | | | | |
+| A4 · Fase folicular v0.3.0 | | | | |
+| A5 · Ventana ovulatoria estimada v0.3.0 | | | | |
 
-### 3.3 A6 · Pantalla «La menstruación» v0.1.0
+### 3.3 A6 · Pantalla «La menstruación» v0.2.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -91,7 +91,7 @@ Observaciones sobre el alcance:
 | DER-01 | Cuándo puede ayudar un profesional | | |
 | MEN-08 | Fuentes | | |
 
-### 3.4 A7 · Pantalla «La fase folicular» v0.1.0
+### 3.4 A7 · Pantalla «La fase folicular» v0.2.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -104,7 +104,7 @@ Observaciones sobre el alcance:
 | DER-01 | Cuándo puede ayudar un profesional | | |
 | FOL-07 | Fuentes | | |
 
-### 3.5 A8 · Pantalla «La ventana ovulatoria» v0.1.0
+### 3.5 A8 · Pantalla «La ventana ovulatoria» v0.2.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -119,7 +119,7 @@ Observaciones sobre el alcance:
 | DER-01 | Cuándo puede ayudar un profesional | | |
 | OVU-08 | Fuentes | | |
 
-### 3.6 A9 · Pantalla «La fase lútea» v0.1.0
+### 3.6 A9 · Pantalla «La fase lútea» v0.2.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -136,7 +136,7 @@ Observaciones sobre el alcance:
 
 ## 4. Preguntas expresas
 
-### 4.1 Pantalla SPM/TDPM y tarjetas de la fase lútea
+### 4.1 Pantalla «Antes de la regla» y tarjetas de la fase lútea
 
 | ID | Pregunta | Respuesta |
 |---|---|---|
@@ -144,11 +144,15 @@ Observaciones sobre el alcance:
 | P-02 | **SPM-03.** ¿La diferencia entre variabilidad premenstrual, SPM y TDPM es correcta y suficientemente prudente para personas sin formación sanitaria? | |
 | P-03 | **DER-01 y DER-02.** ¿Cubren de forma suficiente síntomas intensos, deterioro de las actividades diarias, riesgo inmediato de autolesión y peligro? ¿Falta algún recurso u orientación? | |
 | P-04 | **DER-02.** El mensaje urgente se dirige sobre todo a la pareja, pero debe servir también a la persona que menstrúa y a quien lee si lo está pasando mal. ¿Funciona para las tres situaciones? | |
-| P-05 | **A2 · QPC.** ¿La frase «Hacia el final de esta fase, algunas personas notan cambios físicos o de ánimo, y otras no» aporta información útil sin que la pantalla de inicio se lea como un aviso o una predicción? | |
-| P-06 | **A2 · QPC.** ¿Es adecuada la mención de la progesterona y del revestimiento del útero, o es preferible no nombrar hormonas («el cuerpo prepara el revestimiento del útero»)? | |
-| P-07 | **Estereotipo.** SPM-05, LUT-06 y la tarjeta QNA de la fase lútea nombran el estereotipo de la mujer «premenstrual» irritable o fuera de control para desmentirlo. ¿Se lee como desmentido, también en la pantalla de inicio durante los días previos a la regla, o puede reforzarlo? | |
+| P-05 | **A2 · «Qué pasa en su cuerpo».** ¿La frase «Hacia el final de esta fase, algunas personas notan cambios físicos o de ánimo, y otras no» aporta información útil sin que la pantalla de inicio se lea como un aviso o una predicción? | |
+| P-06 | **A2 · «Qué pasa en su cuerpo».** ¿Es adecuada la mención de la progesterona y del revestimiento del útero, o es preferible no nombrar hormonas («el cuerpo prepara el revestimiento del útero»)? | |
+| P-07 | **Estereotipo.** SPM-05, LUT-06 y la tarjeta «Qué no asumir» de la fase lútea nombran el estereotipo de la mujer «premenstrual» irritable o fuera de control para desmentirlo. ¿Se lee como desmentido, también en la pantalla de inicio durante los días previos a la regla, o puede reforzarlo? | |
 | P-08 | **SPM-05 y LUT-07.** El texto dice que tu pareja «es quien mejor puede contar» lo que le pasa. Un estudio de Barcelona (Holst 2022) recoge que algunas mujeres consideran a su pareja más fiable que ellas mismas para saber si tienen cambios emocionales con el ciclo. ¿Es adecuado el planteamiento, o conviene matizarlo? | |
 | P-09 | **General.** ¿Hay alguna formulación que pueda llevar a la pareja a interpretar, anticipar o explicar el estado de la persona que menstrúa a partir de la fase? | |
+| P-15 | **Tarjetas, duraciones.** Las tarjetas de la fase folicular dicen «contando los días de la regla, suele durar entre 15 y 20 días» y las de la fase lútea, «suele durar unos 12 días». ¿Son adecuadas estas cifras en la pantalla de inicio, o pueden leerse como una norma? | |
+| P-16 | **General.** Las afirmaciones generales hablan de «mujeres» (antes, «personas»). ¿Es adecuado para el contenido clínico? | |
+| P-17 | **Tarjetas, «Cómo acompañar».** Cada fase combina una pregunta abierta con un gesto propio ligado al tema de la fase (por ejemplo, hablar de la regla con naturalidad), no al estado de ella. ¿Puede leerse el gesto como algo que la fase exige? | |
+| P-18 | **«Lo que ves en Consona».** Las cuatro pantallas de fase explican cómo dibuja la fase la rueda del ciclo y que los cambios de fase son una estimación. ¿Es clara la diferencia entre lo que pasa en el cuerpo y lo que calcula la app? | |
 
 ### 4.2 Preguntas propias de los demás artefactos
 

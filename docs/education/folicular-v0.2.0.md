@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «La fase folicular» v0.1.0
+# Consona — Pantalla educativa «La fase folicular» v0.2.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío.
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -10,7 +10,7 @@
 
 ## 1. Público, tono, ubicación y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.1.0.md`, secciones 1 a 3):
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, secciones 1 a 3):
 
 - tono T-01 a T-04;
 - ubicación U-01 a U-04, como artículo de «Comprender» en «El cuerpo en cada fase»;
@@ -22,7 +22,7 @@ Se añaden las reglas de sesgo SGF-01 a SGF-05 de `03-sesgo-genero.md`.
 
 ### Coherencia con las tarjetas de la home
 
-Las tarjetas de la fase folicular (`home-cards-follicular-v0.2.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra.
+Las tarjetas de la fase folicular (`home-cards-follicular-v0.3.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra.
 
 ## 2. Texto de la pantalla
 
@@ -42,19 +42,25 @@ En ella maduran varios folículos en los ovarios: pequeñas estructuras que cont
 
 ### FOL-03 · Cuánto dura
 
-Es la parte del ciclo que más cambia: de una persona a otra, de un ciclo a otro en la misma persona y con la edad, porque tiende a acortarse con los años. Por eso unos ciclos son más largos que otros.
+Es la parte del ciclo que más cambia: de una mujer a otra, de un ciclo a otro en la misma mujer y con la edad, porque tiende a acortarse con los años. Por eso unos ciclos son más largos que otros.
 
-La idea de que va «del día 1 al 14» es una simplificación de manual. No hay un calendario fijo, y Consona solo puede estimar esta fase a partir de las fechas registradas.
+La idea de que va «del día 1 al 14» es una simplificación de manual. No hay un calendario fijo.
+
+### FOL-03b · Lo que ves en Consona
+
+En el cuerpo, la fase folicular empieza con la menstruación. En la rueda del ciclo se dibujan por separado, para que veas cuándo hay sangrado: la fase folicular ocupa los días entre el final de la menstruación y la ventana ovulatoria estimada. Como es la parte del ciclo que más cambia, es también la que se alarga o se acorta cuando un ciclo dura más o menos. Es una estimación: Consona no sabe cuándo termina de verdad, porque no sabe cuándo hay ovulación.
+
+Los días en que la rueda pasa de una fase a otra los calcula Consona a partir de las fechas. Son una estimación, no el momento en que cambia el cuerpo.
 
 ### FOL-04 · El mito de la «fase de energía»
 
-Circula mucho la idea de que en esta fase hay más energía, mejor ánimo o más ganas de hacer cosas, y de que conviene organizar el ejercicio, la dieta o la agenda según la fase. La investigación no lo respalda.
+Circula mucho la idea de que en esta fase hay más energía, mejor ánimo o más ganas de hacer cosas, y de que conviene organizar el ejercicio, la dieta o la agenda según la fase. La evidencia científica no lo respalda.
 
 Incluso en deportistas, con la fase comprobada en análisis de sangre, no se han encontrado cambios en el esfuerzo que perciben ni en lo preparadas que se sienten. Uno de esos estudios se hizo en Madrid con deportistas de resistencia entrenadas. Las revisiones recientes consideran prematuro planificar según la fase. Tampoco cambian la capacidad de concentrarse ni de razonar.
 
 ### FOL-05 · Lo que la fase no dice
 
-No hay evidencia de que en esta fase el ánimo mejore de forma predecible. En estudios con mujeres que registraron cada día cómo se sentían, el ánimo dependía mucho más de su salud, del estrés y del apoyo que tenían que de la fase del ciclo. Y no hay un patrón que valga para todas: algunas personas notan cambios en un momento del ciclo, otras en otro y muchas en ninguno.
+No hay evidencia de que en esta fase el ánimo mejore de forma predecible. En estudios con mujeres que registraron cada día cómo se sentían, el ánimo dependía mucho más de su salud, del estrés y del apoyo que tenían que de la fase del ciclo. Y no hay un patrón que valga para todas: algunas mujeres notan cambios en un momento del ciclo, otras en otro y muchas en ninguno.
 
 Un estereotipo que suena positivo funciona igual que uno negativo: da por hecho cómo está alguien y qué puede hacer. Durante mucho tiempo, además, se dejó a las mujeres fuera de muchos estudios con el argumento de que el ciclo complicaba los resultados, y esos huecos se han llenado con mitos.
 
@@ -92,6 +98,7 @@ Fuente: orientación pública de ACOG sobre sangrado uterino anormal (`jua-10/13
 |---|---|---|
 | FOL-02 | Inicio con la menstruación; folículos; estrógenos; revestimiento; ovulación | FO-A01 a FO-A05 |
 | FOL-03 | Variabilidad, edad y calendario no fijo | FO-A06, FO-A07; SGF-03, SGF-04 |
+| FOL-03b | La menstruación forma parte de la fase folicular, pero la rueda las dibuja por separado; la fase folicular se alarga o se acorta con el ciclo; límites entre fases calculados por el motor | FO-A01, FO-A06; especificación del panel v1.1.2: RU-05, ME-05; motor de estimación CON-032 (ADR-001 C9) |
 | FOL-04 | Rendimiento, esfuerzo percibido, planificación y cognición | FO-A08 a FO-A11 (FS-09 a FS-12, FS-14, FS-16) |
 | FOL-05 | Ánimo; peso de la salud, el estrés y el apoyo; diferencias individuales; estereotipo positivo; exclusión de la investigación | FO-A12 a FO-A14 (FS-18 a FS-20); SGF-01, SGF-05 |
 | FOL-06 | Papel de la pareja | SGF-02; regla T-02 |
@@ -107,6 +114,12 @@ Fuente: orientación pública de ACOG sobre sangrado uterino anormal (`jua-10/13
 | D-04 | DER-01 da criterios en términos generales y no las cifras de ACOG. | **Resuelta (06-11-2026):** los criterios se mantienen en términos generales. |
 
 ## 6. Historial
+
+### [0.2.0] — 11-11-2026
+
+- Nuevo bloque FOL-03b «Lo que ves en Consona»: cómo dibuja la rueda del ciclo la fase folicular, separada de la menstruación, y quién calcula los cambios de fase (CON-032).
+- «Mujeres» en lugar de «personas» en las afirmaciones generales (D-07 de la pantalla SPM/TDPM).
+- FOL-04: «La evidencia científica» en lugar de «La investigación».
 
 ### [0.1.0] — 05-11-2026
 

@@ -36,10 +36,10 @@
 |---|---|
 | Definición de la fase y límites del calendario | `jua-10/01-cycle-phases.md` (Schmalenberger 2021; Allen 2016) |
 | Deficiencia lútea | `jua-10/audit-02-asrm-lpd.md` |
-| SPM y TDPM | `jua-10/audit-07-rcog-pms.md`; `spm-tdpm-v0.5.0.md` (JUA-19) |
+| SPM y TDPM | `jua-10/audit-07-rcog-pms.md`; `spm-tdpm-v0.6.0.md` (JUA-19) |
 | Ánimo, calendario y atribución (EC-01, EC-02, EC-05, EC-07) | `jua-10/12-health-emotional-cognitive.md` |
 | Duración de referencia de 12 días y regla de la rueda | JUA-27 (PR #12), §2 a §4 |
-| Recursos de ayuda urgente (112, 024, 016) | `spm-tdpm-v0.5.0.md`, D-03 y D-04 |
+| Recursos de ayuda urgente (112, 024, 016) | `spm-tdpm-v0.6.0.md`, D-03 y D-04 |
 
 ## 3. Fuentes descartadas o con uso restringido
 

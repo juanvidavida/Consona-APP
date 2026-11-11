@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «Variabilidad premenstrual: SPM y TDPM» v0.5.0
+# Consona — Pantalla educativa «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) v0.6.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el paquete de revisión clínica de JUA-16**, pendiente de envío.
 **Incidencia:** JUA-19 (CON-027). Su versión aprobada será el artefacto que revise JUA-16 (ADR-002 P7).
@@ -19,7 +19,7 @@
 | T-01 | Educativo, no paternalista: explica y da contexto sin sermonear, sin «debes» y sin suponer ignorancia o mala intención en quien lee. |
 | T-02 | La pareja es la autoridad sobre su propia experiencia. El texto nunca sitúa a quien acompaña como intérprete de lo que ella siente. |
 | T-03 | Preguntar en lugar de suponer: las sugerencias son preguntas abiertas o gestos propios, no instrucciones sobre la otra persona. |
-| T-04 | Las afirmaciones generales hablan de «personas»; lo individual habla de «tu pareja». Ninguna media de grupo se presenta como algo que le pasa a ella. |
+| T-04 | Las afirmaciones generales hablan de «mujeres»; lo individual habla de «tu pareja» (decisión del 11-11-2026, D-07). Ninguna media de grupo se presenta como algo que le pasa a ella. |
 
 ## 2. Ubicación
 
@@ -27,14 +27,14 @@ La pantalla es una subpantalla de **«Cómo funciona»**. No es la pantalla de i
 
 | ID | Regla de acceso |
 |---|---|
-| U-01 | Se abre desde dos enlaces estáticos. (1) Dentro de «Cómo funciona», en el punto donde se explica que los patrones no diagnostican SPM ni TDPM (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §4.2); su implementación corresponde a JUA-7. (2) Desde el bloque LUT-05 de la pantalla «La fase lútea» de «Comprender» (`lutea-v0.1.0.md`, JUA-36). Ninguno de los dos depende de la fase, la fecha ni ningún dato (U-02). |
+| U-01 | Se abre desde dos enlaces estáticos. (1) Dentro de «Cómo funciona», en el punto donde se explica que los patrones no diagnostican SPM ni TDPM (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §4.2); su implementación corresponde a JUA-7. (2) Desde el bloque LUT-05 de la pantalla «La fase lútea» de «Comprender» (`lutea-v0.2.0.md`, JUA-36). Ninguno de los dos depende de la fase, la fecha ni ningún dato (U-02). |
 | U-02 | El enlace es siempre visible y tiene el mismo texto para todas las personas. No aparece, cambia ni se destaca según la fase estimada, la fecha o cualquier dato local. |
 | U-03 | La home no enlaza directamente a esta pantalla ni muestra avisos que remitan a ella. |
 | U-04 | Desde la pantalla se puede volver a «Cómo funciona» con un control visible y accesible para lector de pantalla. |
 
 ### Coherencia con la pantalla de inicio
 
-La home muestra el día del ciclo, la fase estimada y cuatro tarjetas de orientación, entre ellas «Qué pasa en su cuerpo», con información general asociada a la fase (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §2–3). Esta pantalla explica cómo leer esa información (SPM-04), así que ambas deben mantenerse coherentes.
+La home muestra el día del ciclo, la fase estimada y tres tarjetas de orientación, entre ellas «Qué pasa en su cuerpo», con información general asociada a la fase (`CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §2–3). Esta pantalla explica cómo leer esa información (SPM-04), así que ambas deben mantenerse coherentes.
 
 | ID | Regla de coherencia |
 |---|---|
@@ -61,7 +61,9 @@ Cada bloque lleva un identificador estable para la revisión y la trazabilidad (
 
 ### SPM-00 · Título
 
-**Variabilidad premenstrual: SPM y TDPM**
+**Antes de la regla**
+
+Síndrome premenstrual y trastorno disfórico premenstrual
 
 ### SPM-01 · Nota fija
 
@@ -69,7 +71,7 @@ Cada bloque lleva un identificador estable para la revisión y la trazabilidad (
 
 ### SPM-02 · Introducción
 
-En los días previos a la menstruación, algunas personas notan cambios en el cuerpo o en el ánimo. Otras no notan ninguno, o los viven de otra manera. Y en una misma persona pueden variar de un ciclo a otro.
+En los días previos a la menstruación, algunas mujeres notan cambios en el cuerpo o en el ánimo. Otras no notan ninguno, o los viven de otra manera. Y en una misma mujer pueden variar de un ciclo a otro.
 
 Conocer esta variabilidad ayuda a acompañar sin dar nada por supuesto.
 
@@ -78,7 +80,7 @@ Conocer esta variabilidad ayuda a acompañar sin dar nada por supuesto.
 ### SPM-03 · Tres ideas distintas
 
 **Variabilidad premenstrual**
-Cambios que algunas personas notan antes de la menstruación: por ejemplo, dolor, hinchazón o cansancio; irritabilidad, tristeza o tensión; o cambios en el sueño o el apetito. Pueden ser leves, ir y venir, o no aparecer. Por sí solos no indican una condición clínica.
+Cambios que algunas mujeres notan antes de la menstruación: por ejemplo, dolor, hinchazón o cansancio; irritabilidad, tristeza o tensión; o cambios en el sueño o el apetito. Pueden ser leves, ir y venir, o no aparecer. Por sí solos no indican una condición clínica.
 
 **SPM (síndrome premenstrual)**
 Es un término clínico. Se usa cuando los cambios se repiten ciclo tras ciclo antes de la menstruación, mejoran cuando esta empieza o poco después, y afectan de forma importante a la vida diaria. Solo un profesional sanitario puede valorarlo.
@@ -94,19 +96,19 @@ En la pantalla de inicio ves el día del ciclo y la fase, estimados a partir de 
 
 Esa información sirve para entender mejor el ciclo y tener contexto para conversar. Describe lo que se sabe en general, no lo que le está pasando a tu pareja: no te dice qué siente, qué le pasa ni qué necesita, y no confirma síntomas, su causa ni un diagnóstico.
 
-Que se acerque la menstruación tampoco significa SPM. En promedio, el ánimo varía poco a lo largo del ciclo, y muchas personas no notan ningún cambio ligado a él. La investigación no permite predecir el ánimo, la concentración o el comportamiento de alguien a partir de su fase.
+Que se acerque la menstruación tampoco significa síndrome premenstrual. En promedio, el ánimo varía poco a lo largo del ciclo, y muchas mujeres no notan ningún cambio ligado a él. La evidencia científica no permite predecir el ánimo, la concentración o el comportamiento de una mujer a partir de la fase del ciclo menstrual en la que está.
 
 ### SPM-05 · Antes de atribuirlo al ciclo
 
-La imagen de la mujer «premenstrual» irritable, irracional o fuera de control es un estereotipo. Se repite en bromas, anuncios y conversaciones, también entre hombres, y por eso parece cierto. Pero cuando se ha estudiado el ánimo día a día sin que las participantes supieran que el estudio trataba del ciclo, ese patrón apenas aparece. Y hace daño: lleva a quitar valor a lo que una persona dice o siente, y también a no tomarse en serio un malestar real.
+La imagen de la mujer «premenstrual» irritable, irracional o fuera de control es un estereotipo. Se repite en bromas, anuncios y conversaciones, también entre hombres, y por eso parece cierto. Pero cuando se ha estudiado el ánimo día a día sin que las participantes supieran que el estudio trataba del ciclo, ese patrón apenas aparece. Y hace daño: lleva a quitar valor a lo que una mujer dice o siente, y también a no tomarse en serio un malestar real.
 
 Los cambios de ánimo, sueño, energía o concentración pueden tener muchas causas, también ajenas al ciclo: el trabajo, el cansancio, la salud, la propia relación. En el día a día, la salud, el estrés y el apoyo pesan mucho más que la fase.
 
-Explicar un enfado o una tristeza por el ciclo puede restar valor a lo que tu pareja siente o te está diciendo. Lo que le pasa tiene sus razones, y ella es quien mejor puede contarlas.
+Explicar un enfado o una tristeza por el ciclo puede restar valor a lo que tu pareja siente o te está diciendo. Lo que le pasa tiene sus razones, y ella es quien mejor puede contarlas. Tú puedes ayudar escuchando, preguntando y, si ella quiere, pensando juntos qué le vendría bien.
 
 ### SPM-06 · Sobre las cifras
 
-Las cifras publicadas sobre SPM y TDPM cambian mucho según el grupo estudiado y el método. Un metaanálisis de 2024 encontró que, en población general y con el diagnóstico confirmado por un registro diario de dos ciclos, el TDPM aparecía en torno al 1,6 % de las personas. Los estudios con diagnóstico provisional dan cifras bastante más altas.
+Las cifras publicadas sobre el síndrome premenstrual y el trastorno disfórico premenstrual cambian mucho según el grupo estudiado y el método. Un metaanálisis de 2024 encontró que, en población general y con el diagnóstico confirmado por un registro diario de dos ciclos, el trastorno disfórico premenstrual aparecía en torno al 1,6 % de las mujeres. Los estudios con diagnóstico provisional dan cifras bastante más altas.
 
 Una media de grupo no dice nada sobre tu pareja.
 
@@ -119,13 +121,13 @@ Algunas preguntas que dejan espacio:
 - «¿Hay algo que te venga bien?»
 - «¿Prefieres que lo hablemos en otro momento?»
 
-Lo que necesite puede cambiar de un ciclo a otro, o no tener nada que ver con el ciclo. Y también hay una parte que es tuya: cómo respondes, cómo os repartís las tareas y el descanso, cómo cuidas el ambiente que compartís, y no hacer comentarios ni bromas sobre «estar premenstrual».
+Lo que necesite puede cambiar de un ciclo a otro, o no tener nada que ver con el ciclo. Y también hay una parte que es tuya: cómo respondes, cómo os repartís las tareas y el descanso, cómo cuidas el ambiente que compartís.
 
 ### DER-01 · Cuándo hablar con un profesional (ver sección 5)
 
 ### SPM-08 · Fuentes
 
-Esta información se basa en NICE (Reino Unido, revisión de 2024), el Colegio Americano de Obstetras y Ginecólogos (ACOG, 2023 y 2025), el NHS (2024), un metaanálisis sobre la frecuencia del TDPM (2024), estudios de registro diario del ánimo (2012 a 2021), un metaanálisis sobre el ciclo y las capacidades cognitivas (2025) y estudios sobre el estigma de la menstruación, entre ellos uno con hombres (2017) y otro realizado en Barcelona (2022). Las referencias completas están disponibles en «Fuentes».
+Esta información se basa en un estudio realizado en Barcelona sobre el estigma de la menstruación (2022), guías del NICE (Reino Unido, 2024), del Colegio Americano de Obstetras y Ginecólogos (2023 y 2025) y del NHS (2024), un metaanálisis sobre la frecuencia del trastorno disfórico premenstrual (2024), estudios de registro diario del ánimo (2012 a 2021), un metaanálisis sobre el ciclo y las capacidades cognitivas (2025) y un estudio sobre lo que piensan los hombres de la menstruación (2017). Las referencias completas están disponibles en «Fuentes».
 
 ## 5. Mensajes de derivación
 
@@ -163,16 +165,16 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 | SPM-03 · TDPM | Forma menos frecuente e intensa, predominio emocional, registro diario de al menos dos ciclos. | [3] [4] [6] | ADR-002 §1; `12-health-emotional-cognitive` EC-06. **JUA-36:** LS-21 (el diagnóstico confirmado exige un registro diario prospectivo de dos ciclos). |
 | SPM-03 · cierre | Consona no asigna términos clínicos. | — | `audit-07` §4.5. |
 | SPM-04 | La información de la home por día y fase es general; no informa del estado de la pareja ni predice ánimo, cognición o conducta; la cercanía de la menstruación no equivale a SPM; el ánimo varía poco en promedio y muchas personas no notan cambios ligados al ciclo. | [8] [9] [16] [17] [18] | `12-health-emotional-cognitive` EC-01, EC-02, EC-05; `audit-07` §4.1; `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §2–3. **JUA-36:** LU-A10 (LS-12 a LS-15) y LU-A11 (LS-16). |
-| SPM-05 · estereotipo | El estereotipo de la mujer «premenstrual», su difusión (también entre hombres), el estudio con objetivo oculto y su daño. | [16] [19] [20] [21] | **JUA-36:** LU-A12 (LS-13, LS-18); ME-A17 (S-20, S-21, S-13); SGL-01. Misma redacción que LUT-06 de `lutea-v0.1.0.md`. |
-| SPM-05 · causas | Solapamiento con otras causas; peso de la salud, el estrés y el apoyo; sesgo de atribución al ciclo. | [2] [5] [9] [16] | `12-health-emotional-cognitive` EC-02, EC-07 y regla editorial central; «sesgo de atribución» como tema educativo en `CONSONA_DEFINICION_DE_APP.md`. **JUA-36:** LU-A10, LU-A13 (LS-13, LS-19). |
+| SPM-05 · estereotipo | El estereotipo de la mujer «premenstrual», su difusión (también entre hombres), el estudio con objetivo oculto y su daño. | [16] [19] [20] [21] | **JUA-36:** LU-A12 (LS-13, LS-18); ME-A17 (S-20, S-21, S-13); SGL-01. Misma redacción que LUT-06 de `lutea-v0.2.0.md`. |
+| SPM-05 · causas | Solapamiento con otras causas; peso de la salud, el estrés y el apoyo; sesgo de atribución al ciclo; la pareja puede ayudar escuchando y preguntando, sin interpretar. | [2] [5] [9] [16] | `12-health-emotional-cognitive` EC-02, EC-07 y regla editorial central; «sesgo de atribución» como tema educativo en `CONSONA_DEFINICION_DE_APP.md`. **JUA-36:** LU-A10, LU-A13 (LS-13, LS-19). |
 | SPM-06 | Prevalencia de TDPM en población general con diagnóstico confirmado (1,6 %); cifras más altas con diagnóstico provisional. | [6] | **JUA-36:** LU-A15 (LS-21 [V-abs], resumen de PubMed). Ver D-02. |
-| SPM-07 | Conversación directa, autonomía y responsabilidad propia; sin bromas sobre «estar premenstrual». | [19] [20] | Requisito de producto de JUA-19; ADR-002 §5 («¿Quieres preguntarle cómo está?»); tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» del panel. **JUA-36:** SGL-01; coherente con LUT-07 de `lutea-v0.1.0.md`. |
+| SPM-07 | Conversación directa, autonomía y responsabilidad propia. | — | Requisito de producto de JUA-19; ADR-002 §5 («¿Quieres preguntarle cómo está?»); tarjeta «Cómo acompañar» del panel. |
 | DER-01 | Consulta ante preocupación, repetición, intensidad o afectación diaria; la decisión es de la pareja. | [5] [7] | `12-health-emotional-cognitive` EC-07, EC-08; `audit-07` §4.4. |
 | DER-02 | Ayuda urgente ante ideación suicida, autolesión, violencia o peligro, para la pareja, para terceros y para quien lee. | [7] [10] [11] [12] [13] [14] [15] | `12-health-emotional-cognitive` EC-08 y mensaje de urgencia. 112, 024 y 016 verificados en fuentes oficiales el 07-10-2026 y de nuevo el 10-11-2026 (D-03, D-04). |
 
 ## 7. Exclusiones comprobadas
 
-Lista para comprobar en cada versión. La v0.5.0 no contiene:
+Lista para comprobar en cada versión. La v0.6.0 no contiene:
 
 - [x] Diagnóstico, clasificación, «posible SPM/TDPM», puntuaciones, umbrales, semáforos ni probabilidades individuales.
 - [x] Listas de criterios clínicos o de diagnósticos diferenciales presentadas como autoevaluación o como guía para evaluar a la pareja.
@@ -183,7 +185,8 @@ Lista para comprobar en cada versión. La v0.5.0 no contiene:
 - [x] Instrucciones para vigilar, registrar, anticipar o gestionar a la pareja.
 - [x] Texto libre, formularios o cualquier captura de datos, incluida la de crisis.
 - [x] Referencia al folleto RCOG 2018 ni a Green-top 48 como fuentes vigentes.
-- [x] Cifras de SPM. La única cifra es la de TDPM en población general con diagnóstico confirmado (SPM-06).
+- [x] Cifras de síndrome premenstrual. La única cifra es la de trastorno disfórico premenstrual en población general con diagnóstico confirmado (SPM-06).
+- [x] Siglas SPM y TDPM fuera de SPM-03.
 - [x] El estereotipo «premenstrual» presentado de otra forma que para desmentirlo (SGL-01).
 
 ## 8. Decisiones antes de enviar a JUA-16
@@ -194,10 +197,25 @@ Lista para comprobar en cada versión. La v0.5.0 no contiene:
 | D-02 | La cifra del metaanálisis de 2024 (SPM-06) procede de ADR-002 y no pasó por las auditorías de JUA-10. `audit-07` pide retirar del microcopy cifras sin fuente contemporánea y contexto. | **Resuelta (10-11-2026):** el metaanálisis (Reilly et al. 2024) se audita en JUA-36 como LS-21, a partir del resumen de PubMed. La cifra del 3,2 % mezclaba muestras de comunidad, universidad e instituto con una heterogeneidad muy alta (I² = 99 %). SPM-06 pasa a la cifra de población general con diagnóstico confirmado (1,6 %, I² = 26 %), que es la pertinente para el público de Consona. Se mantiene la pregunta P-01 a la persona revisora. Alternativa: eliminar las cifras y dejar solo la primera y la última frase. |
 | D-03 | Los recursos 112 y 024, y que el 024 atiende a familiares y personas allegadas, no figuraban en la bibliografía de JUA-10. | **Verificado el 07-10-2026.** 024: Ministerio de Sanidad, para personas con conducta o ideación suicida y para familiares o allegados; gratuito, confidencial, 24 horas, 365 días; chat y lengua de signos; remite al 112 ante emergencia vital inminente [10] [11]. La Resolución de 4 de junio de 2026 mantiene el número y la gratuidad y añade que la llamada no aparece en la factura [12]. 112: número de emergencias gratuito en España y en la UE [13]. El texto de DER-02 es exacto. Verificado de nuevo el 10-11-2026, sin cambios. **Pendiente:** recursos para otros países e idiomas (CON-025). |
 | D-04 | «Peligro» puede incluir violencia de pareja, riesgo relevante para Consona (ADR-001, P6). | **Resuelta (07-10-2026):** DER-02 incluye el 016 (Ministerio de Igualdad): todas las formas de violencia contra las mujeres; gratuito, confidencial, 24 horas; también por WhatsApp (600 000 016), chat y correo; deriva al 112 en emergencias [14] [15]. Verificado de nuevo el 10-11-2026, sin cambios. El análisis específico de control coercitivo sigue en P6 (JUA-13). |
-| D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | **Resuelta.** Las cuatro tarjetas de la fase lútea se fijan en `home-cards-luteal-v0.1.0.md` y se incluyen expresamente en el paquete y en el alcance de JUA-16. Desde el 10-11-2026, en [`home-cards-luteal-v0.2.0.md`](./home-cards-luteal-v0.2.0.md). |
-| D-06 | El estereotipo de la mujer «premenstrual» se explicaba en la pantalla de la fase lútea (LUT-06), pero no en esta. | **Resuelta (10-11-2026):** se nombra y se explica en varias piezas para reforzar su importancia: SPM-05 y SPM-07 de esta pantalla, LUT-06 y LUT-07 de la fase lútea y QNA de las tarjetas de la fase lútea. Siempre para desmentirlo (SGL-01). |
+| D-05 | JUA-16 revisa esta pantalla, pero el texto de la tarjeta «Qué pasa en su cuerpo» en la fase lútea y en los días premenstruales es el primer contacto con este tema y no tiene revisión clínica asignada. | **Resuelta.** Las cuatro tarjetas de la fase lútea se fijan en `home-cards-luteal-v0.1.0.md` y se incluyen expresamente en el paquete y en el alcance de JUA-16. Desde el 10-11-2026, en [`home-cards-luteal-v0.3.0.md`](./home-cards-luteal-v0.3.0.md). |
+| D-06 | El estereotipo de la mujer «premenstrual» se explicaba en la pantalla de la fase lútea (LUT-06), pero no en esta. | **Resuelta (10-11-2026):** se nombra y se explica en varias piezas para reforzar su importancia: SPM-05 de esta pantalla, LUT-06 y LUT-07 de la fase lútea y «Qué no asumir» de las tarjetas de la fase lútea. Siempre para desmentirlo (SGL-01). El 11-11-2026 se quita de SPM-07 (D-08). |
+| D-07 | Las afirmaciones generales hablaban de «personas» (T-04). | **Resuelta (11-11-2026):** pasan a «mujeres» en todos los artefactos, porque las poblaciones de los estudios son mujeres y el público de Consona es la pareja de una mujer. «Todas las personas», en el sentido de quien usa la app, se mantiene. |
+| D-08 | Comentarios de producto del 11-11-2026 sobre el compendio de JUA-16. | **Resueltas:** título «Antes de la regla», con los términos completos debajo; siglas solo en SPM-03, donde se presentan; «evidencia científica» en lugar de «investigación»; SPM-05 añade que la pareja puede ayudar; SPM-07 sin la frase sobre bromas; SPM-08 empieza por el estudio de Barcelona. |
+| D-09 | SPM-08 remite a «Fuentes», pero el mapa de pantallas no tenía esa pantalla. | **Resuelta (11-11-2026):** se añade la subpantalla «Fuentes» de «Comprender» al mapa de pantallas y a JUA-31. |
 
 ## 9. Historial
+
+### [0.6.0] — Comentarios de producto (11-11-2026)
+
+- Título «Antes de la regla», con «Síndrome premenstrual y trastorno disfórico premenstrual» debajo. Las siglas solo aparecen en SPM-03 (D-08).
+- «Mujeres» en lugar de «personas» en las afirmaciones generales; T-04 cambia (D-07).
+- SPM-04: «evidencia científica» y «la fase del ciclo menstrual en la que está».
+- SPM-05: la pareja puede ayudar escuchando, preguntando y pensando juntos qué le vendría bien.
+- SPM-06 con los términos completos.
+- SPM-07 sin la frase sobre bromas.
+- SPM-08 empieza por el estudio de Barcelona; la pantalla «Fuentes» pasa al mapa de pantallas (D-09).
+- Referencias a la tarjeta «Cómo acompañar», que fusiona «Qué puedes preguntarle» y «Qué te toca a ti».
+- DER-01 y DER-02 no cambian.
 
 ### [0.5.0] — Bibliografía de JUA-36 (10-11-2026)
 
@@ -212,7 +230,7 @@ Lista para comprobar en cada versión. La v0.5.0 no contiene:
 
 ### [0.4.0] — Enmienda del 06-11-2026
 
-- U-01 admite un segundo acceso estático desde la pantalla «La fase lútea» de «Comprender» (decisión D-04 de `lutea-v0.1.0.md`, JUA-36). C-03 se ajusta en consecuencia.
+- U-01 admite un segundo acceso estático desde la pantalla «La fase lútea» de «Comprender» (decisión D-04 de `lutea-v0.2.0.md`, JUA-36). C-03 se ajusta en consecuencia.
 - **El texto que se muestra no cambia**, por eso la pantalla conserva la versión.
 
 ### [0.4.0] — Recurso de violencia y cierre de decisiones

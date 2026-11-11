@@ -1,7 +1,7 @@
 # Consona — Especificación UX del panel principal «Hoy» v1.1.0
 
-**Versión:** 1.1.1
-**Fecha:** 28 de octubre de 2026 (v1.1.0: 19 de octubre de 2026)
+**Versión:** 1.1.2
+**Fecha:** 11 de noviembre de 2026 (v1.1.1: 28 de octubre; v1.1.0: 19 de octubre de 2026)
 **Estado:** Propuesta de producto (JUA-25). Pasa a ser la decisión de experiencia vigente al integrarse en `main`. No habilita el seguimiento ni relaja las condiciones de ADR-001 y ADR-002.
 **Sustituye a:** la v1.0 del 17 de septiembre de 2026, entregada en [`info/Consona_entrega_completa/archivos_compartidos/CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md`](../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md). Esa versión se conserva sin cambios como parte del paquete de entrega.
 
@@ -33,12 +33,11 @@ El diseño usa **transparencia progresiva**. La información imprescindible para
 | Rueda del ciclo *(nuevo)* | Rueda con la secuencia de fases, la fase estimada destacada y, en el centro, la fase y el día de ciclo. | Visualización estática de la secuencia, no un historial. Reglas completas en 3.1. |
 | Ventana y actualización | Una ventana compacta, por ejemplo `15–24 sept.`, y `Actualizado hoy`. | La ventana comunica variación sin repetir una advertencia extensa. Un control etiquetado `Cómo se calcula` abre la explicación completa. |
 | Qué pasa en su cuerpo | Tarjeta con una explicación corporal general, breve y revisada, relacionada con la fase. | Describe conocimiento general, no afirma que esté ocurriendo en la persona concreta. |
-| Qué puedes preguntarle | Una pregunta literal, abierta y adecuada para hoy. | Invita a preguntar en vez de suponer; no aconseja confirmar una hipótesis sobre un estado emocional. |
-| Qué te toca a ti | Una acción concreta propia relacionada con tareas, logística, planes o escucha. | No presenta la acción como una corrección o una gestión de la otra persona. |
+| Cómo acompañar *(v1.1.2)* | Tarjeta con una pregunta literal, abierta y adecuada para hoy, y una acción concreta propia relacionada con tareas, logística, planes o escucha. Antetítulo «Conversación y acción propia». | Invita a preguntar en vez de suponer; no aconseja confirmar una hipótesis sobre un estado emocional. La acción no se presenta como una corrección o una gestión de la otra persona, y no depende del estado de ella. Fusiona las antiguas «Qué puedes preguntarle» y «Qué te toca a ti». |
 | Qué no asumir | Un antiestereotipo explícito sobre atribuir emociones o conducta al ciclo. | Previene que la fase active una interpretación automática antes de conversar. |
 | Acceso a detalle | Enlace o botón visible `Cómo funciona` y etiqueta accesible para lector de pantalla. | Debe abrir sin recopilar datos nuevos ni dirigir a recursos externos. |
 
-Las cuatro tarjetas anteriores son **contenido de orientación**, no variables que la aplicación mida ni conclusiones sobre la persona afectada. Su texto exacto por fase se fija en documentos versionados (JUA-23). El panel no muestra registros de síntomas, autoinformes, observaciones de la pareja ni inferencias personales, aunque el motor local siga aprendiendo de fechas confirmadas para mejorar el rango individual de fase. La información de aprendizaje de ADR-002, si llega a habilitarse después de sus condiciones, no cambia estas cuatro tarjetas, la rueda ni la indicación temporal, y no puede transformarlas en predicciones sobre el presente.
+Las tres tarjetas anteriores son **contenido de orientación**, no variables que la aplicación mida ni conclusiones sobre la persona afectada. Su texto exacto por fase se fija en documentos versionados (JUA-23). El panel no muestra registros de síntomas, autoinformes, observaciones de la pareja ni inferencias personales, aunque el motor local siga aprendiendo de fechas confirmadas para mejorar el rango individual de fase. La información de aprendizaje de ADR-002, si llega a habilitarse después de sus condiciones, no cambia estas tres tarjetas, la rueda ni la indicación temporal, y no puede transformarlas en predicciones sobre el presente.
 
 ### 3.1. Rueda del ciclo
 
@@ -118,7 +117,7 @@ La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloquead
 | IT-02 | La indicación lleva siempre el calificador de estimación y una explicación breve accesible desde ella, por ejemplo: «Calculado a partir de la duración de ciclos anteriores confirmados. La siguiente menstruación puede adelantarse o retrasarse». Es una estimación probabilística, no un dato. |
 | IT-03 | Solo se muestra si el motor auditado (CON-032) calcula una ventana para el siguiente inicio de sangrado con datos suficientes y vigentes. No se muestra en ningún estado excepcional de la sección 5 ni con anticoncepción que impida estimar fase. |
 | IT-04 | Es una etiqueta temporal, no clínica: no usa «premenstrual» como término clínico, no nombra SPM ni TDPM y no presenta cambios físicos o emocionales como algo que la pareja vaya a tener o esté teniendo ([audit-07](../research/jua-10/audit-07-rcog-pms.md) §4; C-01; SPM-04). |
-| IT-05 | **No cambia las tarjetas.** Las cuatro tarjetas siguen siendo las de la fase lútea durante toda la fase (H-01 del índice de tarjetas, que aplica `home-cards-luteal-v0.2.0.md`). |
+| IT-05 | **No cambia las tarjetas.** Las tres tarjetas siguen siendo las de la fase lútea durante toda la fase (H-01 del índice de tarjetas, que aplica `home-cards-luteal-v0.3.0.md`). |
 | IT-06 | No cambia el color, el tono ni la intensidad del panel o de la rueda; no usa iconos de aviso, cuentas atrás («faltan 3 días»), notificaciones ni recordatorios (RU-09, RU-10, sección 7). |
 | IT-07 | No enlaza directamente a la pantalla SPM/TDPM ni remite a ella. El camino sigue siendo «Cómo funciona» (U-03, C-03). |
 | IT-08 | «Cómo funciona» explica cómo se calcula este tramo y por qué es menos preciso que la fase. |
@@ -190,7 +189,7 @@ El motor de ciclo sigue aprendiendo exclusivamente con fechas pasadas confirmada
 
 ADR-002 mantiene una línea separada y condicionada de aprendizaje local sobre variables consentidas. Sus posibles resultados no aparecen en la home de quien consulta la aplicación. Si en una fase futura se crea una vista específica para esos datos, deberá respetar el consentimiento granular, la separación entre autoinforme y observación, la fuente, la muestra, la incertidumbre, el borrado y la evaluación de violencia tecnológica definidos en el ADR. Esa vista requerirá una decisión y especificación propias.
 
-La home no usa resultados de patrones para modificar el color de la fase o de la rueda, seleccionar alertas conductuales, recomendar decisiones de pareja ni activar contenido sexual. La presentación diaria permanece estable: fase, día, indicación temporal cuando corresponda, rueda, ventana, actualización y cuatro tarjetas de conversación y acción propia.
+La home no usa resultados de patrones para modificar el color de la fase o de la rueda, seleccionar alertas conductuales, recomendar decisiones de pareja ni activar contenido sexual. La presentación diaria permanece estable: fase, día, indicación temporal cuando corresponda, rueda, ventana, actualización y tres tarjetas de orientación.
 
 ## 7. Criterios de aceptación de UX
 
@@ -203,12 +202,12 @@ La home no usa resultados de patrones para modificar el color de la fase o de la
 | Transparencia accesible | La explicación completa está disponible desde el panel, es compatible con teclado y lector de pantalla y existe en ES/CA/EN. |
 | Estados excepcionales seguros | Datos antiguos, insuficientes, anticoncepción incompatible, retirada de consentimiento y resultado inválido no muestran una fase, una rueda ni una indicación temporal como si fueran vigentes. |
 | Separación entre motor y home | La prueba confirma que el motor puede ajustar el rango individual con fechas confirmadas, pero que la home no muestra síntomas, observaciones ni inferencias personales. |
-| Tarjetas de orientación | Las cuatro tarjetas aparecen en cada fase y se prueban para comprobar que orientan a preguntar, escuchar y actuar en primera persona sin atribuir estados a la pareja. |
+| Tarjetas de orientación | Las tres tarjetas aparecen en cada fase y se prueban para comprobar que orientan a preguntar, escuchar y actuar en primera persona sin atribuir estados a la pareja. |
 | Prevención de vigilancia | No aparecen nombres, historiales extensos, notificaciones, semáforos emocionales, rachas, cuentas atrás ni llamadas a la acción que incentiven vigilar a la pareja. |
 
 ## 8. Implicación para desarrollo
 
-El nombre directo de la fase en el panel no cambia el motor de estimación. El motor sigue obligado a usar UTC, datos pasados confirmados, rango individual, incertidumbre, caducidad y tratamiento específico de anticoncepción. Además, debe exponer lo que necesitan la rueda y la indicación temporal: los límites estimados de cada fase con su incertidumbre y si proceden de una duración declarada, de un valor calculado o de la referencia (RU-05, RU-05b y DA-06), si el inicio del ciclo en curso está confirmado (ME-04) y la ventana del siguiente inicio de sangrado (IT-03). La interfaz debe distinguir entre el resultado computado que puede resumirse visualmente y las condiciones que deben explicarse antes de usarlo o cuando dejan de cumplirse. La especificación de las cuatro tarjetas de contenido debe mantenerse separada de los datos de aprendizaje.
+El nombre directo de la fase en el panel no cambia el motor de estimación. El motor sigue obligado a usar UTC, datos pasados confirmados, rango individual, incertidumbre, caducidad y tratamiento específico de anticoncepción. Además, debe exponer lo que necesitan la rueda y la indicación temporal: los límites estimados de cada fase con su incertidumbre y si proceden de una duración declarada, de un valor calculado o de la referencia (RU-05, RU-05b y DA-06), si el inicio del ciclo en curso está confirmado (ME-04) y la ventana del siguiente inicio de sangrado (IT-03). La interfaz debe distinguir entre el resultado computado que puede resumirse visualmente y las condiciones que deben explicarse antes de usarlo o cuando dejan de cumplirse. La especificación de las tres tarjetas de contenido debe mantenerse separada de los datos de aprendizaje.
 
 No se implementará esta pantalla con datos reales hasta completar las condiciones de ADR-001 y ADR-002. Mientras tanto, puede diseñarse y probarse con datos ficticios locales que no representen a una persona real.
 
@@ -228,6 +227,10 @@ El prototipo de JUA-5 (`src/App.jsx`, `src/App.css`) usa datos ficticios. Frente
 Estas diferencias se registran como tareas de implementación y se recogen en el mapa de pantallas (JUA-26).
 
 ## 9. Historial
+
+### [1.1.2] — 11 de noviembre de 2026
+
+- Tres tarjetas de orientación: «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti» (JUA-23, decisión de producto del 11-11-2026). El resto del panel no cambia.
 
 ### [1.1.1] — 28 de octubre de 2026
 
@@ -257,4 +260,4 @@ Estas diferencias se registran como tareas de implementación y se recogen en el
 - [Fases del ciclo (JUA-10)](../research/jua-10/01-cycle-phases.md).
 - [Duraciones de referencia por fase (JUA-27)](../research/JUA-27-duraciones-referencia.md). Se integra con la PR de JUA-27.
 - [Auditoría 07: SPM, RCOG](../research/jua-10/audit-07-rcog-pms.md), §4.
-- Pantalla SPM/TDPM v0.5.0 y tarjetas de la fase lútea v0.2.0: `docs/education/spm-tdpm-v0.5.0.md` y `docs/education/home-cards-luteal-v0.2.0.md`, en el paquete de JUA-16. Reglas citadas: U-02, U-03, C-01 a C-04, SPM-04 y H-01 a H-04 (desde la v0.2.0 de las tarjetas, H-01 a H-04 del índice de tarjetas).
+- Pantalla SPM/TDPM v0.6.0 y tarjetas de la fase lútea v0.3.0: `docs/education/spm-tdpm-v0.6.0.md` y `docs/education/home-cards-luteal-v0.3.0.md`, en el paquete de JUA-16. Reglas citadas: U-02, U-03, C-01 a C-04, SPM-04 y H-01 a H-04 (desde la v0.2.0 de las tarjetas, H-01 a H-04 del índice de tarjetas).

@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «La ventana ovulatoria» v0.1.0
+# Consona — Pantalla educativa «La ventana ovulatoria» v0.2.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío. Nombre visible decidido el 06-11-2026 (D-01).
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -10,7 +10,7 @@
 
 ## 1. Público, tono, ubicación y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.1.0.md`, secciones 1 a 3), con dos añadidos:
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.2.0.md`, secciones 1 a 3), con dos añadidos:
 
 - **Reglas de la fase:** O-01 a O-06 de las tarjetas de JUA-23, y reglas de sesgo SGO-01 a SGO-05 de `03-sesgo-genero.md`. **Excepción a O-05 en esta pantalla:** OVU-02 menciona el dolor de ovulación (D-05), sin cifras, sin decir si es probable y sin presentarlo como forma de saber si ha habido ovulación. Las tarjetas de la home siguen sin mencionarlo.
 - **R-08:** ningún icono, color ni ilustración asociado a la fertilidad, el embarazo, el atractivo o la sexualidad.
@@ -18,7 +18,7 @@ Iguales que en la pantalla de la menstruación (`menstruacion-v0.1.0.md`, seccio
 
 ### Coherencia con la rueda y con las tarjetas de la home
 
-La rueda dibuja la ventana con bordes difusos (JUA-27 §3.4) y las tarjetas de la ventana ovulatoria (`home-cards-ovulatory-v0.2.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las tres piezas se revisa contra las otras.
+La rueda dibuja la ventana con bordes difusos (JUA-27 §3.4) y las tarjetas de la ventana ovulatoria (`home-cards-ovulatory-v0.3.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las tres piezas se revisa contra las otras.
 
 ## 2. Texto de la pantalla
 
@@ -36,13 +36,15 @@ La ovulación es el momento en que un ovario libera un óvulo. No es una fase de
 
 Ocurre al final de la fase folicular: cuando los estrógenos llegan a un nivel alto, provocan la subida de otra hormona que, en un día o dos, desencadena la ovulación. Después empieza la fase lútea.
 
-Algunas personas notan una molestia leve en un lado del bajo vientre hacia la mitad del ciclo. No sirve para saber si ha habido ovulación, y si el dolor es fuerte o no se pasa, merece consultarse.
+Algunas mujeres notan una molestia leve en un lado del bajo vientre hacia la mitad del ciclo. No sirve para saber si ha habido ovulación, y si el dolor es fuerte o no se pasa, merece consultarse.
 
-### OVU-03 · Qué es la ventana que ves en Consona
+### OVU-03 · Lo que ves en Consona
 
-Consona no sabe cuándo ovula nadie. Lo que ves en la rueda es una ventana calculada hacia atrás desde la fecha prevista de la siguiente regla, y por eso tiene los bordes difusos.
+Consona no sabe cuándo ovula nadie. Lo que ves en la rueda del ciclo es una ventana calculada hacia atrás desde la fecha prevista de la siguiente regla, y por eso tiene los bordes difusos.
 
-Es un momento aproximado. El día de la ovulación cambia mucho de una persona a otra y de un ciclo a otro, y en bastantes ciclos ocurre antes o después de la ventana. La idea de que la ovulación ocurre el día 14 es un mito: muy pocas personas tienen ciclos exactos de 28 días.
+Es un momento aproximado. El día de la ovulación cambia mucho de una mujer a otra y de un ciclo a otro, y en bastantes ciclos ocurre antes o después de la ventana. La idea de que la ovulación ocurre el día 14 es un mito: muy pocas mujeres tienen ciclos exactos de 28 días.
+
+Los días en que la rueda pasa de una fase a otra los calcula Consona a partir de las fechas. Son una estimación, no el momento en que cambia el cuerpo.
 
 ### OVU-04 · No todos los ciclos tienen ovulación
 
@@ -62,7 +64,7 @@ Para evitar un embarazo hace falta un método fiable. Para buscarlo, también ay
 
 ### OVU-06 · Lo que la ventana no dice
 
-Que la app marque esta ventana no dice nada de cómo se siente tu pareja, de lo que quiere ni de cómo está vuestra relación. No hay evidencia de que en este momento el ánimo o las capacidades mejoren; de hecho, algunas personas se encuentran peor a mitad de ciclo y la mayoría no nota cambios en este momento.
+Que la app marque esta ventana no dice nada de cómo se siente tu pareja, de lo que quiere ni de cómo está vuestra relación. No hay evidencia de que en este momento el ánimo o las capacidades mejoren; de hecho, algunas mujeres se encuentran peor a mitad de ciclo y la mayoría no nota cambios en este momento.
 
 Es una fecha calculada, no algo que le esté pasando ni una señal para actuar.
 
@@ -89,7 +91,7 @@ Esta información se basa en la fisiología del ciclo (2018), una opinión de co
 **Posición:** después de OVU-07.
 
 > **Anticoncepción y búsqueda de embarazo**
-> Si queréis evitar un embarazo o buscarlo, un profesional sanitario puede orientaros sobre métodos fiables y sobre cómo funciona el ciclo de cada persona. El centro de salud (medicina de familia o matrona) o un centro de atención a la salud sexual y reproductiva son buenos puntos de partida.
+> Si queréis evitar un embarazo o buscarlo, un profesional sanitario puede orientaros sobre métodos fiables y sobre cómo funciona el ciclo de cada mujer. El centro de salud (medicina de familia o matrona) o un centro de atención a la salud sexual y reproductiva son buenos puntos de partida.
 
 Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método anticonceptivo»); OS-08; OS-09; OS-16 (en España, la mayoría elige su método con un profesional: ginecología, medicina de familia, matrona o centro de planificación).
 
@@ -99,7 +101,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 |---|---|---|
 | OVU-01 | Límites de la app | O-02, O-03; SGO-02 |
 | OVU-02 | Definición y mecanismo; dolor de ovulación sin cifras, sin valor para detectar la ovulación y con cuándo consultar | OV-A01, OV-A02; OV-A17 (OS-20, OS-21, OS-24, OS-25) |
-| OVU-03 | Ventana calculada, aproximada; variabilidad; mito del día 14 | OV-A03 a OV-A05; SGO-03 |
+| OVU-03 | Ventana calculada, aproximada; variabilidad; mito del día 14; límites entre fases calculados por el motor | OV-A03 a OV-A05; SGO-03; motor de estimación CON-032 (ADR-001 C9) |
 | OVU-04 | Ciclos sin ovulación | OV-A06 (OS-07); SGO-04 |
 | OVU-05 | Ventana fértil de seis días; supervivencia de los espermatozoides y caída tras la ovulación; imposibilidad de calcularla por calendario | OV-A12, OV-A13 (OS-14, OS-15); OV-A04 |
 | OVU-05b | Límite anticonceptivo; pocos días sin posibilidad de embarazo; uso real de las apps | OV-A07, OV-A08, OV-A14 (OS-06, OS-08, OS-09); SGO-02 |
@@ -119,6 +121,12 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | D-06 | OVU-05 explica la ventana fértil y la supervivencia de los gametos sin cifras de horas ni de probabilidad. | **Resuelta (06-11-2026):** se mantiene sin cifras de horas ni de probabilidad. Se pide igualmente valoración en la revisión clínica. |
 
 ## 6. Historial
+
+### [0.2.0] — 11-11-2026
+
+- OVU-03 pasa a llamarse «Lo que ves en Consona», como en las demás pantallas de fase, y añade quién calcula los cambios de fase (CON-032).
+- «Mujeres» en lugar de «personas» en las afirmaciones generales (D-07 de la pantalla SPM/TDPM).
+- DER-01: «el ciclo de cada mujer».
 
 ### [0.1.0] — 06-11-2026
 

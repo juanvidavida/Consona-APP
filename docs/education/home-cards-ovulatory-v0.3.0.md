@@ -1,4 +1,4 @@
-# Consona — Tarjetas de la home en la ventana ovulatoria estimada v0.2.0
+# Consona — Tarjetas de la home en la ventana ovulatoria estimada v0.3.0
 
 **Issue:** JUA-23.
 **Estado:** Borrador para revisión de producto. **Incluido en el alcance de la revisión clínica de JUA-16** (decisión del 05-11-2026), pendiente de envío.
@@ -7,7 +7,7 @@
 **Parte de:** el texto provisional de [`src/App.jsx`](../../src/App.jsx) (JUA-5), que solo tiene texto de la fase lútea.
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación.
 
-> Este documento fija el texto exacto de las cuatro tarjetas cuando la home muestra la ventana ovulatoria estimada. Es la fase con más riesgo de lectura errónea (fertilidad, deseo), por eso tiene más reglas propias. Cualquier cambio exige una nueva versión y su revisión contra las reglas comunes del índice.
+> Este documento fija el texto exacto de las tres tarjetas cuando la home muestra la ventana ovulatoria estimada. Es la fase con más riesgo de lectura errónea (fertilidad, deseo), por eso tiene más reglas propias. Cualquier cambio exige una nueva versión y su revisión contra las reglas comunes del índice.
 
 ## 1. Reglas propias de la fase
 
@@ -16,33 +16,28 @@
 | O-01 | Siempre «ventana ovulatoria estimada». Nunca «día de ovulación», «estás ovulando», «días fértiles», «periodo fértil» ni «días seguros» (RU-03; JUA-27 §3.4). |
 | O-02 | Se explica que la ventana es un cálculo por fechas: no detecta ni confirma la ovulación, ni que ocurra en todos los ciclos. |
 | O-03 | Se dice expresamente que la ventana no sirve para buscar ni para evitar un embarazo. Las tarjetas no dan más información de fertilidad; la relación entre ovulación y embarazo se explica en la pantalla educativa (OVU-05). La salud reproductiva es contenido válido (decisión del 06-11-2026). |
-| O-04 | H-05 se aplica sin excepción, también en QNA: no se nombra el deseo ni el atractivo, ni siquiera para desmentirlo. |
+| O-04 | H-05 se aplica sin excepción, también en «Qué no asumir»: no se nombra el deseo ni el atractivo, ni siquiera para desmentirlo. |
 | O-05 | No se mencionan señales corporales de la ovulación (moco cervical, dolor ovulatorio, temperatura), porque invitarían a observar el cuerpo de tu pareja. |
 | O-06 | Sin cifras en días. |
 
 ## 2. Texto de las tarjetas
 
-### QPC · Qué pasa en su cuerpo
+### Qué pasa en su cuerpo
 
 **Antetítulo:** Conocimiento general
 
 > La ovulación es el momento en que un ovario libera un óvulo. No es una fase de varios días, sino un hecho puntual cuyo momento cambia de un ciclo a otro. Esta ventana marca un momento aproximado, calculado hacia atrás desde la fecha prevista de la siguiente regla.
 > Es solo un cálculo: no detecta si la ovulación ha ocurrido ni cuándo, y no sirve para buscar ni para evitar un embarazo.
 
-### QPP · Qué puedes preguntarle
+### Cómo acompañar
 
-**Antetítulo:** Conversación
+**Antetítulo:** Conversación y acción propia
 
 > «¿Cómo te encuentras hoy? ¿Hay algo en lo que te pueda echar una mano?»
 > Lo que te cuente dice mucho más que cualquier fecha del calendario.
-
-### QTT · Qué te toca a ti
-
-**Antetítulo:** Acción propia
-
 > Mantén tus compromisos y tu parte de las tareas como cualquier otro día. Si tenéis una decisión pendiente, sácala tú en la conversación en lugar de esperar.
 
-### QNA · Qué no asumir
+### Qué no asumir
 
 **Antetítulo:** Antiestereotipo
 
@@ -50,30 +45,30 @@
 
 ## 3. Cambios respecto al prototipo
 
-El prototipo no tiene texto propio de la ventana ovulatoria: muestra en todas las fases la QPC de la fase lútea y unas QPP, QTT y QNA genéricas.
+El prototipo no tiene texto propio de la ventana ovulatoria: muestra en todas las fases la «Qué pasa en su cuerpo» de la fase lútea y unas «Qué puedes preguntarle», «Qué te toca a ti» y «Qué no asumir» genéricas.
 
 | Tarjeta | Cambio | Motivo |
 |---|---|---|
-| QPC | Texto nuevo: la ovulación como hecho puntual y la ventana como cálculo, con su límite para el embarazo. | El texto del prototipo describe la fase lútea; O-01 a O-03. |
-| QPP | La pregunta genérica pasa a una oferta de ayuda abierta. | Variar la conversación entre fases sin referirse al ciclo. |
-| QTT | La logística general se concreta en compromisos, tareas y decisiones pendientes. | Acción propia concreta; mostrar que nada cambia por la fecha. |
-| QNA | Se sustituye «Una fase estimada no explica…» por «no es una señal para actuar», sin nombrar el deseo. | O-04: el estereotipo de esta fase es sexual y H-05 impide nombrarlo. **JUA-36:** OV-A10, OV-A11; SGO-01. |
+| Qué pasa en su cuerpo | Texto nuevo: la ovulación como hecho puntual y la ventana como cálculo, con su límite para el embarazo. | El texto del prototipo describe la fase lútea; O-01 a O-03. |
+| Cómo acompañar · pregunta | La pregunta genérica pasa a una oferta de ayuda abierta. | Variar la conversación entre fases sin referirse al ciclo. |
+| Cómo acompañar · acción propia | La logística general se concreta en compromisos, tareas y decisiones pendientes. | Acción propia concreta; mostrar que nada cambia por la fecha. |
+| Qué no asumir | Se sustituye «Una fase estimada no explica…» por «no es una señal para actuar», sin nombrar el deseo. | O-04: el estereotipo de esta fase es sexual y H-05 impide nombrarlo. **JUA-36:** OV-A10, OV-A11; SGO-01. |
 
 ## 4. Trazabilidad
 
 | Tarjeta | Afirmación | Fuente | Base auditada |
 |---|---|---|---|
-| QPC · definición | La ovulación es la liberación de un óvulo por un ovario; es un evento, no una fase de duración fija. | [1] [2] | `01-cycle-phases` (afirmación auditada de consenso clínico; definición de ovulación y nota de taxonomía). **JUA-36:** OV-A01, OV-A02. |
-| QPC · variación | Su momento cambia de un ciclo a otro. | [3] [4] | `01-cycle-phases` (variación dentro de la misma persona, Najmabadi); JUA-27 §3.2. En `main` desde el PR #12. **JUA-36:** OV-A03 (el día 14 es un mito). |
-| QPC · cálculo | La ventana se calcula hacia atrás desde la fecha prevista de la siguiente regla. | [5] | JUA-27 §3.3 y §3.4 (ventana `[L−14, L−12]`). En `main` desde el PR #12. **JUA-36:** OV-A04, OV-A05. |
-| QPC · límite | No detecta ni confirma la ovulación; no sirve para buscar ni evitar un embarazo. | [1] [6] | `01-cycle-phases` (límites 2 y 3: «no detecta ni confirma»; «nunca sustituye […] método anticonceptivo»). **JUA-36:** OV-A06, OV-A07, OV-A08 (uso real de las apps en España, Universidad de Granada) y OV-A12. |
-| QPP | Pregunta abierta en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
-| QTT | Acción propia sobre compromisos, tareas y decisiones. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3. |
-| QNA | Una fase no explica estados, deseos ni conducta. | [6] [7] | `01-cycle-phases` (límite 4 y afirmación sobre atribución causal); `12-health-emotional-cognitive` EC-02. |
+| Qué pasa en su cuerpo · definición | La ovulación es la liberación de un óvulo por un ovario; es un evento, no una fase de duración fija. | [1] [2] | `01-cycle-phases` (afirmación auditada de consenso clínico; definición de ovulación y nota de taxonomía). **JUA-36:** OV-A01, OV-A02. |
+| Qué pasa en su cuerpo · variación | Su momento cambia de un ciclo a otro. | [3] [4] | `01-cycle-phases` (variación dentro de la misma persona, Najmabadi); JUA-27 §3.2. En `main` desde el PR #12. **JUA-36:** OV-A03 (el día 14 es un mito). |
+| Qué pasa en su cuerpo · cálculo | La ventana se calcula hacia atrás desde la fecha prevista de la siguiente regla. | [5] | JUA-27 §3.3 y §3.4 (ventana `[L−14, L−12]`). En `main` desde el PR #12. **JUA-36:** OV-A04, OV-A05. |
+| Qué pasa en su cuerpo · límite | No detecta ni confirma la ovulación; no sirve para buscar ni evitar un embarazo. | [1] [6] | `01-cycle-phases` (límites 2 y 3: «no detecta ni confirma»; «nunca sustituye […] método anticonceptivo»). **JUA-36:** OV-A06, OV-A07, OV-A08 (uso real de las apps en España, Universidad de Granada) y OV-A12. |
+| Cómo acompañar · pregunta | Pregunta abierta en lugar de suposición. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3; ADR-002 §5. |
+| Cómo acompañar · acción propia | Acción propia sobre compromisos, tareas y decisiones. | — | `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md` §3. |
+| Qué no asumir | Una fase no explica estados, deseos ni conducta. | [6] [7] | `01-cycle-phases` (límite 4 y afirmación sobre atribución causal); `12-health-emotional-cognitive` EC-02. |
 
 ## 5. Exclusiones comprobadas
 
-La v0.2.0 no contiene:
+La v0.3.0 no contiene:
 
 - [x] «Día de ovulación», «estás ovulando», «días fértiles», «periodo fértil» ni «días seguros».
 - [x] Probabilidad de embarazo ni uso de la ventana para buscarlo o evitarlo (solo el aviso de que no sirve para eso).
@@ -87,17 +82,18 @@ La v0.2.0 no contiene:
 
 | ID | Decisión | Propuesta |
 |---|---|---|
-| D-01 | El estereotipo más extendido de esta fase es sexual. QNA podría desmentirlo de forma directa, pero H-05 impide nombrarlo. | **Aceptada (05-11-2026):** no se nombra (O-04), aunque en la fase folicular sí se nombran los estereotipos: H-05 prevalece. QNA lo cubre con «lo que quiere» y «no es una señal para actuar». La persona revisora valora si basta. |
-| D-02 | QPC menciona el embarazo para decir que la ventana no sirve para ello. Es la única mención a la fertilidad en las tarjetas. | **Aceptada (05-11-2026):** se mantiene como límite de seguridad, no como información de fertilidad. Coherente con `01-cycle-phases`, límite 3. |
-| D-03 | «Cuándo es más probable» podía leerse como una precisión que la ventana no tiene: contiene la ovulación en ~37–58 % de los ciclos (JUA-27 §2). | **Aceptada (05-11-2026):** QPC dice «marca un momento aproximado». |
+| D-01 | El estereotipo más extendido de esta fase es sexual. «Qué no asumir» podría desmentirlo de forma directa, pero H-05 impide nombrarlo. | **Aceptada (05-11-2026):** no se nombra (O-04), aunque en la fase folicular sí se nombran los estereotipos: H-05 prevalece. «Qué no asumir» lo cubre con «lo que quiere» y «no es una señal para actuar». La persona revisora valora si basta. |
+| D-02 | «Qué pasa en su cuerpo» menciona el embarazo para decir que la ventana no sirve para ello. Es la única mención a la fertilidad en las tarjetas. | **Aceptada (05-11-2026):** se mantiene como límite de seguridad, no como información de fertilidad. Coherente con `01-cycle-phases`, límite 3. |
+| D-03 | «Cuándo es más probable» podía leerse como una precisión que la ventana no tiene: contiene la ovulación en ~37–58 % de los ciclos (JUA-27 §2). | **Aceptada (05-11-2026):** «Qué pasa en su cuerpo» dice «marca un momento aproximado». |
 | D-04 | Como en la fase folicular, «óvulo» en lugar de «ovocito». | **Aceptada (05-11-2026):** igual que D-01 de la fase folicular. |
 | D-05 | La trazabilidad del cálculo cita el dossier de JUA-27, que no está en `main`. | **Aceptada (05-11-2026):** se mantiene la cita con su PR. Revisar la ruta cuando se fusione el PR #12. **Cerrada (10-11-2026):** el PR #12 está fusionado y la ruta `docs/research/JUA-27-duraciones-referencia.md` es válida. |
+| D-06 | Las tarjetas «Qué puedes preguntarle» y «Qué te toca a ti» resultaban redundantes entre sí y entre fases, y los acrónimos de las tarjetas dificultaban la lectura. | **Resuelta (11-11-2026):** se fusionan en «Cómo acompañar» (antetítulo «Conversación y acción propia»): una pregunta abierta y un gesto propio ligado al tema de la fase, nunca al estado de ella. La home pasa a tres tarjetas. Los documentos usan los títulos de las tarjetas en lugar de acrónimos |
 
 ## 7. Qué debe valorar la persona revisora
 
-- Si la definición de QPC es correcta y si «un momento aproximado» describe bien la ventana (D-03).
+- Si la definición de «Qué pasa en su cuerpo» es correcta y si «un momento aproximado» describe bien la ventana (D-03).
 - Si el aviso sobre el embarazo es suficiente y no da información de fertilidad (D-02).
-- Si QNA cubre el estereotipo sexual sin nombrarlo (D-01).
+- Si «Qué no asumir» cubre el estereotipo sexual sin nombrarlo (D-01).
 
 ## 8. Historial
 
@@ -112,12 +108,21 @@ La v0.2.0 no contiene:
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
 - O-03 precisa que la explicación de la ventana fértil está en la pantalla educativa y que la salud reproductiva es contenido válido.
 - La rueda mantiene «Ventana ovulatoria estimada», sin «fértil» (decisión del 06-11-2026).
-- Pantalla educativa asociada: `ovulatoria-v0.1.0.md` (rama de JUA-36).
+- Pantalla educativa asociada: `ovulatoria-v0.2.0.md` (rama de JUA-36).
 
 ### [0.2.0] — Enmienda del 10-11-2026
 
 - Trazabilidad: JUA-27 (PR #12) ya está en `main`.
 - **Sin cambios en el texto de las tarjetas**, por eso conservan la versión.
+
+### [0.2.0] — Enmienda del 11-11-2026
+
+- Referencias a las versiones nuevas de las demás tarjetas y pantallas. **Sin cambios en el texto de las tarjetas**: no tenían afirmaciones generales con «personas» (D-07 de la pantalla SPM/TDPM).
+
+### [0.3.0] — Tres tarjetas (11-11-2026)
+
+- «Qué puedes preguntarle» y «Qué te toca a ti» se fusionan en «Cómo acompañar», con la pregunta de antes y el gesto de la antigua «Qué te toca a ti», sin cambios. No se usa el gesto de OVU-07 sobre anticoncepción: en la home, durante la ventana, podría leerse como una señal de fertilidad (H-05, H-06).
+- Los documentos usan los títulos de las tarjetas en lugar de los acrónimos.
 
 ## Referencias
 

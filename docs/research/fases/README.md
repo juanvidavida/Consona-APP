@@ -8,10 +8,10 @@
 
 | Fase | Investigación | Pantalla educativa | Tarjetas de la home | Estado |
 |---|---|---|---|---|
-| Menstruación | [`menstruacion/`](./menstruacion/) | `docs/education/menstruacion-v0.1.0.md` | JUA-23 | Borrador, pendiente de revisión |
-| Fase folicular | [`folicular/`](./folicular/) | `docs/education/folicular-v0.1.0.md` | JUA-23 | Borrador, pendiente de revisión |
-| Ventana ovulatoria estimada | [`ovulatoria/`](./ovulatoria/) | `docs/education/ovulatoria-v0.1.0.md` | JUA-23 | Borrador, pendiente de revisión |
-| Fase lútea | [`lutea/`](./lutea/). Reúne lo auditado en `../jua-10/01-cycle-phases.md`, `../jua-10/audit-02-asrm-lpd.md`, `../jua-10/audit-07-rcog-pms.md` y JUA-27 (PR #12), con fuentes verificadas en las otras fases | `docs/education/lutea-v0.1.0.md`; los cambios premenstruales se desarrollan en `spm-tdpm-v0.5.0.md` (JUA-19) | `home-cards-luteal-v0.2.0.md` (JUA-19) | Borrador, pendiente de revisión |
+| Menstruación | [`menstruacion/`](./menstruacion/) | `docs/education/menstruacion-v0.2.0.md` | JUA-23 | Borrador, pendiente de revisión |
+| Fase folicular | [`folicular/`](./folicular/) | `docs/education/folicular-v0.2.0.md` | JUA-23 | Borrador, pendiente de revisión |
+| Ventana ovulatoria estimada | [`ovulatoria/`](./ovulatoria/) | `docs/education/ovulatoria-v0.2.0.md` | JUA-23 | Borrador, pendiente de revisión |
+| Fase lútea | [`lutea/`](./lutea/). Reúne lo auditado en `../jua-10/01-cycle-phases.md`, `../jua-10/audit-02-asrm-lpd.md`, `../jua-10/audit-07-rcog-pms.md` y JUA-27 (PR #12), con fuentes verificadas en las otras fases | `docs/education/lutea-v0.2.0.md`; los cambios premenstruales se desarrollan en `spm-tdpm-v0.6.0.md` (JUA-19) | `home-cards-luteal-v0.3.0.md` (JUA-19) | Borrador, pendiente de revisión |
 
 ## Estructura de cada fase
 
