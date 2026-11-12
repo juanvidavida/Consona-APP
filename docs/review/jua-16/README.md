@@ -37,16 +37,17 @@ Se revisa **exactamente** la versión identificada aquí. Cualquier cambio poste
 | A7 | Pantalla «La fase folicular» de «Comprender» | 0.2.0 | [`folicular-v0.2.0.md`](../../education/folicular-v0.2.0.md) | `a62a647d75efe2f6291d90b16e0933c46f288a568248d40d5373400464883664` |
 | A8 | Pantalla «La ventana ovulatoria» de «Comprender» | 0.2.0 | [`ovulatoria-v0.2.0.md`](../../education/ovulatoria-v0.2.0.md) | `54663d5eaaa62689455e9d50b6fd59e8ae46a55b54af5d75fff34ec7288f70db` |
 | A9 | Pantalla «La fase lútea» de «Comprender» | 0.4.0 | [`lutea-v0.4.0.md`](../../education/lutea-v0.4.0.md) | `0f76a1c7d1fca55690ce02c3a11b183df3df4eef1768ad9a615cc989fe0ea274` |
+| A10 | Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario | 0.1.0 | [`home-prevision-v0.1.0.md`](../../education/home-prevision-v0.1.0.md) | `ae0633743a5c7814e7007a127dd01d4e584f149a0cebf041738d9730762ad238` |
 
 Comprobación de integridad, desde la raíz del repositorio:
 
 ```sh
-shasum -a 256 docs/education/spm-tdpm-v0.8.0.md docs/education/home-cards-{luteal,menstruation,follicular,ovulatory}-v0.4.0.md docs/education/menstruacion-v0.3.0.md docs/education/{folicular,ovulatoria}-v0.2.0.md docs/education/lutea-v0.4.0.md
+shasum -a 256 docs/education/spm-tdpm-v0.8.0.md docs/education/home-cards-{luteal,menstruation,follicular,ovulatory}-v0.4.0.md docs/education/menstruacion-v0.3.0.md docs/education/{folicular,ovulatoria}-v0.2.0.md docs/education/lutea-v0.4.0.md docs/education/home-prevision-v0.1.0.md
 ```
 
 Cualquier cambio en estos archivos, incluidos sus metadatos, altera el hash: se crea una versión nueva si cambia el texto mostrado y se actualizan esta tabla y el formulario antes del envío.
 
-**Empieza por aquí:** [`BOCETO.html`](./BOCETO.html) es un boceto navegable de la app. Muestra cada pantalla en un marco de móvil, con los textos exactos de estos nueve artefactos en el orden y el lugar en que los leerá la persona usuaria. Cada bloque lleva su identificador (SPM-03, LUT-04…), y una guía junto a cada pantalla indica su artefacto, versión, SHA-256 y sección del formulario. Las fechas son ficticias y el diseño es provisional. Se abre en cualquier navegador.
+**Empieza por aquí:** [`BOCETO.html`](./BOCETO.html) es un boceto navegable de la app. Muestra cada pantalla en un marco de móvil, con los textos exactos de estos diez artefactos en el orden y el lugar en que los leerá la persona usuaria. Cada bloque lleva su identificador (SPM-03, LUT-04…), y una guía junto a cada pantalla indica su artefacto, versión, SHA-256 y sección del formulario. Las fechas son ficticias y el diseño es provisional. Se abre en cualquier navegador.
 
 **Ayuda de lectura, no revisada por separado:** [`home-cards-review-pack-v0.5.0.md`](../../education/home-cards-review-pack-v0.5.0.md) reúne en un solo documento las tarjetas de las cuatro fases (A2 a A5) y sus reglas comunes. Si hay diferencias, mandan los documentos de cada fase.
 
@@ -54,6 +55,7 @@ Cualquier cambio en estos archivos, incluidos sus metadatos, altera el hash: se 
 
 - **Pantalla «Antes de la regla» (A1):** el texto que se muestra está en la sección 4 (bloques SPM-00 a SPM-08) y en la sección 5 (DER-01 y DER-02, con los recursos 112, 024 y 016). Las secciones 1 a 3 explican público, ubicación y reglas; la 6, las fuentes de cada bloque.
 - **Tarjetas (A2 a A5):** el texto está en la sección 2 de cada documento. Las reglas comunes H-01 a H-08 están en [`home-cards-index.md`](../../education/home-cards-index.md). Las tarjetas de la fase lútea son lo que la pareja lee en la pantalla de inicio durante los días previos a la menstruación y deben ser coherentes con la pantalla SPM/TDPM. **Ninguna tarjeta queda cubierta implícitamente** por revisar una pantalla: el formulario las evalúa por separado.
+- **Previsión de la regla (A10):** el texto está en la sección 2: la cuenta atrás de la siguiente regla, las estimaciones sin confirmar, los días previos, el estado «Datos antiguos» y el calendario. Las reglas de cuándo se muestra cada texto están en la especificación del panel v1.2.0, §3.3 y §3.4.
 - **Pantallas de «Comprender» (A6 a A9):** el texto está en la sección «Texto de la pantalla» y en los mensajes de derivación de cada documento. Cada una se basa en la investigación de su fase en [`docs/research/fases/`](../../research/fases/).
 
 ## 4. Qué queda fuera de esta revisión
@@ -82,6 +84,7 @@ Después de la revisión, el equipo de producto registra en el mismo formulario 
 | Comentarios de producto del 11-11-2026 | «Mujeres» en lugar de «personas» en las afirmaciones generales; título «Antes de la regla» y términos completos en lugar de siglas; «evidencia científica»; la pareja puede ayudar escuchando y preguntando; duración aproximada de las fases folicular y lútea en las tarjetas; subpantalla «Fuentes» en el mapa de pantallas; tres tarjetas en la home, con «Cómo acompañar» en lugar de «Qué puedes preguntarle» y «Qué te toca a ti»; bloque «Lo que ves en Consona» en las cuatro pantallas de fase. | Pantalla v0.6.0, tarjetas v0.3.0, pantallas de «Comprender» v0.2.0 y especificación del panel v1.1.2. |
 | Consulta de producto del 11-11-2026 (SPM/TDPM D-10) | SPM-05 añade «son las hormonas» como frase que resta valor; SPM-07, preguntar si prefiere compañía, espacio o ayuda; el ensayo de Ussher y Perz 2017 se audita en JUA-36 (LS-22) y solo respalda que el apoyo de la pareja importa. | Pantalla v0.7.0 y «La fase lútea» v0.3.0 (LUT-07 con la misma redacción que SPM-07). |
 | Reflexión de producto del 11-11-2026 | Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar»; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa», para incluir a las parejas que no viven juntas (SPM-07, MEN-07, LUT-07 y la tarjeta de la menstruación). | Tarjetas v0.4.0, «Antes de la regla» v0.8.0, «La menstruación» v0.3.0, «La fase lútea» v0.4.0 y especificación del panel v1.1.3. |
+| Cuenta atrás y calendario (12-11-2026) | La home muestra una cuenta atrás de la siguiente regla en intervalo y un calendario con reglas pasadas (con consentimiento) y previstas. Si ella no confirma, Consona sigue estimando con la etiqueta «sin confirmar» y nunca dice «retraso». | Nuevo artefacto A10 (`home-prevision-v0.1.0.md`) y especificación del panel v1.2.0. |
 
 Las siguientes cuestiones **no** son pendientes de producto, sino preguntas expresas a la persona revisora (formulario, sección 4):
 

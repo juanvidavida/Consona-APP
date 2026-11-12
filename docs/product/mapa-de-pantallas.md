@@ -3,7 +3,7 @@
 | Campo | Valor |
 |---|---|
 | Issue | JUA-26 |
-| Versión | v0.4.3 · 11 nov 2026 |
+| Versión | v0.5.0 · 12 nov 2026 |
 | Estado | P-1 (propuesta 1, navegación) y P-2 (propuesta 2, rueda, datos semilla y receptor) aprobadas. Quedan diferencias pendientes con la especificación del panel v1.1.0 y con JUA-28 (sección 6). |
 | Diagrama | [`mapa-de-pantallas.mmd`](./mapa-de-pantallas.mmd) |
 | Wireframes visuales | [`mapa-de-pantallas.html`](./mapa-de-pantallas.html) |
@@ -19,9 +19,12 @@
 |---|---|---|---|---|---|
 | E | Entrada | Landing provisional | JUA-24 | CONSTRUIDA (provisional) | `landing/index.html` no está en `main` a 20 oct. |
 | 0.1a–c | 0 · Antes del primer uso | Inicio educativo y acceso 18+ (3 pasos) | Definición §5 · Panel §4.1 · CON-005/033 | ESPECIFICADA | Incluye selector ES/CA/EN. |
-| 0.2 | 0 · Antes del primer uso | Consentimiento directo de la persona afectada | ADR-001 · JUA-6 · JUA-20 (CON-007) | BLOQUEADA | Solo en el dispositivo de control de la persona afectada. |
-| 1.1 | 1 · Uso diario | Hoy: fase, día, ventana, actualización, rueda y 4 tarjetas | JUA-5 · JUA-25 · JUA-23 | CONSTRUIDA (datos ficticios) | Ver D-01, D-06, D-07. |
-| 1.2a–f | 1 · Uso diario | Estados excepcionales de Hoy | Panel §5 | ESPECIFICADA | Sin fases por anticoncepción = contenido propio, no error. |
+| 0.2 | 0 · Antes del primer uso | Consentimiento directo de la persona afectada | ADR-001 · JUA-6 · JUA-20 (CON-007) · JUA-41 | BLOQUEADA | En la app mínima de la persona afectada (JUA-41). |
+| A.1 | App de la persona afectada | Datos: fechas pasadas y duraciones | Panel DA-01 · JUA-41 | BLOQUEADA | Nueva el 12-11-2026. Sin preselección (D-20). |
+| A.2 | App de la persona afectada | Confirmar el inicio de la regla | Panel DA-11 · JUA-41 | BLOQUEADA | Nueva el 12-11-2026 (D-24). Aviso programado en su dispositivo. |
+| 1.1 | 1 · Uso diario | Hoy: fase, día, ventana, actualización, rueda con cuenta atrás y 3 tarjetas | JUA-5 · JUA-25 · JUA-23 | CONSTRUIDA (datos ficticios) | Ver D-01, D-06, D-07. |
+| 1.2a–f | 1 · Uso diario | Estados excepcionales de Hoy | Panel §5 | ESPECIFICADA | Sin fases por anticoncepción = contenido propio, no error. Desde la v0.5.0, «Datos antiguos» también llega por el límite de las estimaciones sin confirmar (CA-05d). |
+| 1.3 | 1 · Uso diario | Calendario: reglas pasadas (6 ciclos, con consentimiento) y previstas en intervalo | Panel v1.2.0 §3.4 | ESPECIFICADA | Nueva el 12-11-2026 (D-23). Resuelve D-19. |
 | 2.1 | 2 · Comprender | Cómo funciona | JUA-7 · Panel §4.2 | ESPECIFICADA | Hoy es una sección ancla dentro de Hoy (D-02). |
 | 2.2 | 2 · Comprender | Antes de la regla: síndrome premenstrual y trastorno disfórico premenstrual (subpantalla de 2.1) | JUA-19 · JUA-16 · `docs/education/spm-tdpm-v0.8.0.md` | ESPECIFICADA | Texto v0.7.0, pendiente de enviar a revisión clínica (JUA-16). |
 | 2.3 | 2 · Comprender | Contenido educativo | Definición §5 · JUA-31 | ESPECIFICADA | Pantallas de fase en `docs/education/` (JUA-36). |
@@ -84,6 +87,9 @@ Fecha · bloque principal: día de ciclo, «Actualizado», fase, rueda, próxima
 
 **Pregunta de ejemplo (JUA-23) · P-2 validada:** «¿Cómo estás hoy? ¿Hay algo que prefieras que tenga en cuenta?» (D-14).
 
+### 1.3 · Calendario — ESPECIFICADA (Panel v1.2.0 §3.4)
+«← Hoy» · reglas pasadas confirmadas (6 ciclos como máximo, solo con el alcance «historial de reglas») · reglas previstas como intervalos que se ensanchan (hasta 3) · «sin confirmar» cuando la ventana pasa sin confirmación · aviso «No sirve para evitar ni para buscar un embarazo» · sin días fértiles, síntomas ni exportación.
+
 ### 1.2 · Estados excepcionales — ESPECIFICADA (Panel §5)
 Sustituyen el bloque de fase; nunca muestran una fase no vigente.
 
@@ -125,7 +131,7 @@ Sin wireframe. Requiere decisión y especificación propias. Nunca en Hoy.
 
 ## 4. Reglas transversales
 
-Todas las pantallas cumplen: sin nombres · sin historial · sin rachas · sin notificaciones · sin semáforos emocionales · sin recursos externos en tiempo de ejecución.
+Todas las pantallas cumplen: sin nombres · sin historial (salvo el calendario 1.3, con consentimiento y 6 ciclos como máximo) · sin rachas · sin notificaciones en el dispositivo de quien consulta (el aviso de confirmación es solo para ella, en A.2) · sin semáforos emocionales · sin recursos externos en tiempo de ejecución.
 
 | Pantalla | Riesgo a vigilar |
 |---|---|
@@ -138,7 +144,9 @@ Todas las pantallas cumplen: sin nombres · sin historial · sin rachas · sin n
 | 2.2 | Lectura como autodiagnóstico. |
 | 2.3 | Progreso de lectura o insignias. |
 | 2.4 | Salir de la app sin aviso o registrar qué fuente se abre. |
-| C.1 | Fechas guardadas como historial. |
+| C.1 | Fechas guardadas como historial fuera del alcance «historial de reglas». |
+| 1.3 | Leer «sin confirmar» como «retraso»; usar el calendario para evitar o buscar un embarazo. |
+| A.2 | Que el aviso revele a terceros que se espera la regla; que lo reciba otra persona. |
 | C.2 | Prometer un borrado remoto inmediato. |
 | X.1 | Lista de fechas visible como historial. |
 | X.2 | Que la vinculación revele identidad o ubicación. |
@@ -165,6 +173,8 @@ Todas las pantallas cumplen: sin nombres · sin historial · sin rachas · sin n
 | D-16 | X.2 | JUA-28 | Sin flujo de llegada de datos ni frecuencia de consentimiento | P-2 validada; implementar; decide JUA-28 | JUA-28 |
 | D-21 | 2.4 | SPM-08 y bloques «Fuentes» | Las pantallas remiten a «Fuentes», pero no había pantalla | Subpantalla 2.4 con las referencias de cada pantalla | JUA-31 |
 | D-22 | 1.1 | Panel v1.1.3 §3 · JUA-23 | El prototipo muestra cuatro tarjetas | Tres tarjetas, en este orden: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar», con los textos aprobados | JUA-30 |
+| D-23 | 1.1 · 1.3 | Panel v1.2.0 §3.3 y §3.4 | Sin cuenta atrás ni calendario | Cuenta atrás en intervalo junto a la rueda; `Menstruación estimada · sin confirmar`; ciclos estimados sin confirmar con intervalos más anchos; enlace a 1.3 | JUA-30 |
+| D-24 | A.1 · A.2 | Panel DA-11 · JUA-41 | La persona afectada no tiene app | App mínima con consentimiento, datos y confirmación del inicio de la regla | JUA-41 |
 
 ## 6. Diferencias pendientes de decisión (P-2)
 
@@ -174,7 +184,7 @@ Estos puntos de P-2 chocan con decisiones ya tomadas o con la especificación vi
 |---|---|---|---|---|---|
 | D-17 | X.2 | La frecuencia del consentimiento como opciones abiertas: una vez por alcance, renovación periódica o en cada envío. | DA-08 (decidido el 19 oct 2026): consentimiento inicial sin renovación periódica; revisión, cambio o retirada cuando ella quiera. | Corregir el wireframe: una sola opción, la decidida. | JUA-28 |
 | D-18 | X.2 | El dispositivo de control calcula localmente y el de quien consulta recibe fase, día, ventana y actualización. | CON-008, requisito 9: el dispositivo de control no pide, no muestra ni guarda datos de ciclo ni derivados. ADR-001 §2: los derivados tampoco pueden pasar por un servidor. | Tratarlo como una opción más de la revisión arquitectónica de JUA-28, no como diseño validado. Si solo viajan derivados, el traspaso tendría que ser directo entre dispositivos o depender de la excepción de JUA-29. | JUA-28 |
-| D-19 | 1.1 | «Próxima menstruación 30 oct – 5 nov» en el bloque principal, en lugar de la ventana de la fase actual; arco exterior con esa ventana. | Panel v1.1.0 §3 (bloque «Ventana y actualización») y RU-06: la ventana que se dibuja es la de la fase actual. IT-06 prohíbe cuentas atrás. Una fecha prevista de la próxima regla en la home de quien consulta es una predicción que la especificación no contempla. | Decidir si la home muestra la próxima menstruación prevista. Si se aprueba, añadirlo a la especificación con sus reglas; si no, volver a la ventana de la fase. | JUA-30 |
+| D-19 | 1.1 | «Próxima menstruación 30 oct – 5 nov» en el bloque principal, en lugar de la ventana de la fase actual; arco exterior con esa ventana. | Panel v1.1.0 §3 (bloque «Ventana y actualización») y RU-06: la ventana que se dibuja es la de la fase actual. IT-06 prohíbe cuentas atrás. Una fecha prevista de la próxima regla en la home de quien consulta es una predicción que la especificación no contempla. | Decidir si la home muestra la próxima menstruación prevista. Si se aprueba, añadirlo a la especificación con sus reglas; si no, volver a la ventana de la fase. | JUA-30 **Resuelta (12-11-2026):** la home muestra la cuenta atrás de la siguiente menstruación en intervalo (Panel v1.2.0 §3.3) y el calendario muestra las previstas (§3.4). |
 | D-20 | X.1 | Duraciones habituales con valores ya seleccionados: «Ciclo 28 días» y «Sangrado 5 días». | CON-007: ninguna opción preseleccionada. `13-cycle-variability.md`: no hay un ciclo «normal» de 28 días. | Campos vacíos por defecto; «No lo sé» como opción explícita. | JUA-28 |
 
 ## Historial
@@ -188,3 +198,4 @@ Estos puntos de P-2 chocan con decisiones ya tomadas o con la especificación vi
 | v0.4.1 | 28 oct 2026 | Menstruación sin duración declarada: días 1–5 en lugar de 1–3, según la especificación del panel v1.1.1 y JUA-27 (D-12). |
 | v0.4.2 | 11 nov 2026 | 2.2 pasa a «Antes de la regla» (JUA-19, pantalla v0.7.0). Nueva subpantalla 2.4 «Fuentes» (D-21, JUA-31). La home pasa a tres tarjetas: «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti» (D-22, especificación del panel v1.1.2). |
 | v0.4.3 | 11 nov 2026 | Orden de las tarjetas de la home: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar» (especificación del panel v1.1.3, D-22). |
+| v0.5.0 | 12 nov 2026 | Cuenta atrás de la regla y calendario 1.3 (Panel v1.2.0; D-19 resuelta; D-23). App mínima de la persona afectada: pantallas 0.2, A.1 y A.2 (JUA-41; D-24). Estimaciones sin confirmar a partir del último inicio confirmado (CA-05). Textos en `home-prevision-v0.1.0.md` (A10 de JUA-16). |

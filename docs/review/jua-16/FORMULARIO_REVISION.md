@@ -13,6 +13,7 @@ Artefactos revisados (ver [README](./README.md), sección 3, que da el SHA-256 d
 | A7 | Pantalla «La fase folicular» | 0.2.0 |
 | A8 | Pantalla «La ventana ovulatoria» | 0.2.0 |
 | A9 | Pantalla «La fase lútea» | 0.4.0 |
+| A10 | Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario | 0.1.0 |
 
 Para ver dónde aparece cada bloque en la app, abre el [boceto navegable](./BOCETO.html): cada bloque lleva el mismo identificador que este formulario.
 
@@ -48,6 +49,7 @@ Marcar lo revisado. Lo no marcado queda fuera de la aprobación.
 - [ ] A7 · Pantalla «La fase folicular»: texto y mensaje de derivación.
 - [ ] A8 · Pantalla «La ventana ovulatoria»: texto y mensaje de derivación.
 - [ ] A9 · Pantalla «La fase lútea»: texto y mensajes de derivación.
+- [ ] A10 · Previsión de la regla: cuenta atrás, estimaciones sin confirmar, días previos, datos antiguos y calendario.
 
 Observaciones sobre el alcance:
 
@@ -136,6 +138,18 @@ Observaciones sobre el alcance:
 | DER-01 | Cuándo puede ayudar un profesional | | |
 | LUT-08 | Fuentes | | |
 
+### 3.7 A10 · Previsión de la regla v0.1.0
+
+| Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
+|---|---|---|---|
+| PRV-01, PRV-02 | Cuenta atrás en intervalo | | |
+| PRV-03 | Aviso de estimación y anticonceptivo | | |
+| PRV-04 | Menstruación estimada sin confirmar | | |
+| PRV-05 | Ciclos estimados sin confirmar | | |
+| PRV-06 | Días previos a la menstruación | | |
+| PRV-07 | Datos antiguos | | |
+| PRV-08 | Calendario | | |
+
 ## 4. Preguntas expresas
 
 ### 4.1 Pantalla «Antes de la regla» y tarjetas de la fase lútea
@@ -166,6 +180,7 @@ Observaciones sobre el alcance:
 | P-12 | A7 | ¿Es correcto que la pantalla de la fase folicular no lleve un mensaje de ayuda urgente? (D-01) | |
 | P-13 | A8 · OVU-04 y OVU-05 | ¿Es adecuado «al menos uno de cada cuatro ciclos» sin ovulación, y explicar la ventana fértil sin cifras de horas ni de probabilidad? (D-02, D-06) | |
 | P-14 | A9 · LUT-05 | ¿Los ejemplos de cambios premenstruales pueden leerse como una lista para vigilar a la pareja? (D-02) | |
+| P-20 | A10 | Las preguntas de la sección 5 («Qué debe valorar la persona revisora») de `home-prevision-v0.1.0.md`: intervalos, «sin confirmar», aviso anticonceptivo y tarjetas durante la menstruación estimada. | |
 
 ## 5. Criterios de JUA-16
 
@@ -212,4 +227,5 @@ Esta aprobación se refiere solo a contenido educativo estático. No autoriza re
 | A7 | |
 | A8 | |
 | A9 | |
+| A10 | |
 | Confirmación de la persona revisora sobre las versiones finales (fecha) | |

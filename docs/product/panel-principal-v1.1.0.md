@@ -1,7 +1,7 @@
 # Consona — Especificación UX del panel principal «Hoy» v1.1.0
 
-**Versión:** 1.1.3
-**Fecha:** 11 de noviembre de 2026 (v1.1.2, el mismo día; v1.1.1: 28 de octubre; v1.1.0: 19 de octubre de 2026)
+**Versión:** 1.2.0
+**Fecha:** 12 de noviembre de 2026 (v1.1.3 y v1.1.2: 11 de noviembre; v1.1.1: 28 de octubre; v1.1.0: 19 de octubre de 2026)
 **Estado:** Propuesta de producto (JUA-25). Pasa a ser la decisión de experiencia vigente al integrarse en `main`. No habilita el seguimiento ni relaja las condiciones de ADR-001 y ADR-002.
 **Sustituye a:** la v1.0 del 17 de septiembre de 2026, entregada en [`info/Consona_entrega_completa/archivos_compartidos/CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md`](../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md). Esa versión se conserva sin cambios como parte del paquete de entrega.
 
@@ -63,7 +63,7 @@ La rueda se incorporó en el prototipo de JUA-5 (`src/App.jsx`). Esta sección l
 |---|---|
 | RU-08 | El contraste o la intensidad solo marcan qué segmento corresponde a la fase estimada. Nunca representan bienestar, peligro, sensibilidad, síntomas, conducta, energía, deseo, consentimiento, límites ni disponibilidad. |
 | RU-09 | La paleta es la misma en todas las fases y en todos los días. Ningún segmento usa colores de alarma, y la rueda no cambia de color, intensidad ni tono al acercarse la menstruación ([definición de app](../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_DEFINICION_DE_APP.md) §5; H-04 y C-03 de la pantalla SPM/TDPM). |
-| RU-10 | La rueda no lleva iconos de síntomas, estados de ánimo, sexualidad ni riesgo, ni animaciones, cuentas atrás, sonidos o notificaciones. |
+| RU-10 | La rueda no lleva iconos de síntomas, estados de ánimo, sexualidad ni riesgo, ni animaciones, sonidos o notificaciones. La única cuenta atrás permitida es la de la siguiente menstruación, siempre como intervalo y con las reglas de 3.3 *(v1.2.0)*. |
 | RU-11 | La rueda no es interactiva en esta versión: no enlaza a la pantalla SPM/TDPM (U-03) ni permite «explorar» otras fases. Añadir interacción exige una decisión propia. |
 
 #### Estados excepcionales
@@ -90,7 +90,7 @@ La rueda sigue la sección 5. Ningún estado puede mostrar una rueda que parezca
 
 #### Diferencia con CON-036
 
-La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloqueada por CON-013, CON-015 y CON-035. La rueda muestra solo la secuencia de fases y la estimación de hoy. No muestra historial, ciclos anteriores, registros, variables, comparaciones ni patrones.
+La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloqueada por CON-013, CON-015 y CON-035. La rueda muestra solo la secuencia de fases, la estimación de hoy y la cuenta atrás de 3.3. No muestra historial, ciclos anteriores, registros, variables, comparaciones ni patrones. Las reglas pasadas y previstas se ven en el calendario (3.4), con su propio consentimiento.
 
 ### 3.2. Menstruación e indicación de los días previos
 
@@ -105,7 +105,7 @@ La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloquead
 | ME-01 | El panel y la rueda muestran `Menstruación` desde un **inicio de sangrado confirmado** (el día del inicio es el día 1) durante la **duración habitual del sangrado que declare la persona afectada** (4.3). Si no la ha declarado, se usan los días 1 a 5. Después se muestra `Fase folicular`. |
 | ME-02 | Los días 1 a 5 son la referencia cuando no hay declaración: 5 días es la mediana de duración del sangrado (BioCycle, Dasharathy et al. 2012), entre la media de 4 días sin manchado (Bull et al. 2019) y la mediana de 6 con días leves (Najmabadi et al. 2020). Los días 1 a 3, donde se concentra cerca del 90 % de la pérdida, quedan como referencia editorial de los «primeros días, de más flujo», no como duración. Ninguna duración de 8 días o menos se presenta como anómala (FIGO 2018). Ver [JUA-27](../research/JUA-27-duraciones-referencia.md) §6. |
 | ME-03 | Mostrar `Fase folicular` cuando termina la menstruación no contradice que el sangrado continúe: la fase folicular empieza con la menstruación ([01-cycle-phases.md](../research/jua-10/01-cycle-phases.md)). |
-| ME-04 | `Menstruación` solo se muestra como fase actual si el inicio del ciclo en curso está **confirmado**. Una fecha prevista no basta. Si la fecha prevista pasa sin confirmación, el panel no afirma `Menstruación`; el comportamiento concreto se fija en CON-032 dentro de los estados de la sección 5. |
+| ME-04 | `Menstruación` solo se muestra como fase actual si el inicio del ciclo en curso está **confirmado**. Una fecha prevista no basta. *(v1.2.0)* Si se supera el intervalo previsto sin confirmación, el panel muestra `Menstruación estimada · sin confirmar`, con las reglas de CA-04 y CA-05; nunca `Menstruación` a secas. |
 | ME-05 | Las tarjetas de la menstruación (JUA-23) se muestran mientras se muestra `Menstruación` y pueden referirse al sangrado. Después se muestran las de la fase folicular, que no dan por hecho que el sangrado haya terminado ni que continúe. |
 | ME-06 | «Cómo funciona» explica de dónde sale la duración mostrada: la declarada por la persona afectada o, en su defecto, la referencia de 5 días, y que el sangrado puede durar más o menos. |
 
@@ -114,11 +114,11 @@ La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloquead
 | ID | Regla |
 |---|---|
 | IT-01 | Se muestra `Días previos a la menstruación · estimación` cuando hoy está dentro del tramo estimado que precede a la siguiente menstruación prevista: los **7 días** anteriores al inicio previsto (días −7 a −1; el día del inicio queda fuera). |
-| IT-02 | La indicación lleva siempre el calificador de estimación y una explicación breve accesible desde ella, por ejemplo: «Calculado a partir de la duración de ciclos anteriores confirmados. La siguiente menstruación puede adelantarse o retrasarse». Es una estimación probabilística, no un dato. |
+| IT-02 | La indicación lleva siempre el calificador de estimación y una explicación breve accesible desde ella: «Calculado a partir de la duración de ciclos anteriores confirmados. La siguiente menstruación puede llegar antes o después» *(v1.2.0: sin «retrasarse»; texto exacto en `home-prevision-v0.1.0.md`)*. Es una estimación probabilística, no un dato. |
 | IT-03 | Solo se muestra si el motor auditado (CON-032) calcula una ventana para el siguiente inicio de sangrado con datos suficientes y vigentes. No se muestra en ningún estado excepcional de la sección 5 ni con anticoncepción que impida estimar fase. |
 | IT-04 | Es una etiqueta temporal, no clínica: no usa «premenstrual» como término clínico, no nombra SPM ni TDPM y no presenta cambios físicos o emocionales como algo que la pareja vaya a tener o esté teniendo ([audit-07](../research/jua-10/audit-07-rcog-pms.md) §4; C-01; SPM-04). |
 | IT-05 | **No cambia las tarjetas.** Las tres tarjetas siguen siendo las de la fase lútea durante toda la fase (H-01 del índice de tarjetas, que aplica `home-cards-luteal-v0.4.0.md`). |
-| IT-06 | No cambia el color, el tono ni la intensidad del panel o de la rueda; no usa iconos de aviso, cuentas atrás («faltan 3 días»), notificaciones ni recordatorios (RU-09, RU-10, sección 7). |
+| IT-06 | No cambia el color, el tono ni la intensidad del panel o de la rueda; no usa iconos de aviso, notificaciones ni recordatorios (RU-09, RU-10, sección 7). Convive con la cuenta atrás de 3.3, que es independiente: la indicación de los días previos no se convierte en una cuenta atrás ni en un número único («faltan 3 días»). |
 | IT-07 | No enlaza directamente a la pantalla SPM/TDPM ni remite a ella. El camino sigue siendo «Cómo funciona» (U-03, C-03). |
 | IT-08 | «Cómo funciona» explica cómo se calcula este tramo y por qué es menos preciso que la fase. |
 | IT-09 | La duración del tramo es una referencia editorial con fuente auditada: la «semana premenstrual» como convención de calendario (Schmalenberger et al. 2021 §5.2.2; Eisenlohr-Moul et al. 2017), fijada en [JUA-27](../research/JUA-27-duraciones-referencia.md) §5. No se presenta como un criterio diagnóstico del tipo «X días antes de la regla = SPM», que audit-07 prohíbe. |
@@ -137,6 +137,43 @@ La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloquead
 | Sección 1: el panel no repite descargos. | La excepción está justificada en la sección 1 y se limita a esta indicación. |
 | Sección 7: no hay notificaciones, semáforos ni llamadas a la acción. | IT-06. |
 | [01-cycle-phases.md](../research/jua-10/01-cycle-phases.md): no se presentan las fases como verificadas por el calendario. | ME-02 a ME-04, IT-02 e IT-03. |
+
+### 3.3. Cuenta atrás de la siguiente menstruación *(v1.2.0)*
+
+**Decisión de producto del 12 de noviembre de 2026.** Saber cuándo es probable la próxima regla es una de las pocas informaciones del ciclo que se pueden estimar con base y que tienen utilidad práctica: planes, viajes, logística. La rueda la muestra como una cuenta atrás **en intervalo**, nunca como una fecha o un número únicos. Las fases no permiten predecir el estado de ella (SPM-04; LU-A10), así que la cuenta atrás habla solo de fechas.
+
+| ID | Regla |
+|---|---|
+| CA-01 | Junto a la marca del día actual de la rueda (RU-04), el panel muestra: «La regla podría empezar **dentro de X a Y días**». X e Y son los extremos de la ventana del siguiente inicio de sangrado que calcula el motor (CON-032). Nunca un número único. |
+| CA-02 | Cuando hoy está dentro de esa ventana: «La regla podría empezar **estos días**». |
+| CA-03 | La anchura de la ventana expresa la confianza: es más ancha con pocos ciclos confirmados o con ciclos más variables. La variación de referencia dentro de una misma persona está en JUA-27 §2 (desviación típica de unos 2,6 días). No se muestran porcentajes de probabilidad. |
+| CA-04 | **Ventana superada sin confirmación.** Desde el día siguiente al final de la ventana, si la persona afectada no ha confirmado el inicio, el panel y la rueda muestran `Menstruación estimada · sin confirmar` durante la duración declarada del sangrado o, si no la hay, 5 días (ME-01). El aviso, siempre visible, dice: «Es una estimación: tu pareja no ha confirmado el inicio de la regla». Se muestran las tarjetas de la menstruación, con la misma etiqueta encima para que quede claro que es una estimación sin confirmar. |
+| CA-05 | **Ciclos estimados sin confirmar.** Si termina esa duración y sigue sin confirmación, Consona sigue estimando el ciclo a partir del **último inicio confirmado**, encadenando ciclos con la duración que use el motor (RU-05). La fase, la rueda y la cuenta atrás llevan la etiqueta `estimación sin confirmar` y el aviso «Estimación a partir de la última regla confirmada, hace N ciclos. Es menos fiable con cada ciclo sin confirmar». Nunca se usan «retraso», «tarde», «falta la regla» ni ninguna expresión que sugiera un embarazo. |
+| CA-05b | **Incertidumbre creciente.** Con cada ciclo sin confirmar, la ventana del siguiente inicio se ensancha, porque la variación entre ciclos se acumula (aproximadamente con la raíz cuadrada del número de ciclos encadenados; con la variación de referencia de JUA-27, unos ±5, ±7 y ±9 días tras uno, dos y tres ciclos). El cálculo exacto lo fija y audita el motor (CON-032). |
+| CA-05c | **Ajuste al confirmar.** Cuando ella confirma un inicio, el motor recalcula todo desde esa fecha. Los inicios que solo se estimaron no se guardan como datos ni pasan al calendario como reglas pasadas (CL-02). |
+| CA-05d | **Límite.** Si la incertidumbre llega a un umbral que fija CON-032 (por ejemplo, que la ventana del siguiente inicio ocupe más de media duración de ciclo), Consona deja de mostrar fase, rueda y cuenta atrás y pasa al estado `Datos antiguos` (sección 5). |
+| CA-06 | Junto a la cuenta atrás, siempre: «Es una estimación a partir de sus fechas. No sirve para evitar ni para buscar un embarazo». «Cómo funciona» lo desarrolla. |
+| CA-07 | Sin días fértiles, días seguros, probabilidad de embarazo ni ovulación confirmada (RU-03; H-06). |
+| CA-08 | Sin iconos de aviso, colores de alarma, sonidos, notificaciones ni recordatorios en el dispositivo de quien consulta. La cuenta atrás no cambia el color ni el tono del panel (RU-09). |
+| CA-09 | No se muestra en ningún estado excepcional de la sección 5 ni con anticoncepción que impida estimar fase (igual que IT-03). |
+| CA-10 | La descripción accesible de la rueda (RU-12) incluye la cuenta atrás, por ejemplo: «La regla podría empezar dentro de 3 a 7 días». |
+| CA-11 | El texto exacto de la cuenta atrás, de las estimaciones sin confirmar, del calendario y de sus avisos está en [`home-prevision-v0.1.0.md`](../education/home-prevision-v0.1.0.md), incluido en la revisión clínica de JUA-16 como artefacto A10. |
+
+### 3.4. Calendario de reglas pasadas y previstas *(v1.2.0)*
+
+Pantalla 1.3, con acceso desde «Hoy». Muestra las reglas pasadas que ella ha confirmado y las previstas, con más o menos confianza. Las reglas pasadas son conocimiento que ella decide compartir, no vigilancia: solo se ven si ella da su visto bueno, y desaparecen si lo retira.
+
+| ID | Regla |
+|---|---|
+| CL-01 | Acceso desde «Hoy» con el enlace `Calendario`. No sustituye a la rueda ni a la cuenta atrás. |
+| CL-02 | **Reglas pasadas:** los inicios de sangrado confirmados por la persona afectada y su duración (la declarada o, si no la hay, 5 días, marcada como referencia). Como máximo los **6 últimos ciclos**, para cumplir el «sin historial retrospectivo amplio» de ADR-001. |
+| CL-03 | **Reglas previstas:** la siguiente como intervalo (CA-01) y, como mucho, las dos siguientes, cada una con un intervalo más ancho. La confianza se expresa solo con la anchura (CA-03). |
+| CL-04 | Una regla prevista cuya ventana ya ha pasado sin confirmación aparece como `sin confirmar` (CA-04), y las siguientes se siguen estimando con intervalos más anchos (CA-05, CA-05b). Nunca «retraso». |
+| CL-05 | **Consentimiento propio.** Las reglas pasadas requieren el alcance «historial de reglas», separado del de las fechas actuales y del de la estimación (DA-10). Si ella lo retira, el historial se borra del dispositivo de quien consulta (CON-007, invariantes 3 a 5). Las reglas previstas dependen del alcance de estimación. |
+| CL-06 | El calendario no muestra días fértiles o seguros, ovulación, síntomas, notas, comparaciones con rangos clínicos ni valoraciones de «regularidad» (DA-07). No permite exportar ni compartir. |
+| CL-07 | Lleva el mismo aviso que la cuenta atrás (CA-06). |
+| CL-08 | En los estados de la sección 5 no se muestra, salvo el aviso del estado. Con el consentimiento retirado no se muestra ningún dato anterior. |
+| CL-09 | Tiene una lista textual equivalente para lector de pantalla y se lee bien con el texto ampliado al 200 % (RU-12 a RU-14). |
 
 ## 4. Información obligatoria antes y fuera del panel
 
@@ -169,6 +206,8 @@ La duración del ciclo y la del sangrado se ajustan a lo que indique la persona 
 | DA-07 | Una duración declarada es un dato de la persona afectada, no una medición ni un diagnóstico. La app no la compara con rangos clínicos ni la califica como normal o anormal. |
 | DA-08 | **Frecuencia del consentimiento.** Hay un consentimiento inicial que no se renueva de forma periódica ni se recuerda (ADR-001 §4; CON-007, invariante 7). La persona afectada lo revisa, modifica o retira cuando quiere. Un alcance nuevo, por ejemplo una variable de ADR-002, exige su propio consentimiento; no es una renovación del inicial. |
 | DA-09 | **Registro del consentimiento.** Consona guarda un registro del consentimiento sin la identidad de la persona afectada: solo referencias opacas y rotables, sin nombre, correo, teléfono, cuenta ni datos de ciclo (ADR-001 §2 y C2; CON-008). La revisión jurídica (CON-010, JUA-22) debe confirmar que ese registro basta para acreditar el consentimiento. |
+| DA-10 | **Historial de reglas** *(v1.2.0)*. Es un alcance propio y opcional: permite que el calendario (3.4) muestre los inicios confirmados de los 6 últimos ciclos en el dispositivo de quien consulta. Se acepta o rechaza por separado y su retirada borra el historial de ese dispositivo. |
+| DA-11 | **Confirmación del inicio de la regla** *(v1.2.0)*. Solo la persona afectada confirma un inicio de sangrado, desde su propia app mínima (JUA-41). El aviso que le pide confirmarlo se programa **en su propio dispositivo**, a partir de sus datos, sin que ningún servidor conozca sus fechas; como respaldo, puede haber un aviso genérico periódico que no dependa del ciclo. Nunca por correo, SMS, WhatsApp ni enlaces (CON-008), y nunca lo confirma quien consulta (observación de la pareja, excluida de la v1). Cómo llega la confirmación al dispositivo de quien consulta se decide en la revisión arquitectónica de JUA-28 (DA-05). |
 
 ## 5. Estados que requieren una explicación explícita
 
@@ -177,7 +216,7 @@ La limpieza del panel aplica al estado normal. Cuando el resultado no es apto pa
 | Estado | Presentación requerida | Acción disponible |
 |---|---|---|
 | Datos insuficientes | «Falta información confirmada para mostrar el ciclo.» | Explicar qué fecha pasada puede añadirse, según el consentimiento vigente. |
-| Datos antiguos | «Actualiza el último inicio de sangrado confirmado para continuar.» | Añadir o corregir solo una fecha pasada confirmada. |
+| Datos antiguos | «Hace demasiado tiempo que tu pareja no confirma el inicio de una regla. Consona no puede estimar el ciclo hasta que lo haga.» *(texto de v1.2.0; antes: «Actualiza el último inicio de sangrado confirmado para continuar»)* | Solo ella añade o confirma una fecha, desde su app (DA-11, JUA-41). También se llega aquí por el límite de CA-05d. |
 | Anticoncepción que impide estimar fase | «Con este método no mostramos fases.» | Abrir contenido educativo específico, sin forzar una fase. |
 | Consentimiento retirado o no vigente | «El seguimiento no está disponible.» | No mostrar datos anteriores; ofrecer solo los pasos autorizados para revisar o reactivar el consentimiento. |
 | Patrón local sin evidencia suficiente | No mostrar una conclusión ni una tarjeta de patrón. | Permitir revisar consentimiento y registros solo a quien corresponda, sin sugerir que hay o no síntomas. |
@@ -203,7 +242,8 @@ La home no usa resultados de patrones para modificar el color de la fase o de la
 | Estados excepcionales seguros | Datos antiguos, insuficientes, anticoncepción incompatible, retirada de consentimiento y resultado inválido no muestran una fase, una rueda ni una indicación temporal como si fueran vigentes. |
 | Separación entre motor y home | La prueba confirma que el motor puede ajustar el rango individual con fechas confirmadas, pero que la home no muestra síntomas, observaciones ni inferencias personales. |
 | Tarjetas de orientación | Las tres tarjetas aparecen en cada fase y se prueban para comprobar que orientan a preguntar, escuchar y actuar en primera persona sin atribuir estados a la pareja. |
-| Prevención de vigilancia | No aparecen nombres, historiales extensos, notificaciones, semáforos emocionales, rachas, cuentas atrás ni llamadas a la acción que incentiven vigilar a la pareja. |
+| Prevención de vigilancia | No aparecen nombres, historiales más allá de los 6 ciclos del calendario consentido (3.4), notificaciones, semáforos emocionales, rachas, cuentas atrás distintas de la de 3.3 ni llamadas a la acción que incentiven vigilar a la pareja. |
+| Previsión comprendida como estimación *(v1.2.0)* | La prueba confirma que las personas leen la cuenta atrás y el calendario como intervalos estimados a partir de fechas, que entienden «sin confirmar» y que no los usan para evitar o buscar un embarazo (CA-01 a CA-11, CL-01 a CL-09). |
 
 ## 8. Implicación para desarrollo
 
@@ -227,6 +267,14 @@ El prototipo de JUA-5 (`src/App.jsx`, `src/App.css`) usa datos ficticios. Frente
 Estas diferencias se registran como tareas de implementación y se recogen en el mapa de pantallas (JUA-26).
 
 ## 9. Historial
+
+### [1.2.0] — 12 de noviembre de 2026
+
+- Nueva sección 3.3: cuenta atrás de la siguiente menstruación, siempre en intervalo («dentro de X a Y días», «estos días»); `Menstruación estimada · sin confirmar` al superarse la ventana; después, ciclos estimados sin confirmar a partir del último inicio confirmado, con intervalos que se ensanchan, y `Datos antiguos` al llegar al límite de CON-032. Sin «retraso», sin días fértiles o seguros y con el aviso de que no sirve para evitar ni buscar un embarazo.
+- Nueva sección 3.4: calendario de reglas pasadas (6 últimos ciclos, con consentimiento propio) y previstas (con intervalos que se ensanchan). Resuelve D-19 del mapa de pantallas.
+- RU-10, ME-04, IT-06 y la sección 7 se ajustan a lo anterior. DA-10 (historial de reglas) y DA-11 (confirmación del inicio desde la app de la persona afectada). Texto nuevo del estado `Datos antiguos` y de IT-02, sin «retraso» ni «retrasarse».
+- Los textos exactos van en `docs/education/home-prevision-v0.1.0.md` (artefacto A10 de JUA-16).
+- Requiere el modelo E: no se habilita antes de las puertas de JUA-13 y JUA-22.
 
 ### [1.1.3] — 11 de noviembre de 2026
 

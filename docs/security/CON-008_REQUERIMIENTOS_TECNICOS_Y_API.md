@@ -28,6 +28,19 @@ Esta decisión conserva la prohibición de transferir o sincronizar datos de cic
 
 ---
 
+### 0.1. Cambio de requisito propuesto — app de la persona afectada (12-11-2026)
+
+**Estado: propuesta pendiente de revisión arquitectónica.** No modifica todavía ningún requisito de este documento.
+
+La especificación del panel v1.2.0 (DA-11) y JUA-41 piden que la persona afectada aporte sus datos y confirme cada inicio de regla **desde su propia app mínima**, y que un aviso en su dispositivo le pida esa confirmación. Esto choca con dos requisitos de la sección 0:
+
+| Requisito actual | Choque | Propuesta a estudiar |
+|---|---|---|
+| El dispositivo de control no pide, no muestra y no guarda datos de ciclo; la fecha se introduce en el receptor («Entrada de fecha»). | La app de ella necesita pedir sus fechas, guardarlas para programar el aviso y confirmarlas. | Permitir datos de ciclo en el dispositivo de la persona afectada, que es su titular, y pasarlos al receptor sin que el servicio vea su contenido (revisión arquitectónica de JUA-28). |
+| Sin correo, SMS, URL con token ni enlaces. | Ninguno, si el aviso es local. | Se mantiene: el aviso se programa en el dispositivo de ella. Como respaldo, un aviso genérico periódico que no dependa del ciclo. Nunca un aviso que el servicio envíe en la fecha prevista, porque el servicio sabría cuándo espera ella la regla. |
+
+Por la decisión «Cambio de requisito», el cambio exige una **revisión arquitectónica formal** antes de editar los requisitos, junto con la evaluación de JUA-13 (modelo de amenazas y violencia tecnológica) y la revisión jurídica de JUA-22.
+
 ## 1. Base técnica actual y consecuencia de diseño
 
 | Hallazgo comprobado | Consecuencia para CON-008 |
