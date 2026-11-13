@@ -131,6 +131,9 @@ button { font: inherit; }
 .wsteps .todo { color: var(--muted); }
 .preview { border: 1px dashed var(--line); border-radius: 12px; padding: 10px 12px; display: grid; gap: 4px; font-size: 14px; }
 .preview .pv-title { font-family: var(--display); font-weight: 600; font-size: 15px; }
+.sugbox { border: 2px solid var(--accent-2); border-radius: 12px; padding: 12px; display: grid; gap: 6px; }
+.sugbox.discreta { border: 1px solid var(--line); }
+.sugbox p { font-size: 15px; }
 .wheel text { fill: var(--ink); font-family: var(--display); }
 .wheel .small { fill: var(--muted); font-family: var(--body); }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 12px; justify-content: center; font-size: 12px; color: var(--muted); }
@@ -207,7 +210,7 @@ footer { color: var(--muted); font-size: 14px; max-width: 80ch; display: grid; g
     <h1>Consona: maqueta para revisar</h1>
     <p>Consona es un proyecto piloto, todavía en desarrollo, de una app educativa en castellano y catalán para hombres que quieren entender el ciclo menstrual de su pareja y acompañarla mejor. Con el consentimiento de ella, que decide desde su propia app qué fechas comparte, Consona estima en qué momento del ciclo está y cuándo es probable la próxima regla, siempre como intervalo y nunca como dato seguro. No diagnostica, no sirve como método anticonceptivo y no pretende decir cómo se siente ella: la evidencia muestra que la fase del ciclo no predice el ánimo ni la conducta de una mujer concreta.</p>
     <p>En cada fase, la app ofrece tres tarjetas breves (qué pasa en su cuerpo, qué no asumir y cómo acompañar) y artículos para profundizar, con mensajes que orientan a un profesional o a ayuda urgente cuando hace falta. El contenido se apoya en una revisión de fuentes científicas recientes y necesita la revisión de una profesional sanitaria antes de publicarse. Esta maqueta permite recorrer las dos apps con datos ficticios: mueve el día simulado para ver cómo cambia la pantalla de él y confirma la regla desde la app de ella.</p>
-    <p class="v2note" style="font-size:14.5px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px"><strong>Versión 2 (13-11-2026), de trabajo.</strong> Corrige los fallos que encontró una revisión de producto: la previsión, separada de la rueda y con fechas etiquetadas; la última regla confirmada, en primer plano; sin día del ciclo cuando la estimación no está confirmada; en la app de ella, «Otra fecha» y «Corregir fecha», los estados de la retirada y la vista «Esto es lo que ve tu pareja». Los textos marcados «En revisión» no cambian: son los mismos que revisa la profesional sanitaria.</p>
+    <p class="v2note" style="font-size:14.5px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px"><strong>Versión 2 (13-11-2026), de trabajo.</strong> Corrige los fallos que encontró una revisión de producto: la previsión, separada de la rueda y con fechas etiquetadas; la última regla confirmada, en primer plano; sin día del ciclo cuando la estimación no está confirmada; en la app de ella, «Otra fecha» y «Corregir fecha», los estados de la retirada y la vista «Esto es lo que ve tu pareja». Los textos marcados «En revisión» no cambian: son los mismos que revisa la profesional sanitaria.<br><strong>Actualización del 13-11-2026:</strong> sin avisos fuera de la app. La app de ella muestra sugerencias para registrar la regla al abrirla o volver a ella, con «Ahora no» (7 días), en castellano o catalán. Distingue lo que ella ha enviado de lo que ha recibido él: desactiva la conexión de él y registra una fecha para verlo.</p>
     <div class="legend-box"><span><span class="rev-badge">En revisión</span> texto que se pide revisar</span><span><span class="draft-badge">Borrador · no se revisa</span> texto provisional, solo para entender el recorrido</span></div>
   </header>
 
@@ -223,6 +226,7 @@ footer { color: var(--muted); font-size: 14px; max-width: 80ch; display: grid; g
     <div class="sim-row">
       <label class="toggle" for="ids"><input type="checkbox" id="ids"> Mostrar los códigos de bloque</label>
       <label class="toggle" for="el-online"><input type="checkbox" id="el-online" checked> El móvil de él tiene conexión</label>
+      <label class="toggle" for="lang">Idioma de las sugerencias de ella <select id="lang"><option value="es">castellano</option><option value="ca">català</option></select></label>
       <span class="hint">Prueba: avanza hasta pasada la fecha prevista sin confirmar, o confirma la regla en la app de ella.</span>
     </div>
   </section>
@@ -285,8 +289,17 @@ const DRAFT = `<span class="draft-badge">Borrador · no se revisa</span>`;
 const REV = aid => `<span class="rev-badge">En revisión · ${esc(aid)}</span>`;
 function prv(id, i, vals){ let t = D.prv[id][i||0]; Object.entries(vals||{}).forEach(([k,v]) => { t = t.split("{"+k+"}").join(v); }); return esc(t); }
 
-const INITIAL = () => ({ day: 25, starts: [-90, -60, -30, 0], scopes: {fechas:true, duraciones:true, estimacion:true, historial:true, edad:false}, hormonal: "no", withdrawal: null, elOnline: true, elOnboarded: false, el: {tab:"hoy", page:"onb1"}, ella: {tab:"inicio", page:"inicio"}, ellaUi: {mode:null, err:""}, src: "antes", onbChecks: [false,false] });
+/* starts: fechas de ella, en su móvil. elStarts: lo que ha recibido el móvil de él. sentAt/recvAt: día de envío y de recepción (no son la fecha de inicio). aplaz: «Ahora no». */
+const INITIAL = () => ({ day: 25, starts: [-90, -60, -30, 0], elStarts: [-90, -60, -30, 0], sentAt: 0, recvAt: 0, pendingSend: false, aplaz: null, lang: "es", scopes: {fechas:true, duraciones:true, estimacion:true, historial:true, edad:false}, hormonal: "no", withdrawal: null, elOnline: true, elOnboarded: false, el: {tab:"hoy", page:"onb1"}, ella: {tab:"inicio", page:"inicio"}, ellaUi: {mode:null, err:""}, src: "antes", onbChecks: [false,false] });
 let st = INITIAL();
+const SUGT = /*__SUG__*/null;
+/* Texto de un bloque SUG en el idioma elegido; en catalán, «el 1» y «el 11» pasan a «l'1» y «l'11» */
+const MESOS = ["de gener","de febrer","de març","d'abril","de maig","de juny","de juliol","d'agost","de setembre","d'octubre","de novembre","de desembre"];
+function fdateL(n){ if (st.lang !== "ca") return fdate(n); const d = dt(n); return `${d.getUTCDate()} ${MESOS[d.getUTCMonth()]}`; }
+function sug(id, i, vals){ let t = SUGT[id][st.lang][i||0]; Object.entries(vals||{}).forEach(([k,v]) => { t = t.split("{"+k+"}").join(v); }); if (st.lang === "ca") t = t.replace(/\bel (1|11) /g, "l'$1 "); return esc(t); }
+/* Envío de las fechas de ella al móvil de él: si no tiene conexión, queda pendiente. Él solo ve lo que ha recibido. */
+function enviar(){ st.sentAt = st.day; if (st.elOnline) { st.elStarts = [...st.starts]; st.recvAt = st.day; st.pendingSend = false; } else st.pendingSend = true; }
+function aplicarRetirada(){ st.withdrawal = "aplicada"; st.elStarts = []; st.recvAt = null; st.pendingSend = false; }
 /* Retirada (CON-007): null · "confirmar" (ella revisa lo que implica) · "pendiente" (el móvil de él no la ha recibido) · "aplicada" (bloqueo y borrado en el móvil de él) */
 const elErased = () => st.withdrawal === "aplicada";
 const herWithdrawn = () => st.withdrawal === "pendiente" || st.withdrawal === "aplicada";
@@ -307,13 +320,17 @@ function checkStart(n, ignore){
   return "";
 }
 
-/* ---------- Motor ficticio (simplificación del que fija CON-032) ---------- */
-function engine(){
-  const T = st.day;
-  if (elErased()) return {state:"retirado"};
-  if (!st.scopes.fechas || !st.scopes.estimacion) return {state:"insuficiente"};
+/* ---------- Motor ficticio (simplificación del que fija CON-032) ----------
+   Un solo motor para las dos apps (JUA-48): engine() es lo que ve él, con lo recibido y los alcances compartidos;
+   engineElla() es el de ella, sobre sus propias fechas, sin filtrar por lo que comparte. */
+function engineElla(){ return engine({own: true}); }
+function engine(opt){
+  const T = st.day, own = !!(opt && opt.own);
+  const preview = !!(opt && opt.preview);
+  if (!own && !preview && elErased()) return {state:"retirado"};
+  if (!own && (!st.scopes.fechas || !st.scopes.estimacion)) return {state:"insuficiente"};
   if (st.hormonal === "si") return {state:"anticoncepcion"};
-  const past = st.starts.filter(x => x <= T);
+  const past = (own || preview ? st.starts : st.elStarts).filter(x => x <= T);
   if (!past.length) return {state:"insuficiente"};
   const S = Math.max(...past), d = T - S;
   const win = (center, w) => [center - w, center + w];
@@ -391,7 +408,9 @@ function knownBlock(e){
   const est = e.state !== "normal";
   const main = `Última regla confirmada: ${ago(e)} (${fdate(e.S)})`;
   const sub = est ? "Estimación recalculada hoy, sin confirmaciones nuevas desde entonces." : "La estimación se recalcula cada día a partir de esa fecha.";
-  return `<div class="known ${est ? "alert" : ""}">${DRAFT}<span class="k-main">${esc(main)}</span><span class="k-sub">${esc(sub)}</span></div>`;
+  // Recepción: el móvil de él sí sabe cuándo recibió los datos. Es un momento distinto de la fecha de inicio.
+  const recv = st.recvAt != null ? `<span class="k-sub">Información recibida en este móvil el ${esc(fdate(st.recvAt))}.</span>` : "";
+  return `<div class="known ${est ? "alert" : ""}">${DRAFT}<span class="k-main">${esc(main)}</span>${recv}<span class="k-sub">${esc(sub)}</span></div>`;
 }
 function homeLinks(){ return `<div class="links"><button class="link-btn" type="button" data-el-go="calendario">Calendario</button><button class="link-btn" type="button" data-el-go="como">Cómo funciona</button></div>`; }
 function stateScreen(text, id){ return `<div class="state-box">${DRAFT}${chip(id)}<strong>${esc(text)}</strong></div>`; }
@@ -426,7 +445,7 @@ function elCalendario(){
   let past;
   if (elErased() || !st.scopes.historial) past = `<p style="font-size:15px">Tu pareja no ha compartido sus reglas anteriores.</p>`;
   else {
-    const ps = st.starts.filter(s => s <= st.day).sort((a,b) => b-a).slice(0,6);
+    const ps = st.elStarts.filter(s => s <= st.day).sort((a,b) => b-a).slice(0,6);
     past = ps.map(s => `<div class="calrow">${esc((st.scopes.duraciones ? L[2] : L[3]).replace("{fecha}", fdate(s)).replace("{N}", BLEED))}</div>`).join("");
   }
   let next = "";
@@ -523,16 +542,48 @@ function ellaConfirm(){
       <div class="ella-row"><label for="ella-fecha">Fecha de inicio</label><input type="date" id="ella-fecha" value="${fix ? dayToISO(last) : dayToISO(T)}" min="${dayToISO(T-60)}" max="${dayToISO(T)}">${err}
       <div class="links"><button class="btn primary" type="button" id="ella-fecha-ok">${fix ? "Guardar la corrección" : "Confirmar esta fecha"}</button><button class="btn" type="button" id="ella-cancel">Cancelar</button></div></div></div>`;
   }
-  if (last != null && T - last < 15) return `<div class="draft">${DRAFT}<h2>Tu regla actual</h2><p>Confirmaste que empezó el <strong>${esc(fdate(last))}</strong>. La estimación del móvil de tu pareja se ha actualizado.</p>
-    <div class="links"><button class="btn" type="button" id="ella-corregir">Corregir fecha</button><button class="btn" type="button" id="ella-borrar-conf">Borrar esta confirmación</button></div>${err}</div>`;
-  return `<div class="draft">${DRAFT}<h2>¿Ha empezado tu regla?</h2><p>Si confirmas el inicio, Consona actualiza la estimación en el móvil de tu pareja. Solo tú puedes confirmarlo.</p>
-    <div class="links"><button class="btn primary" type="button" id="ella-hoy">Hoy</button><button class="btn" type="button" id="ella-ayer">Ayer</button><button class="btn" type="button" id="ella-otra">Otra fecha</button></div>${err}
-    ${last != null ? `<p style="font-size:14px">Última regla confirmada: <strong>${esc(fdate(last))}</strong>.</p><button class="link-btn" type="button" id="ella-corregir">Corregir fecha</button>` : ""}</div>`;
+  // Registrar siempre está disponible, sin destacarse: la sugerencia, si toca, va aparte (SUG-01 a SUG-04)
+  if (last != null && T - last < 15) return `<div class="draft">${DRAFT}<h2>Tu regla actual</h2><p>Registraste que empezó el <strong>${esc(fdate(last))}</strong>.</p>
+    <div class="links"><button class="btn" type="button" id="ella-corregir">Corregir fecha</button><button class="btn" type="button" id="ella-borrar-conf">Borrar este registro</button></div>${err}</div>`;
+  return `<div class="draft">${DRAFT}<h2>Registrar una regla</h2><p>Si registras el inicio, se enviará al móvil de tu pareja. Solo tú puedes registrarlo.</p>
+    <div class="links"><button class="btn" type="button" id="ella-hoy">Hoy</button><button class="btn" type="button" id="ella-ayer">Ayer</button><button class="btn" type="button" id="ella-otra">Otra fecha</button></div>${err}</div>`;
 }
-/* Vista pequeña de lo que genera su información en el móvil de él */
+/* Motor local de sugerencias (decisión de producto del 13-11-2026): reutiliza el estado del motor de ella y no calcula
+   nada del ciclo. Se evalúa al abrir la app, al volver a ella y tras cualquier cambio. Mismo contrato que src/motor/sugerencia.js. */
+const DIAS_APLAZAR = 7;
+function sugTipo(){
+  if (herWithdrawn() || !st.scopes.fechas) return null;
+  const e = engineElla(), T = st.day, last = lastStart();
+  let tipo = null;
+  if (e.state === "insuficiente") tipo = "SUG-01";
+  else if (e.state === "normal") tipo = T >= e.win[0] ? "SUG-02" : null;
+  else if (["menstr-est","est","antiguos"].includes(e.state)) tipo = "SUG-03";
+  if (!tipo) return null; // anticoncepción y antes de la ventana: sin sugerencia
+  const a = st.aplaz;
+  if (a && a.tipo === tipo && a.ultimo === last && T < a.hasta) return null; // «Ahora no» para esta sugerencia y este último inicio
+  return tipo;
+}
+function ellaSugerencia(){
+  const tipo = sugTipo(), last = lastStart();
+  if (!tipo) return "";
+  const conFecha = tipo === "SUG-03" || tipo === "SUG-04";
+  const texto = conFecha ? sug(tipo, 0, {fecha: fdateL(last)}) : sug(tipo);
+  return `<div class="sugbox ${tipo === "SUG-02" ? "discreta" : ""}" role="status">${DRAFT}${chip(tipo)}<p>${texto}</p>
+    ${conFecha ? `${chip("SUG-08")}<p class="k-sub">${sug("SUG-08")}</p>` : ""}${chip("SUG-05")}
+    <div class="links"><button class="btn primary" type="button" id="sug-registrar">${sug("SUG-05",0)}</button><button class="btn" type="button" id="sug-ahora-no">${sug("SUG-05",1)}</button>${last != null ? `<button class="btn" type="button" id="sug-corregir">${sug("SUG-05",2)}</button>` : ""}</div></div>`;
+}
+/* Su estado: lo que sabe su móvil (última regla, próxima estimada) y lo que se ha enviado; nunca afirma que él lo haya recibido */
+function ellaEstado(){
+  const last = lastStart(), e = engineElla();
+  if (last == null) return "";
+  const win = (e.state === "normal" || e.state === "est") && e.win ? `${chip("SUG-09")}<span>${sug("SUG-09", 0, {fecha: fdateL(e.win[0]), fecha2: fdateL(e.win[1])})}</span>` : "";
+  const envio = st.sentAt != null ? `${chip("SUG-06")}<span class="k-sub">${sug("SUG-06", 0, {fecha: fdateL(st.sentAt)})}</span>` : `${chip("SUG-06")}<span class="k-sub">${sug("SUG-06", 1)}</span>`;
+  return `<div class="known">${DRAFT}<span class="k-main">Tu última regla registrada: ${esc(fdate(last))}</span>${win}${envio}</div>`;
+}
+/* Previsualización: lo que verá él con lo que ella comparte. No afirma que lo haya recibido (JUA-42) */
 function ellaPreview(){
-  if (st.withdrawal === "pendiente") return `<div class="preview">${DRAFT}<span class="pv-title">Esto es lo que ve tu pareja</span><p>Hasta que su móvil reciba la retirada, puede seguir viendo lo último que tenía.</p></div>`;
-  const e = engine(), L = [];
+  if (st.withdrawal === "pendiente") return `<div class="preview">${DRAFT}<span class="pv-title">${sug("SUG-07")}</span><p>Hasta que su móvil reciba la retirada, puede seguir viendo lo último que tenía.</p></div>`;
+  const e = engine({preview: true}), L = [];
   if (["normal","menstr-est","est"].includes(e.state)) {
     L.push(e.state === "normal" ? `${PH_NAME[e.phase]} · día ${e.cday}` : e.state === "menstr-est" ? D.prv["PRV-04"][0] : D.prv["PRV-05"][0].replace("{Fase}", PH_NAME[e.phase]));
     L.push(`Última regla confirmada: ${ago(e)} (${fdate(e.S)})`);
@@ -542,7 +593,7 @@ function ellaPreview(){
   else if (e.state === "anticoncepcion") L.push("Un aviso: con tu método no se muestran fases.");
   else L.push("Un aviso: no hay información suficiente para mostrar el ciclo.");
   if (st.scopes.historial) L.push("Un calendario con tus 6 últimas reglas.");
-  return `<div class="preview">${DRAFT}<span class="pv-title">Esto es lo que ve tu pareja</span><ul class="wsteps">${L.map(l => `<li>${esc(l)}</li>`).join("")}</ul><p class="k-sub">No ve síntomas, estados de ánimo, notas ni nada sobre tu vida sexual. Lo que compartes lo cambias en «Permisos».</p></div>`;
+  return `<div class="preview">${DRAFT}${chip("SUG-07")}<span class="pv-title">${sug("SUG-07")}</span><ul class="wsteps">${L.map(l => `<li>${esc(l)}</li>`).join("")}</ul><p class="k-sub">No ve síntomas, estados de ánimo, notas ni nada sobre tu vida sexual. Lo que compartes lo cambias en «Permisos».</p></div>`;
 }
 /* Estados de la retirada (CON-007 §6): solicitada, pendiente o aplicada; sin prometer borrado que no se puede confirmar */
 function ellaWState(){
@@ -555,11 +606,9 @@ function ellaWState(){
     <button class="btn" type="button" id="ella-reactivar">Volver a compartir</button><p class="k-sub">Volver a compartir es un consentimiento nuevo: eliges de nuevo qué compartes.</p></div>`;
 }
 function ellaInicio(){
-  const e = engine(), T = st.day;
   if (herWithdrawn()) return ellaWState();
-  const due = ["normal","menstr-est","est","antiguos"].includes(e.state) && (e.state!=="normal" || T >= e.win[0]);
-  const notif = due ? `<div class="notif"><span class="app">CONSONA · TU CONTROL · aviso en tu móvil</span><span>¿Quieres actualizar tus fechas?</span></div>` : "";
-  return `${notif}${ellaConfirm()}${ellaPreview()}
+  // Primero su información y sus acciones; en segundo término, la previsualización. Sin avisos fuera de la app.
+  return `${ellaEstado()}${ellaSugerencia()}${ellaConfirm()}${ellaPreview()}
     <div class="draft"><h2>Tus datos</h2>
     <div class="field"><label for="ella-metodo">¿Usas un método anticonceptivo hormonal?</label><select id="ella-metodo"><option value="no" ${st.hormonal==="no"?"selected":""}>No</option><option value="si" ${st.hormonal==="si"?"selected":""}>Sí</option><option value="nd" ${st.hormonal==="nd"?"selected":""}>Prefiero no decirlo</option></select></div>
     <p style="font-size:14px">Duración habitual del ciclo: 30 días · de la regla: 5 días (datos ficticios).</p></div>`;
@@ -580,6 +629,7 @@ function renderElla(){
 
 /* ---------- Simulador y eventos ---------- */
 function hint(){
+  if (st.pendingSend) return "Ella ha enviado una fecha nueva; el móvil de él aún no la ha recibido y muestra lo anterior.";
   if (st.withdrawal === "pendiente") return "Retirada pendiente: el móvil de él no la ha recibido. Activa su conexión para que se aplique.";
   const e = engine();
   return {normal:"Ciclo confirmado.", "menstr-est":"La fecha prevista ha pasado sin confirmación.", est:"Estimación sin confirmar.", antiguos:"Demasiado tiempo sin confirmar.", anticoncepcion:"Método hormonal: sin fases.", insuficiente:"Faltan datos compartidos.", retirado:"Consentimiento retirado."}[e.state];
@@ -587,6 +637,7 @@ function hint(){
 function renderAll(){
   document.getElementById("sim-day").value = st.day;
   document.getElementById("el-online").checked = st.elOnline;
+  document.getElementById("lang").value = st.lang;
   document.getElementById("sim-today").textContent = fday(st.day);
   document.getElementById("sim-hint").textContent = hint();
   renderEl(); renderElla();
@@ -634,7 +685,7 @@ document.addEventListener("click", ev => {
   if (b.dataset.elGo) { const g = b.dataset.elGo; if (b.dataset.src) st.src = b.dataset.src; if (g==="antes") st.src = "antes"; if (g.startsWith("fase-")) st.src = g.slice(5); if (["hoy","calendario"].includes(g)) st.el.tab = "hoy"; if (["comprender","como","antes","fuentes"].includes(g) || g.startsWith("fase-")) st.el.tab = "comprender"; st.el.page = g; renderEl(); return; }
   if (b.id==="onb-go") { st.elOnboarded = true; st.el = {tab:"hoy", page:"hoy"}; renderEl(); return; }
   if (b.dataset.ellaTab) { st.ella.tab = b.dataset.ellaTab; renderElla(); return; }
-  if (b.id==="ella-hoy" || b.id==="ella-ayer") { const n = b.id==="ella-hoy" ? st.day : st.day-1, err = checkStart(n); st.ellaUi = {mode:null, err}; if (!err) st.starts.push(n); renderAll(); return; }
+  if (b.id==="ella-hoy" || b.id==="ella-ayer") { const n = b.id==="ella-hoy" ? st.day : st.day-1, err = checkStart(n); st.ellaUi = {mode:null, err}; if (!err) { st.starts.push(n); enviar(); } renderAll(); return; }
   if (b.id==="ella-otra") { st.ellaUi = {mode:"otra", err:""}; renderElla(); return; }
   if (b.id==="ella-corregir") { st.ellaUi = {mode:"corregir", err:""}; renderElla(); return; }
   if (b.id==="ella-cancel") { st.ellaUi = {mode:null, err:""}; renderElla(); return; }
@@ -644,13 +695,17 @@ document.addEventListener("click", ev => {
     const n = isoToDay(v), fix = st.ellaUi.mode==="corregir", last = lastStart(), err = checkStart(n, fix ? last : undefined);
     if (err) { st.ellaUi.err = err; renderElla(); return; }
     if (fix) st.starts = st.starts.map(s => s===last ? n : s); else st.starts.push(n);
+    enviar();
     st.ellaUi = {mode:null, err:""}; renderAll(); return;
   }
-  if (b.id==="ella-borrar-conf") { const last = lastStart(); st.starts = st.starts.filter(s => s!==last); st.ellaUi = {mode:null, err:""}; renderAll(); return; }
+  if (b.id==="ella-borrar-conf") { const last = lastStart(); st.starts = st.starts.filter(s => s!==last); enviar(); st.ellaUi = {mode:null, err:""}; renderAll(); return; }
   if (b.id==="ella-retirar") { st.withdrawal = "confirmar"; renderElla(); return; }
   if (b.id==="ella-retirar-no") { st.withdrawal = null; renderElla(); return; }
-  if (b.id==="ella-retirar-ok") { st.withdrawal = st.elOnline ? "aplicada" : "pendiente"; renderAll(); return; }
-  if (b.id==="ella-reactivar") { st.withdrawal = null; renderAll(); return; }
+  if (b.id==="ella-retirar-ok") { st.aplaz = null; if (st.elOnline) aplicarRetirada(); else st.withdrawal = "pendiente"; renderAll(); return; }
+  if (b.id==="ella-reactivar") { st.withdrawal = null; enviar(); renderAll(); return; } // consentimiento nuevo: se envía de nuevo, no se recupera nada
+  if (b.id==="sug-registrar") { st.ellaUi = {mode:"otra", err:""}; renderElla(); return; }
+  if (b.id==="sug-corregir") { st.ellaUi = {mode:"corregir", err:""}; renderElla(); return; }
+  if (b.id==="sug-ahora-no") { st.aplaz = {tipo: sugTipo(), ultimo: lastStart(), hasta: st.day + DIAS_APLAZAR}; renderElla(); return; } // no cambia fechas ni estimaciones
   if (b.dataset.scope) { st.scopes[b.dataset.scope] = b.dataset.val==="1"; renderAll(); return; }
   if (b.dataset.who) { document.getElementById("phones").dataset.show = b.dataset.who; document.querySelectorAll(".who-switch button").forEach(x => x.setAttribute("aria-pressed", String(x===b))); return; }
   if (b.dataset.comment) { openEditor(b.dataset.comment); return; }
@@ -669,8 +724,10 @@ document.addEventListener("change", ev => {
   if (t.id==="onb-a") { st.onbChecks[0] = t.checked; renderEl(); return; }
   if (t.id==="onb-b") { st.onbChecks[1] = t.checked; renderEl(); return; }
   if (t.id==="ella-metodo") { st.hormonal = t.value; renderAll(); return; }
-  if (t.id==="el-online") { st.elOnline = t.checked; if (t.checked && st.withdrawal==="pendiente") st.withdrawal = "aplicada"; renderAll(); return; }
+  if (t.id==="el-online") { st.elOnline = t.checked; if (t.checked && st.withdrawal==="pendiente") aplicarRetirada(); else if (t.checked && st.pendingSend) { st.elStarts = [...st.starts]; st.recvAt = st.day; st.pendingSend = false; } renderAll(); return; }
+  if (t.id==="lang") { st.lang = t.value; renderElla(); return; }
 });
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") renderAll(); }); // al volver a la app se reevalúa
 document.getElementById("sim-day").addEventListener("input", ev => { st.day = Number(ev.target.value); renderAll(); });
 document.getElementById("note-text").addEventListener("input", ev => { if (!editing) return; notes[editing].text = ev.target.value; clearTimeout(editorTimer); editorTimer = setTimeout(() => { saveNotes(); renderNotes(); }, 400); });
 ["q1","q2","q3","q4"].forEach(q => document.getElementById(q).addEventListener("input", ev => { answers[q] = ev.target.value; clearTimeout(editorTimer); editorTimer = setTimeout(saveNotes, 400); }));

@@ -140,5 +140,18 @@ assert set(PRV) == {"PRV-0%d" % i for i in range(1, 9)}, sorted(PRV)
 DATA = {"arts": ARTS, "screens": SCREENS, "cards": CARDS, "prv": PRV}
 tpl = open(TPL, encoding="utf-8").read()
 assert "/*__DATA__*/null" in tpl, "La plantilla no tiene el marcador /*__DATA__*/null"
-open(OUT, "w", encoding="utf-8").write(tpl.replace("/*__DATA__*/null", json.dumps(DATA, ensure_ascii=False)))
+out = tpl.replace("/*__DATA__*/null", json.dumps(DATA, ensure_ascii=False))
+
+# Solo la v2: textos de la app de ella (borrador, fuera del paquete de JUA-16). Cada bloque: {"es": [...], "ca": [...]}; «|» separa variantes.
+if "/*__SUG__*/null" in out:
+    sug_doc = open(os.path.join(ED, "app-ella-sugerencias-v0.1.0.md"), encoding="utf-8").read()
+    SUG = {}
+    for m in re.finditer(r'^### (SUG-\d+) · [^\n]+\n(.*?)(?=^### |^## )', sug_doc, re.M | re.S):
+        langs = {k.lower(): [x.strip() for x in v.split("|")] for k, v in re.findall(r'^> (ES|CA): ([^\n]+)', m.group(2), re.M)}
+        assert set(langs) == {"es", "ca"}, m.group(1)
+        SUG[m.group(1)] = langs
+    assert set(SUG) == {"SUG-0%d" % i for i in range(1, 10)}, sorted(SUG)
+    out = out.replace("/*__SUG__*/null", json.dumps(SUG, ensure_ascii=False))
+
+open(OUT, "w", encoding="utf-8").write(out)
 print("ok", OUT, os.path.getsize(OUT), "bytes")
