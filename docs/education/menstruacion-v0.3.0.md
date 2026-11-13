@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «La menstruación» v0.1.0
+# Consona — Pantalla educativa «La menstruación» v0.3.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío.
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -14,7 +14,7 @@
 
 **Para qué:** entender qué es la menstruación y qué no dice, para acompañar en consonancia sin interpretar, anticipar ni explicar a la otra persona.
 
-Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.4.0.md`, rama de JUA-19, PR #9):
+Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.8.0.md`):
 
 - **T-01:** educativo, no paternalista.
 - **T-02:** la pareja es la autoridad sobre su propia experiencia.
@@ -34,7 +34,7 @@ Y las reglas de sesgo SG-01 a SG-07 de `03-sesgo-genero.md`.
 
 ### Coherencia con las tarjetas de la home
 
-Las tarjetas de la menstruación (`home-cards-menstruation-v0.2.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra antes de publicarse.
+Las tarjetas de la menstruación (`home-cards-menstruation-v0.4.0.md`, JUA-23) resumen esta pantalla. Cualquier cambio en una de las dos se revisa contra la otra antes de publicarse.
 
 ## 3. Reglas de la pantalla
 
@@ -70,21 +70,25 @@ Es un proceso que el cuerpo repite ciclo tras ciclo. Su primer día marca el ini
 
 ### MEN-03 · Cuánto dura
 
-Suele durar unos 5 días, aunque cambia de una persona a otra y de un ciclo a otro. En los primeros días, el flujo suele ser mayor.
+Suele durar unos 5 días, aunque cambia de una mujer a otra y de un ciclo a otro. En los primeros días, el flujo suele ser mayor.
 
-Si tu pareja ha indicado cuánto le suele durar, Consona usa ese dato. Si no, usa 5 días como referencia general.
+### MEN-03b · Lo que ves en Consona
+
+En la rueda del ciclo, la menstruación empieza el día en que tu pareja confirma que le ha venido la regla; una fecha prevista no basta. Dura lo que ella haya indicado o, si no lo ha indicado, 5 días como referencia general. Ese día empieza también un ciclo nuevo y la rueda vuelve al principio.
+
+Los días en que la rueda pasa de una fase a otra los calcula Consona a partir de las fechas. Son una estimación, no el momento en que cambia el cuerpo.
 
 ### MEN-04 · El dolor
 
-El dolor menstrual es muy frecuente: en España, más de siete de cada diez mujeres de 15 a 49 años dicen tener dolor con la regla, y casi la mitad necesita medicación para aliviarlo. Se debe sobre todo a unas sustancias, las prostaglandinas, que hacen que el útero se contraiga con fuerza, y suele ser mayor los primeros días. Algunas personas notan además cansancio u otras molestias; otras no notan nada.
+El dolor menstrual es muy frecuente: en España, más de siete de cada diez mujeres de 15 a 49 años dicen tener dolor con la regla, y casi la mitad necesita medicación para aliviarlo. Se debe sobre todo a unas sustancias, las prostaglandinas, que hacen que el útero se contraiga con fuerza, y suele ser mayor los primeros días. Algunas mujeres notan además cansancio u otras molestias; otras no notan nada.
 
 Que sea frecuente no significa que haya que aguantarlo. Un dolor que impide hacer vida normal, que cambia o que va a más merece consultarse, porque puede tener causas que se pueden tratar. Durante mucho tiempo este dolor se ha tratado como algo normal, también en las consultas, y eso ha retrasado diagnósticos durante años.
 
 ### MEN-05 · Lo que la menstruación no dice
 
-La investigación no muestra que la menstruación cambie la capacidad de concentrarse, razonar o rendir.
+La evidencia científica no muestra que la menstruación cambie la capacidad de concentrarse, razonar o rendir.
 
-El ánimo puede variar a lo largo del ciclo, pero en promedio varía poco, y en el día a día depende mucho más de la salud, del estrés y del apoyo que de la fase. Una media no dice cómo está tu pareja hoy. El estereotipo de que con la regla alguien está irritable o fuera de control no se sostiene, y hace daño: lleva a no tomarse en serio lo que esa persona dice o siente.
+El ánimo puede variar a lo largo del ciclo, pero en promedio varía poco, y en el día a día depende mucho más de la salud, del estrés y del apoyo que de la fase. Una media no dice cómo está tu pareja hoy. El estereotipo de que con la regla una mujer está irritable o fuera de control no se sostiene, y hace daño: lleva a no tomarse en serio lo que esa mujer dice o siente.
 
 ### MEN-06 · Lo que no se suele contar
 
@@ -100,7 +104,7 @@ Algunas preguntas que dejan espacio:
 - «¿Hay algo que te venga bien hoy?»
 - «¿Prefieres que todo siga como siempre?»
 
-Hay cosas que dependen de ti: ocuparte de tu parte en casa sin esperar a que te lo pidan y ajustar los planes según lo que te diga. Hablar de la regla con la misma naturalidad que de cualquier otra cosa, sin bromas ni comentarios, también es hacer tu parte. Si a tu pareja le preocupa su dolor, tomárselo en serio también es acompañar.
+Hay cosas que dependen de ti: hacer tu parte en lo que compartís sin esperar a que te lo pidan y ajustar los planes según lo que te diga. Hablar de la regla con la misma naturalidad que de cualquier otra cosa, sin bromas ni comentarios, también es hacer tu parte. Si a tu pareja le preocupa su dolor, tomárselo en serio también es acompañar.
 
 ### DER-01 · Cuándo puede ayudar un profesional (ver sección 5)
 
@@ -136,7 +140,8 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 | Bloque | Afirmaciones | Base |
 |---|---|---|
 | MEN-02 | Fisiología, desencadenante, reparación y día 1 del ciclo | ME-A01 a ME-A04 |
-| MEN-03 | Duración típica y flujo de los primeros días; uso del dato declarado | ME-A05, ME-A06; M-02 de JUA-23 |
+| MEN-03 | Duración típica y flujo de los primeros días | ME-A05, ME-A06 |
+| MEN-03b | Inicio confirmado, duración declarada o de 5 días, inicio de un ciclo nuevo; límites entre fases calculados por el motor | Especificación del panel v1.1.2: ME-01, ME-04, DA-06, RU-05; motor de estimación CON-032 (ADR-001 C9); M-02 de JUA-23 |
 | MEN-04 | Prevalencia y necesidad de medicación en España, mecanismo, momento del dolor, otras molestias, cuándo consultar y normalización, también en las consultas españolas | ME-A09, ME-A10 (S-26), ME-A12, ME-A16, ME-A19 (S-27) |
 | MEN-05 | Sin cambios cognitivos; variación pequeña del ánimo; estereotipo y su efecto | ME-A13, ME-A15, ME-A17 (S-13, S-21) |
 | MEN-06 | Seguir con dolor sin decirlo; necesidad de faltar frente a faltar de hecho y temor a consecuencias laborales en España; marco legal español | ME-A11 (S-11, S-26); ME-A20 |
@@ -155,6 +160,17 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 | D-05 | DER-02 habla de «compresas o tampones». Hay otros productos (copa, ropa interior absorbente) con los que el criterio de ACOG no se puede aplicar igual. | **Resuelta (06-11-2026):** DER-02 incluye la copa y la ropa interior absorbente. La equivalencia es una adaptación editorial del criterio de ACOG, que solo habla de compresas y tampones; se apoya en que el NHS incluye la copa en su definición de sangrado abundante (revisado el 19-09-2024). La revisión clínica debe validarla. |
 
 ## 8. Historial
+
+### [0.3.0] — 11-11-2026
+
+- MEN-07: «hacer tu parte en lo que compartís» en lugar de «ocuparte de tu parte en casa», para que sirva también si no vivís juntos (D-11 de la pantalla «Antes de la regla»).
+- DER-01 y DER-02 no cambian.
+
+### [0.2.0] — 11-11-2026
+
+- Nuevo bloque MEN-03b «Lo que ves en Consona»: cómo dibuja la rueda del ciclo la menstruación y quién calcula los cambios de fase (CON-032). El uso del dato declarado pasa de MEN-03 a este bloque.
+- «Mujeres» en lugar de «personas» en las afirmaciones generales (D-07 de la pantalla SPM/TDPM).
+- MEN-05: «La evidencia científica» en lugar de «La investigación».
 
 ### [0.1.0] — 05-11-2026
 
