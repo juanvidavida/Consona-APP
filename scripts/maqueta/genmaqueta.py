@@ -2,7 +2,10 @@
 
 Uso, desde la raíz del repositorio:
 
-    python3 -I scripts/maqueta/genmaqueta.py . scripts/maqueta/plantilla-maqueta.html docs/review/jua-16/MAQUETA.html
+    # v1: la maqueta del paquete de revisión clínica (congelada; no se edita su plantilla)
+    python3 -I scripts/maqueta/genmaqueta.py . scripts/maqueta/plantilla-maqueta-v1.html docs/review/jua-16/MAQUETA.html
+    # v2: versión de trabajo, con los fallos de la revisión de producto del 13-11-2026 corregidos
+    python3 -I scripts/maqueta/genmaqueta.py . scripts/maqueta/plantilla-maqueta-v2.html docs/product/maqueta-v2.html
 
 Comprueba el SHA-256 de cada artefacto contra docs/review/jua-16/README.md antes de copiar nada.
 Si un artefacto cambia de versión, hay que actualizar antes su fila y su huella en el README.
