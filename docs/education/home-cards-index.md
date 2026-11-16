@@ -11,14 +11,14 @@
 
 | Fase | Documento | Estado |
 |---|---|---|
-| Menstruación | [`home-cards-menstruation-v0.4.0.md`](./home-cards-menstruation-v0.4.0.md) | Borrador |
-| Fase folicular | [`home-cards-follicular-v0.4.0.md`](./home-cards-follicular-v0.4.0.md) | Borrador |
-| Ventana ovulatoria estimada | [`home-cards-ovulatory-v0.4.0.md`](./home-cards-ovulatory-v0.4.0.md) | Borrador |
+| Menstruación | [`home-cards-menstruation-v0.5.0.md`](./home-cards-menstruation-v0.5.0.md) | Borrador. La v0.4.0 es A3 del paquete de JUA-16 |
+| Fase folicular | [`home-cards-follicular-v0.5.0.md`](./home-cards-follicular-v0.5.0.md) | Borrador. La v0.4.0 es A4 del paquete de JUA-16 |
+| Ventana ovulatoria estimada | [`home-cards-ovulatory-v0.5.0.md`](./home-cards-ovulatory-v0.5.0.md) | Borrador. La v0.4.0 es A5 del paquete de JUA-16 |
 | Fase lútea | [`home-cards-luteal-v0.4.0.md`](./home-cards-luteal-v0.4.0.md) | Borrador, en el paquete de revisión clínica de JUA-16 |
 
 El documento de la fase lútea **no se modificó** en JUA-23. Desde su v0.2.0 (JUA-19, 10-11-2026) aplica también las reglas comunes H-01 a H-08.
 
-Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.5.0.md`](./home-cards-review-pack-v0.5.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase.
+Para revisar las cuatro fases a la vez: [`home-cards-review-pack-v0.5.0.md`](./home-cards-review-pack-v0.5.0.md). Es una copia generada; los cambios se hacen en el documento de cada fase. Recoge las v0.4.0: las v0.5.0 de JUA-49 entrarán en el paquete de la segunda ronda de revisión clínica.
 
 ## 2. Qué conjunto se muestra cada día
 
@@ -48,6 +48,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 | H-06 | Sin fertilidad, «días seguros», probabilidad de embarazo, ovulación confirmada ni cifras en días. Excepciones: la duración de la menstruación, declarada por la persona afectada o de 5 días por defecto (M-02); el intervalo de la fase folicular, «entre 15 y 20 días» contando los días de la regla (F-02); y la duración aproximada de la fase lútea, «unos 12 días» (L-02). Siempre con «suele» y con que la duración cambia. |
 | H-07 | «Qué no asumir» y «Cómo acompañar» hablan de lo que haces tú, no de lo que debe hacer tu pareja. Sin consejos para gestionar, calmar o evitar a tu pareja, ni recomendaciones de salud (medicamentos, calor, ejercicio). |
 | H-08 | Ninguna tarjeta atribuye a la fase energía, ánimo, rendimiento, capacidad ni conducta (`01-cycle-phases`, `08-health-energy`, `12-health-emotional-cognitive` EC-01, EC-02). |
+| H-09 | **Soberanía de ella sobre su experiencia** (16-11-2026, JUA-49). Lo que ella cuenta de cómo vive su ciclo prevalece sobre cualquier dato general, en un sentido o en otro. Se puede proponer organizar actividades o planes teniendo en cuenta la fase o el ciclo cuando nace de una conversación entre los dos y de cómo lo expresa ella: «si ella te ha contado que…», «si lo habéis hablado y ella quiere…». Sigue prohibido recomendarlo a partir de la fase sola, sin que ella lo haya expresado («aprovecha», «como está en la fase…»), y presentar la fase como causa de su estado (H-08; SGL-02). La app no guarda lo que ella cuenta (ADR-002): el texto lo plantea en condicional y quien lo recuerda es él. |
 
 ## 4. Criterios de aceptación de JUA-23
 
@@ -61,6 +62,12 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 8. El documento de la fase lútea sin cambios.
 
 ## 5. Historial
+
+### 16-11-2026 (JUA-49)
+
+- Nueva regla común H-09, soberanía de ella sobre su experiencia: se puede proponer organizarse teniendo en cuenta la fase o el ciclo cuando nace de lo que hablan los dos y de cómo lo expresa ella. SGF-02 se reformula igual.
+- Tarjetas de la menstruación, folicular y ventana ovulatoria en v0.5.0: un gesto práctico en «Cómo acompañar» y, en la folicular, la reformulación de «No hace falta organizar nada en función de su ciclo». La fase lútea no cambia: ya tenía el gesto de flexibilidad.
+- Las v0.4.0 se conservan sin cambios porque son A3, A4 y A5 del paquete de JUA-16. El paquete de revisión no se regenera hasta la segunda ronda.
 
 ### [0.1.0] — 05-11-2026
 
