@@ -31,3 +31,7 @@ landing-servidor/config.php
 *.docx
 .~lock.*#
 ~$*
+
+# Ajustes locales y worktrees de Claude Code: no van a git
+.claude/settings.local.json
+.claude/worktrees/
