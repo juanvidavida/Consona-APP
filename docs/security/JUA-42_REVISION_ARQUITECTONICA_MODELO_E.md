@@ -1,6 +1,6 @@
 # JUA-42 — Revisión arquitectónica del modelo E
 
-**Estado:** borrador de decisión. Respuestas de producto del 17-11-2026 y revisión del 19-11-2026. Pendiente: actualizar las preguntas para la revisión jurídica (§4.6) con estas decisiones.
+**Estado:** borrador de decisión. Respuestas de producto del 17-11-2026 y revisión del 19-11-2026. Preguntas para la revisión jurídica (§4.6) actualizadas el 24-11-2026. Pendiente: decidir el correo de la §7 y quién puede deshacer el vínculo (§4.3, JUA-55).
 **No modifica todavía** ADR-001, la línea base ni CON-008. **No habilita** datos reales, persistencia, emparejamiento ni piloto.
 **Relacionado:** JUA-13 (puerta del modelo E), JUA-28 (formulario de consentimiento), JUA-29 (ADR-003, excepción a ADR-001), JUA-41 (app de ella), JUA-43 (modelo de amenazas), JUA-44 (EIPD y violencia tecnológica), JUA-22 (revisión jurídica), JUA-47 (arquitectura definitiva).
 
@@ -160,24 +160,64 @@ Requisitos mínimos (los detalla CON-015 / JUA-43):
 
 ### 4.6. Preguntas para la revisión jurídica (JUA-22)
 
-> **Pendiente de actualizar** con las decisiones del 19-11 (§1.1, §4.2, §4.3, §4.5, §5 y §7). Versión del 17-11:
+> **Actualizada el 24-11-2026** con las decisiones del 19-11 (§1.1, §4.2, §4.3, §4.5, §5 y §8) y con la desvinculación por parte de él (JUA-55). Sustituye a la versión del 17-11. El correo de la §7 queda fuera hasta que se decida (pregunta 16).
 
-Puntos de partida, por verificar:
+#### Qué se somete a revisión
 
-* **Transmitir ya es tratamiento.** El RGPD llama tratamiento a la transmisión, aunque no se guarde nada (art. 4.2). Las fechas de menstruación son datos de salud (art. 9).
+La primera versión del modelo E, tal como queda tras el 19-11:
+
+* Ella decide en su app qué comparte y da su consentimiento allí, sin cuenta, correo ni identidad. Antes de confirmar, cambiar el consentimiento o borrar, desbloquea su móvil (§5).
+* Cada vez que ella abre su app, sale un sobre cifrado de extremo a extremo, de tamaño fijo, con el estado completo de lo que comparte (§4.1, §4.4).
+* El servidor de Consona guarda solo el último sobre de cada pareja. Lo conserva después de entregarlo, sin caducidad mientras el vínculo esté activo, y lo borra al llegar otro, al retirar ella el consentimiento, al deshacerse el vínculo o tras una inactividad larga (§4.3).
+* El servidor no tiene claves y no puede leer los sobres. Sí ve que llega un sobre y cuándo; no registra la IP (§4.5).
+* El dispositivo de él descifra los datos y calcula la fase en local. Lo que ella borra se borra en el móvil de él la próxima vez que lo abre; en el de ella queda en una papelera local {N} días (§1.1).
+* Cada uno puede hacer una copia cifrada y guardarla donde quiera; Consona no la guarda. La de él no lleva datos de ella (§8).
+
+#### Puntos de partida, por verificar
+
+* **Transmitir ya es tratamiento.** El RGPD llama tratamiento a la transmisión y a la conservación, aunque sea temporal (art. 4.2). Las fechas de menstruación son datos de salud (art. 9).
 * **Datos cifrados.** Para quien tiene las claves (los dispositivos) siguen siendo datos personales. Para el servidor, que no puede descifrarlos, hay debate. Hay jurisprudencia reciente del TJUE sobre el carácter relativo de los datos seudonimizados (C-413/23 P, SEPD contra JUR, 4-9-2025) y unas directrices del CEPD sobre seudonimización (01/2025). Lo prudente es tratarlo como tratamiento de datos de salud y no apoyar el diseño en que no lo sea.
 * **Metadatos.** La IP y el momento del envío pueden ser datos personales por sí solos, e incluso datos de salud si permiten inferir la regla (§4.5).
+* **Sin identificación.** Consona no puede saber quién es nadie: no hay cuenta, correo ni teléfono. Eso reduce riesgos, pero condiciona cómo se acredita el consentimiento y cómo se atienden los derechos.
 
-Preguntas:
+#### Preguntas
 
-1. ¿Qué papel tiene Consona en el relé (responsable del tratamiento) y qué papel tiene el proveedor de alojamiento (encargado, art. 28)? ¿Región y subencargados permitidos?
-2. ¿Basta el consentimiento explícito de ella (art. 9.2.a) dado en su propia app, sin identidad ni cuenta (DA-09)? ¿Cómo se acredita?
-3. ¿Cambia algo que el servidor no pueda descifrar? ¿Reduce obligaciones o solo riesgos?
-4. ¿Las medidas de §4.4 y §4.5 bastan como protección de datos desde el diseño (art. 25) y seguridad (art. 32)?
-5. ¿Qué plazo de inactividad del buzón es defendible (§4.3)?
-6. ¿Cómo se informa a ella del cambio de promesa (§4.2) para que su consentimiento sea informado?
-7. ¿Qué pasa con los datos de él? Él también es usuario y su dispositivo recibe datos de salud de otra persona.
-8. EIPD (art. 35): parece obligatoria (datos de salud, posible situación de vulnerabilidad, tecnología nueva). ¿Qué alcance mínimo tiene antes del piloto?
+**A. Papeles y proveedor**
+
+1. ¿Qué papel tiene Consona en el relé (responsable del tratamiento, art. 4.7) y qué papel tiene el proveedor de alojamiento (encargado, art. 28)? ¿Qué región y qué subencargados son aceptables? Si alguno está fuera del EEE, ¿qué exige el capítulo V?
+2. **Tratamiento en los dispositivos.** La app guarda y calcula datos de salud de ella en el móvil de él, y Consona no puede acceder a ellos. ¿Es Consona responsable de ese tratamiento local porque lo hace su app? ¿Se aplica a él la excepción doméstica (art. 2.2.c)? ¿Cambia algo en el dispositivo de ella, que trata sus propios datos?
+
+**B. Consentimiento e información**
+
+3. ¿Basta el consentimiento explícito de ella (art. 9.2.a) dado en su propia app, sin identidad ni cuenta (DA-09)? ¿Sirve el desbloqueo del dispositivo con passkey (§5) para demostrarlo (art. 7.1), sabiendo que la app solo puede afirmar «confirmado en su dispositivo con su desbloqueo»? ¿Qué registro mínimo hace falta?
+4. **La promesa a ella (§4.2).** «Tú decides qué compartes. Tus datos viajan cifrados de extremo a extremo: nosotros no podemos leerlos», con su «Más información» (qué vemos y qué no, y que guardamos solo el último mensaje). ¿Es exacta y suficiente para un consentimiento informado (arts. 12 y 13)? Sus límites: el servidor ve metadatos, «no podemos leerlos» depende de que la app servida sea la publicada (§4.4, punto 7) y el borrado en el móvil de él espera a que lo abra (§1.1).
+5. **Los datos de él.** Él también es usuario: su dispositivo guarda el vínculo, sus ajustes y los datos de ella que recibe. ¿Qué base jurídica y qué información necesita él?
+
+**C. Datos cifrados y metadatos**
+
+6. ¿Son datos personales los sobres para el servidor, que no puede descifrarlos? Si lo son, ¿que no pueda descifrarlos reduce obligaciones o solo riesgos?
+7. **Aperturas de la app (§4.5).** Con un sobre en cada apertura, el servidor ve cuándo abre ella su app. Como las sugerencias aparecen en el intervalo previsto de la regla (SUG-02), las aperturas pueden concentrarse en esos días. ¿Pueden ser esos metadatos datos de salud? ¿Bastan el tamaño fijo, la referencia rotatoria del buzón y no registrar la IP? ¿Hace falta desde la primera versión un retraso aleatorio o un relé que oculte la IP?
+
+**D. Conservación y supresión**
+
+8. **Buzón (§4.3).** El último sobre se conserva después de entregarlo y no caduca mientras el vínculo esté activo. Se borra tras una inactividad larga (propuesta: 90 días). ¿Es compatible con la limitación del plazo de conservación (art. 5.1.e)? ¿Qué plazo es defendible?
+9. **Borrado (§1.1).** Lo que ella borra se borra en el móvil de él la próxima vez que lo abre, y en el de ella queda {N} días en una papelera local para poder deshacerlo. ¿Cumple el derecho de supresión (art. 17) un borrado que espera a la siguiente apertura? ¿Qué plazo {N} es defendible?
+10. **Desvinculación por parte de él (JUA-55).** Si él deshace el vínculo, ¿qué debe borrarse en su dispositivo y en el servidor, y cómo hay que informar a ella?
+11. **Copias de seguridad (§8).** Cada uno guarda su copia cifrada en su propia nube (Drive, iCloud u otra), fuera del alcance de Consona. La copia de ella puede conservar datos que ella borró después. ¿Qué responsabilidad tiene Consona sobre esas copias y qué hay que informar al crearlas?
+
+**E. Derechos sin identificación**
+
+12. Sin cuenta ni correo, Consona no puede identificar a quien ejerce un derecho (art. 11). ¿Cómo se atienden el acceso, la supresión y la retirada del consentimiento? ¿Basta con que se ejerzan desde la propia app? ¿Qué debe decir la política de privacidad?
+
+**F. Seguridad, EIPD y edad**
+
+13. ¿Bastan las medidas de §4.4, §4.5 y §5 como protección de datos desde el diseño (art. 25) y seguridad (art. 32)?
+14. **EIPD (art. 35).** Parece obligatoria: datos de salud, posible situación de vulnerabilidad y tecnología nueva. ¿Entra en la lista de la AEPD de tratamientos que la requieren? ¿Qué alcance mínimo tiene antes del piloto, y debe incluir la evaluación de violencia tecnológica (JUA-44)?
+15. **Edad.** El piloto es solo para mayores de 18 años y no hay cuenta. ¿Basta la declaración de edad del onboarding?
+
+**G. Pendiente de decisión de producto**
+
+16. **Correo a las tres semanas (§7).** No se pregunta hasta saber su finalidad y su destinatario. Si se elige la alternativa 2 (lista aparte para el seguimiento del piloto), habrá que preguntar por su base jurídica y, si es comercial, por la LSSI (art. 21).
 
 ### 4.7. Opciones comparadas
 
@@ -199,7 +239,7 @@ Preguntas:
 | Opción 3 o 4 | Opción 3 para la primera versión (§4.7). |
 | Emparejamiento | Siempre por el servidor, comprobado con un código corto (§4.4, punto 2). |
 | Correcciones y borrados | Viajan en el siguiente sobre; borrado reversible con papelera local (§1.1). |
-| Orden de trabajo | Actualizar §4.6 y después llevarlo a la revisión jurídica (JUA-22). |
+| Orden de trabajo | Actualizar §4.6 y después llevarlo a la revisión jurídica (JUA-22). *(24-11: §4.6 actualizada; falta llevarla a JUA-22.)* |
 | Cuenta o correo | Fuera de la primera versión. El emparejamiento se hace con un código en la app; CON-008 no cambia en este punto. |
 | Varios dispositivos por persona | Fuera de la primera versión. |
 | Recuperación | Copia cifrada para los dos, en un archivo que cada uno guarda donde quiera, sin pasar por Consona. La de él no lleva datos de ella (§8). |
