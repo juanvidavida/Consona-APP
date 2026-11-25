@@ -1,6 +1,6 @@
 # JUA-42 — Revisión arquitectónica del modelo E
 
-**Estado:** borrador de decisión. Respuestas de producto del 17-11-2026 y revisión del 19-11-2026. Preguntas para la revisión jurídica (§4.6) actualizadas el 24-11-2026. Pendiente: decidir el correo de la §7 y quién puede deshacer el vínculo (§4.3, JUA-55).
+**Estado:** borrador de decisión. Respuestas de producto del 17-11-2026 y revisión del 19-11-2026. Preguntas para la revisión jurídica (§4.6) actualizadas el 24-11-2026. Revisión de producto del 25-11-2026: §4.2 y §8. Pendiente: decidir el correo de la §7 y quién puede deshacer el vínculo (§4.3, JUA-55).
 **No modifica todavía** ADR-001, la línea base ni CON-008. **No habilita** datos reales, persistencia, emparejamiento ni piloto.
 **Relacionado:** JUA-13 (puerta del modelo E), JUA-28 (formulario de consentimiento), JUA-29 (ADR-003, excepción a ADR-001), JUA-41 (app de ella), JUA-43 (modelo de amenazas), JUA-44 (EIPD y violencia tecnológica), JUA-22 (revisión jurídica), JUA-47 (arquitectura definitiva).
 
@@ -95,7 +95,7 @@ En el alta, ella decide en su app qué comparte, da su consentimiento y la app e
 | ADR-001 §2 | El servicio no puede «recibir, inferir, almacenar, indexar, **transmitir** o registrar» datos de ciclo. Ninguna excepción para contenido cifrado. | ADR-003: excepción para transmitir y guardar temporalmente sobres cifrados de extremo a extremo, con las salvaguardas de §4.4 y §4.5. |
 | ADR-001 §4 | Prohíbe «peticiones de seguimiento recurrentes del dispositivo receptor». | ADR-003 debe aclarar que el sobre en cada apertura sale del dispositivo de ella, solo cuando ella abre la app, y no es seguimiento. |
 | Línea base §5 | La comodidad no justifica excepciones distintas de la aprobada. | Justificarla por soberanía y viabilidad (la fuente es ella), no por comodidad. |
-| CON-008 §0 y §2 | Relé de estados técnicos opacos; rechaza cualquier campo de ciclo. | Nuevo tipo de mensaje: sobre opaco de tamaño fijo, y buzón con caducidad. El rechazo de campos semánticos se mantiene: el servidor solo ve el sobre. |
+| CON-008 §0 y §2 | Relé de estados técnicos opacos; rechaza cualquier campo de ciclo. | Nuevo tipo de mensaje: sobre opaco de tamaño fijo, y buzón con borrado por inactividad (§4.3). El rechazo de campos semánticos se mantiene: el servidor solo ve el sobre. |
 | JUA-29 | Excepción limitada al alta a distancia. | Ampliar a alta y confirmaciones, y a toda la vida del vínculo. |
 
 **La promesa a ella (19-11).** Propuesta de producto: «Tú decides sobre tus datos, que van cifrados punto a punto y no podemos leer». Revisión:
@@ -113,7 +113,8 @@ En el alta, ella decide en su app qué comparte, da su consentimiento y la app e
 
 Y en «Más información» del formulario (JUA-28):
 
-> ES: Solo vemos que llega un mensaje cifrado y cuándo, no lo que contiene. Guardamos solo el último, hasta que llega uno nuevo. Si ninguno de los dos abre Consona en {plazo}, lo borramos.
+> ES: Solo vemos que llega un mensaje cifrado y cuándo, no lo que contiene. Guardamos solo el último, hasta que llega uno nuevo. Si ninguno de los dos abre Consona en {plazo}, borramos el mensaje y el vínculo, y para volver a compartir hará falta emparejar de nuevo.
+> CA: Només veiem que arriba un missatge xifrat i quan, no què conté. En guardem només l'últim, fins que n'arriba un de nou. Si cap dels dos obre Consona en {termini}, esborrem el missatge i el vincle, i per tornar a compartir caldrà emparellar-vos de nou.
 
 ### 4.3. Buzón (decidido el 19-11)
 
@@ -263,7 +264,7 @@ La primera versión del modelo E, tal como queda tras el 19-11:
 * **Línea base §5:** justificación de la excepción.
 * **JUA-28:** promesa nueva (§4.2), aviso de borrado (§1.1), alta a distancia con código y petición de bloqueo de pantalla (§5).
 * **JUA-41:** papelera local, sobre en cada apertura, desbloqueo antes de confirmar.
-* **JUA-43 y JUA-44:** correlación entre aperturas y regla, emparejamiento a distancia, desbloqueo forzado, integridad del código servido.
+* **JUA-43 y JUA-44:** correlación entre aperturas y regla, emparejamiento a distancia, desbloqueo forzado, integridad del código servido, uso de la copia de él por otra persona (§8).
 * **JUA-47 (CON-030):** passkey local en PWA, huella de versiones publicadas.
 * **`docs/governance/ruta-critica-modelo-e.md`:** pendiente de actualizar (corte del 2-10-2026).
 
@@ -297,6 +298,8 @@ Sin cuenta ni correo. Cada persona puede hacer una copia cifrada que guarda dond
 | ¿Necesita a la otra persona? | No | No |
 
 **Por qué la copia de él no lleva datos de ella.** Una copia en su nube quedaría fuera del alcance de los borrados y de la retirada del consentimiento de ella (CON-007). Si ella ha retirado el consentimiento, la app de él lo ve al reconectarse y no recibe nada.
+
+**Riesgo residual de la copia de él.** No lleva datos de ella, pero sí la credencial del vínculo. Mientras el vínculo esté activo, quien tenga la copia y su código puede reconectarse y leer el último sobre, es decir, los datos que ella comparte en ese momento. Al recuperar se cierra el acceso del móvil anterior (tabla de arriba): él lo notaría, porque su móvil pierde el acceso; ella, no. Va al modelo de amenazas (JUA-43) y a la evaluación de violencia tecnológica (JUA-44). Se puede valorar que la app de ella avise cuando el dispositivo de él cambia.
 
 **Flujo de copia:**
 
