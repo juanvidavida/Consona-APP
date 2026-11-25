@@ -23,7 +23,7 @@ La misma idea ha tenido consecuencias en la investigación. Las mujeres se han e
 | FS-09 Colenso-Semple 2023 | Sí | Sí | Sí | Sí | Sí | Critica la mala verificación de la fase en la literatura. | Conclusión central sobre el rendimiento. |
 | FS-10 D'Souza 2023 | Sí | Sí | Sí | Sí | Sí | Denuncia la exclusión de las mujeres en la investigación y el uso del ciclo de manual. | Fuente principal del sesgo en la investigación. |
 | FS-12 Rael 2021 (IronFEMME) | Sí | Sí | Sí | Parcial | Sí | Fase verificada en tres pasos. Muestra pequeña de deportistas. | Fuente española sobre el esfuerzo percibido. |
-| FS-14 Taylor 2024 (FENDURA) | Sí | Sí | Sí | Parcial | — | Fase verificada en sangre; deportistas. | Confirma FS-12. |
+| FS-14 Taylor 2024 (FENDURA) | Sí | Sí | Sí | Parcial | — | Fase verificada en sangre; deportistas. Excluye los ciclos alterados y no presenta el ciclo como un problema de rendimiento. Financiación no visible en el resumen. | Complementa FS-12 en variables fisiológicas, no en el esfuerzo percibido. |
 | FS-15 Elliott-Sale 2021 | Sí | Sí | Sí | Sí | Sí | Guía para dejar de excluir a las mujeres. | Marco metodológico. |
 | FS-18 Romans 2013 | Sí | Sí | Sí | Sí | — | Diseñado contra el sesgo: muestra aleatoria y objetivo del estudio oculto, para no inducir respuestas. Señala que la creencia en el ánimo premenstrual está moldeada por expectativas de género. | Fuente principal para población general. |
 | FS-19, FS-20 Kiesner 2016 y 2022 | Sí | Sí | Sí | Parcial | — | Desplazan la atención del «patrón típico» a las diferencias individuales. Solo universitarias. | Diferencias individuales. |

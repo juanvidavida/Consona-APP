@@ -1,0 +1,562 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Maqueta de Consona</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500&family=Sora:wght@500;600;700&display=swap">
+<style>
+/* Maqueta de revisión: simulador del ciclo arriba · dos móviles conectados (él y ella) · comentarios abajo. Paleta tierra del logo de Consona. */
+:root {
+  --bg: #f4ece2; --surface: #fffaf3; --ink: #3b2a1f; --muted: #6e5a4b; --line: #e2d4c3;
+  --accent: #a84a2a; --accent-2: #c9842f; --chip-bg: #3b2a1f; --chip-fg: #f6efe6;
+  --urgent-bg: #f9e4da; --urgent-line: #a84a2a; --note-bg: #f1e7da; --draft: #6a5d9c; --draft-bg: #ece9f6;
+  --phone-bg: #fffdf9; --phone-frame: #2a1e16; --phone-line: #ece1d3; --her-frame: #4a3a2f;
+  --ph-m: #b55b3e; --ph-f: #d4ad78; --ph-o: #c98a34; --ph-l: #8e9a6c;
+  --display: "Sora", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #1b1410; --surface: #251c16; --ink: #f2e7da; --muted: #bba795; --line: #3b2e26;
+  --accent: #e1835f; --accent-2: #e2a65c; --chip-bg: #f2e7da; --chip-fg: #1b1410;
+  --urgent-bg: #3a2119; --urgent-line: #e1835f; --note-bg: #2e231c; --draft: #b9b0e6; --draft-bg: #2b2740;
+  --phone-bg: #211913; --phone-frame: #0d0907; --phone-line: #362a22; --her-frame: #2a201a;
+  --ph-m: #d9785a; --ph-f: #d9b885; --ph-o: #e0a24a; --ph-l: #a7b384; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #1b1410; --surface: #251c16; --ink: #f2e7da; --muted: #bba795; --line: #3b2e26;
+  --accent: #e1835f; --accent-2: #e2a65c; --chip-bg: #f2e7da; --chip-fg: #1b1410;
+  --urgent-bg: #3a2119; --urgent-line: #e1835f; --note-bg: #2e231c; --draft: #b9b0e6; --draft-bg: #2b2740;
+  --phone-bg: #211913; --phone-frame: #0d0907; --phone-line: #362a22; --her-frame: #2a201a;
+  --ph-m: #d9785a; --ph-f: #d9b885; --ph-o: #e0a24a; --ph-l: #a7b384; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-block: 24px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 24px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; line-height: 1.2; margin: 0; }
+p { margin: 0; }
+a { color: var(--accent); }
+button { font: inherit; }
+:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 2px; border-radius: 4px; }
+
+.intro { display: grid; gap: 12px; max-width: 74ch; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.intro h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 700; }
+.intro p { font-size: 16.5px; }
+.legend-box { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 14px; color: var(--muted); }
+.draft-badge { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--draft); background: var(--draft-bg); border: 1px dashed var(--draft); border-radius: 6px; padding: 1px 7px; }
+.rev-badge { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--accent); border: 1px solid var(--accent); border-radius: 6px; padding: 1px 7px; }
+
+/* Simulador */
+.sim { display: grid; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+.sim-row { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+.sim h2 { font-size: 17px; font-weight: 600; }
+.sim .today { font-family: var(--display); font-weight: 600; font-variant-numeric: tabular-nums; }
+.sim input[type=range] { flex: 1 1 220px; accent-color: var(--accent); min-width: 0; }
+.btn { border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 999px; padding: 5px 12px; cursor: pointer; font-size: 14px; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--phone-bg); font-weight: 700; }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+.sim .hint { font-size: 13.5px; color: var(--muted); }
+.toggle { display: inline-flex; gap: 8px; align-items: center; font-size: 14px; cursor: pointer; }
+.toggle input { width: 17px; height: 17px; accent-color: var(--accent); }
+
+/* Móviles */
+.who-switch { display: none; gap: 6px; justify-content: center; }
+.who-switch button { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.who-switch button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+.phones { display: grid; grid-template-columns: repeat(2, minmax(0, 390px)); gap: 28px; justify-content: center; align-items: start; }
+.device { display: grid; gap: 10px; justify-items: center; min-width: 0; }
+.device-title { font-family: var(--display); font-weight: 600; font-size: 15px; text-align: center; }
+.device-title span { display: block; font-family: var(--body); font-weight: 400; font-size: 13px; color: var(--muted); }
+.phone { width: 100%; max-width: 390px; background: var(--phone-frame); border-radius: 38px; padding: 12px; box-shadow: 0 18px 40px -24px rgba(40, 24, 12, .6); }
+.phone.her { background: var(--her-frame); }
+.screen { background: var(--phone-bg); border-radius: 28px; height: min(780px, 82vh); min-height: 560px; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; position: relative; }
+.statusbar { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; color: var(--muted); padding: 10px 22px 4px; }
+.scroll { overflow-y: auto; padding: 8px 18px 24px; display: grid; gap: 14px; align-content: start; }
+.tabbar { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--phone-line); background: var(--phone-bg); }
+.tabbar.two { grid-template-columns: repeat(2, 1fr); }
+.tabbar button { background: none; border: 0; text-align: center; padding: 10px 4px 14px; font-size: 13px; color: var(--muted); font-family: var(--display); font-weight: 500; cursor: pointer; }
+.tabbar button[aria-current="true"] { color: var(--accent); font-weight: 700; }
+.comment-btn { font-size: 14px; }
+
+.back { background: none; border: 0; padding: 0; font-size: 14px; color: var(--accent); font-weight: 700; cursor: pointer; justify-self: start; }
+.s-title { font-size: 24px; font-weight: 700; }
+.s-sub { color: var(--muted); font-size: 15px; margin-top: 4px; }
+.blk { display: grid; gap: 8px; }
+.blk h2 { font-size: 17px; font-weight: 600; }
+.blk p, .blk li { font-size: 15.5px; }
+.blk ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+.note { background: var(--note-bg); border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+.der { border: 2px solid var(--line); border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; background: var(--surface); }
+.der.urgent { border-color: var(--urgent-line); background: var(--urgent-bg); }
+.der p:first-child strong { font-family: var(--display); font-size: 16px; }
+.der ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.inapp { font-weight: 700; }
+.ilink { text-decoration: underline; text-underline-offset: 2px; }
+.link-btn { justify-self: start; font-size: 14px; font-weight: 700; color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.draft { border: 1px dashed var(--draft); border-radius: 14px; padding: 12px 14px; display: grid; gap: 8px; background: var(--draft-bg); }
+.draft h2 { font-size: 16.5px; font-weight: 600; }
+.draft p, .draft li { font-size: 15px; }
+.draft ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+
+.home-head { display: grid; gap: 2px; }
+.home-head .hoy { font-family: var(--display); font-weight: 700; font-size: 24px; }
+.home-head .date { color: var(--muted); font-size: 14px; }
+.state { display: grid; gap: 2px; }
+.state .phase { font-family: var(--display); font-weight: 700; font-size: 20px; }
+.state .cday { font-size: 15px; color: var(--muted); }
+.state .ind { font-size: 14px; background: var(--note-bg); justify-self: start; padding: 2px 10px; border-radius: 999px; margin-top: 4px; }
+.wheel { justify-self: center; width: 210px; max-width: 100%; }
+.wheel text { fill: var(--ink); font-family: var(--display); }
+.wheel .small { fill: var(--muted); font-family: var(--body); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 12px; justify-content: center; font-size: 12px; color: var(--muted); }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; background: var(--c); }
+.cd { display: grid; gap: 4px; text-align: center; }
+.cd .cdt { font-family: var(--display); font-weight: 600; font-size: 16px; }
+.cd .cdn { font-size: 12.5px; color: var(--muted); }
+.estlabel { font-size: 13.5px; background: var(--note-bg); border-radius: 10px; padding: 8px 10px; display: grid; gap: 2px; }
+.estlabel strong { font-family: var(--display); }
+.window { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; justify-content: space-between; border-top: 1px solid var(--phone-line); border-bottom: 1px solid var(--phone-line); padding: 8px 0; font-size: 14.5px; }
+.window .w { font-weight: 700; font-variant-numeric: tabular-nums; }
+.card { border: 1px solid var(--phone-line); background: var(--surface); border-radius: 14px; padding: 12px 14px; display: grid; gap: 6px; }
+.card .pre { font-family: var(--mono); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.card h2 { font-size: 16.5px; font-weight: 600; }
+.card p { font-size: 15px; }
+.state-box { border: 2px solid var(--line); border-radius: 14px; padding: 14px; display: grid; gap: 8px; }
+.state-box strong { font-family: var(--display); font-size: 16px; }
+.idx { display: grid; gap: 8px; }
+.idx h2 { font-size: 13px; font-family: var(--mono); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.idx button { display: block; width: 100%; text-align: left; border: 1px solid var(--phone-line); border-radius: 12px; padding: 10px 12px; color: var(--ink); background: var(--surface); cursor: pointer; font-family: var(--display); font-weight: 600; font-size: 15px; }
+.idx .off { border: 1px dashed var(--phone-line); border-radius: 12px; padding: 10px 12px; color: var(--muted); font-size: 14px; }
+.refs { margin: 0; padding-left: 22px; display: grid; gap: 8px; font-size: 14px; }
+.refs .url { display: block; font-family: var(--mono); font-size: 11.5px; color: var(--muted); word-break: break-all; }
+.calsec { display: grid; gap: 6px; }
+.calsec h2 { font-size: 15px; font-weight: 600; }
+.calrow { border: 1px solid var(--phone-line); background: var(--surface); border-radius: 10px; padding: 8px 12px; font-size: 15px; font-variant-numeric: tabular-nums; }
+.scope { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; align-items: center; border: 1px solid var(--phone-line); background: var(--surface); border-radius: 12px; padding: 10px 12px; }
+.scope .s-name { font-weight: 700; font-size: 15px; }
+.scope .s-desc { font-size: 13.5px; color: var(--muted); grid-column: 1 / 2; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; grid-row: 1 / 3; grid-column: 2; }
+.seg button { border: 0; background: var(--phone-bg); padding: 5px 10px; font-size: 13px; cursor: pointer; color: var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--phone-bg); font-weight: 700; }
+.field { display: grid; gap: 4px; }
+.field label { font-weight: 700; font-size: 14.5px; }
+.field select { font: inherit; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--phone-bg); color: var(--ink); }
+.check { display: flex; gap: 8px; align-items: flex-start; font-size: 15px; }
+.check input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--accent); }
+.notif { border-radius: 14px; background: var(--note-bg); padding: 10px 12px; font-size: 14px; display: grid; gap: 2px; }
+.notif .app { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.progress { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+.bid { display: none; font-family: var(--mono); font-size: 11px; font-weight: 500; background: var(--chip-bg); color: var(--chip-fg); border-radius: 6px; padding: 1px 6px; justify-self: start; }
+.show-ids .bid { display: inline-block; }
+
+/* Comentarios */
+.notes { display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+.notes h2 { font-size: 20px; font-weight: 700; }
+.notes .lead { color: var(--muted); font-size: 15px; max-width: 72ch; }
+.note-editor { display: grid; gap: 6px; }
+.note-editor label { font-weight: 700; font-size: 15px; }
+.note-editor textarea, .q textarea, #copy-fallback { font: inherit; font-size: 15px; width: 100%; min-height: 84px; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--bg); color: var(--ink); resize: vertical; }
+.q-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.q { display: grid; gap: 4px; }
+.q label { font-weight: 700; font-size: 14.5px; }
+.saved-list { display: grid; gap: 6px; margin: 0; padding-left: 20px; font-size: 14.5px; }
+.saved-list .scr { font-weight: 700; }
+.status-line { font-size: 14px; color: var(--muted); }
+footer { color: var(--muted); font-size: 14px; max-width: 80ch; display: grid; gap: 6px; }
+
+@media (max-width: 860px) {
+  .who-switch { display: flex; }
+  .phones { grid-template-columns: minmax(0, 390px); }
+  .phones[data-show="el"] .device.her-dev { display: none; }
+  .phones[data-show="ella"] .device.him-dev { display: none; }
+  .q-grid { grid-template-columns: minmax(0, 1fr); }
+  .screen { height: 680px; }
+}
+@media (prefers-reduced-motion: no-preference) { .scroll { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap" id="app">
+  <header class="intro">
+    <span class="eyebrow">Proyecto piloto en desarrollo · revisión de una profesional sanitaria</span>
+    <h1>Consona: maqueta para revisar</h1>
+    <p>Consona es un proyecto piloto, todavía en desarrollo, de una app educativa en castellano y catalán para hombres que quieren entender el ciclo menstrual de su pareja y acompañarla mejor. Con el consentimiento de ella, que decide desde su propia app qué fechas comparte, Consona estima en qué momento del ciclo está y cuándo es probable la próxima regla, siempre como intervalo y nunca como dato seguro. No diagnostica, no sirve como método anticonceptivo y no pretende decir cómo se siente ella: la evidencia muestra que la fase del ciclo no predice el ánimo ni la conducta de una mujer concreta.</p>
+    <p>En cada fase, la app ofrece tres tarjetas breves (qué pasa en su cuerpo, qué no asumir y cómo acompañar) y artículos para profundizar, con mensajes que orientan a un profesional o a ayuda urgente cuando hace falta. El contenido se apoya en una revisión de fuentes científicas recientes y necesita la revisión de una profesional sanitaria antes de publicarse. Esta maqueta permite recorrer las dos apps con datos ficticios: mueve el día simulado para ver cómo cambia la pantalla de él y confirma la regla desde la app de ella.</p>
+    <div class="legend-box"><span><span class="rev-badge">En revisión</span> texto que se pide revisar</span><span><span class="draft-badge">Borrador · no se revisa</span> texto provisional, solo para entender el recorrido</span></div>
+  </header>
+
+  <section class="sim" aria-labelledby="sim-title">
+    <div class="sim-row"><h2 id="sim-title">Día simulado</h2><span class="today" id="sim-today"></span><span class="hint" id="sim-hint"></span></div>
+    <div class="sim-row">
+      <button class="btn" type="button" data-step="-1">−1 día</button>
+      <input type="range" id="sim-day" min="0" max="130" step="1" aria-label="Día simulado">
+      <button class="btn" type="button" data-step="1">+1 día</button>
+      <button class="btn" type="button" data-step="7">+1 semana</button>
+      <button class="btn" type="button" id="sim-reset">Volver al inicio</button>
+    </div>
+    <div class="sim-row">
+      <label class="toggle" for="ids"><input type="checkbox" id="ids"> Mostrar los códigos de bloque</label>
+      <span class="hint">Prueba: avanza hasta pasada la fecha prevista sin confirmar, o confirma la regla en la app de ella.</span>
+    </div>
+  </section>
+
+  <div class="who-switch" role="group" aria-label="Qué app ver">
+    <button type="button" data-who="el" aria-pressed="true">App de él</button>
+    <button type="button" data-who="ella" aria-pressed="false">App de ella</button>
+  </div>
+
+  <div class="phones" id="phones" data-show="el">
+    <div class="device him-dev">
+      <div class="device-title">Consona<span>la app de quien acompaña</span></div>
+      <div class="phone"><div class="screen" id="screen-el" aria-live="polite"></div></div>
+      <button class="btn comment-btn" type="button" data-comment="el">Comentar esta pantalla</button>
+    </div>
+    <div class="device her-dev">
+      <div class="device-title">Consona · tu control<span>la app mínima de ella</span></div>
+      <div class="phone her"><div class="screen" id="screen-ella" aria-live="polite"></div></div>
+      <button class="btn comment-btn" type="button" data-comment="ella">Comentar esta pantalla</button>
+    </div>
+  </div>
+
+  <section class="notes" aria-labelledby="notes-title" id="notes">
+    <h2 id="notes-title">Tus comentarios</h2>
+    <p class="lead">Pulsa «Comentar esta pantalla» debajo de cualquier móvil y escribe aquí. Los comentarios se guardan solo en este navegador. Cuando termines, pulsa «Copiar mis comentarios» y pégalos en tu respuesta por correo.</p>
+    <div class="note-editor" id="note-editor" hidden>
+      <label for="note-text" id="note-label"></label>
+      <textarea id="note-text" maxlength="4000"></textarea>
+      <div class="links"><button class="btn" type="button" id="note-done">Listo</button><button class="btn" type="button" id="note-native" hidden>Comentar en claude.ai</button></div>
+    </div>
+    <div><h3 style="font-size:16px;margin-bottom:6px">Comentarios por pantalla</h3><ol class="saved-list" id="saved-list"></ol><p class="status-line" id="saved-empty">Todavía no has comentado ninguna pantalla.</p></div>
+    <div class="q-grid">
+      <div class="q"><label for="q1">¿Hay algo incorrecto desde el punto de vista sanitario?</label><textarea id="q1" maxlength="4000"></textarea></div>
+      <div class="q"><label for="q2">¿Hay algo que pueda malinterpretarse o reforzar un estereotipo?</label><textarea id="q2" maxlength="4000"></textarea></div>
+      <div class="q"><label for="q3">¿Falta alguna derivación a un profesional o a ayuda urgente?</label><textarea id="q3" maxlength="4000"></textarea></div>
+      <div class="q"><label for="q4">Impresión general</label><textarea id="q4" maxlength="4000"></textarea></div>
+    </div>
+    <div class="links"><button class="btn primary" type="button" id="copy">Copiar mis comentarios</button><span class="status-line" id="copy-status" role="status"></span></div>
+    <textarea id="copy-fallback" hidden readonly aria-label="Comentarios para copiar"></textarea>
+  </section>
+
+  <footer>
+    <p>Maqueta generada a partir de los textos de los diez artefactos de la revisión clínica (JUA-16), con su huella SHA-256 comprobada. Fechas y datos ficticios; el diseño visual es provisional y los colores de las fases no significan nada sobre el estado de ánimo.</p>
+    <p>La maqueta no envía ni guarda ningún dato fuera de este navegador.</p>
+  </footer>
+</div>
+
+<script>
+const D = /*__DATA__*/null;
+const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+const DIAS = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+const BASE = Date.UTC(2026, 10, 1); // día 0 = 1 de noviembre de 2026 (ficticio)
+const CYCLE = 30, BLEED = 5, W = [2, 5, 7, 9];
+function dt(n){ return new Date(BASE + n*86400000); }
+function fdate(n){ const d = dt(n); return `${d.getUTCDate()} de ${MESES[d.getUTCMonth()]}`; }
+function fday(n){ const d = dt(n); return `${DIAS[d.getUTCDay()]}, ${d.getUTCDate()} de ${MESES[d.getUTCMonth()]}`; }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function chip(id){ return `<span class="bid">${esc(id)}</span>`; }
+const DRAFT = `<span class="draft-badge">Borrador · no se revisa</span>`;
+const REV = aid => `<span class="rev-badge">En revisión · ${esc(aid)}</span>`;
+function prv(id, i, vals){ let t = D.prv[id][i||0]; Object.entries(vals||{}).forEach(([k,v]) => { t = t.split("{"+k+"}").join(v); }); return esc(t); }
+
+const INITIAL = () => ({ day: 25, starts: [-90, -60, -30, 0], scopes: {fechas:true, duraciones:true, estimacion:true, historial:true, edad:false}, hormonal: "no", withdrawn: false, elOnboarded: false, el: {tab:"hoy", page:"onb1"}, ella: {tab:"inicio", page:"inicio"}, src: "antes", onbChecks: [false,false] });
+let st = INITIAL();
+
+/* ---------- Motor ficticio (simplificación del que fija CON-032) ---------- */
+function engine(){
+  const T = st.day;
+  if (st.withdrawn) return {state:"retirado"};
+  if (!st.scopes.fechas || !st.scopes.estimacion) return {state:"insuficiente"};
+  if (st.hormonal === "si") return {state:"anticoncepcion"};
+  const past = st.starts.filter(x => x <= T);
+  if (!past.length) return {state:"insuficiente"};
+  const S = Math.max(...past), d = T - S;
+  const win = (center, w) => [center - w, center + w];
+  // Ciclo confirmado: hasta el último día de la ventana del siguiente inicio
+  if (d <= CYCLE + W[0]) {
+    const cday = d + 1, next = S + CYCLE;
+    return {state:"normal", S, k:0, base:S, cday, phase: phaseOf(Math.min(cday, CYCLE)), next, win: win(next, W[0])};
+  }
+  // Sin confirmación: desde el día siguiente a la ventana, Consona encadena ciclos estimados (CA-04 a CA-05d)
+  const base1 = S + CYCLE + W[0] + 1, j = Math.floor((T - base1) / CYCLE), k = j + 1;
+  if (k >= 3) return {state:"antiguos", S};
+  const base = base1 + j*CYCLE, cday = T - base + 1, next = base + CYCLE;
+  const out = {S, k, base, cday, phase: phaseOf(cday), next, win: win(next, W[Math.min(k,3)])};
+  out.state = (k === 1 && cday <= BLEED) ? "menstr-est" : "est";
+  return out;
+}
+function phaseOf(c){ if (c <= BLEED) return "menstruacion"; if (c <= 16) return "folicular"; if (c <= 19) return "ovulatoria"; return "lutea"; }
+const PH_NAME = {menstruacion:"Menstruación", folicular:"Fase folicular", ovulatoria:"Ventana ovulatoria estimada", lutea:"Fase lútea"};
+const PH_RANGE = {menstruacion:[1,5], folicular:[6,16], ovulatoria:[17,19], lutea:[20,30]};
+
+function wheel(phaseKey, day){
+  const segs = [["menstruacion",1,5,"--ph-m"],["folicular",6,16,"--ph-f"],["ovulatoria",17,19,"--ph-o"],["lutea",20,30,"--ph-l"]];
+  const r = 78, C = 2*Math.PI*r; let arcs = "";
+  segs.forEach(([k,a,b,c]) => {
+    const len = (b-a+1)/CYCLE*C, off = (a-1)/CYCLE*C, op = k===phaseKey ? 1 : .38;
+    if (k==="ovulatoria") {
+      arcs += `<circle cx="100" cy="100" r="${r}" fill="none" stroke="var(${c})" stroke-width="22" stroke-dasharray="${len} ${C}" stroke-dashoffset="${-off}" opacity="${op*.55}" transform="rotate(-90 100 100)"/>`;
+      arcs += `<circle cx="100" cy="100" r="${r}" fill="none" stroke="var(${c})" stroke-width="22" stroke-dasharray="${len*.6} ${C}" stroke-dashoffset="${-(off+len*.2)}" opacity="${op}" transform="rotate(-90 100 100)"/>`;
+    } else arcs += `<circle cx="100" cy="100" r="${r}" fill="none" stroke="var(${c})" stroke-width="22" stroke-dasharray="${Math.max(len-2,0)} ${C}" stroke-dashoffset="${-off-1}" opacity="${op}" transform="rotate(-90 100 100)"/>`;
+  });
+  const dd = Math.min(day, CYCLE), ang = ((dd-0.5)/CYCLE)*2*Math.PI - Math.PI/2;
+  const mx = 100 + r*Math.cos(ang), my = 100 + r*Math.sin(ang);
+  const name = {menstruacion:"Menstruación", folicular:"Folicular", ovulatoria:"Ventana", lutea:"Lútea"}[phaseKey];
+  return `<svg class="wheel" viewBox="0 0 200 200" role="img" aria-label="${esc(`Rueda del ciclo. ${PH_NAME[phaseKey]}, día ${day}.`)}">
+    <circle cx="100" cy="100" r="${r}" fill="none" stroke="var(--phone-line)" stroke-width="22"/>${arcs}
+    <circle cx="${mx.toFixed(1)}" cy="${my.toFixed(1)}" r="8" fill="var(--phone-bg)" stroke="var(--ink)" stroke-width="3"/>
+    <text x="100" y="96" text-anchor="middle" font-size="17" font-weight="700">${name}</text>
+    <text x="100" y="118" text-anchor="middle" font-size="13" class="small">día ${day}</text></svg>
+    <div class="legend"><span style="--c:var(--ph-m)">Menstruación</span><span style="--c:var(--ph-f)">Folicular</span><span style="--c:var(--ph-o)">Ventana ovulatoria</span><span style="--c:var(--ph-l)">Lútea</span></div>`;
+}
+function status(){ return `<div class="statusbar" aria-hidden="true"><span>9:41</span><span>${esc(fdate(st.day))}</span></div>`; }
+
+/* ---------- App de él ---------- */
+function elTabbar(){
+  const t = [["hoy","Hoy"],["comprender","Comprender"],["datos","Datos"]];
+  return `<nav class="tabbar" aria-label="Navegación de la app de él">${t.map(([k,l]) => `<button type="button" data-el-tab="${k}" ${st.el.tab===k?'aria-current="true"':''}>${l}</button>`).join("")}</nav>`;
+}
+function cardsHtml(phase, label){
+  const c = D.cards[phase];
+  return c.cards.map((x,i) => {
+    let h = x.html;
+    if (x.html_declared && st.scopes.duraciones) h = x.html_declared;
+    return `<article class="card">${chip(c.aid+" · tarjeta "+(i+1))}<span class="pre">${esc(x.pre)}</span><h2>${esc(x.title)}</h2>${h}</article>`;
+  }).join("");
+}
+function countdown(e){
+  const T = st.day, [a,b] = e.win;
+  const main = T < a ? `${chip("PRV-01")}<p class="cdt">${prv("PRV-01",0,{X:a-T, Y:b-T})}</p>` : `${chip("PRV-02")}<p class="cdt">${prv("PRV-02")}</p>`;
+  return `<div class="cd">${main}${chip("PRV-03")}<p class="cdn">${prv("PRV-03")}</p></div>`;
+}
+function homeLinks(){ return `<div class="links"><button class="link-btn" type="button" data-el-go="calendario">Calendario</button><button class="link-btn" type="button" data-el-go="como">Cómo funciona</button></div>`; }
+function stateScreen(text, id){ return `<div class="state-box">${DRAFT}${chip(id)}<strong>${esc(text)}</strong></div>`; }
+function elHoy(){
+  const e = engine(), T = st.day;
+  const head = `<div class="home-head"><span class="hoy">Hoy</span><span class="date">${esc(fday(T))}</span></div>`;
+  if (e.state==="retirado") return head + stateScreen("El seguimiento no está disponible.", "Panel §5") + `<p style="font-size:14px;color:var(--muted)">Tu pareja ha retirado su consentimiento. Sus datos se han borrado de este dispositivo.</p>`;
+  if (e.state==="insuficiente") return head + stateScreen("Falta información confirmada para mostrar el ciclo.", "Panel §5");
+  if (e.state==="anticoncepcion") return head + stateScreen("Con este método no mostramos fases.", "Panel §5") + `<button class="link-btn" type="button" data-el-tab="comprender">Ir a Comprender</button>`;
+  if (e.state==="antiguos") return head + `<div class="state-box">${REV("A10")}${chip("PRV-07")}<strong>${prv("PRV-07")}</strong></div>` + homeLinks();
+  const ph = e.phase;
+  let stateHtml, label = "";
+  if (e.state==="menstr-est") {
+    stateHtml = `<span class="phase">${prv("PRV-04",0)}</span><span class="cday">Ciclo · día ${e.cday} · estimación</span>`;
+    label = `<div class="estlabel">${chip("PRV-04")}<strong>${prv("PRV-04",0)}</strong><span>${prv("PRV-04",1)}</span></div>`;
+  } else if (e.state==="est") {
+    const fase = prv("PRV-05",0,{Fase: PH_NAME[ph]});
+    const aviso = e.k===1 ? prv("PRV-05",1,{N:"1"}).replace("hace 1 ciclos","hace un ciclo") : prv("PRV-05",1,{N:e.k});
+    stateHtml = `<span class="phase">${fase}</span><span class="cday">Ciclo · día ${e.cday} · estimación</span>`;
+    label = `<div class="estlabel">${chip("PRV-05")}<strong>${fase}</strong><span>${aviso}</span></div>`;
+  } else stateHtml = `<span class="phase">${esc(PH_NAME[ph])}</span><span class="cday">Ciclo · día ${e.cday}</span>`;
+  const ind = (e.next && T >= e.next-7 && T <= e.next-1 && ph==="lutea") ? `${chip("PRV-06")}<span class="ind">${prv("PRV-06",0)}</span>` : "";
+  const [ra, rb] = PH_RANGE[ph], wtxt = e.state==="menstr-est" ? "" : `<div class="window"><span><span class="w">${esc(fdate(e.base+ra-1))} – ${esc(fdate(e.base+rb-1))}</span> · Actualizado hoy</span><button class="link-btn" type="button" data-el-go="como">Cómo se calcula</button></div>`;
+  const cd = e.state==="menstr-est" ? `<div class="cd">${chip("PRV-03")}<p class="cdn">${prv("PRV-03")}</p></div>` : countdown(e);
+  return head + `<div class="state">${stateHtml}${ind}</div>` + wheel(ph, Math.min(e.cday, CYCLE)) + cd + wtxt + label + REV(D.cards[ph].aid + " · tarjetas") + cardsHtml(ph) + homeLinks();
+}
+function elCalendario(){
+  const e = engine(), L = D.prv["PRV-08"];
+  let past;
+  if (st.withdrawn || !st.scopes.historial) past = `<p style="font-size:15px">Tu pareja no ha compartido sus reglas anteriores.</p>`;
+  else {
+    const ps = st.starts.filter(s => s <= st.day).sort((a,b) => b-a).slice(0,6);
+    past = ps.map(s => `<div class="calrow">${esc((st.scopes.duraciones ? L[2] : L[3]).replace("{fecha}", fdate(s)).replace("{N}", BLEED))}</div>`).join("");
+  }
+  let next = "";
+  if (["normal","menstr-est","est"].includes(e.state)) {
+    const rows = [];
+    if (e.k >= 1) { const c = e.S + CYCLE; rows.push(L[6].replace("{fecha}", fdate(c-W[0])).replace("{fecha}", fdate(c+W[0]))); }
+    const base = e.base;
+    for (let j = 1; j <= 3; j++) { const c = base + CYCLE*j, w = W[Math.min(e.k + j - 1, 3)]; rows.push(L[5].replace("{fecha}", fdate(c-w)).replace("{fecha}", fdate(c+w))); }
+    next = rows.slice(0,3).map(t => `<div class="calrow">${esc(t)}</div>`).join("");
+  } else next = `<p style="font-size:15px;color:var(--muted)">Sin previsión en este estado.</p>`;
+  return `<button class="back" type="button" data-el-go="hoy">← Hoy</button>${REV("A10")}${chip("PRV-08")}<h1 class="s-title">${esc(L[0])}</h1>
+    <div class="calsec"><h2>${esc(L[1])}</h2>${past}</div><div class="calsec"><h2>${esc(L[4])}</h2>${next}</div><p class="cdn" style="font-size:13px;color:var(--muted)">${esc(L[7])}</p>`;
+}
+function renderBlocks(key){
+  const s = D.screens[key];
+  return REV(s.aid) + s.blocks.map(b => {
+    if (b.kind==="title") return `<div class="blk">${chip(b.id)}<h1 class="s-title">${esc(b.title)}</h1>${b.sub?`<p class="s-sub">${esc(b.sub)}</p>`:""}</div>`;
+    if (b.kind==="note") return `<div class="blk">${chip(b.id)}<div class="note">${b.html}</div></div>`;
+    if (b.kind==="der") return `<div class="blk">${chip(b.id)}<div class="der ${b.id==="DER-02"?"urgent":""}">${b.html}</div></div>`;
+    const extra = b.kind==="sources" ? `<button class="link-btn" type="button" data-el-go="fuentes" data-src="${key}">Ver las fuentes de esta pantalla</button>` : "";
+    return `<section class="blk">${chip(b.id)}<h2>${esc(b.title)}</h2>${b.html}${extra}</section>`;
+  }).join("");
+}
+function elComprender(){
+  const phases = [["menstruacion","La menstruación"],["folicular","La fase folicular"],["ovulatoria","La ventana ovulatoria"],["lutea","La fase lútea"]];
+  return `<h1 class="s-title">Comprender</h1>
+    <div class="idx"><h2>El ciclo, fase a fase</h2>${phases.map(([k,n]) => `<button type="button" data-el-go="fase-${k}">${esc(n)}</button>`).join("")}</div>
+    <div class="idx"><h2>Cómo leer la app</h2><button type="button" data-el-go="como">Cómo funciona</button><button type="button" data-el-go="antes">Antes de la regla</button></div>
+    <div class="idx"><h2>Próximos artículos</h2><span class="off">Anticoncepción y búsqueda de embarazo · pendiente</span><span class="off">Cómo hablar con tu pareja · pendiente</span></div>`;
+}
+function elComo(){
+  return `<button class="back" type="button" data-el-go="comprender">← Comprender</button><h1 class="s-title">Cómo funciona</h1>
+    <div class="draft">${DRAFT}
+      <h2>De dónde salen los datos</h2><p>Consona solo usa las fechas que tu pareja decide compartir desde su propia app: cuándo empezó cada regla y, si quiere, cuánto le suelen durar el ciclo y la regla. Tú no puedes introducirlas ni confirmarlas por ella.</p>
+      <h2>Qué es una estimación</h2><p>Con esas fechas, Consona calcula en qué momento del ciclo está y cuándo es probable la próxima regla. Lo muestra como un intervalo, porque la duración del ciclo cambia de una mujer a otra y de un ciclo a otro.</p>
+      <h2>La rueda del ciclo</h2><p>La rueda reparte el ciclo en cuatro rótulos para que sea fácil de leer. Es una simplificación: la menstruación forma parte de la fase folicular y la ovulación es un momento, no una fase.</p>
+      <h2>Lo que no te dice</h2><p>La fase no te dice cómo está tu pareja, qué siente ni qué necesita. Para eso, pregúntale.</p>
+      <h2>Si ella no confirma</h2><p>Si pasa la fecha prevista sin que ella confirme el inicio de la regla, Consona sigue estimando y lo marca como «sin confirmar». Cuanto más tiempo pasa sin confirmar, menos fiable es la estimación.</p>
+      <h2>No es un método anticonceptivo</h2><p>Ninguna estimación por calendario sirve para evitar ni para buscar un embarazo.</p>
+    </div>
+    <button class="link-btn" type="button" data-el-go="antes">Antes de la regla →</button>`;
+}
+function elFuentes(){
+  const s = D.screens[st.src], t = s.blocks.find(b => b.kind==="title");
+  const list = s.refs.map(([n,title,url]) => `<li>${/^\d+$/.test(n)?"":`<span class="bid">${esc(n)}</span> `}${esc(title)}${url?`<span class="url">${esc(url)}</span>`:""}</li>`).join("");
+  const backTo = st.src==="antes" ? "antes" : "fase-"+st.src;
+  return `<button class="back" type="button" data-el-go="${backTo}">← ${esc(t.title)}</button><h1 class="s-title">Fuentes</h1>
+    <div class="draft">${DRAFT}<p>La pantalla de fuentes está pendiente de diseño. Muestra, como texto, las referencias de la pantalla de la que vienes.</p></div><ol class="refs">${list}</ol>`;
+}
+function elDatos(){
+  const names = {fechas:"Fechas de inicio de la regla", duraciones:"Duración habitual del ciclo y de la regla", estimacion:"Estimación de la fase", historial:"Historial de reglas (6 últimos ciclos)", edad:"Franja de edad"};
+  const rows = Object.entries(names).map(([k,n]) => `<div class="calrow">${esc(n)}: <strong>${!st.withdrawn && st.scopes[k] ? "compartido" : "no compartido"}</strong></div>`).join("");
+  return `<h1 class="s-title">Datos</h1><div class="draft">${DRAFT}
+    <h2>Qué ha compartido tu pareja</h2><p>Lo decide ella desde su app, y puede cambiarlo cuando quiera.</p></div>${rows}
+    <div class="draft"><h2>Lo que Consona no registra nunca</h2><ul><li>Síntomas, estados de ánimo ni notas.</li><li>Nombres, ubicación ni contactos.</li><li>Nada sobre la vida sexual.</li></ul><p>Si tu pareja retira un permiso, ese dato se borra de este dispositivo.</p></div>`;
+}
+function elOnboarding(){
+  const p = st.el.page;
+  if (p==="onb1") return `<span class="progress">1 de 3</span><div class="draft">${DRAFT}<h2>Qué es Consona</h2><p>Consona te ayuda a entender el ciclo menstrual de tu pareja para acompañarla mejor.</p><h2>Hace</h2><ul><li>Explica qué pasa en el cuerpo en cada fase.</li><li>Estima en qué momento del ciclo está, con las fechas que ella comparte.</li><li>Te recuerda que preguntar funciona mejor que suponer.</li></ul><h2>No hace</h2><ul><li>No diagnostica.</li><li>No es un método anticonceptivo.</li><li>No te dice cómo se siente ella.</li></ul></div><button class="btn primary" type="button" data-el-go="onb2">Siguiente</button>`;
+  if (p==="onb2") return `<span class="progress">2 de 3</span><div class="draft">${DRAFT}<h2>Cómo calcula</h2><ul><li>Usa las fechas de la regla que ella confirma.</li><li>Muestra intervalos, no días exactos.</li><li>Se actualiza cuando ella confirma una nueva regla.</li><li>Con algunos métodos anticonceptivos no hay fases que mostrar.</li></ul></div><div class="links"><button class="btn" type="button" data-el-go="onb1">Atrás</button><button class="btn primary" type="button" data-el-go="onb3">Siguiente</button></div>`;
+  const [a,b] = st.onbChecks;
+  return `<span class="progress">3 de 3</span><div class="draft">${DRAFT}<label class="check"><input type="checkbox" id="onb-a" ${a?"checked":""}> Tengo 18 años o más.</label><label class="check"><input type="checkbox" id="onb-b" ${b?"checked":""}> He leído cómo calcula Consona.</label><p style="font-size:14px">Esto no sustituye el consentimiento de tu pareja: ella decide desde su propia app qué compartir.</p></div><div class="links"><button class="btn" type="button" data-el-go="onb2">Atrás</button><button class="btn primary" type="button" id="onb-go" ${a&&b?"":"disabled"}>Ir a Hoy</button></div>`;
+}
+function renderEl(){
+  const el = document.getElementById("screen-el"); let body, tabs = true;
+  if (!st.elOnboarded) { body = elOnboarding(); tabs = false; }
+  else {
+    const p = st.el.page;
+    if (p==="hoy") body = elHoy();
+    else if (p==="calendario") body = elCalendario();
+    else if (p==="comprender") body = elComprender();
+    else if (p==="como") body = elComo();
+    else if (p==="antes") body = `<button class="back" type="button" data-el-go="como">← Cómo funciona</button>` + renderBlocks("antes");
+    else if (p.startsWith("fase-")) body = `<button class="back" type="button" data-el-go="comprender">← Comprender</button>` + renderBlocks(p.slice(5));
+    else if (p==="fuentes") body = elFuentes();
+    else body = elDatos();
+  }
+  el.innerHTML = status() + `<div class="scroll">${body}</div>` + (tabs ? elTabbar() : "<div></div>");
+  el.querySelector(".scroll").scrollTop = 0;
+}
+
+/* ---------- App de ella (borrador completo) ---------- */
+function ellaTabbar(){
+  const t = [["inicio","Inicio"],["permisos","Permisos"]];
+  return `<nav class="tabbar two" aria-label="Navegación de la app de ella">${t.map(([k,l]) => `<button type="button" data-ella-tab="${k}" ${st.ella.tab===k?'aria-current="true"':''}>${l}</button>`).join("")}</nav>`;
+}
+function ellaInicio(){
+  const e = engine(), T = st.day;
+  const last = st.starts.filter(s => s <= T).sort((a,b) => b-a)[0];
+  const due = ["normal","menstr-est","est","antiguos"].includes(e.state) && (e.state!=="normal" || T >= e.win[0]);
+  const notif = due ? `<div class="notif"><span class="app">CONSONA · TU CONTROL · aviso en tu móvil</span><span>¿Quieres actualizar tus fechas?</span></div>` : "";
+  if (st.withdrawn) return `<div class="draft">${DRAFT}<h2>Has retirado tu consentimiento</h2><p>Tus datos se han borrado del dispositivo de tu pareja. Puedes volver a compartirlos cuando quieras.</p></div><button class="btn primary" type="button" id="ella-reactivar">Volver a compartir</button>`;
+  const confirmedToday = st.starts.includes(T);
+  return `${notif}<div class="draft">${DRAFT}<h2>¿Ha empezado tu regla?</h2><p>Si confirmas el inicio, Consona actualiza la estimación en el móvil de tu pareja. Solo tú puedes confirmarlo.</p></div>
+    <div class="links"><button class="btn primary" type="button" id="ella-hoy" ${confirmedToday?"disabled":""}>Sí, ha empezado hoy</button><button class="btn" type="button" id="ella-ayer" ${st.starts.includes(T-1)||confirmedToday?"disabled":""}>Empezó ayer</button></div>
+    ${confirmedToday?`<p class="status-line">Confirmado: ${esc(fdate(T))}.</p>`:""}
+    <div class="draft"><h2>Tus fechas</h2><p>Última regla confirmada: <strong>${last!=null?esc(fdate(last)):"ninguna"}</strong>.</p>
+    <div class="field"><label for="ella-metodo">¿Usas un método anticonceptivo hormonal?</label><select id="ella-metodo"><option value="no" ${st.hormonal==="no"?"selected":""}>No</option><option value="si" ${st.hormonal==="si"?"selected":""}>Sí</option><option value="nd" ${st.hormonal==="nd"?"selected":""}>Prefiero no decirlo</option></select></div>
+    <p style="font-size:14px">Duración habitual del ciclo: 30 días · de la regla: 5 días (datos ficticios).</p></div>`;
+}
+function ellaPermisos(){
+  const sc = [["fechas","Fechas de inicio de la regla","Para calcular en qué momento del ciclo estás."],["duraciones","Duración de tu ciclo y de tu regla","Para ajustar la estimación a ti."],["estimacion","Estimación de la fase","Tu pareja ve la fase estimada y la cuenta atrás de la regla."],["historial","Historial de reglas","Tu pareja ve tus 6 últimas reglas en un calendario."],["edad","Franja de edad","Para destacar el contenido educativo que más encaja con tu etapa."]];
+  return `<h1 class="s-title">Lo que compartes</h1><div class="draft">${DRAFT}<p>Tu pareja usa Consona para entender mejor tu ciclo y acompañarte. Tú decides qué compartes y puedes cambiarlo o retirarlo cuando quieras. Tus datos se guardan en tu móvil y en el de tu pareja, nunca en servidores de Consona.</p></div>
+    ${sc.map(([k,n,d]) => `<div class="scope"><span class="s-name">${esc(n)}</span><span class="seg" role="group" aria-label="${esc(n)}"><button type="button" data-scope="${k}" data-val="1" aria-pressed="${st.scopes[k]}">Sí</button><button type="button" data-scope="${k}" data-val="0" aria-pressed="${!st.scopes[k]}">No</button></span><span class="s-desc">${esc(d)}</span></div>`).join("")}
+    <div class="draft"><h2>Lo que tu pareja nunca verá</h2><ul><li>Síntomas, estados de ánimo ni notas.</li><li>Nada sobre tu vida sexual.</li></ul></div>
+    <button class="btn" type="button" id="ella-retirar" ${st.withdrawn?"disabled":""}>Retirar todo y borrar mis datos de su móvil</button>`;
+}
+function renderElla(){
+  const el = document.getElementById("screen-ella");
+  const body = st.ella.tab==="permisos" ? ellaPermisos() : ellaInicio();
+  el.innerHTML = status() + `<div class="scroll">${body}</div>` + ellaTabbar();
+}
+
+/* ---------- Simulador y eventos ---------- */
+function hint(){
+  const e = engine();
+  return {normal:"Ciclo confirmado.", "menstr-est":"La fecha prevista ha pasado sin confirmación.", est:"Estimación sin confirmar.", antiguos:"Demasiado tiempo sin confirmar.", anticoncepcion:"Método hormonal: sin fases.", insuficiente:"Faltan datos compartidos.", retirado:"Consentimiento retirado."}[e.state];
+}
+function renderAll(){
+  document.getElementById("sim-day").value = st.day;
+  document.getElementById("sim-today").textContent = fday(st.day);
+  document.getElementById("sim-hint").textContent = hint();
+  renderEl(); renderElla();
+}
+function screenKey(who){ if (who==="ella") return "ella:"+st.ella.tab; return "el:"+(st.elOnboarded ? st.el.page : st.el.page); }
+const LABELS = {"el:hoy":"Él · Hoy","el:calendario":"Él · Calendario","el:comprender":"Él · Comprender","el:como":"Él · Cómo funciona","el:antes":"Él · Antes de la regla","el:fuentes":"Él · Fuentes","el:datos":"Él · Datos","el:onb1":"Él · Inicio 1 de 3","el:onb2":"Él · Inicio 2 de 3","el:onb3":"Él · Inicio 3 de 3","el:fase-menstruacion":"Él · La menstruación","el:fase-folicular":"Él · La fase folicular","el:fase-ovulatoria":"Él · La ventana ovulatoria","el:fase-lutea":"Él · La fase lútea","ella:inicio":"Ella · Inicio y confirmar la regla","ella:permisos":"Ella · Lo que compartes"};
+function labelFor(key){ let l = LABELS[key] || key; if (key==="el:hoy") { const e = engine(); l += ` (${fdate(st.day)}, ${hint().replace(/\.$/,"").toLowerCase()})`; } return l; }
+
+let notes = {}, answers = {q1:"",q2:"",q3:"",q4:""}, editing = null, commentsCap = null, editorTimer = null;
+function loadNotes(){ try { const v = JSON.parse(localStorage.getItem("consona-maqueta-notas") || "null"); if (v) { notes = v.notes || {}; answers = Object.assign(answers, v.answers || {}); } } catch(e) {} }
+function saveNotes(){ try { localStorage.setItem("consona-maqueta-notas", JSON.stringify({notes, answers})); } catch(e) {} }
+function renderNotes(){
+  const ol = document.getElementById("saved-list"), keys = Object.keys(notes).filter(k => notes[k].text.trim());
+  ol.innerHTML = keys.map(k => `<li><span class="scr">${esc(notes[k].label)}</span>: ${esc(notes[k].text)}</li>`).join("");
+  document.getElementById("saved-empty").hidden = keys.length > 0;
+  ["q1","q2","q3","q4"].forEach(q => { const t = document.getElementById(q); if (document.activeElement !== t) t.value = answers[q]; });
+}
+function openEditor(who){
+  const key = screenKey(who), label = labelFor(key);
+  editing = key;
+  if (!notes[key]) notes[key] = {label, text:""}; else notes[key].label = label;
+  const ed = document.getElementById("note-editor"); ed.hidden = false;
+  document.getElementById("note-label").textContent = "Comentario sobre: " + label;
+  const ta = document.getElementById("note-text"); ta.value = notes[key].text;
+  document.getElementById("note-native").hidden = !commentsCap;
+  document.getElementById("note-native").dataset.who = who;
+  ed.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center"});
+  ta.focus();
+}
+function buildCopy(){
+  const lines = ["Comentarios sobre la maqueta de Consona", ""];
+  Object.values(notes).filter(n => n.text.trim()).forEach(n => { lines.push("· " + n.label + ": " + n.text.trim()); });
+  const Q = {q1:"¿Algo incorrecto desde el punto de vista sanitario?", q2:"¿Algo que pueda malinterpretarse o reforzar un estereotipo?", q3:"¿Falta alguna derivación?", q4:"Impresión general"};
+  lines.push("");
+  Object.entries(Q).forEach(([k,q]) => { if (answers[k].trim()) { lines.push(q); lines.push(answers[k].trim()); lines.push(""); } });
+  return lines.join("\n").trim();
+}
+
+document.addEventListener("click", ev => {
+  const b = ev.target.closest("button, a"); if (!b) return;
+  if (b.matches("a[data-go]")) { ev.preventDefault(); st.el.page = "antes"; st.el.tab = "comprender"; renderEl(); return; }
+  if (b.dataset.step) { st.day = Math.max(0, Math.min(130, st.day + Number(b.dataset.step))); renderAll(); return; }
+  if (b.id==="sim-reset") { const keep = st.elOnboarded; st = INITIAL(); st.elOnboarded = keep; if (keep) st.el = {tab:"hoy", page:"hoy"}; renderAll(); return; }
+  if (b.dataset.elTab) { st.el.tab = b.dataset.elTab; st.el.page = b.dataset.elTab; renderEl(); return; }
+  if (b.dataset.elGo) { const g = b.dataset.elGo; if (b.dataset.src) st.src = b.dataset.src; if (g==="antes") st.src = "antes"; if (g.startsWith("fase-")) st.src = g.slice(5); if (["hoy","calendario"].includes(g)) st.el.tab = "hoy"; if (["comprender","como","antes","fuentes"].includes(g) || g.startsWith("fase-")) st.el.tab = "comprender"; st.el.page = g; renderEl(); return; }
+  if (b.id==="onb-go") { st.elOnboarded = true; st.el = {tab:"hoy", page:"hoy"}; renderEl(); return; }
+  if (b.dataset.ellaTab) { st.ella.tab = b.dataset.ellaTab; renderElla(); return; }
+  if (b.id==="ella-hoy") { if (!st.starts.includes(st.day)) st.starts.push(st.day); renderAll(); return; }
+  if (b.id==="ella-ayer") { if (!st.starts.includes(st.day-1)) st.starts.push(st.day-1); renderAll(); return; }
+  if (b.id==="ella-retirar") { st.withdrawn = true; renderAll(); return; }
+  if (b.id==="ella-reactivar") { st.withdrawn = false; renderAll(); return; }
+  if (b.dataset.scope) { st.scopes[b.dataset.scope] = b.dataset.val==="1"; renderAll(); return; }
+  if (b.dataset.who) { document.getElementById("phones").dataset.show = b.dataset.who; document.querySelectorAll(".who-switch button").forEach(x => x.setAttribute("aria-pressed", String(x===b))); return; }
+  if (b.dataset.comment) { openEditor(b.dataset.comment); return; }
+  if (b.id==="note-done") { document.getElementById("note-editor").hidden = true; editing = null; renderNotes(); return; }
+  if (b.id==="note-native") { const target = document.querySelector(b.dataset.who==="ella" ? ".phone.her" : ".phone:not(.her)"); commentsCap && commentsCap.openComposer({element: target}).catch(() => { b.hidden = true; }); return; }
+  if (b.id==="copy") {
+    const text = buildCopy(), status = document.getElementById("copy-status"), fb = document.getElementById("copy-fallback");
+    const fallback = () => { fb.hidden = false; fb.value = text; fb.focus(); fb.select(); status.textContent = "Selecciona el texto de abajo y cópialo."; };
+    try { navigator.clipboard.writeText(text).then(() => { status.textContent = "Copiado. Pégalo en tu respuesta por correo."; fb.hidden = true; }, fallback); } catch(e) { fallback(); }
+    return;
+  }
+});
+document.addEventListener("change", ev => {
+  const t = ev.target;
+  if (t.id==="ids") { document.getElementById("app").classList.toggle("show-ids", t.checked); return; }
+  if (t.id==="onb-a") { st.onbChecks[0] = t.checked; renderEl(); return; }
+  if (t.id==="onb-b") { st.onbChecks[1] = t.checked; renderEl(); return; }
+  if (t.id==="ella-metodo") { st.hormonal = t.value; renderAll(); return; }
+});
+document.getElementById("sim-day").addEventListener("input", ev => { st.day = Number(ev.target.value); renderAll(); });
+document.getElementById("note-text").addEventListener("input", ev => { if (!editing) return; notes[editing].text = ev.target.value; clearTimeout(editorTimer); editorTimer = setTimeout(() => { saveNotes(); renderNotes(); }, 400); });
+["q1","q2","q3","q4"].forEach(q => document.getElementById(q).addEventListener("input", ev => { answers[q] = ev.target.value; clearTimeout(editorTimer); editorTimer = setTimeout(saveNotes, 400); }));
+
+loadNotes(); renderAll(); renderNotes();
+if (window.claude && claude.use) claude.use("comments").then(c => { commentsCap = c; }).catch(() => {});
+</script>
+
+</body></html>

@@ -182,6 +182,6 @@ Cuando se solicite expresamente, la investigación deberá completar primero las
 
 ## Referencias
 
-[1]: ./CONSONA_LINEA_BASE_Y_BACKLOG.md "Consona — Línea base de desarrollo y backlog unificado"
-[2]: ./CONSONA_ADR-002_APRENDIZAJE_LOCAL_Y_VARIABILIDAD_PREMENSTRUAL.md "Consona — ADR-002: Aprendizaje local sobre variabilidad premenstrual"
-[3]: ./CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md "Consona — Especificación UX del panel principal"
+[1]: ../../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_LINEA_BASE_Y_BACKLOG.md "Consona — Línea base de desarrollo y backlog unificado"
+[2]: ../../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_ADR-002_APRENDIZAJE_LOCAL_Y_VARIABILIDAD_PREMENSTRUAL.md "Consona — ADR-002: Aprendizaje local sobre variabilidad premenstrual"
+[3]: ../../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md "Consona — Especificación UX del panel principal"

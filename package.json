@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "validate:taxonomy": "node scripts/validate-taxonomy-fixtures.mjs",
+    "test:motor": "node --test src/motor/",
     "preview": "vite preview"
   },
   "dependencies": {

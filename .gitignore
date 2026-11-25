@@ -25,3 +25,9 @@ dist-ssr
 
 # Credenciales del formulario de la landing (solo en el servidor)
 landing-servidor/config.php
+
+# Copias de trabajo de LibreOffice y Word (comentarios y metadatos de autoría): no van a git
+*.odt
+*.docx
+.~lock.*#
+~$*
