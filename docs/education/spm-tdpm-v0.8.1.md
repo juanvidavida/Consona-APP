@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) v0.8.0
+# Consona — Pantalla educativa «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) v0.8.1
 
 **Estado:** Borrador para revisión de producto. **Incluida en el paquete de revisión clínica de JUA-16**, pendiente de envío.
 **Incidencia:** JUA-19 (CON-027). Su versión aprobada será el artefacto que revise JUA-16 (ADR-002 P7).
@@ -39,7 +39,7 @@ La home muestra el día del ciclo, la fase estimada y tres tarjetas de orientaci
 | ID | Regla de coherencia |
 |---|---|
 | C-01 | En los días premenstruales estimados, las tarjetas de la home no nombran SPM ni TDPM y no presentan cambios emocionales o físicos como algo que la pareja vaya a tener o esté teniendo. |
-| C-02 | Si una tarjeta de la home menciona variabilidad premenstrual, usa el mismo marco que SPM-02 y SPM-04: «algunas personas», «puede», información general, no predicción. |
+| C-02 | Si una tarjeta de la home menciona variabilidad premenstrual, usa el mismo marco que SPM-02 y SPM-04: «algunas mujeres», «puede», información general, no predicción. |
 | C-03 | La home no cambia su texto, color ni tarjetas para dirigir a esta pantalla en función de la fase (U-02, U-03). Los únicos caminos son los dos enlaces estáticos de U-01. |
 | C-04 | Cualquier cambio en las tarjetas de la home asociadas a la fase lútea o a los días premenstruales se revisa contra esta pantalla antes de publicarse. Ver D-05. |
 
@@ -127,7 +127,7 @@ Lo que necesite puede cambiar de un ciclo a otro, o no tener nada que ver con el
 
 ### SPM-08 · Fuentes
 
-Esta información se basa en un estudio realizado en Barcelona sobre el estigma de la menstruación (2022), guías del NICE (Reino Unido, 2024), del Colegio Americano de Obstetras y Ginecólogos (2023 y 2025) y del NHS (2024), un metaanálisis sobre la frecuencia del trastorno disfórico premenstrual (2024), estudios de registro diario del ánimo (2012 a 2021), un metaanálisis sobre el ciclo y las capacidades cognitivas (2025) un estudio sobre lo que piensan los hombres de la menstruación (2017) y un ensayo clínico que incluyó a la pareja en la atención a los síntomas premenstruales intensos (2017). Las referencias completas están disponibles en «Fuentes».
+Esta información se basa en un estudio realizado en Barcelona sobre el estigma de la menstruación (2022), guías del NICE (Reino Unido, 2024), del Colegio Americano de Obstetras y Ginecólogos (2023 y 2025) y del NHS (2024), un metaanálisis sobre la frecuencia del trastorno disfórico premenstrual (2024), estudios de registro diario del ánimo (2012 a 2021), un metaanálisis sobre el ciclo y las capacidades cognitivas (2025), un estudio sobre lo que piensan los hombres de la menstruación (2017) y un ensayo clínico que incluyó a la pareja en la atención a los síntomas premenstruales intensos (2017). Las referencias completas están disponibles en «Fuentes».
 
 ## 5. Mensajes de derivación
 
@@ -174,7 +174,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 
 ## 7. Exclusiones comprobadas
 
-Lista para comprobar en cada versión. La v0.8.0 no contiene:
+Lista para comprobar en cada versión. La v0.8.1 no contiene:
 
 - [x] Diagnóstico, clasificación, «posible SPM/TDPM», puntuaciones, umbrales, semáforos ni probabilidades individuales.
 - [x] Listas de criterios clínicos o de diagnósticos diferenciales presentadas como autoevaluación o como guía para evaluar a la pareja.
@@ -207,6 +207,12 @@ Lista para comprobar en cada versión. La v0.8.0 no contiene:
 | D-11 | SPM-07 daba por hecho que la pareja vive junta («el ambiente que compartís», «las tareas y el descanso»). | **Resuelta (11-11-2026):** «lo que compartís, sean tareas, planes o tiempo» y «el ambiente cuando estáis juntos». Mismo criterio en MEN-07, LUT-07 y la tarjeta «Cómo acompañar» de la menstruación. |
 
 ## 9. Historial
+
+### [0.8.1] — Erratas (25-11-2026)
+
+- SPM-08: se añade la coma que faltaba antes de «un estudio sobre lo que piensan los hombres».
+- C-02: «algunas mujeres», como T-04 (D-07).
+- DER-01 y DER-02 no cambian.
 
 ### [0.8.0] — Parejas que no viven juntas (11-11-2026)
 

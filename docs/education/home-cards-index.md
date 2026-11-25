@@ -42,7 +42,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 |---|---|
 | H-01 | Las tres tarjetas son las mismas durante toda la fase. No cambian según el día del ciclo, la cercanía de la menstruación ni ningún dato local. Única excepción: la duración de la menstruación en su «Qué pasa en su cuerpo» (M-02). |
 | H-02 | Las tarjetas no nombran diagnósticos (SPM, TDPM, dismenorrea, endometriosis, anemia u otros) y no presentan cambios físicos o emocionales como algo que tu pareja vaya a tener o esté teniendo (C-01). |
-| H-03 | Cualquier mención de variabilidad usa «algunas personas», «puede» e información general (C-02). |
+| H-03 | Cualquier mención de variabilidad usa «algunas mujeres», «puede» e información general (C-02). |
 | H-04 | Las tarjetas no enlazan directamente a la pantalla SPM/TDPM ni cambian de color o de tono según la fase (C-03, U-03). |
 | H-05 | Ninguna tarjeta menciona ni sugiere deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad. |
 | H-06 | Sin fertilidad, «días seguros», probabilidad de embarazo, ovulación confirmada ni cifras en días. Excepciones: la duración de la menstruación, declarada por la persona afectada o de 5 días por defecto (M-02); el intervalo de la fase folicular, «entre 15 y 20 días» contando los días de la regla (F-02); y la duración aproximada de la fase lútea, «unos 12 días» (L-02). Siempre con «suele» y con que la duración cambia. |
@@ -62,6 +62,10 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 8. El documento de la fase lútea sin cambios.
 
 ## 5. Historial
+
+### 25-11-2026
+
+- H-03 dice «algunas mujeres» (D-07). M-03 cambia igual en las tarjetas v0.4.0 y v0.5.0 de la menstruación; el texto de las tarjetas no cambia.
 
 ### 16-11-2026 (JUA-49)
 

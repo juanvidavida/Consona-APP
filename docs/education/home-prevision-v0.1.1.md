@@ -1,9 +1,9 @@
-# Consona — Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario v0.1.0
+# Consona — Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario v0.1.1
 
 **Issues:** JUA-30 (prototipo, D-23) y JUA-41 (confirmación desde la app de la persona afectada).
 **Estado:** Borrador para revisión de producto. **Incluido en el paquete de revisión clínica de JUA-16** (artefacto A10), pendiente de envío.
 **Reglas:** especificación del panel v1.2.0, §3.3 (CA-01 a CA-11), §3.4 (CL-01 a CL-09), IT-02 y §5 ([`panel-principal-v1.1.0.md`](../product/panel-principal-v1.1.0.md)).
-**Público y tono:** los de la sección 1 de [`spm-tdpm-v0.8.0.md`](./spm-tdpm-v0.8.0.md): la pareja que acompaña, en segunda persona, sin paternalismo.
+**Público y tono:** los de la sección 1 de [`spm-tdpm-v0.8.1.md`](./spm-tdpm-v0.8.1.md): la pareja que acompaña, en segunda persona, sin paternalismo.
 **No habilita:** datos reales, persistencia, avisos ni cambios del motor de estimación. Con datos reales depende del modelo E (JUA-13, JUA-22) y de JUA-41.
 
 > Este documento fija el texto exacto que se mostrará en la pantalla de inicio y en el calendario sobre la próxima regla. Las llaves `{…}` son valores que calcula el motor (CON-032); no se muestran tal cual. Cualquier cambio exige una nueva versión.
@@ -64,7 +64,7 @@
 
 **Dónde:** en lugar de la fase, la rueda y la cuenta atrás, cuando la incertidumbre supera el límite de CON-032 (CA-05d, sección 5).
 
-> Hace demasiado tiempo que tu pareja no confirma el inicio de una regla. Consona no puede estimar el ciclo hasta que lo haga.
+> No hay una regla confirmada reciente, así que Consona no puede estimar el ciclo ahora.
 
 ### PRV-08 · Calendario
 
@@ -92,7 +92,7 @@ Variantes:
 | Bloque | Afirmación | Base |
 |---|---|---|
 | PRV-01, PRV-02 | La próxima regla se puede estimar en un intervalo a partir de la duración de los ciclos. | JUA-27 §2 (duración del ciclo y variación dentro de la misma persona, desviación típica de unos 2,6 días); panel CA-01 a CA-03; motor CON-032. |
-| PRV-03 | Un calendario no sirve para evitar ni buscar un embarazo. | `jua-10/01-cycle-phases` (límite 3); OV-A07, OV-A08 (OS-06, OS-08 [V]); OVU-05b de `ovulatoria-v0.2.0.md`. |
+| PRV-03 | Un calendario no sirve para evitar ni buscar un embarazo. | `jua-10/01-cycle-phases` (límite 3); OV-A07, OV-A08 (OS-06, OS-08 [V]); OVU-05b de `ovulatoria-v0.2.1.md`. |
 | PRV-04, PRV-05 | Sin confirmación, la fecha es una estimación cada vez menos fiable. | Panel ME-04, CA-04 a CA-05d; JUA-27 §2. |
 | PRV-06 | La siguiente menstruación puede llegar antes o después. | Panel IT-01 a IT-03; JUA-27 §5. |
 | PRV-07 | La estimación tiene un límite de caducidad. | ADR-001 C9 (caducidad del motor); panel §5 y CA-05d. |
@@ -100,7 +100,7 @@ Variantes:
 
 ## 4. Exclusiones comprobadas
 
-La v0.1.0 no contiene:
+La v0.1.1 no contiene:
 
 - [x] Fechas o números únicos para la próxima regla.
 - [x] «Retraso», «tarde», «falta la regla» ni alusiones a un embarazo.
@@ -125,6 +125,10 @@ La v0.1.0 no contiene:
 | D-03 | IT-02 decía que la menstruación «puede adelantarse o retrasarse». | **Resuelta (12-11-2026):** «puede llegar antes o después», para no usar «retraso» en ninguna forma (P-02). |
 
 ## 7. Historial
+
+### [0.1.1] — Tono de «Datos antiguos» (25-11-2026)
+
+- PRV-07: «No hay una regla confirmada reciente, así que Consona no puede estimar el ciclo ahora». Sustituye a «Hace demasiado tiempo que tu pareja no confirma…», que sonaba a reproche hacia ella.
 
 ### [0.1.0] — 12-11-2026
 

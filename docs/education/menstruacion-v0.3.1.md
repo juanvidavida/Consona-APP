@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «La menstruación» v0.3.0
+# Consona — Pantalla educativa «La menstruación» v0.3.1
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío.
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -14,7 +14,7 @@
 
 **Para qué:** entender qué es la menstruación y qué no dice, para acompañar en consonancia sin interpretar, anticipar ni explicar a la otra persona.
 
-Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.8.0.md`):
+Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.8.1.md`):
 
 - **T-01:** educativo, no paternalista.
 - **T-02:** la pareja es la autoridad sobre su propia experiencia.
@@ -92,7 +92,7 @@ El ánimo puede variar a lo largo del ciclo, pero en promedio varía poco, y en 
 
 ### MEN-06 · Lo que no se suele contar
 
-Mucha gente sigue con su día a día con dolor y no dice por qué. En España, una de cada cuatro mujeres ha sentido alguna vez que necesitaba faltar al trabajo, a clase o a otra actividad por el dolor o el sangrado de la regla, pero solo una de cada siete lo ha hecho. La mitad cree que faltar por ese motivo puede traerle consecuencias en el trabajo.
+Muchas mujeres siguen con su día a día con dolor sin decir por qué. En España, una de cada cuatro mujeres ha sentido alguna vez que necesitaba faltar al trabajo, a clase o a otra actividad por el dolor o el sangrado de la regla, pero solo una de cada siete lo ha hecho. La mitad cree que faltar por ese motivo puede traerle consecuencias en el trabajo.
 
 En España, la ley reconoce desde 2023 la salud menstrual como parte de la salud sexual y reproductiva y prevé una baja cuando la menstruación es incapacitante por una enfermedad diagnosticada.
 
@@ -110,7 +110,7 @@ Hay cosas que dependen de ti: hacer tu parte en lo que compartís sin esperar a 
 
 ### MEN-08 · Fuentes
 
-Esta información se basa en revisiones científicas sobre la fisiología del endometrio (2020 y 2022), metaanálisis sobre el dolor menstrual (2019) y sobre el ciclo y las capacidades cognitivas (2025), la Encuesta de Anticoncepción en España de la Sociedad Española de Contracepción (2024), estudios españoles con estudiantes universitarias (2018 y 2020), un estudio cualitativo realizado en Barcelona (2022), guías del Colegio Americano de Obstetras y Ginecólogos (ACOG) y de la Sociedad de Obstetras y Ginecólogos de Canadá (SOGC), y la Ley Orgánica 1/2023. Las referencias completas están disponibles en «Fuentes».
+Esta información se basa en revisiones científicas sobre la fisiología del endometrio (2020 y 2022), metaanálisis sobre el dolor menstrual (2019) y sobre el ciclo y las capacidades cognitivas (2025), la Encuesta de Anticoncepción en España de la Sociedad Española de Contracepción (2024), estudios españoles con estudiantes universitarias (2018 y 2020), un estudio cualitativo realizado en Barcelona (2022), guías del Colegio Americano de Obstetras y Ginecólogos y de la Sociedad de Obstetras y Ginecólogos de Canadá, y la Ley Orgánica 1/2023. Las referencias completas están disponibles en «Fuentes».
 
 ## 5. Mensajes de derivación
 
@@ -160,6 +160,12 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 | D-05 | DER-02 habla de «compresas o tampones». Hay otros productos (copa, ropa interior absorbente) con los que el criterio de ACOG no se puede aplicar igual. | **Resuelta (06-11-2026):** DER-02 incluye la copa y la ropa interior absorbente. La equivalencia es una adaptación editorial del criterio de ACOG, que solo habla de compresas y tampones; se apoya en que el NHS incluye la copa en su definición de sangrado abundante (revisado el 19-09-2024). La revisión clínica debe validarla. |
 
 ## 8. Historial
+
+### [0.3.1] — Erratas (25-11-2026)
+
+- MEN-06: «Muchas mujeres siguen con su día a día con dolor sin decir por qué», en lugar de «Mucha gente» (D-07 de la pantalla «Antes de la regla»).
+- MEN-08: sin las siglas ACOG y SOGC, como en SPM-08.
+- DER-01 y DER-02 no cambian.
 
 ### [0.3.0] — 11-11-2026
 
