@@ -1,6 +1,6 @@
 # Consona — Pantalla educativa «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) v0.8.1
 
-**Estado:** Borrador para revisión de producto. **Incluida en el paquete de revisión clínica de JUA-16**, pendiente de envío.
+**Estado:** Borrador para revisión de producto. Versión de trabajo posterior a la v0.8.0, que se conserva sin cambios porque es el artefacto A1 del paquete de revisión clínica de JUA-16, en revisión. Los cambios de esta versión irán a la segunda ronda de revisión clínica.
 **Incidencia:** JUA-19 (CON-027). Su versión aprobada será el artefacto que revise JUA-16 (ADR-002 P7).
 **Base de investigación:** auditorías de JUA-10 y, desde la v0.5.0, la investigación de la fase lútea de JUA-36 ([`docs/research/fases/lutea/`](../research/fases/lutea/)).
 **Idioma:** español (España). Cualquier traducción posterior (CON-025) debe conservar los límites clínicos y de privacidad de este documento.
@@ -213,6 +213,7 @@ Lista para comprobar en cada versión. La v0.8.1 no contiene:
 - SPM-08: se añade la coma que faltaba antes de «un estudio sobre lo que piensan los hombres».
 - C-02: «algunas mujeres», como T-04 (D-07).
 - DER-01 y DER-02 no cambian.
+- La v0.8.0 se conserva sin cambios: es el artefacto del paquete de JUA-16 que está en revisión.
 
 ### [0.8.0] — Parejas que no viven juntas (11-11-2026)
 

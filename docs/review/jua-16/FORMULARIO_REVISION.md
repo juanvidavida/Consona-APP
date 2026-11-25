@@ -4,16 +4,16 @@ Artefactos revisados (ver [README](./README.md), sección 3, que da el SHA-256 d
 
 | # | Artefacto | Versión |
 |---|---|---|
-| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) | 0.8.1 |
+| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) | 0.8.0 |
 | A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.4.0 |
 | A3 | Tarjetas de la pantalla de inicio en la menstruación | 0.4.0 |
 | A4 | Tarjetas de la pantalla de inicio en la fase folicular | 0.4.0 |
 | A5 | Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada | 0.4.0 |
-| A6 | Pantalla «La menstruación» | 0.3.1 |
+| A6 | Pantalla «La menstruación» | 0.3.0 |
 | A7 | Pantalla «La fase folicular» | 0.2.0 |
-| A8 | Pantalla «La ventana ovulatoria» | 0.2.1 |
+| A8 | Pantalla «La ventana ovulatoria» | 0.2.0 |
 | A9 | Pantalla «La fase lútea» | 0.4.0 |
-| A10 | Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario | 0.1.1 |
+| A10 | Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario | 0.1.0 |
 
 Para ver dónde aparece cada bloque en la app, abre el [boceto navegable](./BOCETO.html): cada bloque lleva el mismo identificador que este formulario.
 
@@ -55,7 +55,7 @@ Observaciones sobre el alcance:
 
 ## 3. Revisión por bloque
 
-### 3.1 A1 · Pantalla «Antes de la regla» v0.8.1
+### 3.1 A1 · Pantalla «Antes de la regla» v0.8.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -80,7 +80,7 @@ Observaciones sobre el alcance:
 | A4 · Fase folicular v0.4.0 | | | | |
 | A5 · Ventana ovulatoria estimada v0.4.0 | | | | |
 
-### 3.3 A6 · Pantalla «La menstruación» v0.3.1
+### 3.3 A6 · Pantalla «La menstruación» v0.3.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -108,7 +108,7 @@ Observaciones sobre el alcance:
 | DER-01 | Cuándo puede ayudar un profesional | | |
 | FOL-07 | Fuentes | | |
 
-### 3.5 A8 · Pantalla «La ventana ovulatoria» v0.2.1
+### 3.5 A8 · Pantalla «La ventana ovulatoria» v0.2.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -138,7 +138,7 @@ Observaciones sobre el alcance:
 | DER-01 | Cuándo puede ayudar un profesional | | |
 | LUT-08 | Fuentes | | |
 
-### 3.7 A10 · Previsión de la regla v0.1.1
+### 3.7 A10 · Previsión de la regla v0.1.0
 
 | Bloque | Contenido | Decisión (A / AC / NA) | Comentario o cambio propuesto |
 |---|---|---|---|
@@ -180,7 +180,7 @@ Observaciones sobre el alcance:
 | P-12 | A7 | ¿Es correcto que la pantalla de la fase folicular no lleve un mensaje de ayuda urgente? (D-01) | |
 | P-13 | A8 · OVU-04 y OVU-05 | ¿Es adecuado «al menos uno de cada cuatro ciclos» sin ovulación, y explicar la ventana fértil sin cifras de horas ni de probabilidad? (D-02, D-06) | |
 | P-14 | A9 · LUT-05 | ¿Los ejemplos de cambios premenstruales pueden leerse como una lista para vigilar a la pareja? (D-02) | |
-| P-20 | A10 | Las preguntas de la sección 5 («Qué debe valorar la persona revisora») de `home-prevision-v0.1.1.md`: intervalos, «sin confirmar», aviso anticonceptivo y tarjetas durante la menstruación estimada. | |
+| P-20 | A10 | Las preguntas de la sección 5 («Qué debe valorar la persona revisora») de `home-prevision-v0.1.0.md`: intervalos, «sin confirmar», aviso anticonceptivo y tarjetas durante la menstruación estimada. | |
 
 ## 5. Criterios de JUA-16
 

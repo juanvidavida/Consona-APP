@@ -65,7 +65,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 
 ### 25-11-2026
 
-- H-03 dice «algunas mujeres» (D-07). M-03 cambia igual en las tarjetas v0.4.0 y v0.5.0 de la menstruación; el texto de las tarjetas no cambia.
+- H-03 dice «algunas mujeres» (D-07). M-03 cambia igual en las tarjetas v0.5.0 de la menstruación; el texto de las tarjetas no cambia. Las v0.4.0 siguen congeladas.
 
 ### 16-11-2026 (JUA-49)
 

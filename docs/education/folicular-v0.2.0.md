@@ -10,7 +10,7 @@
 
 ## 1. Público, tono, ubicación y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.1.md`, secciones 1 a 3):
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.0.md`, secciones 1 a 3):
 
 - tono T-01 a T-04;
 - ubicación U-01 a U-04, como artículo de «Comprender» en «El cuerpo en cada fase»;
