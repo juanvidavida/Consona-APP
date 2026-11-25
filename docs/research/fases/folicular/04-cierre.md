@@ -13,7 +13,7 @@ La base de investigación de la fase folicular es **suficiente para el contenido
 - **Desmentido del estereotipo de «más energía»:** moderada, con dos estudios con la fase verificada en sangre (uno español) y dos revisiones recientes.
 - **Ánimo y bienestar en población general:** moderada para afirmar que la fase pesa poco frente a la salud, el estrés y el apoyo social, y que las diferencias entre personas son lo más importante (FS-18 a FS-20). No basta para afirmar ningún patrón propio de la fase.
 
-El cierre **no autoriza** pautas de entrenamiento, dieta o planificación, ni afirmaciones sobre el deseo (H-05), la fertilidad o la fecha de ovulación.
+El cierre **no autoriza** pautas de entrenamiento, dieta o planificación (salvo organizarse a partir de lo que ella exprese y acuerden los dos, SGF-02 desde el 16-11-2026), ni afirmaciones sobre el deseo (H-05), la fertilidad o la fecha de ovulación.
 
 ## 2. Redacción segura que puede usarse
 
@@ -46,7 +46,7 @@ El cierre **no autoriza** pautas de entrenamiento, dieta o planificación, ni af
 | No usar | Motivo |
 |---|---|
 | «Está en su mejor momento», «tiene más energía» | Estereotipo positivo (SGF-01). |
-| «Aprovecha para proponer planes» | Planificar según la fase (SGF-02). |
+| «Aprovecha para proponer planes» | Planificar a partir de la fase sola, sin que ella lo haya expresado (SGF-02). |
 | «Los estrógenos la ponen de buen humor» | Explicación hormonal de un estado (H-08). |
 | «Del día 1 al 14» | Duración fija (H-06, SGF-03). |
 | «Está más receptiva», «más atractiva» | Contenido sexual (H-05). |

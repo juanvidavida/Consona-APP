@@ -42,7 +42,9 @@ La misma idea ha tenido consecuencias en la investigación. Las mujeres se han e
 | ID | Regla | Origen |
 |---|---|---|
 | SGF-01 | El contenido desmiente expresamente el estereotipo de «más energía» o «mejor momento», nombrándolo para que sea reconocible (decisión D-03 de JUA-23). | Patrón 1 |
-| SGF-02 | Ninguna recomendación de planificar actividades, ejercicio, dieta o agenda según la fase. | Patrón 1; FS-09, FS-10 |
+| SGF-02 | Ninguna recomendación de planificar actividades, ejercicio, dieta o agenda **a partir de la fase sola**. Sí se puede proponer organizarse teniendo en cuenta la fase o el ciclo cuando nace de una conversación entre los dos y de cómo ella expresa su propia experiencia: ella es soberana sobre cómo vive su ciclo (criterio del 16-11-2026, JUA-49; H-09 de las tarjetas). | Patrón 1; FS-09, FS-10 |
 | SGF-03 | El contenido explica que no hay un calendario fijo y que la variación es lo habitual. | Patrón 2 |
 | SGF-04 | El contenido recuerda que Consona estima por fechas y no puede saber qué le pasa a una persona en esta fase. | Patrón 4 |
 | SGF-05 | La pantalla puede mencionar que el ciclo se ha usado para excluir a las mujeres de la investigación, como contexto de por qué circulan tantos mitos. | Patrón 3 |
+
+> **16-11-2026 (JUA-49):** SGF-02 se reformula con el criterio de soberanía. La evidencia de FS-09 y FS-10 no cambia: sigue sin respaldar que la fase marque, en general, la energía o el rendimiento. Lo que cambia es que la experiencia que ella expresa prevalece sobre ese dato general, y que organizarse a partir de ella no es un sesgo, sino respetarla.
