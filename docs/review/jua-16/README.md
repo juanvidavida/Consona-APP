@@ -28,21 +28,21 @@ Se revisa **exactamente** la versión identificada aquí. Cualquier cambio poste
 
 | # | Artefacto | Versión | Archivo | SHA-256 |
 |---|---|---|---|---|
-| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) y mensajes de derivación DER-01 y DER-02 | 0.8.0 | [`spm-tdpm-v0.8.0.md`](../../education/spm-tdpm-v0.8.0.md) | `4eea69e12501346a40cbc7e96d08b6c4de89f35c83e0077e75016415414bc999` |
-| A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.4.0 | [`home-cards-luteal-v0.4.0.md`](../../education/home-cards-luteal-v0.4.0.md) | `b11f6c81cdde120e388c62284c0891744f4890bb023ceafffdd43b78c219f7cc` |
-| A3 | Tarjetas de la pantalla de inicio en la menstruación | 0.4.0 | [`home-cards-menstruation-v0.4.0.md`](../../education/home-cards-menstruation-v0.4.0.md) | `83a2c93ac125119ec56369840a5614f09ccf17c0d9f936dd7ccfbd6c321efda9` |
+| A1 | Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) y mensajes de derivación DER-01 y DER-02 | 0.8.1 | [`spm-tdpm-v0.8.1.md`](../../education/spm-tdpm-v0.8.1.md) | `6419886ed929c14afc8fd4f7fe8f250d13447d2c8e3497208358633d9c6e3bae` |
+| A2 | Tarjetas de la pantalla de inicio en fase lútea | 0.4.0 | [`home-cards-luteal-v0.4.0.md`](../../education/home-cards-luteal-v0.4.0.md) | `94990917e1961b92b5121f95a3cf873b97dd05a3a5c3ba993d516e7623221cc5` |
+| A3 | Tarjetas de la pantalla de inicio en la menstruación | 0.4.0 | [`home-cards-menstruation-v0.4.0.md`](../../education/home-cards-menstruation-v0.4.0.md) | `01ab978aa00103183ee96737674a3ee69ce70e2955ef42e67e03872026b785f8` |
 | A4 | Tarjetas de la pantalla de inicio en la fase folicular | 0.4.0 | [`home-cards-follicular-v0.4.0.md`](../../education/home-cards-follicular-v0.4.0.md) | `4c70cc679aaba8969bfc4f3eb22b41669bbd47edc96868215a5bbfccec541469` |
-| A5 | Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada | 0.4.0 | [`home-cards-ovulatory-v0.4.0.md`](../../education/home-cards-ovulatory-v0.4.0.md) | `72c95a0043cd3cf24d5373655bd7db0434ab73ec3d71af4f40c4c9daebcc081e` |
-| A6 | Pantalla «La menstruación» de «Comprender» | 0.3.0 | [`menstruacion-v0.3.0.md`](../../education/menstruacion-v0.3.0.md) | `082ad22c11357fdba1aaa6e63e15ca5a25ba732b2af18c2a78d4d9a84a2dfd9a` |
-| A7 | Pantalla «La fase folicular» de «Comprender» | 0.2.0 | [`folicular-v0.2.0.md`](../../education/folicular-v0.2.0.md) | `a62a647d75efe2f6291d90b16e0933c46f288a568248d40d5373400464883664` |
-| A8 | Pantalla «La ventana ovulatoria» de «Comprender» | 0.2.0 | [`ovulatoria-v0.2.0.md`](../../education/ovulatoria-v0.2.0.md) | `54663d5eaaa62689455e9d50b6fd59e8ae46a55b54af5d75fff34ec7288f70db` |
-| A9 | Pantalla «La fase lútea» de «Comprender» | 0.4.0 | [`lutea-v0.4.0.md`](../../education/lutea-v0.4.0.md) | `0f76a1c7d1fca55690ce02c3a11b183df3df4eef1768ad9a615cc989fe0ea274` |
-| A10 | Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario | 0.1.0 | [`home-prevision-v0.1.0.md`](../../education/home-prevision-v0.1.0.md) | `ae0633743a5c7814e7007a127dd01d4e584f149a0cebf041738d9730762ad238` |
+| A5 | Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada | 0.4.0 | [`home-cards-ovulatory-v0.4.0.md`](../../education/home-cards-ovulatory-v0.4.0.md) | `32e744e41844e21fd029ac89880cb10db2e5233145b12f2d113641ef95982186` |
+| A6 | Pantalla «La menstruación» de «Comprender» | 0.3.1 | [`menstruacion-v0.3.1.md`](../../education/menstruacion-v0.3.1.md) | `5e9df5df976ef93d73c6de2283f3edf1f3eb94bf8a6a17346fd47c01f1220d99` |
+| A7 | Pantalla «La fase folicular» de «Comprender» | 0.2.0 | [`folicular-v0.2.0.md`](../../education/folicular-v0.2.0.md) | `e75ed6d32ed0e7c1771cfa738135d585db834a83d7f0bf567c2915af4d6fa803` |
+| A8 | Pantalla «La ventana ovulatoria» de «Comprender» | 0.2.1 | [`ovulatoria-v0.2.1.md`](../../education/ovulatoria-v0.2.1.md) | `668807a90f5f4ef5e8fd157eabb69e34b73215803899011635bd635bfba96d1a` |
+| A9 | Pantalla «La fase lútea» de «Comprender» | 0.4.0 | [`lutea-v0.4.0.md`](../../education/lutea-v0.4.0.md) | `247da57f33b36b56aec5aca5c94f0404a6442481f2745d27fa041e0779f41687` |
+| A10 | Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario | 0.1.1 | [`home-prevision-v0.1.1.md`](../../education/home-prevision-v0.1.1.md) | `0994c362922cf16732a7bd6e4f309d1518839971b349d6419df3544c6a00d24f` |
 
 Comprobación de integridad, desde la raíz del repositorio:
 
 ```sh
-shasum -a 256 docs/education/spm-tdpm-v0.8.0.md docs/education/home-cards-{luteal,menstruation,follicular,ovulatory}-v0.4.0.md docs/education/menstruacion-v0.3.0.md docs/education/{folicular,ovulatoria}-v0.2.0.md docs/education/lutea-v0.4.0.md docs/education/home-prevision-v0.1.0.md
+shasum -a 256 docs/education/spm-tdpm-v0.8.1.md docs/education/home-cards-{luteal,menstruation,follicular,ovulatory}-v0.4.0.md docs/education/menstruacion-v0.3.1.md docs/education/folicular-v0.2.0.md docs/education/ovulatoria-v0.2.1.md docs/education/lutea-v0.4.0.md docs/education/home-prevision-v0.1.1.md
 ```
 
 Cualquier cambio en estos archivos, incluidos sus metadatos, altera el hash: se crea una versión nueva si cambia el texto mostrado y se actualizan esta tabla y el formulario antes del envío.
@@ -86,7 +86,7 @@ Después de la revisión, el equipo de producto registra en el mismo formulario 
 | Comentarios de producto del 11-11-2026 | «Mujeres» en lugar de «personas» en las afirmaciones generales; título «Antes de la regla» y términos completos en lugar de siglas; «evidencia científica»; la pareja puede ayudar escuchando y preguntando; duración aproximada de las fases folicular y lútea en las tarjetas; subpantalla «Fuentes» en el mapa de pantallas; tres tarjetas en la home, con «Cómo acompañar» en lugar de «Qué puedes preguntarle» y «Qué te toca a ti»; bloque «Lo que ves en Consona» en las cuatro pantallas de fase. | Pantalla v0.6.0, tarjetas v0.3.0, pantallas de «Comprender» v0.2.0 y especificación del panel v1.1.2. |
 | Consulta de producto del 11-11-2026 (SPM/TDPM D-10) | SPM-05 añade «son las hormonas» como frase que resta valor; SPM-07, preguntar si prefiere compañía, espacio o ayuda; el ensayo de Ussher y Perz 2017 se audita en JUA-36 (LS-22) y solo respalda que el apoyo de la pareja importa. | Pantalla v0.7.0 y «La fase lútea» v0.3.0 (LUT-07 con la misma redacción que SPM-07). |
 | Reflexión de producto del 11-11-2026 | Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar»; antetítulo «Comunicación y tu parte»; «lo que compartís» en lugar de «en casa», para incluir a las parejas que no viven juntas (SPM-07, MEN-07, LUT-07 y la tarjeta de la menstruación). | Tarjetas v0.4.0, «Antes de la regla» v0.8.0, «La menstruación» v0.3.0, «La fase lútea» v0.4.0 y especificación del panel v1.1.3. |
-| Cuenta atrás y calendario (12-11-2026) | La home muestra una cuenta atrás de la siguiente regla en intervalo y un calendario con reglas pasadas (con consentimiento) y previstas. Si ella no confirma, Consona sigue estimando con la etiqueta «sin confirmar» y nunca dice «retraso». | Nuevo artefacto A10 (`home-prevision-v0.1.0.md`) y especificación del panel v1.2.0. |
+| Cuenta atrás y calendario (12-11-2026) | La home muestra una cuenta atrás de la siguiente regla en intervalo y un calendario con reglas pasadas (con consentimiento) y previstas. Si ella no confirma, Consona sigue estimando con la etiqueta «sin confirmar» y nunca dice «retraso». | Nuevo artefacto A10 (`home-prevision-v0.1.1.md`) y especificación del panel v1.2.0. |
 
 Las siguientes cuestiones **no** son pendientes de producto, sino preguntas expresas a la persona revisora (formulario, sección 4):
 

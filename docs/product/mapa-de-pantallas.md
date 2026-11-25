@@ -26,7 +26,7 @@
 | 1.2a–f | 1 · Uso diario | Estados excepcionales de Hoy | Panel §5 | ESPECIFICADA | Sin fases por anticoncepción = contenido propio, no error. Desde la v0.5.0, «Datos antiguos» también llega por el límite de las estimaciones sin confirmar (CA-05d). |
 | 1.3 | 1 · Uso diario | Calendario: reglas pasadas (6 ciclos, con consentimiento) y previstas en intervalo | Panel v1.2.0 §3.4 | ESPECIFICADA | Nueva el 12-11-2026 (D-23). Resuelve D-19. |
 | 2.1 | 2 · Comprender | Cómo funciona | JUA-7 · Panel §4.2 | ESPECIFICADA | Hoy es una sección ancla dentro de Hoy (D-02). |
-| 2.2 | 2 · Comprender | Antes de la regla: síndrome premenstrual y trastorno disfórico premenstrual (subpantalla de 2.1) | JUA-19 · JUA-16 · `docs/education/spm-tdpm-v0.8.0.md` | ESPECIFICADA | Texto v0.7.0, pendiente de enviar a revisión clínica (JUA-16). |
+| 2.2 | 2 · Comprender | Antes de la regla: síndrome premenstrual y trastorno disfórico premenstrual (subpantalla de 2.1) | JUA-19 · JUA-16 · `docs/education/spm-tdpm-v0.8.1.md` | ESPECIFICADA | Texto v0.7.0, pendiente de enviar a revisión clínica (JUA-16). |
 | 2.3 | 2 · Comprender | Contenido educativo | Definición §5 · JUA-31 | ESPECIFICADA | Pantallas de fase en `docs/education/` (JUA-36). |
 | 2.4 | 2 · Comprender | Fuentes | JUA-31 | PENDIENTE | Nueva el 11-11-2026 (D-21). |
 | C.1 | Control | Control de datos: revisar, retirar, borrar | JUA-20 · JUA-18 · `src/App.jsx` | CONSTRUIDA (parcial) | Solo vista informativa sin autorización. |
@@ -198,4 +198,4 @@ Estos puntos de P-2 chocan con decisiones ya tomadas o con la especificación vi
 | v0.4.1 | 28 oct 2026 | Menstruación sin duración declarada: días 1–5 en lugar de 1–3, según la especificación del panel v1.1.1 y JUA-27 (D-12). |
 | v0.4.2 | 11 nov 2026 | 2.2 pasa a «Antes de la regla» (JUA-19, pantalla v0.7.0). Nueva subpantalla 2.4 «Fuentes» (D-21, JUA-31). La home pasa a tres tarjetas: «Cómo acompañar» fusiona «Qué puedes preguntarle» y «Qué te toca a ti» (D-22, especificación del panel v1.1.2). |
 | v0.4.3 | 11 nov 2026 | Orden de las tarjetas de la home: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar» (especificación del panel v1.1.3, D-22). |
-| v0.5.0 | 12 nov 2026 | Cuenta atrás de la regla y calendario 1.3 (Panel v1.2.0; D-19 resuelta; D-23). App mínima de la persona afectada: pantallas 0.2, A.1 y A.2 (JUA-41; D-24). Estimaciones sin confirmar a partir del último inicio confirmado (CA-05). Textos en `home-prevision-v0.1.0.md` (A10 de JUA-16). |
+| v0.5.0 | 12 nov 2026 | Cuenta atrás de la regla y calendario 1.3 (Panel v1.2.0; D-19 resuelta; D-23). App mínima de la persona afectada: pantallas 0.2, A.1 y A.2 (JUA-41; D-24). Estimaciones sin confirmar a partir del último inicio confirmado (CA-05). Textos en `home-prevision-v0.1.1.md` (A10 de JUA-16). |

@@ -1,7 +1,7 @@
-# Consona — Especificación UX del panel principal «Hoy» v1.1.0
+# Consona — Especificación UX del panel principal «Hoy» v1.3.1
 
-**Versión:** 1.3.0
-**Fecha:** 13 de noviembre de 2026 (v1.2.0: 12 de noviembre; v1.1.3 y v1.1.2: 11 de noviembre; v1.1.1: 28 de octubre; v1.1.0: 19 de octubre de 2026)
+**Versión:** 1.3.1
+**Fecha:** 25 de noviembre de 2026 (v1.3.0: 13 de noviembre; v1.2.0: 12 de noviembre; v1.1.3 y v1.1.2: 11 de noviembre; v1.1.1: 28 de octubre; v1.1.0: 19 de octubre de 2026)
 **Estado:** Propuesta de producto (JUA-25). Pasa a ser la decisión de experiencia vigente al integrarse en `main`. No habilita el seguimiento ni relaja las condiciones de ADR-001 y ADR-002.
 **Sustituye a:** la v1.0 del 17 de septiembre de 2026, entregada en [`info/Consona_entrega_completa/archivos_compartidos/CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md`](../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md). Esa versión se conserva sin cambios como parte del paquete de entrega.
 
@@ -114,7 +114,7 @@ La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloquead
 | ID | Regla |
 |---|---|
 | IT-01 | Se muestra `Días previos a la menstruación · estimación` cuando hoy está dentro del tramo estimado que precede a la siguiente menstruación prevista: los **7 días** anteriores al inicio previsto (días −7 a −1; el día del inicio queda fuera). |
-| IT-02 | La indicación lleva siempre el calificador de estimación y una explicación breve accesible desde ella: «Calculado a partir de la duración de ciclos anteriores confirmados. La siguiente menstruación puede llegar antes o después» *(v1.2.0: sin «retrasarse»; texto exacto en `home-prevision-v0.1.0.md`)*. Es una estimación probabilística, no un dato. |
+| IT-02 | La indicación lleva siempre el calificador de estimación y una explicación breve accesible desde ella: «Calculado a partir de la duración de ciclos anteriores confirmados. La siguiente menstruación puede llegar antes o después» *(v1.2.0: sin «retrasarse»; texto exacto en `home-prevision-v0.1.1.md`)*. Es una estimación probabilística, no un dato. |
 | IT-03 | Solo se muestra si el motor auditado (CON-032) calcula una ventana para el siguiente inicio de sangrado con datos suficientes y vigentes. No se muestra en ningún estado excepcional de la sección 5 ni con anticoncepción que impida estimar fase. |
 | IT-04 | Es una etiqueta temporal, no clínica: no usa «premenstrual» como término clínico, no nombra SPM ni TDPM y no presenta cambios físicos o emocionales como algo que la pareja vaya a tener o esté teniendo ([audit-07](../research/jua-10/audit-07-rcog-pms.md) §4; C-01; SPM-04). |
 | IT-05 | **No cambia las tarjetas.** Las tres tarjetas siguen siendo las de la fase lútea durante toda la fase (H-01 del índice de tarjetas, que aplica `home-cards-luteal-v0.4.0.md`). |
@@ -157,7 +157,7 @@ La rueda **no** es la «gráfica local limitada» de CON-036, que sigue bloquead
 | CA-08 | Sin iconos de aviso, colores de alarma, sonidos, notificaciones ni recordatorios en el dispositivo de quien consulta. La cuenta atrás no cambia el color ni el tono del panel (RU-09). |
 | CA-09 | No se muestra en ningún estado excepcional de la sección 5 ni con anticoncepción que impida estimar fase (igual que IT-03). |
 | CA-10 | La descripción accesible de la rueda (RU-12) incluye la cuenta atrás, por ejemplo: «La regla podría empezar dentro de 3 a 7 días». |
-| CA-11 | El texto exacto de la cuenta atrás, de las estimaciones sin confirmar, del calendario y de sus avisos está en [`home-prevision-v0.1.0.md`](../education/home-prevision-v0.1.0.md), incluido en la revisión clínica de JUA-16 como artefacto A10. |
+| CA-11 | El texto exacto de la cuenta atrás, de las estimaciones sin confirmar, del calendario y de sus avisos está en [`home-prevision-v0.1.1.md`](../education/home-prevision-v0.1.1.md), incluido en la revisión clínica de JUA-16 como artefacto A10. |
 
 ### 3.4. Calendario de reglas pasadas y previstas *(v1.2.0)*
 
@@ -243,7 +243,7 @@ La limpieza del panel aplica al estado normal. Cuando el resultado no es apto pa
 | Estado | Presentación requerida | Acción disponible |
 |---|---|---|
 | Datos insuficientes | «Falta información confirmada para mostrar el ciclo.» | Explicar qué fecha pasada puede añadirse, según el consentimiento vigente. |
-| Datos antiguos | «Hace demasiado tiempo que tu pareja no confirma el inicio de una regla. Consona no puede estimar el ciclo hasta que lo haga.» *(texto de v1.2.0; antes: «Actualiza el último inicio de sangrado confirmado para continuar»)* | Solo ella añade o confirma una fecha, desde su app (DA-11, JUA-41). También se llega aquí por el límite de CA-05d. |
+| Datos antiguos | «No hay una regla confirmada reciente, así que Consona no puede estimar el ciclo ahora.» *(texto de A10 v0.1.1; en la v1.2.0: «Hace demasiado tiempo que tu pareja no confirma el inicio de una regla»; antes: «Actualiza el último inicio de sangrado confirmado para continuar»)* | Solo ella añade o confirma una fecha, desde su app (DA-11, JUA-41). También se llega aquí por el límite de CA-05d. |
 | Anticoncepción que impide estimar fase | «Con este método no mostramos fases.» | Abrir contenido educativo específico, sin forzar una fase. |
 | Consentimiento retirado o no vigente | «El seguimiento no está disponible.» | No mostrar datos anteriores; ofrecer solo los pasos autorizados para revisar o reactivar el consentimiento. |
 | Patrón local sin evidencia suficiente | No mostrar una conclusión ni una tarjeta de patrón. | Permitir revisar consentimiento y registros solo a quien corresponda, sin sugerir que hay o no síntomas. |
@@ -295,6 +295,10 @@ Estas diferencias se registran como tareas de implementación y se recogen en el
 
 ## 9. Historial
 
+### [1.3.1] — 25 de noviembre de 2026
+
+- Texto de «Datos antiguos» (CA-05d) alineado con A10 v0.1.1. El título del documento indica la versión vigente; el nombre del archivo se mantiene porque otros documentos lo enlazan.
+
 ### [1.3.0] — 13 de noviembre de 2026
 
 - Nueva sección 3.5: sugerencias de actualización en la app de ella, evaluadas por un motor local al abrir la app o volver a ella, sin notificaciones push ni avisos programados. «Ahora no» aplaza 7 días; sugerencia neutral a los 21 días si el resultado está fuera de vigencia (parámetros de experiencia de uso, no clínicos). Sin telemetría ni «Aún no ha empezado».
@@ -309,7 +313,7 @@ Estas diferencias se registran como tareas de implementación y se recogen en el
 - Nueva sección 3.3: cuenta atrás de la siguiente menstruación, siempre en intervalo («dentro de X a Y días», «estos días»); `Menstruación estimada · sin confirmar` al superarse la ventana; después, ciclos estimados sin confirmar a partir del último inicio confirmado, con intervalos que se ensanchan, y `Datos antiguos` al llegar al límite de CON-032. Sin «retraso», sin días fértiles o seguros y con el aviso de que no sirve para evitar ni buscar un embarazo.
 - Nueva sección 3.4: calendario de reglas pasadas (6 últimos ciclos, con consentimiento propio) y previstas (con intervalos que se ensanchan). Resuelve D-19 del mapa de pantallas.
 - RU-10, ME-04, IT-06 y la sección 7 se ajustan a lo anterior. DA-10 (historial de reglas) y DA-11 (confirmación del inicio desde la app de la persona afectada). Texto nuevo del estado `Datos antiguos` y de IT-02, sin «retraso» ni «retrasarse».
-- Los textos exactos van en `docs/education/home-prevision-v0.1.0.md` (artefacto A10 de JUA-16).
+- Los textos exactos van en `docs/education/home-prevision-v0.1.1.md` (artefacto A10 de JUA-16).
 - Requiere el modelo E: no se habilita antes de las puertas de JUA-13 y JUA-22.
 
 ### [1.1.3] — 11 de noviembre de 2026
@@ -348,4 +352,4 @@ Estas diferencias se registran como tareas de implementación y se recogen en el
 - [Fases del ciclo (JUA-10)](../research/jua-10/01-cycle-phases.md).
 - [Duraciones de referencia por fase (JUA-27)](../research/JUA-27-duraciones-referencia.md). Se integra con la PR de JUA-27.
 - [Auditoría 07: SPM, RCOG](../research/jua-10/audit-07-rcog-pms.md), §4.
-- Pantalla «Antes de la regla» v0.7.0 y tarjetas de la fase lútea v0.3.0: `docs/education/spm-tdpm-v0.8.0.md` y `docs/education/home-cards-luteal-v0.4.0.md`, en el paquete de JUA-16. Reglas citadas: U-02, U-03, C-01 a C-04, SPM-04 y H-01 a H-04 (desde la v0.2.0 de las tarjetas, H-01 a H-04 del índice de tarjetas).
+- Pantalla «Antes de la regla» v0.7.0 y tarjetas de la fase lútea v0.3.0: `docs/education/spm-tdpm-v0.8.1.md` y `docs/education/home-cards-luteal-v0.4.0.md`, en el paquete de JUA-16. Reglas citadas: U-02, U-03, C-01 a C-04, SPM-04 y H-01 a H-04 (desde la v0.2.0 de las tarjetas, H-01 a H-04 del índice de tarjetas).

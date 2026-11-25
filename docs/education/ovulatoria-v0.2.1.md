@@ -1,4 +1,4 @@
-# Consona — Pantalla educativa «La ventana ovulatoria» v0.2.0
+# Consona — Pantalla educativa «La ventana ovulatoria» v0.2.1
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío. Nombre visible decidido el 06-11-2026 (D-01).
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -10,7 +10,7 @@
 
 ## 1. Público, tono, ubicación y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.0.md`, secciones 1 a 3), con dos añadidos:
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.1.md`, secciones 1 a 3), con dos añadidos:
 
 - **Reglas de la fase:** O-01 a O-06 de las tarjetas de JUA-23, y reglas de sesgo SGO-01 a SGO-05 de `03-sesgo-genero.md`. **Excepción a O-05 en esta pantalla:** OVU-02 menciona el dolor de ovulación (D-05), sin cifras, sin decir si es probable y sin presentarlo como forma de saber si ha habido ovulación. Las tarjetas de la home siguen sin mencionarlo.
 - **R-08:** ningún icono, color ni ilustración asociado a la fertilidad, el embarazo, el atractivo o la sexualidad.
@@ -82,7 +82,7 @@ Si en algún momento habláis de anticoncepción o de buscar un embarazo, es una
 
 ### OVU-08 · Fuentes
 
-Esta información se basa en la fisiología del ciclo (2018), una opinión de comité de la Sociedad Americana de Medicina Reproductiva sobre la ventana fértil (2022), estudios sobre el momento de la ovulación y la fecundación con miles de ciclos (1995 a 2020), un estudio con población general noruega (2015), una revisión sistemática sobre métodos basados en el conocimiento de la fertilidad (2018) un estudio de la Universidad de Granada sobre el uso de apps menstruales (2019) y la Encuesta de Anticoncepción en España de la Sociedad Española de Contracepción (2024). Las referencias completas están disponibles en «Fuentes».
+Esta información se basa en la fisiología del ciclo (2018), una opinión de comité de la Sociedad Americana de Medicina Reproductiva sobre la ventana fértil (2022), estudios sobre el momento de la ovulación y la fecundación con miles de ciclos (1995 a 2020), un estudio con población general noruega (2015), una revisión sistemática sobre métodos basados en el conocimiento de la fertilidad (2018), un estudio de la Universidad de Granada sobre el uso de apps menstruales (2019) y la Encuesta de Anticoncepción en España de la Sociedad Española de Contracepción (2024). Las referencias completas están disponibles en «Fuentes».
 
 ## 3. Mensaje de derivación
 
@@ -121,6 +121,10 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 | D-06 | OVU-05 explica la ventana fértil y la supervivencia de los gametos sin cifras de horas ni de probabilidad. | **Resuelta (06-11-2026):** se mantiene sin cifras de horas ni de probabilidad. Se pide igualmente valoración en la revisión clínica. |
 
 ## 6. Historial
+
+### [0.2.1] — Erratas (25-11-2026)
+
+- OVU-08: se añade la coma que faltaba antes de «un estudio de la Universidad de Granada».
 
 ### [0.2.0] — 11-11-2026
 

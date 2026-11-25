@@ -15,7 +15,7 @@
 |---|---|
 | M-01 | Las tarjetas pueden referirse al sangrado, porque la fase empieza con un inicio de sangrado confirmado. |
 | M-02 | «Qué pasa en su cuerpo» da la duración de la menstruación: la que declaró la persona afectada en el formulario de consentimiento inicial (DA-06, JUA-28) o, si no la declaró, 5 días (ME-01). Es la misma duración que usa la rueda. Es la única cifra en días de las tarjetas. Para los primeros días se usa «los primeros días, cuando el flujo suele ser mayor» (JUA-27 §6), nunca una regla de 3 días. |
-| M-03 | No se da por hecho dolor, malestar, cansancio ni mal humor. El dolor solo aparece como algo que puede darse en algunas personas. |
+| M-03 | No se da por hecho dolor, malestar, cansancio ni mal humor. El dolor solo aparece como algo que puede darse en algunas mujeres. |
 | M-04 | No se recomiendan medidas para el dolor (medicamentos, calor, ejercicio), aunque tengan evidencia en población (`09-health-pain`). |
 | M-05 | Ninguna tarjeta menciona la compra ni productos menstruales. |
 
@@ -115,7 +115,7 @@ La v0.2.0 no contiene:
 ### [0.2.0] — 06-11-2026
 
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
-- Pantalla educativa asociada: `menstruacion-v0.3.0.md` (rama de JUA-36).
+- Pantalla educativa asociada: `menstruacion-v0.3.1.md` (rama de JUA-36).
 
 ### [0.2.0] — Enmienda del 10-11-2026
 
@@ -137,6 +137,11 @@ La v0.2.0 no contiene:
 - Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
 - «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
 - «Haz tu parte en lo que compartís» en lugar de «Ocúpate de tu parte en casa», para que sirva también si no vivís juntos.
+
+### [0.4.0] — Enmienda del 25-11-2026
+
+- M-03: «algunas mujeres» (D-07 de la pantalla «Antes de la regla»).
+- **El texto de las tarjetas no cambia**, por eso conservan la versión.
 
 ## Referencias
 
