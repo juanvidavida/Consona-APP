@@ -1,6 +1,6 @@
 # Consona — Pantalla educativa «La ventana ovulatoria» v0.2.1
 
-**Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío. Nombre visible decidido el 06-11-2026 (D-01).
+**Estado:** Borrador para revisión de producto. Versión de trabajo posterior a la v0.2.0, que se conserva sin cambios porque es el artefacto A8 del paquete de revisión clínica de JUA-16, en revisión. Los cambios de esta versión irán a la segunda ronda de revisión clínica. Nombre visible decidido el 06-11-2026 (D-01).
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
 **Base de investigación:** [`docs/research/fases/ovulatoria/`](../research/fases/ovulatoria/). Toda afirmación sale de la redacción segura de su cierre (`04-cierre.md`).
 **Idioma:** español (España).
@@ -125,6 +125,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 ### [0.2.1] — Erratas (25-11-2026)
 
 - OVU-08: se añade la coma que faltaba antes de «un estudio de la Universidad de Granada».
+- La v0.2.0 se conserva sin cambios: es el artefacto del paquete de JUA-16 que está en revisión.
 
 ### [0.2.0] — 11-11-2026
 

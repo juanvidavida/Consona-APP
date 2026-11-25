@@ -1,7 +1,7 @@
 # Consona — Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario v0.1.1
 
 **Issues:** JUA-30 (prototipo, D-23) y JUA-41 (confirmación desde la app de la persona afectada).
-**Estado:** Borrador para revisión de producto. **Incluido en el paquete de revisión clínica de JUA-16** (artefacto A10), pendiente de envío.
+**Estado:** Borrador para revisión de producto. Versión de trabajo posterior a la v0.1.0, que se conserva sin cambios porque es el artefacto A10 del paquete de revisión clínica de JUA-16, en revisión. Los cambios de esta versión irán a la segunda ronda de revisión clínica.
 **Reglas:** especificación del panel v1.2.0, §3.3 (CA-01 a CA-11), §3.4 (CL-01 a CL-09), IT-02 y §5 ([`panel-principal-v1.1.0.md`](../product/panel-principal-v1.1.0.md)).
 **Público y tono:** los de la sección 1 de [`spm-tdpm-v0.8.1.md`](./spm-tdpm-v0.8.1.md): la pareja que acompaña, en segunda persona, sin paternalismo.
 **No habilita:** datos reales, persistencia, avisos ni cambios del motor de estimación. Con datos reales depende del modelo E (JUA-13, JUA-22) y de JUA-41.
@@ -129,6 +129,7 @@ La v0.1.1 no contiene:
 ### [0.1.1] — Tono de «Datos antiguos» (25-11-2026)
 
 - PRV-07: «No hay una regla confirmada reciente, así que Consona no puede estimar el ciclo ahora». Sustituye a «Hace demasiado tiempo que tu pareja no confirma…», que sonaba a reproche hacia ella.
+- La v0.1.0 se conserva sin cambios: es el artefacto del paquete de JUA-16 que está en revisión.
 
 ### [0.1.0] — 12-11-2026
 

@@ -1,6 +1,6 @@
 # Consona — Pantalla educativa «La menstruación» v0.3.1
 
-**Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío.
+**Estado:** Borrador para revisión de producto. Versión de trabajo posterior a la v0.3.0, que se conserva sin cambios porque es el artefacto A6 del paquete de revisión clínica de JUA-16, en revisión. Los cambios de esta versión irán a la segunda ronda de revisión clínica.
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
 **Base de investigación:** [`docs/research/fases/menstruacion/`](../research/fases/menstruacion/). Toda afirmación sale de la redacción segura de su cierre (`04-cierre.md`).
 **Idioma:** español (España).
@@ -166,6 +166,7 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 - MEN-06: «Muchas mujeres siguen con su día a día con dolor sin decir por qué», en lugar de «Mucha gente» (D-07 de la pantalla «Antes de la regla»).
 - MEN-08: sin las siglas ACOG y SOGC, como en SPM-08.
 - DER-01 y DER-02 no cambian.
+- La v0.3.0 se conserva sin cambios: es el artefacto del paquete de JUA-16 que está en revisión.
 
 ### [0.3.0] — 11-11-2026
 

@@ -109,7 +109,7 @@ La v0.4.0 no contiene:
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
 - O-03 precisa que la explicación de la ventana fértil está en la pantalla educativa y que la salud reproductiva es contenido válido.
 - La rueda mantiene «Ventana ovulatoria estimada», sin «fértil» (decisión del 06-11-2026).
-- Pantalla educativa asociada: `ovulatoria-v0.2.1.md` (rama de JUA-36).
+- Pantalla educativa asociada: `ovulatoria-v0.2.0.md` (rama de JUA-36).
 
 ### [0.2.0] — Enmienda del 10-11-2026
 

@@ -43,7 +43,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 |---|---|
 | H-01 | Las tres tarjetas son las mismas durante toda la fase. No cambian según el día del ciclo, la cercanía de la menstruación ni ningún dato local. Única excepción: la duración de la menstruación en su «Qué pasa en su cuerpo» (M-02). |
 | H-02 | Las tarjetas no nombran diagnósticos (SPM, TDPM, dismenorrea, endometriosis, anemia u otros) y no presentan cambios físicos o emocionales como algo que tu pareja vaya a tener o esté teniendo (C-01). |
-| H-03 | Cualquier mención de variabilidad usa «algunas mujeres», «puede» e información general (C-02). |
+| H-03 | Cualquier mención de variabilidad usa «algunas personas», «puede» e información general (C-02). |
 | H-04 | Las tarjetas no enlazan directamente a la pantalla SPM/TDPM ni cambian de color o de tono según la fase (C-03, U-03). |
 | H-05 | Ninguna tarjeta menciona ni sugiere deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad. |
 | H-06 | Sin fertilidad, «días seguros», probabilidad de embarazo, ovulación confirmada ni cifras en días. Excepciones: la duración de la menstruación, declarada por la persona afectada o de 5 días por defecto (M-02); el intervalo de la fase folicular, «entre 15 y 20 días» contando los días de la regla (F-02); y la duración aproximada de la fase lútea, «unos 12 días» (L-02). Siempre con «suele» y con que la duración cambia. |
@@ -71,7 +71,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 |---|---|
 | M-01 | Las tarjetas pueden referirse al sangrado, porque la fase empieza con un inicio de sangrado confirmado. |
 | M-02 | «Qué pasa en su cuerpo» da la duración de la menstruación: la que declaró la persona afectada en el formulario de consentimiento inicial (DA-06, JUA-28) o, si no la declaró, 5 días (ME-01). Es la misma duración que usa la rueda. Es la única cifra en días de las tarjetas. Para los primeros días se usa «los primeros días, cuando el flujo suele ser mayor» (JUA-27 §6), nunca una regla de 3 días. |
-| M-03 | No se da por hecho dolor, malestar, cansancio ni mal humor. El dolor solo aparece como algo que puede darse en algunas mujeres. |
+| M-03 | No se da por hecho dolor, malestar, cansancio ni mal humor. El dolor solo aparece como algo que puede darse en algunas personas. |
 | M-04 | No se recomiendan medidas para el dolor (medicamentos, calor, ejercicio), aunque tengan evidencia en población (`09-health-pain`). |
 | M-05 | Ninguna tarjeta menciona la compra ni productos menstruales. |
 
@@ -171,7 +171,7 @@ La v0.2.0 no contiene:
 #### [0.2.0] — 06-11-2026
 
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
-- Pantalla educativa asociada: `menstruacion-v0.3.1.md` (rama de JUA-36).
+- Pantalla educativa asociada: `menstruacion-v0.3.0.md` (rama de JUA-36).
 
 #### [0.2.0] — Enmienda del 10-11-2026
 
@@ -466,7 +466,7 @@ La v0.4.0 no contiene:
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
 - O-03 precisa que la explicación de la ventana fértil está en la pantalla educativa y que la salud reproductiva es contenido válido.
 - La rueda mantiene «Ventana ovulatoria estimada», sin «fértil» (decisión del 06-11-2026).
-- Pantalla educativa asociada: `ovulatoria-v0.2.1.md` (rama de JUA-36).
+- Pantalla educativa asociada: `ovulatoria-v0.2.0.md` (rama de JUA-36).
 
 #### [0.2.0] — Enmienda del 10-11-2026
 
@@ -505,12 +505,12 @@ La v0.4.0 no contiene:
 
 **Issues:** JUA-19 (origen) y JUA-23 (reglas comunes).
 **Estado:** Borrador para revisión de producto. **Incluido en el paquete de revisión clínica de JUA-16**, pendiente de envío.
-**Origen:** decisión D-05 de [`spm-tdpm-v0.8.1.md`](./spm-tdpm-v0.8.1.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
+**Origen:** decisión D-05 de [`spm-tdpm-v0.8.0.md`](./spm-tdpm-v0.8.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
 **Reglas comunes:** H-01 a H-08 de [`home-cards-index.md`](./home-cards-index.md).
 **Base de investigación:** [`docs/research/fases/lutea/`](../research/fases/lutea/) (JUA-36).
 **Cuándo se muestra:** durante toda la fase lútea estimada, incluidos los días previos a la menstruación (sección 2 del índice).
 **Parte de:** el texto provisional de [`src/App.jsx`](../../src/App.jsx) (JUA-5), que no es definitivo.
-**Público y tono:** los de la sección 1 de `spm-tdpm-v0.8.1.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
+**Público y tono:** los de la sección 1 de `spm-tdpm-v0.8.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación.
 
 > Este documento fija el texto exacto de las tres tarjetas cuando la home muestra la fase lútea estimada. Cualquier cambio exige una nueva versión y su revisión contra las reglas comunes del índice y las reglas C-01 a C-04 de la pantalla SPM/TDPM.
@@ -524,7 +524,7 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 | L-01 | Las tarjetas no cambian en los días previos a la menstruación ni nombran SPM o TDPM (H-01, H-02; C-01 de la pantalla SPM/TDPM). |
 | L-02 | Duración aproximada: «unos 12 días», siempre con «suele» y «también varía», igual que LUT-03 y la rueda (excepción de H-06). Sin «fase lútea corta», «deficiencia lútea» ni «progesterona baja» (SGL-05). |
 | L-03 | La progesterona solo aparece como fisiología del útero, nunca para explicar ánimo, energía ni conducta (H-08; SGL-02). |
-| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.4.0.md` y SPM-05 de `spm-tdpm-v0.8.1.md`, repetida a propósito (D-04). |
+| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.4.0.md` y SPM-05 de `spm-tdpm-v0.8.0.md`, repetida a propósito (D-04). |
 | L-05 | La fase no se presenta como «la fase mala», ni como una semana que exija un trato especial (SGL-04). |
 
 ### 2. Texto de las tarjetas

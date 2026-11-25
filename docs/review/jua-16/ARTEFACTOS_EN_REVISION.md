@@ -2,14 +2,14 @@
 
 **Para qué sirve:** reunir en un solo documento, para leerlo de principio a fin, los artefactos del paquete de revisión clínica de JUA-16 y el índice de reglas de las tarjetas.
 **Qué es:** una copia generada. Los documentos de origen, en `docs/education/`, son la fuente de verdad, y su SHA-256 se comprobó al generar esta copia. Si hay diferencias, mandan los documentos de origen. Cualquier cambio se hace allí y este documento se vuelve a generar.
-**Generado:** 11-11-2026 y actualizado el 25-11-2026 (erratas), desde la rama `juanvidaechea/jua-19-pantalla-spm-tdpm-v0-5-0` (PR #17).
+**Generado:** 11-11-2026, desde la rama `juanvidaechea/jua-19-pantalla-spm-tdpm-v0-5-0` (PR #17).
 **Cómo responder:** con el [formulario de revisión](./FORMULARIO_REVISION.md). Explicación del paquete en el [README](./README.md). Para ver dónde va cada texto en la app, abre el [boceto navegable](./BOCETO.html).
 
 > **Cómo leer.** En cada artefacto, el texto que verá la persona usuaria está en la sección «Texto de la pantalla» o «Texto de las tarjetas», y en los mensajes de derivación. El resto (reglas, trazabilidad, exclusiones, decisiones e historial) explica de dónde sale cada frase. Las referencias numeradas [1], [2]… remiten a la lista del final de **cada** artefacto, no a una lista común. Los identificadores de bloque (SPM-03, LUT-04…) no se muestran en la app.
 
 ## Índice
 
-- [A1 · Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) y mensajes de derivación DER-01 y DER-02](#a1) — v0.8.1
+- [A1 · Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) y mensajes de derivación DER-01 y DER-02](#a1) — v0.8.0
   - [1. Público y tono](#a1-1)
   - [2. Ubicación](#a1-2)
   - [3. Reglas de la pantalla](#a1-3)
@@ -59,7 +59,7 @@
   - [7. Qué debe valorar la persona revisora](#a5-7)
   - [8. Historial](#a5-8)
   - [Referencias](#a5-9)
-- [A6 · Pantalla «La menstruación» de «Comprender»](#a6) — v0.3.1
+- [A6 · Pantalla «La menstruación» de «Comprender»](#a6) — v0.3.0
   - [1. Público y tono](#a6-1)
   - [2. Ubicación](#a6-2)
   - [3. Reglas de la pantalla](#a6-3)
@@ -75,7 +75,7 @@
   - [4. Trazabilidad](#a7-4)
   - [5. Decisiones](#a7-5)
   - [6. Historial](#a7-6)
-- [A8 · Pantalla «La ventana ovulatoria» de «Comprender»](#a8) — v0.2.1
+- [A8 · Pantalla «La ventana ovulatoria» de «Comprender»](#a8) — v0.2.0
   - [1. Público, tono, ubicación y reglas](#a8-1)
   - [2. Texto de la pantalla](#a8-2)
   - [3. Mensaje de derivación](#a8-3)
@@ -90,7 +90,7 @@
   - [5. Exclusiones comprobadas](#a9-5)
   - [6. Decisiones](#a9-6)
   - [7. Historial](#a9-7)
-- [A10 · Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario](#a10) — v0.1.1
+- [A10 · Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario](#a10) — v0.1.0
   - [1. Reglas propias](#a10-1)
   - [2. Texto](#a10-2)
   - [3. Trazabilidad](#a10-3)
@@ -109,21 +109,21 @@
 
 | # | Archivo | Versión | SHA-256 |
 |---|---|---|---|
-| A1 | `docs/education/spm-tdpm-v0.8.1.md` | 0.8.1 | `6419886ed929c14afc8fd4f7fe8f250d13447d2c8e3497208358633d9c6e3bae` |
-| A2 | `docs/education/home-cards-luteal-v0.4.0.md` | 0.4.0 | `94990917e1961b92b5121f95a3cf873b97dd05a3a5c3ba993d516e7623221cc5` |
-| A3 | `docs/education/home-cards-menstruation-v0.4.0.md` | 0.4.0 | `01ab978aa00103183ee96737674a3ee69ce70e2955ef42e67e03872026b785f8` |
+| A1 | `docs/education/spm-tdpm-v0.8.0.md` | 0.8.0 | `4eea69e12501346a40cbc7e96d08b6c4de89f35c83e0077e75016415414bc999` |
+| A2 | `docs/education/home-cards-luteal-v0.4.0.md` | 0.4.0 | `b11f6c81cdde120e388c62284c0891744f4890bb023ceafffdd43b78c219f7cc` |
+| A3 | `docs/education/home-cards-menstruation-v0.4.0.md` | 0.4.0 | `83a2c93ac125119ec56369840a5614f09ccf17c0d9f936dd7ccfbd6c321efda9` |
 | A4 | `docs/education/home-cards-follicular-v0.4.0.md` | 0.4.0 | `4c70cc679aaba8969bfc4f3eb22b41669bbd47edc96868215a5bbfccec541469` |
-| A5 | `docs/education/home-cards-ovulatory-v0.4.0.md` | 0.4.0 | `32e744e41844e21fd029ac89880cb10db2e5233145b12f2d113641ef95982186` |
-| A6 | `docs/education/menstruacion-v0.3.1.md` | 0.3.1 | `5e9df5df976ef93d73c6de2283f3edf1f3eb94bf8a6a17346fd47c01f1220d99` |
-| A7 | `docs/education/folicular-v0.2.0.md` | 0.2.0 | `e75ed6d32ed0e7c1771cfa738135d585db834a83d7f0bf567c2915af4d6fa803` |
-| A8 | `docs/education/ovulatoria-v0.2.1.md` | 0.2.1 | `668807a90f5f4ef5e8fd157eabb69e34b73215803899011635bd635bfba96d1a` |
-| A9 | `docs/education/lutea-v0.4.0.md` | 0.4.0 | `247da57f33b36b56aec5aca5c94f0404a6442481f2745d27fa041e0779f41687` |
-| A10 | `docs/education/home-prevision-v0.1.1.md` | 0.1.1 | `0994c362922cf16732a7bd6e4f309d1518839971b349d6419df3544c6a00d24f` |
+| A5 | `docs/education/home-cards-ovulatory-v0.4.0.md` | 0.4.0 | `72c95a0043cd3cf24d5373655bd7db0434ab73ec3d71af4f40c4c9daebcc081e` |
+| A6 | `docs/education/menstruacion-v0.3.0.md` | 0.3.0 | `082ad22c11357fdba1aaa6e63e15ca5a25ba732b2af18c2a78d4d9a84a2dfd9a` |
+| A7 | `docs/education/folicular-v0.2.0.md` | 0.2.0 | `a62a647d75efe2f6291d90b16e0933c46f288a568248d40d5373400464883664` |
+| A8 | `docs/education/ovulatoria-v0.2.0.md` | 0.2.0 | `54663d5eaaa62689455e9d50b6fd59e8ae46a55b54af5d75fff34ec7288f70db` |
+| A9 | `docs/education/lutea-v0.4.0.md` | 0.4.0 | `0f76a1c7d1fca55690ce02c3a11b183df3df4eef1768ad9a615cc989fe0ea274` |
+| A10 | `docs/education/home-prevision-v0.1.0.md` | 0.1.0 | `ae0633743a5c7814e7007a127dd01d4e584f149a0cebf041738d9730762ad238` |
 
 Comprobación, desde la raíz del repositorio:
 
 ```sh
-shasum -a 256 docs/education/spm-tdpm-v0.8.1.md docs/education/home-cards-{luteal,menstruation,follicular,ovulatory}-v0.4.0.md docs/education/menstruacion-v0.3.1.md docs/education/folicular-v0.2.0.md docs/education/ovulatoria-v0.2.1.md docs/education/lutea-v0.4.0.md docs/education/home-prevision-v0.1.1.md
+shasum -a 256 docs/education/spm-tdpm-v0.5.0.md docs/education/home-cards-*-v0.2.0.md docs/education/{menstruacion,folicular,ovulatoria,lutea}-v0.1.0.md
 ```
 
 ---
@@ -132,9 +132,9 @@ shasum -a 256 docs/education/spm-tdpm-v0.8.1.md docs/education/home-cards-{lutea
 
 ## A1 · Pantalla «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) y mensajes de derivación DER-01 y DER-02
 
-*Origen: `docs/education/spm-tdpm-v0.8.1.md` · versión 0.8.1 · SHA-256 `6419886ed929c14afc8fd4f7fe8f250d13447d2c8e3497208358633d9c6e3bae`*
+*Origen: `docs/education/spm-tdpm-v0.8.0.md` · versión 0.8.0 · SHA-256 `4eea69e12501346a40cbc7e96d08b6c4de89f35c83e0077e75016415414bc999`*
 
-**Título del documento de origen:** Consona — Pantalla educativa «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) v0.8.1
+**Título del documento de origen:** Consona — Pantalla educativa «Antes de la regla» (síndrome premenstrual y trastorno disfórico premenstrual) v0.8.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el paquete de revisión clínica de JUA-16**, pendiente de envío.
 **Incidencia:** JUA-19 (CON-027). Su versión aprobada será el artefacto que revise JUA-16 (ADR-002 P7).
@@ -179,7 +179,7 @@ La home muestra el día del ciclo, la fase estimada y tres tarjetas de orientaci
 | ID | Regla de coherencia |
 |---|---|
 | C-01 | En los días premenstruales estimados, las tarjetas de la home no nombran SPM ni TDPM y no presentan cambios emocionales o físicos como algo que la pareja vaya a tener o esté teniendo. |
-| C-02 | Si una tarjeta de la home menciona variabilidad premenstrual, usa el mismo marco que SPM-02 y SPM-04: «algunas mujeres», «puede», información general, no predicción. |
+| C-02 | Si una tarjeta de la home menciona variabilidad premenstrual, usa el mismo marco que SPM-02 y SPM-04: «algunas personas», «puede», información general, no predicción. |
 | C-03 | La home no cambia su texto, color ni tarjetas para dirigir a esta pantalla en función de la fase (U-02, U-03). Los únicos caminos son los dos enlaces estáticos de U-01. |
 | C-04 | Cualquier cambio en las tarjetas de la home asociadas a la fase lútea o a los días premenstruales se revisa contra esta pantalla antes de publicarse. Ver D-05. |
 
@@ -271,7 +271,7 @@ Lo que necesite puede cambiar de un ciclo a otro, o no tener nada que ver con el
 
 #### SPM-08 · Fuentes
 
-Esta información se basa en un estudio realizado en Barcelona sobre el estigma de la menstruación (2022), guías del NICE (Reino Unido, 2024), del Colegio Americano de Obstetras y Ginecólogos (2023 y 2025) y del NHS (2024), un metaanálisis sobre la frecuencia del trastorno disfórico premenstrual (2024), estudios de registro diario del ánimo (2012 a 2021), un metaanálisis sobre el ciclo y las capacidades cognitivas (2025), un estudio sobre lo que piensan los hombres de la menstruación (2017) y un ensayo clínico que incluyó a la pareja en la atención a los síntomas premenstruales intensos (2017). Las referencias completas están disponibles en «Fuentes».
+Esta información se basa en un estudio realizado en Barcelona sobre el estigma de la menstruación (2022), guías del NICE (Reino Unido, 2024), del Colegio Americano de Obstetras y Ginecólogos (2023 y 2025) y del NHS (2024), un metaanálisis sobre la frecuencia del trastorno disfórico premenstrual (2024), estudios de registro diario del ánimo (2012 a 2021), un metaanálisis sobre el ciclo y las capacidades cognitivas (2025) un estudio sobre lo que piensan los hombres de la menstruación (2017) y un ensayo clínico que incluyó a la pareja en la atención a los síntomas premenstruales intensos (2017). Las referencias completas están disponibles en «Fuentes».
 
 <a id="a1-5"></a>
 
@@ -324,7 +324,7 @@ Los mensajes son estáticos y se muestran siempre, a todas las personas, en la p
 
 ### 7. Exclusiones comprobadas
 
-Lista para comprobar en cada versión. La v0.8.1 no contiene:
+Lista para comprobar en cada versión. La v0.8.0 no contiene:
 
 - [x] Diagnóstico, clasificación, «posible SPM/TDPM», puntuaciones, umbrales, semáforos ni probabilidades individuales.
 - [x] Listas de criterios clínicos o de diagnósticos diferenciales presentadas como autoevaluación o como guía para evaluar a la pareja.
@@ -361,12 +361,6 @@ Lista para comprobar en cada versión. La v0.8.1 no contiene:
 <a id="a1-9"></a>
 
 ### 9. Historial
-
-#### [0.8.1] — Erratas (25-11-2026)
-
-- SPM-08: se añade la coma que faltaba antes de «un estudio sobre lo que piensan los hombres».
-- C-02: «algunas mujeres», como T-04 (D-07).
-- DER-01 y DER-02 no cambian.
 
 #### [0.8.0] — Parejas que no viven juntas (11-11-2026)
 
@@ -493,18 +487,18 @@ Lista para comprobar en cada versión. La v0.8.1 no contiene:
 
 ## A2 · Tarjetas de la pantalla de inicio en fase lútea
 
-*Origen: `docs/education/home-cards-luteal-v0.4.0.md` · versión 0.4.0 · SHA-256 `94990917e1961b92b5121f95a3cf873b97dd05a3a5c3ba993d516e7623221cc5`*
+*Origen: `docs/education/home-cards-luteal-v0.4.0.md` · versión 0.4.0 · SHA-256 `b11f6c81cdde120e388c62284c0891744f4890bb023ceafffdd43b78c219f7cc`*
 
 **Título del documento de origen:** Consona — Tarjetas de la home en fase lútea v0.4.0
 
 **Issues:** JUA-19 (origen) y JUA-23 (reglas comunes).
 **Estado:** Borrador para revisión de producto. **Incluido en el paquete de revisión clínica de JUA-16**, pendiente de envío.
-**Origen:** decisión D-05 de [`spm-tdpm-v0.8.1.md`](../../education/spm-tdpm-v0.8.1.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
+**Origen:** decisión D-05 de [`spm-tdpm-v0.8.0.md`](../../education/spm-tdpm-v0.8.0.md). Este conjunto se incluye **expresamente** en el alcance de JUA-16; no queda cubierto por la revisión de la pantalla SPM/TDPM.
 **Reglas comunes:** H-01 a H-08 de [`home-cards-index.md`](../../education/home-cards-index.md).
 **Base de investigación:** [`docs/research/fases/lutea/`](../../research/fases/lutea) (JUA-36).
 **Cuándo se muestra:** durante toda la fase lútea estimada, incluidos los días previos a la menstruación (sección 2 del índice).
 **Parte de:** el texto provisional de [`src/App.jsx`](../../../src/App.jsx) (JUA-5), que no es definitivo.
-**Público y tono:** los de la sección 1 de `spm-tdpm-v0.8.1.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
+**Público y tono:** los de la sección 1 de `spm-tdpm-v0.8.0.md`: la pareja que acompaña, en segunda persona, con alfabetización menstrual y sin paternalismo.
 **No habilita:** registros, inferencias, datos reales ni cambios del motor de estimación.
 
 > Este documento fija el texto exacto de las tres tarjetas cuando la home muestra la fase lútea estimada. Cualquier cambio exige una nueva versión y su revisión contra las reglas comunes del índice y las reglas C-01 a C-04 de la pantalla SPM/TDPM.
@@ -520,7 +514,7 @@ Se aplican las reglas comunes H-01 a H-08 del índice. Desde la v0.2.0 sustituye
 | L-01 | Las tarjetas no cambian en los días previos a la menstruación ni nombran SPM o TDPM (H-01, H-02; C-01 de la pantalla SPM/TDPM). |
 | L-02 | Duración aproximada: «unos 12 días», siempre con «suele» y «también varía», igual que LUT-03 y la rueda (excepción de H-06). Sin «fase lútea corta», «deficiencia lútea» ni «progesterona baja» (SGL-05). |
 | L-03 | La progesterona solo aparece como fisiología del útero, nunca para explicar ánimo, energía ni conducta (H-08; SGL-02). |
-| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.4.0.md` y SPM-05 de `spm-tdpm-v0.8.1.md`, repetida a propósito (D-04). |
+| L-04 | «Qué no asumir» nombra el estereotipo de la mujer «premenstrual» para desmentirlo (SGL-01). Es la misma idea que LUT-06 de `lutea-v0.4.0.md` y SPM-05 de `spm-tdpm-v0.8.0.md`, repetida a propósito (D-04). |
 | L-05 | La fase no se presenta como «la fase mala», ni como una semana que exija un trato especial (SGL-04). |
 
 <a id="a2-2"></a>
@@ -690,7 +684,7 @@ La v0.4.0 no contiene:
 
 ## A3 · Tarjetas de la pantalla de inicio en la menstruación
 
-*Origen: `docs/education/home-cards-menstruation-v0.4.0.md` · versión 0.4.0 · SHA-256 `01ab978aa00103183ee96737674a3ee69ce70e2955ef42e67e03872026b785f8`*
+*Origen: `docs/education/home-cards-menstruation-v0.4.0.md` · versión 0.4.0 · SHA-256 `83a2c93ac125119ec56369840a5614f09ccf17c0d9f936dd7ccfbd6c321efda9`*
 
 **Título del documento de origen:** Consona — Tarjetas de la home en la menstruación v0.4.0
 
@@ -711,7 +705,7 @@ La v0.4.0 no contiene:
 |---|---|
 | M-01 | Las tarjetas pueden referirse al sangrado, porque la fase empieza con un inicio de sangrado confirmado. |
 | M-02 | «Qué pasa en su cuerpo» da la duración de la menstruación: la que declaró la persona afectada en el formulario de consentimiento inicial (DA-06, JUA-28) o, si no la declaró, 5 días (ME-01). Es la misma duración que usa la rueda. Es la única cifra en días de las tarjetas. Para los primeros días se usa «los primeros días, cuando el flujo suele ser mayor» (JUA-27 §6), nunca una regla de 3 días. |
-| M-03 | No se da por hecho dolor, malestar, cansancio ni mal humor. El dolor solo aparece como algo que puede darse en algunas mujeres. |
+| M-03 | No se da por hecho dolor, malestar, cansancio ni mal humor. El dolor solo aparece como algo que puede darse en algunas personas. |
 | M-04 | No se recomiendan medidas para el dolor (medicamentos, calor, ejercicio), aunque tengan evidencia en población (`09-health-pain`). |
 | M-05 | Ninguna tarjeta menciona la compra ni productos menstruales. |
 
@@ -825,7 +819,7 @@ La v0.2.0 no contiene:
 #### [0.2.0] — 06-11-2026
 
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
-- Pantalla educativa asociada: `menstruacion-v0.3.1.md` (rama de JUA-36).
+- Pantalla educativa asociada: `menstruacion-v0.3.0.md` (rama de JUA-36).
 
 #### [0.2.0] — Enmienda del 10-11-2026
 
@@ -847,11 +841,6 @@ La v0.2.0 no contiene:
 - Orden de las tarjetas: «Qué pasa en su cuerpo», «Qué no asumir» y «Cómo acompañar».
 - «Cómo acompañar» lleva el antetítulo «Comunicación y tu parte».
 - «Haz tu parte en lo que compartís» en lugar de «Ocúpate de tu parte en casa», para que sirva también si no vivís juntos.
-
-#### [0.4.0] — Enmienda del 25-11-2026
-
-- M-03: «algunas mujeres» (D-07 de la pantalla «Antes de la regla»).
-- **El texto de las tarjetas no cambia**, por eso conservan la versión.
 
 <a id="a3-9"></a>
 
@@ -1042,7 +1031,7 @@ La v0.2.0 no contiene:
 
 ## A5 · Tarjetas de la pantalla de inicio en la ventana ovulatoria estimada
 
-*Origen: `docs/education/home-cards-ovulatory-v0.4.0.md` · versión 0.4.0 · SHA-256 `32e744e41844e21fd029ac89880cb10db2e5233145b12f2d113641ef95982186`*
+*Origen: `docs/education/home-cards-ovulatory-v0.4.0.md` · versión 0.4.0 · SHA-256 `72c95a0043cd3cf24d5373655bd7db0434ab73ec3d71af4f40c4c9daebcc081e`*
 
 **Título del documento de origen:** Consona — Tarjetas de la home en la ventana ovulatoria estimada v0.4.0
 
@@ -1171,7 +1160,7 @@ La v0.4.0 no contiene:
 - Trazabilidad apuntada a la investigación de base de JUA-36 (`docs/research/fases/`, rama de JUA-36). **Sin cambios en el texto de las tarjetas**: la investigación lo confirma.
 - O-03 precisa que la explicación de la ventana fértil está en la pantalla educativa y que la salud reproductiva es contenido válido.
 - La rueda mantiene «Ventana ovulatoria estimada», sin «fértil» (decisión del 06-11-2026).
-- Pantalla educativa asociada: `ovulatoria-v0.2.1.md` (rama de JUA-36).
+- Pantalla educativa asociada: `ovulatoria-v0.2.0.md` (rama de JUA-36).
 
 #### [0.2.0] — Enmienda del 10-11-2026
 
@@ -1211,9 +1200,9 @@ La v0.4.0 no contiene:
 
 ## A6 · Pantalla «La menstruación» de «Comprender»
 
-*Origen: `docs/education/menstruacion-v0.3.1.md` · versión 0.3.1 · SHA-256 `5e9df5df976ef93d73c6de2283f3edf1f3eb94bf8a6a17346fd47c01f1220d99`*
+*Origen: `docs/education/menstruacion-v0.3.0.md` · versión 0.3.0 · SHA-256 `082ad22c11357fdba1aaa6e63e15ca5a25ba732b2af18c2a78d4d9a84a2dfd9a`*
 
-**Título del documento de origen:** Consona — Pantalla educativa «La menstruación» v0.3.1
+**Título del documento de origen:** Consona — Pantalla educativa «La menstruación» v0.3.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío.
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -1231,7 +1220,7 @@ La v0.4.0 no contiene:
 
 **Para qué:** entender qué es la menstruación y qué no dice, para acompañar en consonancia sin interpretar, anticipar ni explicar a la otra persona.
 
-Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.8.1.md`):
+Se aplican las reglas de tono T-01 a T-04 de la pantalla SPM/TDPM (`spm-tdpm-v0.8.0.md`):
 
 - **T-01:** educativo, no paternalista.
 - **T-02:** la pareja es la autoridad sobre su propia experiencia.
@@ -1315,7 +1304,7 @@ El ánimo puede variar a lo largo del ciclo, pero en promedio varía poco, y en 
 
 #### MEN-06 · Lo que no se suele contar
 
-Muchas mujeres siguen con su día a día con dolor sin decir por qué. En España, una de cada cuatro mujeres ha sentido alguna vez que necesitaba faltar al trabajo, a clase o a otra actividad por el dolor o el sangrado de la regla, pero solo una de cada siete lo ha hecho. La mitad cree que faltar por ese motivo puede traerle consecuencias en el trabajo.
+Mucha gente sigue con su día a día con dolor y no dice por qué. En España, una de cada cuatro mujeres ha sentido alguna vez que necesitaba faltar al trabajo, a clase o a otra actividad por el dolor o el sangrado de la regla, pero solo una de cada siete lo ha hecho. La mitad cree que faltar por ese motivo puede traerle consecuencias en el trabajo.
 
 En España, la ley reconoce desde 2023 la salud menstrual como parte de la salud sexual y reproductiva y prevé una baja cuando la menstruación es incapacitante por una enfermedad diagnosticada.
 
@@ -1333,7 +1322,7 @@ Hay cosas que dependen de ti: hacer tu parte en lo que compartís sin esperar a 
 
 #### MEN-08 · Fuentes
 
-Esta información se basa en revisiones científicas sobre la fisiología del endometrio (2020 y 2022), metaanálisis sobre el dolor menstrual (2019) y sobre el ciclo y las capacidades cognitivas (2025), la Encuesta de Anticoncepción en España de la Sociedad Española de Contracepción (2024), estudios españoles con estudiantes universitarias (2018 y 2020), un estudio cualitativo realizado en Barcelona (2022), guías del Colegio Americano de Obstetras y Ginecólogos y de la Sociedad de Obstetras y Ginecólogos de Canadá, y la Ley Orgánica 1/2023. Las referencias completas están disponibles en «Fuentes».
+Esta información se basa en revisiones científicas sobre la fisiología del endometrio (2020 y 2022), metaanálisis sobre el dolor menstrual (2019) y sobre el ciclo y las capacidades cognitivas (2025), la Encuesta de Anticoncepción en España de la Sociedad Española de Contracepción (2024), estudios españoles con estudiantes universitarias (2018 y 2020), un estudio cualitativo realizado en Barcelona (2022), guías del Colegio Americano de Obstetras y Ginecólogos (ACOG) y de la Sociedad de Obstetras y Ginecólogos de Canadá (SOGC), y la Ley Orgánica 1/2023. Las referencias completas están disponibles en «Fuentes».
 
 <a id="a6-5"></a>
 
@@ -1392,12 +1381,6 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 
 ### 8. Historial
 
-#### [0.3.1] — Erratas (25-11-2026)
-
-- MEN-06: «Muchas mujeres siguen con su día a día con dolor sin decir por qué», en lugar de «Mucha gente» (D-07 de la pantalla «Antes de la regla»).
-- MEN-08: sin las siglas ACOG y SOGC, como en SPM-08.
-- DER-01 y DER-02 no cambian.
-
 #### [0.3.0] — 11-11-2026
 
 - MEN-07: «hacer tu parte en lo que compartís» en lugar de «ocuparte de tu parte en casa», para que sirva también si no vivís juntos (D-11 de la pantalla «Antes de la regla»).
@@ -1426,7 +1409,7 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 
 ## A7 · Pantalla «La fase folicular» de «Comprender»
 
-*Origen: `docs/education/folicular-v0.2.0.md` · versión 0.2.0 · SHA-256 `e75ed6d32ed0e7c1771cfa738135d585db834a83d7f0bf567c2915af4d6fa803`*
+*Origen: `docs/education/folicular-v0.2.0.md` · versión 0.2.0 · SHA-256 `a62a647d75efe2f6291d90b16e0933c46f288a568248d40d5373400464883664`*
 
 **Título del documento de origen:** Consona — Pantalla educativa «La fase folicular» v0.2.0
 
@@ -1442,7 +1425,7 @@ Fuente: criterio público de ACOG para acudir a urgencias (`jua-10/13`, consenso
 
 ### 1. Público, tono, ubicación y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.1.md`, secciones 1 a 3):
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.0.md`, secciones 1 a 3):
 
 - tono T-01 a T-04;
 - ubicación U-01 a U-04, como artículo de «Comprender» en «El cuerpo en cada fase»;
@@ -1578,9 +1561,9 @@ Fuente: orientación pública de ACOG sobre sangrado uterino anormal (`jua-10/13
 
 ## A8 · Pantalla «La ventana ovulatoria» de «Comprender»
 
-*Origen: `docs/education/ovulatoria-v0.2.1.md` · versión 0.2.1 · SHA-256 `668807a90f5f4ef5e8fd157eabb69e34b73215803899011635bd635bfba96d1a`*
+*Origen: `docs/education/ovulatoria-v0.2.0.md` · versión 0.2.0 · SHA-256 `54663d5eaaa62689455e9d50b6fd59e8ae46a55b54af5d75fff34ec7288f70db`*
 
-**Título del documento de origen:** Consona — Pantalla educativa «La ventana ovulatoria» v0.2.1
+**Título del documento de origen:** Consona — Pantalla educativa «La ventana ovulatoria» v0.2.0
 
 **Estado:** Borrador para revisión de producto. **Incluida en el alcance de la revisión clínica de JUA-16**, pendiente de envío. Nombre visible decidido el 06-11-2026 (D-01).
 **Issue:** JUA-36. Sirve como artículo de «Comprender» (pantalla 2.3, JUA-31).
@@ -1594,7 +1577,7 @@ Fuente: orientación pública de ACOG sobre sangrado uterino anormal (`jua-10/13
 
 ### 1. Público, tono, ubicación y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.1.md`, secciones 1 a 3), con dos añadidos:
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.0.md`, secciones 1 a 3), con dos añadidos:
 
 - **Reglas de la fase:** O-01 a O-06 de las tarjetas de JUA-23, y reglas de sesgo SGO-01 a SGO-05 de `03-sesgo-genero.md`. **Excepción a O-05 en esta pantalla:** OVU-02 menciona el dolor de ovulación (D-05), sin cifras, sin decir si es probable y sin presentarlo como forma de saber si ha habido ovulación. Las tarjetas de la home siguen sin mencionarlo.
 - **R-08:** ningún icono, color ni ilustración asociado a la fertilidad, el embarazo, el atractivo o la sexualidad.
@@ -1668,7 +1651,7 @@ Si en algún momento habláis de anticoncepción o de buscar un embarazo, es una
 
 #### OVU-08 · Fuentes
 
-Esta información se basa en la fisiología del ciclo (2018), una opinión de comité de la Sociedad Americana de Medicina Reproductiva sobre la ventana fértil (2022), estudios sobre el momento de la ovulación y la fecundación con miles de ciclos (1995 a 2020), un estudio con población general noruega (2015), una revisión sistemática sobre métodos basados en el conocimiento de la fertilidad (2018), un estudio de la Universidad de Granada sobre el uso de apps menstruales (2019) y la Encuesta de Anticoncepción en España de la Sociedad Española de Contracepción (2024). Las referencias completas están disponibles en «Fuentes».
+Esta información se basa en la fisiología del ciclo (2018), una opinión de comité de la Sociedad Americana de Medicina Reproductiva sobre la ventana fértil (2022), estudios sobre el momento de la ovulación y la fecundación con miles de ciclos (1995 a 2020), un estudio con población general noruega (2015), una revisión sistemática sobre métodos basados en el conocimiento de la fertilidad (2018) un estudio de la Universidad de Granada sobre el uso de apps menstruales (2019) y la Encuesta de Anticoncepción en España de la Sociedad Española de Contracepción (2024). Las referencias completas están disponibles en «Fuentes».
 
 <a id="a8-3"></a>
 
@@ -1716,10 +1699,6 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 
 ### 6. Historial
 
-#### [0.2.1] — Erratas (25-11-2026)
-
-- OVU-08: se añade la coma que faltaba antes de «un estudio de la Universidad de Granada».
-
 #### [0.2.0] — 11-11-2026
 
 - OVU-03 pasa a llamarse «Lo que ves en Consona», como en las demás pantallas de fase, y añade quién calcula los cambios de fase (CON-032).
@@ -1744,7 +1723,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 
 ## A9 · Pantalla «La fase lútea» de «Comprender»
 
-*Origen: `docs/education/lutea-v0.4.0.md` · versión 0.4.0 · SHA-256 `247da57f33b36b56aec5aca5c94f0404a6442481f2745d27fa041e0779f41687`*
+*Origen: `docs/education/lutea-v0.4.0.md` · versión 0.4.0 · SHA-256 `0f76a1c7d1fca55690ce02c3a11b183df3df4eef1768ad9a615cc989fe0ea274`*
 
 **Título del documento de origen:** Consona — Pantalla educativa «La fase lútea» v0.4.0
 
@@ -1760,7 +1739,7 @@ Fuente: `jua-10/01-cycle-phases.md`, límite 3 («nunca sustituye […] método 
 
 ### 1. Público, tono y reglas
 
-Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.1.md`, secciones 1 a 3): reglas de tono T-01 a T-04, de ubicación U-01 a U-04 y de pantalla R-01 a R-07. Añade:
+Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.0.md`, secciones 1 a 3): reglas de tono T-01 a T-04, de ubicación U-01 a U-04 y de pantalla R-01 a R-07. Añade:
 
 - **Reglas de sesgo:** SGL-01 a SGL-05 de `../research/fases/lutea/03-sesgo-genero.md`.
 - **R-08:** ningún icono, color ni ilustración que presente la fase como «mala», que asocie la fase con enfado, tristeza o peligro, o que la relacione con la sexualidad o la disponibilidad.
@@ -1769,7 +1748,7 @@ Iguales que en la pantalla de la menstruación (`menstruacion-v0.3.1.md`, seccio
 
 Esta pantalla se revisa siempre contra estas tres piezas:
 
-- **La pantalla SPM/TDPM** (`spm-tdpm-v0.8.1.md`, JUA-19). Esta pantalla explica la fase entera. La pantalla SPM/TDPM desarrolla los cambios premenstruales y los términos clínicos. LUT-05 resume y enlaza a ella sin repetir sus cifras. El enlace es estático y no cambia según la fase ni ningún dato (U-02). DER-01 y DER-02 reproducen sin cambios sus mensajes de derivación.
+- **La pantalla SPM/TDPM** (`spm-tdpm-v0.8.0.md`, JUA-19). Esta pantalla explica la fase entera. La pantalla SPM/TDPM desarrolla los cambios premenstruales y los términos clínicos. LUT-05 resume y enlaza a ella sin repetir sus cifras. El enlace es estático y no cambia según la fase ni ningún dato (U-02). DER-01 y DER-02 reproducen sin cambios sus mensajes de derivación.
 - **Las tarjetas de la fase lútea** (`home-cards-luteal-v0.4.0.md`, JUA-19), que resumen esta pantalla.
 - **La rueda** (JUA-27), que dibuja la fase lútea con 12 días.
 
@@ -1813,7 +1792,7 @@ Los días en que la rueda pasa de una fase a otra los calcula Consona a partir d
 
 Hacia el final de esta fase, algunas mujeres notan cambios en el cuerpo o en el ánimo: por ejemplo, dolor, hinchazón o cansancio; irritabilidad, tristeza o tensión; o cambios en el sueño o el apetito. Otras no notan ninguno, y en una misma mujer puede cambiar de un ciclo a otro.
 
-Cuando los cambios se repiten ciclo tras ciclo y afectan de forma importante al día a día, se habla de síndrome premenstrual o, en su forma más intensa y menos frecuente, de trastorno disfórico premenstrual. Son términos clínicos que solo puede valorar un profesional. Los explicamos en [«Antes de la regla»](../../education/spm-tdpm-v0.8.1.md).
+Cuando los cambios se repiten ciclo tras ciclo y afectan de forma importante al día a día, se habla de síndrome premenstrual o, en su forma más intensa y menos frecuente, de trastorno disfórico premenstrual. Son términos clínicos que solo puede valorar un profesional. Los explicamos en [«Antes de la regla»](../../education/spm-tdpm-v0.8.0.md).
 
 #### LUT-06 · Lo que la fase lútea no dice
 
@@ -1843,7 +1822,7 @@ Esta información se basa en revisiones sobre la fisiología del ciclo y del end
 
 ### 3. Mensajes de derivación
 
-Estáticos y siempre visibles en la posición indicada. No se activan por fechas, fase ni registros. Reproducen sin cambios los de `spm-tdpm-v0.8.1.md`; si cambian allí, cambian aquí.
+Estáticos y siempre visibles en la posición indicada. No se activan por fechas, fase ni registros. Reproducen sin cambios los de `spm-tdpm-v0.8.0.md`; si cambian allí, cambian aquí.
 
 #### DER-01 · Cuándo puede ayudar un profesional
 
@@ -1853,7 +1832,7 @@ Estáticos y siempre visibles en la posición indicada. No se activan por fechas
 > Si los cambios preocupan a tu pareja, se repiten, son intensos o le dificultan el día a día —trabajo, estudios, relaciones o descanso—, un profesional sanitario puede valorarlos en contexto. El centro de salud es un buen punto de partida.
 > La decisión de consultar es suya. Lo que puedes hacer es ofrecerle tu apoyo o tu compañía, si los quiere.
 
-Fuente: DER-01 de `spm-tdpm-v0.8.1.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4.4).
+Fuente: DER-01 de `spm-tdpm-v0.8.0.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4.4).
 
 #### DER-02 · Ayuda urgente
 
@@ -1868,7 +1847,7 @@ Fuente: DER-01 de `spm-tdpm-v0.8.1.md` (`jua-10/12` EC-07, EC-08; `audit-07` §4
 >
 > Estos números también son para ti si eres tú quien lo está pasando mal.
 
-Fuente: DER-02 de `spm-tdpm-v0.8.1.md`, verificado en fuentes oficiales el 07-10-2026 (D-03 y D-04 de JUA-19).
+Fuente: DER-02 de `spm-tdpm-v0.8.0.md`, verificado en fuentes oficiales el 07-10-2026 (D-03 y D-04 de JUA-19).
 
 <a id="a9-4"></a>
 
@@ -1883,7 +1862,7 @@ Fuente: DER-02 de `spm-tdpm-v0.8.1.md`, verificado en fuentes oficiales el 07-10
 | LUT-05 | Cambios premenstruales variables; SPM y TDPM como términos clínicos | LU-A09 (LS-11); SPM-03 |
 | LUT-06 | Sin cambios cognitivos; ánimo con poca variación media; estereotipo y su daño | LU-A10 a LU-A12 (LS-12 a LS-18); SGL-01, SGL-04 |
 | LUT-07 | Papel de la pareja; no atribuir al ciclo; preguntar si prefiere compañía, espacio o ayuda | LU-A13 (LS-19); LU-A16 (LS-22): el apoyo de la pareja importa, sin recomendar terapia; SGL-02; T-02; igual que SPM-07 |
-| DER-01, DER-02 | Derivación y ayuda urgente | LU-A14; `spm-tdpm-v0.8.1.md` |
+| DER-01, DER-02 | Derivación y ayuda urgente | LU-A14; `spm-tdpm-v0.8.0.md` |
 
 <a id="a9-5"></a>
 
@@ -1955,14 +1934,14 @@ La v0.1.0 no contiene:
 
 ## A10 · Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario
 
-*Origen: `docs/education/home-prevision-v0.1.1.md` · versión 0.1.1 · SHA-256 `0994c362922cf16732a7bd6e4f309d1518839971b349d6419df3544c6a00d24f`*
+*Origen: `docs/education/home-prevision-v0.1.0.md` · versión 0.1.0 · SHA-256 `ae0633743a5c7814e7007a127dd01d4e584f149a0cebf041738d9730762ad238`*
 
-**Título del documento de origen:** Consona — Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario v0.1.1
+**Título del documento de origen:** Consona — Previsión de la regla: cuenta atrás, estimaciones sin confirmar y calendario v0.1.0
 
 **Issues:** JUA-30 (prototipo, D-23) y JUA-41 (confirmación desde la app de la persona afectada).
 **Estado:** Borrador para revisión de producto. **Incluido en el paquete de revisión clínica de JUA-16** (artefacto A10), pendiente de envío.
 **Reglas:** especificación del panel v1.2.0, §3.3 (CA-01 a CA-11), §3.4 (CL-01 a CL-09), IT-02 y §5 ([`panel-principal-v1.1.0.md`](../../product/panel-principal-v1.1.0.md)).
-**Público y tono:** los de la sección 1 de [`spm-tdpm-v0.8.1.md`](../../education/spm-tdpm-v0.8.1.md): la pareja que acompaña, en segunda persona, sin paternalismo.
+**Público y tono:** los de la sección 1 de [`spm-tdpm-v0.8.0.md`](../../education/spm-tdpm-v0.8.0.md): la pareja que acompaña, en segunda persona, sin paternalismo.
 **No habilita:** datos reales, persistencia, avisos ni cambios del motor de estimación. Con datos reales depende del modelo E (JUA-13, JUA-22) y de JUA-41.
 
 > Este documento fija el texto exacto que se mostrará en la pantalla de inicio y en el calendario sobre la próxima regla. Las llaves `{…}` son valores que calcula el motor (CON-032); no se muestran tal cual. Cualquier cambio exige una nueva versión.
@@ -2027,7 +2006,7 @@ La v0.1.0 no contiene:
 
 **Dónde:** en lugar de la fase, la rueda y la cuenta atrás, cuando la incertidumbre supera el límite de CON-032 (CA-05d, sección 5).
 
-> No hay una regla confirmada reciente, así que Consona no puede estimar el ciclo ahora.
+> Hace demasiado tiempo que tu pareja no confirma el inicio de una regla. Consona no puede estimar el ciclo hasta que lo haga.
 
 #### PRV-08 · Calendario
 
@@ -2057,7 +2036,7 @@ Variantes:
 | Bloque | Afirmación | Base |
 |---|---|---|
 | PRV-01, PRV-02 | La próxima regla se puede estimar en un intervalo a partir de la duración de los ciclos. | JUA-27 §2 (duración del ciclo y variación dentro de la misma persona, desviación típica de unos 2,6 días); panel CA-01 a CA-03; motor CON-032. |
-| PRV-03 | Un calendario no sirve para evitar ni buscar un embarazo. | `jua-10/01-cycle-phases` (límite 3); OV-A07, OV-A08 (OS-06, OS-08 [V]); OVU-05b de `ovulatoria-v0.2.1.md`. |
+| PRV-03 | Un calendario no sirve para evitar ni buscar un embarazo. | `jua-10/01-cycle-phases` (límite 3); OV-A07, OV-A08 (OS-06, OS-08 [V]); OVU-05b de `ovulatoria-v0.2.0.md`. |
 | PRV-04, PRV-05 | Sin confirmación, la fecha es una estimación cada vez menos fiable. | Panel ME-04, CA-04 a CA-05d; JUA-27 §2. |
 | PRV-06 | La siguiente menstruación puede llegar antes o después. | Panel IT-01 a IT-03; JUA-27 §5. |
 | PRV-07 | La estimación tiene un límite de caducidad. | ADR-001 C9 (caducidad del motor); panel §5 y CA-05d. |
@@ -2067,7 +2046,7 @@ Variantes:
 
 ### 4. Exclusiones comprobadas
 
-La v0.1.1 no contiene:
+La v0.1.0 no contiene:
 
 - [x] Fechas o números únicos para la próxima regla.
 - [x] «Retraso», «tarde», «falta la regla» ni alusiones a un embarazo.
@@ -2098,10 +2077,6 @@ La v0.1.1 no contiene:
 <a id="a10-7"></a>
 
 ### 7. Historial
-
-#### [0.1.1] — Tono de «Datos antiguos» (25-11-2026)
-
-- PRV-07: «No hay una regla confirmada reciente, así que Consona no puede estimar el ciclo ahora». Sustituye a «Hace demasiado tiempo que tu pareja no confirma…», que sonaba a reproche hacia ella.
 
 #### [0.1.0] — 12-11-2026
 
@@ -2167,7 +2142,7 @@ Generalizan las reglas H-01 a H-05 de la fase lútea a todas las fases. No cambi
 |---|---|
 | H-01 | Las tres tarjetas son las mismas durante toda la fase. No cambian según el día del ciclo, la cercanía de la menstruación ni ningún dato local. Única excepción: la duración de la menstruación en su «Qué pasa en su cuerpo» (M-02). |
 | H-02 | Las tarjetas no nombran diagnósticos (SPM, TDPM, dismenorrea, endometriosis, anemia u otros) y no presentan cambios físicos o emocionales como algo que tu pareja vaya a tener o esté teniendo (C-01). |
-| H-03 | Cualquier mención de variabilidad usa «algunas mujeres», «puede» e información general (C-02). |
+| H-03 | Cualquier mención de variabilidad usa «algunas personas», «puede» e información general (C-02). |
 | H-04 | Las tarjetas no enlazan directamente a la pantalla SPM/TDPM ni cambian de color o de tono según la fase (C-03, U-03). |
 | H-05 | Ninguna tarjeta menciona ni sugiere deseo sexual, actividad sexual, consentimiento, límites ni disponibilidad. |
 | H-06 | Sin fertilidad, «días seguros», probabilidad de embarazo, ovulación confirmada ni cifras en días. Excepciones: la duración de la menstruación, declarada por la persona afectada o de 5 días por defecto (M-02); el intervalo de la fase folicular, «entre 15 y 20 días» contando los días de la regla (F-02); y la duración aproximada de la fase lútea, «unos 12 días» (L-02). Siempre con «suele» y con que la duración cambia. |
