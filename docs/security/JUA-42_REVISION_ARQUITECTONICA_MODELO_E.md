@@ -1,7 +1,7 @@
 # JUA-42 — Revisión arquitectónica del modelo E
 
 **Estado:** borrador de decisión. Respuestas de producto del 17-11-2026 y revisión del 19-11-2026. Preguntas para la revisión jurídica (§4.6) actualizadas el 24-11-2026. Revisión de producto del 25-11-2026: §4.2 y §8. Decisiones del 26-11-2026: quién puede deshacer el vínculo (§4.3.1, JUA-55) y correo de la §7 (descartado). §4.6 cerrada el 26-11-2026 para la revisión jurídica (JUA-22).
-**No modifica todavía** ADR-001, la línea base ni CON-008. **No habilita** datos reales, persistencia, emparejamiento ni piloto.
+El relé cifrado que propone este documento se formalizó en **ADR-003, aceptada con condiciones el 26-11-2026** ([docs/governance/ADR-003_RELE_CIFRADO_MODELO_E.md](../governance/ADR-003_RELE_CIFRADO_MODELO_E.md)), que modifica ADR-001, ADR-002 y la línea base. CON-008 queda pendiente de reescribir. **No habilita** datos reales, persistencia, emparejamiento ni piloto.
 **Relacionado:** JUA-13 (puerta del modelo E), JUA-28 (formulario de consentimiento), JUA-29 (ADR-003, excepción a ADR-001), JUA-41 (app de ella), JUA-43 (modelo de amenazas), JUA-44 (EIPD y violencia tecnológica), JUA-22 (revisión jurídica), JUA-47 (arquitectura definitiva).
 
 > Este documento no es asesoramiento jurídico. El §4.6 ordena las preguntas para la revisión profesional de JUA-22; no las responde.
@@ -298,7 +298,7 @@ La primera versión del modelo E, tal como queda tras el 19-11:
 
 ## 6. Cambios en otros documentos cuando se acepte
 
-* **ADR-003** (JUA-29): excepción para transmitir y guardar temporalmente sobres cifrados, con alcance «alta y confirmaciones» y las salvaguardas de §4.3 a §4.5.
+* **ADR-003** (JUA-29): excepción para transmitir y guardar temporalmente sobres cifrados, con alcance «alta y confirmaciones» y las salvaguardas de §4.3 a §4.5. *(26-11: aceptado con condiciones; [docs/governance/ADR-003_RELE_CIFRADO_MODELO_E.md](../governance/ADR-003_RELE_CIFRADO_MODELO_E.md).)*
 * **CON-008:** requisito 9 (§1.3), sobre opaco de estado completo, buzón con borrado por inactividad y referencia rotatoria.
 * **CON-007** (JUA-55): cierre del vínculo por parte de él, con sus estados, mensajes y casos de prueba; para ella, retirar el consentimiento deshace el vínculo (§4.3.1).
 * **Línea base §5:** justificación de la excepción.

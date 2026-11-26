@@ -4,6 +4,8 @@
 **Fecha de decisión:** 14 de septiembre de 2026  
 **Decisión:** Modelo E — consentimiento y revocación con coordinación mínima, sin datos de ciclo en el servicio remoto.
 
+> **Modificada por [ADR-003](../../../docs/governance/ADR-003_RELE_CIFRADO_MODELO_E.md)** (aceptada con condiciones el 26-11-2026): se autoriza un relé cifrado de extremo a extremo entre el dispositivo de la persona afectada y el receptor. Los cambios afectan a §2, §3, §4 y §6, llevan una nota en cada punto y se detallan en ADR-003 §5. El texto original se conserva.
+
 ## 1. Contexto
 
 Los datos de inicio de sangrado, duración de ciclo, fases calculadas, variables de síntomas o estado e inferencias derivadas pueden revelar información relativa a la salud. El diseño histórico permitía que una persona introdujera o conservara información de su pareja sin que la persona afectada tuviera control técnico directo sobre la consulta, corrección o eliminación.
@@ -13,6 +15,8 @@ Los modelos históricos A–D no resuelven por sí solos el problema cuando se d
 ## 2. Decisión
 
 Consona mantiene la regla de que los datos de ciclo, las variables consentidas y las inferencias asociadas se conservan **exclusivamente en el dispositivo que los almacena**. No existirá una base de datos remota de ciclos, una cuenta de ciclo, sincronización, copia de seguridad, analítica, telemetría, soporte remoto ni registro de aplicación que reciba dichos datos.
+
+> **ADR-003 (26-11-2026):** los datos pueden transmitirse del dispositivo de la persona afectada al receptor, solo cifrados de extremo a extremo por el relé de ADR-003. Consona no hace ni guarda copias de seguridad; cada persona puede crear una copia cifrada de lo suyo y guardarla donde quiera, y la del receptor nunca lleva datos de la persona afectada.
 
 Se autoriza una excepción estricta: un **servicio mínimo de consentimiento y revocación** puede procesar únicamente los siguientes metadatos de coordinación:
 
@@ -25,6 +29,8 @@ Se autoriza una excepción estricta: un **servicio mínimo de consentimiento y r
 
 El servicio no puede recibir, inferir, almacenar, indexar, transmitir o registrar fechas de sangrado, duración de ciclos, fases, variables, síntomas, notas, anticoncepción, inferencias, métricas de uso, contenido de pantalla ni derivados de esos datos. No se permiten analítica, telemetría, píxeles ni logs de aplicación con datos personales o de ciclo.
 
+> **ADR-003 (26-11-2026):** se exceptúan la transmisión y el almacenamiento temporal de sobres cifrados de extremo a extremo, con las salvaguardas R1–R10 de ADR-003. Recibir en claro, inferir, indexar y registrar siguen prohibidos.
+
 ## 3. Flujo de referencia
 
 El flujo siguiente describe el objetivo de diseño; no es todavía una especificación de implementación. Antes de programarlo deben cerrarse las condiciones de la sección 5.
@@ -33,6 +39,8 @@ El flujo siguiente describe el objetivo de diseño; no es todavía una especific
 2. Esa persona otorga o rechaza directamente el consentimiento mediante un mecanismo que no se reduzca a una casilla declarativa de la otra persona.
 3. El servicio de coordinación conserva solo los metadatos permitidos que hacen posible dirigir el estado de consentimiento y una revocación genérica. Los datos de ciclo no atraviesan este servicio.
 4. Si se autorizan datos semilla, variables o aprendizaje local, se conservan exclusivamente en el navegador o dispositivo receptor. No se sincronizan con el servicio ni con otros dispositivos. ADR-002 exige que la autorización distinga categorías y fuente de los registros.
+
+   > **ADR-003 (26-11-2026):** en los puntos 3 y 4, los datos de ciclo solo atraviesan el servicio cifrados de extremo a extremo, sin que pueda leerlos, y solo del dispositivo de la persona afectada al receptor. No se sincronizan con ningún otro dispositivo.
 5. Cuando la persona afectada retira el consentimiento, el servicio emite una solicitud de revocación sin contenido de ciclo. Al recibirla, el dispositivo receptor debe bloquear el acceso, borrar los datos locales, variables, cálculos e inferencias derivados, claves asociadas y caché pertinente, y no permitir nuevas estimaciones o personalización sin un consentimiento nuevo.
 
 La casilla de “mi pareja sabe que uso la aplicación” puede existir como recordatorio de comportamiento, pero no equivale al consentimiento directo de la persona afectada y no satisface este ADR por sí sola.
@@ -40,6 +48,8 @@ La casilla de “mi pareja sabe que uso la aplicación” puede existir como rec
 ## 4. Límite de conectividad
 
 Durante el piloto no habrá comprobación periódica del estado de consentimiento. El servicio no debe recibir peticiones de seguimiento recurrentes del dispositivo receptor con fines de vigilancia o perfilado.
+
+> **ADR-003 (26-11-2026):** el sobre sale del dispositivo de la persona afectada solo cuando ella abre su app, y el receptor lo lee solo cuando se abre la suya. Sin sondeo, segundo plano ni push. No es seguimiento.
 
 Una revocación no puede producir un borrado instantáneo en un dispositivo que se encuentra sin conexión, apagado o que no recibe la solicitud. La consecuencia es que el dispositivo deberá borrar y bloquear tan pronto como reciba la revocación; hasta ese momento no debe afirmarse una garantía de borrado remoto inmediato. La interfaz y los documentos de privacidad deben explicar este límite de forma clara. La evaluación de riesgos debe decidir si hacen falta medidas locales adicionales, como limitar el acceso mientras no pueda comprobarse la validez de un consentimiento dentro de una ventana definida.
 
@@ -63,6 +73,8 @@ La aceptación del modelo E no autoriza la implementación inmediata de un calen
 ## 6. Consecuencias
 
 El modelo E permite estudiar una revocación remota **sin transferir datos de ciclo**, pero introduce tratamiento remoto de metadatos de consentimiento y vínculo entre dispositivos. Esta es una excepción limitada a la regla local y no debe ampliarse implícitamente a cuentas, notificaciones de fase, calendarios compartidos ni sincronización.
+
+> **ADR-003 (26-11-2026):** el relé cifrado es la única ampliación aprobada. No se extiende a otros destinatarios, mensajería ni avisos del servidor.
 
 Consona no debe presentar este mecanismo como vigilancia consentida. El producto mantiene una única persona/perfil, sin exportación y sin historial retrospectivo amplio. ADR-002 permite registros de variables físicas, emocionales y cognitivas como categorías locales cerradas si existe consentimiento granular, pero exige separar autoinforme y observación, limitar retención y conservar el control de la persona afectada. El deseo sexual y el consentimiento sexual son una conversación y un consentimiento actual, no variables algorítmicas.
 

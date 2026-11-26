@@ -5,6 +5,8 @@
 **Actualizado:** 17 de septiembre de 2026  
 **Estado:** Línea base vigente. ADR-001 y ADR-002 quedan **aceptados con condiciones**. Los datos del ciclo, los registros de variables y las inferencias siguen siendo exclusivamente locales; la única excepción remota autorizada es el servicio mínimo de consentimiento y revocación definido en ADR-001. No se inicia un piloto personalizado hasta satisfacer sus condiciones de seguridad, control y revisión.
 
+> **Modificada por [ADR-003](../../../docs/governance/ADR-003_RELE_CIFRADO_MODELO_E.md)** (aceptada con condiciones el 26-11-2026): además del servicio de consentimiento y revocación, se autoriza un relé cifrado de extremo a extremo entre el dispositivo de la persona afectada y el receptor. Los datos de ciclo y las variables consentidas están en los dos dispositivos; el servicio solo guarda temporalmente el último sobre cifrado y no puede leerlo. Afecta a §3 («Datos de ciclo y variables») y §5; detalle en ADR-003 §5. El texto original se conserva.
+
 > **Regla de continuidad.** Cycleteller es el nombre histórico de los materiales recuperados. A partir de este documento, el producto se denomina **Consona**. Los nombres históricos se conservan únicamente para rastrear el origen de los archivos, decisiones y código.
 
 ## 1. Propósito de esta base
@@ -66,6 +68,8 @@ Las siguientes restricciones se aplican a toda funcionalidad, contenido, depende
 ## 5. Decisión arquitectónica vigente
 
 Los datos de ciclo, los registros de variables y las inferencias asociadas permanecen en el dispositivo que los conserva. Consona no incorpora una base de datos de ciclos, autenticación de cuentas de ciclo, almacenamiento remoto, copias de seguridad, sincronización, analítica o soporte que acceda a esos datos.
+
+> **ADR-003 (26-11-2026):** los datos están en el dispositivo de la persona afectada y en el receptor. Pasan de uno a otro solo cifrados de extremo a extremo, y el servicio guarda temporalmente el último sobre sin poder leerlo. No hay base de datos de ciclos ni copias de Consona. La justificación es soberanía y viabilidad, no comodidad (ADR-003 §3).
 
 La excepción aprobada no transforma Consona en un producto con backend de salud. El **servicio mínimo de consentimiento y revocación** se limita a identificadores pseudónimos efímeros o rotables, el vínculo técnico entre dispositivos, el estado de consentimiento y la solicitud de revocación. No recibe, infiere, almacena ni registra fechas, fases, síntomas, duración de ciclos, anticoncepción, nombres, notas o contenido equivalente. Su aplicación efectiva queda condicionada a las garantías enumeradas en ADR-001.
 
