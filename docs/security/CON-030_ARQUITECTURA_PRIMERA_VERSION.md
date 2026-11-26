@@ -1,11 +1,11 @@
 # CON-030 — Arquitectura de la primera versión del modelo E
 
-**Estado:** primer borrador, 26-11-2026. Pendiente de revisión por producto, seguridad e ingeniería.
+**Estado:** primer borrador, 26-11-2026. Decididas el mismo día D-01 a D-04 y D-06 a D-08 (§12); D-05 espera a JUA-22. Pendiente de revisión por producto, seguridad e ingeniería.
 **Incidencia:** JUA-47. Puerta 2 de la [ruta crítica](../governance/ruta-critica-modelo-e.md).
 **Parte de:** las decisiones de la [revisión arquitectónica del modelo E](./JUA-42_REVISION_ARQUITECTONICA_MODELO_E.md) (JUA-42), [CON-007](./CON-007_AUTORIZACION_REVOCACION_Y_OFFLINE.md) y [CON-008](./CON-008_REQUERIMIENTOS_TECNICOS_Y_API.md).
 **No habilita** datos reales, despliegue, emparejamiento ni piloto. Es arquitectura, no implementación (puerta 3).
 
-> Este documento convierte las decisiones de JUA-42 en componentes, datos, claves y flujos comprobables. Cuando JUA-42 y este documento no coincidan, manda JUA-42 hasta que se corrija aquí. Las decisiones abiertas están en §12; los riesgos que pasan al modelo de amenazas, en §13.
+> Este documento convierte las decisiones de JUA-42 en componentes, datos, claves y flujos comprobables. Cuando JUA-42 y este documento no coincidan, manda JUA-42 hasta que se corrija aquí. Las decisiones están en §12; los riesgos que pasan al modelo de amenazas, en §13.
 
 ## 0. Resumen
 
@@ -13,17 +13,17 @@
 |---|---|
 | Clientes | Dos PWA estáticas (React + Vite) del mismo repositorio y con el mismo motor local: la de él y una mínima para ella (D-01, decidido el 26-11). La de ella puede mostrar, si ella lo pide, lo que ve él (§2.1). |
 | Datos locales | IndexedDB, con cifrado en reposo mediante una clave no extraíble de Web Crypto. Nada sensible en `localStorage`, cookies ni caché del Service Worker. |
-| Criptografía | Solo Web Crypto nativa, sin librerías de terceros: intercambio de claves, derivación HKDF, AES-256-GCM y firmas (D-02). |
+| Criptografía | Solo Web Crypto nativa, sin librerías de terceros: X25519, Ed25519, HKDF, AES-256-GCM y PBKDF2. La app exige un navegador que las tenga (D-02). |
 | Emparejamiento | Siempre por el servidor, verificado con un código de 6 cifras y un compromiso previo para que el servidor no pueda forzar el código (§5.2). |
 | Relé | Un único origen, una ruta `POST`, un buzón por pareja con el último sobre y un marcador de cierre. Sin cuentas, correos, cookies ni logs de contenido o IP. |
-| Integridad | Código público, compilación reproducible y huella publicada de cada versión. La app muestra su huella (§9). |
+| Integridad | Proteger las cuentas y las dependencias, publicar la huella de cada versión y vigilar desde fuera que lo servido coincide con lo publicado (§9). |
 | Desbloqueo | Passkey local con verificación de usuario antes de confirmar, cambiar el consentimiento, borrar, cerrar el vínculo o crear una copia (§8). |
 
 ## 1. Punto de partida
 
 | Hoy | Consecuencia |
 |---|---|
-| React 19 y Vite 8, con `vite-plugin-pwa` (Workbox) en modo `autoUpdate`. | El Service Worker precachea recursos estáticos. La actualización silenciosa choca con la verificación de versiones (§9, D-04). |
+| React 19 y Vite 8, con `vite-plugin-pwa` (Workbox) en modo `autoUpdate`. | El Service Worker precachea recursos estáticos. Se mantiene la actualización automática (D-04, §9.2). |
 | No hay `fetch`, WebSocket, `sendBeacon` ni almacenamiento de datos de ciclo. | La única llamada de red será el adaptador de coordinación (CON-008 §8). Cualquier otra es un fallo. |
 | `src/motor/` tiene módulos puros (`fechas.js`, `sugerencia.js`) con pruebas. | El motor se comparte entre las dos apps y no sabe nada de red ni de almacenamiento. |
 | La landing está en un alojamiento europeo con PHP y MySQL. | Es una opción para el relé, pero hay que comprobar que permite desactivar los logs de acceso (§10, D-05). |
@@ -128,7 +128,7 @@ Las estimaciones se calculan cada vez y no se guardan. Así, borrar un dato de o
 * **Cifrado en reposo:** una clave AES-GCM creada con `extractable: false` y guardada en la propia IndexedDB. Cada registro se cifra con ella.
   * **Qué protege:** copias del almacenamiento del navegador hechas fuera de la app, como algunas copias de seguridad del sistema o análisis forenses del disco.
   * **Qué no protege:** a quien tiene el móvil desbloqueado y abre la app. Para eso está el desbloqueo antes de las acciones sensibles (§8). Hay que decirlo así, sin prometer más.
-* **Persistencia:** pedir `navigator.storage.persist()`. Si el navegador lo deniega, puede borrar los datos por falta de espacio, y en iOS Safari los borra si la web no se usa en 7 días salvo que esté instalada en la pantalla de inicio. Por eso la app de ella debe pedir instalarla, y la copia de seguridad es importante (§7). Hay que comprobarlo en iOS y Android (D-03).
+* **Persistencia:** pedir `navigator.storage.persist()`. Si el navegador lo deniega, puede borrar los datos por falta de espacio, y en iOS Safari los borra si la web no se usa en 7 días salvo que esté instalada en la pantalla de inicio. Por eso la copia de seguridad es importante (§7). **Decisión (D-03):** en iPhone y iPad, la app de ella exige estar instalada en la pantalla de inicio antes de compartir nada; lo comprueba con el modo de visualización `standalone`. En Android lo recomienda, pero deja seguir. Hay que comprobar el comportamiento en dispositivos reales.
 * **Borrado:** para borrar, se borran los registros y la clave de cifrado en reposo. Sin clave, cualquier resto ilegible no se puede descifrar. Inventario completo en §11.
 
 ## 5. Claves y emparejamiento
@@ -142,6 +142,8 @@ Las estimaciones se calculan cada vez y no se guardan. Así, borrar un dato de o
 | Secreto compartido | En los dos, por ECDH + HKDF | Derivar la clave de los sobres, la referencia del buzón y `read_proof`. |
 | Secreto de escritura | Solo en el móvil de ella | `write_proof`: solo ella puede sustituir el sobre. |
 | Clave de cierre | En cada móvil | `close`: cualquiera de los dos puede cerrar el vínculo. |
+
+**Algoritmos (D-02):** X25519 para el intercambio y Ed25519 para las firmas, de Web Crypto. Al abrirse, la app comprueba que el navegador los tiene. Si no, pide actualizar el móvil antes de emparejar y no ofrece otra vía: un solo código que mantener y probar.
 
 Todas las claves privadas se crean como no extraíbles cuando Web Crypto lo permite. Las que deban ir en la copia de seguridad (§7) se crean extraíbles solo para envolverlas con la clave de la copia, y esa excepción debe revisarla JUA-43.
 
@@ -229,11 +231,15 @@ Si el relé no ve actividad en el plazo fijado (propuesta: 90 días, JUA-42 §4.
 
 Sigue JUA-42 §8. Detalles de arquitectura:
 
-* **Clave de la copia:** derivada del código de recuperación con una función lenta (PBKDF2 nativo de Web Crypto, con un número alto de iteraciones; Argon2id sería mejor, pero exige una librería: D-02).
-* **El código de recuperación** lo genera la app al azar, con entropía suficiente para resistir un ataque fuera de línea (por ejemplo, 128 bits en grupos legibles). Nunca lo elige la persona.
+* **El código de recuperación** lo genera la app al azar, con 128 bits de entropía en grupos legibles. Nunca lo elige la persona.
+* **Clave de la copia:** derivada del código con PBKDF2 nativo de Web Crypto (D-02). Una función más lenta, como Argon2id, solo importa si el secreto es adivinable, como una contraseña elegida por la persona. Con un código aleatorio de 128 bits no lo es, así que no hace falta ninguna librería.
 * **Contenido:** el de la tabla de JUA-42 §8. La copia de él nunca lleva datos de ella.
 * **Al recuperar:** la app nueva registra en el relé una `read_proof` nueva (o una `write_proof` nueva, en el caso de ella) e invalida la anterior. Así se cierra el acceso del móvil perdido.
-* **Si la app de ella debe ver que el móvil de él ha cambiado** (JUA-42 §8, riesgo residual): decisión abierta (D-08).
+* **Aviso a ella si el móvil de él cambia (D-08).** Cuando él recupera la app en otro móvil, el relé deja una marca en el buzón, sin fecha. La siguiente vez que ella abre su app, la respuesta a su `put_envelope` lleva la marca, el relé la borra y la app de ella muestra un hecho neutro:
+  > ES: Tu pareja ha recuperado Consona en otro móvil.
+  > CA: La teva parella ha recuperat Consona en un altre mòbil.
+
+  Sin alarma ni instrucciones. Si no ha sido él, ella tiene a mano dejar de compartir. JUA-44 revisa el texto y si puede generar desconfianza.
 
 ## 8. Desbloqueo con passkey local
 
@@ -247,16 +253,37 @@ Sigue JUA-42 §8. Detalles de arquitectura:
 
 Es el límite principal de «no podemos leerlos» (JUA-42 §4.4, punto 7): en una app web, quien sirve el código podría cambiarlo para sacar las claves.
 
-| Medida | Qué aporta | Límite |
-|---|---|---|
-| Código público | Cualquiera puede revisar lo que hace la app. | No prueba que lo servido sea eso. |
-| Compilación reproducible | El mismo código da los mismos archivos, con la misma huella. | Hay que fijar versiones y entorno de compilación. |
-| Huella publicada de cada versión | En el repositorio y en un sitio distinto del servidor de la app. | Comprobarla es manual. |
-| La app muestra su huella | En «Acerca de», para compararla con la publicada. | Solo protege a quien lo compruebe. |
-| Actualización con aviso (D-04) | La app no cambia sin que se note. Hoy está en `autoUpdate`. | Una primera descarga comprometida no se detecta. |
-| Cabeceras estrictas | CSP `default-src 'self'`, `connect-src` con el relé exacto, `frame-ancestors 'none'`, sin `unsafe-inline` (CON-008 §8). | Las sirve el mismo servidor. |
+### 9.1. Quién podría modificarlo
 
-**Lo honesto:** en la web, estas medidas reducen el riesgo, pero no lo eliminan. La protección completa llega con una app nativa firmada por las tiendas, o con un verificador externo. Se dice en el formulario de JUA-28 y en ADR-003.
+| Vía | Cómo | ¿Hace falta atacar nuestros servidores? |
+|---|---|---|
+| Dependencia comprometida | Código malicioso en un paquete que usamos (React, Vite, Workbox o cualquiera de los que arrastran). Lo compilamos y lo publicamos nosotros, sin saberlo. Es la vía más habitual. | No |
+| Cuenta robada | Alojamiento (panel, FTP), GitHub o registro del dominio. Con el dominio, se puede apuntar consonaapp.com a otro servidor. | No: se entra con nuestras credenciales |
+| Servidor atacado | Una vulnerabilidad en el servidor web, PHP o el panel. | Sí |
+| El proveedor | Un empleado, o una orden judicial. | No: ya tiene acceso |
+| Nosotros | Por error, o por una orden judicial. «No podemos leerlos» también es una promesa sobre nosotros mismos. | No |
+
+No es una vía alguien en la misma red que ella: lo impide HTTPS.
+
+### 9.2. Por qué la actualización manual no protege (D-04)
+
+En una PWA, lo que decide si una versión nueva espera a que la persona acepte, o se activa sola, es el propio código nuevo (su Service Worker), no el antiguo. Un código malicioso puede activarse al momento y no mostrar ningún aviso. La actualización manual, y un aviso después de actualizar, solo los respeta el código honrado: ayudan con un fallo nuestro sin mala intención, no con un ataque. Frente a una dependencia comprometida tampoco sirve la huella, porque la versión maliciosa la habríamos publicado nosotros.
+
+Por eso se mantiene la actualización automática (D-04): tiene el mismo riesgo que la manual y hace llegar antes las correcciones de seguridad.
+
+### 9.3. Medidas
+
+| Medida | Qué cubre | Límite |
+|---|---|---|
+| Verificación en dos pasos en alojamiento, GitHub y registro del dominio; bloqueo del dominio en el registrador | Cuenta robada | No cubre al proveedor ni a nosotros. |
+| Pocas dependencias, fijadas en `package-lock.json`, instaladas con `npm ci` y revisadas antes de cada actualización | Dependencia comprometida | La revisión es humana y puede fallar. |
+| HSTS con precarga | Desvío del dominio a otro servidor sin certificado válido | No cubre a quien obtenga un certificado tras robar el dominio. |
+| Cabeceras estrictas: CSP `default-src 'self'`, `connect-src` con el relé exacto, `frame-ancestors 'none'`, sin `unsafe-inline` (CON-008 §8) | Inyección de scripts ajenos | Las sirve el mismo servidor. |
+| Código público y compilación reproducible | Que cualquiera pueda comprobar que lo publicado sale del código | Hay que fijar versiones y entorno de compilación. |
+| Huella publicada de cada versión, en el repositorio y fuera del servidor de la app; la app la muestra en «Acerca de» | Comparación manual | Solo protege a quien la compruebe. |
+| **Vigilancia externa:** un proceso automático, fuera de nuestro servidor, que descarga cada cierto tiempo los archivos que sirve la app y compara su huella con la publicada. Si no coinciden, avisa | Servidor atacado, cuenta robada, proveedor | No ve una versión distinta servida solo a una persona concreta. No cubre una dependencia comprometida. |
+
+**Lo honesto:** en la web, estas medidas reducen el riesgo, pero no lo eliminan. La protección completa llega con una app nativa firmada por las tiendas. Se dice en el formulario de JUA-28 y en ADR-003.
 
 ## 10. Relé
 
@@ -273,7 +300,7 @@ Es el límite principal de «no podemos leerlos» (JUA-42 §4.4, punto 7): en un
 | Tabla | Campos | Vida |
 |---|---|---|
 | `pairing_slot` | referencia de la ranura, mensajes del emparejamiento | Minutos; se borra al terminar. |
-| `mailbox` | referencia del buzón, verificador de escritura, hash de lectura, verificadores de cierre, sobre o marcador de cierre, día de última actividad | Hasta el cierre, la inactividad o la rotación de referencia. |
+| `mailbox` | referencia del buzón, verificador de escritura, hash de lectura, verificadores de cierre, sobre o marcador de cierre, día de última actividad (D-06), marca de cambio del móvil de él, sin fecha (D-08) | Hasta el cierre, la inactividad o la rotación de referencia. |
 | `dedup` | `event_ref` | Corta (CON-008 §4). |
 
 No hay tabla de usuarios, dispositivos, parejas ni historial.
@@ -290,6 +317,18 @@ Criterio eliminatorio de CON-008 §7.2: si el proveedor no permite desactivar o 
 
 La elección depende del dictamen de JUA-22 (pregunta 1).
 
+**Preguntas para el proveedor**, empezando por el alojamiento actual. Una sola respuesta negativa en las cuatro primeras lo descarta:
+
+1. ¿Se pueden desactivar del todo los logs de acceso del servidor web (Apache o nginx) para un subdominio concreto? ¿Y los del panel de control y los del proxy o la protección frente a ataques que haya delante?
+2. Si no se pueden desactivar, ¿se puede quitar la IP y la ruta, o fijar una retención de 24 horas o menos?
+3. ¿En qué país están los servidores y las copias de seguridad? ¿Se puede garantizar que no salen del EEE?
+4. ¿Qué subencargados tratan los datos del alojamiento (centros de datos, soporte, protección frente a ataques)? ¿Alguno está fuera del EEE?
+5. ¿Las copias de seguridad automáticas de la base de datos se pueden desactivar o acortar? El buzón no debe sobrevivir en una copia al borrado.
+6. ¿Ofrecen contrato de encargo del tratamiento (art. 28 del RGPD)?
+7. ¿Se puede usar PHP con sesiones y cookies desactivadas, y fijar las cabeceras HTTP del subdominio?
+
+Las respuestas se adjuntan al expediente de JUA-22.
+
 ## 11. Borrado verificable (para JUA-18)
 
 | Qué | Dónde | Cuándo se borra |
@@ -303,18 +342,18 @@ La elección depende del dictamen de JUA-22 (pregunta 1).
 | Caché del Service Worker | Cache Storage | Nunca tiene datos sensibles; se comprueba en JUA-17. |
 | Sobre y buzón | Relé | Sustitución, cierre, inactividad o rotación. |
 
-## 12. Decisiones abiertas
+## 12. Decisiones
 
 | # | Decisión | Opciones | Recomendación |
 |---|---|---|---|
 | D-01 | ¿Una app o dos? | Una PWA con dos papeles. Dos apps (dos compilaciones) del mismo repositorio, con el mismo motor. | **Decidido (26-11): dos.** La de ella es mínima: menos código, menos superficie de ataque, una huella propia y un nombre e icono que no tienen por qué decir «Consona» (JUA-44). Puede ver lo que ve él con una simulación local (§2.1). |
-| D-02 | Primitivas criptográficas | Solo Web Crypto. Web Crypto más una librería empaquetada (libsodium) para X25519, Ed25519 o Argon2id. | **Solo Web Crypto**, si X25519 y Ed25519 funcionan en todos los navegadores objetivo; si no, P-256. Sin dependencias criptográficas de terceros. Lo confirma JUA-43. |
-| D-03 | Persistencia en iOS | Pedir instalarla. Aceptar el riesgo de borrado. | **Pedir instalar la app de ella** en la pantalla de inicio antes de compartir, y recordar la copia. Por comprobar en dispositivos reales. |
-| D-04 | Actualización de la PWA | `autoUpdate` (hoy). Aviso y actualización al aceptar. | **Aviso y actualización al aceptar**, mostrando la huella nueva. |
-| D-05 | Proveedor del relé | §10.3. | Pendiente de JUA-22. |
-| D-06 | Actividad en el relé | Fecha y hora. Solo el día. Solo la semana. | **Solo el día, sobrescrito.** Basta para la inactividad de 90 días y no guarda historial. |
+| D-02 | Primitivas criptográficas | Solo Web Crypto: X25519 y Ed25519 con versión mínima, P-256 para todos, o las dos. Web Crypto más una librería (libsodium). | **Decidido (26-11): X25519 y Ed25519 de Web Crypto, con versión mínima del navegador** (§5.1). Ya las tienen Chrome, Firefox (desde la 130) y Safari (Ed25519 desde la 17; X25519 desde principios de 2025). Sin librerías de terceros; PBKDF2 basta para la copia (§7). Lo confirma el prototipo. |
+| D-03 | Persistencia en iOS | Exigir instalarla. Recomendarla. Exigirla solo en iPhone. | **Decidido (26-11): se exige en iPhone y iPad y se recomienda en Android** (§4.2). |
+| D-04 | Actualización de la PWA | `autoUpdate` (hoy). Aviso y actualización al aceptar. Aviso solo en la app de ella. | **Decidido (26-11): automática**, como hoy. En una PWA, la manual no protege frente a un código malicioso, porque es el código nuevo el que decide si espera (§9.2). La protección está en §9.3. |
+| D-05 | Proveedor del relé | §10.3. | **Pendiente** del dictamen de JUA-22 y de las respuestas del proveedor (§10.3). |
+| D-06 | Actividad en el relé | Fecha y hora. Solo el día. Solo la semana. | **Decidido (26-11): solo el día, sobrescrito.** Basta para la inactividad de 90 días y no guarda historial. |
 | D-07 | ¿Quién invita? | Él (es quien usa Consona primero). Ella. Cualquiera. | **Decidido (26-11): cualquiera de los dos.** El consentimiento y la confirmación del código siempre se hacen en la app de ella (§5.2). |
-| D-08 | ¿Aviso a ella si el móvil de él cambia? | Sí, al abrir su app. No. | **Sí**, como hecho neutro («tu pareja ha recuperado Consona en otro móvil»). El relé solo tendría que guardar una marca sin fecha. Lo valoran JUA-43 y JUA-44. |
+| D-08 | ¿Aviso a ella si el móvil de él cambia? | Sí, al abrir su app. No. | **Decidido (26-11): sí, como hecho neutro** (§7). El relé guarda una marca sin fecha y la borra al entregarla. JUA-44 revisa el texto. |
 
 ## 13. Riesgos para el modelo de amenazas (JUA-43) y la EIPD (JUA-44)
 
@@ -325,7 +364,7 @@ Las medidas de esta tabla son propuestas de diseño. Ninguna está validada ni p
 | R-01 | El servidor se hace pasar por uno de los dos al emparejar. | Código de 6 cifras con compromiso previo (§5.2). | Que no lo comparen de verdad. La app debe hacerlo obligatorio y claro. |
 | R-02 | El servidor devuelve un sobre antiguo con datos ya borrados. | Contador creciente dentro del sobre (§5.3). | **Abierto:** tras recuperar el móvil, él no conoce el último contador. Opción: guardarlo en su copia, que no lleva datos de ella; protege hasta la fecha de la copia, no después. Lo decide JUA-43. |
 | R-03 | Él escribe sobres falsos en nombre de ella. | Firma de ella y `write_proof` (§5.4). | Ninguno relevante. |
-| R-04 | Código servido modificado para sacar claves. | §9. | Primera descarga y quien no compruebe la huella. |
+| R-04 | Código servido o dependencia modificados para sacar claves. | Cuentas protegidas, dependencias revisadas y vigilancia externa (§9.3). | Una dependencia comprometida que pase la revisión; una versión distinta servida solo a una persona. Igual con actualización manual o automática (§9.2). |
 | R-05 | Desbloqueo forzado o código del móvil conocido. | Ninguna técnica completa. | JUA-42 §5. |
 | R-06 | Passkey sincronizada en otro dispositivo. | §8. | Por evaluar. |
 | R-07 | Copia de él usada por otra persona. | Rotación de `read_proof` al recuperar; aviso a ella (D-08). | JUA-42 §8. |
@@ -336,8 +375,9 @@ Las medidas de esta tabla son propuestas de diseño. Ninguna está validada ni p
 ## 14. Qué falta para cerrar JUA-47
 
 * Revisión de este borrador por producto, seguridad e ingeniería.
-* Decidir D-02 a D-06 y D-08 (D-01 y D-07 decididas el 26-11).
-* Prototipo técnico con datos ficticios: passkey en PWA en iOS y Android, X25519 y Ed25519 en Web Crypto, persistencia en iOS (D-02, D-03, §8).
+* Decidir D-05 con el dictamen de JUA-22 y las respuestas del proveedor (§10.3).
+* Definir la vigilancia externa (§9.3): dónde se ejecuta, cada cuánto y a quién avisa.
+* Prototipo técnico con datos ficticios: passkey en PWA en iOS y Android, X25519 y Ed25519 en Web Crypto y la versión mínima que exigen, instalación exigida en iPhone y persistencia (D-02, D-03, §8).
 * Incorporar las condiciones de JUA-22, JUA-43 y JUA-44.
 * Esquema `consona-coordination-v1` ampliado con el sobre y las pruebas de posesión, con fixtures válidos e inválidos (CON-008 §9 y §12).
 * Inventario para JUA-17 (endpoints, recursos, CSP y caché) y JUA-18 (§11).

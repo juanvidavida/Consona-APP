@@ -225,7 +225,7 @@ La primera versión del modelo E, tal como queda tras el 19-11:
 **B. Consentimiento e información**
 
 3. ¿Basta el consentimiento explícito de ella (art. 9.2.a) dado en su propia app, sin identidad ni cuenta (DA-09)? ¿Sirve el desbloqueo del dispositivo con passkey (§5) para demostrarlo (art. 7.1), sabiendo que la app solo puede afirmar «confirmado en su dispositivo con su desbloqueo»? ¿Qué registro mínimo hace falta?
-4. **La promesa a ella (§4.2).** «Tú decides qué compartes. Tus datos viajan cifrados de extremo a extremo: nosotros no podemos leerlos», con su «Más información» (qué vemos y qué no, y que guardamos solo el último mensaje). ¿Es exacta y suficiente para un consentimiento informado (arts. 12 y 13)? Sus límites: el servidor ve metadatos, «no podemos leerlos» depende de que la app servida sea la publicada (§4.4, punto 7) y el borrado en el móvil de él espera a que lo abra (§1.1).
+4. **La promesa a ella (§4.2).** «Tú decides qué compartes. Tus datos viajan cifrados de extremo a extremo: nosotros no podemos leerlos», con su «Más información» (qué vemos y qué no, y que guardamos solo el último mensaje). ¿Es exacta y suficiente para un consentimiento informado (arts. 12 y 13)? Sus límites: el servidor ve metadatos, «no podemos leerlos» depende de que la app servida sea la publicada (§4.4, punto 7); en una app web, una versión nueva puede activarse sin aviso, y las medidas para evitar una modificación están en CON-030 §9 y el borrado en el móvil de él espera a que lo abra (§1.1).
 5. **Los datos de él.** Él también es usuario: su dispositivo guarda el vínculo, sus ajustes y los datos de ella que recibe. ¿Qué base jurídica y qué información necesita él?
 
 **C. Datos cifrados y metadatos**
@@ -345,7 +345,7 @@ Sin cuenta ni correo. Cada persona puede hacer una copia cifrada que guarda dond
 
 **Por qué la copia de él no lleva datos de ella.** Una copia en su nube quedaría fuera del alcance de los borrados y de la retirada del consentimiento de ella (CON-007). Si ella ha retirado el consentimiento, la app de él lo ve al reconectarse y no recibe nada.
 
-**Riesgo residual de la copia de él.** No lleva datos de ella, pero sí la credencial del vínculo. Mientras el vínculo esté activo, quien tenga la copia y su código puede reconectarse y leer el último sobre, es decir, los datos que ella comparte en ese momento. Al recuperar se cierra el acceso del móvil anterior (tabla de arriba): él lo notaría, porque su móvil pierde el acceso; ella, no. Va al modelo de amenazas (JUA-43) y a la evaluación de violencia tecnológica (JUA-44). Se puede valorar que la app de ella avise cuando el dispositivo de él cambia.
+**Riesgo residual de la copia de él.** No lleva datos de ella, pero sí la credencial del vínculo. Mientras el vínculo esté activo, quien tenga la copia y su código puede reconectarse y leer el último sobre, es decir, los datos que ella comparte en ese momento. Al recuperar se cierra el acceso del móvil anterior (tabla de arriba): él lo notaría, porque su móvil pierde el acceso; ella, no. Va al modelo de amenazas (JUA-43) y a la evaluación de violencia tecnológica (JUA-44). **Decidido el 26-11 (CON-030, D-08):** la app de ella avisa, como hecho neutro, cuando él recupera Consona en otro móvil.
 
 **Flujo de copia:**
 
