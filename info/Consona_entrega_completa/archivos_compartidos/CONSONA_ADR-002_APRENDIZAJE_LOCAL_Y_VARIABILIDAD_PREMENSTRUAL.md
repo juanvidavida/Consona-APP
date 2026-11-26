@@ -4,6 +4,8 @@
 **Fecha de decisión:** 16 de septiembre de 2026  
 **Decisión:** Consona incorporará una pantalla educativa sobre variabilidad premenstrual, SPM y TDPM, y podrá generar inferencias personalizadas **exclusivamente en el dispositivo local** a partir de datos expresamente consentidos. No será una herramienta diagnóstica ni podrá inferir consentimiento sexual, límites, deseo sexual ni disponibilidad.
 
+> **Modificada por [ADR-003](../../../docs/governance/ADR-003_RELE_CIFRADO_MODELO_E.md)** (aceptada con condiciones el 26-11-2026) en §3, §5 (punto 7) y §7 (P8): las variables consentidas pueden viajar cifradas de extremo a extremo al dispositivo receptor. Las inferencias siguen siendo exclusivamente locales. El texto original se conserva.
+
 ## 1. Contexto
 
 La experiencia de síntomas antes de la menstruación no es universal ni uniforme. Tener uno o varios síntomas en algún ciclo no basta para identificar un síndrome, y una fase calculada no permite conocer el estado emocional de una persona concreta. El SPM clínicamente relevante exige un patrón temporal repetido y afectación de las actividades habituales; para confirmar TDPM se emplea seguimiento prospectivo diario de síntomas durante al menos dos ciclos. [1] [2]
@@ -23,6 +25,8 @@ Después de obtener un consentimiento directo, específico y revocable conforme 
 ## 3. Datos locales autorizables
 
 Todos los campos de esta sección se conservan exclusivamente en el dispositivo que los almacena. El servicio mínimo de consentimiento y revocación de ADR-001 no recibe, deduce, almacena ni registra ninguno de ellos.
+
+> **ADR-003 (26-11-2026):** las variables consentidas, su fecha y su fuente viajan dentro del sobre cifrado al dispositivo receptor; el servicio solo guarda el sobre, sin poder leerlo. La fase estimada y la cobertura no salen nunca del dispositivo.
 
 | Grupo | Ejemplos permitidos si se consienten | Regla de procedencia y presentación |
 |---|---|---|
@@ -55,6 +59,8 @@ La primera versión del algoritmo deberá cumplir estas reglas:
 6. Permitir borrar un registro, una categoría, una fuente o todo el historial local; el modelo debe recalcularse o dejar de mostrar resultados de inmediato.
 7. Limitar el historial de aprendizaje local a una ventana definida y revisable, sin exportación, sincronización, perfiles múltiples ni gráficos que permitan construir un expediente. La extensión concreta se decidirá en CON-009 y se evaluará en la EIPD.
 
+   > **ADR-003 (26-11-2026):** salvo el relé cifrado hacia el dispositivo receptor, con el alcance consentido, y la copia cifrada que la persona afectada crea y guarda.
+
 Una salida admisible sería: “En los registros locales disponibles, esta variable apareció con mayor frecuencia en la ventana premenstrual estimada. Es una asociación posible, no explica por sí sola cómo se encuentra ni qué necesita hoy. ¿Quieres preguntarle cómo está?”. Una salida no admisible sería: “Estará irritable”, “tiene SPM”, “hoy no querrá intimidad” o cualquier equivalente.
 
 La home de quien consulta Consona no muestra registros de variables ni asociaciones personalizadas. El motor de ciclo puede aprender localmente de fechas confirmadas para afinar la duración individual, el rango y la incertidumbre de la fase que se presenta en esa home. Las cuatro tarjetas de la home se orientan a conversación y acción propia; no son variables medidas ni salidas del aprendizaje. Cualquier salida de este ADR requeriría una vista separada y una decisión posterior, conservando fuente, número de ciclos, cobertura, incertidumbre, borrado y control definidos en este documento. La especificación de la home está en `CONSONA_ESPECIFICACION_PANEL_PRINCIPAL.md`.
@@ -79,6 +85,8 @@ Las respuestas de seguridad deben ser educativas y no invasivas. No se almacenar
 | P6 | Seguridad y control coercitivo | EIPD, modelo de amenazas y evaluación de violencia tecnológica que cubran específicamente observación por la pareja. |
 | P7 | Revisión clínica y de contenidos | Revisión profesional de la pantalla SPM/TDPM, mensajes de derivación y lenguaje no diagnóstico. |
 | P8 | Sin salida remota | Revisión de red, dependencia y logs que demuestre que variables, inferencias y contenido no salen del dispositivo. |
+
+> **ADR-003 (26-11-2026), P8:** las variables consentidas solo salen cifradas de extremo a extremo hacia el dispositivo receptor. Las inferencias y los derivados no salen nunca. La revisión debe demostrar que no hay ninguna otra salida.
 
 ## 8. Consecuencias para el alcance
 

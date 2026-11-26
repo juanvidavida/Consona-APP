@@ -16,6 +16,7 @@ Este directorio preserva decisiones y cortes de planificación sin convertir doc
 | Tema | Fuente que prevalece | Uso de este repositorio |
 |---|---|---|
 | Límites de datos, consentimiento y servicio mínimo | [`ADR-001`](../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_ADR-001_CONTROL_LOCAL_Y_CONSENTIMIENTO.md) | Las especificaciones técnicas deben ser trazables a estos límites. |
+| Relé cifrado entre el dispositivo de ella y el de él | [`ADR-003`](./ADR-003_RELE_CIFRADO_MODELO_E.md) — aceptada con condiciones el 26-11-2026 | Modifica ADR-001, ADR-002 y la línea base en los puntos que señala su §5. No habilita datos reales ni piloto hasta cumplir sus condiciones A1–A6. |
 | Aprendizaje local, variables e inferencias | [`ADR-002`](../../info/Consona_entrega_completa/archivos_compartidos/CONSONA_ADR-002_APRENDIZAJE_LOCAL_Y_VARIABILIDAD_PREMENSTRUAL.md) | Las tareas de producto y datos no pueden ampliar sus límites. |
 | Prioridades y alcance de trabajo | [Linear — proyecto Consona App](https://linear.app/juan-vidaechea/team/JUA/all) | Mantiene incidencias, responsable, estado y dependencias vivas. |
 | Evidencia versionada | [GitHub — `main`](https://github.com/juanvidavida/Consona-APP/tree/main) | Conserva especificaciones, esquemas, fixtures, pruebas y documentos aceptados. |

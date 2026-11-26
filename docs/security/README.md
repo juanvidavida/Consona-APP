@@ -10,5 +10,6 @@ Este directorio conserva artefactos de diseño y evidencia para los controles pr
 | [CON-007 — Revisión interna de producto, privacidad/seguridad e ingeniería](./CON-007_REVISION_INTERNA_2026-10-01.md) | Registra la revisión de diseño, el hallazgo F-01 y las condiciones antes del cierre. | Revisión interna asistida; no sustituye aprobación formal, revisión jurídica ni EIPD. |
 | [CON-008 — Requerimientos técnicos y de API](./CON-008_REQUERIMIENTOS_TECNICOS_Y_API.md) | Delimita contrato remoto mínimo, referencias opacas, API lógica, retención, logs, PWA y evidencia de no exfiltración. | Análisis de diseño; no habilita ni despliega un servicio. |
 | [JUA-42 — Revisión arquitectónica del modelo E](./JUA-42_REVISION_ARQUITECTONICA_MODELO_E.md) | Datos en el dispositivo de ella, paso de datos al de él por un relé cifrado, metadatos, avisos y quién confirma. | Borrador de decisión; no modifica ADR-001 ni CON-008. |
+| [CON-030 — Arquitectura de la primera versión del modelo E](./CON-030_ARQUITECTURA_PRIMERA_VERSION.md) | Componentes, datos locales, claves, emparejamiento verificado, relé, integridad del código y borrado (JUA-47). | Primer borrador; no habilita implementación ni despliegue. |
 
 > Los documentos no habilitan calendario, historial, aprendizaje, inferencias, emparejamiento ni piloto. Las condiciones de ADR-001 y ADR-002 son acumulativas.

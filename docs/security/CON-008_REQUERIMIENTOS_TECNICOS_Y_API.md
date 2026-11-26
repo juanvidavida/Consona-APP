@@ -5,6 +5,8 @@
 **Insumos consolidados:** ADR-001, ADR-002, taxonomía P1 y CON-007 integrado en `main`.
 **Objetivo:** definir la superficie técnica mínima que permite transportar un estado de consentimiento o una retirada **sin transportar, registrar ni inferir datos de ciclo, variables o contenido derivado**.
 
+> **Pendiente de actualizar por [ADR-003](../governance/ADR-003_RELE_CIFRADO_MODELO_E.md)** (aceptada con condiciones el 26-11-2026): el servicio también transporta y guarda temporalmente un sobre cifrado de extremo a extremo con los datos que comparte la persona afectada. Los cambios de §0, §0.1 y §2 están en JUA-42 §6 y CON-030 §3, y son la condición A5 de ADR-003. Hasta que se reescriba, prevalece ADR-003 donde este documento lo contradiga.
+
 > **Conclusión de arquitectura.** CON-008 no debe crear una API de salud, de perfiles ni de sincronización. Debe especificar un relé de estados técnicos opacos y efímeros. Antes de cualquier despliegue, el contrato debe ser cerrado, validable localmente y capaz de rechazar cualquier campo semántico o dato personal.
 
 ---

@@ -1,7 +1,7 @@
 # JUA-42 — Revisión arquitectónica del modelo E
 
-**Estado:** borrador de decisión. Respuestas de producto del 17-11-2026 y revisión del 19-11-2026. Preguntas para la revisión jurídica (§4.6) actualizadas el 24-11-2026. Revisión de producto del 25-11-2026: §4.2 y §8. Pendiente: decidir el correo de la §7 y quién puede deshacer el vínculo (§4.3, JUA-55).
-**No modifica todavía** ADR-001, la línea base ni CON-008. **No habilita** datos reales, persistencia, emparejamiento ni piloto.
+**Estado:** borrador de decisión. Respuestas de producto del 17-11-2026 y revisión del 19-11-2026. Preguntas para la revisión jurídica (§4.6) actualizadas el 24-11-2026. Revisión de producto del 25-11-2026: §4.2 y §8. Decisiones del 26-11-2026: quién puede deshacer el vínculo (§4.3.1, JUA-55) y correo de la §7 (descartado). §4.6 cerrada el 26-11-2026 para la revisión jurídica (JUA-22).
+El relé cifrado que propone este documento se formalizó en **ADR-003, aceptada con condiciones el 26-11-2026** ([docs/governance/ADR-003_RELE_CIFRADO_MODELO_E.md](../governance/ADR-003_RELE_CIFRADO_MODELO_E.md)), que modifica ADR-001, ADR-002 y la línea base. CON-008 queda pendiente de reescribir. **No habilita** datos reales, persistencia, emparejamiento ni piloto.
 **Relacionado:** JUA-13 (puerta del modelo E), JUA-28 (formulario de consentimiento), JUA-29 (ADR-003, excepción a ADR-001), JUA-41 (app de ella), JUA-43 (modelo de amenazas), JUA-44 (EIPD y violencia tecnológica), JUA-22 (revisión jurídica), JUA-47 (arquitectura definitiva).
 
 > Este documento no es asesoramiento jurídico. El §4.6 ordena las preguntas para la revisión profesional de JUA-22; no las responde.
@@ -15,7 +15,8 @@
 | 3 | ¿Alta a distancia, confirmaciones o las dos? | Las dos. Primera versión: solo relé, sin QR (opción 3). | Decidido (19-11). |
 | 4 | ¿Avisos en el dispositivo de ella? | Sugerencias dentro de la app para el piloto. | Decidido (17-11, §3). |
 | 5 | ¿Qué puede afirmar la app sobre quién confirmó? | Desbloqueo del dispositivo antes de confirmar. | Decidido (19-11, §5). |
-| — | ¿Correo automático a las tres semanas? | Tal como está planteado, no encaja. Hay alternativas. | Para discutir (§7). |
+| — | ¿Quién puede deshacer el vínculo? | Los dos. Para ella, deshacer el vínculo es retirar el consentimiento: un solo gesto. Él tiene el suyo, con desbloqueo. | Decidido (26-11, §4.3.1). |
+| — | ¿Correo automático a las tres semanas? | No. Era un recordatorio para registrar la regla, y eso ya lo hacen las sugerencias dentro de la app (§3). | Descartado (26-11, §7). |
 
 ## 1. Datos en el dispositivo de ella
 
@@ -125,10 +126,41 @@ Un servidor solo puede pasar un mensaje sin guardarlo si los dos tienen la app a
 **El sobre se conserva después de entregarlo** (19-11, sustituye a «se borra al entregarse»). Así, si él recupera su app en un móvil nuevo, lee el estado completo al momento, sin esperar a que ella abra la suya (§8). El sobre solo se borra:
 
 * cuando llega uno nuevo, que lo sustituye;
-* cuando ella retira el consentimiento o se deshace el vínculo;
+* cuando se deshace el vínculo, lo haga ella (al retirar el consentimiento) o él (§4.3.1);
 * cuando nadie abre la app durante un plazo largo de inactividad (por ejemplo, 90 días). El plazo lo fija la EIPD. Al cumplirse se borran el sobre y el vínculo.
 
 En ADR-003 y en el formulario debe decirse así: «almacenamiento temporal cifrado», no «sin almacenamiento».
+
+#### 4.3.1. Quién deshace el vínculo (decidido el 26-11)
+
+**Decisión.** Los dos pueden deshacerlo, cada uno desde su app y con desbloqueo del dispositivo (§5). Completa la decisión del 24-11 de JUA-55.
+
+| | Ella | Él |
+|---|---|---|
+| Gesto | **Uno solo:** dejar de compartir. Para ella, retirar el consentimiento y deshacer el vínculo son lo mismo. | Cerrar el vínculo. |
+| En el dispositivo de él | Bloqueo y borrado de los datos de ella, derivados, caché y claves del vínculo, según CON-007. | Lo mismo, antes de enviar la señal. |
+| En el servidor | Se borran el sobre y el vínculo. | Lo mismo. |
+| En el dispositivo de ella | Se borran las claves del vínculo. **Sus datos se quedan**: son suyos y puede borrarlos aparte. | Lo mismo, la próxima vez que abre su app. |
+| Para volver | Emparejamiento nuevo con código (§4.4, punto 2) y consentimiento nuevo (CON-007, invariante 10). No se recupera nada del vínculo anterior. | Igual. |
+
+**Por qué un solo gesto para ella.** Un consentimiento retirado con el vínculo vivo dejaría una credencial «dormida» en los dos dispositivos, con la que se podría volver a compartir sin emparejar de nuevo. Es un estado más que probar y un riesgo más en una situación de presión (JUA-44). Con un solo gesto, retirar es siempre empezar de cero.
+
+**El servidor no sabe quién lo cierra.** La señal es la misma venga de quien venga (la revocación genérica de §2). Quién deja a quién también es un dato personal.
+
+**Textos provisionales**, para CON-007 §6 y JUA-28:
+
+* A él, antes de cerrar:
+  > ES: Si cierras el vínculo, se borrarán de este móvil los datos que tu pareja compartía contigo. Ella lo verá la próxima vez que abra Consona. Para volver a compartir, tendréis que emparejaros de nuevo y ella tendrá que dar su consentimiento otra vez.
+  > CA: Si tanques el vincle, s'esborraran d'aquest mòbil les dades que la teva parella compartia amb tu. Ella ho veurà la propera vegada que obri Consona. Per tornar a compartir, us haureu d'emparellar de nou i ella haurà de tornar a donar el seu consentiment.
+* A ella, al abrir su app después:
+  > ES: Tu pareja ha cerrado el vínculo en su móvil. Ya no recibe tus datos, y su app ha borrado los que compartías. Tus datos siguen en este móvil. Si queréis volver a compartir, tendréis que emparejaros de nuevo.
+  > CA: La teva parella ha tancat el vincle al seu mòbil. Ja no rep les teves dades, i la seva app ha esborrat les que comparties. Les teves dades continuen en aquest mòbil. Si voleu tornar a compartir, us haureu d'emparellar de nou.
+
+  Sin culpa ni alarma, y sin que parezca un error técnico (riesgos de JUA-55). «Su app ha borrado» y no «se han borrado»: la app no puede garantizar que él no haya hecho capturas antes (CON-007).
+
+**Riesgo residual.** Que cerrar el vínculo se use como presión («si no compartes más, me desvinculo»). Va a JUA-44.
+
+**Pendiente en JUA-55:** estados y frases permitidas y prohibidas en CON-007 §6, casos en la matriz de pruebas y pantallas C.1 y C.2 del mapa.
 
 ### 4.4. Cifrado
 
@@ -161,7 +193,7 @@ Requisitos mínimos (los detalla CON-015 / JUA-43):
 
 ### 4.6. Preguntas para la revisión jurídica (JUA-22)
 
-> **Actualizada el 24-11-2026** con las decisiones del 19-11 (§1.1, §4.2, §4.3, §4.5, §5 y §8) y con la desvinculación por parte de él (JUA-55). Sustituye a la versión del 17-11. El correo de la §7 queda fuera hasta que se decida (pregunta 16).
+> **Cerrada el 26-11-2026** para la revisión jurídica (JUA-22). Recoge las decisiones del 19-11 (§1.1, §4.2, §4.3, §4.5, §5 y §8), quién deshace el vínculo (§4.3.1, 26-11) y el descarte del correo (§7, 26-11). Incorpora las preguntas de la ampliación del 13-11 de JUA-22 que siguen vigentes (preguntas 1, 17 y 18); las que hablaban de QR sin servidor quedan sustituidas por la opción 3 (§4.7). Es la lista única de preguntas para la persona revisora: 18 preguntas en ocho bloques.
 
 #### Qué se somete a revisión
 
@@ -173,6 +205,8 @@ La primera versión del modelo E, tal como queda tras el 19-11:
 * El servidor no tiene claves y no puede leer los sobres. Sí ve que llega un sobre y cuándo; no registra la IP (§4.5).
 * El dispositivo de él descifra los datos y calcula la fase en local. Lo que ella borra se borra en el móvil de él la próxima vez que lo abre; en el de ella queda en una papelera local {N} días (§1.1).
 * Cada uno puede hacer una copia cifrada y guardarla donde quiera; Consona no la guarda. La de él no lleva datos de ella (§8).
+* Cualquiera de los dos puede deshacer el vínculo. Para ella es lo mismo que retirar el consentimiento. Se borran los datos de ella en el móvil de él, el sobre y el vínculo en el servidor, y las claves en los dos; los datos de ella siguen en su móvil (§4.3.1).
+* No hay correos, avisos programados ni notificaciones push. Los recordatorios a ella son sugerencias dentro de su app (§3, §7).
 
 #### Puntos de partida, por verificar
 
@@ -185,13 +219,13 @@ La primera versión del modelo E, tal como queda tras el 19-11:
 
 **A. Papeles y proveedor**
 
-1. ¿Qué papel tiene Consona en el relé (responsable del tratamiento, art. 4.7) y qué papel tiene el proveedor de alojamiento (encargado, art. 28)? ¿Qué región y qué subencargados son aceptables? Si alguno está fuera del EEE, ¿qué exige el capítulo V?
+1. ¿Qué papel tiene Consona en el relé (responsable del tratamiento, art. 4.7) y qué papel tiene el proveedor de alojamiento (encargado, art. 28)? ¿Qué región y qué subencargados son aceptables? Si alguno está fuera del EEE, ¿qué exige el capítulo V? Mientras Consona sea un piloto personal y no una entidad, ¿quién es el responsable y qué obligaciones asume como persona física?
 2. **Tratamiento en los dispositivos.** La app guarda y calcula datos de salud de ella en el móvil de él, y Consona no puede acceder a ellos. ¿Es Consona responsable de ese tratamiento local porque lo hace su app? ¿Se aplica a él la excepción doméstica (art. 2.2.c)? ¿Cambia algo en el dispositivo de ella, que trata sus propios datos?
 
 **B. Consentimiento e información**
 
 3. ¿Basta el consentimiento explícito de ella (art. 9.2.a) dado en su propia app, sin identidad ni cuenta (DA-09)? ¿Sirve el desbloqueo del dispositivo con passkey (§5) para demostrarlo (art. 7.1), sabiendo que la app solo puede afirmar «confirmado en su dispositivo con su desbloqueo»? ¿Qué registro mínimo hace falta?
-4. **La promesa a ella (§4.2).** «Tú decides qué compartes. Tus datos viajan cifrados de extremo a extremo: nosotros no podemos leerlos», con su «Más información» (qué vemos y qué no, y que guardamos solo el último mensaje). ¿Es exacta y suficiente para un consentimiento informado (arts. 12 y 13)? Sus límites: el servidor ve metadatos, «no podemos leerlos» depende de que la app servida sea la publicada (§4.4, punto 7) y el borrado en el móvil de él espera a que lo abra (§1.1).
+4. **La promesa a ella (§4.2).** «Tú decides qué compartes. Tus datos viajan cifrados de extremo a extremo: nosotros no podemos leerlos», con su «Más información» (qué vemos y qué no, y que guardamos solo el último mensaje). ¿Es exacta y suficiente para un consentimiento informado (arts. 12 y 13)? Sus límites: el servidor ve metadatos, «no podemos leerlos» depende de que la app servida sea la publicada (§4.4, punto 7); en una app web, una versión nueva puede activarse sin aviso, y las medidas para evitar una modificación están en CON-030 §9 y el borrado en el móvil de él espera a que lo abra (§1.1).
 5. **Los datos de él.** Él también es usuario: su dispositivo guarda el vínculo, sus ajustes y los datos de ella que recibe. ¿Qué base jurídica y qué información necesita él?
 
 **C. Datos cifrados y metadatos**
@@ -203,7 +237,7 @@ La primera versión del modelo E, tal como queda tras el 19-11:
 
 8. **Buzón (§4.3).** El último sobre se conserva después de entregarlo y no caduca mientras el vínculo esté activo. Se borra tras una inactividad larga (propuesta: 90 días). ¿Es compatible con la limitación del plazo de conservación (art. 5.1.e)? ¿Qué plazo es defendible?
 9. **Borrado (§1.1).** Lo que ella borra se borra en el móvil de él la próxima vez que lo abre, y en el de ella queda {N} días en una papelera local para poder deshacerlo. ¿Cumple el derecho de supresión (art. 17) un borrado que espera a la siguiente apertura? ¿Qué plazo {N} es defendible?
-10. **Desvinculación por parte de él (JUA-55).** Si él deshace el vínculo, ¿qué debe borrarse en su dispositivo y en el servidor, y cómo hay que informar a ella?
+10. **Desvinculación (§4.3.1, JUA-55).** Cualquiera de los dos puede deshacer el vínculo. Si lo hace él, su app borra los datos de ella, los derivados y las claves; el servidor borra el sobre y el vínculo, y no sabe quién lo cerró; ella lo ve al abrir su app y conserva sus datos. ¿Es suficiente ese borrado? ¿Basta con informarla en su app la próxima vez que la abre? Tras el cierre, ni el servidor ni el móvil de él conservan nada que acredite que hubo consentimiento; como mucho, el registro queda en el móvil de ella. ¿Choca eso con el deber de demostrarlo (art. 7.1), o prevalece la supresión?
 11. **Copias de seguridad (§8).** Cada uno guarda su copia cifrada en su propia nube (Drive, iCloud u otra), fuera del alcance de Consona. La copia de ella puede conservar datos que ella borró después. ¿Qué responsabilidad tiene Consona sobre esas copias y qué hay que informar al crearlas?
 
 **E. Derechos sin identificación**
@@ -216,9 +250,14 @@ La primera versión del modelo E, tal como queda tras el 19-11:
 14. **EIPD (art. 35).** Parece obligatoria: datos de salud, posible situación de vulnerabilidad y tecnología nueva. ¿Entra en la lista de la AEPD de tratamientos que la requieren? ¿Qué alcance mínimo tiene antes del piloto, y debe incluir la evaluación de violencia tecnológica (JUA-44)?
 15. **Edad.** El piloto es solo para mayores de 18 años y no hay cuenta. ¿Basta la declaración de edad del onboarding?
 
-**G. Pendiente de decisión de producto**
+**G. Evaluación del piloto**
 
-16. **Correo a las tres semanas (§7).** No se pregunta hasta saber su finalidad y su destinatario. Si se elige la alternativa 2 (lista aparte para el seguimiento del piloto), habrá que preguntar por su base jurídica y, si es comercial, por la LSSI (art. 21).
+16. **Lista aparte para evaluar el piloto (JUA-58).** El correo automático a las tres semanas se descarta (§7). Para medir el aprendizaje habrá una lista voluntaria, separada de la app y sin relación con sus datos, como la de aviso de la landing (JUA-32): cuestionarios a él antes y después y, si ella quiere, a ella por separado, sin que él vea sus respuestas. El envío es en fechas fijas para todo el grupo. ¿Qué base jurídica tiene? ¿Pueden ser datos de salud las respuestas sobre el ciclo o el acompañamiento? ¿Se aplica el régimen de investigación (art. 89)? ¿Y la LSSI (art. 21), si los correos no son comerciales?
+
+**H. Calificación del producto y minimización**
+
+17. **Producto sanitario.** La app estima la fase y la próxima regla en el dispositivo, con fines educativos y nunca anticonceptivos ni diagnósticos. ¿Puede eso convertirla en producto sanitario (Reglamento UE 2017/745, regla 11 del anexo VIII)? ¿Qué finalidad declarada y qué avisos lo evitan?
+18. **Minimización (art. 5.1.c).** Él ve, si ella lo consiente, la fase estimada, una cuenta atrás de la regla y un calendario con las 6 últimas reglas (DA-10). Ella puede compartir también su franja de edad, que solo sirve para destacar contenido educativo. Su propio móvil conserva el mismo historial que el de él (§1.2). ¿Son proporcionados esos alcances y ese plazo? ¿Es suficiente que cada uno sea opcional y se consienta por separado?
 
 ### 4.7. Opciones comparadas
 
@@ -240,7 +279,7 @@ La primera versión del modelo E, tal como queda tras el 19-11:
 | Opción 3 o 4 | Opción 3 para la primera versión (§4.7). |
 | Emparejamiento | Siempre por el servidor, comprobado con un código corto (§4.4, punto 2). |
 | Correcciones y borrados | Viajan en el siguiente sobre; borrado reversible con papelera local (§1.1). |
-| Orden de trabajo | Actualizar §4.6 y después llevarlo a la revisión jurídica (JUA-22). *(24-11: §4.6 actualizada; falta llevarla a JUA-22.)* |
+| Orden de trabajo | Actualizar §4.6 y después llevarlo a la revisión jurídica (JUA-22). *(24-11: §4.6 actualizada. 26-11: §4.6 cerrada y enlazada desde JUA-22.)* |
 | Cuenta o correo | Fuera de la primera versión. El emparejamiento se hace con un código en la app; CON-008 no cambia en este punto. |
 | Varios dispositivos por persona | Fuera de la primera versión. |
 | Recuperación | Copia cifrada para los dos, en un archivo que cada uno guarda donde quiera, sin pasar por Consona. La de él no lleva datos de ella (§8). |
@@ -259,8 +298,9 @@ La primera versión del modelo E, tal como queda tras el 19-11:
 
 ## 6. Cambios en otros documentos cuando se acepte
 
-* **ADR-003** (JUA-29): excepción para transmitir y guardar temporalmente sobres cifrados, con alcance «alta y confirmaciones» y las salvaguardas de §4.3 a §4.5.
+* **ADR-003** (JUA-29): excepción para transmitir y guardar temporalmente sobres cifrados, con alcance «alta y confirmaciones» y las salvaguardas de §4.3 a §4.5. *(26-11: aceptado con condiciones; [docs/governance/ADR-003_RELE_CIFRADO_MODELO_E.md](../governance/ADR-003_RELE_CIFRADO_MODELO_E.md).)*
 * **CON-008:** requisito 9 (§1.3), sobre opaco de estado completo, buzón con borrado por inactividad y referencia rotatoria.
+* **CON-007** (JUA-55): cierre del vínculo por parte de él, con sus estados, mensajes y casos de prueba; para ella, retirar el consentimiento deshace el vínculo (§4.3.1).
 * **Línea base §5:** justificación de la excepción.
 * **JUA-28:** promesa nueva (§4.2), aviso de borrado (§1.1), alta a distancia con código y petición de bloqueo de pantalla (§5).
 * **JUA-41:** papelera local, sobre en cada apertura, desbloqueo antes de confirmar.
@@ -285,7 +325,13 @@ La primera versión del modelo E, tal como queda tras el 19-11:
 2. **Correo de seguimiento del piloto en una fecha fija para todo el grupo**, a una lista aparte (como la de la landing, JUA-32). Es voluntaria, con su propio consentimiento y sin relación con los datos de la app. El servidor no sabe cuándo se dio de alta nadie.
 3. **El planteamiento original**, solo con ADR propio, EIPD y revisión jurídica. No se recomienda.
 
-**Falta saber:** para qué es el correo (opinión sobre el piloto, recordatorio, otra cosa) y a quién va (a ella, a él o a los dos). La alternativa adecuada depende de eso.
+**Decisión (26-11): se descarta.** El correo era un recordatorio para que ella registrara la regla. Eso ya lo cubren las sugerencias dentro de su app, que aparecen en el intervalo previsto (§3, SUG-02). Las tres semanas también existen ya: el motor usa 21 días como umbral de SUG-04 ([src/motor/README.md](../../src/motor/README.md)). Un correo a las tres semanas de la primera fecha añadiría tres riesgos:
+
+* el momento del envío señalaría la regla siguiente, es decir, un dato de salud inferido en el servidor (ADR-001 §2);
+* revelaría el uso de Consona a quien lea su buzón (JUA-44);
+* obligaría a guardar su correo y su fecha de alta.
+
+Fuera del piloto, un recordatorio fuera de la app solo sería una notificación local de una app nativa (§3). La evaluación del piloto es otra finalidad: va por una lista aparte, en fechas fijas (JUA-58, alternativa 2), y está en la pregunta 16 de §4.6.
 
 ## 8. Copias de seguridad y recuperación (decidido el 19-11)
 
@@ -299,7 +345,7 @@ Sin cuenta ni correo. Cada persona puede hacer una copia cifrada que guarda dond
 
 **Por qué la copia de él no lleva datos de ella.** Una copia en su nube quedaría fuera del alcance de los borrados y de la retirada del consentimiento de ella (CON-007). Si ella ha retirado el consentimiento, la app de él lo ve al reconectarse y no recibe nada.
 
-**Riesgo residual de la copia de él.** No lleva datos de ella, pero sí la credencial del vínculo. Mientras el vínculo esté activo, quien tenga la copia y su código puede reconectarse y leer el último sobre, es decir, los datos que ella comparte en ese momento. Al recuperar se cierra el acceso del móvil anterior (tabla de arriba): él lo notaría, porque su móvil pierde el acceso; ella, no. Va al modelo de amenazas (JUA-43) y a la evaluación de violencia tecnológica (JUA-44). Se puede valorar que la app de ella avise cuando el dispositivo de él cambia.
+**Riesgo residual de la copia de él.** No lleva datos de ella, pero sí la credencial del vínculo. Mientras el vínculo esté activo, quien tenga la copia y su código puede reconectarse y leer el último sobre, es decir, los datos que ella comparte en ese momento. Al recuperar se cierra el acceso del móvil anterior (tabla de arriba): él lo notaría, porque su móvil pierde el acceso; ella, no. Va al modelo de amenazas (JUA-43) y a la evaluación de violencia tecnológica (JUA-44). **Decidido el 26-11 (CON-030, D-08):** la app de ella avisa, como hecho neutro, cuando él recupera Consona en otro móvil.
 
 **Flujo de copia:**
 
